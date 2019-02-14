@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classOMRhythmTree" kind="class" language="C++" prot="public">
+    <compoundname>OMRhythmTree</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classOMRhythmTree_1ac5bc60ffffc14fee5de498b069b8205d" prot="private" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational OMRhythmTree::_label</definition>
+        <argsstring></argsstring>
+        <name>_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="73" column="1" bodyfile="src/output/OMRT.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOMRhythmTree_1a9e962aea2357a32df7e3c3ba3a59c3b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OMRhythmTree::_tied</definition>
+        <argsstring></argsstring>
+        <name>_tied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="76" column="1" bodyfile="src/output/OMRT.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOMRhythmTree_1a73e2360e6ac094815e7ddab2340d8b90" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> * &gt;</type>
+        <definition>std::vector&lt;OMRhythmTree*&gt; OMRhythmTree::_children</definition>
+        <argsstring></argsstring>
+        <name>_children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="78" column="1" bodyfile="src/output/OMRT.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1gafa2112e5abf005b87ad68073ac92670f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>OMRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="39" column="1" bodyfile="src/output/OMRT.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac708fcabf8489ca08a9f7231eeb928d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>(Rational lab, bool tied=false)</argsstring>
+        <name>OMRhythmTree</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tied</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="42" column="1" bodyfile="src/output/OMRT.cpp" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1dae8e3f43573cc3aac4859b5b618ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>(const RhythmTree *, Rational dur=Rational(1))</argsstring>
+        <name>OMRhythmTree</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>dur</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="45" column="1" bodyfile="src/output/OMRT.cpp" bodystart="29" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaea89bed9d2782e13bf697069147331a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::~OMRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~OMRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="47" column="1" bodyfile="src/output/OMRT.cpp" bodystart="158" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classOMRhythmTree_1a04e14eae7285e3f9473823354599ab84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OMRhythmTree::leaf</definition>
+        <argsstring>() const</argsstring>
+        <name>leaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="50" column="1" bodyfile="src/output/OMRT.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classOMRhythmTree_1af820acb008741753d15dbae463a511c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OMRhythmTree::inner</definition>
+        <argsstring>() const</argsstring>
+        <name>inner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="52" column="1" bodyfile="src/output/OMRT.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classOMRhythmTree_1afdd5d2e8c598012d228d484fef59ea54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational OMRhythmTree::label</definition>
+        <argsstring>()</argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="54" column="1" bodyfile="src/output/OMRT.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classOMRhythmTree_1a3af64526e62a8148b5966dc43f7e9f74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OMRhythmTree::tie</definition>
+        <argsstring>()</argsstring>
+        <name>tie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="56" column="1" bodyfile="src/output/OMRT.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga5877122dcb737ec9bdbe94241b867b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t OMRhythmTree::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="59" column="1" bodyfile="src/output/OMRT.cpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga59d59642fc58d66772d51a075720a701" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> *</type>
+        <definition>OMRhythmTree * OMRhythmTree::child</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>child</name>
+        <param>
+          <type>size_t</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="62" column="1" bodyfile="src/output/OMRT.cpp" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6e273a3942470268fb775857d80bc2a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OMRhythmTree::add</definition>
+        <argsstring>(OMRhythmTree *)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="65" column="1" bodyfile="src/output/OMRT.cpp" bodystart="184" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga14633b5c977b30f4a28085c686c3c17f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string OMRhythmTree::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="67" column="1" bodyfile="src/output/OMRT.cpp" bodystart="193" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classOMRhythmTree_1a256b138eed510909e4d90cfa497eb88a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const OMRhythmTree &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="69" column="1" bodyfile="src/output/OMRT.cpp" bodystart="241" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/OMRT.hpp" line="35" column="1" bodyfile="src/output/OMRT.hpp" bodystart="34" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classOMRhythmTree_1a73e2360e6ac094815e7ddab2340d8b90" prot="private" virt="non-virtual"><scope>OMRhythmTree</scope><name>_children</name></member>
+      <member refid="classOMRhythmTree_1ac5bc60ffffc14fee5de498b069b8205d" prot="private" virt="non-virtual"><scope>OMRhythmTree</scope><name>_label</name></member>
+      <member refid="classOMRhythmTree_1a9e962aea2357a32df7e3c3ba3a59c3b1" prot="private" virt="non-virtual"><scope>OMRhythmTree</scope><name>_tied</name></member>
+      <member refid="group__output_1ga6e273a3942470268fb775857d80bc2a8" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>add</name></member>
+      <member refid="group__output_1ga59d59642fc58d66772d51a075720a701" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>child</name></member>
+      <member refid="classOMRhythmTree_1af820acb008741753d15dbae463a511c5" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>inner</name></member>
+      <member refid="classOMRhythmTree_1afdd5d2e8c598012d228d484fef59ea54" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>label</name></member>
+      <member refid="classOMRhythmTree_1a04e14eae7285e3f9473823354599ab84" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>leaf</name></member>
+      <member refid="group__output_1gafa2112e5abf005b87ad68073ac92670f" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>OMRhythmTree</name></member>
+      <member refid="group__output_1gac708fcabf8489ca08a9f7231eeb928d0" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>OMRhythmTree</name></member>
+      <member refid="group__output_1ga1dae8e3f43573cc3aac4859b5b618ef3" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>OMRhythmTree</name></member>
+      <member refid="classOMRhythmTree_1a256b138eed510909e4d90cfa497eb88a" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__output_1ga5877122dcb737ec9bdbe94241b867b4e" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>size</name></member>
+      <member refid="classOMRhythmTree_1a3af64526e62a8148b5966dc43f7e9f74" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>tie</name></member>
+      <member refid="group__output_1ga14633b5c977b30f4a28085c686c3c17f" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>to_string</name></member>
+      <member refid="group__output_1gaea89bed9d2782e13bf697069147331a4" prot="public" virt="non-virtual"><scope>OMRhythmTree</scope><name>~OMRhythmTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

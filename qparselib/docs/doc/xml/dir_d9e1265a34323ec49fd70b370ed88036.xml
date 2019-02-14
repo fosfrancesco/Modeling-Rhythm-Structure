@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_d9e1265a34323ec49fd70b370ed88036" kind="dir">
+    <compoundname>src/segment</compoundname>
+    <innerfile refid="AlignedInterval_8cpp">AlignedInterval.cpp</innerfile>
+    <innerfile refid="AlignedInterval_8hpp">AlignedInterval.hpp</innerfile>
+    <innerfile refid="Environment_8cpp">Environment.cpp</innerfile>
+    <innerfile refid="Environment_8hpp">Environment.hpp</innerfile>
+    <innerfile refid="InputSegment_8cpp">InputSegment.cpp</innerfile>
+    <innerfile refid="InputSegment_8hpp">InputSegment.hpp</innerfile>
+    <innerfile refid="InputSegmentMono_8cpp">InputSegmentMono.cpp</innerfile>
+    <innerfile refid="InputSegmentMono_8hpp">InputSegmentMono.hpp</innerfile>
+    <innerfile refid="InputSegmentMono__sumult_8cpp">InputSegmentMono_sumult.cpp</innerfile>
+    <innerfile refid="InputSegmentNogap_8cpp">InputSegmentNogap.cpp</innerfile>
+    <innerfile refid="InputSegmentNogap_8hpp">InputSegmentNogap.hpp</innerfile>
+    <innerfile refid="Interval_8cpp">Interval.cpp</innerfile>
+    <innerfile refid="Interval_8hpp">Interval.hpp</innerfile>
+    <innerfile refid="IntervalHeap_8cpp">IntervalHeap.cpp</innerfile>
+    <innerfile refid="IntervalHeap_8hpp">IntervalHeap.hpp</innerfile>
+    <innerfile refid="IntervalTree_8cpp">IntervalTree.cpp</innerfile>
+    <innerfile refid="IntervalTree_8hpp">IntervalTree.hpp</innerfile>
+    <innerfile refid="MusEvent_8cpp">MusEvent.cpp</innerfile>
+    <innerfile refid="MusEvent_8hpp">MusEvent.hpp</innerfile>
+    <innerfile refid="MusPoint_8cpp">MusPoint.cpp</innerfile>
+    <innerfile refid="MusPoint_8hpp">MusPoint.hpp</innerfile>
+    <innerfile refid="Pitch_8cpp">Pitch.cpp</innerfile>
+    <innerfile refid="Pitch_8hpp">Pitch.hpp</innerfile>
+    <innerfile refid="Point_8cpp">Point.cpp</innerfile>
+    <innerfile refid="Point_8hpp">Point.hpp</innerfile>
+    <innerfile refid="Spiral_8cpp">Spiral.cpp</innerfile>
+    <innerfile refid="Spiral_8hpp">Spiral.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/"/>
+  </compounddef>
+</doxygen>

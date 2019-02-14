@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespaceState" kind="namespace" language="C++">
+    <compoundname>State</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__schemata_1ga1722ba39591c8a25ed5ee91e9e91232a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isWTA</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isWTA</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="34" column="1" bodyfile="src/schemata/State.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gabd744185c22c686d1c95d74523a007b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isLabel</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isLabel</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="36" column="1" bodyfile="src/schemata/State.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa5b5cf5f92a0c443d4c1a1e152f9292c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isMeta</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isMeta</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="38" column="1" bodyfile="src/schemata/State.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga0ffeaad4a7482bc302dce44a23a85a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t State::MetaState</definition>
+        <argsstring>(size_t barnb)</argsstring>
+        <name>MetaState</name>
+        <param>
+          <type>size_t</type>
+          <declname>barnb</declname>
+        </param>
+        <briefdescription>
+<para>Meta state corresponding to bar nb barnb. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="41" column="1" bodyfile="src/schemata/State.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>States. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>positive of null long: state of <ref refid="classWTA" kindref="compound">WTA</ref> (wta state)</para>
+</listitem><listitem><para>positive of null int: state of <ref refid="classWTA" kindref="compound">WTA</ref> or label (label symbol)</para>
+</listitem><listitem><para>negative long: inverse of number of bars (meta state) </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="src/schemata/State.hpp" line="33" column="1"/>
+  </compounddef>
+</doxygen>

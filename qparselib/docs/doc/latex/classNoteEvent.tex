@@ -1,0 +1,54 @@
+\hypertarget{classNoteEvent}{}\section{Note\+Event Class Reference}
+\label{classNoteEvent}\index{NoteEvent@{NoteEvent}}
+Inheritance diagram for Note\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNoteEvent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_gaeeb3a0d391bef4a285f1be45d31e63be}{Note\+Event}} (unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em unpitched note (drums). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga1bd25b8699a9ed866f11f62a844645f7}{Note\+Event}} (\mbox{\hyperlink{classPitch}{Pitch}} p, unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em pitched note. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga135e904aa3f5ea4d375e451281fe5323}{Note\+Event}} (unsigned int p, unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em pitched note with M\+I\+DI pitch in 0..127. \end{DoxyCompactList}\item 
+{\bfseries Note\+Event} (const \mbox{\hyperlink{classNoteEvent}{Note\+Event}} \&)
+\item 
+virtual \mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classNoteEvent_afd1615e5f11074184f08946b14232c37}\label{classNoteEvent_afd1615e5f11074184f08946b14232c37}} 
+virtual bool {\bfseries is\+Rest} () const
+\item 
+\mbox{\Hypertarget{classNoteEvent_aaf40b5c82f0f6517b34ca3e0d89f585a}\label{classNoteEvent_aaf40b5c82f0f6517b34ca3e0d89f585a}} 
+virtual bool {\bfseries is\+Note} () const
+\item 
+\mbox{\Hypertarget{classNoteEvent_a5e8947bdb559558ed1313c02e0bbe834}\label{classNoteEvent_a5e8947bdb559558ed1313c02e0bbe834}} 
+bool {\bfseries unpitched} () const
+\item 
+\mbox{\Hypertarget{classNoteEvent_a1129f35ed935be6cdc0ce4609677795d}\label{classNoteEvent_a1129f35ed935be6cdc0ce4609677795d}} 
+unsigned int {\bfseries velocity} () const
+\item 
+\mbox{\Hypertarget{classNoteEvent_aa4a9213eb0af96782b6b50de0ef101b0}\label{classNoteEvent_aa4a9213eb0af96782b6b50de0ef101b0}} 
+\mbox{\hyperlink{classPitch}{Pitch}} \& \mbox{\hyperlink{classNoteEvent_aa4a9213eb0af96782b6b50de0ef101b0}{pitch}} ()
+\begin{DoxyCompactList}\small\item\em can be modified. \end{DoxyCompactList}\item 
+virtual void {\bfseries print} (std\+::ostream \&o) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNoteEvent_a3a9e39f1c7b38802f52f64bc03a0ba60}\label{classNoteEvent_a3a9e39f1c7b38802f52f64bc03a0ba60}} 
+\mbox{\hyperlink{classPitch}{Pitch}} {\bfseries \+\_\+pitch}
+\item 
+\mbox{\Hypertarget{classNoteEvent_afeec6adc37e86a01e903dfb6fd24d8e7}\label{classNoteEvent_afeec6adc37e86a01e903dfb6fd24d8e7}} 
+unsigned int \mbox{\hyperlink{classNoteEvent_afeec6adc37e86a01e903dfb6fd24d8e7}{\+\_\+velocity}}
+\begin{DoxyCompactList}\small\item\em M\+I\+DI velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Mus\+Event.\+hpp\item 
+src/segment/Mus\+Event.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="IntervalHeap_8hpp" kind="file" language="C++">
+    <compoundname>IntervalHeap.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">unordered_set</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="InputSegment_8hpp" local="yes">InputSegment.hpp</includes>
+    <includes refid="Interval_8hpp" local="yes">Interval.hpp</includes>
+    <includes refid="AlignedInterval_8hpp" local="yes">AlignedInterval.hpp</includes>
+    <includes refid="IntervalTree_8hpp" local="yes">IntervalTree.hpp</includes>
+    <includedby refid="Parser_8hpp" local="yes">src/parsers/Parser.hpp</includedby>
+    <includedby refid="Parser1bar1bestSIP_8hpp" local="yes">src/parsers/Parser1bar1bestSIP.hpp</includedby>
+    <includedby refid="Parser1barKbestSKIP_8hpp" local="yes">src/parsers/Parser1barKbestSKIP.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPflat_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPflat.hpp</includedby>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="AlignedInterval_8cpp" local="yes">src/segment/AlignedInterval.cpp</includedby>
+    <includedby refid="Environment_8hpp" local="yes">src/segment/Environment.hpp</includedby>
+    <includedby refid="IntervalHeap_8cpp" local="yes">src/segment/IntervalHeap.cpp</includedby>
+    <includedby refid="IntervalTree_8cpp" local="yes">src/segment/IntervalTree.cpp</includedby>
+    <includedby refid="PtrSI_8hpp" local="yes">src/table/PtrSI.hpp</includedby>
+    <incdepgraph>
+      <node id="431">
+        <label>src/segment/IntervalHeap.hpp</label>
+        <link refid="IntervalHeap_8hpp"/>
+        <childnode refid="432" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+      </node>
+      <node id="434">
+        <label>unordered_set</label>
+      </node>
+      <node id="433">
+        <label>utility</label>
+      </node>
+      <node id="432">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structPointedIntervalEq" prot="public">PointedIntervalEq</innerclass>
+    <innerclass refid="structPointedIntervalHash" prot="public">PointedIntervalHash</innerclass>
+    <innerclass refid="classIntervalHeap" prot="public">IntervalHeap</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__segment_1ga8156ae2f00d13429f64689ba96dca4cc" prot="public" static="no">
+        <type>std::unordered_set&lt; <ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *, <ref refid="structPointedIntervalHash" kindref="compound">PointedIntervalHash</ref>, <ref refid="structPointedIntervalEq" kindref="compound">PointedIntervalEq</ref> &gt;</type>
+        <definition>typedef std::unordered_set&lt;IntervalTree*, PointedIntervalHash, PointedIntervalEq&gt; IntervalSet</definition>
+        <argsstring></argsstring>
+        <name>IntervalSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="67" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/IntervalHeap.hpp"/>
+  </compounddef>
+</doxygen>

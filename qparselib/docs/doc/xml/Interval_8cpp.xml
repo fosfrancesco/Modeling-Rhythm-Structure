@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Interval_8cpp" kind="file" language="C++">
+    <compoundname>Interval.cpp</compoundname>
+    <includes refid="Interval_8hpp" local="yes">Interval.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__segment_1ga2f4c47a191d9e8f503a8a18bfba89f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Interval &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.cpp" line="150" column="1" bodyfile="src/segment/Interval.cpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/Interval.cpp"/>
+  </compounddef>
+</doxygen>

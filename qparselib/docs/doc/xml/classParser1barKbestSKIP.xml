@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classParser1barKbestSKIP" kind="class" language="C++" prot="public">
+    <compoundname>Parser1barKbestSKIP</compoundname>
+    <basecompoundref refid="classParser" prot="public" virt="non-virtual">Parser&lt; SKIPpointer &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classParser1barKbestSKIP_1a9fba94719734e5717baa6c01a844cf07" prot="public" static="no" mutable="no">
+        <type><ref refid="classTable" kindref="compound">Table</ref>&lt; <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref>, <ref refid="classKrecord" kindref="compound">Krecord</ref>&lt; <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref> &gt;, <ref refid="structSKIPpointerHasher" kindref="compound">SKIPpointerHasher</ref> &gt; *</type>
+        <definition>Table&lt;SKIPpointer, Krecord&lt;SKIPpointer&gt;, SKIPpointerHasher&gt;* Parser1barKbestSKIP::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="31" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParser1barKbestSKIP_1a2fa17574de515125a2415aa011d76662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parser1barKbestSKIP::Parser1barKbestSKIP</definition>
+        <argsstring>(WTA *a, InputSegment *s, bool ordering=false)</argsstring>
+        <name>Parser1barKbestSKIP</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ordering</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="34" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="12" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1a57fefd6945444ab75bb18a057c86c15e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parser1barKbestSKIP::~Parser1barKbestSKIP</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser1barKbestSKIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="36" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1a4ca554d85c44554636f8f0c80a65accd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t Parser1barKbestSKIP::addRuns</definition>
+        <argsstring>(Atable&lt; SKIPpointer &gt; *, const SKIPpointer &amp;, Record&lt; SKIPpointer &gt; *)</argsstring>
+        <name>addRuns</name>
+        <reimplements refid="classParser_1a1036f9fa453e662cb87c882978af0f9f">addRuns</reimplements>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref> &gt; *</type>
+          <defname>table</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="classRecord" kindref="compound">Record</ref>&lt; <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref> &gt; *</type>
+          <defname>it</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="38" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1af59a31915da55685e102916577c37dd8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>RhythmTree * Parser1barKbestSKIP::bestTree</definition>
+        <argsstring>(size_t k=1, pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestTree</name>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="43" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="46" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1a618fea1afb155bcc34a337a30744dc46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; <ref refid="classSKIPpointer" kindref="compound">SKIPpointer</ref> &gt; *</type>
+        <definition>Run&lt; SKIPpointer &gt; * Parser1barKbestSKIP::bestRun</definition>
+        <argsstring>(size_t k=1, pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestRun</name>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="48" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="73" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1af7baa4a64189153a64c6283ae566de1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight Parser1barKbestSKIP::bestWeight</definition>
+        <argsstring>(size_t k=1, pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestWeight</name>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="53" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="100" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1aac22b853439faa9ec80094eda5ef2a9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Parser1barKbestSKIP::printBest</definition>
+        <argsstring>(std::ostream &amp;o, size_t k=1, pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>printBest</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="58" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="116" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1barKbestSKIP_1a7adf9ec6b44a042d836bdeaaf05514c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Parser1barKbestSKIP::demo</definition>
+        <argsstring>(const string schema_file, const string input_file, pre_t pre=0, pre_t post=0, size_t k=1)</argsstring>
+        <name>demo</name>
+        <param>
+          <type>const string</type>
+          <declname>schema_file</declname>
+        </param>
+        <param>
+          <type>const string</type>
+          <declname>input_file</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1barKbestSKIP.hpp" line="63" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.cpp" bodystart="126" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="226">
+        <label>Parser&lt; SKIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="227" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>Parser1barKbestSKIP</label>
+        <link refid="classParser1barKbestSKIP"/>
+        <childnode refid="226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="229">
+        <label>Parser&lt; SKIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="230" relation="public-inheritance">
+        </childnode>
+        <childnode refid="234" relation="usage">
+          <edgelabel>wta</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+      </node>
+      <node id="228">
+        <label>Parser1barKbestSKIP</label>
+        <link refid="classParser1barKbestSKIP"/>
+        <childnode refid="229" relation="public-inheritance">
+        </childnode>
+        <childnode refid="237" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+      </node>
+      <node id="238">
+        <label>Atable&lt; SKIPpointer &gt;</label>
+        <link refid="classAtable"/>
+        <childnode refid="229" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="236">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="231">
+        <label>InputSegment</label>
+        <link refid="classInputSegment"/>
+        <childnode refid="232" relation="usage">
+          <edgelabel>_mduration</edgelabel>
+        </childnode>
+      </node>
+      <node id="237">
+        <label>Table&lt; SKIPpointer, Krecord&lt; SKIPpointer &gt;, SKIPpointerHasher &gt;</label>
+        <link refid="classTable"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+        <childnode refid="231" relation="usage">
+          <edgelabel>segment</edgelabel>
+        </childnode>
+        <childnode refid="233" relation="usage">
+          <edgelabel>iheap</edgelabel>
+        </childnode>
+      </node>
+      <node id="234">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+        <childnode refid="235" relation="usage">
+          <edgelabel>_seed</edgelabel>
+        </childnode>
+      </node>
+      <node id="235">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="236" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+      <node id="233">
+        <label>IntervalHeap</label>
+        <link refid="classIntervalHeap"/>
+      </node>
+      <node id="232">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/parsers/Parser1barKbestSKIP.hpp" line="29" column="1" bodyfile="src/parsers/Parser1barKbestSKIP.hpp" bodystart="28" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classParser_1a82a307f632a1988fe229f989bbc4584d" prot="protected" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>_res</name></member>
+      <member refid="classParser1barKbestSKIP_1a4ca554d85c44554636f8f0c80a65accd" prot="public" virt="virtual"><scope>Parser1barKbestSKIP</scope><name>addRuns</name></member>
+      <member refid="classParser_1a00a7b213fe0e4f8cce4e780adbbbd110" prot="protected" virt="virtual"><scope>Parser1barKbestSKIP</scope><name>addWTARuns</name></member>
+      <member refid="classParser1barKbestSKIP_1a618fea1afb155bcc34a337a30744dc46" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>bestRun</name></member>
+      <member refid="classParser1barKbestSKIP_1af59a31915da55685e102916577c37dd8" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>bestTree</name></member>
+      <member refid="classParser1barKbestSKIP_1af7baa4a64189153a64c6283ae566de1f" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>bestWeight</name></member>
+      <member refid="classParser1barKbestSKIP_1a7adf9ec6b44a042d836bdeaaf05514c0" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>demo</name></member>
+      <member refid="group__segment_1ga35cbd86caf5c17f8d59559ae0b28febf" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>Environment</name></member>
+      <member refid="classEnvironment_1a810e4b1bd5bd6428c78c18fbeba127f6" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>iheap</name></member>
+      <member refid="classParser_1a5ab3cb7f02f7bb33dd59f3edbf63675a" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>input</name></member>
+      <member refid="classParser_1a7e5b1a5452fb9eb39040d10adec713bb" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>Parser</name></member>
+      <member refid="classParser1barKbestSKIP_1a2fa17574de515125a2415aa011d76662" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>Parser1barKbestSKIP</name></member>
+      <member refid="classParser1barKbestSKIP_1aac22b853439faa9ec80094eda5ef2a9a" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>printBest</name></member>
+      <member refid="classParser_1a36e89e4e76b8ba144b764cf07d02ca75" prot="public" virt="virtual"><scope>Parser1barKbestSKIP</scope><name>printobest</name></member>
+      <member refid="classParser_1ae0a82cabf61977d6a0f0bc618c64e6c8" prot="public" virt="virtual"><scope>Parser1barKbestSKIP</scope><name>printobestRun</name></member>
+      <member refid="classParser_1a0f3f9620883bb10e9ecd07cec155b1a3" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>resolution</name></member>
+      <member refid="classEnvironment_1a740b0264644db40cb5a657f7ed52bb23" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>segment</name></member>
+      <member refid="classParser1barKbestSKIP_1a9fba94719734e5717baa6c01a844cf07" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>table</name></member>
+      <member refid="classParser_1a1d6da7c9962be0987caf9bf69f634ea6" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>wta</name></member>
+      <member refid="group__segment_1ga8e294735187880dd3d59be10c425b29d" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>~Environment</name></member>
+      <member refid="classParser_1a09fc36d1fcc326ea5104a0e8fbab65c5" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>~Parser</name></member>
+      <member refid="classParser1barKbestSKIP_1a57fefd6945444ab75bb18a057c86c15e" prot="public" virt="non-virtual"><scope>Parser1barKbestSKIP</scope><name>~Parser1barKbestSKIP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

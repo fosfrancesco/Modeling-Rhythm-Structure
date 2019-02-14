@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="DurationTree_8cpp" kind="file" language="C++">
+    <compoundname>DurationTree.cpp</compoundname>
+    <includes refid="DurationTree_8hpp" local="yes">DurationTree.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__output_1ga580b3f6969d32fc7ad84b7d6fec0ecbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const DurationTree &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationTree" kindref="compound">DurationTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationTree.cpp" line="138" column="1" bodyfile="src/output/DurationTree.cpp" bodystart="138" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/DurationTree.cpp"/>
+  </compounddef>
+</doxygen>

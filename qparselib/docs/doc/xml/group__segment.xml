@@ -1,0 +1,3346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__segment" kind="group">
+    <compoundname>segment</compoundname>
+    <title>Segment module</title>
+    <innerclass refid="classAlignedInterval" prot="public">AlignedInterval</innerclass>
+    <innerclass refid="classRecord" prot="public">Record</innerclass>
+    <innerclass refid="classEnvironment" prot="public">Environment</innerclass>
+    <innerclass refid="classAtable" prot="public">Atable</innerclass>
+    <innerclass refid="classRun" prot="public">Run</innerclass>
+    <innerclass refid="classInputSegment" prot="public">InputSegment</innerclass>
+    <innerclass refid="classInputSegmentMono" prot="public">InputSegmentMono</innerclass>
+    <innerclass refid="classInputSegmentNogap" prot="public">InputSegmentNogap</innerclass>
+    <innerclass refid="classInterval" prot="public">Interval</innerclass>
+    <innerclass refid="structIntervalHasher" prot="public">IntervalHasher</innerclass>
+    <innerclass refid="structPointedIntervalEq" prot="public">PointedIntervalEq</innerclass>
+    <innerclass refid="structPointedIntervalHash" prot="public">PointedIntervalHash</innerclass>
+    <innerclass refid="classIntervalHeap" prot="public">IntervalHeap</innerclass>
+    <innerclass refid="classIntervalTree" prot="public">IntervalTree</innerclass>
+    <innerclass refid="classMusEvent" prot="public">MusEvent</innerclass>
+    <innerclass refid="classRestEvent" prot="public">RestEvent</innerclass>
+    <innerclass refid="classNoteEvent" prot="public">NoteEvent</innerclass>
+    <innerclass refid="classMusPoint" prot="public">MusPoint</innerclass>
+    <innerclass refid="classPitch" prot="public">Pitch</innerclass>
+    <innerclass refid="classPoint" prot="public">Point</innerclass>
+    <innerclass refid="structSpiralPoint" prot="public">SpiralPoint</innerclass>
+    <innerclass refid="structNoteName" prot="public">NoteName</innerclass>
+    <innernamespace refid="namespaceSpiral">Spiral</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__segment_1ga8156ae2f00d13429f64689ba96dca4cc" prot="public" static="no">
+        <type>std::unordered_set&lt; <ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *, <ref refid="structPointedIntervalHash" kindref="compound">PointedIntervalHash</ref>, <ref refid="structPointedIntervalEq" kindref="compound">PointedIntervalEq</ref> &gt;</type>
+        <definition>typedef std::unordered_set&lt;IntervalTree*, PointedIntervalHash, PointedIntervalEq&gt; IntervalSet</definition>
+        <argsstring></argsstring>
+        <name>IntervalSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="67" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__segment_1gaa5d5d2dd440400af33e39d031cb08fa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const AlignedInterval &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.cpp" line="294" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="294" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6c33ecb9851e077e90345090b15c87c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const InputSegment &amp;s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.cpp" line="396" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="396" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2f4c47a191d9e8f503a8a18bfba89f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Interval &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.cpp" line="150" column="1" bodyfile="src/segment/Interval.cpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gac85491c9b09a0e009fe58f15da5e88ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const IntervalTree &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.cpp" line="232" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="232" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gade87c7b11c1a1fdbcd922e08b3eaa3c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const MusEvent &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="63" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga7d6e1aa31e5a2132257840adeb5bf23f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Pitch &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.cpp" line="142" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="142" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad95cc714e40b63c5df8e1dc41305178e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Point &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="117" column="1" bodyfile="src/segment/Point.hpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf9d08e42ae7632f815ad7bd3c093b497" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const SpiralPoint &amp;lhs, const SpiralPoint &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="56" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0b4ffecf00942ad046a9ea6785319f6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const SpiralPoint &amp;lhs, const SpiralPoint &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="64" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab3a698d42f743ce361da6916209eca88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const SpiralPoint &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="70" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="70" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaeba3d7c6ab7481a52f2cd4ce980c08ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const NoteName &amp;lhs, const NoteName &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="159" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga7c5e53ea6aa75682a2320bdf2f6f17fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const NoteName &amp;lhs, const NoteName &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="168" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga696a465764983bfca52bcd6406e373f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const NoteName &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="173" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="173" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga7e9399ce64bb21aa2d2c3cd682ca95da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AlignedInterval::AlignedInterval</definition>
+        <argsstring>(const InputSegment *s, Rational mend=Rational(1), bool f_align=false)</argsstring>
+        <name>AlignedInterval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>f_align</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="classInterval" kindref="compound">Interval</ref> covering the whole length of the given input segment with given musical time length (number of bars). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given input segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given musical time length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_align</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag says wether alignement must be computed for the interval. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="48" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="16" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4aa5548293e2dcd94ab3845d9a8fe492" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AlignedInterval::AlignedInterval</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend, size_t first, bool f_align=false)</argsstring>
+        <name>AlignedInterval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>f_align</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>aligned interval with musical-time bounds [mbegin, mbegin+mdur[ and real-time bounds [rbegin, rbegin+rdur[ for the input segment s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be the first element of input segment after the beginning of this interval.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_align</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag says wether alignement must be computed for the interval. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="180" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="36" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5bf2bf3fe1a1791989ec52969aace0a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AlignedInterval::AlignedInterval</definition>
+        <argsstring>(const AlignedInterval &amp;)</argsstring>
+        <name>AlignedInterval</name>
+        <param>
+          <type>const <ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="71" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga304aac2ec620d785bbfb67996a7a613b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> &amp;</type>
+        <definition>AlignedInterval &amp; AlignedInterval::operator=</definition>
+        <argsstring>(const AlignedInterval &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="76" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="68" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga40f7de6ee8d8b73172ca1dbfa54bfe62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AlignedInterval::operator==</definition>
+        <argsstring>(const AlignedInterval &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="78" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="84" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaeb6593290d19ff04137c3f3c3e9e3175" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AlignedInterval::aligned</definition>
+        <argsstring>() const</argsstring>
+        <name>aligned</name>
+        <briefdescription>
+<para>this interval has been aligned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="166" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga25f42094dbb3623c73df11dd85596185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AlignedInterval::align</definition>
+        <argsstring>(const InputSegment *s, size_t b)</argsstring>
+        <name>align</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>set the alignment parameters, starting from index b of input segment point and return the next index of point in input segment to be processed (first index at right of this interval) or the size of input segment (total # points) if end of segment is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input segment processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be the index of a segment&apos;s point. it must be after the left bound of the interval (begin). it can be out of the interval, i.e. after the right bound (end). _seg_first is replaced by b.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The realtime begin date of this interval can be out of the input segment bounds. </para>
+</simplesect>
+<simplesect kind="warning"><para>The realtime end date of this interval can be out of the input segment bounds. In the later case, alignement is done like the input segment is padded with empty space up to the end of this interval. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="150" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="105" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga85de404c4ddf91a51bf0c29c6dbe1d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AlignedInterval::align</definition>
+        <argsstring>(const InputSegment *s)</argsstring>
+        <name>align</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>same as previous but uses _seg_first instead of argument b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="153" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="113" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafad6a7eea9e5892cfae9986f6263a738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AlignedInterval::rewind</definition>
+        <argsstring>(const InputSegment *s, size_t b)</argsstring>
+        <name>rewind</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>compute only the value of the next point (the first element of input segment after the right bound of this interval) starting from index b of input segment point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>same preconditions on b as for align. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="160" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1a6a8f006c2d11e8f4af7250a6fb0b16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AlignedInterval::rewind</definition>
+        <argsstring>(const InputSegment *)</argsstring>
+        <name>rewind</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>same as previous but uses _seg_first instead of arg. b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="163" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="222" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0be5d430ebcf64f2789eb37886b16367" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AlignedInterval::_check_first</definition>
+        <argsstring>(const InputSegment *)</argsstring>
+        <name>_check_first</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="219" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="250" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga427dfea0ea3968e99fb4f59ff462a378" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AlignedInterval::_check_next</definition>
+        <argsstring>(const InputSegment *)</argsstring>
+        <name>_check_next</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/AlignedInterval.hpp" line="221" column="1" bodyfile="src/segment/AlignedInterval.cpp" bodystart="272" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga35cbd86caf5c17f8d59559ae0b28febf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Environment::Environment</definition>
+        <argsstring>(InputSegment *s=NULL)</argsstring>
+        <name>Environment</name>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input segment can be :<itemizedlist>
+<listitem><para>NULL : e.g. for simple enumeration of the given wta</para>
+</listitem><listitem><para>non-NULL: e.g. for quantization of the points of given input segment using a given wta </para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Environment.hpp" line="51" column="1" bodyfile="src/segment/Environment.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga8e294735187880dd3d59be10c425b29d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Environment::~Environment</definition>
+        <argsstring>()</argsstring>
+        <name>~Environment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Environment.hpp" line="53" column="1" bodyfile="src/segment/Environment.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaec471ec05052a932b1bb2738bfc8b172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(double b=0, double e=0)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>constructs an empty input segment (no events) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="96" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0ca7fa41c0dadabbaa112fdde9e48492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(const InputSegment &amp;)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="98" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga58d6af0b8186068f4bc26f58e6e62eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(const InputSegment &amp;s, double b, double e)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>copy and resize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input segment to copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new start date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new end date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>copy only the events inside the new bounds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="105" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="42" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab8da320feb29d4b009d2e6a37924337e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>InputSegment::~InputSegment</definition>
+        <argsstring>()</argsstring>
+        <name>~InputSegment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="107" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga05fee2bd8565c3076a6d800e37d7ab63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t InputSegment::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>number of non-floating points in segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="128" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaccf3b9127fc3d068a95af19f46d9052d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::iterator InputSegment::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>iterators to the segment&apos;s contents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="131" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1cc736fda27974f59c2e2dfc44eedf9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::iterator InputSegment::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="132" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaff8f8c77de90a74f028f2e7a6ea32f90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::const_iterator InputSegment::cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="133" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga9eae7fefbf0884764ff6a75fc5fa063b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::const_iterator InputSegment::cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="134" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga82a64bae54200b634bc42ac06dc7a916" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InputSegment::check_index</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>check_index</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="302" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="132" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga43310a16681e2241b20da4b68de9f35b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::link</definition>
+        <argsstring>(long i, long j)</argsstring>
+        <name>link</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>the event of index i is linked to the event of index j. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a valid index, </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a valid and not NULL index, </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>both i and j can be in heap (negative index). </para>
+</simplesect>
+<simplesect kind="warning"><para>the point at i must not be linked (NULL link index). </para>
+</simplesect>
+<simplesect kind="warning"><para>the realtime date of i must be &lt;= realtime date of j (if not NULL). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="311" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="145" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gabb6224ab371e84d2048f3c9e2692d15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_back</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>add_back</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>insert new timestamped muspoint created from the parameters, at the end of the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The realtime dateof the point must be after the current last point of this segment. </para>
+</simplesect>
+<simplesect kind="return"><para>the index of the inserted point (can be used as link). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="177" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="154" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2c58dc6e5e032dc7fee299be296371e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_back</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>add_back</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="185" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="170" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad44eb7379e181fc4295ee2514a568204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_floating</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>add_floating</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>create new timestamped muspoint from the parameters, and add the the heap of floating points (not in segment). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>(allocated and freed by this segment) <simplesect kind="return"><para>the index of the new point (can be used as link). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="192" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="176" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gabb9443e79fcefd19a5c7b65c4e54102a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_floating</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>add_floating</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="200" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5463f900db31be4b7d109e88a710971f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>const MusPoint &amp; InputSegment::point</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>point</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a ref to the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>ith point in this input segment if 0 &lt;= i &lt; input segment size</para>
+</listitem><listitem><para>or the -i-1th floating point if heap size &lt;= i &lt; 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in the above range of values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="140" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="198" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2dbfcbf9664a10c1245e298b9257d5cd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>MusPoint &amp; InputSegment::ncpoint</definition>
+        <argsstring>(long i)</argsstring>
+        <name>ncpoint</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>same as point but not const. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="300" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="217" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafaa215f8df4e03b3e22c4c5eb3e494ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent * InputSegment::event</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>event</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the event of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="143" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga7c26187b3e70ea62bd10b9b15284a99a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rdate</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>rdate</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time date (in seconds) of the point of index i </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="147" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5ce66f635c2ab912e0ec9662c5c2ceaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rduration</definition>
+        <argsstring>(const MusPoint &amp;p) const</argsstring>
+        <name>rduration</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time duration (in seconds) of the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="155" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="247" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafbf05e143d416de49180d2f18a53977b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rduration</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>rduration</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time duration (in seconds) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="151" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6fce03f54fe517cc9541ea446cd26a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational &amp; InputSegment::mdate</definition>
+        <argsstring>(long i)</argsstring>
+        <name>mdate</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a reference to the musical-time date (in fraction of bar) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="159" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2c16ef8a681bf9fded1dba29c1a84342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational &amp; InputSegment::mduration</definition>
+        <argsstring>(long i)</argsstring>
+        <name>mduration</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a reference to the musical-time duration (in fraction of bar) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="163" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gae75db088893a7cfc719ec393e09d7ece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::close</definition>
+        <argsstring>(double e)</argsstring>
+        <name>close</name>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>set end date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="206" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2d78677ab3ea44ae91034c4e312e778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::respell</definition>
+        <argsstring>(int k=0)</argsstring>
+        <name>respell</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>pitch spelling. unwindowed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this segment must have been quantized. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="237" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="320" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gac79787254008e05d9f54226d93dcb0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::respell</definition>
+        <argsstring>(Rational ws, int k=0)</argsstring>
+        <name>respell</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>pitch spelling with a sliding window of given musical duration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this segment must have been quantized. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="242" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="379" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga623c2367191018ecac046e7e11f14976" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+<para>print size to output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="261" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="385" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga42c65e4989c84fbce42115d8e7813f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void InputSegment::quantize</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p)</argsstring>
+        <name>quantize</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>set the musical time date and duration of events in this given input segment, according to the best run for p in given table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>ptr type P must have interval. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical dates and durations of events in this segment will be changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="218" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab4c42d088ce3d170b7899712789ab464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t InputSegment::quantizu</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p, size_t b=0)</argsstring>
+        <name>quantizu</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>set the musical time date and duration of events in this given input segment, according to the best run for p in given table, starting from point number b in interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the next point of input segment with musical date and duration yet unset after processing p. </para>
+</simplesect>
+<simplesect kind="warning"><para>ptr type P must have interval. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical date of events must be unknown in seg. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical durations of events must be unknown in seg.</para>
+</simplesect>
+<xrefsect id="todo_1_todo000024"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR (replaced by quantize) </para>
+</xrefdescription></xrefsect></para>
+<para><xrefsect id="todo_1_todo000023"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="233" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="333" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga8c7a48cd8c319c2d5697b57ea2c4d733" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t InputSegment::quantize_assert</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p, size_t b)</argsstring>
+        <name>quantize_assert</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="315" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="352" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad033d12a18d0f8cd7a8b0a2f5f029db2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegmentMono::InputSegmentMono</definition>
+        <argsstring>(const InputSegment &amp;s)</argsstring>
+        <name>InputSegmentMono</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>transform the given input segment into a monophonic input segment (no two notes in the same time). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>by moving note-off events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegmentMono.hpp" line="43" column="1" bodyfile="src/segment/InputSegmentMono.cpp" bodystart="15" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaa05ab07eeaf10f35e57552ab045ac548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegmentNogap::InputSegmentNogap</definition>
+        <argsstring>(const InputSegment &amp;s, bool norest=true)</argsstring>
+        <name>InputSegmentNogap</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>norest</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>transform the given input segment into a new input segment without gaps. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>by prolongations of some notes (option norest = true) or insertion of rests events (option norest = false) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegmentNogap.hpp" line="31" column="1" bodyfile="src/segment/InputSegmentNogap.cpp" bodystart="15" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gadfaf31fca3f5e5da49e37c7baa275125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const InputSegment *s, Rational mend=Rational(1))</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+<para>top interval constructed from an input segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classInterval" kindref="compound">Interval</ref> covering the whole length of the given input segment s with given musical time length (number of bars) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="41" column="1" bodyfile="src/segment/Interval.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaefc21b7c838661c05286304f6d891690" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <briefdescription>
+<para>build an interval with musical-time bounds [mbegin, mbegin+mdur[ and real-time bounds [rbegin, rbegin+rdur[ for the input segment s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>not aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="126" column="1" bodyfile="src/segment/Interval.cpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga17cfcca410ae94fe906dfcdb726026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const Interval &amp;)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="62" column="1" bodyfile="src/segment/Interval.cpp" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga43e7da7f24dfa17fccdd0dd40a96f458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(Interval *)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type><ref refid="classInterval" kindref="compound">Interval</ref> *</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>used for copy of downcasted <ref refid="classIntervalTree" kindref="compound">IntervalTree</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="65" column="1" bodyfile="src/segment/Interval.cpp" bodystart="75" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga04dee911c27559f22144e1ab329550df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::sanity_check</definition>
+        <argsstring>()</argsstring>
+        <name>sanity_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="132" column="1" bodyfile="src/segment/Interval.cpp" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga29a886b3ca41b923ffe9c1a291973dc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::sanity_check</definition>
+        <argsstring>(const InputSegment *)</argsstring>
+        <name>sanity_check</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="131" column="1" bodyfile="src/segment/Interval.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6508f58e15c54be6146d5505d91a4b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+        <definition>Interval &amp; Interval::operator=</definition>
+        <argsstring>(const Interval &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="70" column="1" bodyfile="src/segment/Interval.cpp" bodystart="114" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4b0896bf3843fec18d68a130fe9a49f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Interval::operator==</definition>
+        <argsstring>(const Interval &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>for using <ref refid="classInterval" kindref="compound">Interval</ref> as key in map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="73" column="1" bodyfile="src/segment/Interval.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga3af4cc83b5ee3d320fa5b24fa244fabb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::insideBar</definition>
+        <argsstring>() const</argsstring>
+        <name>insideBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="114" column="1" bodyfile="src/segment/Interval.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4516d6ce78ba92f2e1728fdaa930ac51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalHeap::IntervalHeap</definition>
+        <argsstring>()</argsstring>
+        <name>IntervalHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="78" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf66f939648f0ea13c0eb3cee057269b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalHeap::~IntervalHeap</definition>
+        <argsstring>()</argsstring>
+        <name>~IntervalHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="80" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4a873d9f7d804928f972a3c11d2a1df0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntervalHeap::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="87" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga87e6be639c7435053444d83913505c1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t IntervalHeap::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="89" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad7fd7dd4ddb8d520df0985e67d180019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::make</definition>
+        <argsstring>(const InputSegment *s, Rational mend, double rext=0)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rext</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>find or create (and push) a top interval of real-time duration covering the whole length of the given input segment s (root of interval tree) + the given extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>inside-bar interval (musical time duration of 1 bar) if flag bar is true</para>
+</listitem><listitem><para>multiple interval if flag bar is false (default).</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>not aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="99" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="51" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad886d53d2881a80f06c6f9fbf202d727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::make</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend, size_t first, IntervalTree *p, IntervalTree *ps)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+<para>get interval from heap, build it if not present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>not aligned (when built). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="107" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="69" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga3327b1c81b67df8c21468492a845630e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::push</definition>
+        <argsstring>(IntervalTree *p)</argsstring>
+        <name>push</name>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="122" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="85" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab092e4338aa4c3369c4fa4404d8706b0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalTree::IntervalTree</definition>
+        <argsstring>(const InputSegment *s, Rational mend=Rational(1))</argsstring>
+        <name>IntervalTree</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+<para>top interval (root of interval tree). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>covering the whole length of the given input segment s inside-bar interval of musical time duration of 1 bar if flag bar is true multi-bar interval if flag bar is false.</para>
+<para><simplesect kind="warning"><para>the interval tree created is not registered to an interval heap. </para>
+</simplesect>
+<simplesect kind="warning"><para>not aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="147" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gac16f2a8d9c584a869bbed6a263914360" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalTree::IntervalTree</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend, size_t first, IntervalTree *p=NULL, IntervalTree *ps=NULL)</argsstring>
+        <name>IntervalTree</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>p</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>ps</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>build an interval tree with musical-time bounds [mbegin, mbegin+mdur[ and real-time bounds [rbegin, rbegin+rdur[ for the input segment s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the parent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the previous sibling. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>not aligned - must be aligned afterwards. </para>
+</simplesect>
+<simplesect kind="warning"><para>use only internaly construction of recursive paths. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="159" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gae2c50e46e3997dd8631669046bf06c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalTree::~IntervalTree</definition>
+        <argsstring>()</argsstring>
+        <name>~IntervalTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="42" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0c04840a0d05d3b0d4b99e654d72b81b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+        <definition>IntervalTree * IntervalTree::top</definition>
+        <argsstring>(const InputSegment *s, IntervalHeap *h, Rational mend=Rational(1))</argsstring>
+        <name>top</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+<para>top interval (root of interval tree) covering the whole length of the given input segment s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>inside-bar interval of musical time duration of 1 bar if flag bar is true. multi-bar interval if flag bar is false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="59" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gae9e8f6ca3fa4093cfcd1428e9f41d048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+        <definition>IntervalTree * IntervalTree::split</definition>
+        <argsstring>(const InputSegment *, IntervalHeap *, double rdur, Rational mdur, size_t i)</argsstring>
+        <name>split</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <defname>ih</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdur</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a sub interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>if i = 1 first sub-interval starting at same point as this interval of realtime duration rdur of musical duration mdur bar. it not is aligned.</para>
+</listitem><listitem><para>if i = 2 second sub-interval (rest) starting at this interval realtime start + rdur and this interval musical time start + mdur of realtime duration this realtime duration - rdur. if the real starting date is out of this interval, then the real duration of the returned second sub-interval is zero. the musical starting date must be inside this interval. it is not aligned.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rdur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be strictly positive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be strictly positive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="83" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="62" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5b1393db865d0dd81249033dd99ecd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+        <definition>IntervalTree * IntervalTree::split_back</definition>
+        <argsstring>(const InputSegment *, IntervalHeap *, double rdur, Rational mdur, size_t i)</argsstring>
+        <name>split_back</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <defname>ih</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdur</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a sub interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>if i = 1 first sub-interval starts at same point as this interval of realtime duration : duration of this interval - rdur of musical duration : musical duration of this interval - mdur bars. if the starting date is out of the input segment, then the real duration of the returned first sub-interval is zero. it is not aligned.</para>
+</listitem><listitem><para>if i = 2 second sub-interval (rest) starts at this interval realtime end - rdur and this interval musical time end - mdur of realtime duration rdur. it is not aligned.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rdur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be strictly positive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be strictly positive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="108" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="116" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gacb8de7e3756951950c391d241adec21c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+        <definition>IntervalTree * IntervalTree::sub</definition>
+        <argsstring>(const InputSegment *, IntervalHeap *, size_t a, size_t i)</argsstring>
+        <name>sub</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <defname>ih</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a the i-1th sub-interval of the division of this interval in n equal parts. the sub-interval returned is aligned. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be &gt; 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be smaller than a. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this interval must be aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalTree.hpp" line="120" column="1" bodyfile="src/segment/IntervalTree.cpp" bodystart="169" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga00b69e8f1bf80a478fce420d5d378c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusEvent::MusEvent</definition>
+        <argsstring>(int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>MusEvent</name>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="44" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga40f47305a4bd7afbf26a4fbee663dd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusEvent::MusEvent</definition>
+        <argsstring>(const MusEvent &amp;)</argsstring>
+        <name>MusEvent</name>
+        <param>
+          <type>const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="46" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaafcefa86601b97d137cfba40ed349414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RestEvent::RestEvent</definition>
+        <argsstring>(int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>RestEvent</name>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="74" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gac4e65b67dedabe1736d414b8b4ab7e91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RestEvent::RestEvent</definition>
+        <argsstring>(const RestEvent &amp;)</argsstring>
+        <name>RestEvent</name>
+        <param>
+          <type>const <ref refid="classRestEvent" kindref="compound">RestEvent</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="76" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6ebb6acd4c78929d31a4831c58911639" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent * RestEvent::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classMusEvent_1a013a5d979aeac811d74929b41b188762">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="80" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0b9fce9fff8648eae4a51a77957fab45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RestEvent::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplements refid="classMusEvent_1a1a53c7e09246ad1441d26069ff4a9387">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="88" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaeeb3a0d391bef4a285f1be45d31e63be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteEvent::NoteEvent</definition>
+        <argsstring>(unsigned int vel=MusEvent::UNDEF_VELOCITY, int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>NoteEvent</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>vel</declname>
+          <defval>MusEvent::UNDEF_VELOCITY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>unpitched note (drums). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="100" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1bd25b8699a9ed866f11f62a844645f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteEvent::NoteEvent</definition>
+        <argsstring>(Pitch p, unsigned int vel=MusEvent::UNDEF_VELOCITY, int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>NoteEvent</name>
+        <param>
+          <type><ref refid="classPitch" kindref="compound">Pitch</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>vel</declname>
+          <defval>MusEvent::UNDEF_VELOCITY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>pitched note. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="104" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga135e904aa3f5ea4d375e451281fe5323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteEvent::NoteEvent</definition>
+        <argsstring>(unsigned int p, unsigned int vel=MusEvent::UNDEF_VELOCITY, int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>NoteEvent</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>vel</declname>
+          <defval>MusEvent::UNDEF_VELOCITY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>pitched note with MIDI pitch in 0..127. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="109" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga9250db2a9fadb2184d60187e38ee02cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteEvent::NoteEvent</definition>
+        <argsstring>(const NoteEvent &amp;)</argsstring>
+        <name>NoteEvent</name>
+        <param>
+          <type>const <ref refid="classNoteEvent" kindref="compound">NoteEvent</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="113" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2fe5abb4cd9fbe000b1ec13114d60049" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent * NoteEvent::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classMusEvent_1a013a5d979aeac811d74929b41b188762">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="117" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafa25174e584b872e814643c895cad283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NoteEvent::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplements refid="classMusEvent_1a1a53c7e09246ad1441d26069ff4a9387">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="133" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="94" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga006e3062fd920202aab9e36f6a0e394e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="30" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="15" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1bb17bef698401de18bc814c7f965999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(const Point &amp;p, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>copy of point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>extended with given onset and duration values (in fraction of bars) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="41" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5f00500846d251b165f48a41552be18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>event (if any) is cloned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="46" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga036951554acf624dd62469abbd8142df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::~MusPoint</definition>
+        <argsstring>()</argsstring>
+        <name>~MusPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="48" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga522126acc9eb79e737068941370bb172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>MusPoint &amp; MusPoint::operator=</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>event (if any) is cloned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="51" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="57" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga07139fb89dcc2388b299b9e6464b3177" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MusPoint::operator==</definition>
+        <argsstring>(const Point &amp;) const</argsstring>
+        <name>operator==</name>
+        <reimplements refid="group__segment_1ga1055933b999ef990df6b48745c27a197">operator==</reimplements>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="53" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="77" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafef7a93b7ba8e96efc8d2b179c69a830" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MusPoint::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__segment_1gaf6904981d6c631a7756499cd0b42ce29">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="72" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="87" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga09a5f5040f1902afa6d81520cf7bd084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>()</argsstring>
+        <name>Pitch</name>
+        <briefdescription>
+<para>undef pitch value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="38" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf3f9d88915bb6688d522f09d7542f690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(char name, float alt=0.0, int oct=0)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>char</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alt</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>oct</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>construct pitch from name+alteration+octave. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see table NAMES in constant.h </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in [-2, 2] where 1.0 is half tone </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in -10..10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="44" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaace1762f4d975560a8d739d2d13fcd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(unsigned int pitch, PitchUnit u=MIDI)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>PitchUnit</type>
+          <declname>u</declname>
+          <defval>MIDI</defval>
+        </param>
+        <briefdescription>
+<para>construct note from MIDI pitch </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in 0..127 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="50" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="48" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafb10e8f7a064ee15f75e4ba5609c682b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(const Pitch &amp;)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="52" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga738dc72ab88cf6a09d89338e4f1d4b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+        <definition>Pitch &amp; Pitch::operator=</definition>
+        <argsstring>(const Pitch &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="56" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab361cf1a2c8b9dca6e5abd8069e2d81d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pitch::operator==</definition>
+        <argsstring>(const Pitch &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="58" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga507b693a51dd2d626dc3cf42e7d93d99" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Pitch::midi_to_name</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_name</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="87" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="90" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga45a060956b0a13178b4a2e987597ab95" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Pitch::midi_to_alt</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_alt</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="88" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gade0788e4c49153b64197dce1203744ae" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pitch::midi_to_oct</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_oct</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="89" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaa706b7d526d2ccb75c03c202dcd54e5c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::name_to_int</definition>
+        <argsstring>(char)</argsstring>
+        <name>name_to_int</name>
+        <param>
+          <type>char</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="91" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="114" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga18ee1055465d12e1b9778a4c625cc850" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::name_to_midi</definition>
+        <argsstring>(char, float, int)</argsstring>
+        <name>name_to_midi</name>
+        <param>
+          <type>char</type>
+          <defname>n</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <defname>alt</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>oct</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="90" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="126" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6cb7f450eee39d3bd8483f017f28906d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL)</argsstring>
+        <name>Point</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <briefdescription>
+<para>timestamped monophonic or polyphonic event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="54" column="1" bodyfile="src/segment/Point.cpp" bodystart="17" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5b7ec0fb127734c1cd5c6f350a3990fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(const Point &amp;)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event (if any) is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="61" column="1" bodyfile="src/segment/Point.cpp" bodystart="34" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga395fa04b4ec126b66fc053f829a30cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::~Point</definition>
+        <argsstring>()</argsstring>
+        <name>~Point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event is deallocated and matcher (linked) also. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="64" column="1" bodyfile="src/segment/Point.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga55eeab949e62268da63176d48570eb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>Point &amp; Point::operator=</definition>
+        <argsstring>(const Point &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event (if any) is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="67" column="1" bodyfile="src/segment/Point.cpp" bodystart="59" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1055933b999ef990df6b48745c27a197" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Point::operator==</definition>
+        <argsstring>(const Point &amp;) const</argsstring>
+        <name>operator==</name>
+        <reimplementedby refid="group__segment_1ga07139fb89dcc2388b299b9e6464b3177">operator==</reimplementedby>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="69" column="1" bodyfile="src/segment/Point.cpp" bodystart="79" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf6904981d6c631a7756499cd0b42ce29" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Point::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplementedby refid="group__segment_1gafef7a93b7ba8e96efc8d2b179c69a830">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="113" column="1" bodyfile="src/segment/Point.cpp" bodystart="144" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga80277d41d835c643826b4e813490849a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpiralPoint::SpiralPoint</definition>
+        <argsstring>(double, double, double)</argsstring>
+        <name>SpiralPoint</name>
+        <param>
+          <type>double</type>
+          <defname>vx</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <defname>vy</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <defname>vz</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="32" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gae521f98807e13c4e0019b561565cda18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpiralPoint::SpiralPoint</definition>
+        <argsstring>(const SpiralPoint &amp;rhs)</argsstring>
+        <name>SpiralPoint</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="34" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab4085951f6e5264f912feadf327a8c81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+        <definition>SpiralPoint &amp; SpiralPoint::operator=</definition>
+        <argsstring>(const SpiralPoint &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="36" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga8d702bcd74b30d19929d1954087bd4b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SpiralPoint::isnormal</definition>
+        <argsstring>() const</argsstring>
+        <name>isnormal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>wether coordinate are not NAN. */ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="39" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga50ce60a751c8ad173a53ccee629a4598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiralPoint::operator+=</definition>
+        <argsstring>(const SpiralPoint &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="41" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="47" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga81b9a0d474b385cf0335523d49cc9fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiralPoint::operator-=</definition>
+        <argsstring>(const SpiralPoint &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="42" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf7d46ab9c2b5dd8e11ec4a940dea3d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiralPoint::operator*=</definition>
+        <argsstring>(double a)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="44" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga71dccd6f3dd14b2c497e4198ea37d745" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SpiralPoint::distance</definition>
+        <argsstring>(const SpiralPoint &amp;rhs) const</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Euclidian distance to given point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="50" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="75" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad81fd626f6b9bc6d70fd5e235ec5c8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteName::NoteName</definition>
+        <argsstring>(char n, float alt, int id)</argsstring>
+        <name>NoteName</name>
+        <param>
+          <type>char</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>notename object from name, alteration and index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between &apos;A&apos; and &apos;G&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between -2.0 and 2.0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between -15 and 19 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="128" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="101" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaba2eabd0e4626b56685968ea53153b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteName::NoteName</definition>
+        <argsstring>(const NoteName &amp;rhs)</argsstring>
+        <name>NoteName</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="134" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="132" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga22a391f4c1fa697f1d320d1a659f130f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>NoteName &amp; NoteName::operator=</definition>
+        <argsstring>(const NoteName &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="136" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="140" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga055480a382a6fde05bde51abed31a56c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>const NoteName &amp; NoteName::ofkey</definition>
+        <argsstring>(int k)</argsstring>
+        <name>ofkey</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>ref to a <ref refid="structNoteName" kindref="compound">NoteName</ref> in table synonyms. */ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="143" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="240" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf4a2321d9bc5a69a5b8a94cf1e146052" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>const NoteName &amp; NoteName::closest</definition>
+        <argsstring>(unsigned int pitch, const SpiralPoint &amp;p)</argsstring>
+        <name>closest</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>note name (ref in table synonyms) corresponding to given midi pitch and closest to given point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point in spiral </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in 0..128 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="149" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="283" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__segment_1ga5e0ecbf9869effe45cacf0c1a191615c" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MusEvent::UNDEF_VELOCITY</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_VELOCITY</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="39" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga8193b78df3a269acf7296393a522aafc" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pitch::UNDEF_MIDICENT</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_MIDICENT</name>
+        <initializer>= 12800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="32" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga8222a08cf48e372acab91765b3635ec5" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char Pitch::UNDEF_NOTE_NAME</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_NAME</name>
+        <initializer>= &apos;X&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="33" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1gad2dfc170c7179a5e8d1320edcbdf39ff" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Pitch::UNDEF_NOTE_OCTAVE</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_OCTAVE</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="34" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga34db231ac148899756f4a87f8d84f15f" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Pitch::UNDEF_NOTE_ALTERATION</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_ALTERATION</name>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="35" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga5096d2f0d873c3825dad21b734a99e02" prot="private" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char Pitch::NAMES</definition>
+        <argsstring>[12]</argsstring>
+        <name>NAMES</name>
+        <initializer>=
+{&apos;C&apos;, &apos;C&apos;, &apos;D&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;F&apos;, &apos;G&apos;, &apos;G&apos;, &apos;A&apos;, &apos;A&apos;, &apos;B&apos;}</initializer>
+        <briefdescription>
+<para>conversion MIDI to note names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="84" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1gac19e464fedd1619012e5258348b55e3d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Pitch::SHARP</definition>
+        <argsstring>[12]</argsstring>
+        <name>SHARP</name>
+        <initializer>=
+{ 0 ,  1 ,  0 ,  1 ,  0 ,  0 ,  1 ,  0 ,  1 ,  0 ,  1 ,  0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="85" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga9e7612a2360f35684ff1228936e58a30" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int NoteName::UNDEF_NOTE_INDEX</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_INDEX</name>
+        <initializer>= 99</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="86" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga51da52124dc1108e143b2a9f73537ada" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double NoteName::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+<para>z distance between two successive points of the spiral (one fifth apart). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="89" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga814ef312c571ae51a0007c1d5a6a0b17" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double NoteName::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>= std::sqrt(7.5) * h</initializer>
+        <briefdescription>
+<para>radius of the cylinder in which the spiral is embedded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="92" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga8e1cf6e8bac86af1c5cfdc22b36210b2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref></type>
+        <definition>const NoteName NoteName::synonyms</definition>
+        <argsstring>[12][3]</argsstring>
+        <name>synonyms</name>
+        <initializer>=
+{
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  1.0,  12), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  0.0,   0), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;, -2.0, -12) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  1.0,   7), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;, -1.0,  -5), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  2.0,  19) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  2.0,  14), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  0.0,   2), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;, -2.0, -10) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  1.0,   9), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;, -1.0,  -3), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;, -2.0, -15) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  2.0,  16), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  0.0,   4), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;, -1.0,  -8) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  1.0,  11), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  0.0,  -1), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  2.0,  15) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  2.0,  18), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  1.0,   6), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;, -1.0,  -6) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  2.0,  13), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  0.0,   1), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;, -2.0, -11) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  1.0,   8), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;, -1.0,  -4), <ref refid="structNoteName" kindref="compound">NoteName</ref>() },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  2.0,  15), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  0.0,   3), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;, -2.0,  -9) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  1.0,  10), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;, -1.0,  -2), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  2.0,  14) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  2.0,  17), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  0.0,   5), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;, -1.0,  -7) }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="140" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <computeroutput>segment</computeroutput> module contains classes for abstract representation of data in input processed by parsing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="midiutil_8cpp" kind="file" language="C++">
+    <compoundname>midiutil.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="QPconfig_8h" local="yes">QPconfig.h</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="InputSegment_8hpp" local="yes">InputSegment.hpp</includes>
+    <includes refid="InputSegmentMIDI_8hpp" local="yes">InputSegmentMIDI.hpp</includes>
+    <includes refid="InputSegmentSerial_8hpp" local="yes">InputSegmentSerial.hpp</includes>
+    <incdepgraph>
+      <node id="614">
+        <label>assert.h</label>
+      </node>
+      <node id="611">
+        <label>stdlib.h</label>
+      </node>
+      <node id="608">
+        <label>string</label>
+      </node>
+      <node id="604">
+        <label>src/targets/midi/midiutil.cpp</label>
+        <link refid="midiutil_8cpp"/>
+        <childnode refid="605" relation="include">
+        </childnode>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="607" relation="include">
+        </childnode>
+        <childnode refid="608" relation="include">
+        </childnode>
+        <childnode refid="609" relation="include">
+        </childnode>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+        <childnode refid="612" relation="include">
+        </childnode>
+        <childnode refid="613" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+      </node>
+      <node id="612">
+        <label>unistd.h</label>
+      </node>
+      <node id="609">
+        <label>vector</label>
+      </node>
+      <node id="606">
+        <label>time.h</label>
+      </node>
+      <node id="607">
+        <label>iostream</label>
+      </node>
+      <node id="610">
+        <label>ctype.h</label>
+      </node>
+      <node id="613">
+        <label>getopt.h</label>
+      </node>
+      <node id="605">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="midiutil_8cpp_1a4f59323969e09154845e5509b29f80ec" prot="public" static="no">
+        <name>check_index_is</name>
+        <param><defname>NAME</defname></param>
+        <initializer>assert(0 == strcmp(long_options[option_index].name, NAME))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="90" column="9" bodyfile="src/targets/midi/midiutil.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="midiutil_8cpp_1a1bdcfae3209cbd96db35a2ae356fa15e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int verbosity</definition>
+        <argsstring></argsstring>
+        <name>verbosity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="33" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a21da174138213a9bd27f2e5fede73c84" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_input</definition>
+        <argsstring></argsstring>
+        <name>f_input</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="36" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1aa83363c6f30e914efcf3aad000af3611" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _input_file</definition>
+        <argsstring></argsstring>
+        <name>_input_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="38" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1ae522d059a0773fde6752864a1a25a937" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_norest</definition>
+        <argsstring></argsstring>
+        <name>f_norest</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="41" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a1968747d18a2c7b279494411074a7b0f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_output</definition>
+        <argsstring></argsstring>
+        <name>f_output</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="44" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a46456475197e8bbad19444941411e4e9" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _output_file</definition>
+        <argsstring></argsstring>
+        <name>_output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="46" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1af43b42d34e296555129d2fc0a38e2c36" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_start</definition>
+        <argsstring></argsstring>
+        <name>f_start</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="49" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1af18dec021c4189bf9e42c17825a659c9" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_start</definition>
+        <argsstring></argsstring>
+        <name>d_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="51" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a912061ffd86d7c9c5d45a818091a1809" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_end</definition>
+        <argsstring></argsstring>
+        <name>f_end</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="54" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a2085bc60e4a990f3bf6de9eb260c2033" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_end</definition>
+        <argsstring></argsstring>
+        <name>d_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="56" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1a04233c66521e39611ecfbdae813fb10f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_print</definition>
+        <argsstring></argsstring>
+        <name>f_print</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="59" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="midiutil_8cpp_1ab5b68aa8f898c499ca2c3092ecd9e552" prot="public" static="yes" mutable="no">
+        <type>struct option</type>
+        <definition>struct option long_options[]</definition>
+        <argsstring>[]</argsstring>
+        <name>long_options</name>
+        <initializer>=
+{
+    
+    
+    
+     { &quot;help&quot;,        no_argument,       NULL, &apos;h&apos; },
+     { &quot;version&quot;,     no_argument,       NULL, &apos;V&apos; },
+    
+     { &quot;verbosity&quot;,   required_argument, NULL, &apos;v&apos; },
+     { &quot;debug&quot;,       no_argument,       NULL, &apos;d&apos; },
+     { &quot;trace&quot;,       no_argument,       NULL, &apos;t&apos; },
+     { &quot;quiet&quot;,       no_argument,       NULL, &apos;q&apos; },
+
+     { &quot;print&quot;,       no_argument,       NULL, &apos;p&apos; },
+
+     { &quot;input&quot;,       required_argument, NULL, &apos;i&apos; },
+     { &quot;output&quot;,      required_argument, NULL, &apos;o&apos; },
+
+    
+     { &quot;norest&quot;,      no_argument,       &amp;f_norest, true },
+     { &quot;start&quot;,       required_argument, &amp;f_start, true },
+     { &quot;end&quot;,         required_argument, &amp;f_end, true },
+
+    
+    { NULL, 0, NULL, 0 }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="59" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="midiutil_8cpp_1ac23dc7fc03d7ce8cd37cae09a0cd155c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setOptionArgs</definition>
+        <argsstring>(int option_index)</argsstring>
+        <name>setOptionArgs</name>
+        <param>
+          <type>int</type>
+          <declname>option_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="93" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="93" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1a086c76a38f84ae6226164d3fb0b465d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkOptions</definition>
+        <argsstring>()</argsstring>
+        <name>checkOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="124" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="124" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1afdcd4929df2bb56fb719ca61ea717b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+        <definition>InputSegment* read_segment</definition>
+        <argsstring>(const string filename, bool norest)</argsstring>
+        <name>read_segment</name>
+        <param>
+          <type>const string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>norest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="147" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="147" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1a8b7a7ec994ee6dd14a4a9221e0c375cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>(string filename, std::ostream &amp;o)</argsstring>
+        <name>print</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="165" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="165" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1a2ef30c42cbc289d899a8be5d2d8f77d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usage</definition>
+        <argsstring>()</argsstring>
+        <name>usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="198" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="198" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1aadd58a2bd505eba3564c7483be1a6140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="215" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="midiutil_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/midi/midiutil.cpp" line="228" column="1" bodyfile="src/targets/midi/midiutil.cpp" bodystart="228" bodyend="404"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/targets/midi/midiutil.cpp"/>
+  </compounddef>
+</doxygen>

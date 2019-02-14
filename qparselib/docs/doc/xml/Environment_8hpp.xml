@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Environment_8hpp" kind="file" language="C++">
+    <compoundname>Environment.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="InputSegment_8hpp" local="yes">InputSegment.hpp</includes>
+    <includes refid="IntervalHeap_8hpp" local="yes">IntervalHeap.hpp</includes>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includedby refid="Environment_8cpp" local="yes">src/segment/Environment.cpp</includedby>
+    <includedby refid="Rune_8hpp" local="yes">src/table/Rune.hpp</includedby>
+    <includedby refid="Ptr_8hpp" local="yes">src/table/Ptr.hpp</includedby>
+    <incdepgraph>
+      <node id="389">
+        <label>src/segment/Environment.hpp</label>
+        <link refid="Environment_8hpp"/>
+        <childnode refid="390" relation="include">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classRecord" prot="public">Record</innerclass>
+    <innerclass refid="classEnvironment" prot="public">Environment</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/Environment.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="WTA_8cpp" kind="file" language="C++">
+    <compoundname>WTA.cpp</compoundname>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includes refid="FloatWeight_8hpp" local="yes">FloatWeight.hpp</includes>
+    <includes refid="ViterbiWeight_8hpp" local="yes">ViterbiWeight.hpp</includes>
+    <includes refid="TropicalWeight_8hpp" local="yes">TropicalWeight.hpp</includes>
+    <includes refid="CountingWeight_8hpp" local="yes">CountingWeight.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__schemata_1ga83eaab443b166582ff8beee576b4fd51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gcd</definition>
+        <argsstring>(size_t a, size_t b)</argsstring>
+        <name>gcd</name>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="273" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga21cc98547ba237fc676751c60c220415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t lcm</definition>
+        <argsstring>(size_t a, size_t b)</argsstring>
+        <name>lcm</name>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="281" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab750ab8b8fe56baba66c96e38398b632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const WTA &amp;a)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="705" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="705" bodyend="719"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/WTA.cpp"/>
+  </compounddef>
+</doxygen>

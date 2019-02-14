@@ -1,0 +1,96 @@
+\hypertarget{classValueList}{}\section{Value\+List Class Reference}
+\label{classValueList}\index{ValueList@{ValueList}}
+
+
+list of rational durations as components of value states.  
+
+
+
+
+{\ttfamily \#include $<$Value\+List.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Value\+List} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+{\bfseries Value\+List} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&)
+\item 
+{\bfseries Value\+List} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+{\bfseries Value\+List} (std\+::string)
+\item 
+\mbox{\hyperlink{classValueList}{Value\+List}} \& {\bfseries operator=} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classValueList_a21c3cca5483e25f27cadb7ae82d2dd96}\label{classValueList_a21c3cca5483e25f27cadb7ae82d2dd96}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classValueList_a1a24053a2e70a12da2af6680b594d03b}\label{classValueList_a1a24053a2e70a12da2af6680b594d03b}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries length} () const
+\item 
+\mbox{\Hypertarget{classValueList_a3d7f406dd34ed78e0f12324075ee2c8b}\label{classValueList_a3d7f406dd34ed78e0f12324075ee2c8b}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries cont} () const
+\item 
+\mbox{\Hypertarget{classValueList_af5e02ab5d58c4c9196a23473d55e7ae9}\label{classValueList_af5e02ab5d58c4c9196a23473d55e7ae9}} 
+std\+::list$<$ \mbox{\hyperlink{classRational}{Rational}} $>$\+::const\+\_\+iterator {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classValueList_abd03430257070988728b597fa1467353}\label{classValueList_abd03430257070988728b597fa1467353}} 
+std\+::list$<$ \mbox{\hyperlink{classRational}{Rational}} $>$\+::const\+\_\+iterator {\bfseries end} () const
+\item 
+bool {\bfseries complete} () const
+\item 
+bool {\bfseries single\+\_\+continuation} () const
+\item 
+bool {\bfseries single\+\_\+event} () const
+\item 
+bool {\bfseries event} () const
+\item 
+\mbox{\Hypertarget{classValueList_a502abe52ee55ed7616fcfadfa4f1e070}\label{classValueList_a502abe52ee55ed7616fcfadfa4f1e070}} 
+size\+\_\+t {\bfseries nbgn} () const
+\item 
+void {\bfseries add} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+void {\bfseries addcont} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries front} () const
+\item 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries pop} ()
+\item 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries popcont} ()
+\item 
+void {\bfseries popcont} (\mbox{\hyperlink{classRational}{Rational}})
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classValueList_ac2b4a94933f9bce2e3d22e24f3241b5c}\label{classValueList_ac2b4a94933f9bce2e3d22e24f3241b5c}} 
+class {\bfseries Duration\+Tree}
+\item 
+\mbox{\Hypertarget{classValueList_a4fe20efc2fe57b6157614981454150ce}\label{classValueList_a4fe20efc2fe57b6157614981454150ce}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+\mbox{\Hypertarget{classValueList_aef2098e53ce9107c6e32d151864b69ad}\label{classValueList_aef2098e53ce9107c6e32d151864b69ad}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&, const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+\mbox{\Hypertarget{classValueList_ac02c266a581148fe8a09a49d0ac6b161}\label{classValueList_ac02c266a581148fe8a09a49d0ac6b161}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&, const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+list of rational durations as components of value states. 
+
+Each duration is either positive (event w or wo continuations -\/ties) or null (grace note).
+
+a value list is made of 2 parts\+:
+\begin{DoxyItemize}
+\item \+\_\+cont \+: initial duration (possibly null) tied to the previous duration list
+\item \+\_\+main \+: main list of the other events (without ties) it is represented by \+\_\+cont\mbox{[}\+\_\+main\mbox{]} 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/output/Value\+List.\+hpp\item 
+src/output/Value\+List.\+cpp\end{DoxyCompactItemize}

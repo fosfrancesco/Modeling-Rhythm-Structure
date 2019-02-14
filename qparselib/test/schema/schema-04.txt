@@ -1,0 +1,60 @@
+// model for 4/4 measure
+
+[penalty]
+
+[timesig 4 4]
+
+// bar level
+0 ( 0 )      0.40
+0 ( 1 )      0.50  // ronde
+0 ( 2 )      8.85  // grace-note + ronde 
+0 ( 3 )     14.05  // 2 grace-notes + ronde
+0 ( 1 1 )    0.05  // div. par 2
+0 ( 1 1 1 ) 17.55  // triolet de blanches
+
+// half bar level
+1 ( 0 )      0.25
+1 ( 1 )      0.20   // blanche
+1 ( 2 )      8.95   // grace-note + blanche
+1 ( 3 )      9.25   // 2 grace-notes + blanche
+1 ( 2 2 )    0.10   // beats (noires)
+1 ( 2 2 2 ) 12.65   // triolet de noires
+
+// beat level
+2 ( 0 ) 0.15
+2 ( 1 ) 0.05       // noire
+2 ( 2 ) 2.25       // grace-note + noire
+2 ( 3 ) 3.65       // 2 grace-notes + blanche
+2 ( 3 3 ) 0.2     
+2 ( 3 3 3 ) 5.3    
+2 ( 5 5 5 5 5 ) 13.1                  // 5-uplet
+2 ( 5 5 5 5 5 5 5 ) 15.1              // 7-uplet
+2 ( 5 5 5 5 5 5 5 5 5 5 5 ) 21.1      // 11-uplet
+2 ( 5 5 5 5 5 5 5 5 5 5 5 5 5 ) 28.1  // 13-uplet
+
+// sub-beat = div. de croche
+3 ( 0 )     0.25
+3 ( 1 )     0.40
+3 ( 2 )     2.55
+3 ( 3 )     3.25
+3 ( 4 4 )   0.9
+3 ( 4 4 4 ) 6.9
+
+// sub-sub-beat = div. de double
+4 ( 0 )   0.25
+4 ( 1 )   0.10   // double
+4 ( 2 )   8.15   // grace-note + double
+4 ( 3 )   9.95
+4 ( 6 6 ) 0.65   // triples
+
+// triple
+6 ( 0 ) 0.25
+6 ( 1 ) 0.10
+
+// sub tuplets (irregular)
+5 ( 0 ) 0.25
+5 ( 1 ) 0.10
+5 ( 2 ) 34.55
+5 ( 3 ) 55.25
+5 ( 4 4 ) 2.25
+

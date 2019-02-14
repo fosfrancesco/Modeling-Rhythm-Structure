@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classParserMultibar1bestSIPBU" kind="class" language="C++" prot="public">
+    <compoundname>ParserMultibar1bestSIPBU</compoundname>
+    <basecompoundref refid="classParser" prot="public" virt="non-virtual">Parser&lt; SIPpointer &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1ab6d0f29b05a38747a2cbb1bcd820afa2" prot="public" static="no" mutable="no">
+        <type><ref refid="classTable" kindref="compound">Table</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref>, <ref refid="classBrecord" kindref="compound">Brecord</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt;, <ref refid="structSIPpointerHasher" kindref="compound">SIPpointerHasher</ref> &gt; *</type>
+        <definition>Table&lt;SIPpointer, Brecord&lt;SIPpointer&gt;, SIPpointerHasher&gt;* ParserMultibar1bestSIPBU::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="46" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1a19b92e1e0ad2518f330e98ddd2d44f2c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref></type>
+        <definition>const SIPpointer ParserMultibar1bestSIPBU::endmarker_bot</definition>
+        <argsstring></argsstring>
+        <name>endmarker_bot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="49" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1accaeb903b540cde5c4deb362e980becd" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref></type>
+        <definition>const SIPpointer ParserMultibar1bestSIPBU::endmarker_top</definition>
+        <argsstring></argsstring>
+        <name>endmarker_top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="52" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1ae4c13ec752eaa8a7d62547f3d4c5d912" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ParserMultibar1bestSIPBU::_barsec</definition>
+        <argsstring></argsstring>
+        <name>_barsec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="107" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1ae3fd92031cf15012b3b4dc2bcb285346" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ParserMultibar1bestSIPBU::_bars</definition>
+        <argsstring></argsstring>
+        <name>_bars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="110" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1a146c86394b22bfffc8dca0047c4c3151" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref></type>
+        <definition>ScoreModel::ScoreMeter ParserMultibar1bestSIPBU::_ts</definition>
+        <argsstring></argsstring>
+        <name>_ts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="113" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1ac456385519b9d6b420c28c1c23bb1213" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt;</type>
+        <definition>std::vector&lt;SIPpointer&gt; ParserMultibar1bestSIPBU::_ptr</definition>
+        <argsstring></argsstring>
+        <name>_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="115" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParserMultibar1bestSIPBU_1a3db6a5ba4219f2f459cb1c2f8ea7fc81" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classRun" kindref="compound">Run</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; * &gt;</type>
+        <definition>std::vector&lt;Run&lt;SIPpointer&gt;*&gt; ParserMultibar1bestSIPBU::_bar</definition>
+        <argsstring></argsstring>
+        <name>_bar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="116" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1ac1f965b7c1942498238c55860663fb52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParserMultibar1bestSIPBU::ParserMultibar1bestSIPBU</definition>
+        <argsstring>(WTA *a, InputSegment *s, bool ordering=false, pre_t pre=0, pre_t post=0, double barlen=1.0, size_t nbbars=1, ScoreModel::ScoreMeter ts=ScoreModel::ScoreMeter(1, 4))</argsstring>
+        <name>ParserMultibar1bestSIPBU</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ordering</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>barlen</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nbbars</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref></type>
+          <declname>ts</declname>
+          <defval><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref>(1, 4)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="70" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="48" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1acd5f26db6f395fc304634f15de07fcea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParserMultibar1bestSIPBU::~ParserMultibar1bestSIPBU</definition>
+        <argsstring>()</argsstring>
+        <name>~ParserMultibar1bestSIPBU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="79" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1ad6c61de9398ec0c64254dc633db6ecbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t ParserMultibar1bestSIPBU::addRuns</definition>
+        <argsstring>(Atable&lt; SIPpointer &gt; *, const SIPpointer &amp;, Record&lt; SIPpointer &gt; *)</argsstring>
+        <name>addRuns</name>
+        <reimplements refid="classParser_1a1036f9fa453e662cb87c882978af0f9f">addRuns</reimplements>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+          <defname>table</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="classRecord" kindref="compound">Record</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+          <defname>it</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="81" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="89" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a5ec8c2d61fd092472cf3c6853f82eb43" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ParserMultibar1bestSIPBU::nbbars</definition>
+        <argsstring>() const</argsstring>
+        <name>nbbars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="85" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a040ba191a5b1db34162b86ffcbad0aa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+        <definition>Run&lt; SIPpointer &gt; * ParserMultibar1bestSIPBU::getBar</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>getBar</name>
+        <param>
+          <type>size_t</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="88" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1ae2f23be589b5c770f7ab568da9fa81f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSIPpointer" kindref="compound">SIPpointer</ref></type>
+        <definition>SIPpointer ParserMultibar1bestSIPBU::getTarget</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>getTarget</name>
+        <param>
+          <type>size_t</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="91" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a29c49331e13bb2e57c8c2c36dab05512" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref></type>
+        <definition>ScoreModel::ScoreMeter ParserMultibar1bestSIPBU::getTimeSig</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>getTimeSig</name>
+        <param>
+          <type>size_t</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="94" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1abbbc79c23cdbb9445a7df6807a768a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ParserMultibar1bestSIPBU::demo</definition>
+        <argsstring>(const std::string schema_file, const std::string input_file, const std::string output_file=&quot;&quot;, Rational barbeat=Rational(1))</argsstring>
+        <name>demo</name>
+        <param>
+          <type>const std::string</type>
+          <declname>schema_file</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>input_file</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>output_file</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>barbeat</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="99" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="442" bodyend="503"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1adc1cd91f82918524c5c916a65fac3e08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserMultibar1bestSIPBU::parse</definition>
+        <argsstring>()</argsstring>
+        <name>parse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="121" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="131" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a22960921063708d83fcf7823bc2c96cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserMultibar1bestSIPBU::store_bests</definition>
+        <argsstring>()</argsstring>
+        <name>store_bests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="123" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="241" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a7bd606e6a1069389f288d4f28204b046" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserMultibar1bestSIPBU::print_bars</definition>
+        <argsstring>()</argsstring>
+        <name>print_bars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="125" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="285" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1aa67bae4d75ffb4778e8256bd526b9fdb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+        <definition>InputSegment * ParserMultibar1bestSIPBU::update_iseg</definition>
+        <argsstring>()</argsstring>
+        <name>update_iseg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="130" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="328" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a4e34aef5cd685f12d1dc810bbe2cb34d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserMultibar1bestSIPBU::midi_output</definition>
+        <argsstring>(std::string filename, Rational beatsperbar, InputSegment *qseg)</argsstring>
+        <name>midi_output</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>beatsperbar</declname>
+        </param>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>qseg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="132" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="364" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classParserMultibar1bestSIPBU_1a72bbf2463977b9e429b8a8c5f1869f59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserMultibar1bestSIPBU::mei_output</definition>
+        <argsstring>(std::string filename, InputSegment *qseg)</argsstring>
+        <name>mei_output</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>qseg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="136" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.cpp" bodystart="377" bodyend="439"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="269">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+      </node>
+      <node id="267">
+        <label>ParserMultibar1bestSIPBU</label>
+        <link refid="classParserMultibar1bestSIPBU"/>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>Parser&lt; SIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="269" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="282">
+        <label>SIpointer</label>
+        <link refid="classSIpointer"/>
+        <childnode refid="283" relation="public-inheritance">
+        </childnode>
+        <childnode refid="285" relation="usage">
+          <edgelabel>_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="278">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="284">
+        <label>Pointer</label>
+        <link refid="classPointer"/>
+      </node>
+      <node id="273">
+        <label>InputSegment</label>
+        <link refid="classInputSegment"/>
+        <childnode refid="274" relation="usage">
+          <edgelabel>_mduration</edgelabel>
+        </childnode>
+      </node>
+      <node id="272">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+        <childnode refid="273" relation="usage">
+          <edgelabel>segment</edgelabel>
+        </childnode>
+        <childnode refid="275" relation="usage">
+          <edgelabel>iheap</edgelabel>
+        </childnode>
+      </node>
+      <node id="280">
+        <label>Atable&lt; SIPpointer &gt;</label>
+        <link refid="classAtable"/>
+        <childnode refid="271" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="287">
+        <label>Interval</label>
+        <link refid="classInterval"/>
+        <childnode refid="274" relation="usage">
+          <edgelabel>mbegin</edgelabel>
+          <edgelabel>mend</edgelabel>
+        </childnode>
+      </node>
+      <node id="276">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+        <childnode refid="277" relation="usage">
+          <edgelabel>_seed</edgelabel>
+        </childnode>
+      </node>
+      <node id="283">
+        <label>Spointer</label>
+        <link refid="classSpointer"/>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="278" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+      <node id="275">
+        <label>IntervalHeap</label>
+        <link refid="classIntervalHeap"/>
+      </node>
+      <node id="279">
+        <label>Table&lt; SIPpointer, Brecord&lt; SIPpointer &gt;, SIPpointerHasher &gt;</label>
+        <link refid="classTable"/>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="286">
+        <label>AlignedInterval</label>
+        <link refid="classAlignedInterval"/>
+        <childnode refid="287" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>IntervalTree</label>
+        <link refid="classIntervalTree"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+        <childnode refid="285" relation="usage">
+          <edgelabel>_previous_sibling</edgelabel>
+          <edgelabel>_parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="274">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+      <node id="281">
+        <label>SIPpointer</label>
+        <link refid="classSIPpointer"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>ParserMultibar1bestSIPBU</label>
+        <link refid="classParserMultibar1bestSIPBU"/>
+        <childnode refid="271" relation="public-inheritance">
+        </childnode>
+        <childnode refid="279" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+        <childnode refid="281" relation="usage">
+          <edgelabel>endmarker_top</edgelabel>
+          <edgelabel>endmarker_bot</edgelabel>
+        </childnode>
+      </node>
+      <node id="271">
+        <label>Parser&lt; SIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="272" relation="public-inheritance">
+        </childnode>
+        <childnode refid="276" relation="usage">
+          <edgelabel>wta</edgelabel>
+        </childnode>
+        <childnode refid="272" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/parsers/ParserMultibar1bestSIPBU.hpp" line="43" column="1" bodyfile="src/parsers/ParserMultibar1bestSIPBU.hpp" bodystart="42" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classParserMultibar1bestSIPBU_1a3db6a5ba4219f2f459cb1c2f8ea7fc81" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_bar</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ae3fd92031cf15012b3b4dc2bcb285346" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_bars</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ae4c13ec752eaa8a7d62547f3d4c5d912" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_barsec</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ac456385519b9d6b420c28c1c23bb1213" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_ptr</name></member>
+      <member refid="classParser_1a82a307f632a1988fe229f989bbc4584d" prot="protected" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_res</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a146c86394b22bfffc8dca0047c4c3151" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>_ts</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ad6c61de9398ec0c64254dc633db6ecbd" prot="public" virt="virtual"><scope>ParserMultibar1bestSIPBU</scope><name>addRuns</name></member>
+      <member refid="classParser_1a00a7b213fe0e4f8cce4e780adbbbd110" prot="protected" virt="virtual"><scope>ParserMultibar1bestSIPBU</scope><name>addWTARuns</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1abbbc79c23cdbb9445a7df6807a768a96" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>demo</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a19b92e1e0ad2518f330e98ddd2d44f2c" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>endmarker_bot</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1accaeb903b540cde5c4deb362e980becd" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>endmarker_top</name></member>
+      <member refid="group__segment_1ga35cbd86caf5c17f8d59559ae0b28febf" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>Environment</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a040ba191a5b1db34162b86ffcbad0aa0" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>getBar</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ae2f23be589b5c770f7ab568da9fa81f1" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>getTarget</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a29c49331e13bb2e57c8c2c36dab05512" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>getTimeSig</name></member>
+      <member refid="classEnvironment_1a810e4b1bd5bd6428c78c18fbeba127f6" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>iheap</name></member>
+      <member refid="classParser_1a5ab3cb7f02f7bb33dd59f3edbf63675a" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>input</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a72bbf2463977b9e429b8a8c5f1869f59" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>mei_output</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a4e34aef5cd685f12d1dc810bbe2cb34d" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>midi_output</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a5ec8c2d61fd092472cf3c6853f82eb43" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>nbbars</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1adc1cd91f82918524c5c916a65fac3e08" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>parse</name></member>
+      <member refid="classParser_1a7e5b1a5452fb9eb39040d10adec713bb" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>Parser</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ac1f965b7c1942498238c55860663fb52" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>ParserMultibar1bestSIPBU</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a7bd606e6a1069389f288d4f28204b046" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>print_bars</name></member>
+      <member refid="classParser_1a36e89e4e76b8ba144b764cf07d02ca75" prot="public" virt="virtual"><scope>ParserMultibar1bestSIPBU</scope><name>printobest</name></member>
+      <member refid="classParser_1ae0a82cabf61977d6a0f0bc618c64e6c8" prot="public" virt="virtual"><scope>ParserMultibar1bestSIPBU</scope><name>printobestRun</name></member>
+      <member refid="classParser_1a0f3f9620883bb10e9ecd07cec155b1a3" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>resolution</name></member>
+      <member refid="classEnvironment_1a740b0264644db40cb5a657f7ed52bb23" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>segment</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1a22960921063708d83fcf7823bc2c96cb" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>store_bests</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1ab6d0f29b05a38747a2cbb1bcd820afa2" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>table</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1aa67bae4d75ffb4778e8256bd526b9fdb" prot="private" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>update_iseg</name></member>
+      <member refid="classParser_1a1d6da7c9962be0987caf9bf69f634ea6" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>wta</name></member>
+      <member refid="group__segment_1ga8e294735187880dd3d59be10c425b29d" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>~Environment</name></member>
+      <member refid="classParser_1a09fc36d1fcc326ea5104a0e8fbab65c5" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>~Parser</name></member>
+      <member refid="classParserMultibar1bestSIPBU_1acd5f26db6f395fc304634f15de07fcea" prot="public" virt="non-virtual"><scope>ParserMultibar1bestSIPBU</scope><name>~ParserMultibar1bestSIPBU</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classAONode" kind="class" language="C++" prot="public">
+    <compoundname>AONode</compoundname>
+    <derivedcompoundref refid="classANode" prot="public" virt="non-virtual">ANode</derivedcompoundref>
+    <derivedcompoundref refid="classONode" prot="public" virt="non-virtual">ONode</derivedcompoundref>
+    <includes local="no">SubdivisionSchema.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classAONode_1a68dc0af71d8e6bac30b8ff9ec40ff806" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t AONode::_arity</definition>
+        <argsstring></argsstring>
+        <name>_arity</name>
+        <briefdescription>
+<para>0 for inner nodes, arity &gt; 1 for leaf </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="62" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAONode_1a8b2b854573f53b3105ff193d7128bf5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AONode::AONode</definition>
+        <argsstring>(size_t a)</argsstring>
+        <name>AONode</name>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="52" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classAONode_1a79196ae7696619f60eadcd96eb4750f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AONode::inner</definition>
+        <argsstring>() const</argsstring>
+        <name>inner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="54" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classAONode_1a63996089a9dc6c2320fb91b54c0fdcc6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AONode::leaf</definition>
+        <argsstring>() const</argsstring>
+        <name>leaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="56" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classAONode_1ac1ac6a913dc66d8e344dfde2266f8c5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AONode::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="58" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>AND-OR alternating nested lists used by Adrien in RQ. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>from RQ doc: A subdivision schema of this kind is presented in the form of a nested list. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>AONode</label>
+        <link refid="classAONode"/>
+      </node>
+      <node id="11">
+        <label>ANode</label>
+        <link refid="classANode"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ONode</label>
+        <link refid="classONode"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/schemata/SubdivisionSchema.hpp" line="50" column="1" bodyfile="src/schemata/SubdivisionSchema.hpp" bodystart="49" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classAONode_1a68dc0af71d8e6bac30b8ff9ec40ff806" prot="protected" virt="non-virtual"><scope>AONode</scope><name>_arity</name></member>
+      <member refid="classAONode_1a8b2b854573f53b3105ff193d7128bf5a" prot="public" virt="non-virtual"><scope>AONode</scope><name>AONode</name></member>
+      <member refid="classAONode_1a79196ae7696619f60eadcd96eb4750f1" prot="public" virt="non-virtual"><scope>AONode</scope><name>inner</name></member>
+      <member refid="classAONode_1a63996089a9dc6c2320fb91b54c0fdcc6" prot="public" virt="non-virtual"><scope>AONode</scope><name>leaf</name></member>
+      <member refid="classAONode_1ac1ac6a913dc66d8e344dfde2266f8c5c" prot="public" virt="non-virtual"><scope>AONode</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

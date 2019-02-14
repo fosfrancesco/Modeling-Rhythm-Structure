@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Atable_8hpp" kind="file" language="C++">
+    <compoundname>Atable.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rune_8hpp" local="yes">Rune.hpp</includes>
+    <includes refid="Record_8hpp" local="yes">Record.hpp</includes>
+    <includes local="yes">Atable.tpp</includes>
+    <includedby refid="Parser_8hpp" local="yes">src/parsers/Parser.hpp</includedby>
+    <includedby refid="Table_8hpp" local="yes">src/table/Table.hpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="482">
+        <label>Atable.tpp</label>
+      </node>
+      <node id="481">
+        <label>stdio.h</label>
+      </node>
+      <node id="480">
+        <label>src/table/Atable.hpp</label>
+        <link refid="Atable_8hpp"/>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classParser" prot="public">Parser</innerclass>
+    <innerclass refid="classAtable" prot="public">Atable</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/Atable.hpp"/>
+  </compounddef>
+</doxygen>

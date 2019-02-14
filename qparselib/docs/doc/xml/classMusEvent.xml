@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classMusEvent" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MusEvent</compoundname>
+    <derivedcompoundref refid="classNoteEvent" prot="public" virt="non-virtual">NoteEvent</derivedcompoundref>
+    <derivedcompoundref refid="classRestEvent" prot="public" virt="non-virtual">RestEvent</derivedcompoundref>
+    <includes local="no">MusEvent.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="group__segment_1ga5e0ecbf9869effe45cacf0c1a191615c" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MusEvent::UNDEF_VELOCITY</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_VELOCITY</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="39" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMusEvent_1a8cbcc375091dd31d300993cb41e5c31f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MusEvent::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="42" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1ga00b69e8f1bf80a478fce420d5d378c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusEvent::MusEvent</definition>
+        <argsstring>(int nb=EVENTNB_UNKNOWN)</argsstring>
+        <name>MusEvent</name>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+          <defval><ref refid="group__general_1gac3b19762b16f33de03662fd4289fe5a9" kindref="member">EVENTNB_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="44" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga40f47305a4bd7afbf26a4fbee663dd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusEvent::MusEvent</definition>
+        <argsstring>(const MusEvent &amp;)</argsstring>
+        <name>MusEvent</name>
+        <param>
+          <type>const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="46" column="1" bodyfile="src/segment/MusEvent.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusEvent_1a9d195422a823d831bff7d47ed15584a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual MusEvent::~MusEvent</definition>
+        <argsstring>()</argsstring>
+        <name>~MusEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="48" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusEvent_1a013a5d979aeac811d74929b41b188762" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>virtual MusEvent* MusEvent::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="group__segment_1ga6ebb6acd4c78929d31a4831c58911639">clone</reimplementedby>
+        <reimplementedby refid="group__segment_1ga2fe5abb4cd9fbe000b1ec13114d60049">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusEvent_1aa2d6c7ee99cdd95839aee1e5b5df2d92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool MusEvent::isRest</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isRest</name>
+        <reimplementedby refid="classRestEvent_1a801a4ea729f7b83b38214f230a50ea6c">isRest</reimplementedby>
+        <reimplementedby refid="classNoteEvent_1afd1615e5f11074184f08946b14232c37">isRest</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusEvent_1abf3d0067b2b28275a26223083b745c7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool MusEvent::isNote</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isNote</name>
+        <reimplementedby refid="classRestEvent_1a0f4dc932de332e0ae7014e4fade5e26c">isNote</reimplementedby>
+        <reimplementedby refid="classNoteEvent_1aaf40b5c82f0f6517b34ca3e0d89f585a">isNote</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusEvent_1a1a53c7e09246ad1441d26069ff4a9387" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MusEvent::print</definition>
+        <argsstring>(std::ostream &amp;o) const =0</argsstring>
+        <name>print</name>
+        <reimplementedby refid="group__segment_1ga0b9fce9fff8648eae4a51a77957fab45">print</reimplementedby>
+        <reimplementedby refid="group__segment_1gafa25174e584b872e814643c895cad283">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classMusEvent_1ade87c7b11c1a1fdbcd922e08b3eaa3c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const MusEvent &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="57" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input events </para>
+    </briefdescription>
+    <detaileddescription>
+<para>input interface to MIDI, OpenMusic, <ref refid="classMEI" kindref="compound">MEI</ref> etc keep track of input event list event are not stored internaly (in <ref refid="classWTA" kindref="compound">WTA</ref>). we just preserve the order. and remap afterwards to input event list (with dfs). abstract class to built polymorphic event lists (in input or output).</para>
+<para>can be downcasted to descendant class with dynamic_cast for using particular operations </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="169">
+        <label>MusEvent</label>
+        <link refid="classMusEvent"/>
+      </node>
+      <node id="170">
+        <label>NoteEvent</label>
+        <link refid="classNoteEvent"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>RestEvent</label>
+        <link refid="classRestEvent"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/segment/MusEvent.hpp" line="37" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="36" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classMusEvent_1a013a5d979aeac811d74929b41b188762" prot="public" virt="pure-virtual"><scope>MusEvent</scope><name>clone</name></member>
+      <member refid="classMusEvent_1abf3d0067b2b28275a26223083b745c7c" prot="public" virt="pure-virtual"><scope>MusEvent</scope><name>isNote</name></member>
+      <member refid="classMusEvent_1aa2d6c7ee99cdd95839aee1e5b5df2d92" prot="public" virt="pure-virtual"><scope>MusEvent</scope><name>isRest</name></member>
+      <member refid="group__segment_1ga00b69e8f1bf80a478fce420d5d378c17" prot="public" virt="non-virtual"><scope>MusEvent</scope><name>MusEvent</name></member>
+      <member refid="group__segment_1ga40f47305a4bd7afbf26a4fbee663dd27" prot="public" virt="non-virtual"><scope>MusEvent</scope><name>MusEvent</name></member>
+      <member refid="classMusEvent_1a8cbcc375091dd31d300993cb41e5c31f" prot="public" virt="non-virtual"><scope>MusEvent</scope><name>number</name></member>
+      <member refid="classMusEvent_1ade87c7b11c1a1fdbcd922e08b3eaa3c5" prot="public" virt="non-virtual"><scope>MusEvent</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classMusEvent_1a1a53c7e09246ad1441d26069ff4a9387" prot="public" virt="pure-virtual"><scope>MusEvent</scope><name>print</name></member>
+      <member refid="group__segment_1ga5e0ecbf9869effe45cacf0c1a191615c" prot="public" virt="non-virtual"><scope>MusEvent</scope><name>UNDEF_VELOCITY</name></member>
+      <member refid="classMusEvent_1a9d195422a823d831bff7d47ed15584a7" prot="public" virt="virtual"><scope>MusEvent</scope><name>~MusEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

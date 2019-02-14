@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classQDate" kind="class" language="C++" prot="public">
+    <compoundname>QDate</compoundname>
+    <includes local="no">QDate.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classQDate_1ae3c7801be338e952050f037c7cc4c799" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t QDate::_quotient</definition>
+        <argsstring></argsstring>
+        <name>_quotient</name>
+        <briefdescription>
+<para>date in samples / RESOLUTION = bloc number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="74" column="1" bodyfile="src/output/QDate.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQDate_1ad14e1214b142bb77fa92e7f2b80f927c" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t QDate::_modulo</definition>
+        <argsstring></argsstring>
+        <name>_modulo</name>
+        <briefdescription>
+<para>date in samples modulo RESOLUTION </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="77" column="1" bodyfile="src/output/QDate.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1gac553172d4c172c75bb78e9b246eaa0a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>()</argsstring>
+        <name>QDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="38" column="1" bodyfile="src/output/QDate.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1151b393ffd2c621914c8e0641fff3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>(size_t blocs, size_t rel)</argsstring>
+        <name>QDate</name>
+        <param>
+          <type>size_t</type>
+          <declname>blocs</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="40" column="1" bodyfile="src/output/QDate.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab39d4fd438b410d8310f4bf43703904f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>(const QDate &amp;)</argsstring>
+        <name>QDate</name>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="42" column="1" bodyfile="src/output/QDate.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classQDate_1ae4f8a0d5f827801fbe0aaae1dc9cf02d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>QDate::~QDate</definition>
+        <argsstring>()</argsstring>
+        <name>~QDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="44" column="1" bodyfile="src/output/QDate.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga28238d09bb0f332bda66fafb92facb3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+        <definition>QDate &amp; QDate::operator=</definition>
+        <argsstring>(const QDate &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="46" column="1" bodyfile="src/output/QDate.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga59599012a00e9c2ae587144f47085130" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classQDate" kindref="compound">QDate</ref> *</type>
+        <definition>QDate * QDate::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="48" column="1" bodyfile="src/output/QDate.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classQDate_1a5583b42d333739ef0432446d73400320" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t QDate::bloc</definition>
+        <argsstring>() const</argsstring>
+        <name>bloc</name>
+        <briefdescription>
+<para>number of bloc of length RES. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="51" column="1" bodyfile="src/output/QDate.hpp" bodystart="51" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classQDate_1ad531ed61e0c9a207a1016af4b0245d46" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t QDate::relative</definition>
+        <argsstring>() const</argsstring>
+        <name>relative</name>
+        <briefdescription>
+<para>quantified date (samples) modulo RES (date in last bloc). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="56" column="1" bodyfile="src/output/QDate.hpp" bodystart="56" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga07a4414576afc26204002ce92dcc7ce9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational QDate::absolute</definition>
+        <argsstring>(size_t res) const</argsstring>
+        <name>absolute</name>
+        <param>
+          <type>size_t</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>quantified date as rational value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="60" column="1" bodyfile="src/output/QDate.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac8e931429f0f79f9e9f5754d3b98fe36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QDate::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="62" column="1" bodyfile="src/output/QDate.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf69eee7904ee41d76e3a1a61ab92cfd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QDate::print</definition>
+        <argsstring>(std::ostream &amp;, size_t) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <defname>res</defname>
+        </param>
+        <briefdescription>
+<para>fractional print using resolution value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="65" column="1" bodyfile="src/output/QDate.cpp" bodystart="55" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classQDate_1ad9fd1ed50658c87da7aa8b5009154b47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const QDate &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="68" column="1" bodyfile="src/output/QDate.hpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>quantified onset values expressed in number of samples. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>the value of RESOLUTION (total number of samples) is not stored in objects of this class. it should be the same for each date created. </para>
+    </detaileddescription>
+    <location file="src/output/QDate.hpp" line="36" column="1" bodyfile="src/output/QDate.hpp" bodystart="35" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classQDate_1ad14e1214b142bb77fa92e7f2b80f927c" prot="protected" virt="non-virtual"><scope>QDate</scope><name>_modulo</name></member>
+      <member refid="classQDate_1ae3c7801be338e952050f037c7cc4c799" prot="protected" virt="non-virtual"><scope>QDate</scope><name>_quotient</name></member>
+      <member refid="group__output_1ga07a4414576afc26204002ce92dcc7ce9" prot="public" virt="non-virtual"><scope>QDate</scope><name>absolute</name></member>
+      <member refid="classQDate_1a5583b42d333739ef0432446d73400320" prot="public" virt="non-virtual"><scope>QDate</scope><name>bloc</name></member>
+      <member refid="group__output_1ga59599012a00e9c2ae587144f47085130" prot="public" virt="virtual"><scope>QDate</scope><name>clone</name></member>
+      <member refid="classQDate_1ad9fd1ed50658c87da7aa8b5009154b47" prot="public" virt="non-virtual"><scope>QDate</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__output_1ga28238d09bb0f332bda66fafb92facb3b" prot="public" virt="virtual"><scope>QDate</scope><name>operator=</name></member>
+      <member refid="group__output_1gac8e931429f0f79f9e9f5754d3b98fe36" prot="public" virt="non-virtual"><scope>QDate</scope><name>print</name></member>
+      <member refid="group__output_1gaf69eee7904ee41d76e3a1a61ab92cfd1" prot="public" virt="non-virtual"><scope>QDate</scope><name>print</name></member>
+      <member refid="group__output_1gac553172d4c172c75bb78e9b246eaa0a1" prot="public" virt="non-virtual"><scope>QDate</scope><name>QDate</name></member>
+      <member refid="group__output_1ga1151b393ffd2c621914c8e0641fff3d3" prot="public" virt="non-virtual"><scope>QDate</scope><name>QDate</name></member>
+      <member refid="group__output_1gab39d4fd438b410d8310f4bf43703904f" prot="public" virt="non-virtual"><scope>QDate</scope><name>QDate</name></member>
+      <member refid="classQDate_1ad531ed61e0c9a207a1016af4b0245d46" prot="public" virt="non-virtual"><scope>QDate</scope><name>relative</name></member>
+      <member refid="classQDate_1ae4f8a0d5f827801fbe0aaae1dc9cf02d" prot="public" virt="non-virtual"><scope>QDate</scope><name>~QDate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

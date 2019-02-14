@@ -1,0 +1,83 @@
+\hypertarget{classInputSegmentSerial}{}\section{Input\+Segment\+Serial Class Reference}
+\label{classInputSegmentSerial}\index{InputSegmentSerial@{InputSegmentSerial}}
+
+
+serialization of an input segment in a text file.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Segment\+Serial.\+hpp$>$}
+
+Inheritance diagram for Input\+Segment\+Serial\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInputSegmentSerial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInputSegmentSerial_a82aef1422a814f19a81b8e15b7979f73}{Input\+Segment\+Serial}} (const std\+::string filename, bool mono=true)
+\begin{DoxyCompactList}\small\item\em read input segment from a text file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInputSegmentSerial_ac55f2e5708436d8db1a7c2f8dc23436d}\label{classInputSegmentSerial_ac55f2e5708436d8db1a7c2f8dc23436d}} 
+{\bfseries Input\+Segment\+Serial} (const \mbox{\hyperlink{classInputSegmentSerial}{Input\+Segment\+Serial}} \&)
+\item 
+\mbox{\Hypertarget{classInputSegmentSerial_a4f66455606aaca9a289919b59c005991}\label{classInputSegmentSerial_a4f66455606aaca9a289919b59c005991}} 
+std\+::string {\bfseries filename} () const
+\item 
+\mbox{\Hypertarget{classInputSegmentSerial_af1c586a042acb96f1e73807f423a039c}\label{classInputSegmentSerial_af1c586a042acb96f1e73807f423a039c}} 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentSerial_af1c586a042acb96f1e73807f423a039c}{save}} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em export this input segment into given file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentSerial_acaa3917f1ab9800b80155b8e1c16270d}{status}} () const
+\begin{DoxyCompactList}\small\item\em return the final status for import. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+serialization of an input segment in a text file. 
+
+functions for import, export and comparison (evaluation). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInputSegmentSerial_a82aef1422a814f19a81b8e15b7979f73}\label{classInputSegmentSerial_a82aef1422a814f19a81b8e15b7979f73}} 
+\index{InputSegmentSerial@{InputSegmentSerial}!InputSegmentSerial@{InputSegmentSerial}}
+\index{InputSegmentSerial@{InputSegmentSerial}!InputSegmentSerial@{InputSegmentSerial}}
+\subsubsection{\texorpdfstring{InputSegmentSerial()}{InputSegmentSerial()}}
+{\footnotesize\ttfamily Input\+Segment\+Serial\+::\+Input\+Segment\+Serial (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{bool}]{mono = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+read input segment from a text file. 
+
+if not present in text file, the musical onsets and durations are all set to -\/1. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of input text file \\
+\hline
+{\em mono} & flag is true if we want a monophonic input segment. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInputSegmentSerial_acaa3917f1ab9800b80155b8e1c16270d}\label{classInputSegmentSerial_acaa3917f1ab9800b80155b8e1c16270d}} 
+\index{InputSegmentSerial@{InputSegmentSerial}!status@{status}}
+\index{status@{status}!InputSegmentSerial@{InputSegmentSerial}}
+\subsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily size\+\_\+t Input\+Segment\+Serial\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the final status for import. 
+
+\begin{DoxyReturn}{Returns}
+0 if import or export worked well 
+
+error code $>$ 0 otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/Input\+Segment\+Serial.\+hpp\item 
+src/input/Input\+Segment\+Serial.\+cpp\end{DoxyCompactItemize}

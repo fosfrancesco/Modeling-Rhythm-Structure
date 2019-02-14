@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_output_README" kind="page">
+    <compoundname>md_src_output_README</compoundname>
+    <title>src/output</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>structures for the representation of the output of the parsing procedure and conversion into music transcription results (i.e. music notation). </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

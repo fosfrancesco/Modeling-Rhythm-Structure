@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_2e0e965cd845540d951126037f7fea09" kind="dir">
+    <compoundname>src/schemata</compoundname>
+    <innerfile refid="ComboWTA_8cpp">ComboWTA.cpp</innerfile>
+    <innerfile refid="ComboWTA_8hpp">ComboWTA.hpp</innerfile>
+    <innerfile refid="CountingWTA_8cpp">CountingWTA.cpp</innerfile>
+    <innerfile refid="CountingWTA_8hpp">CountingWTA.hpp</innerfile>
+    <innerfile refid="PreWTA_8cpp">PreWTA.cpp</innerfile>
+    <innerfile refid="PreWTA_8hpp">PreWTA.hpp</innerfile>
+    <innerfile refid="State_8cpp">State.cpp</innerfile>
+    <innerfile refid="State_8hpp">State.hpp</innerfile>
+    <innerfile refid="SubdivisionSchema_8cpp">SubdivisionSchema.cpp</innerfile>
+    <innerfile refid="SubdivisionSchema_8hpp">SubdivisionSchema.hpp</innerfile>
+    <innerfile refid="Transition_8cpp">Transition.cpp</innerfile>
+    <innerfile refid="Transition_8hpp">Transition.hpp</innerfile>
+    <innerfile refid="ValueWTA_8cpp">ValueWTA.cpp</innerfile>
+    <innerfile refid="ValueWTA_8hpp">ValueWTA.hpp</innerfile>
+    <innerfile refid="WTA_8cpp">WTA.cpp</innerfile>
+    <innerfile refid="WTA_8hpp">WTA.hpp</innerfile>
+    <innerfile refid="WTA__BACKUP__31784_8cpp">WTA_BACKUP_31784.cpp</innerfile>
+    <innerfile refid="WTA__BASE__31784_8cpp">WTA_BASE_31784.cpp</innerfile>
+    <innerfile refid="WTA__LOCAL__31784_8cpp">WTA_LOCAL_31784.cpp</innerfile>
+    <innerfile refid="WTA__REMOTE__31784_8cpp">WTA_REMOTE_31784.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/"/>
+  </compounddef>
+</doxygen>

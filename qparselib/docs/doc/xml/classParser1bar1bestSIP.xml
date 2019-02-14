@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classParser1bar1bestSIP" kind="class" language="C++" prot="public">
+    <compoundname>Parser1bar1bestSIP</compoundname>
+    <basecompoundref refid="classParser" prot="public" virt="non-virtual">Parser&lt; SIPpointer &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classParser1bar1bestSIP_1a8b4f76aec566e5168c75c42fa72d4c48" prot="public" static="no" mutable="no">
+        <type><ref refid="classTable" kindref="compound">Table</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref>, <ref refid="classBrecord" kindref="compound">Brecord</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt;, <ref refid="structSIPpointerHasher" kindref="compound">SIPpointerHasher</ref> &gt; *</type>
+        <definition>Table&lt;SIPpointer, Brecord&lt;SIPpointer&gt;, SIPpointerHasher&gt;* Parser1bar1bestSIP::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="38" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a8827aebf49c21d943c8f61cd96237133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parser1bar1bestSIP::Parser1bar1bestSIP</definition>
+        <argsstring>(WTA *a, InputSegment *s, bool ordering=false)</argsstring>
+        <name>Parser1bar1bestSIP</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ordering</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="41" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="13" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a6a28b53f2e251349320f9949a1b3f5fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parser1bar1bestSIP::~Parser1bar1bestSIP</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser1bar1bestSIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="43" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a17d10685cd81fb445dc413405be224c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t Parser1bar1bestSIP::addRuns</definition>
+        <argsstring>(Atable&lt; SIPpointer &gt; *, const SIPpointer &amp;, Record&lt; SIPpointer &gt; *)</argsstring>
+        <name>addRuns</name>
+        <reimplements refid="classParser_1a1036f9fa453e662cb87c882978af0f9f">addRuns</reimplements>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+          <defname>table</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="classRecord" kindref="compound">Record</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+          <defname>it</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="45" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="33" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a763e3b8bc64ada7de81b5f76f063a24e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>RhythmTree * Parser1bar1bestSIP::bestTree</definition>
+        <argsstring>(pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestTree</name>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="50" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="44" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a4ed9a27a25fa6fe5267442264ac29c7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &gt; *</type>
+        <definition>Run&lt; SIPpointer &gt; * Parser1bar1bestSIP::bestRun</definition>
+        <argsstring>(pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestRun</name>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="54" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="65" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a4add4bdf01c1ff016bc66c8cf72d61fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight Parser1bar1bestSIP::bestWeight</definition>
+        <argsstring>(pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>bestWeight</name>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="58" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="84" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1ad71468f650393d9741029aeb7d16c8e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Parser1bar1bestSIP::printBest</definition>
+        <argsstring>(std::ostream &amp;o, pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>printBest</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="62" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classParser1bar1bestSIP_1a442c2e51259da4acec2f4e38387ecc65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Parser1bar1bestSIP::demo</definition>
+        <argsstring>(const string schema_file, const string input_file, pre_t pre=0, pre_t post=0)</argsstring>
+        <name>demo</name>
+        <param>
+          <type>const string</type>
+          <declname>schema_file</declname>
+        </param>
+        <param>
+          <type>const string</type>
+          <declname>input_file</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parsers/Parser1bar1bestSIP.hpp" line="66" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.cpp" bodystart="106" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="211">
+        <label>Parser1bar1bestSIP</label>
+        <link refid="classParser1bar1bestSIP"/>
+        <childnode refid="212" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+      </node>
+      <node id="212">
+        <label>Parser&lt; SIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="222">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="217">
+        <label>InputSegment</label>
+        <link refid="classInputSegment"/>
+        <childnode refid="218" relation="usage">
+          <edgelabel>_mduration</edgelabel>
+        </childnode>
+      </node>
+      <node id="214">
+        <label>Parser1bar1bestSIP</label>
+        <link refid="classParser1bar1bestSIP"/>
+        <childnode refid="215" relation="public-inheritance">
+        </childnode>
+        <childnode refid="223" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+      </node>
+      <node id="216">
+        <label>Environment</label>
+        <link refid="classEnvironment"/>
+        <childnode refid="217" relation="usage">
+          <edgelabel>segment</edgelabel>
+        </childnode>
+        <childnode refid="219" relation="usage">
+          <edgelabel>iheap</edgelabel>
+        </childnode>
+      </node>
+      <node id="224">
+        <label>Atable&lt; SIPpointer &gt;</label>
+        <link refid="classAtable"/>
+        <childnode refid="215" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="220">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+        <childnode refid="221" relation="usage">
+          <edgelabel>_seed</edgelabel>
+        </childnode>
+      </node>
+      <node id="221">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="222" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+      <node id="219">
+        <label>IntervalHeap</label>
+        <link refid="classIntervalHeap"/>
+      </node>
+      <node id="223">
+        <label>Table&lt; SIPpointer, Brecord&lt; SIPpointer &gt;, SIPpointerHasher &gt;</label>
+        <link refid="classTable"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+      <node id="215">
+        <label>Parser&lt; SIPpointer &gt;</label>
+        <link refid="classParser"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="usage">
+          <edgelabel>wta</edgelabel>
+        </childnode>
+        <childnode refid="216" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/parsers/Parser1bar1bestSIP.hpp" line="36" column="1" bodyfile="src/parsers/Parser1bar1bestSIP.hpp" bodystart="35" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classParser_1a82a307f632a1988fe229f989bbc4584d" prot="protected" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>_res</name></member>
+      <member refid="classParser1bar1bestSIP_1a17d10685cd81fb445dc413405be224c1" prot="public" virt="virtual"><scope>Parser1bar1bestSIP</scope><name>addRuns</name></member>
+      <member refid="classParser_1a00a7b213fe0e4f8cce4e780adbbbd110" prot="protected" virt="virtual"><scope>Parser1bar1bestSIP</scope><name>addWTARuns</name></member>
+      <member refid="classParser1bar1bestSIP_1a4ed9a27a25fa6fe5267442264ac29c7f" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>bestRun</name></member>
+      <member refid="classParser1bar1bestSIP_1a763e3b8bc64ada7de81b5f76f063a24e" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>bestTree</name></member>
+      <member refid="classParser1bar1bestSIP_1a4add4bdf01c1ff016bc66c8cf72d61fd" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>bestWeight</name></member>
+      <member refid="classParser1bar1bestSIP_1a442c2e51259da4acec2f4e38387ecc65" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>demo</name></member>
+      <member refid="group__segment_1ga35cbd86caf5c17f8d59559ae0b28febf" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>Environment</name></member>
+      <member refid="classEnvironment_1a810e4b1bd5bd6428c78c18fbeba127f6" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>iheap</name></member>
+      <member refid="classParser_1a5ab3cb7f02f7bb33dd59f3edbf63675a" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>input</name></member>
+      <member refid="classParser_1a7e5b1a5452fb9eb39040d10adec713bb" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>Parser</name></member>
+      <member refid="classParser1bar1bestSIP_1a8827aebf49c21d943c8f61cd96237133" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>Parser1bar1bestSIP</name></member>
+      <member refid="classParser1bar1bestSIP_1ad71468f650393d9741029aeb7d16c8e6" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>printBest</name></member>
+      <member refid="classParser_1a36e89e4e76b8ba144b764cf07d02ca75" prot="public" virt="virtual"><scope>Parser1bar1bestSIP</scope><name>printobest</name></member>
+      <member refid="classParser_1ae0a82cabf61977d6a0f0bc618c64e6c8" prot="public" virt="virtual"><scope>Parser1bar1bestSIP</scope><name>printobestRun</name></member>
+      <member refid="classParser_1a0f3f9620883bb10e9ecd07cec155b1a3" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>resolution</name></member>
+      <member refid="classEnvironment_1a740b0264644db40cb5a657f7ed52bb23" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>segment</name></member>
+      <member refid="classParser1bar1bestSIP_1a8b4f76aec566e5168c75c42fa72d4c48" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>table</name></member>
+      <member refid="classParser_1a1d6da7c9962be0987caf9bf69f634ea6" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>wta</name></member>
+      <member refid="group__segment_1ga8e294735187880dd3d59be10c425b29d" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>~Environment</name></member>
+      <member refid="classParser_1a09fc36d1fcc326ea5104a0e8fbab65c5" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>~Parser</name></member>
+      <member refid="classParser1bar1bestSIP_1a6a28b53f2e251349320f9949a1b3f5fc" prot="public" virt="non-virtual"><scope>Parser1bar1bestSIP</scope><name>~Parser1bar1bestSIP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

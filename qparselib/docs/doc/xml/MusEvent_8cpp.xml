@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="MusEvent_8cpp" kind="file" language="C++">
+    <compoundname>MusEvent.cpp</compoundname>
+    <includes refid="MusEvent_8hpp" local="yes">MusEvent.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/MusEvent.cpp"/>
+  </compounddef>
+</doxygen>

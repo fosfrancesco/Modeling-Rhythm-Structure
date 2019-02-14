@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="structPointedIntervalEq" kind="struct" language="C++" prot="public">
+    <compoundname>PointedIntervalEq</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structPointedIntervalEq_1a7b7a516ad7ac59f83c4d0cfea3848fd0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PointedIntervalEq::operator()</definition>
+        <argsstring>(IntervalTree const *lhs, IntervalTree const *rhs) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> const *</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> const *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="34" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="34" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/IntervalHeap.hpp" line="33" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="32" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structPointedIntervalEq_1a7b7a516ad7ac59f83c4d0cfea3848fd0" prot="public" virt="non-virtual"><scope>PointedIntervalEq</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

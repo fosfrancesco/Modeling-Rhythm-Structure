@@ -1,0 +1,656 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classTropicalWeight" kind="class" language="C++" prot="public">
+    <compoundname>TropicalWeight</compoundname>
+    <basecompoundref refid="classLetterWeight" prot="public" virt="non-virtual">LetterWeight</basecompoundref>
+    <derivedcompoundref refid="classDistance" prot="public" virt="non-virtual">Distance</derivedcompoundref>
+    <includes local="no">TropicalWeight.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="group__weight_1ga65ae4a5dbff3b9bf3d9972147868fc05" prot="public" static="yes" mutable="no">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></type>
+        <definition>TropicalWeight TropicalWeight::penalty</definition>
+        <argsstring>[18]</argsstring>
+        <name>penalty</name>
+        <initializer>=
+{
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.01),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.02),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.03),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.04),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.05),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.06),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.07),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.08),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.09),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.10),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.11),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.12),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.13),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.14),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.15),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.16),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.17),  
+    <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref>(0.18)   
+}</initializer>
+        <briefdescription>
+<para>penalty by arity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="84" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classTropicalWeight_1a8b8b7de0bd57c28630fb978daceeeffb" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TropicalWeight::_val</definition>
+        <argsstring></argsstring>
+        <name>_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="117" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__weight_1ga17f51f13d0338bbcbc76ada716e626aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TropicalWeight::TropicalWeight</definition>
+        <argsstring>(const TropicalWeight &amp;)</argsstring>
+        <name>TropicalWeight</name>
+        <param>
+          <type>const <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="35" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1ac1e9e62336532b7362b1b5f79d7e7d7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TropicalWeight::~TropicalWeight</definition>
+        <argsstring>()</argsstring>
+        <name>~TropicalWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="37" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gaa275b4800bdc220d59ee42b2165f638a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> &amp;</type>
+        <definition>TropicalWeight &amp; TropicalWeight::operator=</definition>
+        <argsstring>(const TropicalWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="39" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga3aeb0d5a945daa39a0ed9a02fe92f246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> &amp;</type>
+        <definition>TropicalWeight &amp; TropicalWeight::operator=</definition>
+        <argsstring>(const LetterWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>rvalue must be a <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="42" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="30" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga378883be65a16bb86f13b1a9d941f104" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> *</type>
+        <definition>TropicalWeight * TropicalWeight::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="44" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1abc00c8fe56beedff6b7192325833d6d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight TropicalWeight::make</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>make</name>
+        <reimplements refid="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1">make</reimplements>
+        <reimplementedby refid="classDistance_1a1fe45f762afff378c46f81d6199a14ab">make</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>value must be positive</para>
+</simplesect>
+<xrefsect id="todo_1_todo000038"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR : stricly positive </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="49" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="49" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1a8de59f3233cfd822712b04d6069f5256" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight TropicalWeight::get_zero</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero</name>
+        <reimplements refid="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554">get_zero</reimplements>
+        <reimplementedby refid="classDistance_1affe4a5bab7ca33e5119d3f93484dccb3">get_zero</reimplementedby>
+        <briefdescription>
+<para>return the neutral element for add (absorbing element for mult) wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="55" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="55" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1a62d1dc9815ba6ba04665047ba6581731" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight TropicalWeight::get_one</definition>
+        <argsstring>() const</argsstring>
+        <name>get_one</name>
+        <reimplements refid="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca">get_one</reimplements>
+        <reimplementedby refid="classDistance_1a8aac0a94a73b60ef2bf566eb59a3e704">get_one</reimplementedby>
+        <briefdescription>
+<para>return the neutral element for mult wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="61" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabea8959ba2b8538194c3aadf5f9e4941" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double TropicalWeight::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <reimplements refid="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de">norm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>must not be zero (infinity) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="65" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga9b479f4a9f23f4c423729b669aa69dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TropicalWeight::scalar</definition>
+        <argsstring>(double)</argsstring>
+        <name>scalar</name>
+        <reimplements refid="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58">scalar</reimplements>
+        <param>
+          <type>double</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="67" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="63" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga2bad107be8a2e71fc12b75196adde070" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TropicalWeight::invert</definition>
+        <argsstring>()</argsstring>
+        <name>invert</name>
+        <reimplements refid="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218">invert</reimplements>
+        <briefdescription>
+<para>multiplicative inverse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight must not be zero. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="71" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="75" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga55f1e2bcb9e1e3fd521d652a5aebfc36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TropicalWeight::zero</definition>
+        <argsstring>() const</argsstring>
+        <name>zero</name>
+        <reimplements refid="group__weight_1gabaad113da06b47c4b291558d05da6aa6">zero</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for add (absorbing element for mult). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="73" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gae362229d75df663272f4d52c15a04315" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TropicalWeight::one</definition>
+        <argsstring>() const</argsstring>
+        <name>one</name>
+        <reimplements refid="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0">one</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for mult. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="75" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1a276bcd4dd3d61887d1628e63665edd7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool TropicalWeight::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <reimplements refid="classLetterWeight_1a7c087b5999657545934b72660928a2ee">hasType</reimplements>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="100" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="100" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classTropicalWeight_1a382ff71d1dbd27cfdaac24355df2f31e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight TropicalWeight::make_zero</definition>
+        <argsstring>()</argsstring>
+        <name>make_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="52" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="52" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1a0e2bd648171b8e72fc62d6ee8e7ad313" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight TropicalWeight::make_one</definition>
+        <argsstring>()</argsstring>
+        <name>make_one</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="58" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gace00a414884a9a4824c3cac4b8b084a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></type>
+        <definition>TropicalWeight TropicalWeight::inner</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>inner</name>
+        <param>
+          <type>size_t</type>
+          <defname>arity</defname>
+        </param>
+        <briefdescription>
+<para>penalty for an inner node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="87" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="240" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gad8d0422a24b5d4a76856191cc441396c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></type>
+        <definition>TropicalWeight TropicalWeight::tie</definition>
+        <argsstring>()</argsstring>
+        <name>tie</name>
+        <briefdescription>
+<para>penalty for a tie. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="90" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga739a8c09964d0db9552f5924b494c89d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></type>
+        <definition>TropicalWeight TropicalWeight::gracenote</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>gracenote</name>
+        <param>
+          <type>size_t</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>penalty for given number of grace notes in a leaf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>0 = 1 event, no grace note</para>
+</listitem><listitem><para>1 = 1 event, 1 grace note</para>
+</listitem><listitem><para>2 = 1 event, 2 grace notes</para>
+</listitem><listitem><para>etc </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="98" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classTropicalWeight_1a107c4982b748f9650aed701ccb27bf21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const TropicalWeight &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="103" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="103" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classTropicalWeight_1add8ba82f403d669abe6d7601f003bc77" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TropicalWeight::TropicalWeight</definition>
+        <argsstring>()</argsstring>
+        <name>TropicalWeight</name>
+        <briefdescription>
+<para>default is one </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="120" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classTropicalWeight_1a09d45439a55d482120356f949c638da5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TropicalWeight::TropicalWeight</definition>
+        <argsstring>(double v)</argsstring>
+        <name>TropicalWeight</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="122" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga7203d6028f02a2791bdeede99ef59b97" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TropicalWeight::equal</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>equal</name>
+        <reimplements refid="group__weight_1gaf00322921db3c5212f8d5ca63081d689">equal</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="125" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="100" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga4237553cf4beafd5a96bd0ac7da7ac11" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TropicalWeight::smaller</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>smaller</name>
+        <reimplements refid="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2">smaller</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="128" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="108" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga41791f144fea9717092970563337d040" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TropicalWeight::add</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>add</name>
+        <reimplements refid="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8">add</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>sum is min. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> set this to the min of this and rhs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="133" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="117" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga6bf7a669a9798ebbd6b4138cce2bade6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TropicalWeight::mult</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>mult</name>
+        <reimplements refid="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01">mult</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>product is sum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref> set this to the sum of this and rhs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="138" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="139" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gaa6f92a288b315fed3b301de728f2717d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TropicalWeight::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__weight_1gabef24fcc2eb0c72c420e83e6db625545">print</reimplements>
+        <reimplementedby refid="group__weight_1gaf9785af97fcce45a15098363efe5b7c8">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/TropicalWeight.hpp" line="140" column="1" bodyfile="src/weight/TropicalWeight.cpp" bodystart="156" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>concrete <ref refid="classWeight" kindref="compound">Weight</ref> defined as a scalar value: non-negative weights. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>domain : positive or null double + infinity</para>
+</listitem><listitem><para>operators of tropical algebra:</para>
+</listitem><listitem><para>add is min</para>
+</listitem><listitem><para>zero is infinity</para>
+</listitem><listitem><para>mult is +</para>
+</listitem><listitem><para>one is 0 </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="463">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="464">
+        <label>Distance</label>
+        <link refid="classDistance"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>TropicalWeight</label>
+        <link refid="classTropicalWeight"/>
+        <childnode refid="463" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="466">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="465">
+        <label>TropicalWeight</label>
+        <link refid="classTropicalWeight"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+        <childnode refid="465" relation="usage">
+          <edgelabel>penalty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/weight/TropicalWeight.hpp" line="32" column="1" bodyfile="src/weight/TropicalWeight.hpp" bodystart="31" bodyend="142"/>
+    <listofallmembers>
+      <member refid="classTropicalWeight_1a8b8b7de0bd57c28630fb978daceeeffb" prot="protected" virt="non-virtual"><scope>TropicalWeight</scope><name>_val</name></member>
+      <member refid="group__weight_1ga41791f144fea9717092970563337d040" prot="protected" virt="virtual"><scope>TropicalWeight</scope><name>add</name></member>
+      <member refid="group__weight_1ga378883be65a16bb86f13b1a9d941f104" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>clone</name></member>
+      <member refid="group__weight_1ga7203d6028f02a2791bdeede99ef59b97" prot="protected" virt="virtual"><scope>TropicalWeight</scope><name>equal</name></member>
+      <member refid="classTropicalWeight_1a62d1dc9815ba6ba04665047ba6581731" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>get_one</name></member>
+      <member refid="classTropicalWeight_1a8de59f3233cfd822712b04d6069f5256" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>get_zero</name></member>
+      <member refid="group__weight_1ga739a8c09964d0db9552f5924b494c89d" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>gracenote</name></member>
+      <member refid="classTropicalWeight_1a276bcd4dd3d61887d1628e63665edd7e" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>hasType</name></member>
+      <member refid="group__weight_1gace00a414884a9a4824c3cac4b8b084a9" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>inner</name></member>
+      <member refid="group__weight_1ga2bad107be8a2e71fc12b75196adde070" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>invert</name></member>
+      <member refid="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>LetterWeight</name></member>
+      <member refid="classTropicalWeight_1abc00c8fe56beedff6b7192325833d6d3" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>make</name></member>
+      <member refid="classTropicalWeight_1a0e2bd648171b8e72fc62d6ee8e7ad313" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>make_one</name></member>
+      <member refid="classTropicalWeight_1a382ff71d1dbd27cfdaac24355df2f31e" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>make_zero</name></member>
+      <member refid="group__weight_1ga6bf7a669a9798ebbd6b4138cce2bade6" prot="protected" virt="virtual"><scope>TropicalWeight</scope><name>mult</name></member>
+      <member refid="group__weight_1gabea8959ba2b8538194c3aadf5f9e4941" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>norm</name></member>
+      <member refid="group__weight_1gae362229d75df663272f4d52c15a04315" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>one</name></member>
+      <member refid="classTropicalWeight_1a107c4982b748f9650aed701ccb27bf21" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__weight_1gaa275b4800bdc220d59ee42b2165f638a" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1ga3aeb0d5a945daa39a0ed9a02fe92f246" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1ga65ae4a5dbff3b9bf3d9972147868fc05" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>penalty</name></member>
+      <member refid="group__weight_1gaa6f92a288b315fed3b301de728f2717d" prot="protected" virt="virtual"><scope>TropicalWeight</scope><name>print</name></member>
+      <member refid="group__weight_1ga9b479f4a9f23f4c423729b669aa69dc5" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>scalar</name></member>
+      <member refid="group__weight_1ga4237553cf4beafd5a96bd0ac7da7ac11" prot="protected" virt="virtual"><scope>TropicalWeight</scope><name>smaller</name></member>
+      <member refid="group__weight_1gad8d0422a24b5d4a76856191cc441396c" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>tie</name></member>
+      <member refid="group__weight_1ga17f51f13d0338bbcbc76ada716e626aa" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>TropicalWeight</name></member>
+      <member refid="classTropicalWeight_1add8ba82f403d669abe6d7601f003bc77" prot="protected" virt="non-virtual"><scope>TropicalWeight</scope><name>TropicalWeight</name></member>
+      <member refid="classTropicalWeight_1a09d45439a55d482120356f949c638da5" prot="protected" virt="non-virtual"><scope>TropicalWeight</scope><name>TropicalWeight</name></member>
+      <member refid="group__weight_1ga55f1e2bcb9e1e3fd521d652a5aebfc36" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>zero</name></member>
+      <member refid="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" virt="virtual"><scope>TropicalWeight</scope><name>~LetterWeight</name></member>
+      <member refid="classTropicalWeight_1ac1e9e62336532b7362b1b5f79d7e7d7b" prot="public" virt="non-virtual"><scope>TropicalWeight</scope><name>~TropicalWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

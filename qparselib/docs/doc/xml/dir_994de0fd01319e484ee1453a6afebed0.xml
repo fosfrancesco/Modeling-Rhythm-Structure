@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_994de0fd01319e484ee1453a6afebed0" kind="dir">
+    <compoundname>src/output</compoundname>
+    <innerfile refid="APTED_8cpp">APTED.cpp</innerfile>
+    <innerfile refid="DurationList_8cpp">DurationList.cpp</innerfile>
+    <innerfile refid="DurationList_8hpp">DurationList.hpp</innerfile>
+    <innerfile refid="DurationTree_8cpp">DurationTree.cpp</innerfile>
+    <innerfile refid="DurationTree_8hpp">DurationTree.hpp</innerfile>
+    <innerfile refid="Label_8cpp">Label.cpp</innerfile>
+    <innerfile refid="Label_8hpp">Label.hpp</innerfile>
+    <innerfile refid="LilyPond_8cpp">LilyPond.cpp</innerfile>
+    <innerfile refid="MEI_8cpp">MEI.cpp</innerfile>
+    <innerfile refid="MEI_8hpp">MEI.hpp</innerfile>
+    <innerfile refid="OMRT_8cpp">OMRT.cpp</innerfile>
+    <innerfile refid="OMRT_8hpp">OMRT.hpp</innerfile>
+    <innerfile refid="Onsets_8cpp">Onsets.cpp</innerfile>
+    <innerfile refid="Onsets_8hpp">Onsets.hpp</innerfile>
+    <innerfile refid="PointedRT_8cpp">PointedRT.cpp</innerfile>
+    <innerfile refid="PointedRT_8hpp">PointedRT.hpp</innerfile>
+    <innerfile refid="QDate_8cpp">QDate.cpp</innerfile>
+    <innerfile refid="QDate_8hpp">QDate.hpp</innerfile>
+    <innerfile refid="RT_8cpp">RT.cpp</innerfile>
+    <innerfile refid="RT_8hpp">RT.hpp</innerfile>
+    <innerfile refid="SerialLabel_8cpp">SerialLabel.cpp</innerfile>
+    <innerfile refid="SerialLabel_8hpp">SerialLabel.hpp</innerfile>
+    <innerfile refid="ValueList_8cpp">ValueList.cpp</innerfile>
+    <innerfile refid="ValueList_8hpp">ValueList.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_25205df789895db728d786a757b2675c" kind="dir">
+    <compoundname>src/parsers</compoundname>
+    <innerfile refid="Parser_8hpp">Parser.hpp</innerfile>
+    <innerfile refid="Parser1bar1bestSIP_8cpp">Parser1bar1bestSIP.cpp</innerfile>
+    <innerfile refid="Parser1bar1bestSIP_8hpp">Parser1bar1bestSIP.hpp</innerfile>
+    <innerfile refid="Parser1barKbestSKIP_8cpp">Parser1barKbestSKIP.cpp</innerfile>
+    <innerfile refid="Parser1barKbestSKIP_8hpp">Parser1barKbestSKIP.hpp</innerfile>
+    <innerfile refid="ParserInputless1best_8cpp">ParserInputless1best.cpp</innerfile>
+    <innerfile refid="ParserInputless1best_8hpp">ParserInputless1best.hpp</innerfile>
+    <innerfile refid="ParserInputlessKbest_8cpp">ParserInputlessKbest.cpp</innerfile>
+    <innerfile refid="ParserInputlessKbest_8hpp">ParserInputlessKbest.hpp</innerfile>
+    <innerfile refid="ParserMultibar1bestSIPBU_8cpp">ParserMultibar1bestSIPBU.cpp</innerfile>
+    <innerfile refid="ParserMultibar1bestSIPBU_8hpp">ParserMultibar1bestSIPBU.hpp</innerfile>
+    <innerfile refid="ParserMultibar1bestSIPflat_8cpp">ParserMultibar1bestSIPflat.cpp</innerfile>
+    <innerfile refid="ParserMultibar1bestSIPflat_8hpp">ParserMultibar1bestSIPflat.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/parsers/"/>
+  </compounddef>
+</doxygen>

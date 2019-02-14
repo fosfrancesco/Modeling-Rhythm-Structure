@@ -1,0 +1,640 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="meiutil-v0_8cpp" kind="file" language="C++">
+    <compoundname>meiutil-v0.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="constant_8h" local="yes">constant.h</includes>
+    <includes refid="MEI_8hpp" local="yes">MEI.hpp</includes>
+    <includes refid="Score_8hpp" local="yes">Score.hpp</includes>
+    <includes refid="Event_8hpp" local="yes">Event.hpp</includes>
+    <includes refid="Measure_8hpp" local="yes">Measure.hpp</includes>
+    <includes refid="Note_8hpp" local="yes">Note.hpp</includes>
+    <includes refid="QPconfig_8h" local="yes">QPconfig.h</includes>
+    <includes refid="FloatWeight_8hpp" local="yes">FloatWeight.hpp</includes>
+    <includes refid="TropicalWeight_8hpp" local="yes">TropicalWeight.hpp</includes>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includes local="yes">SIPptr.hpp</includes>
+    <includes refid="DurationList_8hpp" local="yes">DurationList.hpp</includes>
+    <includes refid="Atable_8hpp" local="yes">Atable.hpp</includes>
+    <includes refid="Table_8hpp" local="yes">Table.hpp</includes>
+    <includes refid="Rune_8hpp" local="yes">Rune.hpp</includes>
+    <includes refid="Brecord_8hpp" local="yes">Brecord.hpp</includes>
+    <includes refid="RT_8hpp" local="yes">RT.hpp</includes>
+    <includes refid="PointedRT_8hpp" local="yes">PointedRT.hpp</includes>
+    <incdepgraph>
+      <node id="581">
+        <label>src/targets/mei/meiutil-v0.cpp</label>
+        <link refid="meiutil-v0_8cpp"/>
+        <childnode refid="582" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>assert.h</label>
+      </node>
+      <node id="587">
+        <label>stdlib.h</label>
+      </node>
+      <node id="584">
+        <label>string</label>
+      </node>
+      <node id="588">
+        <label>unistd.h</label>
+      </node>
+      <node id="585">
+        <label>vector</label>
+      </node>
+      <node id="583">
+        <label>iostream</label>
+      </node>
+      <node id="591">
+        <label>SIPptr.hpp</label>
+      </node>
+      <node id="586">
+        <label>ctype.h</label>
+      </node>
+      <node id="589">
+        <label>getopt.h</label>
+      </node>
+      <node id="582">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="meiutil-v0_8cpp_1abf526b57c2ccd253633efc068bc4f949" prot="public" static="no">
+        <name>QP_WEIGHT</name>
+        <initializer>WEIGHT_PENALTY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="35" column="10" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="meiutil-v0_8cpp_1aa657add5db6b50aed67a60ee03990b35" prot="public" static="no">
+        <name>QP_SCHEMA</name>
+        <initializer>SCHEMA_WTA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="40" column="10" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="meiutil-v0_8cpp_1aa1b490e4613a5f5f679adc178d416a2b" prot="public" static="no">
+        <name>QP_PARSING</name>
+        <initializer>PARSING_VITERBI</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="45" column="10" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="meiutil-v0_8cpp_1a4f59323969e09154845e5509b29f80ec" prot="public" static="no">
+        <name>check_index_is</name>
+        <param><defname>NAME</defname></param>
+        <initializer>assert(0 == strcmp(long_options[option_index].name, NAME))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="178" column="9" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a1bdcfae3209cbd96db35a2ae356fa15e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int verbosity</definition>
+        <argsstring></argsstring>
+        <name>verbosity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="75" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a9389e4770ba454a2e14f870491495cb2" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="78" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a8aefb87313710a1a941bf964fd8b92c1" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string input_file</definition>
+        <argsstring></argsstring>
+        <name>input_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="88" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a21da174138213a9bd27f2e5fede73c84" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_input</definition>
+        <argsstring></argsstring>
+        <name>f_input</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="90" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a7dd1e51ee5ca2524b26ea918e1f9175f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_midi</definition>
+        <argsstring></argsstring>
+        <name>f_midi</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="92" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1ae522d059a0773fde6752864a1a25a937" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_norest</definition>
+        <argsstring></argsstring>
+        <name>f_norest</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="95" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1af43b42d34e296555129d2fc0a38e2c36" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_start</definition>
+        <argsstring></argsstring>
+        <name>f_start</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="98" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1af18dec021c4189bf9e42c17825a659c9" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_start</definition>
+        <argsstring></argsstring>
+        <name>d_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="100" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a912061ffd86d7c9c5d45a818091a1809" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_end</definition>
+        <argsstring></argsstring>
+        <name>f_end</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="103" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a2085bc60e4a990f3bf6de9eb260c2033" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_end</definition>
+        <argsstring></argsstring>
+        <name>d_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="105" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a1968747d18a2c7b279494411074a7b0f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_output</definition>
+        <argsstring></argsstring>
+        <name>f_output</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="108" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a8643191a264f6d55fead82a6d23a88b6" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string output_file</definition>
+        <argsstring></argsstring>
+        <name>output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="110" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1ab85f3183289eb8f9a0246c91c3361f01" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string schema_file</definition>
+        <argsstring></argsstring>
+        <name>schema_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="113" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a28db3237d61fcae6b2e0d5d6f0c0851c" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_schema</definition>
+        <argsstring></argsstring>
+        <name>f_schema</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="115" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1af322a4cdcebdfdd3633b10266acd557b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_clean</definition>
+        <argsstring></argsstring>
+        <name>f_clean</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="118" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a4b976c648841620cade8ef741182a12e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_bars</definition>
+        <argsstring></argsstring>
+        <name>f_bars</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="121" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1ae4a85ca68cbc70cabfd4bef285116992" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t bars</definition>
+        <argsstring></argsstring>
+        <name>bars</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="123" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1aea2191678307657ce858be2f341d4bd4" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_pre</definition>
+        <argsstring></argsstring>
+        <name>f_pre</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="126" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a67b3889eb677805084a9ae609ccaa270" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pre</definition>
+        <argsstring></argsstring>
+        <name>pre</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="128" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a8257e65f8b74bec4d5de6a7829993393" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_post</definition>
+        <argsstring></argsstring>
+        <name>f_post</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="131" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1add874d52ae7d384f30bcdf33fdd87d9a" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t post</definition>
+        <argsstring></argsstring>
+        <name>post</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="133" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1adc18adf09341013a4b31aafa81c2085c" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_penalty</definition>
+        <argsstring></argsstring>
+        <name>f_penalty</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="137" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a8ee127732069dcd8213013b29c81135d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_count</definition>
+        <argsstring></argsstring>
+        <name>f_count</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="138" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1a319963be2ff6dc388435f9b3f55f9d2a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_proba</definition>
+        <argsstring></argsstring>
+        <name>f_proba</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="139" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="meiutil-v0_8cpp_1ab5b68aa8f898c499ca2c3092ecd9e552" prot="public" static="yes" mutable="no">
+        <type>struct option</type>
+        <definition>struct option long_options[]</definition>
+        <argsstring>[]</argsstring>
+        <name>long_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="139" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="meiutil-v0_8cpp_1ac23dc7fc03d7ce8cd37cae09a0cd155c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setOptionArgs</definition>
+        <argsstring>(int option_index)</argsstring>
+        <name>setOptionArgs</name>
+        <param>
+          <type>int</type>
+          <declname>option_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="181" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="181" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1a086c76a38f84ae6226164d3fb0b465d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkOptions</definition>
+        <argsstring>()</argsstring>
+        <name>checkOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="230" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="230" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1a279f7d99a42be609e85a96c278fb45bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+        <definition>WTA* read_schema</definition>
+        <argsstring>(const string filename, bool clean_flag=true, bool norm_flag=true)</argsstring>
+        <name>read_schema</name>
+        <param>
+          <type>const string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clean_flag</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>norm_flag</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="286" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="286" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1a899afeb4848590bd8471af6657f0bc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t compute_resolution</definition>
+        <argsstring>(WTA *schema)</argsstring>
+        <name>compute_resolution</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>schema</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="379" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="379" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1aa032d71af1339068efad276d676bd377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+        <definition>InputSegment* read_segment</definition>
+        <argsstring>(const string filename, size_t res, size_t bars, bool norest)</argsstring>
+        <name>read_segment</name>
+        <param>
+          <type>const string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bars</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>norest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="393" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="393" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1a2ef30c42cbc289d899a8be5d2d8f77d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usage</definition>
+        <argsstring>()</argsstring>
+        <name>usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="444" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="444" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1aadd58a2bd505eba3564c7483be1a6140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="488" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="488" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="meiutil-v0_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/mei/meiutil-v0.cpp" line="506" column="1" bodyfile="src/targets/mei/meiutil-v0.cpp" bodystart="506" bodyend="855"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/targets/mei/meiutil-v0.cpp"/>
+  </compounddef>
+</doxygen>

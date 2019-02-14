@@ -1,0 +1,99 @@
+\hypertarget{classSpointer}{}\section{Spointer Class Reference}
+\label{classSpointer}\index{Spointer@{Spointer}}
+
+
+key in a parse table.  
+
+
+
+
+{\ttfamily \#include $<$Ptr\+S.\+hpp$>$}
+
+Inheritance diagram for Spointer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classSpointer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__table_ga467ee6f93cd0429edb40fc4de100c3c4}{Spointer}} ()
+\begin{DoxyCompactList}\small\item\em specific \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gaad8a647a58df31aefd8f2703b9f86dc5}{Spointer}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em specific \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga49f82b7aafd3ae237243c85272597fa7}{Spointer}} (\mbox{\hyperlink{classWTA}{W\+TA}} $\ast$a, \mbox{\hyperlink{classEnvironment}{Environment}} $\ast$env, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0, \mbox{\hyperlink{classRational}{Rational}} mlen=\mbox{\hyperlink{classRational}{Rational}}(1), size\+\_\+t k=1)
+\begin{DoxyCompactList}\small\item\em top ptr (head of the main \mbox{\hyperlink{classRun}{Run}}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga72441f0d67497c90602a123c45dc53d1}{Spointer}} (\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$env, const \mbox{\hyperlink{classSpointer}{Spointer}} \&p, size\+\_\+t a, size\+\_\+t i, state\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em sub-\/pointer or instance as leaf. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gaf40e1a1f0edc608d4413f096a19aae78}{Spointer}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gac303715911a48c482acb6ae4188508d3}{Spointer}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&p0, const \mbox{\hyperlink{classSpointer}{Spointer}} \&p1)
+\begin{DoxyCompactList}\small\item\em next sibling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gad078973f8318ccf5800db79e87584dcc}{Spointer}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&p, const \mbox{\hyperlink{classSpointer}{Spointer}} \&p0, const \mbox{\hyperlink{classSpointer}{Spointer}} \&p1)
+\begin{DoxyCompactList}\small\item\em instance as parent. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSpointer}{Spointer}} \& \mbox{\hyperlink{group__table_ga88eb3c521aa1c9bc9b8891f20b9a01eb}{operator=}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&)
+\item 
+virtual bool \mbox{\hyperlink{group__table_gacb9d4d8e3da8a1e082b80fd31abb9772}{operator==}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&) const
+\begin{DoxyCompactList}\small\item\em for use as key in a unorered\+\_\+multimap. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__table_ga797b376c9ed1b4777ea94ff8350c65c8}{operator$<$}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&) const
+\begin{DoxyCompactList}\small\item\em for use as key in a multimap. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__table_ga718cc6f7473c3fb1b074211bf2f16d8b}{instance}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&p) const
+\item 
+virtual bool \mbox{\hyperlink{group__table_ga06fa67855bfb50d81e18bdfacce965ce}{subsume}} (const \mbox{\hyperlink{classSpointer}{Spointer}} \&p) const
+\item 
+\mbox{\Hypertarget{classSpointer_aec852b63ae9427911ff290979bc0a4b4}\label{classSpointer_aec852b63ae9427911ff290979bc0a4b4}} 
+virtual bool {\bfseries has\+\_\+S} () const
+\item 
+\mbox{\Hypertarget{classSpointer_a8fa50c04246ceb3a48e961946a2427f7}\label{classSpointer_a8fa50c04246ceb3a48e961946a2427f7}} 
+state\+\_\+t {\bfseries state} () const
+\item 
+virtual bool \mbox{\hyperlink{group__table_gace5bd2026fef480084f3cc5dc28086f3}{complete}} () const
+\begin{DoxyCompactList}\small\item\em the pointer is complete i.\+e. all fields are set \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{group__table_ga15067ad809b5ac25b45c0187550e0b17}{label}} (const \mbox{\hyperlink{classTransition}{Transition}} \&t) const
+\begin{DoxyCompactList}\small\item\em return a concrete label value corresponding to this pointer when considered as a leaf position, using the label of the given transition. the given transition must be terminal. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__table_ga0a994ec6827ef23556b500382fc5a1fc}{dummy}} () const
+\begin{DoxyCompactList}\small\item\em return whether this pointer is a dummy pointer i.\+e. it was constructed with P() default false. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__table_ga54817fbae1688dab4dfff5724e762640}{divisible}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpointer_a27f37ac70c70f90d9a4a576606bb52e1}\label{classSpointer_a27f37ac70c70f90d9a4a576606bb52e1}} 
+state\+\_\+t {\bfseries \+\_\+state}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpointer_ad263d9daed9b87d43b2197cac98bced2}\label{classSpointer_ad263d9daed9b87d43b2197cac98bced2}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classSpointer}{Spointer}} \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+key in a parse table. 
+
+pointer to a (best) run for 1-\/best parsing for standard \mbox{\hyperlink{classWTA}{W\+TA}}.
+
+a \mbox{\hyperlink{classSpointer}{Spointer}} contains
+\begin{DoxyItemize}
+\item a state symbol\+: either
+\begin{DoxyItemize}
+\item a \mbox{\hyperlink{classWTA}{W\+TA}} state or
+\item a leaf label or
+\item a meta state
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+that defines two kind of pointers
+\begin{DoxyItemize}
+\item state pointer \+: points to a state of a \mbox{\hyperlink{classWTA}{W\+TA}}
+\item bar pointer \+: points to a solution for the n first bars in an input segment = a sequence of n solutions pointing to the initial state of \mbox{\hyperlink{classWTA}{W\+TA}}.
+\end{DoxyItemize}
+
+all Spointers are complete 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/table/Ptr\+S.\+hpp\item 
+src/table/Ptr\+S.\+cpp\end{DoxyCompactItemize}

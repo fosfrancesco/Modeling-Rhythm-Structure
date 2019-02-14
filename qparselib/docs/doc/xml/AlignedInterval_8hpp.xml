@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="AlignedInterval_8hpp" kind="file" language="C++">
+    <compoundname>AlignedInterval.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">algorithm</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="InputSegment_8hpp" local="yes">InputSegment.hpp</includes>
+    <includes refid="Interval_8hpp" local="yes">Interval.hpp</includes>
+    <includedby refid="SerialLabel_8hpp" local="yes">src/output/SerialLabel.hpp</includedby>
+    <includedby refid="PreWTA_8hpp" local="yes">src/schemata/PreWTA.hpp</includedby>
+    <includedby refid="AlignedInterval_8cpp" local="yes">src/segment/AlignedInterval.cpp</includedby>
+    <includedby refid="IntervalHeap_8hpp" local="yes">src/segment/IntervalHeap.hpp</includedby>
+    <includedby refid="IntervalTree_8hpp" local="yes">src/segment/IntervalTree.hpp</includedby>
+    <includedby refid="Distance_8hpp" local="yes">src/weight/Distance.hpp</includedby>
+    <includedby refid="PerformanceModel_8hpp" local="yes">src/weight/PerformanceModel.hpp</includedby>
+    <incdepgraph>
+      <node id="382">
+        <label>assert.h</label>
+      </node>
+      <node id="384">
+        <label>map</label>
+      </node>
+      <node id="380">
+        <label>src/segment/AlignedInterval.hpp</label>
+        <link refid="AlignedInterval_8hpp"/>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>vector</label>
+      </node>
+      <node id="385">
+        <label>algorithm</label>
+      </node>
+      <node id="381">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classAlignedInterval" prot="public">AlignedInterval</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/AlignedInterval.hpp"/>
+  </compounddef>
+</doxygen>

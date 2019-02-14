@@ -1,0 +1,141 @@
+\hypertarget{classTropicalWeight}{}\section{Tropical\+Weight Class Reference}
+\label{classTropicalWeight}\index{TropicalWeight@{TropicalWeight}}
+
+
+concrete \mbox{\hyperlink{classWeight}{Weight}} defined as a scalar value\+: non-\/negative weights.  
+
+
+
+
+{\ttfamily \#include $<$Tropical\+Weight.\+hpp$>$}
+
+Inheritance diagram for Tropical\+Weight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTropicalWeight}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Tropical\+Weight} (const \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \& \mbox{\hyperlink{group__weight_ga3aeb0d5a945daa39a0ed9a02fe92f246}{operator=}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} $\ast$ {\bfseries clone} () const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classTropicalWeight_abc00c8fe56beedff6b7192325833d6d3}{make}} (double v) const
+\item 
+\mbox{\Hypertarget{classTropicalWeight_a8de59f3233cfd822712b04d6069f5256}\label{classTropicalWeight_a8de59f3233cfd822712b04d6069f5256}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classTropicalWeight_a8de59f3233cfd822712b04d6069f5256}{get\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for add (absorbing element for mult) wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTropicalWeight_a62d1dc9815ba6ba04665047ba6581731}\label{classTropicalWeight_a62d1dc9815ba6ba04665047ba6581731}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classTropicalWeight_a62d1dc9815ba6ba04665047ba6581731}{get\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for mult wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{group__weight_gabea8959ba2b8538194c3aadf5f9e4941}{norm}} () const
+\item 
+virtual void {\bfseries scalar} (double)
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga2bad107be8a2e71fc12b75196adde070}{invert}} ()
+\begin{DoxyCompactList}\small\item\em multiplicative inverse. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_ga55f1e2bcb9e1e3fd521d652a5aebfc36}{zero}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for add (absorbing element for mult). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_gae362229d75df663272f4d52c15a04315}{one}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for mult. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTropicalWeight_a276bcd4dd3d61887d1628e63665edd7e}\label{classTropicalWeight_a276bcd4dd3d61887d1628e63665edd7e}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTropicalWeight_a382ff71d1dbd27cfdaac24355df2f31e}\label{classTropicalWeight_a382ff71d1dbd27cfdaac24355df2f31e}} 
+static \mbox{\hyperlink{classWeight}{Weight}} {\bfseries make\+\_\+zero} ()
+\item 
+\mbox{\Hypertarget{classTropicalWeight_a0e2bd648171b8e72fc62d6ee8e7ad313}\label{classTropicalWeight_a0e2bd648171b8e72fc62d6ee8e7ad313}} 
+static \mbox{\hyperlink{classWeight}{Weight}} {\bfseries make\+\_\+one} ()
+\item 
+static \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \mbox{\hyperlink{group__weight_gace00a414884a9a4824c3cac4b8b084a9}{inner}} (size\+\_\+t)
+\begin{DoxyCompactList}\small\item\em penalty for an inner node. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \mbox{\hyperlink{group__weight_gad8d0422a24b5d4a76856191cc441396c}{tie}} ()
+\begin{DoxyCompactList}\small\item\em penalty for a tie. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \mbox{\hyperlink{group__weight_ga739a8c09964d0db9552f5924b494c89d}{gracenote}} (size\+\_\+t)
+\begin{DoxyCompactList}\small\item\em penalty for given number of grace notes in a leaf. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \mbox{\hyperlink{group__weight_ga65ae4a5dbff3b9bf3d9972147868fc05}{penalty}} \mbox{[}18\mbox{]}
+\begin{DoxyCompactList}\small\item\em penalty by arity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTropicalWeight_add8ba82f403d669abe6d7601f003bc77}\label{classTropicalWeight_add8ba82f403d669abe6d7601f003bc77}} 
+\mbox{\hyperlink{classTropicalWeight_add8ba82f403d669abe6d7601f003bc77}{Tropical\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em default is one \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTropicalWeight_a09d45439a55d482120356f949c638da5}\label{classTropicalWeight_a09d45439a55d482120356f949c638da5}} 
+{\bfseries Tropical\+Weight} (double v)
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga7203d6028f02a2791bdeede99ef59b97}{equal}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga4237553cf4beafd5a96bd0ac7da7ac11}{smaller}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga41791f144fea9717092970563337d040}{add}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em sum is min. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__weight_ga6bf7a669a9798ebbd6b4138cce2bade6}{mult}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em product is sum. \end{DoxyCompactList}\item 
+virtual void {\bfseries print} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTropicalWeight_a8b8b7de0bd57c28630fb978daceeeffb}\label{classTropicalWeight_a8b8b7de0bd57c28630fb978daceeeffb}} 
+double {\bfseries \+\_\+val}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTropicalWeight_a107c4982b748f9650aed701ccb27bf21}\label{classTropicalWeight_a107c4982b748f9650aed701ccb27bf21}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+concrete \mbox{\hyperlink{classWeight}{Weight}} defined as a scalar value\+: non-\/negative weights. 
+
+
+\begin{DoxyItemize}
+\item domain \+: positive or null double + infinity
+\item operators of tropical algebra\+:
+\item add is min
+\item zero is infinity
+\item mult is +
+\item one is 0 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTropicalWeight_abc00c8fe56beedff6b7192325833d6d3}\label{classTropicalWeight_abc00c8fe56beedff6b7192325833d6d3}} 
+\index{TropicalWeight@{TropicalWeight}!make@{make}}
+\index{make@{make}!TropicalWeight@{TropicalWeight}}
+\subsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWeight}{Weight}} Tropical\+Weight\+::make (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyWarning}{Warning}
+value must be positive
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000038}{Todo}}]T\+BR \+: stricly positive \end{DoxyRefDesc}
+
+
+Implements \mbox{\hyperlink{classLetterWeight_af1f898e0845f59299440fc50a58fd2f1}{Letter\+Weight}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classDistance_a1fe45f762afff378c46f81d6199a14ab}{Distance}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Tropical\+Weight.\+hpp\item 
+src/weight/Tropical\+Weight.\+cpp\end{DoxyCompactItemize}

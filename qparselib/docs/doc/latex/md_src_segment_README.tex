@@ -1,0 +1,28 @@
+Classes for the abstract representation of data in input processed by parsing.
+
+The first category of classes are used for the representation of performances in input\+: sequences of timestamped musical events.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classPitch}{Pitch}}} \+: M\+I\+DI and name/accident/octave pitch.
+\item {\ttfamily \mbox{\hyperlink{classMusEvent}{Mus\+Event}}} \+: musical events (without timestamps); it can be a pitched note or a rest. No time information (onset or duration).
+\item {\ttfamily \mbox{\hyperlink{classPoint}{Point}}} \+: musical event extended with real-\/time date (in seconds).
+\begin{DoxyItemize}
+\item a point is marked either as {\ttfamily on} of {\ttfamily off} (similarly to note-\/on / note-\/off midi messages).
+\item a point can be linked to a matching point (according to the M\+I\+DI on-\/off pairing).
+\item a point {\ttfamily p} marked {\ttfamily on} and linked to another point {\ttfamily p’} ({\ttfamily on} or {\ttfamily off}) has a duration = {\ttfamily date(p’) -\/ date(p)} (this quantity must be positive or null).
+\item any other point has an unspecified duration.
+\end{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classMusPoint}{Mus\+Point}}} \+: \mbox{\hyperlink{classPoint}{Point}} extended with musical-\/time date and durations (expressed in fraction of bars).
+\item {\ttfamily \mbox{\hyperlink{classInputSegment}{Input\+Segment}}} sequence of musical points events, ordered by real-\/time dates. Constructors for empty input segmemnt and for inserting new points (inservtion respects the date order). For import/export from M\+I\+DI files, see ../input/\+R\+E\+A\+D\+ME.md \char`\"{}dir input/\char`\"{}.
+\end{DoxyItemize}
+
+The second category of classes represent time intervals, and tools for the alignement of input events to these intervals (for quantization). Every interval has real-\/time and musical-\/time bound.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classInterval}{Interval}}} \+: time interval with realtime bounds (in seconds) and musical bounds (in fraction of bars).
+\item {\ttfamily \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}}} \+: {\ttfamily \mbox{\hyperlink{classInterval}{Interval}}} extended with with computed alignment of {\ttfamily \mbox{\hyperlink{classInputSegment}{Input\+Segment}}} points inside the left-\/ and right-\/bounds\+: points resp. inside the first half and second half of interval.
+\item {\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}} \+: the above organized hierarchicaly in a tree of nested intervals.
+\item {\ttfamily \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}}} \+: table for storage of aligned intervals to avoid recomputation of alignments. 
+\end{DoxyItemize}

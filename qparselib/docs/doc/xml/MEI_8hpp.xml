@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="MEI_8hpp" kind="file" language="C++">
+    <compoundname>MEI.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="ValueList_8hpp" local="yes">ValueList.hpp</includes>
+    <includes refid="RT_8hpp" local="yes">RT.hpp</includes>
+    <includes refid="Score_8hpp" local="yes">Score.hpp</includes>
+    <includes refid="Measure_8hpp" local="yes">Measure.hpp</includes>
+    <includes refid="Note_8hpp" local="yes">Note.hpp</includes>
+    <includes refid="Beam_8hpp" local="yes">Beam.hpp</includes>
+    <includes refid="Tuplet_8hpp" local="yes">Tuplet.hpp</includes>
+    <includes local="no">mei/mei.h</includes>
+    <includes local="no">mei/meielement.h</includes>
+    <includes local="no">mei/shared.h</includes>
+    <includes local="no">mei/cmn.h</includes>
+    <includes local="no">mei/xmlexport.h</includes>
+    <includedby refid="MEI_8cpp" local="yes">src/output/MEI.cpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="meiutil-newparser_8cpp" local="yes">src/targets/mei/meiutil-newparser.cpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="124">
+        <label>mei/cmn.h</label>
+      </node>
+      <node id="121">
+        <label>mei/mei.h</label>
+      </node>
+      <node id="125">
+        <label>mei/xmlexport.h</label>
+      </node>
+      <node id="122">
+        <label>mei/meielement.h</label>
+      </node>
+      <node id="123">
+        <label>mei/shared.h</label>
+      </node>
+      <node id="120">
+        <label>vector</label>
+      </node>
+      <node id="118">
+        <label>src/output/MEI.hpp</label>
+        <link refid="MEI_8hpp"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classMEI" prot="public">MEI</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/MEI.hpp"/>
+  </compounddef>
+</doxygen>

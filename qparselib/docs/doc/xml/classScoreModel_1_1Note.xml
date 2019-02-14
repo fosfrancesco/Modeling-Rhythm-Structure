@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Note" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Note</compoundname>
+    <basecompoundref refid="classScoreModel_1_1Event" prot="public" virt="non-virtual">ScoreModel::Event</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Note_1a4ceff3d3b949cd164f8c8da8b4f7c149" prot="protected" static="no" mutable="no">
+        <type><ref refid="classPitch" kindref="compound">Pitch</ref></type>
+        <definition>Pitch ScoreModel::Note::_pitch</definition>
+        <argsstring></argsstring>
+        <name>_pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="34" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Note_1aa7d86cdc998547a3b0e3cf5688b912b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Note::Note</definition>
+        <argsstring>(Duration duration, Pitch p)</argsstring>
+        <name>Note</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type><ref refid="classPitch" kindref="compound">Pitch</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="16" column="1" bodyfile="src/scoremodel/Note.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1a0bd1aa7bb83a4001d8dc9d8d8b5db02b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Note::~Note</definition>
+        <argsstring>()</argsstring>
+        <name>~Note</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="18" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1a8b9cd623f7bcfc453c1122eed44d2771" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> *</type>
+        <definition>Event * ScoreModel::Note::clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="20" column="1" bodyfile="src/scoremodel/Note.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1a26861448aca7b3cb10fff77bc82e2425" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ScoreModel::Note::isRest</definition>
+        <argsstring>() const</argsstring>
+        <name>isRest</name>
+        <reimplements refid="classScoreModel_1_1Event_1ae326ab5efa2180f662548b4160360288">isRest</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="22" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="22" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1ae8db3157671fd89bfd16a4d23163e7f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ScoreModel::Note::isNote</definition>
+        <argsstring>() const</argsstring>
+        <name>isNote</name>
+        <reimplements refid="classScoreModel_1_1Event_1ae831f2bf338cd2d68ff695541d20bb17">isNote</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="25" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1a7639ee94233d351ab99cab1511e6caa4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classPitch" kindref="compound">Pitch</ref></type>
+        <definition>Pitch ScoreModel::Note::pitch</definition>
+        <argsstring>() const</argsstring>
+        <name>pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="28" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Note_1a9479c02d613a1ebdb30d8e93cdb45516" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Note::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Note.hpp" line="29" column="1" bodyfile="src/scoremodel/Note.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="179">
+        <label>ScoreModel::Note</label>
+        <link refid="classScoreModel_1_1Note"/>
+        <childnode refid="180" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>ScoreModel::Event</label>
+        <link refid="classScoreModel_1_1Event"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="181">
+        <label>ScoreModel::Note</label>
+        <link refid="classScoreModel_1_1Note"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>_pitch</edgelabel>
+        </childnode>
+      </node>
+      <node id="183">
+        <label>Pitch</label>
+        <link refid="classPitch"/>
+      </node>
+      <node id="182">
+        <label>ScoreModel::Event</label>
+        <link refid="classScoreModel_1_1Event"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/scoremodel/Note.hpp" line="13" column="1" bodyfile="src/scoremodel/Note.hpp" bodystart="12" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Note_1a4ceff3d3b949cd164f8c8da8b4f7c149" prot="protected" virt="non-virtual"><scope>ScoreModel::Note</scope><name>_pitch</name></member>
+      <member refid="classScoreModel_1_1Note_1a8b9cd623f7bcfc453c1122eed44d2771" prot="public" virt="virtual"><scope>ScoreModel::Note</scope><name>clone</name></member>
+      <member refid="classScoreModel_1_1Event_1af639f7bb1366a3f8790da5ac2ef795fc" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>Event</name></member>
+      <member refid="classScoreModel_1_1Event_1a6dd98760396d0900719f2637ec27371a" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getDuration</name></member>
+      <member refid="classScoreModel_1_1Event_1a1d0e5a432ad6f00807b00f5d5a17f412" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getEndBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1aba12bfff200e2712a8a81e1897fc39cc" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getId</name></member>
+      <member refid="classScoreModel_1_1Event_1a60f960de4ae5bfafd43778bbc9873ce8" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getMeasure</name></member>
+      <member refid="classScoreModel_1_1Event_1a14c20827cc116c68376cd20f66c974f4" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getStartBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1aa42a7bed6170ee53f28c89e54ce0f830" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>getVoicePtr</name></member>
+      <member refid="classScoreModel_1_1Event_1a114a671fc6a3f5ecfe4fbbde5a4758a0" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>isGraceNote</name></member>
+      <member refid="classScoreModel_1_1Note_1ae8db3157671fd89bfd16a4d23163e7f3" prot="public" virt="virtual"><scope>ScoreModel::Note</scope><name>isNote</name></member>
+      <member refid="classScoreModel_1_1Note_1a26861448aca7b3cb10fff77bc82e2425" prot="public" virt="virtual"><scope>ScoreModel::Note</scope><name>isRest</name></member>
+      <member refid="classScoreModel_1_1Note_1aa7d86cdc998547a3b0e3cf5688b912b0" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>Note</name></member>
+      <member refid="classScoreModel_1_1Note_1a7639ee94233d351ab99cab1511e6caa4" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>pitch</name></member>
+      <member refid="classScoreModel_1_1Note_1a9479c02d613a1ebdb30d8e93cdb45516" prot="public" virt="virtual"><scope>ScoreModel::Note</scope><name>print</name></member>
+      <member refid="classScoreModel_1_1Event_1a7f42996eca1339a85a8b6151bc426088" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setDuration</name></member>
+      <member refid="classScoreModel_1_1Event_1ac90f374d347bbb44e08590b62c0ef3b0" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setEndBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1ae837a0111c2a45ecb1dead0f8018d2b5" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setGraceNote</name></member>
+      <member refid="classScoreModel_1_1Event_1a27efb946e1900cebd3ed72e073f98024" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setId</name></member>
+      <member refid="classScoreModel_1_1Event_1a842f6f7bd3140fc7fb469e5061a45d87" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setMeasure</name></member>
+      <member refid="classScoreModel_1_1Event_1a0fcaff7d9c5fdcf35fed5b67cdaca4b9" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setStartBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1a50e6b3aae286c87a9db3bc00c8b332c3" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>setVoice</name></member>
+      <member refid="classScoreModel_1_1Event_1a35564de0740e9c4218f36b9deb5aeeec" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>UNDEF_VELOCITY</name></member>
+      <member refid="classScoreModel_1_1Event_1a028708f328e5508208809b788b3498e2" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>~Event</name></member>
+      <member refid="classScoreModel_1_1Note_1a0bd1aa7bb83a4001d8dc9d8d8b5db02b" prot="public" virt="non-virtual"><scope>ScoreModel::Note</scope><name>~Note</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

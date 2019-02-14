@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classKrecord" kind="class" language="C++" prot="public">
+    <compoundname>Krecord</compoundname>
+    <basecompoundref refid="classRecord" prot="public" virt="non-virtual">Record&lt; P &gt;</basecompoundref>
+    <includes local="no">Krecord.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class P</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classKrecord_1a4bd6f869776d942976f6469aebc64f10" prot="protected" static="no" mutable="no">
+        <type>std::priority_queue&lt; <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *, std::vector&lt; <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; * &gt;, RunCompare&lt; P &gt; &gt;</type>
+        <definition>std::priority_queue&lt;Run&lt;P&gt;*, std::vector&lt;Run&lt;P&gt;*&gt;, RunCompare&lt;P&gt; &gt; Krecord&lt; P &gt;::_cand</definition>
+        <argsstring></argsstring>
+        <name>_cand</name>
+        <briefdescription>
+<para>heap of candidate runs for the associated state. it is empty iff no more k-best can be added </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="50" column="1" bodyfile="src/table/Krecord.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKrecord_1a2974d287d3c849f4c9f5b03f51e7159c" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; * &gt;</type>
+        <definition>std::vector&lt;Run&lt;P&gt;*&gt; Krecord&lt; P &gt;::_best</definition>
+        <argsstring></argsstring>
+        <name>_best</name>
+        <briefdescription>
+<para>ordered list of best runs for the associated state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="53" column="1" bodyfile="src/table/Krecord.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKrecord_1af92867687943d0f45b4f27d925127393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Krecord&lt; P &gt;::Krecord</definition>
+        <argsstring>(const P &amp;, RunCompare&lt; P &gt;)</argsstring>
+        <name>Krecord</name>
+        <param>
+          <type>const P &amp;</type>
+        </param>
+        <param>
+          <type>RunCompare&lt; P &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a9cdd2100c1da156d0bc52b4055c02e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Krecord&lt; P &gt;::~Krecord</definition>
+        <argsstring>()</argsstring>
+        <name>~Krecord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a7f19d5761c5dd197b845bdd8a2d3bd2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Krecord&lt; P &gt;::add</definition>
+        <argsstring>(Run&lt; P &gt; *)</argsstring>
+        <name>add</name>
+        <reimplements refid="classRecord_1a33cf3cee78f8b663595f0702f145c9d5">add</reimplements>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+        </param>
+        <briefdescription>
+<para>add a run to the record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a3969af28b4979e3647c149e9f35f21b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+        <definition>virtual Run&lt;P&gt;* Krecord&lt; P &gt;::best</definition>
+        <argsstring>(Atable&lt; P &gt; *table, size_t k=1)</argsstring>
+        <name>best</name>
+        <reimplements refid="classRecord_1a767aeb8c69e0866328fc82e066af7c3b">best</reimplements>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>returns the k-th best run of the record. Fill the list of best runs up to (at most) k if necessary. If less than k best can be constructed (table is complete), return an null run (weight unknown), otherwise, the weight of the returned run is known. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a2f4146eec2a91b889e1118a30af978ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Krecord&lt; P &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <reimplements refid="classRecord_1aa3b6e99a13b1b6537d2b6bde3abb2978">empty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classKrecord_1ae88ed30977296575c7b60eab0138bbb1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Krecord&lt; P &gt;::addCand</definition>
+        <argsstring>(Run&lt; P &gt; *r)</argsstring>
+        <name>addCand</name>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>add <ref refid="classRun" kindref="compound">Run</ref> r to the heap of candidates after some filtering based on optimisation flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given <ref refid="classRun" kindref="compound">Run</ref> can be complete or partial (weight not fully evaluated) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a101fe075076b9aecb97014a04e023c26" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Krecord&lt; P &gt;::addBest</definition>
+        <argsstring>(Run&lt; P &gt; *r)</argsstring>
+        <name>addBest</name>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>add <ref refid="classRun" kindref="compound">Run</ref> r at the end of the list of best runs. record the given run r as one of the best runs of the record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be complete (weight fully evaluated). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a66b55817885fd985264ca90dbb3dc7ae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Krecord&lt; P &gt;::bestFilter</definition>
+        <argsstring>(const Run&lt; P &gt; *r)</argsstring>
+        <name>bestFilter</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classKrecord_1a1cee958825882ef5c782382770688bbe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Krecord&lt; P &gt;::addNext</definition>
+        <argsstring>(Run&lt; P &gt; *r)</argsstring>
+        <name>addNext</name>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>add the candidates following <ref refid="classRun" kindref="compound">Run</ref> r (lexico order for ranks) to the heap of candidates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be complete (weight fully evaluated). the nexts <ref refid="classRun" kindref="compound">Run</ref> (new candidates) will be partial </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Krecord.hpp" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>record associated to Ptr for k-best procedures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="149">
+        <label>Krecord&lt; P &gt;</label>
+        <link refid="classKrecord"/>
+        <childnode refid="150" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>Record&lt; P &gt;</label>
+        <link refid="classRecord"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="151">
+        <label>Krecord&lt; P &gt;</label>
+        <link refid="classKrecord"/>
+        <childnode refid="152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>Record&lt; P &gt;</label>
+        <link refid="classRecord"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/table/Krecord.hpp" line="26" column="1" bodyfile="src/table/Krecord.hpp" bodystart="25" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classKrecord_1a2974d287d3c849f4c9f5b03f51e7159c" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_best</name></member>
+      <member refid="classKrecord_1a4bd6f869776d942976f6469aebc64f10" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_cand</name></member>
+      <member refid="classRecord_1ab2357a1913c48fa519a7aff23026155f" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_comp</name></member>
+      <member refid="classRecord_1abf6ea6cd82f35b05f70222bd3fdeefba" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_key</name></member>
+      <member refid="classRecord_1ac95357b0115df96cd4b5da99e973880d" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_nb_best_rejected</name></member>
+      <member refid="classRecord_1a25d3afd2df62895c4768d6a520fd174a" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>_nb_cand</name></member>
+      <member refid="classKrecord_1a7f19d5761c5dd197b845bdd8a2d3bd2a" prot="public" virt="virtual"><scope>Krecord</scope><name>add</name></member>
+      <member refid="classKrecord_1a101fe075076b9aecb97014a04e023c26" prot="protected" virt="virtual"><scope>Krecord</scope><name>addBest</name></member>
+      <member refid="classKrecord_1ae88ed30977296575c7b60eab0138bbb1" prot="protected" virt="virtual"><scope>Krecord</scope><name>addCand</name></member>
+      <member refid="classKrecord_1a1cee958825882ef5c782382770688bbe" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>addNext</name></member>
+      <member refid="classKrecord_1a3969af28b4979e3647c149e9f35f21b7" prot="public" virt="virtual"><scope>Krecord</scope><name>best</name></member>
+      <member refid="classKrecord_1a66b55817885fd985264ca90dbb3dc7ae" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>bestFilter</name></member>
+      <member refid="classKrecord_1a2f4146eec2a91b889e1118a30af978ca" prot="public" virt="virtual"><scope>Krecord</scope><name>empty</name></member>
+      <member refid="classRecord_1a2432ec9a436061e486512d4201322b10" prot="public" virt="non-virtual"><scope>Krecord</scope><name>key</name></member>
+      <member refid="classKrecord_1af92867687943d0f45b4f27d925127393" prot="public" virt="non-virtual"><scope>Krecord</scope><name>Krecord</name></member>
+      <member refid="classRecord_1abfb78c84cf6c1a7b932bec064670c35c" prot="public" virt="non-virtual"><scope>Krecord</scope><name>Record</name></member>
+      <member refid="classRecord_1a9b17378a46d2026b86632728f820d804" prot="public" virt="non-virtual"><scope>Krecord</scope><name>state</name></member>
+      <member refid="classRecord_1a6ea298ae02397c6b390ac098f2ed9a66" prot="protected" virt="non-virtual"><scope>Krecord</scope><name>valid</name></member>
+      <member refid="classKrecord_1a9cdd2100c1da156d0bc52b4055c02e03" prot="public" virt="non-virtual"><scope>Krecord</scope><name>~Krecord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespacepatch" kind="namespace" language="C++">
+    <compoundname>patch</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepatch_1a54d2400c78aef13e3748a87cd7c86ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string patch::to_string</definition>
+        <argsstring>(const T &amp;n)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="40" column="1" bodyfile="src/general/trace.hpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>trace levels: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>0: off</para>
+</listitem><listitem><para>1: critical</para>
+</listitem><listitem><para>2: error</para>
+</listitem><listitem><para>3: warn</para>
+</listitem><listitem><para>4: info</para>
+</listitem><listitem><para>5: debug</para>
+</listitem><listitem><para>6: trace to patch a bug in g++ see <ulink url="https://stackoverflow.com/questions/12975341/to-string-is-not-a-member-of-std-says-g-mingw">https://stackoverflow.com/questions/12975341/to-string-is-not-a-member-of-std-says-g-mingw</ulink> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="src/general/trace.hpp" line="39" column="1"/>
+  </compounddef>
+</doxygen>

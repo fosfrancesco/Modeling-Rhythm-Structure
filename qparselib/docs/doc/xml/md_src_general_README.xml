@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_general_README" kind="page">
+    <compoundname>md_src_general_README</compoundname>
+    <title>src/general</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Misc classes:</para>
+<para><itemizedlist>
+<listitem><para>ini : project constants and parameters. Some are read from a <computeroutput>.ini</computeroutput> file, based on the C++ header only <ulink url="https://github.com/jtilly/inih">version</ulink> of the library <ulink url="https://github.com/benhoyt/inih">inih</ulink>.</para>
+</listitem><listitem><para>QPconfig : verification of compile variables.</para>
+</listitem><listitem><para><ref refid="classRational" kindref="compound">Rational</ref> numbers.</para>
+</listitem><listitem><para>tracing : based on the library <ulink url="https://github.com/gabime/spdlog">spdlog</ulink> of Gabi Melman. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

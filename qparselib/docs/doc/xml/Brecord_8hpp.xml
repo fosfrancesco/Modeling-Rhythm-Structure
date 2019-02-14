@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Brecord_8hpp" kind="file" language="C++">
+    <compoundname>Brecord.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="Record_8hpp" local="yes">Record.hpp</includes>
+    <includes refid="Rune_8hpp" local="yes">Rune.hpp</includes>
+    <includes local="yes">Brecord.tpp</includes>
+    <includedby refid="Parser1bar1bestSIP_8hpp" local="yes">src/parsers/Parser1bar1bestSIP.hpp</includedby>
+    <includedby refid="ParserInputless1best_8hpp" local="yes">src/parsers/ParserInputless1best.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPflat_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPflat.hpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="486">
+        <label>Brecord.tpp</label>
+      </node>
+      <node id="484">
+        <label>src/table/Brecord.hpp</label>
+        <link refid="Brecord_8hpp"/>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classBrecord" prot="public">Brecord</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/Brecord.hpp"/>
+  </compounddef>
+</doxygen>

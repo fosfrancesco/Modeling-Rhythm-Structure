@@ -1,0 +1,376 @@
+\hypertarget{group__general}{}\section{General module}
+\label{group__general}\index{General module@{General module}}
+
+
+The {\ttfamily general} module contains reusable tools and utilities, initialization of constants, and tracing functions.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepatch}{patch}}
+\begin{DoxyCompactList}\small\item\em trace levels\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRational}{Rational}}
+\begin{DoxyCompactList}\small\item\em class of rational numbers \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstd_1_1hash_3_01Rational_01_4}{std\+::hash$<$ Rational $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__general_ga93c3f96b8b7345e4e15965f3938e4e0c}\label{group__general_ga93c3f96b8b7345e4e15965f3938e4e0c}} 
+\#define {\bfseries P\+P\+\_\+\+U\+N\+K\+N\+O\+WN}~-\/1
+\item 
+\mbox{\Hypertarget{group__general_ga3f9e0147289a89265d742be9ea145fda}\label{group__general_ga3f9e0147289a89265d742be9ea145fda}} 
+\#define {\bfseries P\+P\+\_\+\+K\+N\+O\+WN}(x)~(x $>$= 0)
+\item 
+\mbox{\Hypertarget{group__general_ga047013f5273eccbbfc0a08db5975f544}\label{group__general_ga047013f5273eccbbfc0a08db5975f544}} 
+\#define {\bfseries T\+R\+A\+C\+E\+\_\+\+ON}
+\item 
+\mbox{\Hypertarget{group__general_ga911d91f7898a9a0c4e35bb71e01d39a0}\label{group__general_ga911d91f7898a9a0c4e35bb71e01d39a0}} 
+\#define {\bfseries D\+E\+B\+U\+G\+\_\+\+ON}
+\item 
+\mbox{\Hypertarget{group__general_ga6745ebbbc3fb31c4d8ac57a551060028}\label{group__general_ga6745ebbbc3fb31c4d8ac57a551060028}} 
+\#define \mbox{\hyperlink{group__general_ga6745ebbbc3fb31c4d8ac57a551060028}{\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+A\+ND}}~1
+\begin{DoxyCompactList}\small\item\em addition of candidates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga5a81e12e5b011ad54d8ddbf6be97ef34}\label{group__general_ga5a81e12e5b011ad54d8ddbf6be97ef34}} 
+\#define \mbox{\hyperlink{group__general_ga5a81e12e5b011ad54d8ddbf6be97ef34}{\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+E\+ST}}
+\begin{DoxyCompactList}\small\item\em addition of best runs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gad8cbb5acc06d85c055ae6d66d22b6b58}\label{group__general_gad8cbb5acc06d85c055ae6d66d22b6b58}} 
+\#define \mbox{\hyperlink{group__general_gad8cbb5acc06d85c055ae6d66d22b6b58}{\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+BL}}
+\begin{DoxyCompactList}\small\item\em initialization and construction of tables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga02ce8a968600d004ba60858425c46307}\label{group__general_ga02ce8a968600d004ba60858425c46307}} 
+\#define {\bfseries E\+R\+R\+OR}(...)~\mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}-\/$>$error(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_ga8f75b971030a39ef811d3526a62b36b8}\label{group__general_ga8f75b971030a39ef811d3526a62b36b8}} 
+\#define {\bfseries W\+A\+RN}(...)~\mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}-\/$>$warn(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_gaedf01192151e10a6620567952711ff69}\label{group__general_gaedf01192151e10a6620567952711ff69}} 
+\#define {\bfseries I\+N\+FO}(...)~\mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}-\/$>$info(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_ga5f6aa8edcd99914757600b5d3b259bb7}\label{group__general_ga5f6aa8edcd99914757600b5d3b259bb7}} 
+\#define {\bfseries T\+R\+A\+CE}(...)~\mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}-\/$>$trace(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_ga96dd473db0b3d10bd43390cdacb00120}\label{group__general_ga96dd473db0b3d10bd43390cdacb00120}} 
+\#define {\bfseries D\+E\+B\+UG}(...)~\mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}-\/$>$debug(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_gab69defacb6a9bf736bb490f7f44e25c3}\label{group__general_gab69defacb6a9bf736bb490f7f44e25c3}} 
+\#define {\bfseries T\+R\+A\+C\+E\+\_\+\+C\+A\+ND}(...)~T\+R\+A\+CE(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_gaf4ce41dddbcee02dfa738a7d421e8037}\label{group__general_gaf4ce41dddbcee02dfa738a7d421e8037}} 
+\#define {\bfseries T\+R\+A\+C\+E\+\_\+\+B\+E\+ST}(...)~T\+R\+A\+CE(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__general_ga822ec6b7ee1991956603623096cb09b2}\label{group__general_ga822ec6b7ee1991956603623096cb09b2}} 
+\#define {\bfseries T\+R\+A\+C\+E\+\_\+\+T\+BL}(...)~T\+R\+A\+CE(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__general_ga092fe8b972dfa977c2a0886720a7731e}\label{group__general_ga092fe8b972dfa977c2a0886720a7731e}} 
+typedef long \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em type for pre post values in Runs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}} \{ {\bfseries U\+N\+D\+EF}, 
+\mbox{\hyperlink{group__general_ggae07bdce6f4896785ead3b815ca6ab560a0e9bc37ec6da933200c9464b9585415e}{Weight\+Dom\+::\+P\+E\+N\+A\+L\+TY}}, 
+\mbox{\hyperlink{group__general_ggae07bdce6f4896785ead3b815ca6ab560aefc3ccac9f36534e7235c64ca7e56a1e}{Weight\+Dom\+::\+S\+T\+O\+C\+H\+A\+S\+T\+IC}}, 
+\mbox{\hyperlink{group__general_ggae07bdce6f4896785ead3b815ca6ab560aa5fa48e29b30e37389febd475c4c866a}{Weight\+Dom\+::\+C\+O\+U\+N\+T\+I\+NG}}
+ \}
+\begin{DoxyCompactList}\small\item\em weight types \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__general_ga8ea30422b6f53a4d8e502ab0a1406dff}\label{group__general_ga8ea30422b6f53a4d8e502ab0a1406dff}} 
+double {\bfseries duration} (clock\+\_\+t start)
+\item 
+\mbox{\Hypertarget{group__general_gaef0eb8293c9f09a03e431fa23dea831d}\label{group__general_gaef0eb8293c9f09a03e431fa23dea831d}} 
+int \mbox{\hyperlink{group__general_gaef0eb8293c9f09a03e431fa23dea831d}{read\+\_\+config}} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em read the constant and optimisation flag values in a config file I\+NI file, see \href{https://en.wikipedia.org/wiki/INI_file}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+I\+N\+I\+\_\+file}} return 0 if reading the values succeded -\/1 in case of file open error or a number of line in case of parse error in .ini file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga7a50522782b1a61b37d5f1b3adceed4a}\label{group__general_ga7a50522782b1a61b37d5f1b3adceed4a}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}} \&t)
+\item 
+long \mbox{\hyperlink{group__general_ga3cef5c0e66f31aac9e01e5dfd9f3edc7}{virtual\+\_\+memory\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Here we check that the compile flags are set and correct\+: Q\+P\+\_\+\+P\+L\+A\+T\+F\+O\+RM = P\+L\+A\+T\+F\+O\+R\+M\+\_\+xxx Q\+P\+\_\+\+T\+A\+R\+G\+ET = T\+A\+R\+G\+E\+T\+\_\+xxx where the possibles values for P\+L\+A\+T\+F\+O\+R\+M\+\_\+xxx (target platform) and T\+A\+R\+G\+E\+T\+\_\+xxx (executable) are defined by compiler flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gab4d9195d8e5dc86aa14c1eea0535d806}\label{group__general_gab4d9195d8e5dc86aa14c1eea0535d806}} 
+long {\bfseries resident\+\_\+memory\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{group__general_gaa0f924144ded8d6509d5d349195b00a8}\label{group__general_gaa0f924144ded8d6509d5d349195b00a8}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries operator+} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga46d4a6e5db46addfa0d0608e3266571b}\label{group__general_ga46d4a6e5db46addfa0d0608e3266571b}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries operator-\/} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga0334562ad4831b5b35238fe58bddabb0}\label{group__general_ga0334562ad4831b5b35238fe58bddabb0}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gac87738e39a4f47b27c620375a59b06ee}\label{group__general_gac87738e39a4f47b27c620375a59b06ee}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries operator/} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga3a2f2c8e28386a081128d450e66999dd}\label{group__general_ga3a2f2c8e28386a081128d450e66999dd}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries rabs} (const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\item 
+\mbox{\Hypertarget{group__general_ga436606f8682952468f6a5b339d972178}\label{group__general_ga436606f8682952468f6a5b339d972178}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gaca39bd2856e9682cf97234d046c0d52f}\label{group__general_gaca39bd2856e9682cf97234d046c0d52f}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gaf34fe75e417e48c51e1d2751d9264569}\label{group__general_gaf34fe75e417e48c51e1d2751d9264569}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga8ae410bb40221ea8f30a6057dff05a1f}\label{group__general_ga8ae410bb40221ea8f30a6057dff05a1f}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga7b99e5d0faa3459356ab1249e3315ceb}\label{group__general_ga7b99e5d0faa3459356ab1249e3315ceb}} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gac1e651cdae26413046d477efdaef0539}\label{group__general_gac1e651cdae26413046d477efdaef0539}} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{classRational}{Rational}} \&lhs, const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga5cf9ab392de156c39a5a115c9b30607b}\label{group__general_ga5cf9ab392de156c39a5a115c9b30607b}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&ostr, const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\item 
+\mbox{\Hypertarget{group__general_gaa682331c9d58a26ba320d6414d396a9f}\label{group__general_gaa682331c9d58a26ba320d6414d396a9f}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&istr, \mbox{\hyperlink{classRational}{Rational}} \&r)
+\item 
+\mbox{\Hypertarget{group__general_ga0bfbe45cc727920e5a74e3a75ab2e6b9}\label{group__general_ga0bfbe45cc727920e5a74e3a75ab2e6b9}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__general_ga0bfbe45cc727920e5a74e3a75ab2e6b9}{to\+Rational}} (double x, int iterations=5)
+\begin{DoxyCompactList}\small\item\em double -\/$>$ \mbox{\hyperlink{classRational}{Rational}} conversion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga95b1b3230673ab78c01058a88a5e3eae}\label{group__general_ga95b1b3230673ab78c01058a88a5e3eae}} 
+double \mbox{\hyperlink{group__general_ga95b1b3230673ab78c01058a88a5e3eae}{to\+Double}} (const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRational}{Rational}} -\/$>$ double conversion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga2ae32e90a2bacd18ca646568cb6c456e}\label{group__general_ga2ae32e90a2bacd18ca646568cb6c456e}} 
+long \mbox{\hyperlink{group__general_ga2ae32e90a2bacd18ca646568cb6c456e}{trunc}} (const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRational}{Rational}} -\/$>$ long conversions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gab93ceb248e49c0c1bdf83bee735aea49}\label{group__general_gab93ceb248e49c0c1bdf83bee735aea49}} 
+long {\bfseries floor} (const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\item 
+\mbox{\Hypertarget{group__general_ga883dcb56e5cb54c652d0eb4e939fd066}\label{group__general_ga883dcb56e5cb54c652d0eb4e939fd066}} 
+long {\bfseries ceil} (const \mbox{\hyperlink{classRational}{Rational}} \&r)
+\item 
+\mbox{\Hypertarget{group__general_ga664c91d4ee5ad46c39e765e6dbf81738}\label{group__general_ga664c91d4ee5ad46c39e765e6dbf81738}} 
+\mbox{\hyperlink{group__general_ga664c91d4ee5ad46c39e765e6dbf81738}{Rational\+::\+Rational}} (long n, long d=1)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaa857f0a929a6898f30b97ba00c463ae6}\label{group__general_gaa857f0a929a6898f30b97ba00c463ae6}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator+=} (const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gada510c5ee2bbcc7d7f12b8f25b539eff}\label{group__general_gada510c5ee2bbcc7d7f12b8f25b539eff}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator+=} (long rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga196f4fcc358d405bbd98a7248bfc75f5}\label{group__general_ga196f4fcc358d405bbd98a7248bfc75f5}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator-\/=} (const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga33cc7c599a1a3ac9a13bfe104c4456f4}\label{group__general_ga33cc7c599a1a3ac9a13bfe104c4456f4}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator-\/=} (long rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga17205b7127a763b3eaf44f6fecaac50b}\label{group__general_ga17205b7127a763b3eaf44f6fecaac50b}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator$\ast$=} (const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gae50b290ade4698dd865cd451c3c23dda}\label{group__general_gae50b290ade4698dd865cd451c3c23dda}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator$\ast$=} (long rhs)
+\item 
+\mbox{\Hypertarget{group__general_gaa9902842b5b7724cd307b5770a75b0c7}\label{group__general_gaa9902842b5b7724cd307b5770a75b0c7}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator/=} (const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__general_gaa6627aa1f4524568c059b8914b2665bc}\label{group__general_gaa6627aa1f4524568c059b8914b2665bc}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator/=} (long rhs)
+\item 
+\mbox{\Hypertarget{group__general_ga23e1bd04a616269e833eabf12ebb247b}\label{group__general_ga23e1bd04a616269e833eabf12ebb247b}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator++} ()
+\item 
+\mbox{\Hypertarget{group__general_gace6087d7c3382a18099dda188d1e5d9c}\label{group__general_gace6087d7c3382a18099dda188d1e5d9c}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries Rational\+::operator++} (int)
+\item 
+\mbox{\Hypertarget{group__general_ga46aa465b7b59fbdbc5abff452a713b3c}\label{group__general_ga46aa465b7b59fbdbc5abff452a713b3c}} 
+const \mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{group__general_ga45c0bd14078313e6ff7be68dd612efa1}\label{group__general_ga45c0bd14078313e6ff7be68dd612efa1}} 
+const \mbox{\hyperlink{classRational}{Rational}} {\bfseries Rational\+::operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{group__general_ga11edcb2aed3334c33c9e962be2bda2fe}\label{group__general_ga11edcb2aed3334c33c9e962be2bda2fe}} 
+void \mbox{\hyperlink{group__general_ga11edcb2aed3334c33c9e962be2bda2fe}{Rational\+::printint}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em print in format int+rat \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga1f7f9f9491bbe7f24c488a505ac6887c}\label{group__general_ga1f7f9f9491bbe7f24c488a505ac6887c}} 
+\mbox{\hyperlink{classRational}{Rational}} \& \mbox{\hyperlink{group__general_ga1f7f9f9491bbe7f24c488a505ac6887c}{Rational\+::operator=}} (const \mbox{\hyperlink{classRational}{Rational}} \&rhs)
+\begin{DoxyCompactList}\small\item\em assignment operators \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga019d7a6ea6fb10e582310ae8f00a121c}\label{group__general_ga019d7a6ea6fb10e582310ae8f00a121c}} 
+\mbox{\hyperlink{classRational}{Rational}} \& {\bfseries Rational\+::operator=} (long rhs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__general_gac3b19762b16f33de03662fd4289fe5a9}\label{group__general_gac3b19762b16f33de03662fd4289fe5a9}} 
+int \mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}} = -\/1
+\begin{DoxyCompactList}\small\item\em type for M\+I\+DI event numbers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gae862a9d955eb3154601efb64980ac24b}\label{group__general_gae862a9d955eb3154601efb64980ac24b}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}} = \mbox{\hyperlink{classRational}{Rational}}(-\/1)
+\begin{DoxyCompactList}\small\item\em type for musical time values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gab5f3e741743d1273f9b9219e7f3c6845}\label{group__general_gab5f3e741743d1273f9b9219e7f3c6845}} 
+long {\bfseries M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL} = L\+O\+N\+G\+\_\+\+M\+IN
+\item 
+\mbox{\Hypertarget{group__general_ga5fbff41194dc7e48cea03604b5d7a060}\label{group__general_ga5fbff41194dc7e48cea03604b5d7a060}} 
+\mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}} \mbox{\hyperlink{group__general_ga5fbff41194dc7e48cea03604b5d7a060}{C\+S\+T\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+T\+Y\+PE}} = Weight\+Dom\+::\+U\+N\+D\+EF
+\begin{DoxyCompactList}\small\item\em weight type. value specified in grammar file or default value Weight\+Dom\+::\+U\+N\+D\+EF \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga942f8553c6b44bf0ed10f6c167794e89}\label{group__general_ga942f8553c6b44bf0ed10f6c167794e89}} 
+long \mbox{\hyperlink{group__general_ga942f8553c6b44bf0ed10f6c167794e89}{C\+S\+T\+\_\+\+M\+A\+X\+\_\+\+G\+R\+A\+CE}} = 0
+\begin{DoxyCompactList}\small\item\em max number of grace notes specified in grammar used for abstraction of terminal transition labels see Label.\+hpp value specified in grammar file or default 0 (there is no abstraction of labels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga4f8704310ab1a776374c4103a70ee4ca}\label{group__general_ga4f8704310ab1a776374c4103a70ee4ca}} 
+double \mbox{\hyperlink{group__general_ga4f8704310ab1a776374c4103a70ee4ca}{C\+S\+T\+\_\+\+A\+L\+P\+HA}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em coefficient for combining weight and distance in pernalty weight model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gae30e96a43768e59d69b30739bca4b2a0}\label{group__general_gae30e96a43768e59d69b30739bca4b2a0}} 
+double \mbox{\hyperlink{group__general_gae30e96a43768e59d69b30739bca4b2a0}{C\+S\+T\+\_\+\+S\+I\+G\+M\+A2}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em constant for computing performance weight see Performance\+Model.\+hpp \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}\label{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}} 
+long \mbox{\hyperlink{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}{M\+A\+X\+\_\+\+AR}} = 13
+\begin{DoxyCompactList}\small\item\em symbols for labeling RT and \mbox{\hyperlink{classWTA}{W\+TA}} terminal transitions max arity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaa0818f0d579fa65f854f7540dab4d258}\label{group__general_gaa0818f0d579fa65f854f7540dab4d258}} 
+double \mbox{\hyperlink{group__general_gaa0818f0d579fa65f854f7540dab4d258}{C\+S\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}} = 0.\+0000001
+\begin{DoxyCompactList}\small\item\em precision for floting point unit calculations \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{group__general_gae18ed995d696579fcc6018d8e9993e65}{H\+A\+S\+H\+\_\+\+S\+E\+ED}} = 1009
+\begin{DoxyCompactList}\small\item\em hash function parameters Bernstein hash \href{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx}{\texttt{ http\+://www.\+eternallyconfuzzled.\+com/tuts/algorithms/jsw\+\_\+tut\+\_\+hashing.\+aspx}} see also Josh Bloch, Effective Java see \href{http://stackoverflow.com/a/1646913/126995}{\texttt{ http\+://stackoverflow.\+com/a/1646913/126995}} and also \href{http://stackoverflow.com/questions/17016175}{\texttt{ http\+://stackoverflow.\+com/questions/17016175}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga38297772685de12449644c49b20213d3}\label{group__general_ga38297772685de12449644c49b20213d3}} 
+long {\bfseries H\+A\+S\+H\+\_\+\+F\+A\+C\+T\+OR} = 9176
+\item 
+\mbox{\Hypertarget{group__general_ga75258703c393347e8c7af15041e0e7d2}\label{group__general_ga75258703c393347e8c7af15041e0e7d2}} 
+bool \mbox{\hyperlink{group__general_ga75258703c393347e8c7af15041e0e7d2}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR}} = true
+\begin{DoxyCompactList}\small\item\em optimization flag compute the duration sequences of runs. if unset, O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+U\+N\+IT must be automatically unset value specified in ini file or default\+: true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaf2f921cdceea999adbede3b238fbd924}\label{group__general_gaf2f921cdceea999adbede3b238fbd924}} 
+bool \mbox{\hyperlink{group__general_gaf2f921cdceea999adbede3b238fbd924}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+S\+T\+R\+I\+CT}} = false
+\begin{DoxyCompactList}\small\item\em optimization flag compute at most one best run for a duration sequence in each record. it is the first best run added, i.\+e. the best with that duration sequence. O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR must be set. value specified in ini file or default\+: false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaf43b37abf039bc3d2e67681387760de6}\label{group__general_gaf43b37abf039bc3d2e67681387760de6}} 
+bool \mbox{\hyperlink{group__general_gaf43b37abf039bc3d2e67681387760de6}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+U\+N\+IT}} = true
+\begin{DoxyCompactList}\small\item\em optimization flag do not add non-\/terminal runs with duration sequences of the form \mbox{[}0…0, 1\mbox{]}. they correspond to reducible runs of the form p(x, \+\_\+,…, \+\_\+) where x is a leaf and \+\_\+ is a continuation (tie). O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR must be set. value specified in ini file or default\+: true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}\label{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}} 
+bool \mbox{\hyperlink{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}{O\+P\+T\+\_\+\+N\+O\+R\+E\+ST}} = false
+\begin{DoxyCompactList}\small\item\em option flag ignore rests in M\+I\+DI input file where a rest is the duration between a note off and the next note on msg. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gac3b19762b16f33de03662fd4289fe5a9}\label{group__general_gac3b19762b16f33de03662fd4289fe5a9}} 
+int \mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\begin{DoxyCompactList}\small\item\em type for M\+I\+DI event numbers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gae862a9d955eb3154601efb64980ac24b}\label{group__general_gae862a9d955eb3154601efb64980ac24b}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\begin{DoxyCompactList}\small\item\em type for musical time values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gab5f3e741743d1273f9b9219e7f3c6845}\label{group__general_gab5f3e741743d1273f9b9219e7f3c6845}} 
+long {\bfseries M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL}
+\item 
+\mbox{\Hypertarget{group__general_ga5fbff41194dc7e48cea03604b5d7a060}\label{group__general_ga5fbff41194dc7e48cea03604b5d7a060}} 
+\mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}} \mbox{\hyperlink{group__general_ga5fbff41194dc7e48cea03604b5d7a060}{C\+S\+T\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+T\+Y\+PE}}
+\begin{DoxyCompactList}\small\item\em weight type. value specified in grammar file or default value Weight\+Dom\+::\+U\+N\+D\+EF \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga942f8553c6b44bf0ed10f6c167794e89}\label{group__general_ga942f8553c6b44bf0ed10f6c167794e89}} 
+long \mbox{\hyperlink{group__general_ga942f8553c6b44bf0ed10f6c167794e89}{C\+S\+T\+\_\+\+M\+A\+X\+\_\+\+G\+R\+A\+CE}}
+\begin{DoxyCompactList}\small\item\em max number of grace notes specified in grammar used for abstraction of terminal transition labels see Label.\+hpp value specified in grammar file or default 0 (there is no abstraction of labels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga4f8704310ab1a776374c4103a70ee4ca}\label{group__general_ga4f8704310ab1a776374c4103a70ee4ca}} 
+double \mbox{\hyperlink{group__general_ga4f8704310ab1a776374c4103a70ee4ca}{C\+S\+T\+\_\+\+A\+L\+P\+HA}}
+\begin{DoxyCompactList}\small\item\em coefficient for combining weight and distance in pernalty weight model \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gae30e96a43768e59d69b30739bca4b2a0}\label{group__general_gae30e96a43768e59d69b30739bca4b2a0}} 
+double \mbox{\hyperlink{group__general_gae30e96a43768e59d69b30739bca4b2a0}{C\+S\+T\+\_\+\+S\+I\+G\+M\+A2}}
+\begin{DoxyCompactList}\small\item\em constant for computing performance weight see Performance\+Model.\+hpp \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}\label{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}} 
+long \mbox{\hyperlink{group__general_ga9ba08947d7e5ebba9df19496146a1bd4}{M\+A\+X\+\_\+\+AR}}
+\begin{DoxyCompactList}\small\item\em symbols for labeling RT and \mbox{\hyperlink{classWTA}{W\+TA}} terminal transitions max arity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaa0818f0d579fa65f854f7540dab4d258}\label{group__general_gaa0818f0d579fa65f854f7540dab4d258}} 
+double \mbox{\hyperlink{group__general_gaa0818f0d579fa65f854f7540dab4d258}{C\+S\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em precision for floting point unit calculations \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{group__general_gae18ed995d696579fcc6018d8e9993e65}{H\+A\+S\+H\+\_\+\+S\+E\+ED}}
+\begin{DoxyCompactList}\small\item\em hash function parameters Bernstein hash \href{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx}{\texttt{ http\+://www.\+eternallyconfuzzled.\+com/tuts/algorithms/jsw\+\_\+tut\+\_\+hashing.\+aspx}} see also Josh Bloch, Effective Java see \href{http://stackoverflow.com/a/1646913/126995}{\texttt{ http\+://stackoverflow.\+com/a/1646913/126995}} and also \href{http://stackoverflow.com/questions/17016175}{\texttt{ http\+://stackoverflow.\+com/questions/17016175}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga38297772685de12449644c49b20213d3}\label{group__general_ga38297772685de12449644c49b20213d3}} 
+long {\bfseries H\+A\+S\+H\+\_\+\+F\+A\+C\+T\+OR}
+\item 
+\mbox{\Hypertarget{group__general_gaf2f921cdceea999adbede3b238fbd924}\label{group__general_gaf2f921cdceea999adbede3b238fbd924}} 
+bool \mbox{\hyperlink{group__general_gaf2f921cdceea999adbede3b238fbd924}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+S\+T\+R\+I\+CT}}
+\begin{DoxyCompactList}\small\item\em optimization flag compute at most one best run for a duration sequence in each record. it is the first best run added, i.\+e. the best with that duration sequence. O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR must be set. value specified in ini file or default\+: false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_gaf43b37abf039bc3d2e67681387760de6}\label{group__general_gaf43b37abf039bc3d2e67681387760de6}} 
+bool \mbox{\hyperlink{group__general_gaf43b37abf039bc3d2e67681387760de6}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+U\+N\+IT}}
+\begin{DoxyCompactList}\small\item\em optimization flag do not add non-\/terminal runs with duration sequences of the form \mbox{[}0…0, 1\mbox{]}. they correspond to reducible runs of the form p(x, \+\_\+,…, \+\_\+) where x is a leaf and \+\_\+ is a continuation (tie). O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR must be set. value specified in ini file or default\+: true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga75258703c393347e8c7af15041e0e7d2}\label{group__general_ga75258703c393347e8c7af15041e0e7d2}} 
+bool \mbox{\hyperlink{group__general_ga75258703c393347e8c7af15041e0e7d2}{O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+D\+UR}}
+\begin{DoxyCompactList}\small\item\em optimization flag compute the duration sequences of runs. if unset, O\+P\+T\+\_\+\+R\+U\+N\+\_\+\+U\+N\+IT must be automatically unset value specified in ini file or default\+: true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}\label{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}} 
+bool \mbox{\hyperlink{group__general_ga4445e6f07c267b6c601d33f1bf23ad2c}{O\+P\+T\+\_\+\+N\+O\+R\+E\+ST}}
+\begin{DoxyCompactList}\small\item\em option flag ignore rests in M\+I\+DI input file where a rest is the duration between a note off and the next note on msg. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__general_ga94c56112daf0fd5ccea22ff040dab387}\label{group__general_ga94c56112daf0fd5ccea22ff040dab387}} 
+const auto \mbox{\hyperlink{group__general_ga94c56112daf0fd5ccea22ff040dab387}{console}} = spd\+::stdout\+\_\+color\+\_\+mt(\char`\"{}console\char`\"{})
+\begin{DoxyCompactList}\small\item\em Console logger with color const std\+::shared\+\_\+ptr$<$spd\+::logger$>$ console = spd\+::stdout\+\_\+color\+\_\+mt(\char`\"{}console\char`\"{});. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{group__general_gac021c39dd4209cc19d4ec5049b3a94ec}{T\+R\+A\+C\+E\+\_\+\+L\+E\+V\+EL}} = 2
+\item 
+\mbox{\Hypertarget{group__general_gad61df4571453c6f7c1c829265837e500}\label{group__general_gad61df4571453c6f7c1c829265837e500}} 
+const std\+::shared\+\_\+ptr$<$ spd\+::logger $>$ \mbox{\hyperlink{group__general_gad61df4571453c6f7c1c829265837e500}{console}}
+\begin{DoxyCompactList}\small\item\em Console logger with color const std\+::shared\+\_\+ptr$<$spd\+::logger$>$ console = spd\+::stdout\+\_\+color\+\_\+mt(\char`\"{}console\char`\"{});. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\ttfamily general} module contains reusable tools and utilities, initialization of constants, and tracing functions. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__general_gae07bdce6f4896785ead3b815ca6ab560}\label{group__general_gae07bdce6f4896785ead3b815ca6ab560}} 
+\index{General module@{General module}!WeightDom@{WeightDom}}
+\index{WeightDom@{WeightDom}!General module@{General module}}
+\subsubsection{\texorpdfstring{WeightDom}{WeightDom}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+weight types 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PENALTY@{PENALTY}!General module@{General module}}\index{General module@{General module}!PENALTY@{PENALTY}}}\mbox{\Hypertarget{group__general_ggae07bdce6f4896785ead3b815ca6ab560a0e9bc37ec6da933200c9464b9585415e}\label{group__general_ggae07bdce6f4896785ead3b815ca6ab560a0e9bc37ec6da933200c9464b9585415e}} 
+P\+E\+N\+A\+L\+TY&to be specified \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOCHASTIC@{STOCHASTIC}!General module@{General module}}\index{General module@{General module}!STOCHASTIC@{STOCHASTIC}}}\mbox{\Hypertarget{group__general_ggae07bdce6f4896785ead3b815ca6ab560aefc3ccac9f36534e7235c64ca7e56a1e}\label{group__general_ggae07bdce6f4896785ead3b815ca6ab560aefc3ccac9f36534e7235c64ca7e56a1e}} 
+S\+T\+O\+C\+H\+A\+S\+T\+IC&tropical semiring \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COUNTING@{COUNTING}!General module@{General module}}\index{General module@{General module}!COUNTING@{COUNTING}}}\mbox{\Hypertarget{group__general_ggae07bdce6f4896785ead3b815ca6ab560aa5fa48e29b30e37389febd475c4c866a}\label{group__general_ggae07bdce6f4896785ead3b815ca6ab560aa5fa48e29b30e37389febd475c4c866a}} 
+C\+O\+U\+N\+T\+I\+NG&Viterbi semiring. int vectors for corpus stat \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__general_ga3cef5c0e66f31aac9e01e5dfd9f3edc7}\label{group__general_ga3cef5c0e66f31aac9e01e5dfd9f3edc7}} 
+\index{General module@{General module}!virtual\_memory\_size@{virtual\_memory\_size}}
+\index{virtual\_memory\_size@{virtual\_memory\_size}!General module@{General module}}
+\subsubsection{\texorpdfstring{virtual\_memory\_size()}{virtual\_memory\_size()}}
+{\footnotesize\ttfamily long virtual\+\_\+memory\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Here we check that the compile flags are set and correct\+: Q\+P\+\_\+\+P\+L\+A\+T\+F\+O\+RM = P\+L\+A\+T\+F\+O\+R\+M\+\_\+xxx Q\+P\+\_\+\+T\+A\+R\+G\+ET = T\+A\+R\+G\+E\+T\+\_\+xxx where the possibles values for P\+L\+A\+T\+F\+O\+R\+M\+\_\+xxx (target platform) and T\+A\+R\+G\+E\+T\+\_\+xxx (executable) are defined by compiler flags. 
+
+in Xcode, the flags are defined. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__general_gae18ed995d696579fcc6018d8e9993e65}\label{group__general_gae18ed995d696579fcc6018d8e9993e65}} 
+\index{General module@{General module}!HASH\_SEED@{HASH\_SEED}}
+\index{HASH\_SEED@{HASH\_SEED}!General module@{General module}}
+\subsubsection{\texorpdfstring{HASH\_SEED}{HASH\_SEED}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily long H\+A\+S\+H\+\_\+\+S\+E\+ED = 1009}
+
+
+
+hash function parameters Bernstein hash \href{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx}{\texttt{ http\+://www.\+eternallyconfuzzled.\+com/tuts/algorithms/jsw\+\_\+tut\+\_\+hashing.\+aspx}} see also Josh Bloch, Effective Java see \href{http://stackoverflow.com/a/1646913/126995}{\texttt{ http\+://stackoverflow.\+com/a/1646913/126995}} and also \href{http://stackoverflow.com/questions/17016175}{\texttt{ http\+://stackoverflow.\+com/questions/17016175}} 
+
+see also \href{https://stackoverflow.com/a/1646913/6930643}{\texttt{ https\+://stackoverflow.\+com/a/1646913/6930643}} constexpr int H\+A\+S\+H\+\_\+\+S\+E\+ED = 17; constexpr int H\+A\+S\+H\+\_\+\+F\+A\+C\+T\+OR = 31; see also \href{https://stackoverflow.com/a/34006336/6930643}{\texttt{ https\+://stackoverflow.\+com/a/34006336/6930643}} \mbox{\Hypertarget{group__general_gae18ed995d696579fcc6018d8e9993e65}\label{group__general_gae18ed995d696579fcc6018d8e9993e65}} 
+\index{General module@{General module}!HASH\_SEED@{HASH\_SEED}}
+\index{HASH\_SEED@{HASH\_SEED}!General module@{General module}}
+\subsubsection{\texorpdfstring{HASH\_SEED}{HASH\_SEED}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily long H\+A\+S\+H\+\_\+\+S\+E\+ED}
+
+
+
+hash function parameters Bernstein hash \href{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx}{\texttt{ http\+://www.\+eternallyconfuzzled.\+com/tuts/algorithms/jsw\+\_\+tut\+\_\+hashing.\+aspx}} see also Josh Bloch, Effective Java see \href{http://stackoverflow.com/a/1646913/126995}{\texttt{ http\+://stackoverflow.\+com/a/1646913/126995}} and also \href{http://stackoverflow.com/questions/17016175}{\texttt{ http\+://stackoverflow.\+com/questions/17016175}} 
+
+see also \href{https://stackoverflow.com/a/1646913/6930643}{\texttt{ https\+://stackoverflow.\+com/a/1646913/6930643}} constexpr int H\+A\+S\+H\+\_\+\+S\+E\+ED = 17; constexpr int H\+A\+S\+H\+\_\+\+F\+A\+C\+T\+OR = 31; see also \href{https://stackoverflow.com/a/34006336/6930643}{\texttt{ https\+://stackoverflow.\+com/a/34006336/6930643}} \mbox{\Hypertarget{group__general_gac021c39dd4209cc19d4ec5049b3a94ec}\label{group__general_gac021c39dd4209cc19d4ec5049b3a94ec}} 
+\index{General module@{General module}!TRACE\_LEVEL@{TRACE\_LEVEL}}
+\index{TRACE\_LEVEL@{TRACE\_LEVEL}!General module@{General module}}
+\subsubsection{\texorpdfstring{TRACE\_LEVEL}{TRACE\_LEVEL}}
+{\footnotesize\ttfamily const int T\+R\+A\+C\+E\+\_\+\+L\+E\+V\+EL = 2}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]T\+BR \end{DoxyRefDesc}

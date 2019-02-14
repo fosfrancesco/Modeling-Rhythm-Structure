@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="InputSegment_8hpp" kind="file" language="C++">
+    <compoundname>InputSegment.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">queue</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="MusEvent_8hpp" local="yes">MusEvent.hpp</includes>
+    <includes refid="MusPoint_8hpp" local="yes">MusPoint.hpp</includes>
+    <includes refid="Spiral_8hpp" local="yes">Spiral.hpp</includes>
+    <includes refid="Label_8hpp" local="yes">Label.hpp</includes>
+    <includedby refid="InputSegmentMIDI_8hpp" local="yes">src/input/InputSegmentMIDI.hpp</includedby>
+    <includedby refid="InputSegmentSerial_8hpp" local="yes">src/input/InputSegmentSerial.hpp</includedby>
+    <includedby refid="PointedRT_8hpp" local="yes">src/output/PointedRT.hpp</includedby>
+    <includedby refid="Parser_8hpp" local="yes">src/parsers/Parser.hpp</includedby>
+    <includedby refid="Parser1bar1bestSIP_8hpp" local="yes">src/parsers/Parser1bar1bestSIP.hpp</includedby>
+    <includedby refid="Parser1barKbestSKIP_8hpp" local="yes">src/parsers/Parser1barKbestSKIP.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPflat_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPflat.hpp</includedby>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="AlignedInterval_8hpp" local="yes">src/segment/AlignedInterval.hpp</includedby>
+    <includedby refid="Interval_8hpp" local="yes">src/segment/Interval.hpp</includedby>
+    <includedby refid="IntervalHeap_8hpp" local="yes">src/segment/IntervalHeap.hpp</includedby>
+    <includedby refid="IntervalTree_8hpp" local="yes">src/segment/IntervalTree.hpp</includedby>
+    <includedby refid="Environment_8hpp" local="yes">src/segment/Environment.hpp</includedby>
+    <includedby refid="InputSegment_8cpp" local="yes">src/segment/InputSegment.cpp</includedby>
+    <includedby refid="InputSegmentMono_8hpp" local="yes">src/segment/InputSegmentMono.hpp</includedby>
+    <includedby refid="InputSegmentNogap_8hpp" local="yes">src/segment/InputSegmentNogap.hpp</includedby>
+    <includedby refid="midiutil_8cpp" local="yes">src/targets/midi/midiutil.cpp</includedby>
+    <includedby refid="squant_8cpp" local="yes">src/targets/quant/squant.cpp</includedby>
+    <incdepgraph>
+      <node id="401">
+        <label>queue</label>
+      </node>
+      <node id="397">
+        <label>assert.h</label>
+      </node>
+      <node id="396">
+        <label>stdlib.h</label>
+      </node>
+      <node id="399">
+        <label>string</label>
+      </node>
+      <node id="394">
+        <label>src/segment/InputSegment.hpp</label>
+        <link refid="InputSegment_8hpp"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="398" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>vector</label>
+      </node>
+      <node id="398">
+        <label>iostream</label>
+      </node>
+      <node id="395">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classAtable" prot="public">Atable</innerclass>
+    <innerclass refid="classRun" prot="public">Run</innerclass>
+    <innerclass refid="classInputSegment" prot="public">InputSegment</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/InputSegment.hpp"/>
+  </compounddef>
+</doxygen>

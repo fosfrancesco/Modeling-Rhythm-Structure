@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Rational_8cpp" kind="file" language="C++">
+    <compoundname>Rational.cpp</compoundname>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__general_1gaa0f924144ded8d6509d5d349195b00a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>const Rational operator+</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="152" column="1" bodyfile="src/general/Rational.cpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga46d4a6e5db46addfa0d0608e3266571b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>const Rational operator-</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="156" column="1" bodyfile="src/general/Rational.cpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga0334562ad4831b5b35238fe58bddabb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>const Rational operator*</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="160" column="1" bodyfile="src/general/Rational.cpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gac87738e39a4f47b27c620375a59b06ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>const Rational operator/</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="164" column="1" bodyfile="src/general/Rational.cpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga3a2f2c8e28386a081128d450e66999dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational rabs</definition>
+        <argsstring>(const Rational &amp;r)</argsstring>
+        <name>rabs</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="168" column="1" bodyfile="src/general/Rational.cpp" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga436606f8682952468f6a5b339d972178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="173" column="1" bodyfile="src/general/Rational.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gaca39bd2856e9682cf97234d046c0d52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="178" column="1" bodyfile="src/general/Rational.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gaf34fe75e417e48c51e1d2751d9264569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="183" column="1" bodyfile="src/general/Rational.cpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga8ae410bb40221ea8f30a6057dff05a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="187" column="1" bodyfile="src/general/Rational.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga7b99e5d0faa3459356ab1249e3315ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;=</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="191" column="1" bodyfile="src/general/Rational.cpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gac1e651cdae26413046d477efdaef0539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;=</definition>
+        <argsstring>(const Rational &amp;lhs, const Rational &amp;rhs)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="195" column="1" bodyfile="src/general/Rational.cpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga5cf9ab392de156c39a5a115c9b30607b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;ostr, const Rational &amp;r)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>ostr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="199" column="1" bodyfile="src/general/Rational.cpp" bodystart="199" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gaa682331c9d58a26ba320d6414d396a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream &amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;istr, Rational &amp;r)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>istr</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="214" column="1" bodyfile="src/general/Rational.cpp" bodystart="214" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gaf481924a0c90c92bbd4b49979e1bd83f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>static Rational toRational</definition>
+        <argsstring>(double x, double limit, int iterations)</argsstring>
+        <name>toRational</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>limit</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="231" column="1" bodyfile="src/general/Rational.cpp" bodystart="231" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga0bfbe45cc727920e5a74e3a75ab2e6b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational toRational</definition>
+        <argsstring>(double x, int iterations=5)</argsstring>
+        <name>toRational</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <briefdescription>
+<para>double -&gt; <ref refid="classRational" kindref="compound">Rational</ref> conversion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/Rational.cpp" line="243" column="1" bodyfile="src/general/Rational.cpp" bodystart="243" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/general/Rational.cpp"/>
+  </compounddef>
+</doxygen>

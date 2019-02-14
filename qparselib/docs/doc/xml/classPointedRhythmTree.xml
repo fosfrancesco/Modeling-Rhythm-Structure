@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classPointedRhythmTree" kind="class" language="C++" prot="public">
+    <compoundname>PointedRhythmTree</compoundname>
+    <basecompoundref refid="classRhythmTree" prot="public" virt="non-virtual">RhythmTree</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPointedRhythmTree_1a404071b821179c511a3f9b1e0d6e9ad8" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> * &gt;</type>
+        <definition>std::vector&lt;const MusEvent*&gt; PointedRhythmTree::events</definition>
+        <argsstring></argsstring>
+        <name>events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="36" column="1" bodyfile="src/output/PointedRT.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPointedRhythmTree_1a8bbbb0e996dbe12dbc41eeede70f0527" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t PointedRhythmTree::_next</definition>
+        <argsstring></argsstring>
+        <name>_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="58" column="1" bodyfile="src/output/PointedRT.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1gaf7f8a09842cce99950290469727cb4f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>PointedRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="42" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga00153f3142fe2d750b995d95435d852e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>(label_t lab)</argsstring>
+        <name>PointedRhythmTree</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="46" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad86382b8bc2a62cc5d8848c516280c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>(const RhythmTree *, const InputSegment *, size_t i=0)</argsstring>
+        <name>PointedRhythmTree</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>is</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="49" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="26" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaff594d1f9db1bc40c552aeaa7cb9fc28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::~PointedRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~PointedRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="51" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="67" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classPointedRhythmTree_1a8faa96c4256d16d554985195c0487c0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t PointedRhythmTree::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="55" column="1" bodyfile="src/output/PointedRT.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="328">
+        <label>RhythmTree</label>
+        <link refid="classRhythmTree"/>
+      </node>
+      <node id="327">
+        <label>PointedRhythmTree</label>
+        <link refid="classPointedRhythmTree"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="330">
+        <label>RhythmTree</label>
+        <link refid="classRhythmTree"/>
+      </node>
+      <node id="329">
+        <label>PointedRhythmTree</label>
+        <link refid="classPointedRhythmTree"/>
+        <childnode refid="330" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/output/PointedRT.hpp" line="32" column="1" bodyfile="src/output/PointedRT.hpp" bodystart="31" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classRhythmTree_1ac11078e58a8ca630953768bc6dc4d74e" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>_children</name></member>
+      <member refid="classRhythmTree_1a172a0c68e4b6adace9c025c9159040e2" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>_label</name></member>
+      <member refid="classPointedRhythmTree_1a8bbbb0e996dbe12dbc41eeede70f0527" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>_next</name></member>
+      <member refid="group__output_1ga5749469b3ff6ec88fcab75961e7d278c" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>add</name></member>
+      <member refid="group__output_1ga2c194b384127267b8cfed2c41e70d338" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>APTED</name></member>
+      <member refid="group__output_1ga813a6feea3e6aa565fa0aed29e970a4e" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>arity</name></member>
+      <member refid="group__output_1gafb30d2c520e4c5e8600ae3a58abf9c72" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>binary</name></member>
+      <member refid="group__output_1ga130dd34b9f3e0db4ad4f185181895dbd" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>child</name></member>
+      <member refid="group__output_1ga1ca015dec36fa32ff6d66aaad10f4eb0" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>continuation</name></member>
+      <member refid="group__output_1gac785e6d945ef6e0808132459669ab038" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>dot_after</name></member>
+      <member refid="group__output_1ga2079bd534900d0b10e74682e404230b1" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>dot_before</name></member>
+      <member refid="group__output_1ga774fcd89afe324f01efa6514626dd1cb" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>dot_flag</name></member>
+      <member refid="classPointedRhythmTree_1a404071b821179c511a3f9b1e0d6e9ad8" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>events</name></member>
+      <member refid="classRhythmTree_1a67a3180bb74745a6e81f88835a74f740" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>inner</name></member>
+      <member refid="group__output_1ga40e2aa462ed42fa46d3beafca9dbc350" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>label</name></member>
+      <member refid="group__output_1gafcd0d23d1cdb8cd92fbaec2fac51d259" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>lily</name></member>
+      <member refid="group__output_1ga93aca0f691a35a081d51eaad06e8ce50" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>lilydot</name></member>
+      <member refid="group__output_1ga89f5bf140b902f886be124d620ac8474" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>lilydot</name></member>
+      <member refid="group__output_1gaaaf06fe2227a6598b109a72d89afa8d7" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>nbgn</name></member>
+      <member refid="classPointedRhythmTree_1a8faa96c4256d16d554985195c0487c0b" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>next</name></member>
+      <member refid="group__output_1gaf7f8a09842cce99950290469727cb4f2" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>PointedRhythmTree</name></member>
+      <member refid="group__output_1ga00153f3142fe2d750b995d95435d852e" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>PointedRhythmTree</name></member>
+      <member refid="group__output_1gad86382b8bc2a62cc5d8848c516280c52" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>PointedRhythmTree</name></member>
+      <member refid="group__output_1gafdda5b1a3c16c8e64337c26bcdb368e9" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>reducible</name></member>
+      <member refid="group__output_1gac7614a6239a4917c771641dfdfd597ab" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1gac868521df843e116ef04bcfa52405d01" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1ga058c6d59881e1be259594165d19c8588" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1ga9aebdccd4ce1d1029d03f4ec38c101c4" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>second_tied</name></member>
+      <member refid="group__output_1gabd793b78f71fb62edb13497e0a13f48c" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>single_event</name></member>
+      <member refid="group__output_1gaf723874e871dc01efb036ccbac07c32b" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>tail_redex</name></member>
+      <member refid="group__output_1ga799761965ae00bb24e16ebb98f66995a" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>tail_reducible</name></member>
+      <member refid="group__output_1ga4f875cf76d3ebc8270a471ef57e93ddd" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>terminal</name></member>
+      <member refid="group__output_1ga3933e83072d4e7c3bb3d19d25df90b47" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>tie</name></member>
+      <member refid="group__output_1gacd73e0032e3dd22320819c4cda3d60a4" prot="protected" virt="non-virtual"><scope>PointedRhythmTree</scope><name>tied</name></member>
+      <member refid="group__output_1gac6764688e24fe9b942464a9c2053ee92" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>to_string</name></member>
+      <member refid="group__output_1gaff594d1f9db1bc40c552aeaa7cb9fc28" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>~PointedRhythmTree</name></member>
+      <member refid="group__output_1gaa58da0cc1e6a1848d19c7276eaeb23ee" prot="public" virt="non-virtual"><scope>PointedRhythmTree</scope><name>~RhythmTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

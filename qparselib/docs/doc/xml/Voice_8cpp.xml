@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Voice_8cpp" kind="file" language="C++">
+    <compoundname>Voice.cpp</compoundname>
+    <includes refid="Voice_8hpp" local="yes">Voice.hpp</includes>
+    <includes refid="Score_8hpp" local="yes">Score.hpp</includes>
+    <includes refid="Note_8hpp" local="yes">Note.hpp</includes>
+    <includes refid="Rest_8hpp" local="yes">Rest.hpp</includes>
+    <includes refid="Part_8hpp" local="yes">Part.hpp</includes>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Voice.cpp"/>
+  </compounddef>
+</doxygen>

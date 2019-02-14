@@ -1,0 +1,148 @@
+\hypertarget{classAtable}{}\section{Atable$<$ P $>$ Class Template Reference}
+\label{classAtable}\index{Atable$<$ P $>$@{Atable$<$ P $>$}}
+
+
+abstract interface to parse table  
+
+
+
+
+{\ttfamily \#include $<$Atable.\+hpp$>$}
+
+Inheritance diagram for Atable$<$ P $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAtable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAtable_ad519343a13265a31ba1d0951be0e3185}{Atable}} (\mbox{\hyperlink{classParser}{Parser}}$<$ P $>$ $\ast$env, Run\+Compare$<$ P $>$ comp)
+\item 
+virtual \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$ \mbox{\hyperlink{classAtable_a60515b93afede66f01a0e89edb563800}{best}} (const P \&p)=0
+\begin{DoxyCompactList}\small\item\em return k-\/best run pointed by p or N\+U\+LL if there is none. k is either included in p or the default value 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAtable_af3a86206727f9d28cd3e962f709b9bc2}\label{classAtable_af3a86206727f9d28cd3e962f709b9bc2}} 
+virtual \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$ \mbox{\hyperlink{classAtable_af3a86206727f9d28cd3e962f709b9bc2}{best\+Tree}} (const P \&p)=0
+\begin{DoxyCompactList}\small\item\em tree corresponding to the k-\/best run in p. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$ \mbox{\hyperlink{classAtable_a48dfc1adb76a6d50824f28df2f8cd692}{best\+Tree}} (\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$p)=0
+\begin{DoxyCompactList}\small\item\em when the k-\/best run in p is already computed. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{classAtable_ab644eecedb520d67da426f9170a6213b}{add}} (const P \&p, \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$r, \mbox{\hyperlink{classRecord}{Record}}$<$ P $>$ $\ast$i)=0
+\begin{DoxyCompactList}\small\item\em add possible instances of run r to the entries in table for corresp. to possible instances for p. dispatch to the four functions below according to p and r. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAtable_a90e01b017faeec6869df32bd50ce5b35}\label{classAtable_a90e01b017faeec6869df32bd50ce5b35}} 
+virtual size\+\_\+t {\bfseries nb\+\_\+entries} ()=0
+\item 
+\mbox{\Hypertarget{classAtable_a66029b49ab5cece68c4a0635a821b877}\label{classAtable_a66029b49ab5cece68c4a0635a821b877}} 
+virtual size\+\_\+t {\bfseries nb\+\_\+runs} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAtable_a43c761e5718010983659d7162f89d8d3}\label{classAtable_a43c761e5718010983659d7162f89d8d3}} 
+\mbox{\hyperlink{classParser}{Parser}}$<$ P $>$ $\ast$ \mbox{\hyperlink{classAtable_a43c761e5718010983659d7162f89d8d3}{parent}}
+\begin{DoxyCompactList}\small\item\em parsing environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAtable_a84214b2c984a18a8cec13313152d3eaa}\label{classAtable_a84214b2c984a18a8cec13313152d3eaa}} 
+Run\+Compare$<$ P $>$ {\bfseries \+\_\+comparer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class P$>$\newline
+class Atable$<$ P $>$}
+
+abstract interface to parse table 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAtable_ad519343a13265a31ba1d0951be0e3185}\label{classAtable_ad519343a13265a31ba1d0951be0e3185}} 
+\index{Atable$<$ P $>$@{Atable$<$ P $>$}!Atable@{Atable}}
+\index{Atable@{Atable}!Atable$<$ P $>$@{Atable$<$ P $>$}}
+\subsubsection{\texorpdfstring{Atable()}{Atable()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$\+::\mbox{\hyperlink{classAtable}{Atable}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classParser}{Parser}}$<$ P $>$ $\ast$}]{env,  }\item[{Run\+Compare$<$ P $>$}]{comp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em env} & environment must not be null. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAtable_a60515b93afede66f01a0e89edb563800}\label{classAtable_a60515b93afede66f01a0e89edb563800}} 
+\index{Atable$<$ P $>$@{Atable$<$ P $>$}!best@{best}}
+\index{best@{best}!Atable$<$ P $>$@{Atable$<$ P $>$}}
+\subsubsection{\texorpdfstring{best()}{best()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+virtual \mbox{\hyperlink{classRun}{Run}}$<$P$>$$\ast$ \mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$\+::best (\begin{DoxyParamCaption}\item[{const P \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+return k-\/best run pointed by p or N\+U\+LL if there is none. k is either included in p or the default value 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & must be complete. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTable_a2e8c9b5856741684b1ec7d8fc640cc81}{Table$<$ P, R, H $>$}}, \mbox{\hyperlink{classTable_a2e8c9b5856741684b1ec7d8fc640cc81}{Table$<$ S\+I\+Ppointer, Brecord$<$ S\+I\+Ppointer $>$, S\+I\+Ppointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a2e8c9b5856741684b1ec7d8fc640cc81}{Table$<$ Spointer, Brecord$<$ Spointer $>$, Spointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a2e8c9b5856741684b1ec7d8fc640cc81}{Table$<$ S\+Kpointer, Krecord$<$ S\+Kpointer $>$, S\+Kpointer\+Hasher $>$}}, and \mbox{\hyperlink{classTable_a2e8c9b5856741684b1ec7d8fc640cc81}{Table$<$ S\+K\+I\+Ppointer, Krecord$<$ S\+K\+I\+Ppointer $>$, S\+K\+I\+Ppointer\+Hasher $>$}}.
+
+\mbox{\Hypertarget{classAtable_a48dfc1adb76a6d50824f28df2f8cd692}\label{classAtable_a48dfc1adb76a6d50824f28df2f8cd692}} 
+\index{Atable$<$ P $>$@{Atable$<$ P $>$}!bestTree@{bestTree}}
+\index{bestTree@{bestTree}!Atable$<$ P $>$@{Atable$<$ P $>$}}
+\subsubsection{\texorpdfstring{bestTree()}{bestTree()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+virtual \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}}$\ast$ \mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$\+::best\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+when the k-\/best run in p is already computed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & not used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000031}{Todo}}]T\+BR param p \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+the run must be wta. 
+\end{DoxyWarning}
+
+
+Implemented in \mbox{\hyperlink{classTable_a53788fcf01e286097b3c0d7c7573d61f}{Table$<$ P, R, H $>$}}, \mbox{\hyperlink{classTable_a53788fcf01e286097b3c0d7c7573d61f}{Table$<$ S\+I\+Ppointer, Brecord$<$ S\+I\+Ppointer $>$, S\+I\+Ppointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a53788fcf01e286097b3c0d7c7573d61f}{Table$<$ Spointer, Brecord$<$ Spointer $>$, Spointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a53788fcf01e286097b3c0d7c7573d61f}{Table$<$ S\+Kpointer, Krecord$<$ S\+Kpointer $>$, S\+Kpointer\+Hasher $>$}}, and \mbox{\hyperlink{classTable_a53788fcf01e286097b3c0d7c7573d61f}{Table$<$ S\+K\+I\+Ppointer, Krecord$<$ S\+K\+I\+Ppointer $>$, S\+K\+I\+Ppointer\+Hasher $>$}}.
+
+\mbox{\Hypertarget{classAtable_ab644eecedb520d67da426f9170a6213b}\label{classAtable_ab644eecedb520d67da426f9170a6213b}} 
+\index{Atable$<$ P $>$@{Atable$<$ P $>$}!add@{add}}
+\index{add@{add}!Atable$<$ P $>$@{Atable$<$ P $>$}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+virtual size\+\_\+t \mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$\+::add (\begin{DoxyParamCaption}\item[{const P \&}]{p,  }\item[{\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$}]{r,  }\item[{\mbox{\hyperlink{classRecord}{Record}}$<$ P $>$ $\ast$}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add possible instances of run r to the entries in table for corresp. to possible instances for p. dispatch to the four functions below according to p and r. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & can be complete or partial. \\
+\hline
+{\em r} & can be complete or partial. \\
+\hline
+{\em i} & if p is complete, then i must be an iterator to the entry for p in table, otherwise (p partial), i is table.\+end(). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTable_a9231e3b8782acfabbafe1f1dcb85a3bb}{Table$<$ P, R, H $>$}}, \mbox{\hyperlink{classTable_a9231e3b8782acfabbafe1f1dcb85a3bb}{Table$<$ S\+I\+Ppointer, Brecord$<$ S\+I\+Ppointer $>$, S\+I\+Ppointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a9231e3b8782acfabbafe1f1dcb85a3bb}{Table$<$ Spointer, Brecord$<$ Spointer $>$, Spointer\+Hasher $>$}}, \mbox{\hyperlink{classTable_a9231e3b8782acfabbafe1f1dcb85a3bb}{Table$<$ S\+Kpointer, Krecord$<$ S\+Kpointer $>$, S\+Kpointer\+Hasher $>$}}, and \mbox{\hyperlink{classTable_a9231e3b8782acfabbafe1f1dcb85a3bb}{Table$<$ S\+K\+I\+Ppointer, Krecord$<$ S\+K\+I\+Ppointer $>$, S\+K\+I\+Ppointer\+Hasher $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Input\+Segment.\+hpp\item 
+src/table/Atable.\+hpp\end{DoxyCompactItemize}

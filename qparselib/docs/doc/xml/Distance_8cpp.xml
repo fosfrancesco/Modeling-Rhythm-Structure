@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Distance_8cpp" kind="file" language="C++">
+    <compoundname>Distance.cpp</compoundname>
+    <includes refid="Distance_8hpp" local="yes">Distance.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/weight/Distance.cpp"/>
+  </compounddef>
+</doxygen>

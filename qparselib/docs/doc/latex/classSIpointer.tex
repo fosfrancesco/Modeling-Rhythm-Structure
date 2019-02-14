@@ -1,0 +1,83 @@
+\hypertarget{classSIpointer}{}\section{S\+Ipointer Class Reference}
+\label{classSIpointer}\index{SIpointer@{SIpointer}}
+Inheritance diagram for S\+Ipointer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classSIpointer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__table_ga7e962d8567566398e5f620ef964267cd}{S\+Ipointer}} ()
+\begin{DoxyCompactList}\small\item\em dummy ptr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga464163b749ecd94516ab6e94f7baa5bf}{S\+Ipointer}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em fake ptr for terminal run, contains only a label symbol it is considered as complete see description in Ptr.\+hpp \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gac560506e7bf1439877178cf6d2459e7f}{S\+Ipointer}} (\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$env, state\+\_\+t s, \mbox{\hyperlink{classRational}{Rational}} mdur=\mbox{\hyperlink{classRational}{Rational}}(1), double rext=0)
+\begin{DoxyCompactList}\small\item\em class specific top ptr (covering the whole input segment + given extension in realtime, of given musical duration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga3abe73f8e3188ca49f11e09d794f1f05}{S\+Ipointer}} (\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p, double rdur, \mbox{\hyperlink{classRational}{Rational}} mdur, bool position, size\+\_\+t i, state\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em split ptr p in 2 parts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_gab5c8a8654ef626d4c7b75ef67ed28aa9}{S\+Ipointer}} (\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p, size\+\_\+t a, size\+\_\+t i, state\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em sub-\/pointer or instance as leaf. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga3df3168789d247e497f127caa7840e88}{S\+Ipointer}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga175406f6e30433d90a004aa27c401f29}{S\+Ipointer}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p0, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p1)
+\begin{DoxyCompactList}\small\item\em instance as parent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__table_ga19a6965aca9363f90f45c5d0e07bc99e}{S\+Ipointer}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p0, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p1)
+\begin{DoxyCompactList}\small\item\em instance as next sibling. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \& \mbox{\hyperlink{group__table_ga071bb69977a62e26f9ec11230ae2646b}{operator=}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&)
+\item 
+virtual bool \mbox{\hyperlink{group__table_ga3330f8e59b08797b4c73ae558f6d588e}{operator==}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&) const
+\begin{DoxyCompactList}\small\item\em for use as key in a unordered\+\_\+multimap. \end{DoxyCompactList}\item 
+virtual bool {\bfseries operator!=} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&) const
+\item 
+virtual bool \mbox{\hyperlink{group__table_ga51c64ecf271622a259840f55236778ef}{operator$<$}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&) const
+\begin{DoxyCompactList}\small\item\em for use as key in a multimap. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__table_ga259b23462f7e87f6df0e9361c1884618}{instance}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p) const
+\item 
+virtual bool \mbox{\hyperlink{group__table_gaa50fe6e651b28c77839ddfaf1bbdcd4f}{subsume}} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p) const
+\item 
+\mbox{\Hypertarget{classSIpointer_a4cb39a0c156f3b09eb15feb12dad2434}\label{classSIpointer_a4cb39a0c156f3b09eb15feb12dad2434}} 
+virtual bool {\bfseries has\+\_\+I} () const
+\item 
+\mbox{\Hypertarget{classSIpointer_a433d1c2fbb2e79b7f0ada6b424739bec}\label{classSIpointer_a433d1c2fbb2e79b7f0ada6b424739bec}} 
+virtual bool {\bfseries has\+\_\+P} () const
+\item 
+\mbox{\Hypertarget{classSIpointer_a1471edc06d0a40b154cb1b643b9f28f7}\label{classSIpointer_a1471edc06d0a40b154cb1b643b9f28f7}} 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ {\bfseries interval} () const
+\item 
+virtual bool \mbox{\hyperlink{group__table_ga638627bc96caa0f1dbf7093f0f70951b}{complete}} () const
+\item 
+virtual \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{group__table_ga6bdbea8e7013194f834be17932efe642}{label}} (const \mbox{\hyperlink{classTransition}{Transition}} \&t) const
+\item 
+virtual bool \mbox{\hyperlink{group__table_gac83e0619c17ce4efd589f73513706a6b}{divisible}} () const
+\item 
+virtual bool \mbox{\hyperlink{group__table_gaca7d3c4d141ecf2874a5e5512e0c02ff}{compatible}} (const \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}}, bool abstract=true) const
+\item 
+virtual bool \mbox{\hyperlink{group__table_ga555753e41af94ac201a0c8c99babb83b}{dummy}} () const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__table_ga6b46b59b3b465ba6a995f76ff34970ce}{terminal\+Weight}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, const \mbox{\hyperlink{classTransition}{Transition}} \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries equal\+\_\+node} (const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSIpointer_ad623e07df03b58eced4ceaf0855f5993}\label{classSIpointer_ad623e07df03b58eced4ceaf0855f5993}} 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ {\bfseries \+\_\+node}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSIpointer_a86a37eaf8509fee42b0cecf04740db9b}\label{classSIpointer_a86a37eaf8509fee42b0cecf04740db9b}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classSIpointer}{S\+Ipointer}} \&p)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/table/Ptr\+S\+I.\+hpp\item 
+src/table/Ptr\+S\+I.\+cpp\end{DoxyCompactItemize}

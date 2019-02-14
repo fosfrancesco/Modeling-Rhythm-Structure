@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_scoremodel_README" kind="page">
+    <compoundname>md_src_scoremodel_README</compoundname>
+    <title>src/scoremodel</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An abstract model used to produce scores in various format from parsing results (<emphasis>i.e.</emphasis> from trees). </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

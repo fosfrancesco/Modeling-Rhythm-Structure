@@ -1,0 +1,119 @@
+\hypertarget{classWTAFile}{}\section{W\+T\+A\+File Class Reference}
+\label{classWTAFile}\index{WTAFile@{WTAFile}}
+
+
+wrapper for constructing \mbox{\hyperlink{classWTA}{W\+TA}} with various flags for weight type.  
+
+
+
+
+{\ttfamily \#include $<$W\+T\+A\+File.\+hpp$>$}
+
+Inheritance diagram for W\+T\+A\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWTAFile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWTAFile_afc385786a0b36382ab366c91a8b9ce0b}\label{classWTAFile_afc385786a0b36382ab366c91a8b9ce0b}} 
+\mbox{\hyperlink{classWTAFile_afc385786a0b36382ab366c91a8b9ce0b}{W\+T\+A\+File}} ()
+\begin{DoxyCompactList}\small\item\em default constructor for cython. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWTAFile_a0c65f030a8df8bdb8eed5c261908e6bb}{W\+T\+A\+File}} (const std\+::string filename, \mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}} wt=Weight\+Dom\+::\+U\+N\+D\+EF, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\begin{DoxyCompactList}\small\item\em read weight type and schema from file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWTAFile_a1d76575338801558fc75759aa90261b9}{W\+T\+A\+File}} (const std\+::string filename, bool count\+\_\+flag=false, bool penalty\+\_\+flag=true, bool stochastic\+\_\+flag=false)
+\begin{DoxyCompactList}\small\item\em read schema from file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTAFile_acd30482d9409353945f35dbaf3fd05f1}\label{classWTAFile_acd30482d9409353945f35dbaf3fd05f1}} 
+\mbox{\hyperlink{classWTAFile_acd30482d9409353945f35dbaf3fd05f1}{$\sim$\+W\+T\+A\+File}} ()
+\begin{DoxyCompactList}\small\item\em same as \mbox{\hyperlink{classWTA}{W\+TA}} destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTAFile_a01b3ef064d42d02129f4fc202935e805}\label{classWTAFile_a01b3ef064d42d02129f4fc202935e805}} 
+size\+\_\+t \mbox{\hyperlink{classWTAFile_a01b3ef064d42d02129f4fc202935e805}{save}} (string filename)
+\begin{DoxyCompactList}\small\item\em save to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classWTAFile_a1ba7fa9966d052ee8c2e7ce1b01666b3}{read\+Timesignature}} (const std\+::string filename, \mbox{\hyperlink{classScoreModel_1_1ScoreMeter}{Score\+Model\+::\+Score\+Meter}} \&ts)
+\begin{DoxyCompactList}\small\item\em read time signature from schema file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+wrapper for constructing \mbox{\hyperlink{classWTA}{W\+TA}} with various flags for weight type. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWTAFile_a0c65f030a8df8bdb8eed5c261908e6bb}\label{classWTAFile_a0c65f030a8df8bdb8eed5c261908e6bb}} 
+\index{WTAFile@{WTAFile}!WTAFile@{WTAFile}}
+\index{WTAFile@{WTAFile}!WTAFile@{WTAFile}}
+\subsubsection{\texorpdfstring{WTAFile()}{WTAFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily W\+T\+A\+File\+::\+W\+T\+A\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{\mbox{\hyperlink{group__general_gae07bdce6f4896785ead3b815ca6ab560}{Weight\+Dom}}}]{wt = {\ttfamily WeightDom\+:\+:UNDEF},  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{pre = {\ttfamily 0},  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{post = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+read weight type and schema from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & input text file specifying the schema \\
+\hline
+{\em wt} & weight type (forced)\\
+\hline
+\end{DoxyParams}
+if another weight type is given as argument (forced weight type)
+\begin{DoxyItemize}
+\item use it as weight type for reading schema if no weight type found in file
+\item use it to cast schema (force type). the \mbox{\hyperlink{classWTA}{W\+TA}} can be empty in case of error. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWTAFile_a1d76575338801558fc75759aa90261b9}\label{classWTAFile_a1d76575338801558fc75759aa90261b9}} 
+\index{WTAFile@{WTAFile}!WTAFile@{WTAFile}}
+\index{WTAFile@{WTAFile}!WTAFile@{WTAFile}}
+\subsubsection{\texorpdfstring{WTAFile()}{WTAFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily W\+T\+A\+File\+::\+W\+T\+A\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{bool}]{count\+\_\+flag = {\ttfamily false},  }\item[{bool}]{penalty\+\_\+flag = {\ttfamily true},  }\item[{bool}]{stochastic\+\_\+flag = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+read schema from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & input text file specifying the schema \\
+\hline
+{\em count\+\_\+flag} & flag to determine the type of weights \\
+\hline
+{\em penalty\+\_\+flag} & flag to determine the type of weights \\
+\hline
+{\em stochastic\+\_\+flag} & flag to determine the type of weights\\
+\hline
+\end{DoxyParams}
+casts weights according to compile options if needed.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]T\+BR \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWTAFile_a1ba7fa9966d052ee8c2e7ce1b01666b3}\label{classWTAFile_a1ba7fa9966d052ee8c2e7ce1b01666b3}} 
+\index{WTAFile@{WTAFile}!readTimesignature@{readTimesignature}}
+\index{readTimesignature@{readTimesignature}!WTAFile@{WTAFile}}
+\subsubsection{\texorpdfstring{readTimesignature()}{readTimesignature()}}
+{\footnotesize\ttfamily bool W\+T\+A\+File\+::read\+Timesignature (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{\mbox{\hyperlink{classScoreModel_1_1ScoreMeter}{Score\+Model\+::\+Score\+Meter}} \&}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+read time signature from schema file 
+
+\begin{DoxyReturn}{Returns}
+0 if a time signature was found in filename in that case, the time signature is stored in the given ts, otherwise, ts is left unchanged.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+must be in the form \char`\"{}\mbox{[}timesig int int\mbox{]}\char`\"{} in the file, with int $>$ 0. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/W\+T\+A\+File.\+hpp\item 
+src/input/Schema.\+cpp\item 
+src/input/W\+T\+A\+File.\+cpp\end{DoxyCompactItemize}

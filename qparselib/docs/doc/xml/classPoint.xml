@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classPoint" kind="class" language="C++" prot="public">
+    <compoundname>Point</compoundname>
+    <derivedcompoundref refid="classMusPoint" prot="public" virt="non-virtual">MusPoint</derivedcompoundref>
+    <includes local="no">Point.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPoint_1a11ca880bad16051872c032fa47b73e42" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Point::linked</definition>
+        <argsstring></argsstring>
+        <name>linked</name>
+        <briefdescription>
+<para>link to a point in an input segment marking the end date of this point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the link is an index in an input segment structure:<itemizedlist>
+<listitem><para>a point of segment if &gt;= 0,</para>
+</listitem><listitem><para>or a floating point if &lt; 0. if MUSPOINTREF_NULL, the duration of this point is zero. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="51" column="1" bodyfile="src/segment/Point.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPoint_1abd14c2ceaca50fcb7c8236b8ce0d9aa6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent* Point::_event</definition>
+        <argsstring></argsstring>
+        <name>_event</name>
+        <briefdescription>
+<para>input event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="98" column="1" bodyfile="src/segment/Point.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPoint_1a650144f8bb470d6d4e364d7082d77f57" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_rdate</definition>
+        <argsstring></argsstring>
+        <name>_rdate</name>
+        <briefdescription>
+<para>timestamp in real-time (sec). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="101" column="1" bodyfile="src/segment/Point.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPoint_1a706ce56822f7e26dc66d67ce225d8a94" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_rduration</definition>
+        <argsstring></argsstring>
+        <name>_rduration</name>
+        <briefdescription>
+<para>real duration computed using the matcher&apos;s rdate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000029"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR (added for backward compatibility) </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="106" column="1" bodyfile="src/segment/Point.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPoint_1a5508dcf134387f3f2271e95b578f3e3a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Point::_onoff</definition>
+        <argsstring></argsstring>
+        <name>_onoff</name>
+        <briefdescription>
+<para>true if note-on, false if note-off. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000030"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="111" column="1" bodyfile="src/segment/Point.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1ga6cb7f450eee39d3bd8483f017f28906d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL)</argsstring>
+        <name>Point</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <briefdescription>
+<para>timestamped monophonic or polyphonic event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="54" column="1" bodyfile="src/segment/Point.cpp" bodystart="17" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5b7ec0fb127734c1cd5c6f350a3990fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(const Point &amp;)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event (if any) is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="61" column="1" bodyfile="src/segment/Point.cpp" bodystart="34" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga395fa04b4ec126b66fc053f829a30cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Point::~Point</definition>
+        <argsstring>()</argsstring>
+        <name>~Point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event is deallocated and matcher (linked) also. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="64" column="1" bodyfile="src/segment/Point.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga55eeab949e62268da63176d48570eb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>Point &amp; Point::operator=</definition>
+        <argsstring>(const Point &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>event (if any) is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="67" column="1" bodyfile="src/segment/Point.cpp" bodystart="59" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1055933b999ef990df6b48745c27a197" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Point::operator==</definition>
+        <argsstring>(const Point &amp;) const</argsstring>
+        <name>operator==</name>
+        <reimplementedby refid="group__segment_1ga07139fb89dcc2388b299b9e6464b3177">operator==</reimplementedby>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="69" column="1" bodyfile="src/segment/Point.cpp" bodystart="79" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classPoint_1acf6506d97b9e96f177e1830a546e3ea3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent* Point::event</definition>
+        <argsstring>() const</argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>can be NULL. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="72" column="1" bodyfile="src/segment/Point.hpp" bodystart="72" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classPoint_1ad2ff6ece321bae579ab2d4f52c71bb31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::rdate</definition>
+        <argsstring>() const</argsstring>
+        <name>rdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="75" column="1" bodyfile="src/segment/Point.hpp" bodystart="75" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classPoint_1a21ee97f153dd1c435f7d2e554887294f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::rduration</definition>
+        <argsstring>() const</argsstring>
+        <name>rduration</name>
+        <briefdescription>
+<para>realtime duration of polyphonic events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>is computed in input segment</para>
+<para><xrefsect id="todo_1_todo000028"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR (only for backward compability) </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="83" column="1" bodyfile="src/segment/Point.hpp" bodystart="83" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classPoint_1a21d3017c2e04de4cc602306bafa40239" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Point::noteon</definition>
+        <argsstring>() const</argsstring>
+        <name>noteon</name>
+        <briefdescription>
+<para>is note on. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="87" column="1" bodyfile="src/segment/Point.hpp" bodystart="87" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classPoint_1a951d10365297b7a1a2dd1bb51100e076" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Point::noteoff</definition>
+        <argsstring>() const</argsstring>
+        <name>noteoff</name>
+        <briefdescription>
+<para>is note off. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="91" column="1" bodyfile="src/segment/Point.hpp" bodystart="91" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classPoint_1ad95cc714e40b63c5df8e1dc41305178e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Point &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="94" column="1" bodyfile="src/segment/Point.hpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__segment_1gaf6904981d6c631a7756499cd0b42ce29" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Point::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplementedby refid="group__segment_1gafef7a93b7ba8e96efc8d2b179c69a830">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="113" column="1" bodyfile="src/segment/Point.cpp" bodystart="144" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>timestamped event. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>event extended with realtime date (in seconds) and optional [on-off] link.</para>
+<para>every point has a realtime date (in seconds).</para>
+<para>a point can be linked to a forward point (with a realtime date larger or equal). the link is an index in an input segment.</para>
+<para>a linked point is also called onset or note-on. an point without link (with link = MUSPOINTREF_NULL) is called offset or note-off.</para>
+<para>for the computation of realtime duration of points, see <ref refid="classInputSegment" kindref="compound">InputSegment</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="319">
+        <label>Point</label>
+        <link refid="classPoint"/>
+      </node>
+      <node id="320">
+        <label>MusPoint</label>
+        <link refid="classMusPoint"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="321">
+        <label>Point</label>
+        <link refid="classPoint"/>
+        <childnode refid="322" relation="usage">
+          <edgelabel>_event</edgelabel>
+        </childnode>
+      </node>
+      <node id="322">
+        <label>MusEvent</label>
+        <link refid="classMusEvent"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/Point.hpp" line="42" column="1" bodyfile="src/segment/Point.hpp" bodystart="41" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classPoint_1abd14c2ceaca50fcb7c8236b8ce0d9aa6" prot="protected" virt="non-virtual"><scope>Point</scope><name>_event</name></member>
+      <member refid="classPoint_1a5508dcf134387f3f2271e95b578f3e3a" prot="protected" virt="non-virtual"><scope>Point</scope><name>_onoff</name></member>
+      <member refid="classPoint_1a650144f8bb470d6d4e364d7082d77f57" prot="protected" virt="non-virtual"><scope>Point</scope><name>_rdate</name></member>
+      <member refid="classPoint_1a706ce56822f7e26dc66d67ce225d8a94" prot="protected" virt="non-virtual"><scope>Point</scope><name>_rduration</name></member>
+      <member refid="classPoint_1acf6506d97b9e96f177e1830a546e3ea3" prot="public" virt="non-virtual"><scope>Point</scope><name>event</name></member>
+      <member refid="classPoint_1a11ca880bad16051872c032fa47b73e42" prot="public" virt="non-virtual"><scope>Point</scope><name>linked</name></member>
+      <member refid="classPoint_1a951d10365297b7a1a2dd1bb51100e076" prot="public" virt="non-virtual"><scope>Point</scope><name>noteoff</name></member>
+      <member refid="classPoint_1a21d3017c2e04de4cc602306bafa40239" prot="public" virt="non-virtual"><scope>Point</scope><name>noteon</name></member>
+      <member refid="classPoint_1ad95cc714e40b63c5df8e1dc41305178e" prot="public" virt="non-virtual"><scope>Point</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga55eeab949e62268da63176d48570eb54" prot="public" virt="virtual"><scope>Point</scope><name>operator=</name></member>
+      <member refid="group__segment_1ga1055933b999ef990df6b48745c27a197" prot="public" virt="virtual"><scope>Point</scope><name>operator==</name></member>
+      <member refid="group__segment_1ga6cb7f450eee39d3bd8483f017f28906d" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="group__segment_1ga5b7ec0fb127734c1cd5c6f350a3990fc" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="group__segment_1gaf6904981d6c631a7756499cd0b42ce29" prot="protected" virt="virtual"><scope>Point</scope><name>print</name></member>
+      <member refid="classPoint_1ad2ff6ece321bae579ab2d4f52c71bb31" prot="public" virt="non-virtual"><scope>Point</scope><name>rdate</name></member>
+      <member refid="classPoint_1a21ee97f153dd1c435f7d2e554887294f" prot="public" virt="non-virtual"><scope>Point</scope><name>rduration</name></member>
+      <member refid="group__segment_1ga395fa04b4ec126b66fc053f829a30cc1" prot="public" virt="non-virtual"><scope>Point</scope><name>~Point</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

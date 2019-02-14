@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="PtrSIP_8cpp" kind="file" language="C++">
+    <compoundname>PtrSIP.cpp</compoundname>
+    <includes refid="PtrSIP_8hpp" local="yes">PtrSIP.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__table_1ga7576e987b23cc05f8c50602b5fbe5fe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const SIPpointer &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSIPpointer" kindref="compound">SIPpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSIP.cpp" line="397" column="1" bodyfile="src/table/PtrSIP.cpp" bodystart="397" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/PtrSIP.cpp"/>
+  </compounddef>
+</doxygen>

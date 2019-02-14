@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Transition_8hpp" kind="file" language="C++">
+    <compoundname>Transition.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">set</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Label_8hpp" local="yes">Label.hpp</includes>
+    <includes refid="State_8hpp" local="yes">State.hpp</includes>
+    <includes refid="SerialLabel_8hpp" local="yes">SerialLabel.hpp</includes>
+    <includes refid="Weight_8hpp" local="yes">Weight.hpp</includes>
+    <includedby refid="WTA_8hpp" local="yes">src/schemata/WTA.hpp</includedby>
+    <includedby refid="Transition_8cpp" local="yes">src/schemata/Transition.cpp</includedby>
+    <includedby refid="Rune_8hpp" local="yes">src/table/Rune.hpp</includedby>
+    <includedby refid="Ptr_8hpp" local="yes">src/table/Ptr.hpp</includedby>
+    <includedby refid="Table_8hpp" local="yes">src/table/Table.hpp</includedby>
+    <incdepgraph>
+      <node id="272">
+        <label>assert.h</label>
+      </node>
+      <node id="275">
+        <label>string</label>
+      </node>
+      <node id="273">
+        <label>vector</label>
+      </node>
+      <node id="276">
+        <label>iostream</label>
+      </node>
+      <node id="270">
+        <label>src/schemata/Transition.hpp</label>
+        <link refid="Transition_8hpp"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+      </node>
+      <node id="274">
+        <label>set</label>
+      </node>
+      <node id="271">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classTransition" prot="public">Transition</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__schemata_1gacb03191d1927740d0f6f55d525eec2be" prot="public" static="no">
+        <type>std::vector&lt; state_t &gt;::iterator</type>
+        <definition>typedef std::vector&lt;state_t&gt;::iterator Transition_iterator</definition>
+        <argsstring></argsstring>
+        <name>Transition_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="32" column="1" bodyfile="src/schemata/Transition.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gada53f8336fc15b6740d915faaa812651" prot="public" static="no">
+        <type>std::vector&lt; state_t &gt;::const_iterator</type>
+        <definition>typedef std::vector&lt;state_t&gt;::const_iterator Transition_const_iterator</definition>
+        <argsstring></argsstring>
+        <name>Transition_const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="33" column="1" bodyfile="src/schemata/Transition.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/Transition.hpp"/>
+  </compounddef>
+</doxygen>

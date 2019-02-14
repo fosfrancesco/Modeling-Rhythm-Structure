@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ValueWTA_8hpp" kind="file" language="C++">
+    <compoundname>ValueWTA.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">array</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="Label_8hpp" local="yes">Label.hpp</includes>
+    <includes refid="State_8hpp" local="yes">State.hpp</includes>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includes refid="DurationList_8hpp" local="yes">DurationList.hpp</includes>
+    <includes refid="DurationTree_8hpp" local="yes">DurationTree.hpp</includes>
+    <includedby refid="ValueWTA_8cpp" local="yes">src/schemata/ValueWTA.cpp</includedby>
+    <includedby refid="equiv_8cpp" local="yes">src/targets/equiv/equiv.cpp</includedby>
+    <incdepgraph>
+      <node id="284">
+        <label>queue</label>
+      </node>
+      <node id="282">
+        <label>assert.h</label>
+      </node>
+      <node id="280">
+        <label>src/schemata/ValueWTA.hpp</label>
+        <link refid="ValueWTA_8hpp"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>array</label>
+      </node>
+      <node id="285">
+        <label>unordered_map</label>
+      </node>
+      <node id="281">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classValueState" prot="public">ValueState</innerclass>
+    <innerclass refid="structValueStateHasher" prot="public">ValueStateHasher</innerclass>
+    <innerclass refid="classValueWTA" prot="public">ValueWTA</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__schemata_1ga881b5f6757c004ef80638824b4057ad3" prot="public" static="no">
+        <type>std::unordered_map&lt; <ref refid="classValueState" kindref="compound">ValueState</ref>, state_t, <ref refid="structValueStateHasher" kindref="compound">ValueStateHasher</ref> &gt;</type>
+        <definition>typedef std::unordered_map&lt;ValueState, state_t, ValueStateHasher&gt; Valuemap</definition>
+        <argsstring></argsstring>
+        <name>Valuemap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="98" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/ValueWTA.hpp"/>
+  </compounddef>
+</doxygen>

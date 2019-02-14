@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classDepthMarking" kind="class" language="C++" prot="public">
+    <compoundname>DepthMarking</compoundname>
+    <includes local="no">WTA.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDepthMarking_1a66541dfb5fb2ca41800b15620d5b3ddf" prot="private" static="no" mutable="no">
+        <type>std::map&lt; state_t, int &gt;</type>
+        <definition>std::map&lt;state_t, int&gt; DepthMarking::_marks</definition>
+        <argsstring></argsstring>
+        <name>_marks</name>
+        <briefdescription>
+<para>marks: -1 : unknown 0.. : depth </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="392" column="1" bodyfile="src/schemata/WTA.hpp" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthMarking_1a6e10acd886670078bd4c88a7e23326fc" prot="private" static="no" mutable="no">
+        <type>std::map&lt; state_t, bool &gt;</type>
+        <definition>std::map&lt;state_t, bool&gt; DepthMarking::_multi</definition>
+        <argsstring></argsstring>
+        <name>_multi</name>
+        <briefdescription>
+<para>whether the state can occur at multiuple depths </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="395" column="1" bodyfile="src/schemata/WTA.hpp" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__schemata_1gaf0a0a9f458a39032b2c653a99f609935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DepthMarking::DepthMarking</definition>
+        <argsstring>(const WTA &amp;)</argsstring>
+        <name>DepthMarking</name>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>wta</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="371" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="754" bodyend="757"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaaa84e1d149651938af82e47b91888017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DepthMarking::depth</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>depth</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>return depth mark if given state marked return -1 otherwise </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="377" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="760" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad5f3fa885bb5d2be624a26e9aa50dd0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DepthMarking::multiple</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>multiple</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>return true if the given state can occur at multiple depths return false otherwise or if state not marked </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="381" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="776" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3486fcb9921f3c018b931e088a53df7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DepthMarking::mark</definition>
+        <argsstring>(state_t, int)</argsstring>
+        <name>mark</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+<para>mark state using given depth and return new mark value can be the given depth or a greater depth with which the state had been already marked. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="386" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="791" bodyend="835"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__schemata_1ga6b9809d53e619eb95d9ad9e668ce2b56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthMarking::mark_rec</definition>
+        <argsstring>(state_t, int, const WTA &amp;)</argsstring>
+        <name>mark_rec</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>d</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>wta</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="397" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="732" bodyend="751"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>marking of states of a <ref refid="classWTA" kindref="compound">WTA</ref> with informations on the depth of their occurences initialized with a <ref refid="classWTA" kindref="compound">WTA</ref>, can be interrogated afterwards </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/WTA.hpp" line="369" column="1" bodyfile="src/schemata/WTA.hpp" bodystart="368" bodyend="398"/>
+    <listofallmembers>
+      <member refid="classDepthMarking_1a66541dfb5fb2ca41800b15620d5b3ddf" prot="private" virt="non-virtual"><scope>DepthMarking</scope><name>_marks</name></member>
+      <member refid="classDepthMarking_1a6e10acd886670078bd4c88a7e23326fc" prot="private" virt="non-virtual"><scope>DepthMarking</scope><name>_multi</name></member>
+      <member refid="group__schemata_1gaaa84e1d149651938af82e47b91888017" prot="public" virt="non-virtual"><scope>DepthMarking</scope><name>depth</name></member>
+      <member refid="group__schemata_1gaf0a0a9f458a39032b2c653a99f609935" prot="public" virt="non-virtual"><scope>DepthMarking</scope><name>DepthMarking</name></member>
+      <member refid="group__schemata_1ga3486fcb9921f3c018b931e088a53df7d" prot="public" virt="non-virtual"><scope>DepthMarking</scope><name>mark</name></member>
+      <member refid="group__schemata_1ga6b9809d53e619eb95d9ad9e668ce2b56" prot="private" virt="non-virtual"><scope>DepthMarking</scope><name>mark_rec</name></member>
+      <member refid="group__schemata_1gad5f3fa885bb5d2be624a26e9aa50dd0b" prot="public" virt="non-virtual"><scope>DepthMarking</scope><name>multiple</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classRhythmTree" kind="class" language="C++" prot="public">
+    <compoundname>RhythmTree</compoundname>
+    <derivedcompoundref refid="classPointedRhythmTree" prot="public" virt="non-virtual">PointedRhythmTree</derivedcompoundref>
+    <includes local="no">RT.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="group__output_1ga774fcd89afe324f01efa6514626dd1cb" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_flag</definition>
+        <argsstring></argsstring>
+        <name>dot_flag</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>global variable set if a dot is added in lilydot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="126" column="1" bodyfile="src/output/RT.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classRhythmTree_1a172a0c68e4b6adace9c025c9159040e2" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long RhythmTree::_label</definition>
+        <argsstring></argsstring>
+        <name>_label</name>
+        <briefdescription>
+<para>for leaves, it is the positive integer stored in the leaf; for inner tree, it is a negative integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>long int : for comparison with state_t = size_t = unsigned long (=label of terminal <ref refid="classRun" kindref="compound">Run</ref>) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="141" column="1" bodyfile="src/output/RT.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRhythmTree_1ac11078e58a8ca630953768bc6dc4d74e" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> * &gt;</type>
+        <definition>std::vector&lt;RhythmTree*&gt; RhythmTree::_children</definition>
+        <argsstring></argsstring>
+        <name>_children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="143" column="1" bodyfile="src/output/RT.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1gac7614a6239a4917c771641dfdfd597ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>RhythmTree</name>
+        <briefdescription>
+<para>empty inner tree (not terminal) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the child list must be completed with add </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="71" column="1" bodyfile="src/output/RT.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac868521df843e116ef04bcfa52405d01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>(label_t lab)</argsstring>
+        <name>RhythmTree</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+<para>single leaf rhythm tree (terminal tree) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="75" column="1" bodyfile="src/output/RT.cpp" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga058c6d59881e1be259594165d19c8588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>(const string &amp;)</argsstring>
+        <name>RhythmTree</name>
+        <param>
+          <type>const string &amp;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>extract RT from string description </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="78" column="1" bodyfile="src/output/RT.cpp" bodystart="100" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa58da0cc1e6a1848d19c7276eaeb23ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::~RhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~RhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="80" column="1" bodyfile="src/output/RT.cpp" bodystart="217" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4f875cf76d3ebc8270a471ef57e93ddd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::terminal</definition>
+        <argsstring>() const</argsstring>
+        <name>terminal</name>
+        <briefdescription>
+<para>single node tree </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="83" column="1" bodyfile="src/output/RT.cpp" bodystart="229" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classRhythmTree_1a67a3180bb74745a6e81f88835a74f740" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::inner</definition>
+        <argsstring>() const</argsstring>
+        <name>inner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="85" column="1" bodyfile="src/output/RT.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga813a6feea3e6aa565fa0aed29e970a4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t RhythmTree::arity</definition>
+        <argsstring>() const</argsstring>
+        <name>arity</name>
+        <briefdescription>
+<para>arity of root node (0 for terminal tree) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="88" column="1" bodyfile="src/output/RT.cpp" bodystart="264" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga130dd34b9f3e0db4ad4f185181895dbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>RhythmTree * RhythmTree::child</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>child</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the ith child of this tree </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be inner (not terminal) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="92" column="1" bodyfile="src/output/RT.cpp" bodystart="273" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga40e2aa462ed42fa46d3beafca9dbc350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t RhythmTree::label</definition>
+        <argsstring>() const</argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>label for terminal node </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="96" column="1" bodyfile="src/output/RT.cpp" bodystart="236" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1ca015dec36fa32ff6d66aaad10f4eb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>continuation</name>
+        <briefdescription>
+<para>label of terminal node is a continuation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="100" column="1" bodyfile="src/output/RT.cpp" bodystart="243" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabd793b78f71fb62edb13497e0a13f48c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>single_event</name>
+        <briefdescription>
+<para>label of terminal node is a single event (1 note / rest, no grace note). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="104" column="1" bodyfile="src/output/RT.cpp" bodystart="250" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaaaf06fe2227a6598b109a72d89afa8d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t RhythmTree::nbgn</definition>
+        <argsstring>() const</argsstring>
+        <name>nbgn</name>
+        <briefdescription>
+<para>number of grace notes in this terminal node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="108" column="1" bodyfile="src/output/RT.cpp" bodystart="257" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafdda5b1a3c16c8e64337c26bcdb368e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::reducible</definition>
+        <argsstring>() const</argsstring>
+        <name>reducible</name>
+        <briefdescription>
+<para>this tree contains a subtree of the form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">p(n,<sp/>o,...,o)<sp/></highlight></codeline>
+</programlisting> or <programlisting><codeline><highlight class="normal">p(o,...,o)<sp/></highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="113" column="1" bodyfile="src/output/RT.cpp" bodystart="291" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga5749469b3ff6ec88fcab75961e7d278c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::add</definition>
+        <argsstring>(RhythmTree *)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>add a subtree. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must not be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="117" column="1" bodyfile="src/output/RT.cpp" bodystart="282" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafcd0d23d1cdb8cd92fbaec2fac51d259" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lily</definition>
+        <argsstring>(int depth, bool tie=false) const</argsstring>
+        <name>lily</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tie</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>LilyPond format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lilypond output for RT <ulink url="http://lilypond.org">http://lilypond.org</ulink>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="120" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="17" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga93aca0f691a35a081d51eaad06e8ce50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lilydot</definition>
+        <argsstring>(int depth)</argsstring>
+        <name>lilydot</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>LilyPond format with dots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="123" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2c194b384127267b8cfed2c41e70d338" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::APTED</definition>
+        <argsstring>() const</argsstring>
+        <name>APTED</name>
+        <briefdescription>
+<para>format for Tree Edit <ref refid="classDistance" kindref="compound">Distance</ref> Salzburg library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>RT output format for Tree Edit <ref refid="classDistance" kindref="compound">Distance</ref> library APTED algorithm of M. Pawlik and N. Augsten <ulink url="http://tree-edit-distance.dbresearch.uni-salzburg.at">http://tree-edit-distance.dbresearch.uni-salzburg.at</ulink>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="129" column="1" bodyfile="src/output/APTED.cpp" bodystart="18" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac6764688e24fe9b942464a9c2053ee92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="131" column="1" bodyfile="src/output/RT.cpp" bodystart="384" bodyend="434"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classRhythmTree_1abf182cfbb8d6fd109d144104344199e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const RhythmTree &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="133" column="1" bodyfile="src/output/RT.cpp" bodystart="436" bodyend="441"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__output_1gaf723874e871dc01efb036ccbac07c32b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tail_redex</definition>
+        <argsstring>() const</argsstring>
+        <name>tail_redex</name>
+        <briefdescription>
+<para>inner and the children list is of the form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">(_,<sp/>o,...,o)<sp/></highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="147" column="1" bodyfile="src/output/RT.cpp" bodystart="310" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga799761965ae00bb24e16ebb98f66995a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tail_reducible</definition>
+        <argsstring>() const</argsstring>
+        <name>tail_reducible</name>
+        <briefdescription>
+<para>inner and one of the children 1..a is reducible. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="150" column="1" bodyfile="src/output/RT.cpp" bodystart="328" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3933e83072d4e7c3bb3d19d25df90b47" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tie</definition>
+        <argsstring>() const</argsstring>
+        <name>tie</name>
+        <briefdescription>
+<para>return whether this tree is a continuation (a leaf). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="155" column="1" bodyfile="src/output/RT.cpp" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafb30d2c520e4c5e8600ae3a58abf9c72" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::binary</definition>
+        <argsstring>() const</argsstring>
+        <name>binary</name>
+        <briefdescription>
+<para>return whether this tree is binary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="158" column="1" bodyfile="src/output/RT.cpp" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gacd73e0032e3dd22320819c4cda3d60a4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tied</definition>
+        <argsstring>() const</argsstring>
+        <name>tied</name>
+        <briefdescription>
+<para>return whether the leftmost innermost leaf is a tie (continuation). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="161" column="1" bodyfile="src/output/RT.cpp" bodystart="348" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9aebdccd4ce1d1029d03f4ec38c101c4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::second_tied</definition>
+        <argsstring>() const</argsstring>
+        <name>second_tied</name>
+        <briefdescription>
+<para>return whether this tree is binary and the second child is tied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="164" column="1" bodyfile="src/output/RT.cpp" bodystart="366" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac785e6d945ef6e0808132459669ab038" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_after</definition>
+        <argsstring>() const</argsstring>
+        <name>dot_after</name>
+        <briefdescription>
+<para>return whether this tree is binary and the left son is a dot (continuation after the dotted note). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="168" column="1" bodyfile="src/output/RT.cpp" bodystart="372" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2079bd534900d0b10e74682e404230b1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_before</definition>
+        <argsstring>() const</argsstring>
+        <name>dot_before</name>
+        <briefdescription>
+<para>return whether this tree is binary and the right son is a dot (continuation before the dotted note). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="172" column="1" bodyfile="src/output/RT.cpp" bodystart="378" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga89f5bf140b902f886be124d620ac8474" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lilydot</definition>
+        <argsstring>(int depth, bool tie, bool dot, bool ignore_first, bool ignore_second)</argsstring>
+        <name>lilydot</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tie</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dot</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_first</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_second</declname>
+        </param>
+        <briefdescription>
+<para>LilyPond format with dots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="175" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="104" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__output_1gafd2cba61567f7096dc5050bca22cf4f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_space</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_space</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="182" column="1" bodyfile="src/output/RT.cpp" bodystart="156" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga70f6b23946fcfd1823b9fb3fde9506a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_tree</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_tree</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="186" column="1" bodyfile="src/output/RT.cpp" bodystart="116" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1b87a8ab06f066092cf5d9dac5a5497c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_int</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_int</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="190" column="1" bodyfile="src/output/RT.cpp" bodystart="167" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac45127942de2570f415b8e4dd0c5c20c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_list</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_list</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="194" column="1" bodyfile="src/output/RT.cpp" bodystart="183" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rhythm Trees. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>for the value of leaf labels <simplesect kind="see"><para>WTA.hpp </para>
+</simplesect>
+<simplesect kind="see"><para>Label.hpp </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="364">
+        <label>RhythmTree</label>
+        <link refid="classRhythmTree"/>
+      </node>
+      <node id="365">
+        <label>PointedRhythmTree</label>
+        <link refid="classPointedRhythmTree"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/output/RT.hpp" line="66" column="1" bodyfile="src/output/RT.hpp" bodystart="65" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classRhythmTree_1ac11078e58a8ca630953768bc6dc4d74e" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>_children</name></member>
+      <member refid="classRhythmTree_1a172a0c68e4b6adace9c025c9159040e2" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>_label</name></member>
+      <member refid="group__output_1ga5749469b3ff6ec88fcab75961e7d278c" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>add</name></member>
+      <member refid="group__output_1ga2c194b384127267b8cfed2c41e70d338" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>APTED</name></member>
+      <member refid="group__output_1ga813a6feea3e6aa565fa0aed29e970a4e" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>arity</name></member>
+      <member refid="group__output_1gafb30d2c520e4c5e8600ae3a58abf9c72" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>binary</name></member>
+      <member refid="group__output_1ga130dd34b9f3e0db4ad4f185181895dbd" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>child</name></member>
+      <member refid="group__output_1ga1ca015dec36fa32ff6d66aaad10f4eb0" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>continuation</name></member>
+      <member refid="group__output_1gac785e6d945ef6e0808132459669ab038" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>dot_after</name></member>
+      <member refid="group__output_1ga2079bd534900d0b10e74682e404230b1" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>dot_before</name></member>
+      <member refid="group__output_1ga774fcd89afe324f01efa6514626dd1cb" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>dot_flag</name></member>
+      <member refid="classRhythmTree_1a67a3180bb74745a6e81f88835a74f740" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>inner</name></member>
+      <member refid="group__output_1ga40e2aa462ed42fa46d3beafca9dbc350" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>label</name></member>
+      <member refid="group__output_1gafcd0d23d1cdb8cd92fbaec2fac51d259" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>lily</name></member>
+      <member refid="group__output_1ga93aca0f691a35a081d51eaad06e8ce50" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>lilydot</name></member>
+      <member refid="group__output_1ga89f5bf140b902f886be124d620ac8474" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>lilydot</name></member>
+      <member refid="group__output_1gaaaf06fe2227a6598b109a72d89afa8d7" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>nbgn</name></member>
+      <member refid="classRhythmTree_1abf182cfbb8d6fd109d144104344199e2" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__output_1ga1b87a8ab06f066092cf5d9dac5a5497c" prot="private" virt="non-virtual"><scope>RhythmTree</scope><name>read_int</name></member>
+      <member refid="group__output_1gac45127942de2570f415b8e4dd0c5c20c" prot="private" virt="non-virtual"><scope>RhythmTree</scope><name>read_list</name></member>
+      <member refid="group__output_1gafd2cba61567f7096dc5050bca22cf4f1" prot="private" virt="non-virtual"><scope>RhythmTree</scope><name>read_space</name></member>
+      <member refid="group__output_1ga70f6b23946fcfd1823b9fb3fde9506a3" prot="private" virt="non-virtual"><scope>RhythmTree</scope><name>read_tree</name></member>
+      <member refid="group__output_1gafdda5b1a3c16c8e64337c26bcdb368e9" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>reducible</name></member>
+      <member refid="group__output_1gac7614a6239a4917c771641dfdfd597ab" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1gac868521df843e116ef04bcfa52405d01" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1ga058c6d59881e1be259594165d19c8588" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>RhythmTree</name></member>
+      <member refid="group__output_1ga9aebdccd4ce1d1029d03f4ec38c101c4" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>second_tied</name></member>
+      <member refid="group__output_1gabd793b78f71fb62edb13497e0a13f48c" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>single_event</name></member>
+      <member refid="group__output_1gaf723874e871dc01efb036ccbac07c32b" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>tail_redex</name></member>
+      <member refid="group__output_1ga799761965ae00bb24e16ebb98f66995a" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>tail_reducible</name></member>
+      <member refid="group__output_1ga4f875cf76d3ebc8270a471ef57e93ddd" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>terminal</name></member>
+      <member refid="group__output_1ga3933e83072d4e7c3bb3d19d25df90b47" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>tie</name></member>
+      <member refid="group__output_1gacd73e0032e3dd22320819c4cda3d60a4" prot="protected" virt="non-virtual"><scope>RhythmTree</scope><name>tied</name></member>
+      <member refid="group__output_1gac6764688e24fe9b942464a9c2053ee92" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>to_string</name></member>
+      <member refid="group__output_1gaa58da0cc1e6a1848d19c7276eaeb23ee" prot="public" virt="non-virtual"><scope>RhythmTree</scope><name>~RhythmTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

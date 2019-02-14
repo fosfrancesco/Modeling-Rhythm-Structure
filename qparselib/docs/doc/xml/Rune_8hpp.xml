@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Rune_8hpp" kind="file" language="C++">
+    <compoundname>Rune.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="State_8hpp" local="yes">State.hpp</includes>
+    <includes refid="Transition_8hpp" local="yes">Transition.hpp</includes>
+    <includes refid="Weight_8hpp" local="yes">Weight.hpp</includes>
+    <includes refid="DurationList_8hpp" local="yes">DurationList.hpp</includes>
+    <includes refid="Environment_8hpp" local="yes">Environment.hpp</includes>
+    <includes local="yes">Rune.tpp</includes>
+    <includedby refid="Parser_8hpp" local="yes">src/parsers/Parser.hpp</includedby>
+    <includedby refid="Atable_8hpp" local="yes">src/table/Atable.hpp</includedby>
+    <includedby refid="Record_8hpp" local="yes">src/table/Record.hpp</includedby>
+    <includedby refid="Brecord_8hpp" local="yes">src/table/Brecord.hpp</includedby>
+    <includedby refid="Krecord_8hpp" local="yes">src/table/Krecord.hpp</includedby>
+    <includedby refid="Table_8hpp" local="yes">src/table/Table.hpp</includedby>
+    <includedby refid="equiv_8cpp" local="yes">src/targets/equiv/equiv.cpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="544">
+        <label>assert.h</label>
+      </node>
+      <node id="542">
+        <label>src/table/Rune.hpp</label>
+        <link refid="Rune_8hpp"/>
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="546" relation="include">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>Rune.tpp</label>
+      </node>
+      <node id="545">
+        <label>vector</label>
+      </node>
+      <node id="543">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classRun" prot="public">Run</innerclass>
+    <innerclass refid="classRun" prot="public">Run</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__table_1gab0f46315460c3a5ebd31a85b96a5bd52" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>std::function&lt; bool(const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *, const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *)&gt;</type>
+        <definition>using RunCompare =  std::function&lt;bool(const Run&lt;P&gt;*, const Run&lt;P&gt;*)&gt;</definition>
+        <argsstring></argsstring>
+        <name>RunCompare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="33" column="1" bodyfile="src/table/Rune.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__table_1gac5d18d8c7a8e65bf58d4bc2446202f4f" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>RunCompare&lt; P &gt;</type>
+        <definition>RunCompare&lt;P&gt; weightMin</definition>
+        <argsstring></argsstring>
+        <name>weightMin</name>
+        <initializer>=
+[](const <ref refid="classRun" kindref="compound">Run</ref>&lt;P&gt;* lhs, const <ref refid="classRun" kindref="compound">Run</ref>&lt;P&gt;* rhs)
+{
+    assert (lhs);
+    assert (rhs);
+    if (rhs-&gt;partial())
+    {
+        return false;
+    }
+    else
+    {
+        if (lhs-&gt;partial()) return true;
+        return (lhs-&gt;weight &gt; rhs-&gt;weight);
+    }
+}</initializer>
+        <briefdescription>
+<para>one ordering for k-best to select the min weight <ref refid="classRun" kindref="compound">Run</ref> where partial run is considered to be the lowest. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="316" column="1" bodyfile="src/table/Rune.hpp" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__table_1ga27170c8c3df71e6854ca3becc034ea09" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>RunCompare&lt; P &gt;</type>
+        <definition>RunCompare&lt;P&gt; weightMax</definition>
+        <argsstring></argsstring>
+        <name>weightMax</name>
+        <initializer>=
+[](const <ref refid="classRun" kindref="compound">Run</ref>&lt;P&gt;* lhs, const <ref refid="classRun" kindref="compound">Run</ref>&lt;P&gt;* rhs)
+{
+    assert (lhs);
+    assert (rhs);
+    if (lhs-&gt;partial())
+    {
+        return false;
+        
+        
+    }
+    else
+    {
+        if (rhs-&gt;partial()) return true;
+        else return (lhs-&gt;weight &lt; rhs-&gt;weight);
+    }
+}</initializer>
+        <briefdescription>
+<para>one ordering for k-best to select the max weight run where partial run is considered to be the highest </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="336" column="1" bodyfile="src/table/Rune.hpp" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/Rune.hpp"/>
+  </compounddef>
+</doxygen>

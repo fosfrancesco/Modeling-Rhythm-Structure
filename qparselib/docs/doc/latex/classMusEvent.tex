@@ -1,0 +1,66 @@
+\hypertarget{classMusEvent}{}\section{Mus\+Event Class Reference}
+\label{classMusEvent}\index{MusEvent@{MusEvent}}
+
+
+input events  
+
+
+
+
+{\ttfamily \#include $<$Mus\+Event.\+hpp$>$}
+
+Inheritance diagram for Mus\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMusEvent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Mus\+Event} (int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\item 
+{\bfseries Mus\+Event} (const \mbox{\hyperlink{classMusEvent}{Mus\+Event}} \&)
+\item 
+\mbox{\Hypertarget{classMusEvent_a013a5d979aeac811d74929b41b188762}\label{classMusEvent_a013a5d979aeac811d74929b41b188762}} 
+virtual \mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$ {\bfseries clone} () const =0
+\item 
+\mbox{\Hypertarget{classMusEvent_aa2d6c7ee99cdd95839aee1e5b5df2d92}\label{classMusEvent_aa2d6c7ee99cdd95839aee1e5b5df2d92}} 
+virtual bool {\bfseries is\+Rest} () const =0
+\item 
+\mbox{\Hypertarget{classMusEvent_abf3d0067b2b28275a26223083b745c7c}\label{classMusEvent_abf3d0067b2b28275a26223083b745c7c}} 
+virtual bool {\bfseries is\+Note} () const =0
+\item 
+\mbox{\Hypertarget{classMusEvent_a1a53c7e09246ad1441d26069ff4a9387}\label{classMusEvent_a1a53c7e09246ad1441d26069ff4a9387}} 
+virtual void {\bfseries print} (std\+::ostream \&o) const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusEvent_a8cbcc375091dd31d300993cb41e5c31f}\label{classMusEvent_a8cbcc375091dd31d300993cb41e5c31f}} 
+int {\bfseries number}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int {\bfseries U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY} = 128
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusEvent_ade87c7b11c1a1fdbcd922e08b3eaa3c5}\label{classMusEvent_ade87c7b11c1a1fdbcd922e08b3eaa3c5}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classMusEvent}{Mus\+Event}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input events 
+
+input interface to M\+I\+DI, Open\+Music, \mbox{\hyperlink{classMEI}{M\+EI}} etc keep track of input event list event are not stored internaly (in \mbox{\hyperlink{classWTA}{W\+TA}}). we just preserve the order. and remap afterwards to input event list (with dfs). abstract class to built polymorphic event lists (in input or output).
+
+can be downcasted to descendant class with dynamic\+\_\+cast for using particular operations 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Mus\+Event.\+hpp\item 
+src/segment/Mus\+Event.\+cpp\end{DoxyCompactItemize}

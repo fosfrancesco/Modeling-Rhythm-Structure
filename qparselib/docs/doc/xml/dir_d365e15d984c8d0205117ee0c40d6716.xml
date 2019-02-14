@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_d365e15d984c8d0205117ee0c40d6716" kind="dir">
+    <compoundname>src/input</compoundname>
+    <innerfile refid="InputSegmentMIDI_8cpp">InputSegmentMIDI.cpp</innerfile>
+    <innerfile refid="InputSegmentMIDI_8hpp">InputSegmentMIDI.hpp</innerfile>
+    <innerfile refid="InputSegmentSerial_8cpp">InputSegmentSerial.cpp</innerfile>
+    <innerfile refid="InputSegmentSerial_8hpp">InputSegmentSerial.hpp</innerfile>
+    <innerfile refid="Schema_8cpp">Schema.cpp</innerfile>
+    <innerfile refid="WTAFile_8cpp">WTAFile.cpp</innerfile>
+    <innerfile refid="WTAFile_8hpp">WTAFile.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/input/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,299 @@
+<REAPER_PROJECT 0.1 "5.70/x64" 1529056349
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 1
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0
+  MAXPROJLEN 0 600
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 36
+  ZOOM 100 0 0
+  VZOOMEX 6
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "" ""
+  <RECORD_CFG
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN ""
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 0
+  DEFPITCHMODE 589824
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+  >
+  LOCK 1
+  <METRONOME 7 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+  >
+  GLOBAL_AUTO -1
+  TEMPO 60 2 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 36 0
+  SELECTION2 36 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    ACT 1 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {7E56F189-23B9-4CA4-A508-80C6AC6D14AC}
+    NAME "4Front Piano Module"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 1 5088 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {7E56F189-23B9-4CA4-A508-80C6AC6D14AC}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 24 52 655 408
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <VST "VSTi: 4Front Piano Module (4Front)" "4Front Piano x64.dll" 0 "" 877023310
+        TlBGNO5e7f4AAAAAAgAAAAEAAAAAAAAAAgAAAAAAAAAEAAAAAQAAAAAAEAA=
+        AAAAgA==
+        AERlZmF1bHQAEAAAAA==
+      >
+      PRESETNAME Default
+      FLOATPOS 0 0 0 0
+      FXID {AD2062A0-1222-48F2-AF7E-2DD99A496667}
+      WAK 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 36
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0
+      MUTE 0
+      SEL 1
+      IGUID {574EBA02-6A00-4E5C-8C83-10DACDA5E2BF}
+      IID 1
+      NAME mozart_duettino_midi.mid
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {878A9536-C970-4295-AD7F-FCD9E25A2592}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        POOLEDEVTS {67B3ED79-C4A8-422B-9662-1FFEF76E80CB}
+        E 0 90 39 67
+        E 480 90 39 00
+        E 0 90 39 5b
+        E 240 90 39 00
+        E 0 90 3b 5a
+        E 240 90 3b 00
+        E 0 90 3d 54 -32
+        E 480 90 3d 00 -37
+        E 0 90 39 58 -33
+        E 480 90 39 00 -55
+        E 0 90 36 53 -47
+        E 480 90 36 00 -58
+        E 0 90 3b 54 -57
+        E 1440 90 3b 00
+        E 0 90 38 54 -42
+        E 480 90 38 00
+        E 0 90 38 53 -38
+        E 240 90 38 00 -136
+        E 0 90 38 50 -24
+        E 240 90 38 00 -41
+        E 0 90 39 62 -39
+        E 480 90 39 00 -87
+        E 0 90 3b 54 -89
+        E 480 90 3b 00 -61
+        E 0 90 34 4d
+        E 960 90 34 00
+        E 960 90 39 5d
+        E 480 90 39 00
+        E 0 90 39 59 -17
+        E 240 90 39 00 -19
+        E 0 90 3b 5f -33
+        E 240 90 3b 00 -8
+        E 0 90 3d 52 -8
+        E 480 90 3d 00 -35
+        E 0 90 39 5d -18
+        E 480 90 39 00 35
+        E 0 90 36 52 -27
+        E 480 90 36 00 -19
+        E 0 90 3b 60 -52
+        E 960 90 3b 00 -12
+        E 0 90 39 55
+        E 480 90 39 00
+        E 0 90 39 5b
+        E 0 90 38 56 -2
+        E 120 90 39 00
+        E 360 90 38 00 31
+        E 0 90 36 4f 11
+        E 240 90 36 00 -4
+        E 0 90 34 53 -13
+        E 240 90 34 00 -120
+        E 0 90 34 54 -8
+        E 480 90 34 00 17
+        E 0 90 36 50 -7
+        E 240 90 36 00 -20
+        E 0 90 38 4c -23
+        E 240 90 38 00 4
+        E 0 90 39 54 -16
+        E 960 90 39 00 25
+        E 720 90 40 56 -44
+        E 240 90 40 00 -12
+        E 0 90 45 60 -30
+        E 720 90 45 00 -77
+        E 0 90 47 5f -96
+        E 240 90 47 00 -70
+        E 0 90 49 4d -71
+        E 480 90 49 00
+        E 0 90 45 50 -40
+        E 480 90 45 00 -10
+        E 0 90 42 4d -6
+        E 480 90 42 00 26
+        E 0 90 47 53 -15
+        E 960 90 47 00 -42
+        E 0 90 45 53 -53
+        E 480 90 45 00 -21
+        E 0 90 44 4e
+        E 720 90 44 00
+        E 0 90 44 55 -54
+        E 240 90 44 00 -23
+        E 0 90 45 5d -60
+        E 480 90 45 00 -11
+        E 0 90 47 5e
+        E 480 90 47 00
+        E 0 90 47 50
+        E 0 90 40 4f
+        E 120 90 47 00
+        E 840 90 40 00
+        E 720 90 40 67 -10
+        E 240 90 40 00 34
+        E 0 90 45 5d 10
+        E 720 90 45 00 -35
+        E 0 90 47 58 -53
+        E 240 90 47 00 -13
+        E 0 90 49 4c -27
+        E 480 90 49 00 -6
+        E 0 90 45 56 -44
+        E 480 90 45 00 -24
+        E 0 90 42 4c -35
+        E 480 90 42 00 -20
+        E 0 90 47 55 -63
+        E 960 90 47 00 -12
+        E 0 90 45 54
+        E 480 90 45 00
+        E 0 90 45 67 -27
+        E 240 90 45 00 21
+        E 0 90 44 50 -36
+        E 240 90 44 00 -34
+        E 0 90 42 4b -51
+        E 240 90 42 00 -52
+        E 0 90 40 59 -75
+        E 240 90 40 00 -157
+        E 0 90 40 65 -66
+        E 480 90 40 00 -55
+        E 0 90 42 4d -84
+        E 240 90 42 00 -88
+        E 0 90 44 4f
+        E 240 90 44 00
+        E 0 90 45 4d -81
+        E 240 90 45 00 -80
+        E 0 90 49 53 -92
+        E 240 90 49 00 -86
+        E 0 90 4c 60 -89
+        E 960 90 4c 00 -62
+        E 0 90 47 5d -68
+        E 480 90 47 00 -9
+        E 0 90 4a 58 -31
+        E 240 90 4a 00 19
+        E 0 90 49 52 -29
+        E 240 90 49 00 -20
+        E 0 90 47 55 -48
+        E 240 90 47 00 -79
+        E 0 90 45 54 -76
+        E 240 90 45 00 -150
+        E 0 90 45 50 -31
+        E 480 90 45 00 5
+        E 0 90 49 4f -37
+        E 240 90 49 00 -9
+        E 0 90 47 58 -22
+        E 240 90 47 00
+        E 0 90 45 50
+        E 960 90 45 00
+        E 960 b0 7b 00
+        GUID {7DD3C9EF-0530-4D12-9FA4-1C6CB093DEE4}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 2
+        VELLANE -1 100 0
+        CFGEDITVIEW 28600.52 0.193307 49 20 0 -1 0 0 0 0.5
+        KEYSNAP 0
+        TRACKSEL 0
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+        CFGEDIT 1 1 0 1 0 0 1 1 1 1 1 0.125 -8 -8 1544 832 0 0 0 0 0 0 0 0 0 0.5 0 0 1 64
+      >
+    >
+  >
+>

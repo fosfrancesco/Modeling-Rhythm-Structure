@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="DurationTree_8hpp" kind="file" language="C++">
+    <compoundname>DurationTree.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="ValueList_8hpp" local="yes">ValueList.hpp</includes>
+    <includedby refid="DurationTree_8cpp" local="yes">src/output/DurationTree.cpp</includedby>
+    <includedby refid="ValueWTA_8hpp" local="yes">src/schemata/ValueWTA.hpp</includedby>
+    <incdepgraph>
+      <node id="103">
+        <label>src/output/DurationTree.hpp</label>
+        <link refid="DurationTree_8hpp"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classDurationTree" prot="public">DurationTree</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/DurationTree.hpp"/>
+  </compounddef>
+</doxygen>

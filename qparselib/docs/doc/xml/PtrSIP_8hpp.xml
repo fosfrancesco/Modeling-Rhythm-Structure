@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="PtrSIP_8hpp" kind="file" language="C++">
+    <compoundname>PtrSIP.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="PerformanceModel_8hpp" local="yes">PerformanceModel.hpp</includes>
+    <includes refid="Distance_8hpp" local="yes">Distance.hpp</includes>
+    <includes refid="PtrSI_8hpp" local="yes">PtrSI.hpp</includes>
+    <includedby refid="Parser1bar1bestSIP_8hpp" local="yes">src/parsers/Parser1bar1bestSIP.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPflat_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPflat.hpp</includedby>
+    <includedby refid="PtrSIP_8cpp" local="yes">src/table/PtrSIP.cpp</includedby>
+    <includedby refid="PtrSKIP_8hpp" local="yes">src/table/PtrSKIP.hpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="520">
+        <label>assert.h</label>
+      </node>
+      <node id="519">
+        <label>string</label>
+      </node>
+      <node id="516">
+        <label>src/table/PtrSIP.hpp</label>
+        <link refid="PtrSIP_8hpp"/>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>iostream</label>
+      </node>
+      <node id="517">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classSIPpointer" prot="public">SIPpointer</innerclass>
+    <innerclass refid="structSIPpointerHasher" prot="public">SIPpointerHasher</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/PtrSIP.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Label_8hpp" kind="file" language="C++">
+    <compoundname>Label.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includedby refid="RT_8hpp" local="yes">src/output/RT.hpp</includedby>
+    <includedby refid="Label_8cpp" local="yes">src/output/Label.cpp</includedby>
+    <includedby refid="PointedRT_8hpp" local="yes">src/output/PointedRT.hpp</includedby>
+    <includedby refid="SerialLabel_8hpp" local="yes">src/output/SerialLabel.hpp</includedby>
+    <includedby refid="WTA_8hpp" local="yes">src/schemata/WTA.hpp</includedby>
+    <includedby refid="Transition_8hpp" local="yes">src/schemata/Transition.hpp</includedby>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="CountingWTA_8hpp" local="yes">src/schemata/CountingWTA.hpp</includedby>
+    <includedby refid="ValueWTA_8hpp" local="yes">src/schemata/ValueWTA.hpp</includedby>
+    <includedby refid="InputSegment_8hpp" local="yes">src/segment/InputSegment.hpp</includedby>
+    <incdepgraph>
+      <node id="111">
+        <label>assert.h</label>
+      </node>
+      <node id="112">
+        <label>vector</label>
+      </node>
+      <node id="110">
+        <label>stdio.h</label>
+      </node>
+      <node id="109">
+        <label>src/output/Label.hpp</label>
+        <link refid="Label_8hpp"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classLabel" prot="public">Label</innerclass>
+    <innerclass refid="classInnerLabel" prot="public">InnerLabel</innerclass>
+    <innerclass refid="classEventLabel" prot="public">EventLabel</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__output_1ga3ff5a8deeeca12e8b6fea9c51eccd987" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LabelKind</name>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987a08d627d21e6424f54671673ff1611d59" prot="public">
+          <name>EVENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987a50b3b7506fcc5435fc762f98a09a6eac" prot="public">
+          <name>TIE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987aed30e52636db1f531e6f826fd49d6773" prot="public">
+          <name>INNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="33" column="1" bodyfile="src/output/Label.hpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__output_1ga22fde970e635fcf63962743b2d5c441d" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t label_t</definition>
+        <argsstring></argsstring>
+        <name>label_t</name>
+        <briefdescription>
+<para>type for concrete and abstract labels </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="24" column="1" bodyfile="src/output/Label.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/Label.hpp"/>
+  </compounddef>
+</doxygen>

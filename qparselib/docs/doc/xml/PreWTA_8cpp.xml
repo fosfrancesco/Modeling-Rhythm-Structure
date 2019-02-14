@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="PreWTA_8cpp" kind="file" language="C++">
+    <compoundname>PreWTA.cpp</compoundname>
+    <includes refid="PreWTA_8hpp" local="yes">PreWTA.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__schemata_1gaf8b99aabcea05e6f7f8b31da07ee3790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const PreState &amp;ps)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.cpp" line="70" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="70" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9bf0c703002e360545ebd943f933fb18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const PreWTA &amp;a)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPreWTA" kindref="compound">PreWTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.cpp" line="377" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="377" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/PreWTA.cpp"/>
+  </compounddef>
+</doxygen>

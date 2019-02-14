@@ -1,0 +1,1061 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classInputSegment" kind="class" language="C++" prot="public">
+    <compoundname>InputSegment</compoundname>
+    <derivedcompoundref refid="classInputSegmentMIDI" prot="public" virt="non-virtual">InputSegmentMIDI</derivedcompoundref>
+    <derivedcompoundref refid="classInputSegmentMono" prot="public" virt="non-virtual">InputSegmentMono</derivedcompoundref>
+    <derivedcompoundref refid="classInputSegmentNogap" prot="public" virt="non-virtual">InputSegmentNogap</derivedcompoundref>
+    <derivedcompoundref refid="classInputSegmentSerial" prot="public" virt="non-virtual">InputSegmentSerial</derivedcompoundref>
+    <includes local="no">InputSegment.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classInputSegment_1ae5267be6a3c036290ee028d032b4c4fc" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double InputSegment::_begin</definition>
+        <argsstring></argsstring>
+        <name>_begin</name>
+        <briefdescription>
+<para>start date (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="270" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInputSegment_1a1c6cb6bc0004bc8fa2a1e4667f861f3e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double InputSegment::_end</definition>
+        <argsstring></argsstring>
+        <name>_end</name>
+        <briefdescription>
+<para>start date (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="273" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInputSegment_1addcc23fc9ea6a3cb342fd2960b5fbc78" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double InputSegment::_len</definition>
+        <argsstring></argsstring>
+        <name>_len</name>
+        <briefdescription>
+<para>length (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="276" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInputSegment_1a0ab26fdbc02f67159a8f619254fa7440" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational InputSegment::_mduration</definition>
+        <argsstring></argsstring>
+        <name>_mduration</name>
+        <briefdescription>
+<para>length (in bars) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>is set at quantization </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="281" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInputSegment_1ac4494ab7de01a9b0f60cdcede78ac847" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;</type>
+        <definition>std::vector&lt;MusPoint&gt; InputSegment::_events</definition>
+        <argsstring></argsstring>
+        <name>_events</name>
+        <briefdescription>
+<para>event list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>polymorphic (mono or poly) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="292" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInputSegment_1a8f5be09886f96f15d6c82a2828bef194" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;</type>
+        <definition>std::vector&lt;MusPoint&gt; InputSegment::_heap</definition>
+        <argsstring></argsstring>
+        <name>_heap</name>
+        <briefdescription>
+<para>floating events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>not in the list but can be linked by events on the list </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="297" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1gaec471ec05052a932b1bb2738bfc8b172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(double b=0, double e=0)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>constructs an empty input segment (no events) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="96" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga0ca7fa41c0dadabbaa112fdde9e48492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(const InputSegment &amp;)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="98" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga58d6af0b8186068f4bc26f58e6e62eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InputSegment::InputSegment</definition>
+        <argsstring>(const InputSegment &amp;s, double b, double e)</argsstring>
+        <name>InputSegment</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>copy and resize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input segment to copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new start date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new end date (in seconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>copy only the events inside the new bounds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="105" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="42" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab8da320feb29d4b009d2e6a37924337e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>InputSegment::~InputSegment</definition>
+        <argsstring>()</argsstring>
+        <name>~InputSegment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="107" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1a78b3f9b3b422ee5f92ba14056a76ccff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+<para>real-time start date (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="110" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1ad81105da6beb534a48a59d9219476732" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rend</definition>
+        <argsstring>() const</argsstring>
+        <name>rend</name>
+        <briefdescription>
+<para>real-time end date (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="113" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1a590310d241cec28ac9b03b6a6708489b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rduration</definition>
+        <argsstring>() const</argsstring>
+        <name>rduration</name>
+        <briefdescription>
+<para>real-time total duration (in seconds) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="116" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1aa5410aeef3d5c6a263424b252eb78511" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational InputSegment::mduration</definition>
+        <argsstring>() const</argsstring>
+        <name>mduration</name>
+        <briefdescription>
+<para>musical total duration (in bars) of segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>will return MUSTIME_UNKNOWN if segment was not quantized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="121" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga05fee2bd8565c3076a6d800e37d7ab63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t InputSegment::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>number of non-floating points in segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="128" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaccf3b9127fc3d068a95af19f46d9052d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::iterator InputSegment::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>iterators to the segment&apos;s contents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="131" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1cc736fda27974f59c2e2dfc44eedf9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::iterator InputSegment::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="132" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaff8f8c77de90a74f028f2e7a6ea32f90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::const_iterator InputSegment::cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="133" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga9eae7fefbf0884764ff6a75fc5fa063b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; MusPoint &gt;::const_iterator InputSegment::cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="134" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5463f900db31be4b7d109e88a710971f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>const MusPoint &amp; InputSegment::point</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>point</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a ref to the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>ith point in this input segment if 0 &lt;= i &lt; input segment size</para>
+</listitem><listitem><para>or the -i-1th floating point if heap size &lt;= i &lt; 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in the above range of values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="140" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="198" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafaa215f8df4e03b3e22c4c5eb3e494ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+        <definition>MusEvent * InputSegment::event</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>event</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the event of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="143" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga7c26187b3e70ea62bd10b9b15284a99a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rdate</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>rdate</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time date (in seconds) of the point of index i </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="147" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafbf05e143d416de49180d2f18a53977b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rduration</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>rduration</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time duration (in seconds) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="151" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5ce66f635c2ab912e0ec9662c5c2ceaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InputSegment::rduration</definition>
+        <argsstring>(const MusPoint &amp;p) const</argsstring>
+        <name>rduration</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>return the real-time duration (in seconds) of the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="155" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="247" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6fce03f54fe517cc9541ea446cd26a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational &amp; InputSegment::mdate</definition>
+        <argsstring>(long i)</argsstring>
+        <name>mdate</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a reference to the musical-time date (in fraction of bar) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="159" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2c16ef8a681bf9fded1dba29c1a84342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational &amp; InputSegment::mduration</definition>
+        <argsstring>(long i)</argsstring>
+        <name>mduration</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return a reference to the musical-time duration (in fraction of bar) of the point of index i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="163" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gabb6224ab371e84d2048f3c9e2692d15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_back</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>add_back</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>insert new timestamped muspoint created from the parameters, at the end of the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The realtime dateof the point must be after the current last point of this segment. </para>
+</simplesect>
+<simplesect kind="return"><para>the index of the inserted point (can be used as link). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="177" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="154" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2c58dc6e5e032dc7fee299be296371e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_back</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>add_back</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="185" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="170" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad44eb7379e181fc4295ee2514a568204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_floating</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>add_floating</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>create new timestamped muspoint from the parameters, and add the the heap of floating points (not in segment). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>(allocated and freed by this segment) <simplesect kind="return"><para>the index of the new point (can be used as link). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="192" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="176" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gabb9443e79fcefd19a5c7b65c4e54102a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long InputSegment::add_floating</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>add_floating</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="200" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gae75db088893a7cfc719ec393e09d7ece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::close</definition>
+        <argsstring>(double e)</argsstring>
+        <name>close</name>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>set end date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="206" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1a2aa5d8948f3ac162a770bc84bb23ca2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InputSegment::quantized</definition>
+        <argsstring>() const</argsstring>
+        <name>quantized</name>
+        <briefdescription>
+<para>quantization has been applied at least once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="209" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="209" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga42c65e4989c84fbce42115d8e7813f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void InputSegment::quantize</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p)</argsstring>
+        <name>quantize</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>set the musical time date and duration of events in this given input segment, according to the best run for p in given table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>ptr type P must have interval. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical dates and durations of events in this segment will be changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="218" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab4c42d088ce3d170b7899712789ab464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t InputSegment::quantizu</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p, size_t b=0)</argsstring>
+        <name>quantizu</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>set the musical time date and duration of events in this given input segment, according to the best run for p in given table, starting from point number b in interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the next point of input segment with musical date and duration yet unset after processing p. </para>
+</simplesect>
+<simplesect kind="warning"><para>ptr type P must have interval. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical date of events must be unknown in seg. </para>
+</simplesect>
+<simplesect kind="warning"><para>all the musical durations of events must be unknown in seg.</para>
+</simplesect>
+<xrefsect id="todo_1_todo000024"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR (replaced by quantize) </para>
+</xrefdescription></xrefsect></para>
+<para><xrefsect id="todo_1_todo000023"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="233" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="333" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga2d78677ab3ea44ae91034c4e312e778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::respell</definition>
+        <argsstring>(int k=0)</argsstring>
+        <name>respell</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>pitch spelling. unwindowed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this segment must have been quantized. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="237" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="320" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gac79787254008e05d9f54226d93dcb0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::respell</definition>
+        <argsstring>(Rational ws, int k=0)</argsstring>
+        <name>respell</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>pitch spelling with a sliding window of given musical duration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this segment must have been quantized. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="242" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="379" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classInputSegment_1a3989ef5c44913cb1896920916cdcfcf8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool InputSegment::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>return wether the segment has the type of the code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>type <ref refid="classInputSegment" kindref="compound">InputSegment</ref>: plain <ref refid="classInputSegment" kindref="compound">InputSegment</ref> imported from MIDI file (or text) without filters. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="254" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="254" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga623c2367191018ecac046e7e11f14976" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+<para>print size to output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="261" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="385" bodyend="393"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classInputSegment_1ad79274ec4d86002559d8542afb80e5a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const InputSegment &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> &amp;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>write segment content to output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="258" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="396" bodyend="401"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__segment_1ga2dbfcbf9664a10c1245e298b9257d5cd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>MusPoint &amp; InputSegment::ncpoint</definition>
+        <argsstring>(long i)</argsstring>
+        <name>ncpoint</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>same as point but not const. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="300" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="217" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga82a64bae54200b634bc42ac06dc7a916" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InputSegment::check_index</definition>
+        <argsstring>(long i) const</argsstring>
+        <name>check_index</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="302" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="132" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga43310a16681e2241b20da4b68de9f35b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputSegment::link</definition>
+        <argsstring>(long i, long j)</argsstring>
+        <name>link</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>the event of index i is linked to the event of index j. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a valid index, </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a valid and not NULL index, </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>both i and j can be in heap (negative index). </para>
+</simplesect>
+<simplesect kind="warning"><para>the point at i must not be linked (NULL link index). </para>
+</simplesect>
+<simplesect kind="warning"><para>the realtime date of i must be &lt;= realtime date of j (if not NULL). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="311" column="1" bodyfile="src/segment/InputSegment.cpp" bodystart="145" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__segment_1ga8c7a48cd8c319c2d5697b57ea2c4d733" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class P</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t InputSegment::quantize_assert</definition>
+        <argsstring>(Atable&lt; P &gt; *table, const P &amp;p, size_t b)</argsstring>
+        <name>quantize_assert</name>
+        <param>
+          <type><ref refid="classAtable" kindref="compound">Atable</ref>&lt; P &gt; *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/InputSegment.hpp" line="315" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="352" bodyend="455"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>intermediate representation for input performance data (sequence of timestamped events). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>an input segment is made of:<itemizedlist>
+<listitem><para>a time interval containing some timed events (muspoints), always sorted by increasing realtime date (vector of events).</para>
+</listitem><listitem><para>a heap of floating points.</para>
+</listitem></itemizedlist>
+</para>
+<para>The links in points are indexes in the input segment, where an index is a unique identifier of a point in either of the two above structures.</para>
+<para>The realtime duration of a linked point is the difference of realtime dates (between the link and the point). the realtime duration of a point without link (with unknown link) is zero.</para>
+<para><xrefsect id="todo_1_todo000022"><xreftitle>Todo</xreftitle><xrefdescription><para>do the same think with musical time duration. </para>
+<para>suppr. samplestosec </para>
+<para>suppr. member _res (resolution) </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="109">
+        <label>InputSegmentNogap</label>
+        <link refid="classInputSegmentNogap"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>InputSegment</label>
+        <link refid="classInputSegment"/>
+      </node>
+      <node id="110">
+        <label>InputSegmentSerial</label>
+        <link refid="classInputSegmentSerial"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>InputSegmentMIDI</label>
+        <link refid="classInputSegmentMIDI"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>InputSegmentMono</label>
+        <link refid="classInputSegmentMono"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="111">
+        <label>InputSegment</label>
+        <link refid="classInputSegment"/>
+        <childnode refid="112" relation="usage">
+          <edgelabel>_mduration</edgelabel>
+        </childnode>
+      </node>
+      <node id="112">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/InputSegment.hpp" line="90" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="89" bodyend="317"/>
+    <listofallmembers>
+      <member refid="classInputSegment_1ae5267be6a3c036290ee028d032b4c4fc" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_begin</name></member>
+      <member refid="classInputSegment_1a1c6cb6bc0004bc8fa2a1e4667f861f3e" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_end</name></member>
+      <member refid="classInputSegment_1ac4494ab7de01a9b0f60cdcede78ac847" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_events</name></member>
+      <member refid="classInputSegment_1a8f5be09886f96f15d6c82a2828bef194" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_heap</name></member>
+      <member refid="classInputSegment_1addcc23fc9ea6a3cb342fd2960b5fbc78" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_len</name></member>
+      <member refid="classInputSegment_1a0ab26fdbc02f67159a8f619254fa7440" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>_mduration</name></member>
+      <member refid="group__segment_1gabb6224ab371e84d2048f3c9e2692d15d" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>add_back</name></member>
+      <member refid="group__segment_1ga2c58dc6e5e032dc7fee299be296371e4" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>add_back</name></member>
+      <member refid="group__segment_1gad44eb7379e181fc4295ee2514a568204" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>add_floating</name></member>
+      <member refid="group__segment_1gabb9443e79fcefd19a5c7b65c4e54102a" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>add_floating</name></member>
+      <member refid="group__segment_1gaccf3b9127fc3d068a95af19f46d9052d" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>begin</name></member>
+      <member refid="group__segment_1gaff8f8c77de90a74f028f2e7a6ea32f90" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>cbegin</name></member>
+      <member refid="group__segment_1ga9eae7fefbf0884764ff6a75fc5fa063b" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>cend</name></member>
+      <member refid="group__segment_1ga82a64bae54200b634bc42ac06dc7a916" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>check_index</name></member>
+      <member refid="group__segment_1gae75db088893a7cfc719ec393e09d7ece" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>close</name></member>
+      <member refid="group__segment_1ga1cc736fda27974f59c2e2dfc44eedf9e" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>end</name></member>
+      <member refid="group__segment_1gafaa215f8df4e03b3e22c4c5eb3e494ca" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>event</name></member>
+      <member refid="classInputSegment_1a3989ef5c44913cb1896920916cdcfcf8" prot="public" virt="virtual"><scope>InputSegment</scope><name>hasType</name></member>
+      <member refid="group__segment_1gaec471ec05052a932b1bb2738bfc8b172" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>InputSegment</name></member>
+      <member refid="group__segment_1ga0ca7fa41c0dadabbaa112fdde9e48492" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>InputSegment</name></member>
+      <member refid="group__segment_1ga58d6af0b8186068f4bc26f58e6e62eef" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>InputSegment</name></member>
+      <member refid="group__segment_1ga43310a16681e2241b20da4b68de9f35b" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>link</name></member>
+      <member refid="group__segment_1ga6fce03f54fe517cc9541ea446cd26a50" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>mdate</name></member>
+      <member refid="classInputSegment_1aa5410aeef3d5c6a263424b252eb78511" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>mduration</name></member>
+      <member refid="group__segment_1ga2c16ef8a681bf9fded1dba29c1a84342" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>mduration</name></member>
+      <member refid="group__segment_1ga2dbfcbf9664a10c1245e298b9257d5cd" prot="protected" virt="non-virtual"><scope>InputSegment</scope><name>ncpoint</name></member>
+      <member refid="classInputSegment_1ad79274ec4d86002559d8542afb80e5a7" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga5463f900db31be4b7d109e88a710971f" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>point</name></member>
+      <member refid="group__segment_1ga623c2367191018ecac046e7e11f14976" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>print</name></member>
+      <member refid="group__segment_1ga42c65e4989c84fbce42115d8e7813f8e" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>quantize</name></member>
+      <member refid="group__segment_1ga8c7a48cd8c319c2d5697b57ea2c4d733" prot="private" virt="non-virtual"><scope>InputSegment</scope><name>quantize_assert</name></member>
+      <member refid="classInputSegment_1a2aa5d8948f3ac162a770bc84bb23ca2f" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>quantized</name></member>
+      <member refid="group__segment_1gab4c42d088ce3d170b7899712789ab464" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>quantizu</name></member>
+      <member refid="classInputSegment_1a78b3f9b3b422ee5f92ba14056a76ccff" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rbegin</name></member>
+      <member refid="group__segment_1ga7c26187b3e70ea62bd10b9b15284a99a" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rdate</name></member>
+      <member refid="classInputSegment_1a590310d241cec28ac9b03b6a6708489b" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rduration</name></member>
+      <member refid="group__segment_1gafbf05e143d416de49180d2f18a53977b" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rduration</name></member>
+      <member refid="group__segment_1ga5ce66f635c2ab912e0ec9662c5c2ceaf" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rduration</name></member>
+      <member refid="classInputSegment_1ad81105da6beb534a48a59d9219476732" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>rend</name></member>
+      <member refid="group__segment_1ga2d78677ab3ea44ae91034c4e312e778c" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>respell</name></member>
+      <member refid="group__segment_1gac79787254008e05d9f54226d93dcb0cb" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>respell</name></member>
+      <member refid="group__segment_1ga05fee2bd8565c3076a6d800e37d7ab63" prot="public" virt="non-virtual"><scope>InputSegment</scope><name>size</name></member>
+      <member refid="group__segment_1gab8da320feb29d4b009d2e6a37924337e" prot="public" virt="virtual"><scope>InputSegment</scope><name>~InputSegment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

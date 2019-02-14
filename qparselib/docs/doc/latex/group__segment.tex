@@ -1,0 +1,1040 @@
+\hypertarget{group__segment}{}\section{Segment module}
+\label{group__segment}\index{Segment module@{Segment module}}
+
+
+The {\ttfamily segment} module contains classes for abstract representation of data in input processed by parsing.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}}
+\begin{DoxyCompactList}\small\item\em Extension of \mbox{\hyperlink{classInterval}{Interval}} with computed alignment of \mbox{\hyperlink{classInputSegment}{Input\+Segment}} points onto left-\/ and right-\/bounds. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRecord}{Record$<$ P $>$}}
+\begin{DoxyCompactList}\small\item\em abstract class describing the basic functionalities of a record. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEnvironment}{Environment}}
+\begin{DoxyCompactList}\small\item\em wrapper abstract class embedding a standard input environment for parsing algos. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classAtable}{Atable$<$ P $>$}}
+\begin{DoxyCompactList}\small\item\em abstract interface to parse table \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRun}{Run$<$ P $>$}}
+\begin{DoxyCompactList}\small\item\em a run is a compact representation of parse trees as a tuple of pointers to subruns. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classInputSegment}{Input\+Segment}}
+\begin{DoxyCompactList}\small\item\em intermediate representation for input performance data (sequence of timestamped events). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classInputSegmentMono}{Input\+Segment\+Mono}}
+\begin{DoxyCompactList}\small\item\em conversion of \mbox{\hyperlink{classInputSegment}{Input\+Segment}} to remove overlapping notes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classInputSegmentNogap}{Input\+Segment\+Nogap}}
+\item 
+class \mbox{\hyperlink{classInterval}{Interval}}
+\begin{DoxyCompactList}\small\item\em an \mbox{\hyperlink{classInterval}{Interval}} in an input segment with realtime bounds (seconds) and musical bounds (fraction of bars). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structIntervalHasher}{Interval\+Hasher}}
+\begin{DoxyCompactList}\small\item\em hash function for using interval as key in a unordered map. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPointedIntervalEq}{Pointed\+Interval\+Eq}}
+\item 
+struct \mbox{\hyperlink{structPointedIntervalHash}{Pointed\+Interval\+Hash}}
+\item 
+class \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}}
+\begin{DoxyCompactList}\small\item\em table for storage of aligned intervals to avoid recomputation of alignments. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}
+\begin{DoxyCompactList}\small\item\em extension of Aligned \mbox{\hyperlink{classInterval}{Interval}} to define a tree of nested Alignements with sharing using hash table to store all alignment constructed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMusEvent}{Mus\+Event}}
+\begin{DoxyCompactList}\small\item\em input events \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRestEvent}{Rest\+Event}}
+\item 
+class \mbox{\hyperlink{classNoteEvent}{Note\+Event}}
+\item 
+class \mbox{\hyperlink{classMusPoint}{Mus\+Point}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPoint}{Point}} extended with mutable musical time date and duration (expressed in fraction of bars). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPitch}{Pitch}}
+\begin{DoxyCompactList}\small\item\em internal representation of a pitch value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPoint}{Point}}
+\begin{DoxyCompactList}\small\item\em timestamped event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}}
+\begin{DoxyCompactList}\small\item\em Elaine Chew\textquotesingle{}s spiral of fifths. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structNoteName}{Note\+Name}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__segment_ga8156ae2f00d13429f64689ba96dca4cc}\label{group__segment_ga8156ae2f00d13429f64689ba96dca4cc}} 
+typedef std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$, \mbox{\hyperlink{structPointedIntervalHash}{Pointed\+Interval\+Hash}}, \mbox{\hyperlink{structPointedIntervalEq}{Pointed\+Interval\+Eq}} $>$ {\bfseries Interval\+Set}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__segment_gaa5d5d2dd440400af33e39d031cb08fa5}\label{group__segment_gaa5d5d2dd440400af33e39d031cb08fa5}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&p)
+\item 
+\mbox{\Hypertarget{group__segment_ga6c33ecb9851e077e90345090b15c87c3}\label{group__segment_ga6c33ecb9851e077e90345090b15c87c3}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&s)
+\item 
+\mbox{\Hypertarget{group__segment_ga2f4c47a191d9e8f503a8a18bfba89f2c}\label{group__segment_ga2f4c47a191d9e8f503a8a18bfba89f2c}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classInterval}{Interval}} \&p)
+\item 
+\mbox{\Hypertarget{group__segment_gac85491c9b09a0e009fe58f15da5e88ab}\label{group__segment_gac85491c9b09a0e009fe58f15da5e88ab}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} \&p)
+\item 
+\mbox{\Hypertarget{group__segment_gade87c7b11c1a1fdbcd922e08b3eaa3c5}\label{group__segment_gade87c7b11c1a1fdbcd922e08b3eaa3c5}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classMusEvent}{Mus\+Event}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga7d6e1aa31e5a2132257840adeb5bf23f}\label{group__segment_ga7d6e1aa31e5a2132257840adeb5bf23f}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPitch}{Pitch}} \&p)
+\item 
+\mbox{\Hypertarget{group__segment_gad95cc714e40b63c5df8e1dc41305178e}\label{group__segment_gad95cc714e40b63c5df8e1dc41305178e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPoint}{Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_gaf9d08e42ae7632f815ad7bd3c093b497}\label{group__segment_gaf9d08e42ae7632f815ad7bd3c093b497}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&lhs, const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga0b4ffecf00942ad046a9ea6785319f6f}\label{group__segment_ga0b4ffecf00942ad046a9ea6785319f6f}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&lhs, const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_gab3a698d42f743ce361da6916209eca88}\label{group__segment_gab3a698d42f743ce361da6916209eca88}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_gaeba3d7c6ab7481a52f2cd4ce980c08ca}\label{group__segment_gaeba3d7c6ab7481a52f2cd4ce980c08ca}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&lhs, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga7c5e53ea6aa75682a2320bdf2f6f17fa}\label{group__segment_ga7c5e53ea6aa75682a2320bdf2f6f17fa}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&lhs, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga696a465764983bfca52bcd6406e373f9}\label{group__segment_ga696a465764983bfca52bcd6406e373f9}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&p)
+\item 
+\mbox{\hyperlink{group__segment_ga7e9399ce64bb21aa2d2c3cd682ca95da}{Aligned\+Interval\+::\+Aligned\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1), bool f\+\_\+align=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInterval}{Interval}} covering the whole length of the given input segment with given musical time length (number of bars). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga4aa5548293e2dcd94ab3845d9a8fe492}{Aligned\+Interval\+::\+Aligned\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}}, size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}{first}}, bool f\+\_\+align=false)
+\begin{DoxyCompactList}\small\item\em aligned interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga5bf2bf3fe1a1791989ec52969aace0a5}\label{group__segment_ga5bf2bf3fe1a1791989ec52969aace0a5}} 
+\mbox{\hyperlink{group__segment_ga5bf2bf3fe1a1791989ec52969aace0a5}{Aligned\+Interval\+::\+Aligned\+Interval}} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga304aac2ec620d785bbfb67996a7a613b}\label{group__segment_ga304aac2ec620d785bbfb67996a7a613b}} 
+virtual \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \& {\bfseries Aligned\+Interval\+::operator=} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga40f7de6ee8d8b73172ca1dbfa54bfe62}\label{group__segment_ga40f7de6ee8d8b73172ca1dbfa54bfe62}} 
+virtual bool {\bfseries Aligned\+Interval\+::operator==} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&) const
+\item 
+\mbox{\Hypertarget{group__segment_gaeb6593290d19ff04137c3f3c3e9e3175}\label{group__segment_gaeb6593290d19ff04137c3f3c3e9e3175}} 
+bool \mbox{\hyperlink{group__segment_gaeb6593290d19ff04137c3f3c3e9e3175}{Aligned\+Interval\+::aligned}} () const
+\begin{DoxyCompactList}\small\item\em this interval has been aligned. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga25f42094dbb3623c73df11dd85596185}{Aligned\+Interval\+::align}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, size\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em set the alignment parameters, starting from index b of input segment point and return the next index of point in input segment to be processed (first index at right of this interval) or the size of input segment (total \# points) if end of segment is reached. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga85de404c4ddf91a51bf0c29c6dbe1d77}\label{group__segment_ga85de404c4ddf91a51bf0c29c6dbe1d77}} 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga85de404c4ddf91a51bf0c29c6dbe1d77}{Aligned\+Interval\+::align}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em same as previous but uses \+\_\+seg\+\_\+first instead of argument b. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_gafad6a7eea9e5892cfae9986f6263a738}{Aligned\+Interval\+::rewind}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, size\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em compute only the value of the next point (the first element of input segment after the right bound of this interval) starting from index b of input segment point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga1a6a8f006c2d11e8f4af7250a6fb0b16}\label{group__segment_ga1a6a8f006c2d11e8f4af7250a6fb0b16}} 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga1a6a8f006c2d11e8f4af7250a6fb0b16}{Aligned\+Interval\+::rewind}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$)
+\begin{DoxyCompactList}\small\item\em same as previous but uses \+\_\+seg\+\_\+first instead of arg. b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga35cbd86caf5c17f8d59559ae0b28febf}{Environment\+::\+Environment}} (\mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s=N\+U\+LL)
+\item 
+\mbox{\hyperlink{group__segment_gaec471ec05052a932b1bb2738bfc8b172}{Input\+Segment\+::\+Input\+Segment}} (double b=0, double e=0)
+\begin{DoxyCompactList}\small\item\em constructs an empty input segment (no events) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga0ca7fa41c0dadabbaa112fdde9e48492}\label{group__segment_ga0ca7fa41c0dadabbaa112fdde9e48492}} 
+{\bfseries Input\+Segment\+::\+Input\+Segment} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&)
+\item 
+\mbox{\hyperlink{group__segment_ga58d6af0b8186068f4bc26f58e6e62eef}{Input\+Segment\+::\+Input\+Segment}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&s, double b, double e)
+\begin{DoxyCompactList}\small\item\em copy and resize. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga05fee2bd8565c3076a6d800e37d7ab63}\label{group__segment_ga05fee2bd8565c3076a6d800e37d7ab63}} 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga05fee2bd8565c3076a6d800e37d7ab63}{Input\+Segment\+::size}} () const
+\begin{DoxyCompactList}\small\item\em number of non-\/floating points in segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gaccf3b9127fc3d068a95af19f46d9052d}\label{group__segment_gaccf3b9127fc3d068a95af19f46d9052d}} 
+std\+::vector$<$ \mbox{\hyperlink{classMusPoint}{Mus\+Point}} $>$\+::iterator \mbox{\hyperlink{group__segment_gaccf3b9127fc3d068a95af19f46d9052d}{Input\+Segment\+::begin}} ()
+\begin{DoxyCompactList}\small\item\em iterators to the segment\textquotesingle{}s contents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga1cc736fda27974f59c2e2dfc44eedf9e}\label{group__segment_ga1cc736fda27974f59c2e2dfc44eedf9e}} 
+std\+::vector$<$ \mbox{\hyperlink{classMusPoint}{Mus\+Point}} $>$\+::iterator {\bfseries Input\+Segment\+::end} ()
+\item 
+\mbox{\Hypertarget{group__segment_gaff8f8c77de90a74f028f2e7a6ea32f90}\label{group__segment_gaff8f8c77de90a74f028f2e7a6ea32f90}} 
+std\+::vector$<$ \mbox{\hyperlink{classMusPoint}{Mus\+Point}} $>$\+::const\+\_\+iterator {\bfseries Input\+Segment\+::cbegin} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga9eae7fefbf0884764ff6a75fc5fa063b}\label{group__segment_ga9eae7fefbf0884764ff6a75fc5fa063b}} 
+std\+::vector$<$ \mbox{\hyperlink{classMusPoint}{Mus\+Point}} $>$\+::const\+\_\+iterator {\bfseries Input\+Segment\+::cend} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga82a64bae54200b634bc42ac06dc7a916}\label{group__segment_ga82a64bae54200b634bc42ac06dc7a916}} 
+bool {\bfseries Input\+Segment\+::check\+\_\+index} (long i) const
+\item 
+void \mbox{\hyperlink{group__segment_ga43310a16681e2241b20da4b68de9f35b}{Input\+Segment\+::link}} (long i, long j)
+\begin{DoxyCompactList}\small\item\em the event of index i is linked to the event of index j. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{group__segment_gabb6224ab371e84d2048f3c9e2692d15d}{Input\+Segment\+::add\+\_\+back}} (\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$e, double \mbox{\hyperlink{group__segment_ga7c26187b3e70ea62bd10b9b15284a99a}{rdate}}, double rdur, bool on, long \mbox{\hyperlink{group__segment_ga43310a16681e2241b20da4b68de9f35b}{link}}=M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__segment_ga6fce03f54fe517cc9541ea446cd26a50}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInputSegment_aa5410aeef3d5c6a263424b252eb78511}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em insert new timestamped muspoint created from the parameters, at the end of the segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga2c58dc6e5e032dc7fee299be296371e4}\label{group__segment_ga2c58dc6e5e032dc7fee299be296371e4}} 
+long {\bfseries Input\+Segment\+::add\+\_\+back} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\item 
+long \mbox{\hyperlink{group__segment_gad44eb7379e181fc4295ee2514a568204}{Input\+Segment\+::add\+\_\+floating}} (\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$e, double \mbox{\hyperlink{group__segment_ga7c26187b3e70ea62bd10b9b15284a99a}{rdate}}, double rdur, bool on, long \mbox{\hyperlink{group__segment_ga43310a16681e2241b20da4b68de9f35b}{link}}=M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__segment_ga6fce03f54fe517cc9541ea446cd26a50}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInputSegment_aa5410aeef3d5c6a263424b252eb78511}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em create new timestamped muspoint from the parameters, and add the the heap of floating points (not in segment). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gabb9443e79fcefd19a5c7b65c4e54102a}\label{group__segment_gabb9443e79fcefd19a5c7b65c4e54102a}} 
+long {\bfseries Input\+Segment\+::add\+\_\+floating} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\item 
+const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \& \mbox{\hyperlink{group__segment_ga5463f900db31be4b7d109e88a710971f}{Input\+Segment\+::point}} (long i) const
+\begin{DoxyCompactList}\small\item\em return a ref to the point of index i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga2dbfcbf9664a10c1245e298b9257d5cd}\label{group__segment_ga2dbfcbf9664a10c1245e298b9257d5cd}} 
+\mbox{\hyperlink{classMusPoint}{Mus\+Point}} \& \mbox{\hyperlink{group__segment_ga2dbfcbf9664a10c1245e298b9257d5cd}{Input\+Segment\+::ncpoint}} (long i)
+\begin{DoxyCompactList}\small\item\em same as point but not const. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gafaa215f8df4e03b3e22c4c5eb3e494ca}\label{group__segment_gafaa215f8df4e03b3e22c4c5eb3e494ca}} 
+\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$ \mbox{\hyperlink{group__segment_gafaa215f8df4e03b3e22c4c5eb3e494ca}{Input\+Segment\+::event}} (long i) const
+\begin{DoxyCompactList}\small\item\em return the event of the point of index i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga7c26187b3e70ea62bd10b9b15284a99a}\label{group__segment_ga7c26187b3e70ea62bd10b9b15284a99a}} 
+double \mbox{\hyperlink{group__segment_ga7c26187b3e70ea62bd10b9b15284a99a}{Input\+Segment\+::rdate}} (long i) const
+\begin{DoxyCompactList}\small\item\em return the real-\/time date (in seconds) of the point of index i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga5ce66f635c2ab912e0ec9662c5c2ceaf}\label{group__segment_ga5ce66f635c2ab912e0ec9662c5c2ceaf}} 
+double \mbox{\hyperlink{group__segment_ga5ce66f635c2ab912e0ec9662c5c2ceaf}{Input\+Segment\+::rduration}} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&p) const
+\begin{DoxyCompactList}\small\item\em return the real-\/time duration (in seconds) of the given point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gafbf05e143d416de49180d2f18a53977b}\label{group__segment_gafbf05e143d416de49180d2f18a53977b}} 
+double \mbox{\hyperlink{group__segment_gafbf05e143d416de49180d2f18a53977b}{Input\+Segment\+::rduration}} (long i) const
+\begin{DoxyCompactList}\small\item\em return the real-\/time duration (in seconds) of the point of index i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga6fce03f54fe517cc9541ea446cd26a50}\label{group__segment_ga6fce03f54fe517cc9541ea446cd26a50}} 
+\mbox{\hyperlink{classRational}{Rational}} \& \mbox{\hyperlink{group__segment_ga6fce03f54fe517cc9541ea446cd26a50}{Input\+Segment\+::mdate}} (long i)
+\begin{DoxyCompactList}\small\item\em return a reference to the musical-\/time date (in fraction of bar) of the point of index i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga2c16ef8a681bf9fded1dba29c1a84342}\label{group__segment_ga2c16ef8a681bf9fded1dba29c1a84342}} 
+\mbox{\hyperlink{classRational}{Rational}} \& \mbox{\hyperlink{group__segment_ga2c16ef8a681bf9fded1dba29c1a84342}{Input\+Segment\+::mduration}} (long i)
+\begin{DoxyCompactList}\small\item\em return a reference to the musical-\/time duration (in fraction of bar) of the point of index i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gae75db088893a7cfc719ec393e09d7ece}\label{group__segment_gae75db088893a7cfc719ec393e09d7ece}} 
+void \mbox{\hyperlink{group__segment_gae75db088893a7cfc719ec393e09d7ece}{Input\+Segment\+::close}} (double e)
+\begin{DoxyCompactList}\small\item\em set end date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__segment_ga2d78677ab3ea44ae91034c4e312e778c}{Input\+Segment\+::respell}} (int k=0)
+\begin{DoxyCompactList}\small\item\em pitch spelling. unwindowed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__segment_gac79787254008e05d9f54226d93dcb0cb}{Input\+Segment\+::respell}} (\mbox{\hyperlink{classRational}{Rational}} ws, int k=0)
+\begin{DoxyCompactList}\small\item\em pitch spelling with a sliding window of given musical duration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga623c2367191018ecac046e7e11f14976}\label{group__segment_ga623c2367191018ecac046e7e11f14976}} 
+void \mbox{\hyperlink{group__segment_ga623c2367191018ecac046e7e11f14976}{Input\+Segment\+::print}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em print size to output stream. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class P $>$ }\\void \mbox{\hyperlink{group__segment_ga42c65e4989c84fbce42115d8e7813f8e}{Input\+Segment\+::quantize}} (\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$table, const P \&p)
+\begin{DoxyCompactList}\small\item\em set the musical time date and duration of events in this given input segment, according to the best run for p in given table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class P $>$ }\\size\+\_\+t \mbox{\hyperlink{group__segment_gab4c42d088ce3d170b7899712789ab464}{Input\+Segment\+::quantizu}} (\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$table, const P \&p, size\+\_\+t b=0)
+\begin{DoxyCompactList}\small\item\em set the musical time date and duration of events in this given input segment, according to the best run for p in given table, starting from point number b in interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gad033d12a18d0f8cd7a8b0a2f5f029db2}{Input\+Segment\+Mono\+::\+Input\+Segment\+Mono}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&s)
+\begin{DoxyCompactList}\small\item\em transform the given input segment into a monophonic input segment (no two notes in the same time). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gaa05ab07eeaf10f35e57552ab045ac548}{Input\+Segment\+Nogap\+::\+Input\+Segment\+Nogap}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&s, bool norest=true)
+\begin{DoxyCompactList}\small\item\em transform the given input segment into a new input segment without gaps. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gadfaf31fca3f5e5da49e37c7baa275125}{Interval\+::\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval constructed from an input segment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gaefc21b7c838661c05286304f6d891690}{Interval\+::\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}})
+\begin{DoxyCompactList}\small\item\em build an interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga17cfcca410ae94fe906dfcdb726026f5}\label{group__segment_ga17cfcca410ae94fe906dfcdb726026f5}} 
+\mbox{\hyperlink{group__segment_ga17cfcca410ae94fe906dfcdb726026f5}{Interval\+::\+Interval}} (const \mbox{\hyperlink{classInterval}{Interval}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga43e7da7f24dfa17fccdd0dd40a96f458}\label{group__segment_ga43e7da7f24dfa17fccdd0dd40a96f458}} 
+\mbox{\hyperlink{group__segment_ga43e7da7f24dfa17fccdd0dd40a96f458}{Interval\+::\+Interval}} (\mbox{\hyperlink{classInterval}{Interval}} $\ast$)
+\begin{DoxyCompactList}\small\item\em used for copy of downcasted \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga6508f58e15c54be6146d5505d91a4b91}\label{group__segment_ga6508f58e15c54be6146d5505d91a4b91}} 
+virtual \mbox{\hyperlink{classInterval}{Interval}} \& {\bfseries Interval\+::operator=} (const \mbox{\hyperlink{classInterval}{Interval}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga4b0896bf3843fec18d68a130fe9a49f6}\label{group__segment_ga4b0896bf3843fec18d68a130fe9a49f6}} 
+virtual bool \mbox{\hyperlink{group__segment_ga4b0896bf3843fec18d68a130fe9a49f6}{Interval\+::operator==}} (const \mbox{\hyperlink{classInterval}{Interval}} \&) const
+\begin{DoxyCompactList}\small\item\em for using \mbox{\hyperlink{classInterval}{Interval}} as key in map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga3af4cc83b5ee3d320fa5b24fa244fabb}\label{group__segment_ga3af4cc83b5ee3d320fa5b24fa244fabb}} 
+bool {\bfseries Interval\+::inside\+Bar} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga4a873d9f7d804928f972a3c11d2a1df0}\label{group__segment_ga4a873d9f7d804928f972a3c11d2a1df0}} 
+bool {\bfseries Interval\+Heap\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga87e6be639c7435053444d83913505c1b}\label{group__segment_ga87e6be639c7435053444d83913505c1b}} 
+size\+\_\+t {\bfseries Interval\+Heap\+::size} () const
+\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$const \mbox{\hyperlink{group__segment_gad7fd7dd4ddb8d520df0985e67d180019}{Interval\+Heap\+::make}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mend, double rext=0)
+\begin{DoxyCompactList}\small\item\em find or create (and push) a top interval of real-\/time duration covering the whole length of the given input segment s (root of interval tree) + the given extension. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$const \mbox{\hyperlink{group__segment_gad886d53d2881a80f06c6f9fbf202d727}{Interval\+Heap\+::make}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} mend, double rbeg, double rend, size\+\_\+t first, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$p, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ps)
+\begin{DoxyCompactList}\small\item\em get interval from heap, build it if not present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gab092e4338aa4c3369c4fa4404d8706b0}{Interval\+Tree\+::\+Interval\+Tree}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval (root of interval tree). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gac16f2a8d9c584a869bbed6a263914360}{Interval\+Tree\+::\+Interval\+Tree}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}}, size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}{first}}, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$p=N\+U\+LL, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ps=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em build an interval tree with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_ga0c04840a0d05d3b0d4b99e654d72b81b}{Interval\+Tree\+::top}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$h, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval (root of interval tree) covering the whole length of the given input segment s. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_gae9e8f6ca3fa4093cfcd1428e9f41d048}{Interval\+Tree\+::split}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, double rdur, \mbox{\hyperlink{classRational}{Rational}} mdur, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a sub interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_ga5b1393db865d0dd81249033dd99ecd5c}{Interval\+Tree\+::split\+\_\+back}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, double rdur, \mbox{\hyperlink{classRational}{Rational}} mdur, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a sub interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_gacb8de7e3756951950c391d241adec21c}{Interval\+Tree\+::sub}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, size\+\_\+t a, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a the i-\/1th sub-\/interval of the division of this interval in n equal parts. the sub-\/interval returned is aligned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga00b69e8f1bf80a478fce420d5d378c17}\label{group__segment_ga00b69e8f1bf80a478fce420d5d378c17}} 
+{\bfseries Mus\+Event\+::\+Mus\+Event} (int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\item 
+\mbox{\Hypertarget{group__segment_ga40f47305a4bd7afbf26a4fbee663dd27}\label{group__segment_ga40f47305a4bd7afbf26a4fbee663dd27}} 
+{\bfseries Mus\+Event\+::\+Mus\+Event} (const \mbox{\hyperlink{classMusEvent}{Mus\+Event}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_gaafcefa86601b97d137cfba40ed349414}\label{group__segment_gaafcefa86601b97d137cfba40ed349414}} 
+{\bfseries Rest\+Event\+::\+Rest\+Event} (int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\item 
+\mbox{\Hypertarget{group__segment_gac4e65b67dedabe1736d414b8b4ab7e91}\label{group__segment_gac4e65b67dedabe1736d414b8b4ab7e91}} 
+{\bfseries Rest\+Event\+::\+Rest\+Event} (const \mbox{\hyperlink{classRestEvent}{Rest\+Event}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga6ebb6acd4c78929d31a4831c58911639}\label{group__segment_ga6ebb6acd4c78929d31a4831c58911639}} 
+virtual \mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$ {\bfseries Rest\+Event\+::clone} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga0b9fce9fff8648eae4a51a77957fab45}\label{group__segment_ga0b9fce9fff8648eae4a51a77957fab45}} 
+virtual void {\bfseries Rest\+Event\+::print} (std\+::ostream \&o) const
+\item 
+\mbox{\Hypertarget{group__segment_gaeeb3a0d391bef4a285f1be45d31e63be}\label{group__segment_gaeeb3a0d391bef4a285f1be45d31e63be}} 
+\mbox{\hyperlink{group__segment_gaeeb3a0d391bef4a285f1be45d31e63be}{Note\+Event\+::\+Note\+Event}} (unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em unpitched note (drums). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga1bd25b8699a9ed866f11f62a844645f7}\label{group__segment_ga1bd25b8699a9ed866f11f62a844645f7}} 
+\mbox{\hyperlink{group__segment_ga1bd25b8699a9ed866f11f62a844645f7}{Note\+Event\+::\+Note\+Event}} (\mbox{\hyperlink{classPitch}{Pitch}} p, unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em pitched note. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga135e904aa3f5ea4d375e451281fe5323}\label{group__segment_ga135e904aa3f5ea4d375e451281fe5323}} 
+\mbox{\hyperlink{group__segment_ga135e904aa3f5ea4d375e451281fe5323}{Note\+Event\+::\+Note\+Event}} (unsigned int p, unsigned int vel=Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY, int nb=\mbox{\hyperlink{group__general_gac3b19762b16f33de03662fd4289fe5a9}{E\+V\+E\+N\+T\+N\+B\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em pitched note with M\+I\+DI pitch in 0..127. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga9250db2a9fadb2184d60187e38ee02cc}\label{group__segment_ga9250db2a9fadb2184d60187e38ee02cc}} 
+{\bfseries Note\+Event\+::\+Note\+Event} (const \mbox{\hyperlink{classNoteEvent}{Note\+Event}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga2fe5abb4cd9fbe000b1ec13114d60049}\label{group__segment_ga2fe5abb4cd9fbe000b1ec13114d60049}} 
+virtual \mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$ {\bfseries Note\+Event\+::clone} () const
+\item 
+\mbox{\Hypertarget{group__segment_gafa25174e584b872e814643c895cad283}\label{group__segment_gafa25174e584b872e814643c895cad283}} 
+virtual void {\bfseries Note\+Event\+::print} (std\+::ostream \&o) const
+\item 
+\mbox{\Hypertarget{group__segment_ga006e3062fd920202aab9e36f6a0e394e}\label{group__segment_ga006e3062fd920202aab9e36f6a0e394e}} 
+{\bfseries Mus\+Point\+::\+Mus\+Point} (\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$e, double rdate, double rdur, bool on, long link=M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\item 
+\mbox{\hyperlink{group__segment_ga1bb17bef698401de18bc814c7f965999}{Mus\+Point\+::\+Mus\+Point}} (const \mbox{\hyperlink{classPoint}{Point}} \&p, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em copy of point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga5f00500846d251b165f48a41552be18e}\label{group__segment_ga5f00500846d251b165f48a41552be18e}} 
+\mbox{\hyperlink{group__segment_ga5f00500846d251b165f48a41552be18e}{Mus\+Point\+::\+Mus\+Point}} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\begin{DoxyCompactList}\small\item\em event (if any) is cloned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga522126acc9eb79e737068941370bb172}\label{group__segment_ga522126acc9eb79e737068941370bb172}} 
+\mbox{\hyperlink{classMusPoint}{Mus\+Point}} \& \mbox{\hyperlink{group__segment_ga522126acc9eb79e737068941370bb172}{Mus\+Point\+::operator=}} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\begin{DoxyCompactList}\small\item\em event (if any) is cloned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga07139fb89dcc2388b299b9e6464b3177}\label{group__segment_ga07139fb89dcc2388b299b9e6464b3177}} 
+bool {\bfseries Mus\+Point\+::operator==} (const \mbox{\hyperlink{classPoint}{Point}} \&) const
+\item 
+\mbox{\Hypertarget{group__segment_gafef7a93b7ba8e96efc8d2b179c69a830}\label{group__segment_gafef7a93b7ba8e96efc8d2b179c69a830}} 
+virtual void {\bfseries Mus\+Point\+::print} (std\+::ostream \&o) const
+\item 
+\mbox{\Hypertarget{group__segment_ga09a5f5040f1902afa6d81520cf7bd084}\label{group__segment_ga09a5f5040f1902afa6d81520cf7bd084}} 
+\mbox{\hyperlink{group__segment_ga09a5f5040f1902afa6d81520cf7bd084}{Pitch\+::\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em undef pitch value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gaf3f9d88915bb6688d522f09d7542f690}{Pitch\+::\+Pitch}} (char \mbox{\hyperlink{classPitch_a7a7649ed78c05c1ff5f77c69155f1a71}{name}}, float alt=0.\+0, int oct=0)
+\begin{DoxyCompactList}\small\item\em construct pitch from name+alteration+octave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gaace1762f4d975560a8d739d2d13fcd9b}{Pitch\+::\+Pitch}} (unsigned int pitch, Pitch\+Unit u=M\+I\+DI)
+\begin{DoxyCompactList}\small\item\em construct note from M\+I\+DI pitch \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gafb10e8f7a064ee15f75e4ba5609c682b}\label{group__segment_gafb10e8f7a064ee15f75e4ba5609c682b}} 
+{\bfseries Pitch\+::\+Pitch} (const \mbox{\hyperlink{classPitch}{Pitch}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga738dc72ab88cf6a09d89338e4f1d4b91}\label{group__segment_ga738dc72ab88cf6a09d89338e4f1d4b91}} 
+\mbox{\hyperlink{classPitch}{Pitch}} \& {\bfseries Pitch\+::operator=} (const \mbox{\hyperlink{classPitch}{Pitch}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_gab361cf1a2c8b9dca6e5abd8069e2d81d}\label{group__segment_gab361cf1a2c8b9dca6e5abd8069e2d81d}} 
+bool {\bfseries Pitch\+::operator==} (const \mbox{\hyperlink{classPitch}{Pitch}} \&) const
+\item 
+\mbox{\Hypertarget{group__segment_ga6cb7f450eee39d3bd8483f017f28906d}\label{group__segment_ga6cb7f450eee39d3bd8483f017f28906d}} 
+\mbox{\hyperlink{group__segment_ga6cb7f450eee39d3bd8483f017f28906d}{Point\+::\+Point}} (\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$e, double rdate, double rdur, bool on, long link=M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em timestamped monophonic or polyphonic event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga5b7ec0fb127734c1cd5c6f350a3990fc}{Point\+::\+Point}} (const \mbox{\hyperlink{classPoint}{Point}} \&)
+\item 
+\mbox{\hyperlink{group__segment_ga395fa04b4ec126b66fc053f829a30cc1}{Point\+::$\sim$\+Point}} ()
+\item 
+virtual \mbox{\hyperlink{classPoint}{Point}} \& \mbox{\hyperlink{group__segment_ga55eeab949e62268da63176d48570eb54}{Point\+::operator=}} (const \mbox{\hyperlink{classPoint}{Point}} \&)
+\item 
+\mbox{\Hypertarget{group__segment_ga1055933b999ef990df6b48745c27a197}\label{group__segment_ga1055933b999ef990df6b48745c27a197}} 
+virtual bool {\bfseries Point\+::operator==} (const \mbox{\hyperlink{classPoint}{Point}} \&) const
+\item 
+\mbox{\Hypertarget{group__segment_gaf6904981d6c631a7756499cd0b42ce29}\label{group__segment_gaf6904981d6c631a7756499cd0b42ce29}} 
+virtual void {\bfseries Point\+::print} (std\+::ostream \&o) const
+\item 
+\mbox{\Hypertarget{group__segment_ga80277d41d835c643826b4e813490849a}\label{group__segment_ga80277d41d835c643826b4e813490849a}} 
+{\bfseries Spiral\+Point\+::\+Spiral\+Point} (double, double, double)
+\item 
+\mbox{\Hypertarget{group__segment_gae521f98807e13c4e0019b561565cda18}\label{group__segment_gae521f98807e13c4e0019b561565cda18}} 
+{\bfseries Spiral\+Point\+::\+Spiral\+Point} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_gab4085951f6e5264f912feadf327a8c81}\label{group__segment_gab4085951f6e5264f912feadf327a8c81}} 
+\mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \& {\bfseries Spiral\+Point\+::operator=} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&)
+\item 
+bool \mbox{\hyperlink{group__segment_ga8d702bcd74b30d19929d1954087bd4b0}{Spiral\+Point\+::isnormal}} () const
+\item 
+\mbox{\Hypertarget{group__segment_ga50ce60a751c8ad173a53ccee629a4598}\label{group__segment_ga50ce60a751c8ad173a53ccee629a4598}} 
+void {\bfseries Spiral\+Point\+::operator+=} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga81b9a0d474b385cf0335523d49cc9fc1}\label{group__segment_ga81b9a0d474b385cf0335523d49cc9fc1}} 
+void {\bfseries Spiral\+Point\+::operator-\/=} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_gaf7d46ab9c2b5dd8e11ec4a940dea3d03}\label{group__segment_gaf7d46ab9c2b5dd8e11ec4a940dea3d03}} 
+void {\bfseries Spiral\+Point\+::operator$\ast$=} (double a)
+\item 
+double \mbox{\hyperlink{group__segment_ga71dccd6f3dd14b2c497e4198ea37d745}{Spiral\+Point\+::distance}} (const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&rhs) const
+\item 
+\mbox{\hyperlink{group__segment_gad81fd626f6b9bc6d70fd5e235ec5c8cb}{Note\+Name\+::\+Note\+Name}} (char n, float alt, int id)
+\begin{DoxyCompactList}\small\item\em notename object from name, alteration and index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_gaba2eabd0e4626b56685968ea53153b3b}\label{group__segment_gaba2eabd0e4626b56685968ea53153b3b}} 
+{\bfseries Note\+Name\+::\+Note\+Name} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga22a391f4c1fa697f1d320d1a659f130f}\label{group__segment_ga22a391f4c1fa697f1d320d1a659f130f}} 
+\mbox{\hyperlink{structNoteName}{Note\+Name}} \& {\bfseries Note\+Name\+::operator=} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__segment_ga055480a382a6fde05bde51abed31a56c}\label{group__segment_ga055480a382a6fde05bde51abed31a56c}} 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} \& \mbox{\hyperlink{group__segment_ga055480a382a6fde05bde51abed31a56c}{Note\+Name\+::ofkey}} (int k)
+\begin{DoxyCompactList}\small\item\em ref to a \mbox{\hyperlink{structNoteName}{Note\+Name}} in table synonyms. $\ast$/ \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} \& \mbox{\hyperlink{group__segment_gaf4a2321d9bc5a69a5b8a94cf1e146052}{Note\+Name\+::closest}} (unsigned int pitch, const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&p)
+\begin{DoxyCompactList}\small\item\em note name (ref in table synonyms) corresponding to given midi pitch and closest to given point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__segment_ga5e0ecbf9869effe45cacf0c1a191615c}\label{group__segment_ga5e0ecbf9869effe45cacf0c1a191615c}} 
+static const unsigned int {\bfseries Mus\+Event\+::\+U\+N\+D\+E\+F\+\_\+\+V\+E\+L\+O\+C\+I\+TY} = 128
+\item 
+\mbox{\Hypertarget{group__segment_ga8193b78df3a269acf7296393a522aafc}\label{group__segment_ga8193b78df3a269acf7296393a522aafc}} 
+static const unsigned int {\bfseries Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+M\+I\+D\+I\+C\+E\+NT} = 12800
+\item 
+\mbox{\Hypertarget{group__segment_ga8222a08cf48e372acab91765b3635ec5}\label{group__segment_ga8222a08cf48e372acab91765b3635ec5}} 
+static const char {\bfseries Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+N\+A\+ME} = \textquotesingle{}X\textquotesingle{}
+\item 
+\mbox{\Hypertarget{group__segment_gad2dfc170c7179a5e8d1320edcbdf39ff}\label{group__segment_gad2dfc170c7179a5e8d1320edcbdf39ff}} 
+static const int {\bfseries Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+O\+C\+T\+A\+VE} = 128
+\item 
+\mbox{\Hypertarget{group__segment_ga34db231ac148899756f4a87f8d84f15f}\label{group__segment_ga34db231ac148899756f4a87f8d84f15f}} 
+static const float {\bfseries Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+A\+L\+T\+E\+R\+A\+T\+I\+ON} = 11
+\item 
+\mbox{\Hypertarget{group__segment_ga9e7612a2360f35684ff1228936e58a30}\label{group__segment_ga9e7612a2360f35684ff1228936e58a30}} 
+static const int {\bfseries Note\+Name\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+I\+N\+D\+EX} = 99
+\item 
+\mbox{\Hypertarget{group__segment_ga51da52124dc1108e143b2a9f73537ada}\label{group__segment_ga51da52124dc1108e143b2a9f73537ada}} 
+static const double \mbox{\hyperlink{group__segment_ga51da52124dc1108e143b2a9f73537ada}{Note\+Name\+::h}} = 1.\+0
+\begin{DoxyCompactList}\small\item\em z distance between two successive points of the spiral (one fifth apart). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__segment_ga814ef312c571ae51a0007c1d5a6a0b17}\label{group__segment_ga814ef312c571ae51a0007c1d5a6a0b17}} 
+static const double \mbox{\hyperlink{group__segment_ga814ef312c571ae51a0007c1d5a6a0b17}{Note\+Name\+::r}} = std\+::sqrt(7.\+5) $\ast$ \mbox{\hyperlink{group__segment_ga51da52124dc1108e143b2a9f73537ada}{h}}
+\begin{DoxyCompactList}\small\item\em radius of the cylinder in which the spiral is embedded. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} {\bfseries Note\+Name\+::synonyms} \mbox{[}12\mbox{]}\mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\ttfamily segment} module contains classes for abstract representation of data in input processed by parsing. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__segment_ga7e9399ce64bb21aa2d2c3cd682ca95da}\label{group__segment_ga7e9399ce64bb21aa2d2c3cd682ca95da}} 
+\index{Segment module@{Segment module}!AlignedInterval@{AlignedInterval}}
+\index{AlignedInterval@{AlignedInterval}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{AlignedInterval()}{AlignedInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Aligned\+Interval\+::\+Aligned\+Interval (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend = {\ttfamily \mbox{\hyperlink{classRational}{Rational}}(1)},  }\item[{bool}]{f\+\_\+align = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInterval}{Interval}} covering the whole length of the given input segment with given musical time length (number of bars). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & given input segment \\
+\hline
+{\em mend} & given musical time length \\
+\hline
+{\em f\+\_\+align} & flag says wether alignement must be computed for the interval. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga4aa5548293e2dcd94ab3845d9a8fe492}\label{group__segment_ga4aa5548293e2dcd94ab3845d9a8fe492}} 
+\index{Segment module@{Segment module}!AlignedInterval@{AlignedInterval}}
+\index{AlignedInterval@{AlignedInterval}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{AlignedInterval()}{AlignedInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Aligned\+Interval\+::\+Aligned\+Interval (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mbeg,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend,  }\item[{double}]{rbeg,  }\item[{double}]{rend,  }\item[{size\+\_\+t}]{first,  }\item[{bool}]{f\+\_\+align = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+aligned interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & must be the first element of input segment after the beginning of this interval.\\
+\hline
+{\em f\+\_\+align} & flag says wether alignement must be computed for the interval. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga25f42094dbb3623c73df11dd85596185}\label{group__segment_ga25f42094dbb3623c73df11dd85596185}} 
+\index{Segment module@{Segment module}!align@{align}}
+\index{align@{align}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{align()}{align()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::align (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{size\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+set the alignment parameters, starting from index b of input segment point and return the next index of point in input segment to be processed (first index at right of this interval) or the size of input segment (total \# points) if end of segment is reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & input segment processed \\
+\hline
+{\em b} & must be the index of a segment\textquotesingle{}s point. it must be after the left bound of the interval (begin). it can be out of the interval, i.\+e. after the right bound (end). \+\_\+seg\+\_\+first is replaced by b.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The realtime begin date of this interval can be out of the input segment bounds. 
+
+The realtime end date of this interval can be out of the input segment bounds. In the later case, alignement is done like the input segment is padded with empty space up to the end of this interval. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gafad6a7eea9e5892cfae9986f6263a738}\label{group__segment_gafad6a7eea9e5892cfae9986f6263a738}} 
+\index{Segment module@{Segment module}!rewind@{rewind}}
+\index{rewind@{rewind}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{rewind()}{rewind()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::rewind (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{size\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+compute only the value of the next point (the first element of input segment after the right bound of this interval) starting from index b of input segment point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & same preconditions on b as for align. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga35cbd86caf5c17f8d59559ae0b28febf}\label{group__segment_ga35cbd86caf5c17f8d59559ae0b28febf}} 
+\index{Segment module@{Segment module}!Environment@{Environment}}
+\index{Environment@{Environment}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Environment()}{Environment()}}
+{\footnotesize\ttfamily Environment\+::\+Environment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & input segment can be \+:
+\begin{DoxyItemize}
+\item N\+U\+LL \+: e.\+g. for simple enumeration of the given wta
+\item non-\/\+N\+U\+LL\+: e.\+g. for quantization of the points of given input segment using a given wta 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_gaec471ec05052a932b1bb2738bfc8b172}\label{group__segment_gaec471ec05052a932b1bb2738bfc8b172}} 
+\index{Segment module@{Segment module}!InputSegment@{InputSegment}}
+\index{InputSegment@{InputSegment}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{InputSegment()}{InputSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Input\+Segment\+::\+Input\+Segment (\begin{DoxyParamCaption}\item[{double}]{b = {\ttfamily 0},  }\item[{double}]{e = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+constructs an empty input segment (no events) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & start date (in seconds) \\
+\hline
+{\em e} & end date (in seconds) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga58d6af0b8186068f4bc26f58e6e62eef}\label{group__segment_ga58d6af0b8186068f4bc26f58e6e62eef}} 
+\index{Segment module@{Segment module}!InputSegment@{InputSegment}}
+\index{InputSegment@{InputSegment}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{InputSegment()}{InputSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Input\+Segment\+::\+Input\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&}]{s,  }\item[{double}]{b,  }\item[{double}]{e }\end{DoxyParamCaption})}
+
+
+
+copy and resize. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & input segment to copy. \\
+\hline
+{\em b} & new start date (in seconds) \\
+\hline
+{\em e} & new end date (in seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+copy only the events inside the new bounds. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga43310a16681e2241b20da4b68de9f35b}\label{group__segment_ga43310a16681e2241b20da4b68de9f35b}} 
+\index{Segment module@{Segment module}!link@{link}}
+\index{link@{link}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily void Input\+Segment\+::link (\begin{DoxyParamCaption}\item[{long}]{i,  }\item[{long}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the event of index i is linked to the event of index j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & must be a valid index, \\
+\hline
+{\em i} & must be a valid and not N\+U\+LL index, \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+both i and j can be in heap (negative index). 
+
+the point at i must not be linked (N\+U\+LL link index). 
+
+the realtime date of i must be $<$= realtime date of j (if not N\+U\+LL). 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gabb6224ab371e84d2048f3c9e2692d15d}\label{group__segment_gabb6224ab371e84d2048f3c9e2692d15d}} 
+\index{Segment module@{Segment module}!add\_back@{add\_back}}
+\index{add\_back@{add\_back}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{add\_back()}{add\_back()}}
+{\footnotesize\ttfamily long Input\+Segment\+::add\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$}]{e,  }\item[{double}]{rdate,  }\item[{double}]{rdur,  }\item[{bool}]{on,  }\item[{long}]{link = {\ttfamily MUSPOINTREF\+\_\+NULL},  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mdate = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}},  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mduration = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}} }\end{DoxyParamCaption})}
+
+
+
+insert new timestamped muspoint created from the parameters, at the end of the segment. 
+
+\begin{DoxyWarning}{Warning}
+The realtime dateof the point must be after the current last point of this segment. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+the index of the inserted point (can be used as link). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__segment_gad44eb7379e181fc4295ee2514a568204}\label{group__segment_gad44eb7379e181fc4295ee2514a568204}} 
+\index{Segment module@{Segment module}!add\_floating@{add\_floating}}
+\index{add\_floating@{add\_floating}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{add\_floating()}{add\_floating()}}
+{\footnotesize\ttfamily long Input\+Segment\+::add\+\_\+floating (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$}]{e,  }\item[{double}]{rdate,  }\item[{double}]{rdur,  }\item[{bool}]{on,  }\item[{long}]{link = {\ttfamily MUSPOINTREF\+\_\+NULL},  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mdate = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}},  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mduration = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}} }\end{DoxyParamCaption})}
+
+
+
+create new timestamped muspoint from the parameters, and add the the heap of floating points (not in segment). 
+
+(allocated and freed by this segment) \begin{DoxyReturn}{Returns}
+the index of the new point (can be used as link). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__segment_ga5463f900db31be4b7d109e88a710971f}\label{group__segment_ga5463f900db31be4b7d109e88a710971f}} 
+\index{Segment module@{Segment module}!point@{point}}
+\index{point@{point}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{point()}{point()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \& Input\+Segment\+::point (\begin{DoxyParamCaption}\item[{long}]{i }\end{DoxyParamCaption}) const}
+
+
+
+return a ref to the point of index i. 
+
+
+\begin{DoxyItemize}
+\item ith point in this input segment if 0 $<$= i $<$ input segment size
+\item or the -\/i-\/1th floating point if heap size $<$= i $<$ 0. 
+\begin{DoxyParams}{Parameters}
+{\em i} & must be in the above range of values. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{group__segment_ga2d78677ab3ea44ae91034c4e312e778c}\label{group__segment_ga2d78677ab3ea44ae91034c4e312e778c}} 
+\index{Segment module@{Segment module}!respell@{respell}}
+\index{respell@{respell}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{respell()}{respell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Input\+Segment\+::respell (\begin{DoxyParamCaption}\item[{int}]{k = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+pitch spelling. unwindowed. 
+
+\begin{DoxyWarning}{Warning}
+this segment must have been quantized. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gac79787254008e05d9f54226d93dcb0cb}\label{group__segment_gac79787254008e05d9f54226d93dcb0cb}} 
+\index{Segment module@{Segment module}!respell@{respell}}
+\index{respell@{respell}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{respell()}{respell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Input\+Segment\+::respell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRational}{Rational}}}]{ws,  }\item[{int}]{k = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+pitch spelling with a sliding window of given musical duration. 
+
+\begin{DoxyWarning}{Warning}
+this segment must have been quantized. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga42c65e4989c84fbce42115d8e7813f8e}\label{group__segment_ga42c65e4989c84fbce42115d8e7813f8e}} 
+\index{Segment module@{Segment module}!quantize@{quantize}}
+\index{quantize@{quantize}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{quantize()}{quantize()}}
+{\footnotesize\ttfamily template$<$class P $>$ \\
+void Input\+Segment\+::quantize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$}]{table,  }\item[{const P \&}]{p }\end{DoxyParamCaption})}
+
+
+
+set the musical time date and duration of events in this given input segment, according to the best run for p in given table. 
+
+\begin{DoxyWarning}{Warning}
+ptr type P must have interval. 
+
+all the musical dates and durations of events in this segment will be changed. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gab4c42d088ce3d170b7899712789ab464}\label{group__segment_gab4c42d088ce3d170b7899712789ab464}} 
+\index{Segment module@{Segment module}!quantizu@{quantizu}}
+\index{quantizu@{quantizu}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{quantizu()}{quantizu()}}
+{\footnotesize\ttfamily template$<$class P $>$ \\
+size\+\_\+t Input\+Segment\+::quantizu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$}]{table,  }\item[{const P \&}]{p,  }\item[{size\+\_\+t}]{b = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+set the musical time date and duration of events in this given input segment, according to the best run for p in given table, starting from point number b in interval. 
+
+\begin{DoxyReturn}{Returns}
+the next point of input segment with musical date and duration yet unset after processing p. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ptr type P must have interval. 
+
+all the musical date of events must be unknown in seg. 
+
+all the musical durations of events must be unknown in seg.
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000024}{Todo}}]T\+BR (replaced by quantize) \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000023}{Todo}}]T\+BR \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__segment_gad033d12a18d0f8cd7a8b0a2f5f029db2}\label{group__segment_gad033d12a18d0f8cd7a8b0a2f5f029db2}} 
+\index{Segment module@{Segment module}!InputSegmentMono@{InputSegmentMono}}
+\index{InputSegmentMono@{InputSegmentMono}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{InputSegmentMono()}{InputSegmentMono()}}
+{\footnotesize\ttfamily Input\+Segment\+Mono\+::\+Input\+Segment\+Mono (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+transform the given input segment into a monophonic input segment (no two notes in the same time). 
+
+by moving note-\/off events \mbox{\Hypertarget{group__segment_gaa05ab07eeaf10f35e57552ab045ac548}\label{group__segment_gaa05ab07eeaf10f35e57552ab045ac548}} 
+\index{Segment module@{Segment module}!InputSegmentNogap@{InputSegmentNogap}}
+\index{InputSegmentNogap@{InputSegmentNogap}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{InputSegmentNogap()}{InputSegmentNogap()}}
+{\footnotesize\ttfamily Input\+Segment\+Nogap\+::\+Input\+Segment\+Nogap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} \&}]{s,  }\item[{bool}]{norest = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+transform the given input segment into a new input segment without gaps. 
+
+by prolongations of some notes (option norest = true) or insertion of rests events (option norest = false) \mbox{\Hypertarget{group__segment_gadfaf31fca3f5e5da49e37c7baa275125}\label{group__segment_gadfaf31fca3f5e5da49e37c7baa275125}} 
+\index{Segment module@{Segment module}!Interval@{Interval}}
+\index{Interval@{Interval}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Interval()}{Interval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interval\+::\+Interval (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend = {\ttfamily \mbox{\hyperlink{classRational}{Rational}}(1)} }\end{DoxyParamCaption})}
+
+
+
+top interval constructed from an input segment. 
+
+\mbox{\hyperlink{classInterval}{Interval}} covering the whole length of the given input segment s with given musical time length (number of bars) \mbox{\Hypertarget{group__segment_gaefc21b7c838661c05286304f6d891690}\label{group__segment_gaefc21b7c838661c05286304f6d891690}} 
+\index{Segment module@{Segment module}!Interval@{Interval}}
+\index{Interval@{Interval}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Interval()}{Interval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interval\+::\+Interval (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mbeg,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend,  }\item[{double}]{rbeg,  }\item[{double}]{rend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build an interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. 
+
+\begin{DoxyWarning}{Warning}
+not aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gad7fd7dd4ddb8d520df0985e67d180019}\label{group__segment_gad7fd7dd4ddb8d520df0985e67d180019}} 
+\index{Segment module@{Segment module}!make@{make}}
+\index{make@{make}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{make()}{make()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$const Interval\+Heap\+::make (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend,  }\item[{double}]{rext = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+find or create (and push) a top interval of real-\/time duration covering the whole length of the given input segment s (root of interval tree) + the given extension. 
+
+
+\begin{DoxyItemize}
+\item inside-\/bar interval (musical time duration of 1 bar) if flag bar is true
+\item multiple interval if flag bar is false (default).
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+not aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gad886d53d2881a80f06c6f9fbf202d727}\label{group__segment_gad886d53d2881a80f06c6f9fbf202d727}} 
+\index{Segment module@{Segment module}!make@{make}}
+\index{make@{make}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{make()}{make()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$const Interval\+Heap\+::make (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mbeg,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend,  }\item[{double}]{rbeg,  }\item[{double}]{rend,  }\item[{size\+\_\+t}]{first,  }\item[{\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+
+
+get interval from heap, build it if not present. 
+
+\begin{DoxyWarning}{Warning}
+not aligned (when built). 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gab092e4338aa4c3369c4fa4404d8706b0}\label{group__segment_gab092e4338aa4c3369c4fa4404d8706b0}} 
+\index{Segment module@{Segment module}!IntervalTree@{IntervalTree}}
+\index{IntervalTree@{IntervalTree}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{IntervalTree()}{IntervalTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interval\+Tree\+::\+Interval\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend = {\ttfamily \mbox{\hyperlink{classRational}{Rational}}(1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+top interval (root of interval tree). 
+
+covering the whole length of the given input segment s inside-\/bar interval of musical time duration of 1 bar if flag bar is true multi-\/bar interval if flag bar is false.
+
+\begin{DoxyWarning}{Warning}
+the interval tree created is not registered to an interval heap. 
+
+not aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_gac16f2a8d9c584a869bbed6a263914360}\label{group__segment_gac16f2a8d9c584a869bbed6a263914360}} 
+\index{Segment module@{Segment module}!IntervalTree@{IntervalTree}}
+\index{IntervalTree@{IntervalTree}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{IntervalTree()}{IntervalTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interval\+Tree\+::\+Interval\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mbeg,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend,  }\item[{double}]{rbeg,  }\item[{double}]{rend,  }\item[{size\+\_\+t}]{first,  }\item[{\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$}]{p = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$}]{ps = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build an interval tree with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & pointer to the parent. \\
+\hline
+{\em ps} & pointer to the previous sibling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+not aligned -\/ must be aligned afterwards. 
+
+use only internaly construction of recursive paths. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga0c04840a0d05d3b0d4b99e654d72b81b}\label{group__segment_ga0c04840a0d05d3b0d4b99e654d72b81b}} 
+\index{Segment module@{Segment module}!top@{top}}
+\index{top@{top}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ Interval\+Tree\+::top (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mend = {\ttfamily \mbox{\hyperlink{classRational}{Rational}}(1)} }\end{DoxyParamCaption})}
+
+
+
+top interval (root of interval tree) covering the whole length of the given input segment s. 
+
+inside-\/bar interval of musical time duration of 1 bar if flag bar is true. multi-\/bar interval if flag bar is false. \mbox{\Hypertarget{group__segment_gae9e8f6ca3fa4093cfcd1428e9f41d048}\label{group__segment_gae9e8f6ca3fa4093cfcd1428e9f41d048}} 
+\index{Segment module@{Segment module}!split@{split}}
+\index{split@{split}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ Interval\+Tree\+::split (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$}]{ih,  }\item[{double}]{rdur,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mdur,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+return a sub interval. 
+
+
+\begin{DoxyItemize}
+\item if i = 1 first sub-\/interval starting at same point as this interval of realtime duration rdur of musical duration mdur bar. it not is aligned.
+\item if i = 2 second sub-\/interval (rest) starting at this interval realtime start + rdur and this interval musical time start + mdur of realtime duration this realtime duration -\/ rdur. if the real starting date is out of this interval, then the real duration of the returned second sub-\/interval is zero. the musical starting date must be inside this interval. it is not aligned.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdur} & must be strictly positive. \\
+\hline
+{\em mdur} & must be strictly positive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga5b1393db865d0dd81249033dd99ecd5c}\label{group__segment_ga5b1393db865d0dd81249033dd99ecd5c}} 
+\index{Segment module@{Segment module}!split\_back@{split\_back}}
+\index{split\_back@{split\_back}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{split\_back()}{split\_back()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ Interval\+Tree\+::split\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$}]{ih,  }\item[{double}]{rdur,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mdur,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+return a sub interval. 
+
+
+\begin{DoxyItemize}
+\item if i = 1 first sub-\/interval starts at same point as this interval of realtime duration \+: duration of this interval -\/ rdur of musical duration \+: musical duration of this interval -\/ mdur bars. if the starting date is out of the input segment, then the real duration of the returned first sub-\/interval is zero. it is not aligned.
+\item if i = 2 second sub-\/interval (rest) starts at this interval realtime end -\/ rdur and this interval musical time end -\/ mdur of realtime duration rdur. it is not aligned.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdur} & must be strictly positive. \\
+\hline
+{\em mdur} & must be strictly positive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_gacb8de7e3756951950c391d241adec21c}\label{group__segment_gacb8de7e3756951950c391d241adec21c}} 
+\index{Segment module@{Segment module}!sub@{sub}}
+\index{sub@{sub}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ Interval\+Tree\+::sub (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$}]{ih,  }\item[{size\+\_\+t}]{a,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+return a the i-\/1th sub-\/interval of the division of this interval in n equal parts. the sub-\/interval returned is aligned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & must be $>$ 1 \\
+\hline
+{\em i} & must be smaller than a. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+this interval must be aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga1bb17bef698401de18bc814c7f965999}\label{group__segment_ga1bb17bef698401de18bc814c7f965999}} 
+\index{Segment module@{Segment module}!MusPoint@{MusPoint}}
+\index{MusPoint@{MusPoint}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{MusPoint()}{MusPoint()}}
+{\footnotesize\ttfamily Mus\+Point\+::\+Mus\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{p,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mdate = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}},  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{mduration = {\ttfamily \mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}} }\end{DoxyParamCaption})}
+
+
+
+copy of point. 
+
+extended with given onset and duration values (in fraction of bars) \mbox{\Hypertarget{group__segment_gaf3f9d88915bb6688d522f09d7542f690}\label{group__segment_gaf3f9d88915bb6688d522f09d7542f690}} 
+\index{Segment module@{Segment module}!Pitch@{Pitch}}
+\index{Pitch@{Pitch}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Pitch()}{Pitch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pitch\+::\+Pitch (\begin{DoxyParamCaption}\item[{char}]{name,  }\item[{float}]{alt = {\ttfamily 0.0},  }\item[{int}]{oct = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+construct pitch from name+alteration+octave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & see table N\+A\+M\+ES in constant.\+h \\
+\hline
+{\em alt} & in \mbox{[}-\/2, 2\mbox{]} where 1.\+0 is half tone \\
+\hline
+{\em oct} & in -\/10..10 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_gaace1762f4d975560a8d739d2d13fcd9b}\label{group__segment_gaace1762f4d975560a8d739d2d13fcd9b}} 
+\index{Segment module@{Segment module}!Pitch@{Pitch}}
+\index{Pitch@{Pitch}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Pitch()}{Pitch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pitch\+::\+Pitch (\begin{DoxyParamCaption}\item[{unsigned int}]{pitch,  }\item[{Pitch\+Unit}]{u = {\ttfamily MIDI} }\end{DoxyParamCaption})}
+
+
+
+construct note from M\+I\+DI pitch 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & in 0..127 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_ga5b7ec0fb127734c1cd5c6f350a3990fc}\label{group__segment_ga5b7ec0fb127734c1cd5c6f350a3990fc}} 
+\index{Segment module@{Segment module}!Point@{Point}}
+\index{Point@{Point}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{p }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+event (if any) is cloned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga395fa04b4ec126b66fc053f829a30cc1}\label{group__segment_ga395fa04b4ec126b66fc053f829a30cc1}} 
+\index{Segment module@{Segment module}!````~Point@{$\sim$Point}}
+\index{````~Point@{$\sim$Point}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{$\sim$Point()}{~Point()}}
+{\footnotesize\ttfamily Point\+::$\sim$\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+event is deallocated and matcher (linked) also. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga55eeab949e62268da63176d48570eb54}\label{group__segment_ga55eeab949e62268da63176d48570eb54}} 
+\index{Segment module@{Segment module}!operator=@{operator=}}
+\index{operator=@{operator=}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPoint}{Point}} \& Point\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyWarning}{Warning}
+event (if any) is cloned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__segment_ga8d702bcd74b30d19929d1954087bd4b0}\label{group__segment_ga8d702bcd74b30d19929d1954087bd4b0}} 
+\index{Segment module@{Segment module}!isnormal@{isnormal}}
+\index{isnormal@{isnormal}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{isnormal()}{isnormal()}}
+{\footnotesize\ttfamily bool Spiral\+Point\+::isnormal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+wether coordinate are not N\+AN. $\ast$/ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__segment_ga71dccd6f3dd14b2c497e4198ea37d745}\label{group__segment_ga71dccd6f3dd14b2c497e4198ea37d745}} 
+\index{Segment module@{Segment module}!distance@{distance}}
+\index{distance@{distance}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double Spiral\+Point\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Euclidian distance to given point. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__segment_gad81fd626f6b9bc6d70fd5e235ec5c8cb}\label{group__segment_gad81fd626f6b9bc6d70fd5e235ec5c8cb}} 
+\index{Segment module@{Segment module}!NoteName@{NoteName}}
+\index{NoteName@{NoteName}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{NoteName()}{NoteName()}}
+{\footnotesize\ttfamily Note\+Name\+::\+Note\+Name (\begin{DoxyParamCaption}\item[{char}]{n,  }\item[{float}]{alt,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+notename object from name, alteration and index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & must be between \textquotesingle{}A\textquotesingle{} and \textquotesingle{}G\textquotesingle{} \\
+\hline
+{\em alt} & must be between -\/2.\+0 and 2.\+0 \\
+\hline
+{\em id} & must be between -\/15 and 19 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__segment_gaf4a2321d9bc5a69a5b8a94cf1e146052}\label{group__segment_gaf4a2321d9bc5a69a5b8a94cf1e146052}} 
+\index{Segment module@{Segment module}!closest@{closest}}
+\index{closest@{closest}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{closest()}{closest()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structNoteName}{Note\+Name}} \& Note\+Name\+::closest (\begin{DoxyParamCaption}\item[{unsigned int}]{pitch,  }\item[{const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+note name (ref in table synonyms) corresponding to given midi pitch and closest to given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point in spiral \\
+\hline
+{\em pitch} & must be in 0..128 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__segment_ga8e1cf6e8bac86af1c5cfdc22b36210b2}\label{group__segment_ga8e1cf6e8bac86af1c5cfdc22b36210b2}} 
+\index{Segment module@{Segment module}!synonyms@{synonyms}}
+\index{synonyms@{synonyms}!Segment module@{Segment module}}
+\subsubsection{\texorpdfstring{synonyms}{synonyms}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structNoteName}{Note\+Name}} Note\+Name\+::synonyms\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'B'},  1.0,  12), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'C'},  0.0,   0), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'D'}, -2.0, -12) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'C'},  1.0,   7), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'D'}, -1.0,  -5), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'B'},  2.0,  19) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'C'},  2.0,  14), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'D'},  0.0,   2), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'E'}, -2.0, -10) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'D'},  1.0,   9), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'E'}, -1.0,  -3), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'F'}, -2.0, -15) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'D'},  2.0,  16), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'E'},  0.0,   4), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'F'}, -1.0,  -8) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'E'},  1.0,  11), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'F'},  0.0,  -1), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'G'},  2.0,  15) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'E'},  2.0,  18), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'F'},  1.0,   6), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'G'}, -1.0,  -6) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'F'},  2.0,  13), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'G'},  0.0,   1), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'A'}, -2.0, -11) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'G'},  1.0,   8), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'A'}, -1.0,  -4), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}() \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'G'},  2.0,  15), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'A'},  0.0,   3), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'B'}, -2.0,  -9) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'A'},  1.0,  10), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'B'}, -1.0,  -2), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'C'},  2.0,  14) \},}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \{ \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'A'},  2.0,  17), \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'B'},  0.0,   5), 
+      \mbox{\hyperlink{structNoteName}{NoteName}}(\textcolor{charliteral}{'C'}, -1.0,  -7) \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

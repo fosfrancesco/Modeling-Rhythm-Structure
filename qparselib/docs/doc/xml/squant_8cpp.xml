@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="squant_8cpp" kind="file" language="C++">
+    <compoundname>squant.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="QPconfig_8h" local="yes">QPconfig.h</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="FloatWeight_8hpp" local="yes">FloatWeight.hpp</includes>
+    <includes refid="TropicalWeight_8hpp" local="yes">TropicalWeight.hpp</includes>
+    <includes refid="ViterbiWeight_8hpp" local="yes">ViterbiWeight.hpp</includes>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includes refid="WTAFile_8hpp" local="yes">WTAFile.hpp</includes>
+    <includes refid="InputSegment_8hpp" local="yes">InputSegment.hpp</includes>
+    <includes refid="InputSegmentSerial_8hpp" local="yes">InputSegmentSerial.hpp</includes>
+    <includes refid="InputSegmentMIDI_8hpp" local="yes">InputSegmentMIDI.hpp</includes>
+    <includes refid="ParserMultibar1bestSIPBU_8hpp" local="yes">ParserMultibar1bestSIPBU.hpp</includes>
+    <includes refid="RT_8hpp" local="yes">RT.hpp</includes>
+    <incdepgraph>
+      <node id="667">
+        <label>assert.h</label>
+      </node>
+      <node id="664">
+        <label>stdlib.h</label>
+      </node>
+      <node id="657">
+        <label>src/targets/quant/squant.cpp</label>
+        <link refid="squant_8cpp"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="659" relation="include">
+        </childnode>
+        <childnode refid="660" relation="include">
+        </childnode>
+        <childnode refid="661" relation="include">
+        </childnode>
+        <childnode refid="662" relation="include">
+        </childnode>
+        <childnode refid="663" relation="include">
+        </childnode>
+        <childnode refid="664" relation="include">
+        </childnode>
+        <childnode refid="665" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="661">
+        <label>string</label>
+      </node>
+      <node id="665">
+        <label>unistd.h</label>
+      </node>
+      <node id="662">
+        <label>vector</label>
+      </node>
+      <node id="660">
+        <label>time.h</label>
+      </node>
+      <node id="659">
+        <label>iostream</label>
+      </node>
+      <node id="663">
+        <label>ctype.h</label>
+      </node>
+      <node id="666">
+        <label>getopt.h</label>
+      </node>
+      <node id="658">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="squant_8cpp_1aa8997e7dcc20531416abb48edeb325a4" prot="public" static="no">
+        <name>QUANT_INPUTLESS_1BEST</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="21" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1ad8648e534041062b2aa0788a923ec1fc" prot="public" static="no">
+        <name>QUANT_INPUTLESS_KBEST</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="25" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1a1402ed64c55336084bbb6581d7dbb52b" prot="public" static="no">
+        <name>QUANT_1BAR_COMBO</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="29" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1a12538f66fec03138ec514d461758aaf6" prot="public" static="no">
+        <name>QUANT_1BAR_PRE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="33" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1abd698960174ef977cff3b7fa4e891e85" prot="public" static="no">
+        <name>QUANT_1BAR_1BESTSIP</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="38" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1aa7f710d28df332fbc0e2c01b5449b987" prot="public" static="no">
+        <name>QUANT_1BAR_KBESTSKIP</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="43" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1ac2e9f1214aa9552a9f6b800182f0b4a8" prot="public" static="no">
+        <name>QUANT_MULTIBAR_1BEST_SIPBU</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="49" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1a9721306bbff0e307858daf5ab8647136" prot="public" static="no">
+        <name>QUANT_MULTIBAR_1BEST_SIPFLAT</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="55" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1a6e22a0920d001bc1c3d038157b209c84" prot="public" static="no">
+        <name>QUANT_SCENARIO</name>
+        <initializer>QUANT_MULTIBAR_1BEST_SIPBU</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="58" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="squant_8cpp_1a4f59323969e09154845e5509b29f80ec" prot="public" static="no">
+        <name>check_index_is</name>
+        <param><defname>NAME</defname></param>
+        <initializer>assert(0 == strcmp(long_options[option_index].name, NAME))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="262" column="9" bodyfile="src/targets/quant/squant.cpp" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="squant_8cpp_1a1bdcfae3209cbd96db35a2ae356fa15e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int verbosity</definition>
+        <argsstring></argsstring>
+        <name>verbosity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="121" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a614a21cde91226ac097771b41b9c9cc5" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _k</definition>
+        <argsstring></argsstring>
+        <name>_k</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="124" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1aa83363c6f30e914efcf3aad000af3611" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _input_file</definition>
+        <argsstring></argsstring>
+        <name>_input_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="127" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a21da174138213a9bd27f2e5fede73c84" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_input</definition>
+        <argsstring></argsstring>
+        <name>f_input</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="129" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a7dd1e51ee5ca2524b26ea918e1f9175f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_midi</definition>
+        <argsstring></argsstring>
+        <name>f_midi</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="131" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a25d128854a95ac59e471986f66c673bc" prot="public" static="yes" mutable="no">
+        <type><ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+        <definition>InputSegment* _iseg</definition>
+        <argsstring></argsstring>
+        <name>_iseg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="133" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1ae522d059a0773fde6752864a1a25a937" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_norest</definition>
+        <argsstring></argsstring>
+        <name>f_norest</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="136" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1af43b42d34e296555129d2fc0a38e2c36" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_start</definition>
+        <argsstring></argsstring>
+        <name>f_start</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="139" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1af18dec021c4189bf9e42c17825a659c9" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_start</definition>
+        <argsstring></argsstring>
+        <name>d_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="141" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a912061ffd86d7c9c5d45a818091a1809" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_end</definition>
+        <argsstring></argsstring>
+        <name>f_end</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="144" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a2085bc60e4a990f3bf6de9eb260c2033" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double d_end</definition>
+        <argsstring></argsstring>
+        <name>d_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="146" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a1968747d18a2c7b279494411074a7b0f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_output</definition>
+        <argsstring></argsstring>
+        <name>f_output</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="149" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a46456475197e8bbad19444941411e4e9" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _output_file</definition>
+        <argsstring></argsstring>
+        <name>_output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="151" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1ad046789a1b621e1bb0e960980dcc2158" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_config</definition>
+        <argsstring></argsstring>
+        <name>f_config</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="154" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a8d8b72b6f4705f681803f6ed7c4e84c8" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _config_file</definition>
+        <argsstring></argsstring>
+        <name>_config_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="156" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a454b46b0490130686c4d21dc43021d92" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _schema_file</definition>
+        <argsstring></argsstring>
+        <name>_schema_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="159" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a28db3237d61fcae6b2e0d5d6f0c0851c" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_schema</definition>
+        <argsstring></argsstring>
+        <name>f_schema</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="161" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a64e88bcd9de554d8f4ed2ab84c1f436c" prot="public" static="yes" mutable="no">
+        <type><ref refid="classWTAFile" kindref="compound">WTAFile</ref> *</type>
+        <definition>WTAFile* _schema</definition>
+        <argsstring></argsstring>
+        <name>_schema</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="163" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1af322a4cdcebdfdd3633b10266acd557b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_clean</definition>
+        <argsstring></argsstring>
+        <name>f_clean</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="166" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a4b976c648841620cade8ef741182a12e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_bars</definition>
+        <argsstring></argsstring>
+        <name>f_bars</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="169" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a54931cad72248fcbe4b0aff74ff9bcc7" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _bars</definition>
+        <argsstring></argsstring>
+        <name>_bars</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="171" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a95747b3ce299c51417663e6854bc263d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_barsec</definition>
+        <argsstring></argsstring>
+        <name>f_barsec</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="174" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1af7be06a410ef4bc0e6d1e0826e17aae9" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double _barsec</definition>
+        <argsstring></argsstring>
+        <name>_barsec</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="176" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a74a3ef0b293dfb5f25ddbbef68170966" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_barbeat</definition>
+        <argsstring></argsstring>
+        <name>f_barbeat</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="179" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1acf97d27bb0cfffcb9b1fae8b0308cd76" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _barbeat</definition>
+        <argsstring></argsstring>
+        <name>_barbeat</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="181" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1ab91317b56937ae083fb9a7b45e36e020" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_timesig</definition>
+        <argsstring></argsstring>
+        <name>f_timesig</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="184" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a32ef8b4e0daff75a5e520f02fbde1b3a" prot="public" static="yes" mutable="no">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref></type>
+        <definition>ScoreModel::ScoreMeter _ts(4, 4)</definition>
+        <argsstring>(4, 4)</argsstring>
+        <name>_ts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1aea2191678307657ce858be2f341d4bd4" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_pre</definition>
+        <argsstring></argsstring>
+        <name>f_pre</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="191" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a8f488e0c8acf621df489aad5e3395ccd" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t _pre</definition>
+        <argsstring></argsstring>
+        <name>_pre</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="193" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a8257e65f8b74bec4d5de6a7829993393" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_post</definition>
+        <argsstring></argsstring>
+        <name>f_post</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="196" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1ac9f70a3e6696e4a7601276c290a0f3e7" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t _post</definition>
+        <argsstring></argsstring>
+        <name>_post</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="198" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1adc18adf09341013a4b31aafa81c2085c" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_penalty</definition>
+        <argsstring></argsstring>
+        <name>f_penalty</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="201" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a8ee127732069dcd8213013b29c81135d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_count</definition>
+        <argsstring></argsstring>
+        <name>f_count</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="202" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a319963be2ff6dc388435f9b3f55f9d2a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_proba</definition>
+        <argsstring></argsstring>
+        <name>f_proba</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="203" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1a1eb83bf90439e73d26b8d96f19c36262" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+        <definition>WeightDom _weight_type</definition>
+        <argsstring></argsstring>
+        <name>_weight_type</name>
+        <initializer>= WeightDom::UNDEF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="204" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="squant_8cpp_1ab5b68aa8f898c499ca2c3092ecd9e552" prot="public" static="yes" mutable="no">
+        <type>struct option</type>
+        <definition>struct option long_options[]</definition>
+        <argsstring>[]</argsstring>
+        <name>long_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="204" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="squant_8cpp_1ac23dc7fc03d7ce8cd37cae09a0cd155c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setOptionArgs</definition>
+        <argsstring>(int option_index)</argsstring>
+        <name>setOptionArgs</name>
+        <param>
+          <type>int</type>
+          <declname>option_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="265" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="265" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="squant_8cpp_1a086c76a38f84ae6226164d3fb0b465d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkOptions</definition>
+        <argsstring>()</argsstring>
+        <name>checkOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="346" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="346" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="squant_8cpp_1a2ef30c42cbc289d899a8be5d2d8f77d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usage</definition>
+        <argsstring>()</argsstring>
+        <name>usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="426" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="426" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="squant_8cpp_1aadd58a2bd505eba3564c7483be1a6140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="507" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="507" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="squant_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/quant/squant.cpp" line="515" column="1" bodyfile="src/targets/quant/squant.cpp" bodystart="515" bodyend="1042"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/targets/quant/squant.cpp"/>
+  </compounddef>
+</doxygen>

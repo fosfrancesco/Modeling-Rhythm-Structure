@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classIntervalHeap" kind="class" language="C++" prot="public">
+    <compoundname>IntervalHeap</compoundname>
+    <includes local="no">IntervalHeap.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classIntervalHeap_1a56964ad9a5c60ad550282a6219326681" prot="protected" static="no" mutable="no">
+        <type>IntervalSet</type>
+        <definition>IntervalSet IntervalHeap::_interval_heap</definition>
+        <argsstring></argsstring>
+        <name>_interval_heap</name>
+        <briefdescription>
+<para>table of nodes in interval tree. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="116" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classIntervalHeap_1a7347cb18816cc1fe1c53c3727416328d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntervalHeap::_added</definition>
+        <argsstring></argsstring>
+        <name>_added</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="118" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classIntervalHeap_1ad87165e87b2c1bd7150bc4f8159aef02" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntervalHeap::_found</definition>
+        <argsstring></argsstring>
+        <name>_found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="119" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1ga4516d6ce78ba92f2e1728fdaa930ac51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalHeap::IntervalHeap</definition>
+        <argsstring>()</argsstring>
+        <name>IntervalHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="78" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf66f939648f0ea13c0eb3cee057269b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IntervalHeap::~IntervalHeap</definition>
+        <argsstring>()</argsstring>
+        <name>~IntervalHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="80" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4a873d9f7d804928f972a3c11d2a1df0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntervalHeap::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="87" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga87e6be639c7435053444d83913505c1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t IntervalHeap::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="89" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad7fd7dd4ddb8d520df0985e67d180019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::make</definition>
+        <argsstring>(const InputSegment *s, Rational mend, double rext=0)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rext</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>find or create (and push) a top interval of real-time duration covering the whole length of the given input segment s (root of interval tree) + the given extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>inside-bar interval (musical time duration of 1 bar) if flag bar is true</para>
+</listitem><listitem><para>multiple interval if flag bar is false (default).</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>not aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="99" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="51" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad886d53d2881a80f06c6f9fbf202d727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::make</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend, size_t first, IntervalTree *p, IntervalTree *ps)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+<para>get interval from heap, build it if not present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>not aligned (when built). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="107" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="69" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__segment_1ga3327b1c81b67df8c21468492a845630e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *const</type>
+        <definition>IntervalTree *const IntervalHeap::push</definition>
+        <argsstring>(IntervalTree *p)</argsstring>
+        <name>push</name>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/IntervalHeap.hpp" line="122" column="1" bodyfile="src/segment/IntervalHeap.cpp" bodystart="85" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>table for storage of aligned intervals to avoid recomputation of alignments. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>the aligned interval are indexed (in table) as intervals (i.e. indexed with bound of real-time and musical-time interval bounds). </para>
+    </detaileddescription>
+    <location file="src/segment/IntervalHeap.hpp" line="76" column="1" bodyfile="src/segment/IntervalHeap.hpp" bodystart="75" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classIntervalHeap_1a7347cb18816cc1fe1c53c3727416328d" prot="protected" virt="non-virtual"><scope>IntervalHeap</scope><name>_added</name></member>
+      <member refid="classIntervalHeap_1ad87165e87b2c1bd7150bc4f8159aef02" prot="protected" virt="non-virtual"><scope>IntervalHeap</scope><name>_found</name></member>
+      <member refid="classIntervalHeap_1a56964ad9a5c60ad550282a6219326681" prot="protected" virt="non-virtual"><scope>IntervalHeap</scope><name>_interval_heap</name></member>
+      <member refid="group__segment_1ga4a873d9f7d804928f972a3c11d2a1df0" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>empty</name></member>
+      <member refid="group__segment_1ga4516d6ce78ba92f2e1728fdaa930ac51" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>IntervalHeap</name></member>
+      <member refid="group__segment_1gad7fd7dd4ddb8d520df0985e67d180019" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>make</name></member>
+      <member refid="group__segment_1gad886d53d2881a80f06c6f9fbf202d727" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>make</name></member>
+      <member refid="group__segment_1ga3327b1c81b67df8c21468492a845630e" prot="private" virt="non-virtual"><scope>IntervalHeap</scope><name>push</name></member>
+      <member refid="group__segment_1ga87e6be639c7435053444d83913505c1b" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>size</name></member>
+      <member refid="group__segment_1gaf66f939648f0ea13c0eb3cee057269b8" prot="public" virt="non-virtual"><scope>IntervalHeap</scope><name>~IntervalHeap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

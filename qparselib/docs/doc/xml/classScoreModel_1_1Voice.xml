@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Voice" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Voice</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1a36a7810d593e1b2c7077ca15cd0999b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> *</type>
+        <definition>Part* ScoreModel::Voice::_part</definition>
+        <argsstring></argsstring>
+        <name>_part</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The part the voice belongs to </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="121" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1a2b601ec768ed8a68f345f882280a7b47" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ScoreModel::Voice::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A voice has a name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="126" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1ab767a9a6c99a584598f64ae870f6cfac" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> * &gt;</type>
+        <definition>std::vector&lt;Event*&gt; ScoreModel::Voice::_events</definition>
+        <argsstring></argsstring>
+        <name>_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A score is a sequence of events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="131" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1ac5e25993c04faa7d1a0e75aa1e7bdf5a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Tie * &gt;</type>
+        <definition>std::vector&lt;Tie*&gt; ScoreModel::Voice::_ties</definition>
+        <argsstring></argsstring>
+        <name>_ties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ties between events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="136" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1a2ede886131bec47f61197c03e36ec3dc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Tuplet" kindref="compound">Tuplet</ref> * &gt;</type>
+        <definition>std::vector&lt;Tuplet*&gt; ScoreModel::Voice::_tuplets</definition>
+        <argsstring></argsstring>
+        <name>_tuplets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tuplets </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="141" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Voice_1a44c675a9e6129a0d42233e9bfd648126" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Beam" kindref="compound">Beam</ref> * &gt;</type>
+        <definition>std::vector&lt;Beam*&gt; ScoreModel::Voice::_beams</definition>
+        <argsstring></argsstring>
+        <name>_beams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Beams </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="146" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a643750fa08c8cbb778e954006f8327ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Voice::Voice</definition>
+        <argsstring>(Part *part, std::string name)</argsstring>
+        <name>Voice</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> *</type>
+          <declname>part</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="42" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a909bca5575124aa265a49b28db2f1ce9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ScoreModel::Voice::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="44" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1aef6d564488ba7fd2ca15f270a6c12c74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> *</type>
+        <definition>Part * ScoreModel::Voice::getPart</definition>
+        <argsstring>() const</argsstring>
+        <name>getPart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="49" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a50befdba4b2f8d031287555f8389a1c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Score" kindref="compound">Score</ref> &amp;</type>
+        <definition>Score &amp; ScoreModel::Voice::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="51" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a69f704500f77554d6f35eb9afa29285d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Voice::addEvent</definition>
+        <argsstring>(Event *event)</argsstring>
+        <name>addEvent</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add an event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="56" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a93951ee88d70e35ade3febe8c7ed571c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Voice::addTie</definition>
+        <argsstring>(Note *e1, Note *e2)</argsstring>
+        <name>addTie</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Note" kindref="compound">Note</ref> *</type>
+          <declname>e1</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1Note" kindref="compound">Note</ref> *</type>
+          <declname>e2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a tie between two notes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="61" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1ad9d6bdd1aab4ed07e52bb5c09924662b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Voice::addTuplet</definition>
+        <argsstring>(Tuplet *tuplet)</argsstring>
+        <name>addTuplet</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Tuplet" kindref="compound">Tuplet</ref> *</type>
+          <declname>tuplet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a tuplet </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="66" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a5e995ab144d0bef4bb7d5c8876662c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Voice::addBeam</definition>
+        <argsstring>(Beam *beam)</argsstring>
+        <name>addBeam</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Beam" kindref="compound">Beam</ref> *</type>
+          <declname>beam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a beam </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="71" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a30cf5805201179908dee043b23de3d84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Sequence" kindref="compound">Sequence</ref></type>
+        <definition>Sequence ScoreModel::Voice::addFromRhythmTree</definition>
+        <argsstring>(Measure *measure, const PointedRhythmTree *pointedRT, Duration rtDuration, int level=0)</argsstring>
+        <name>addFromRhythmTree</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Measure" kindref="compound">Measure</ref> *</type>
+          <declname>measure</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPointedRhythmTree" kindref="compound">PointedRhythmTree</ref> *</type>
+          <declname>pointedRT</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+          <declname>rtDuration</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new measure or part of a measure from a rhythm tree</para>
+<para>The method return a sub-voice containing the added elements </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="78" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="68" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1ad0027fbbd10c314a08385f3030fae13d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Voice" kindref="compound">Voice</ref></type>
+        <definition>Voice ScoreModel::Voice::trimMeasure</definition>
+        <argsstring>(Measure *m)</argsstring>
+        <name>trimMeasure</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Measure" kindref="compound">Measure</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract the part that belongs to a measure </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="84" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="56" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a2249c4f4152e849683b32727cd2c3371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VoiceRange</type>
+        <definition>VoiceRange ScoreModel::Voice::getRange</definition>
+        <argsstring>() const</argsstring>
+        <name>getRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the range of a voice a a pair of pitches </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="89" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="190" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1acbbfa1e87da6dfd568150f5a18067dd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> * &gt;</type>
+        <definition>std::vector&lt; Event * &gt; ScoreModel::Voice::getEvents</definition>
+        <argsstring>() const</argsstring>
+        <name>getEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="94" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1aeff975af9f78750447629c56011876f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; Tie * &gt;</type>
+        <definition>std::vector&lt; Tie * &gt; ScoreModel::Voice::getTies</definition>
+        <argsstring>() const</argsstring>
+        <name>getTies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get ties </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="99" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a535d10ca5d99b50873913e95c4dff50b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Tuplet" kindref="compound">Tuplet</ref> * &gt;</type>
+        <definition>std::vector&lt; Tuplet * &gt; ScoreModel::Voice::getTuplets</definition>
+        <argsstring>() const</argsstring>
+        <name>getTuplets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get tuplets </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="104" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a1d0d1312e5571c1352b19ecb8af6ab35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Beam" kindref="compound">Beam</ref> * &gt;</type>
+        <definition>std::vector&lt; Beam * &gt; ScoreModel::Voice::getBeams</definition>
+        <argsstring>() const</argsstring>
+        <name>getBeams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get beams </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="109" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Voice_1a60df4b72aa67feecbf46ff57e4c28f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Voice::~Voice</definition>
+        <argsstring>()</argsstring>
+        <name>~Voice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Voice.hpp" line="114" column="1" bodyfile="src/scoremodel/Voice.cpp" bodystart="224" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Voice.hpp" line="36" column="1" bodyfile="src/scoremodel/Voice.hpp" bodystart="36" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Voice_1a44c675a9e6129a0d42233e9bfd648126" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_beams</name></member>
+      <member refid="classScoreModel_1_1Voice_1ab767a9a6c99a584598f64ae870f6cfac" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_events</name></member>
+      <member refid="classScoreModel_1_1Voice_1a2b601ec768ed8a68f345f882280a7b47" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_name</name></member>
+      <member refid="classScoreModel_1_1Voice_1a36a7810d593e1b2c7077ca15cd0999b2" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_part</name></member>
+      <member refid="classScoreModel_1_1Voice_1ac5e25993c04faa7d1a0e75aa1e7bdf5a" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_ties</name></member>
+      <member refid="classScoreModel_1_1Voice_1a2ede886131bec47f61197c03e36ec3dc" prot="private" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>_tuplets</name></member>
+      <member refid="classScoreModel_1_1Voice_1a5e995ab144d0bef4bb7d5c8876662c86" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>addBeam</name></member>
+      <member refid="classScoreModel_1_1Voice_1a69f704500f77554d6f35eb9afa29285d" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>addEvent</name></member>
+      <member refid="classScoreModel_1_1Voice_1a30cf5805201179908dee043b23de3d84" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>addFromRhythmTree</name></member>
+      <member refid="classScoreModel_1_1Voice_1a93951ee88d70e35ade3febe8c7ed571c" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>addTie</name></member>
+      <member refid="classScoreModel_1_1Voice_1ad9d6bdd1aab4ed07e52bb5c09924662b" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>addTuplet</name></member>
+      <member refid="classScoreModel_1_1Voice_1a1d0d1312e5571c1352b19ecb8af6ab35" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getBeams</name></member>
+      <member refid="classScoreModel_1_1Voice_1acbbfa1e87da6dfd568150f5a18067dd1" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getEvents</name></member>
+      <member refid="classScoreModel_1_1Voice_1a909bca5575124aa265a49b28db2f1ce9" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getName</name></member>
+      <member refid="classScoreModel_1_1Voice_1aef6d564488ba7fd2ca15f270a6c12c74" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getPart</name></member>
+      <member refid="classScoreModel_1_1Voice_1a2249c4f4152e849683b32727cd2c3371" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getRange</name></member>
+      <member refid="classScoreModel_1_1Voice_1a50befdba4b2f8d031287555f8389a1c7" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getScore</name></member>
+      <member refid="classScoreModel_1_1Voice_1aeff975af9f78750447629c56011876f4" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getTies</name></member>
+      <member refid="classScoreModel_1_1Voice_1a535d10ca5d99b50873913e95c4dff50b" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>getTuplets</name></member>
+      <member refid="classScoreModel_1_1Voice_1ad0027fbbd10c314a08385f3030fae13d" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>trimMeasure</name></member>
+      <member refid="classScoreModel_1_1Voice_1a643750fa08c8cbb778e954006f8327ee" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>Voice</name></member>
+      <member refid="classScoreModel_1_1Voice_1a60df4b72aa67feecbf46ff57e4c28f14" prot="public" virt="non-virtual"><scope>ScoreModel::Voice</scope><name>~Voice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

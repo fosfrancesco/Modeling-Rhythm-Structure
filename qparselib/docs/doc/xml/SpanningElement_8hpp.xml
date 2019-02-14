@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="SpanningElement_8hpp" kind="file" language="C++">
+    <compoundname>SpanningElement.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="Event_8hpp" local="yes">Event.hpp</includes>
+    <includes refid="Sequence_8hpp" local="yes">Sequence.hpp</includes>
+    <includedby refid="SpanningElement_8cpp" local="yes">src/scoremodel/SpanningElement.cpp</includedby>
+    <incdepgraph>
+      <node id="364">
+        <label>src/scoremodel/SpanningElement.hpp</label>
+        <link refid="SpanningElement_8hpp"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classScoreModel_1_1SpanningElement" prot="public">ScoreModel::SpanningElement</innerclass>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/SpanningElement.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classLetterWeight" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>LetterWeight</compoundname>
+    <derivedcompoundref refid="classCountingWeight" prot="public" virt="non-virtual">CountingWeight</derivedcompoundref>
+    <derivedcompoundref refid="classFloatWeight" prot="public" virt="non-virtual">FloatWeight</derivedcompoundref>
+    <derivedcompoundref refid="classTropicalWeight" prot="public" virt="non-virtual">TropicalWeight</derivedcompoundref>
+    <derivedcompoundref refid="classViterbiWeight" prot="public" virt="non-virtual">ViterbiWeight</derivedcompoundref>
+    <includes local="no">Weight.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classLetterWeight_1aa953d5bac280cba9bdb18a96c373d81b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Weight</definition>
+        <argsstring></argsstring>
+        <name>Weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="33" column="1" bodyfile="src/weight/Weight.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LetterWeight::LetterWeight</definition>
+        <argsstring>()</argsstring>
+        <name>LetterWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>should not happen. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="37" column="1" bodyfile="src/weight/Weight.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LetterWeight::LetterWeight</definition>
+        <argsstring>(const LetterWeight &amp;)</argsstring>
+        <name>LetterWeight</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="39" column="1" bodyfile="src/weight/Weight.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual LetterWeight::~LetterWeight</definition>
+        <argsstring>()</argsstring>
+        <name>~LetterWeight</name>
+        <briefdescription>
+<para>virtual destructor to ensure correct destruction of derived objects through a pointer to base <ref refid="classWeight" kindref="compound">Weight</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="43" column="1" bodyfile="src/weight/Weight.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a5f8b1c03c2f08be2728ee7638b5cee3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+        <definition>LetterWeight&amp; LetterWeight::operator=</definition>
+        <argsstring>(const LetterWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="45" column="1" bodyfile="src/weight/Weight.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        <definition>virtual LetterWeight* LetterWeight::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="group__weight_1ga3ee8633406a8dc51ba579254872b21e4">clone</reimplementedby>
+        <reimplementedby refid="group__weight_1ga378883be65a16bb86f13b1a9d941f104">clone</reimplementedby>
+        <reimplementedby refid="group__weight_1ga315ec4d2ce14bcdea7b8a3d0c9d278ef">clone</reimplementedby>
+        <reimplementedby refid="group__weight_1gafb8da4bc0d0e23217ecad4c219d9a610">clone</reimplementedby>
+        <reimplementedby refid="group__weight_1ga7e6061ad27a65ee071647866da6a971f">clone</reimplementedby>
+        <reimplementedby refid="classPerfoWeight_1a8023bda84f8e883bbad23b31c1ccdd0b">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight LetterWeight::make</definition>
+        <argsstring>(double v) const =0</argsstring>
+        <name>make</name>
+        <reimplementedby refid="classFloatWeight_1a71464c94830161af2f0dd3df99fe6856">make</reimplementedby>
+        <reimplementedby refid="classTropicalWeight_1abc00c8fe56beedff6b7192325833d6d3">make</reimplementedby>
+        <reimplementedby refid="classDistance_1a1fe45f762afff378c46f81d6199a14ab">make</reimplementedby>
+        <reimplementedby refid="classViterbiWeight_1a8b4676e41a4edb2cc5466d1e8cb1059a">make</reimplementedby>
+        <reimplementedby refid="group__weight_1ga1d225aef0e74c70d8ae73164de4f56e2">make</reimplementedby>
+        <reimplementedby refid="classPerfoWeight_1ad9237d9b3fccf6f0b70133e10c1103b2">make</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a weight of same type as this letter, initialized with given value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight LetterWeight::get_zero</definition>
+        <argsstring>() const =0</argsstring>
+        <name>get_zero</name>
+        <reimplementedby refid="classFloatWeight_1a0e9f541164db5cf13978efd46585810b">get_zero</reimplementedby>
+        <reimplementedby refid="classTropicalWeight_1a8de59f3233cfd822712b04d6069f5256">get_zero</reimplementedby>
+        <reimplementedby refid="classDistance_1affe4a5bab7ca33e5119d3f93484dccb3">get_zero</reimplementedby>
+        <reimplementedby refid="classViterbiWeight_1af7655a0c00c0af95699e186ceec25a7e">get_zero</reimplementedby>
+        <reimplementedby refid="group__weight_1ga76eb9cd401bbeba9450469a889dfb7eb">get_zero</reimplementedby>
+        <briefdescription>
+<para>return the neutral element for add (absorbing element for mult) wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight LetterWeight::get_one</definition>
+        <argsstring>() const =0</argsstring>
+        <name>get_one</name>
+        <reimplementedby refid="classFloatWeight_1a4952f3b312622eccc331b4d001c816a4">get_one</reimplementedby>
+        <reimplementedby refid="classTropicalWeight_1a62d1dc9815ba6ba04665047ba6581731">get_one</reimplementedby>
+        <reimplementedby refid="classDistance_1a8aac0a94a73b60ef2bf566eb59a3e704">get_one</reimplementedby>
+        <reimplementedby refid="classViterbiWeight_1a5009d22fc226821a8dfd876ed9bd9e84">get_one</reimplementedby>
+        <reimplementedby refid="group__weight_1ga0a589d8beac0f16f54f7e4f451adc843">get_one</reimplementedby>
+        <briefdescription>
+<para>return the neutral element for mult wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double LetterWeight::norm</definition>
+        <argsstring>() const =0</argsstring>
+        <name>norm</name>
+        <reimplementedby refid="classFloatWeight_1a2c63d370c10678609f814907193b23ee">norm</reimplementedby>
+        <reimplementedby refid="group__weight_1ga01383c055ca0dafc28870ecd701dbd15">norm</reimplementedby>
+        <reimplementedby refid="group__weight_1gabea8959ba2b8538194c3aadf5f9e4941">norm</reimplementedby>
+        <reimplementedby refid="group__weight_1gabb8ca43a6821de970e8f6b23c848c804">norm</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void LetterWeight::scalar</definition>
+        <argsstring>(double)=0</argsstring>
+        <name>scalar</name>
+        <reimplementedby refid="group__weight_1ga8fe884fff3323382bfc7729500cca368">scalar</reimplementedby>
+        <reimplementedby refid="group__weight_1ga9b479f4a9f23f4c423729b669aa69dc5">scalar</reimplementedby>
+        <reimplementedby refid="group__weight_1ga9b7f93efd61f58a88d9274a9e12ebe36">scalar</reimplementedby>
+        <reimplementedby refid="group__weight_1gabb65ce9f0f34112159f6689a36594470">scalar</reimplementedby>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void LetterWeight::invert</definition>
+        <argsstring>()=0</argsstring>
+        <name>invert</name>
+        <reimplementedby refid="group__weight_1ga45533bb9d354577728ddb1e0a42c4bab">invert</reimplementedby>
+        <reimplementedby refid="group__weight_1ga2bad107be8a2e71fc12b75196adde070">invert</reimplementedby>
+        <reimplementedby refid="group__weight_1ga1fa4dd503a5f4915df2f9c5663aeeaeb">invert</reimplementedby>
+        <reimplementedby refid="classCountingWeight_1ab9749abc9fbcee9ed064a9be33879829">invert</reimplementedby>
+        <briefdescription>
+<para>multiplicative inverse, for semifields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabaad113da06b47c4b291558d05da6aa6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LetterWeight::zero</definition>
+        <argsstring>() const</argsstring>
+        <name>zero</name>
+        <reimplementedby refid="group__weight_1gafb9e6bffef57c6462cd2eea89efbfeaf">zero</reimplementedby>
+        <reimplementedby refid="group__weight_1ga55f1e2bcb9e1e3fd521d652a5aebfc36">zero</reimplementedby>
+        <reimplementedby refid="group__weight_1ga35f29b2dcd594cc2cfac884322095c16">zero</reimplementedby>
+        <reimplementedby refid="group__weight_1ga62b599ef59770e981d17d565e6727ca9">zero</reimplementedby>
+        <briefdescription>
+<para>this letterweight is neutral element for add (absorbing element for mult). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="70" column="1" bodyfile="src/weight/Weight.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LetterWeight::one</definition>
+        <argsstring>() const</argsstring>
+        <name>one</name>
+        <reimplementedby refid="group__weight_1gac90a90f052aba6f1a03a5238bae96159">one</reimplementedby>
+        <reimplementedby refid="group__weight_1gae362229d75df663272f4d52c15a04315">one</reimplementedby>
+        <reimplementedby refid="group__weight_1ga31f697ce8283cf19cd1b2f9520c83cde">one</reimplementedby>
+        <reimplementedby refid="group__weight_1ga5189380be1ac03126180846e3a8fd1cb">one</reimplementedby>
+        <briefdescription>
+<para>this letterweight is neutral element for mult. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="73" column="1" bodyfile="src/weight/Weight.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classLetterWeight_1a7c087b5999657545934b72660928a2ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LetterWeight::hasType</definition>
+        <argsstring>(std::string) const =0</argsstring>
+        <name>hasType</name>
+        <reimplementedby refid="classPerfoWeight_1a170351b18fd33ea7753d8b82eb83ae9e">hasType</reimplementedby>
+        <reimplementedby refid="classViterbiWeight_1a115d43704bf01603dad9cda0d28292bf">hasType</reimplementedby>
+        <reimplementedby refid="classFloatWeight_1ab0d05685ad9a718cc9020a55d2932486">hasType</reimplementedby>
+        <reimplementedby refid="classCountingWeight_1aedc7b4e3519adc6e29bcabd4d8ba719a">hasType</reimplementedby>
+        <reimplementedby refid="classTropicalWeight_1a276bcd4dd3d61887d1628e63665edd7e">hasType</reimplementedby>
+        <param>
+          <type>std::string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="75" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__weight_1gaf00322921db3c5212f8d5ca63081d689" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LetterWeight::equal</definition>
+        <argsstring>(const LetterWeight *) const</argsstring>
+        <name>equal</name>
+        <reimplementedby refid="group__weight_1gaaa895d17971bdd11c3ecddb9d701ac0a">equal</reimplementedby>
+        <reimplementedby refid="group__weight_1ga96f4c23e4845b232451e99b648bddfd6">equal</reimplementedby>
+        <reimplementedby refid="group__weight_1ga33f06a811859bdbbf1c0ad2e34299df9">equal</reimplementedby>
+        <reimplementedby refid="group__weight_1ga7203d6028f02a2791bdeede99ef59b97">equal</reimplementedby>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        </param>
+        <briefdescription>
+<para>binary operators are defined only between descendant LetterWeights of same typeid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="81" column="1" bodyfile="src/weight/Weight.cpp" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LetterWeight::smaller</definition>
+        <argsstring>(const LetterWeight *) const</argsstring>
+        <name>smaller</name>
+        <reimplementedby refid="group__weight_1ga89e27d308aeaadbc11621ae9a6e839b3">smaller</reimplementedby>
+        <reimplementedby refid="group__weight_1ga54f4048f888a9432f02bc0d9f25257c1">smaller</reimplementedby>
+        <reimplementedby refid="group__weight_1ga149e9ae84c83b9235d512c68fec54d1c">smaller</reimplementedby>
+        <reimplementedby refid="group__weight_1ga4237553cf4beafd5a96bd0ac7da7ac11">smaller</reimplementedby>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        </param>
+        <briefdescription>
+<para>binary operators are defined only between descendant LetterWeights of same typeid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="85" column="1" bodyfile="src/weight/Weight.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LetterWeight::add</definition>
+        <argsstring>(const LetterWeight *)</argsstring>
+        <name>add</name>
+        <reimplementedby refid="group__weight_1ga987ee2a0704f046a9be6e2456d56df7c">add</reimplementedby>
+        <reimplementedby refid="group__weight_1ga009b0216c58308f81497e4aabe49aaed">add</reimplementedby>
+        <reimplementedby refid="group__weight_1ga01ca779f7d5378564f4419150d7ae1f5">add</reimplementedby>
+        <reimplementedby refid="group__weight_1ga41791f144fea9717092970563337d040">add</reimplementedby>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        </param>
+        <briefdescription>
+<para>binary operators are defined only between descendant LetterWeights of same typeid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="89" column="1" bodyfile="src/weight/Weight.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LetterWeight::mult</definition>
+        <argsstring>(const LetterWeight *)</argsstring>
+        <name>mult</name>
+        <reimplementedby refid="group__weight_1ga16591d6a01c98477ccd57deadf8d4738">mult</reimplementedby>
+        <reimplementedby refid="group__weight_1ga842377ca8ad5fa73cc9787fa97e88635">mult</reimplementedby>
+        <reimplementedby refid="group__weight_1ga102af16b814daad826afb91d6f6c75b3">mult</reimplementedby>
+        <reimplementedby refid="group__weight_1ga6bf7a669a9798ebbd6b4138cce2bade6">mult</reimplementedby>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        </param>
+        <briefdescription>
+<para>binary operators are defined only between descendant LetterWeights of same typeid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="93" column="1" bodyfile="src/weight/Weight.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabef24fcc2eb0c72c420e83e6db625545" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LetterWeight::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplementedby refid="group__weight_1gaf9785af97fcce45a15098363efe5b7c8">print</reimplementedby>
+        <reimplementedby refid="group__weight_1ga535988d2b88e8f2bbb24eeeba5daf81f">print</reimplementedby>
+        <reimplementedby refid="group__weight_1gad54ea0c48179932f2b8e553f5e3ade51">print</reimplementedby>
+        <reimplementedby refid="group__weight_1ga00d9ffa71ae947eb191e118570049b73">print</reimplementedby>
+        <reimplementedby refid="group__weight_1gaa6f92a288b315fed3b301de728f2717d">print</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/Weight.hpp" line="95" column="1" bodyfile="src/weight/Weight.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>abstract class for concrete weight values. Every concrete weight domain must be a derived class of <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="162">
+        <label>ViterbiWeight</label>
+        <link refid="classViterbiWeight"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="161">
+        <label>Distance</label>
+        <link refid="classDistance"/>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>TropicalWeight</label>
+        <link refid="classTropicalWeight"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>FloatWeight</label>
+        <link refid="classFloatWeight"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>CountingWeight</label>
+        <link refid="classCountingWeight"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>PerfoWeight</label>
+        <link refid="classPerfoWeight"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/weight/Weight.hpp" line="32" column="1" bodyfile="src/weight/Weight.hpp" bodystart="31" bodyend="97"/>
+    <listofallmembers>
+      <member refid="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8" prot="protected" virt="virtual"><scope>LetterWeight</scope><name>add</name></member>
+      <member refid="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>clone</name></member>
+      <member refid="group__weight_1gaf00322921db3c5212f8d5ca63081d689" prot="protected" virt="virtual"><scope>LetterWeight</scope><name>equal</name></member>
+      <member refid="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>get_one</name></member>
+      <member refid="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>get_zero</name></member>
+      <member refid="classLetterWeight_1a7c087b5999657545934b72660928a2ee" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>hasType</name></member>
+      <member refid="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>invert</name></member>
+      <member refid="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" virt="non-virtual"><scope>LetterWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" virt="non-virtual"><scope>LetterWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>make</name></member>
+      <member refid="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01" prot="protected" virt="virtual"><scope>LetterWeight</scope><name>mult</name></member>
+      <member refid="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>norm</name></member>
+      <member refid="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0" prot="public" virt="virtual"><scope>LetterWeight</scope><name>one</name></member>
+      <member refid="classLetterWeight_1a5f8b1c03c2f08be2728ee7638b5cee3d" prot="public" virt="non-virtual"><scope>LetterWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1gabef24fcc2eb0c72c420e83e6db625545" prot="protected" virt="virtual"><scope>LetterWeight</scope><name>print</name></member>
+      <member refid="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58" prot="public" virt="pure-virtual"><scope>LetterWeight</scope><name>scalar</name></member>
+      <member refid="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2" prot="protected" virt="virtual"><scope>LetterWeight</scope><name>smaller</name></member>
+      <member refid="classLetterWeight_1aa953d5bac280cba9bdb18a96c373d81b" prot="private" virt="non-virtual"><scope>LetterWeight</scope><name>Weight</name></member>
+      <member refid="group__weight_1gabaad113da06b47c4b291558d05da6aa6" prot="public" virt="virtual"><scope>LetterWeight</scope><name>zero</name></member>
+      <member refid="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" virt="virtual"><scope>LetterWeight</scope><name>~LetterWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

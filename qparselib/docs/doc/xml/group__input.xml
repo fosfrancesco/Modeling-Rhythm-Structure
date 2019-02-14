@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__input" kind="group">
+    <compoundname>input</compoundname>
+    <title>Input module</title>
+    <innerclass refid="classInputSegmentMIDI" prot="public">InputSegmentMIDI</innerclass>
+    <innerclass refid="classInputSegmentSerial" prot="public">InputSegmentSerial</innerclass>
+    <innerclass refid="classWTAFile" prot="public">WTAFile</innerclass>
+    <briefdescription>
+<para>The <computeroutput>input</computeroutput> module contains utilities for reading from and writing to files the data given in input to the quantization by parsing algorithm (schema and segment). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

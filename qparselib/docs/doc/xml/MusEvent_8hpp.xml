@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="MusEvent_8hpp" kind="file" language="C++">
+    <compoundname>MusEvent.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Pitch_8hpp" local="yes">Pitch.hpp</includes>
+    <includedby refid="PointedRT_8hpp" local="yes">src/output/PointedRT.hpp</includedby>
+    <includedby refid="InputSegment_8hpp" local="yes">src/segment/InputSegment.hpp</includedby>
+    <includedby refid="Point_8hpp" local="yes">src/segment/Point.hpp</includedby>
+    <includedby refid="MusEvent_8cpp" local="yes">src/segment/MusEvent.cpp</includedby>
+    <incdepgraph>
+      <node id="448">
+        <label>assert.h</label>
+      </node>
+      <node id="446">
+        <label>src/segment/MusEvent.hpp</label>
+        <link refid="MusEvent_8hpp"/>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>vector</label>
+      </node>
+      <node id="447">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classMusEvent" prot="public">MusEvent</innerclass>
+    <innerclass refid="classRestEvent" prot="public">RestEvent</innerclass>
+    <innerclass refid="classNoteEvent" prot="public">NoteEvent</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__segment_1gade87c7b11c1a1fdbcd922e08b3eaa3c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const MusEvent &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classMusEvent" kindref="compound">MusEvent</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusEvent.hpp" line="63" column="1" bodyfile="src/segment/MusEvent.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/MusEvent.hpp"/>
+  </compounddef>
+</doxygen>

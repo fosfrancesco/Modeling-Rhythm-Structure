@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classWTAFile" kind="class" language="C++" prot="public">
+    <compoundname>WTAFile</compoundname>
+    <basecompoundref refid="classWTA" prot="public" virt="non-virtual">WTA</basecompoundref>
+    <includes local="no">WTAFile.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWTAFile_1afc385786a0b36382ab366c91a8b9ce0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTAFile::WTAFile</definition>
+        <argsstring>()</argsstring>
+        <name>WTAFile</name>
+        <briefdescription>
+<para>default constructor for cython. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="33" column="1" bodyfile="src/input/WTAFile.cpp" bodystart="382" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a0c65f030a8df8bdb8eed5c261908e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTAFile::WTAFile</definition>
+        <argsstring>(const std::string filename, WeightDom wt=WeightDom::UNDEF, pre_t pre=0, pre_t post=0)</argsstring>
+        <name>WTAFile</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+          <declname>wt</declname>
+          <defval>WeightDom::UNDEF</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>read weight type and schema from file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input text file specifying the schema </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>weight type (forced)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+if another weight type is given as argument (forced weight type)<itemizedlist>
+<listitem><para>use it as weight type for reading schema if no weight type found in file</para>
+</listitem><listitem><para>use it to cast schema (force type). the <ref refid="classWTA" kindref="compound">WTA</ref> can be empty in case of error. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a1d76575338801558fc75759aa90261b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTAFile::WTAFile</definition>
+        <argsstring>(const std::string filename, bool count_flag=false, bool penalty_flag=true, bool stochastic_flag=false)</argsstring>
+        <name>WTAFile</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>count_flag</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>penalty_flag</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stochastic_flag</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>read schema from file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input text file specifying the schema </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count_flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag to determine the type of weights </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>penalty_flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag to determine the type of weights </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stochastic_flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag to determine the type of weights</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+casts weights according to compile options if needed.</para>
+<para><xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1acd30482d9409353945f35dbaf3fd05f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTAFile::~WTAFile</definition>
+        <argsstring>()</argsstring>
+        <name>~WTAFile</name>
+        <briefdescription>
+<para>same as <ref refid="classWTA" kindref="compound">WTA</ref> destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="71" column="1" bodyfile="src/input/WTAFile.cpp" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a01b3ef064d42d02129f4fc202935e805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTAFile::save</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>save</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>save to file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="74" column="1" bodyfile="src/input/WTAFile.cpp" bodystart="570" bodyend="585"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classWTAFile_1a1ba7fa9966d052ee8c2e7ce1b01666b3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTAFile::readTimesignature</definition>
+        <argsstring>(const std::string filename, ScoreModel::ScoreMeter &amp;ts)</argsstring>
+        <name>readTimesignature</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreModel::ScoreMeter</ref> &amp;</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+<para>read time signature from schema file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if a time signature was found in filename in that case, the time signature is stored in the given ts, otherwise, ts is left unchanged.</para>
+</simplesect>
+<simplesect kind="warning"><para>must be in the form &quot;[timesig int int]&quot; in the file, with int &gt; 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="84" column="1" bodyfile="src/input/WTAFile.cpp" bodystart="229" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classWTAFile_1a3328b77a3356995636ee7b4a9301b7ca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTAFile::_load</definition>
+        <argsstring>(Weight seed, string filename)</argsstring>
+        <name>_load</name>
+        <param>
+          <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>read <ref refid="classWTA" kindref="compound">WTA</ref> from file </para>
+        </briefdescription>
+        <detaileddescription>
+<para>create transition of same type as given sample weight the initial state set is set to singleton { 0 } in case of parse error, the <ref refid="classWTA" kindref="compound">WTA</ref> is empty. <simplesect kind="return"><para>error code 0 if file could be loaded into <ref refid="classWTA" kindref="compound">WTA</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="101" column="1" bodyfile="src/input/WTAFile.cpp" bodystart="485" bodyend="566"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classWTAFile_1a355b66bb16a22856f82ac594e259bffd" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+        <definition>WeightDom WTAFile::_read_weight_type</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>_read_weight_type</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>read the weight type description found in schema file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>must be in the form &quot;[weight type]&quot; in the file. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classWTA" kindref="compound">WTA</ref> file read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the weight type description found in filename. </para>
+</simplesect>
+<simplesect kind="return"><para>WeightDom::UNDEF if not found in file. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="109" column="1" bodyfile="src/input/Schema.cpp" bodystart="13" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a18b62c85290ca399aaacf723eda9afc0" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t WTAFile::_read_max_grace</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>_read_max_grace</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>read the specification for grace note abstraction found in filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>must be in the form &quot;[max_grace int]&quot; in the file, with int &gt; 0. </para>
+</simplesect>
+<simplesect kind="return"><para>0 if not found in file. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="116" column="1" bodyfile="src/input/Schema.cpp" bodystart="198" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1ac9c34866f3b5b9af9e070c87e8f23f93" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTAFile::_read_option</definition>
+        <argsstring>(const std::string filename, const std::string option, int *arg1=NULL, int *arg2=NULL)</argsstring>
+        <name>_read_option</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>arg1</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>arg2</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>search an option in input <ref refid="classWTA" kindref="compound">WTA</ref> file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the option must be of one of the following forms<itemizedlist>
+<listitem><para>[option] if arg1 = arg2 = NULL or</para>
+</listitem><listitem><para>[option int] if arg1 != NULL, arg2 = NULL or</para>
+</listitem><listitem><para>[option int int] if arg1 != NULL, arg2 != NULL. in the second and third cases, int are stored in arg1 and arg2. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="return"><para>wether the search succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="126" column="1" bodyfile="src/input/Schema.cpp" bodystart="108" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a7562f42c67d5e5ee0bffcc6c328b2739" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+        <definition>WeightDom WTAFile::_choose</definition>
+        <argsstring>(WeightDom file_wt, WeightDom given_wt)</argsstring>
+        <name>_choose</name>
+        <param>
+          <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+          <declname>file_wt</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+          <declname>given_wt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="130" column="1" bodyfile="src/input/Schema.cpp" bodystart="287" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1ab9351f2da53a0eb1a467999ae6f8b866" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight WTAFile::_seed</definition>
+        <argsstring>(WeightDom)</argsstring>
+        <name>_seed</name>
+        <param>
+          <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+<para>a weight value of a type corresponding to the given weight type description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="134" column="1" bodyfile="src/input/Schema.cpp" bodystart="301" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classWTAFile_1a66cd323abbf00f318e37b53ea167cf2a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight WTAFile::_seed</definition>
+        <argsstring>(bool count_flag, bool penalty_flag, bool stochastic_flag)</argsstring>
+        <name>_seed</name>
+        <param>
+          <type>bool</type>
+          <declname>count_flag</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>penalty_flag</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stochastic_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/input/WTAFile.hpp" line="137" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>wrapper for constructing <ref refid="classWTA" kindref="compound">WTA</ref> with various flags for weight type. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="500">
+        <label>WTAFile</label>
+        <link refid="classWTAFile"/>
+        <childnode refid="501" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="505">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="502">
+        <label>WTAFile</label>
+        <link refid="classWTAFile"/>
+        <childnode refid="503" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+        <childnode refid="504" relation="usage">
+          <edgelabel>_seed</edgelabel>
+        </childnode>
+      </node>
+      <node id="504">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="505" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/input/WTAFile.hpp" line="30" column="1" bodyfile="src/input/WTAFile.hpp" bodystart="29" bodyend="141"/>
+    <listofallmembers>
+      <member refid="classWTAFile_1a7562f42c67d5e5ee0bffcc6c328b2739" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_choose</name></member>
+      <member refid="classWTA_1a3ed6ca11b3e520485171a0f07deffd21" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_cpt_size</name></member>
+      <member refid="classWTA_1a76cf3c27412f9d61464a8a82aea97b89" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_cpt_tr</name></member>
+      <member refid="classWTA_1a52dd7c5ad9439670d75df10f2dd1e4df" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_initial</name></member>
+      <member refid="classWTAFile_1a3328b77a3356995636ee7b4a9301b7ca" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_load</name></member>
+      <member refid="classWTA_1acb19a9da4f88e4b3538b6889cbd49a08" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_max_post</name></member>
+      <member refid="classWTA_1ae6d1c616caceb7819d4d23f4a635cddc" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_max_pre</name></member>
+      <member refid="classWTAFile_1a18b62c85290ca399aaacf723eda9afc0" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_read_max_grace</name></member>
+      <member refid="classWTAFile_1ac9c34866f3b5b9af9e070c87e8f23f93" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_read_option</name></member>
+      <member refid="classWTAFile_1a355b66bb16a22856f82ac594e259bffd" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_read_weight_type</name></member>
+      <member refid="classWTAFile_1ab9351f2da53a0eb1a467999ae6f8b866" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_seed</name></member>
+      <member refid="classWTAFile_1a66cd323abbf00f318e37b53ea167cf2a" prot="private" virt="non-virtual"><scope>WTAFile</scope><name>_seed</name></member>
+      <member refid="classWTA_1ad93a124d289cf4d1e2801fccb01ca8ea" prot="protected" virt="non-virtual" ambiguityscope="WTA::"><scope>WTAFile</scope><name>_seed</name></member>
+      <member refid="classWTA_1a0d3422d597fbe64d655d9ced77dd7b8f" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>_table</name></member>
+      <member refid="group__schemata_1ga91e272f4f9463149cd296f48e65a4185" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>abstract</name></member>
+      <member refid="group__schemata_1ga924a1c533383a7185b9d466b59c5a495" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>add</name></member>
+      <member refid="group__schemata_1ga01de1e03d09518b38ab69a2075276ae2" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>add</name></member>
+      <member refid="group__schemata_1gab8ea841b4a1e71ef70d3fda927f0507d" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>allStates</name></member>
+      <member refid="group__schemata_1ga23c3f9884c683e4bbab323208e08c672" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>begin</name></member>
+      <member refid="group__schemata_1gaec169477bdc2cf883916c38dbc18e577" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>clean</name></member>
+      <member refid="group__schemata_1ga9370cdd31619d49bfb0b18fa6b4e13b7" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>countAll</name></member>
+      <member refid="group__schemata_1ga5f3a0d868bf26b504cccc53b4d55e09a" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>CountingtoPenalty</name></member>
+      <member refid="group__schemata_1ga8dfef6b591f952f0fea9dae1f5e475c7" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>CountingtoStochastic</name></member>
+      <member refid="group__schemata_1ga0f6551b20a213eb88c6a7e822ebc5915" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>countStates</name></member>
+      <member refid="group__schemata_1ga8acbd7562a6f69e7634d6b9f9e341e4a" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>countTransitions</name></member>
+      <member refid="group__schemata_1gada977ff7270308f29852b59f38965bde" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>empty</name></member>
+      <member refid="group__schemata_1gaea41b32c37bbe955d0359039d7731fea" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>emptyStates</name></member>
+      <member refid="group__schemata_1gaf5075f5a210343d6da208f4c80421cb5" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>end</name></member>
+      <member refid="group__schemata_1gaa6598176fb91c70988bea7cf824ec157" prot="public" virt="virtual"><scope>WTAFile</scope><name>eval</name></member>
+      <member refid="group__schemata_1gac842f196f85e3c3b079c7c0992173e46" prot="public" virt="virtual"><scope>WTAFile</scope><name>eval</name></member>
+      <member refid="classWTA_1a23060c851d5cf624215c2d9dc8ad4b45" prot="public" virt="virtual"><scope>WTAFile</scope><name>hasType</name></member>
+      <member refid="group__schemata_1gaf3c11e99698a2cf7ef039632dc5e2b6b" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>hasWeightType</name></member>
+      <member refid="classWTA_1ae6b10f70925f14f36b839e5d8657bc5e" prot="public" virt="virtual"><scope>WTAFile</scope><name>initial</name></member>
+      <member refid="classWTA_1a5d8ace9f515a3902d889db560f08f4c5" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>initials</name></member>
+      <member refid="group__schemata_1ga9ef4193ae949ae7c9e52d30720e37202" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>isClean</name></member>
+      <member refid="group__schemata_1ga88d07a1e47cc3ee537234861b7336dd6" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>isInitial</name></member>
+      <member refid="group__schemata_1ga4459bd6654cbe35b39df9cade16c6d58" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>isRegistered</name></member>
+      <member refid="classWTA_1a1a5cead20cba42a111ff7ab5546bc54c" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>max_post</name></member>
+      <member refid="classWTA_1a646bb2048b24358325f8e07c789af82c" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>max_pre</name></member>
+      <member refid="classWTA_1aa4eda8d626af33674c59fef22c8220c1" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>normalize</name></member>
+      <member refid="group__schemata_1ga28c9a7e35d4d516ef0f9967e773305f8" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>oftarget</name></member>
+      <member refid="group__schemata_1gaff1196a45ffd1400bc4004e27b167218" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>PenaltytoCounting</name></member>
+      <member refid="group__schemata_1gaeb713b8807bc81c6c6519ced5d531e06" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>print</name></member>
+      <member refid="classWTAFile_1a1ba7fa9966d052ee8c2e7ce1b01666b3" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>readTimesignature</name></member>
+      <member refid="group__schemata_1ga3d8d24249e26ecc8bbdaf672c6e8d3cf" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>remove</name></member>
+      <member refid="group__schemata_1ga625d9da502c5cd554797ebe9ee9023c4" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>resolution</name></member>
+      <member refid="classWTAFile_1a01b3ef064d42d02129f4fc202935e805" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>save</name></member>
+      <member refid="group__schemata_1gab201fee50d73843159cbef5f453838f0" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>size</name></member>
+      <member refid="group__schemata_1gae6fb2dbd82ed290528b90ee7bb4b6ccc" prot="protected" virt="non-virtual"><scope>WTAFile</scope><name>step</name></member>
+      <member refid="group__schemata_1ga0bddc6750b18023be6976bd5cd46a2f5" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>StochastictoPenalty</name></member>
+      <member refid="group__schemata_1gabfe48e6398d83c03161b664dadcf8fcd" prot="public" virt="virtual"><scope>WTAFile</scope><name>weight_one</name></member>
+      <member refid="group__schemata_1ga762b5bbee46468815993417ca9b3d9c6" prot="public" virt="virtual"><scope>WTAFile</scope><name>weight_zero</name></member>
+      <member refid="group__schemata_1ga5636da911ebbe8772c5444172d56800d" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>WTA</name></member>
+      <member refid="group__schemata_1ga6eeb789b8c8aa8404f611a6fed61faca" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>WTA</name></member>
+      <member refid="classWTAFile_1afc385786a0b36382ab366c91a8b9ce0b" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>WTAFile</name></member>
+      <member refid="classWTAFile_1a0c65f030a8df8bdb8eed5c261908e6bb" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>WTAFile</name></member>
+      <member refid="classWTAFile_1a1d76575338801558fc75759aa90261b9" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>WTAFile</name></member>
+      <member refid="group__schemata_1gaacdee6c2292baea7f712c84a5e205432" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>~WTA</name></member>
+      <member refid="classWTAFile_1acd30482d9409353945f35dbaf3fd05f1" prot="public" virt="non-virtual"><scope>WTAFile</scope><name>~WTAFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

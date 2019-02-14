@@ -1,0 +1,54 @@
+\hypertarget{classParserMultibar1bestSIPflat}{}\section{Parser\+Multibar1best\+S\+I\+Pflat Class Reference}
+\label{classParserMultibar1bestSIPflat}\index{ParserMultibar1bestSIPflat@{ParserMultibar1bestSIPflat}}
+Inheritance diagram for Parser\+Multibar1best\+S\+I\+Pflat\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classParserMultibar1bestSIPflat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_aab192b38f286fd10ebafc277476f0294}\label{classParserMultibar1bestSIPflat_aab192b38f286fd10ebafc277476f0294}} 
+{\bfseries Parser\+Multibar1best\+S\+I\+Pflat} (\mbox{\hyperlink{classWTA}{W\+TA}} $\ast$a, \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, double barlen, bool ordering=false, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_acec74268bea7fde3f8c511699929c988}\label{classParserMultibar1bestSIPflat_acec74268bea7fde3f8c511699929c988}} 
+{\bfseries Parser\+Multibar1best\+S\+I\+Pflat} (\mbox{\hyperlink{classWTA}{W\+TA}} $\ast$a, \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, double barlen\+\_\+min, double barlen\+\_\+max, size\+\_\+t nbsteps, bool ordering=false, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_a728aaf750fd1d75839bd15444d8b9f20}\label{classParserMultibar1bestSIPflat_a728aaf750fd1d75839bd15444d8b9f20}} 
+virtual size\+\_\+t {\bfseries add\+Runs} (\mbox{\hyperlink{classAtable}{Atable}}$<$ \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} $>$ $\ast$, const \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} \&, \mbox{\hyperlink{classRecord}{Record}}$<$ \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} $>$ $\ast$)
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_acc7aa37e3fa4858b514405cdd4130c6e}\label{classParserMultibar1bestSIPflat_acc7aa37e3fa4858b514405cdd4130c6e}} 
+size\+\_\+t {\bfseries nbbars} () const
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_a77904b75a4b1938f86f511aea02f3f7d}\label{classParserMultibar1bestSIPflat_a77904b75a4b1938f86f511aea02f3f7d}} 
+\mbox{\hyperlink{classRun}{Run}}$<$ \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} $>$ $\ast$ {\bfseries get\+Bar} (size\+\_\+t) const
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_a90b5fbee0c2e6204f6952e2ff9e67159}\label{classParserMultibar1bestSIPflat_a90b5fbee0c2e6204f6952e2ff9e67159}} 
+\mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} {\bfseries get\+Target} (size\+\_\+t) const
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_ad4171ad776117539a29a319c210ebe1f}\label{classParserMultibar1bestSIPflat_ad4171ad776117539a29a319c210ebe1f}} 
+size\+\_\+t {\bfseries demo} (const std\+::string schema\+\_\+file, const std\+::string input\+\_\+file, const std\+::string output\+\_\+file=\char`\"{}\char`\"{}, \mbox{\hyperlink{classRational}{Rational}} barbeat=\mbox{\hyperlink{classRational}{Rational}}(1))
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_aebb38fc665a77a0b995ce05dbaef97cd}\label{classParserMultibar1bestSIPflat_aebb38fc665a77a0b995ce05dbaef97cd}} 
+static double {\bfseries barlen} (double tempo, size\+\_\+t beatsperbar)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_a11bcc66d2912ad91eb6824bf3a462794}\label{classParserMultibar1bestSIPflat_a11bcc66d2912ad91eb6824bf3a462794}} 
+\mbox{\hyperlink{classTable}{Table}}$<$ \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}}, \mbox{\hyperlink{classBrecord}{Brecord}}$<$ \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} $>$, \mbox{\hyperlink{structSIPpointerHasher}{S\+I\+Ppointer\+Hasher}} $>$ $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{classParserMultibar1bestSIPflat_a6316e5ab8217f4258bf27902a90f8735}\label{classParserMultibar1bestSIPflat_a6316e5ab8217f4258bf27902a90f8735}} 
+const \mbox{\hyperlink{classSIPpointer}{S\+I\+Ppointer}} {\bfseries endmarker\+\_\+top}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/parsers/Parser\+Multibar1best\+S\+I\+Pflat.\+hpp\item 
+src/parsers/Parser\+Multibar1best\+S\+I\+Pflat.\+cpp\end{DoxyCompactItemize}

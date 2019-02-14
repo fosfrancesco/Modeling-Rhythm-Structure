@@ -1,0 +1,187 @@
+\hypertarget{classPointer}{}\section{Pointer Class Reference}
+\label{classPointer}\index{Pointer@{Pointer}}
+
+
+abstract class defining a signature for a class of pointer to best runs.  
+
+
+
+
+{\ttfamily \#include $<$Ptr.\+hpp$>$}
+
+Inheritance diagram for Pointer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classPointer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPointer_a2a45530c7efca1b398d90a773fdb3c70}\label{classPointer_a2a45530c7efca1b398d90a773fdb3c70}} 
+virtual bool {\bfseries has\+\_\+S} () const
+\item 
+\mbox{\Hypertarget{classPointer_a66999c2d23c4b592228f1e74a96e0315}\label{classPointer_a66999c2d23c4b592228f1e74a96e0315}} 
+virtual bool {\bfseries has\+\_\+K} () const
+\item 
+\mbox{\Hypertarget{classPointer_a7018d6fde0393288fbd7ed5c1ffe9e5b}\label{classPointer_a7018d6fde0393288fbd7ed5c1ffe9e5b}} 
+virtual bool {\bfseries has\+\_\+I} () const
+\item 
+\mbox{\Hypertarget{classPointer_a96063327a69b47d288f345b0d2f4b42b}\label{classPointer_a96063327a69b47d288f345b0d2f4b42b}} 
+virtual bool {\bfseries has\+\_\+P} () const
+\item 
+\mbox{\Hypertarget{classPointer_a3fa3fb5df21abf35c02c321611d85a3c}\label{classPointer_a3fa3fb5df21abf35c02c321611d85a3c}} 
+virtual bool \mbox{\hyperlink{classPointer_a3fa3fb5df21abf35c02c321611d85a3c}{complete}} () const =0
+\begin{DoxyCompactList}\small\item\em the pointer is complete i.\+e. all fields are set \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPointer_aa682c210e4ae3ef7268db1ee5bcf9f9d}\label{classPointer_aa682c210e4ae3ef7268db1ee5bcf9f9d}} 
+bool {\bfseries partial} () const
+\item 
+\mbox{\Hypertarget{classPointer_a8ded051c871b7fccfb6b2a20b8920cab}\label{classPointer_a8ded051c871b7fccfb6b2a20b8920cab}} 
+virtual size\+\_\+t \mbox{\hyperlink{classPointer_a8ded051c871b7fccfb6b2a20b8920cab}{rank}} () const
+\begin{DoxyCompactList}\small\item\em return the rank of best (k) pointed. default is 1. redefine for classes for k-\/best parsing. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classPointer_a51529c3e4714cafc28ba07da36078618}{divisible}} () const
+\begin{DoxyCompactList}\small\item\em return wether it is worth descending (dividing) from this pointer. the result may differ according to whether this pointer has a \mbox{\hyperlink{classWTA}{W\+TA}} state or a Meta state. For instance\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPointer_a02c73f5f2b21a1fe37b744383508cb64}\label{classPointer_a02c73f5f2b21a1fe37b744383508cb64}} 
+virtual void {\bfseries incr} ()
+\item 
+virtual bool \mbox{\hyperlink{classPointer_a7b636072b492b57efe3ead47e03a67bd}{compatible}} (const \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}}, bool abstract=true) const
+\begin{DoxyCompactList}\small\item\em return wether this pointer is compatible with the given label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPointer_afa7a38cfee7181aa05e3634a15066135}\label{classPointer_afa7a38cfee7181aa05e3634a15066135}} 
+virtual bool \mbox{\hyperlink{classPointer_afa7a38cfee7181aa05e3634a15066135}{dummy}} () const =0
+\begin{DoxyCompactList}\small\item\em return whether this pointer is a dummy pointer i.\+e. it was constructed with P() default false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPointer_a767e1ca8f18a9cf07eaca5ae44f689cf}\label{classPointer_a767e1ca8f18a9cf07eaca5ae44f689cf}} 
+virtual \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{classPointer_a767e1ca8f18a9cf07eaca5ae44f689cf}{label}} (const \mbox{\hyperlink{classTransition}{Transition}} \&t) const =0
+\begin{DoxyCompactList}\small\item\em return a concrete label value corresponding to this pointer when considered as a leaf position, using the label of the given transition. the given transition must be terminal. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__table_ga4ca596fe52abd36d550a10818678d54c}{terminal\+Weight}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, const \mbox{\hyperlink{classTransition}{Transition}} \&) const
+\begin{DoxyCompactList}\small\item\em return the weight for a terminal \mbox{\hyperlink{classRun}{Run}} associated to the given \mbox{\hyperlink{classTransition}{Transition}}. The transition must be terminal. This pointer must be compatible with the \mbox{\hyperlink{classTransition}{Transition}}. input segment can be N\+U\+LL. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__table_gad709430d698804267807f12deba9952b}{inner\+Weight}} (const \mbox{\hyperlink{classTransition}{Transition}} \&) const
+\begin{DoxyCompactList}\small\item\em return the initial weight for an inner \mbox{\hyperlink{classRun}{Run}} associated to the given \mbox{\hyperlink{classTransition}{Transition}}. the weight will have to be multiplied with all the weights of subruns. the transition must be inner. this pointer must be divisible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstract class defining a signature for a class of pointer to best runs. 
+
+\subparagraph*{constructors}
+
+Every concrete subclass P (descendant) must implement the following generic constructors and class-\/specific operators. they are called by the templates \mbox{\hyperlink{classTable}{Table}} and \mbox{\hyperlink{classRun}{Run}}. Some use the encapsulator \mbox{\hyperlink{classEnvironment}{Environment}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P()}
+\end{DoxyCode}
+ dummy ptr (unique -\/ can not be produced by other constructors).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P(\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\_t}} s)}
+\end{DoxyCode}
+ fake ptr containing only a label symbol to act as (singleton) body of a terminal runs. the label symbol is concrete (see Label.\+hpp). also used for P(state\+\_\+t) -\/$>$ confusion types state\+\_\+t \& label\+\_\+t
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P(\mbox{\hyperlink{classEnvironment}{Environment}}* env, \textcolor{keyword}{const} \&P p, \textcolor{keywordtype}{size\_t} a, \textcolor{keywordtype}{size\_t} i, state\_t s)}
+\end{DoxyCode}
+ sub-\/pointer or instance as leaf s must be a wta state (e.\+g. initial state of wta) there are 2 cases according to a\+:
+\begin{DoxyEnumerate}
+\item if a = 0 \+: construct a copy of p instanciated as a leaf with label s. i must be 0, p must be partial p must be compatible with s (s = leaf symbol in this case).
+\item if a $>$ 0 i must be in \mbox{[}0..a\mbox{]} p must be divisible p can have a meta state (meta run with a=2) or a wta state with i=0, construct the head of a run (in general a copy of p but not always) with 0 $<$ i $<$= a, construct a pointer for the ith children of a run. the details and specific pre-\/conditions are described in every class P.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P(\textcolor{keyword}{const} \&P p)}
+\end{DoxyCode}
+ copy
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P(\textcolor{keyword}{const} \&P p, \textcolor{keyword}{const} \&P p0, \textcolor{keyword}{const} \&P p1)}
+\end{DoxyCode}
+ instance as parent p must be partial p0 must be complete p1 must be complete Construct a copy of p instanciated as an target node of run with p0 as first child and p1 as last child.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{P(\textcolor{keyword}{const} \&P p0, \textcolor{keyword}{const} \&P p1)}
+\end{DoxyCode}
+ instance as next sibling p0 must be complete p1 must be partial p1 must be instanciable into a successor sibling of p0. Construct a copy of p1 instanciated as the next sibling of p0.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{virtual} P\& operator= (\textcolor{keyword}{const} P\& p) = 0;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__weight_ga985964770c3e3b3aea4ea1ebd817f1c8}{operator==}}(\textcolor{keyword}{const} P\& p) \textcolor{keyword}{const};}
+\end{DoxyCode}
+ for using pointer as key in hash table (unordered multimap)
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__weight_gaf058ecdf4336e4dff64400d149c791f9}{operator<}}(\textcolor{keyword}{const} P\& p) \textcolor{keyword}{const};}
+\end{DoxyCode}
+ for using pointer as key in search tree (multimap)
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} instance(\textcolor{keyword}{const} P\& p)}
+\end{DoxyCode}
+ return wether this ptr is an instance of p. if p is complete, then it is equality.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} subsume(\textcolor{keyword}{const} P\& p)}
+\end{DoxyCode}
+ inverse of instance return wether p is an instance of this ptr. if this ptr is complete, then it is equality. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPointer_a51529c3e4714cafc28ba07da36078618}\label{classPointer_a51529c3e4714cafc28ba07da36078618}} 
+\index{Pointer@{Pointer}!divisible@{divisible}}
+\index{divisible@{divisible}!Pointer@{Pointer}}
+\subsubsection{\texorpdfstring{divisible()}{divisible()}}
+{\footnotesize\ttfamily virtual bool Pointer\+::divisible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+return wether it is worth descending (dividing) from this pointer. the result may differ according to whether this pointer has a \mbox{\hyperlink{classWTA}{W\+TA}} state or a Meta state. For instance\+: 
+
+
+\begin{DoxyItemize}
+\item for \mbox{\hyperlink{classWTA}{W\+TA}} state\+: it is not worth when this pointer corresponds to an input sub-\/segment not inhabited.
+\item for Meta state\+: it is not worth if this ptr corresponds to an empty segment. default true. 
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{group__table_gac83e0619c17ce4efd589f73513706a6b}{S\+Ipointer}}, and \mbox{\hyperlink{group__table_ga54817fbae1688dab4dfff5724e762640}{Spointer}}.
+
+\mbox{\Hypertarget{classPointer_a7b636072b492b57efe3ead47e03a67bd}\label{classPointer_a7b636072b492b57efe3ead47e03a67bd}} 
+\index{Pointer@{Pointer}!compatible@{compatible}}
+\index{compatible@{compatible}!Pointer@{Pointer}}
+\subsubsection{\texorpdfstring{compatible()}{compatible()}}
+{\footnotesize\ttfamily virtual bool Pointer\+::compatible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}}}]{,  }\item[{bool}]{abstract = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+return wether this pointer is compatible with the given label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em abstract} & if flag is true (default), the label is supposed abstract (label of terminal transition). if abstract flag is false, the label is supposed concrete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Label.\+hpp for def. abstract/concrete labels 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+default return true. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{group__table_gabf87df773f8e0f628e0bae79e88097db}{S\+I\+Ppointer}}, and \mbox{\hyperlink{group__table_gaca7d3c4d141ecf2874a5e5512e0c02ff}{S\+Ipointer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/table/Ptr.\+hpp\item 
+src/table/Ptr.\+cpp\end{DoxyCompactItemize}

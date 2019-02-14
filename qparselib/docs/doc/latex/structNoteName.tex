@@ -1,0 +1,110 @@
+\hypertarget{structNoteName}{}\section{Note\+Name Struct Reference}
+\label{structNoteName}\index{NoteName@{NoteName}}
+Inheritance diagram for Note\+Name\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structNoteName}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_gad81fd626f6b9bc6d70fd5e235ec5c8cb}{Note\+Name}} (char n, float alt, int id)
+\begin{DoxyCompactList}\small\item\em notename object from name, alteration and index. \end{DoxyCompactList}\item 
+{\bfseries Note\+Name} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\hyperlink{structNoteName}{Note\+Name}} \& {\bfseries operator=} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\item 
+\mbox{\Hypertarget{structNoteName_a84a6beecda767f0481a0b4aa391c676c}\label{structNoteName_a84a6beecda767f0481a0b4aa391c676c}} 
+bool {\bfseries unknown} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} \& \mbox{\hyperlink{group__segment_ga055480a382a6fde05bde51abed31a56c}{ofkey}} (int k)
+\begin{DoxyCompactList}\small\item\em ref to a \mbox{\hyperlink{structNoteName}{Note\+Name}} in table synonyms. $\ast$/ \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} \& \mbox{\hyperlink{group__segment_gaf4a2321d9bc5a69a5b8a94cf1e146052}{closest}} (unsigned int pitch, const \mbox{\hyperlink{structSpiralPoint}{Spiral\+Point}} \&p)
+\begin{DoxyCompactList}\small\item\em note name (ref in table synonyms) corresponding to given midi pitch and closest to given point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structNoteName_acd97c2eed21a588fb362e3838183c2d9}{name}}
+\begin{DoxyCompactList}\small\item\em note name. \textquotesingle{}A\textquotesingle{} to \textquotesingle{}G\textquotesingle{} or Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+N\+A\+ME \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structNoteName_a6b6ddfa2befdb91e8f2a283569efe579}{alteration}}
+\begin{DoxyCompactList}\small\item\em note alteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structNoteName_adf37d714ab36d4769052e4145873fe29}{index}}
+\begin{DoxyCompactList}\small\item\em position in the line of fifths relative to C \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+I\+N\+D\+EX} = 99
+\item 
+static const double \mbox{\hyperlink{group__segment_ga51da52124dc1108e143b2a9f73537ada}{h}} = 1.\+0
+\begin{DoxyCompactList}\small\item\em z distance between two successive points of the spiral (one fifth apart). \end{DoxyCompactList}\item 
+static const double \mbox{\hyperlink{group__segment_ga814ef312c571ae51a0007c1d5a6a0b17}{r}} = std\+::sqrt(7.\+5) $\ast$ \mbox{\hyperlink{group__segment_ga51da52124dc1108e143b2a9f73537ada}{h}}
+\begin{DoxyCompactList}\small\item\em radius of the cylinder in which the spiral is embedded. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{structNoteName}{Note\+Name}} {\bfseries synonyms} \mbox{[}12\mbox{]}\mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNoteName_a5562caeaa220ead5487a286a7765b00f}\label{structNoteName_a5562caeaa220ead5487a286a7765b00f}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&)
+\item 
+\mbox{\Hypertarget{structNoteName_aebe4abfae4e6f512246bf067c0d122f4}\label{structNoteName_aebe4abfae4e6f512246bf067c0d122f4}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&)
+\item 
+\mbox{\Hypertarget{structNoteName_af173a8baf0712bebb0c55fd0b1f225a0}\label{structNoteName_af173a8baf0712bebb0c55fd0b1f225a0}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{structNoteName}{Note\+Name}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structNoteName_acd97c2eed21a588fb362e3838183c2d9}\label{structNoteName_acd97c2eed21a588fb362e3838183c2d9}} 
+\index{NoteName@{NoteName}!name@{name}}
+\index{name@{name}!NoteName@{NoteName}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char Note\+Name\+::name}
+
+
+
+note name. \textquotesingle{}A\textquotesingle{} to \textquotesingle{}G\textquotesingle{} or Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+N\+A\+ME 
+
+\begin{DoxySeeAlso}{See also}
+same has in class \mbox{\hyperlink{classPitch}{Pitch}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structNoteName_a6b6ddfa2befdb91e8f2a283569efe579}\label{structNoteName_a6b6ddfa2befdb91e8f2a283569efe579}} 
+\index{NoteName@{NoteName}!alteration@{alteration}}
+\index{alteration@{alteration}!NoteName@{NoteName}}
+\subsubsection{\texorpdfstring{alteration}{alteration}}
+{\footnotesize\ttfamily float Note\+Name\+::alteration}
+
+
+
+note alteration. 
+
+in \mbox{[}-\/2.\+0, 2.\+0\mbox{]} where 1.\+0 is half tone or Pitch\+::\+U\+N\+D\+E\+F\+\_\+\+N\+O\+T\+E\+\_\+\+A\+L\+T\+E\+R\+A\+T\+I\+ON same has in class \mbox{\hyperlink{classPitch}{Pitch}}. \mbox{\Hypertarget{structNoteName_adf37d714ab36d4769052e4145873fe29}\label{structNoteName_adf37d714ab36d4769052e4145873fe29}} 
+\index{NoteName@{NoteName}!index@{index}}
+\index{index@{index}!NoteName@{NoteName}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int Note\+Name\+::index}
+
+
+
+position in the line of fifths relative to C 
+
+
+\begin{DoxyItemize}
+\item C has index 0 and index increases in the direction of sharps\+:
+\item G has index 1, D has index 2, F\# has index 6...
+\item F has index -\/1, Bb has index -\/2...
+\end{DoxyItemize}
+
+values between -\/15 (Fbb) and 19 (B\#\#)
+
+T\+BC\+: it is redundant with name and alteration maybe should replace them? 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Spiral.\+hpp\item 
+src/segment/Spiral.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="InputSegmentMono__sumult_8cpp" kind="file" language="C++">
+    <compoundname>InputSegmentMono_sumult.cpp</compoundname>
+    <includes refid="InputSegmentMono_8hpp" local="yes">InputSegmentMono.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/InputSegmentMono_sumult.cpp"/>
+  </compounddef>
+</doxygen>

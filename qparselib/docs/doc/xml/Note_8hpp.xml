@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Note_8hpp" kind="file" language="C++">
+    <compoundname>Note.hpp</compoundname>
+    <includes refid="Event_8hpp" local="yes">Event.hpp</includes>
+    <includes refid="Voice_8hpp" local="yes">Voice.hpp</includes>
+    <includes refid="Measure_8hpp" local="yes">Measure.hpp</includes>
+    <includes refid="Duration_8hpp" local="yes">Duration.hpp</includes>
+    <includedby refid="MEI_8hpp" local="yes">src/output/MEI.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="Note_8cpp" local="yes">src/scoremodel/Note.cpp</includedby>
+    <includedby refid="Voice_8cpp" local="yes">src/scoremodel/Voice.cpp</includedby>
+    <includedby refid="meiutil-newparser_8cpp" local="yes">src/targets/mei/meiutil-newparser.cpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <innerclass refid="classScoreModel_1_1Note" prot="public">ScoreModel::Note</innerclass>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Note.hpp"/>
+  </compounddef>
+</doxygen>

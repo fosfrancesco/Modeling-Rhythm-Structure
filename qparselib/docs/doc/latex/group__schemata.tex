@@ -1,0 +1,641 @@
+\hypertarget{group__schemata}{}\section{Schemata module}
+\label{group__schemata}\index{Schemata module@{Schemata module}}
+
+
+The {\ttfamily schemata} module contains classes of weighted tree automata used for parsing.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceState}{State}}
+\begin{DoxyCompactList}\small\item\em States. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classComboState}{Combo\+State}}
+\begin{DoxyCompactList}\small\item\em tmp state structure for construction of \mbox{\hyperlink{classComboWTA}{Combo\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) and an input segment casted into state\+\_\+t after construction \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structComboStateHasher}{Combo\+State\+Hasher}}
+\item 
+class \mbox{\hyperlink{classComboWTA}{Combo\+W\+TA}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWTA}{W\+TA}} combo\+: A special kind of \mbox{\hyperlink{classWTA}{W\+TA}} for quantization constructed from. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classCountingWTA}{Counting\+W\+TA}}
+\begin{DoxyCompactList}\small\item\em copy of \mbox{\hyperlink{classWTA}{W\+TA}} dedicated to corpus statistics. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPreState}{Pre\+State}}
+\begin{DoxyCompactList}\small\item\em tmp state structure for construction of \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) casted aka state\+\_\+t after construction \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}}
+\begin{DoxyCompactList}\small\item\em extension of \mbox{\hyperlink{classWTA}{W\+TA}} where states are associated pre and post values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classAONode}{A\+O\+Node}}
+\begin{DoxyCompactList}\small\item\em A\+N\+D-\/\+OR alternating nested lists used by Adrien in RQ. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classANode}{A\+Node}}
+\item 
+class \mbox{\hyperlink{classONode}{O\+Node}}
+\item 
+struct \mbox{\hyperlink{structds__transition}{ds\+\_\+transition}}
+\begin{DoxyCompactList}\small\item\em dag schema \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classdagSchema}{dag\+Schema}}
+\begin{DoxyCompactList}\small\item\em dag whose edges are labeled by arity values two distinguished nodes\+: \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTransition}{Transition}}
+\begin{DoxyCompactList}\small\item\em a \mbox{\hyperlink{classTransition}{Transition}} is defined by a sequence of antecedent states (body) the weight must be not null (null weight means a missing transition). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classValueState}{Value\+State}}
+\item 
+struct \mbox{\hyperlink{structValueStateHasher}{Value\+State\+Hasher}}
+\item 
+class \mbox{\hyperlink{classValueWTA}{Value\+W\+TA}}
+\begin{DoxyCompactList}\small\item\em Value \mbox{\hyperlink{classWTA}{W\+TA}} is a special kind of \mbox{\hyperlink{classWTA}{W\+TA}} associated to an initial \mbox{\hyperlink{classWTA}{W\+TA}} (schema) and a rhythmic value (\mbox{\hyperlink{classDurationList}{Duration\+List}}). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTransitionList}{Transition\+List}}
+\item 
+class \mbox{\hyperlink{classWTA}{W\+TA}}
+\begin{DoxyCompactList}\small\item\em class of schemas = weighted tree automata = weighted C\+FG. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classDepthMarking}{Depth\+Marking}}
+\begin{DoxyCompactList}\small\item\em marking of states of a \mbox{\hyperlink{classWTA}{W\+TA}} with informations on the depth of their occurences initialized with a \mbox{\hyperlink{classWTA}{W\+TA}}, can be interrogated afterwards \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__schemata_ga5f54dbbcb6e551cd56a12c9d9711f82e}\label{group__schemata_ga5f54dbbcb6e551cd56a12c9d9711f82e}} 
+typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classComboState}{Combo\+State}}, state\+\_\+t, \mbox{\hyperlink{structComboStateHasher}{Combo\+State\+Hasher}} $>$ {\bfseries Combomap}
+\item 
+\mbox{\Hypertarget{group__schemata_ga34fd7500c532fc3af1419927d6102bb4}\label{group__schemata_ga34fd7500c532fc3af1419927d6102bb4}} 
+typedef std\+::set$<$ std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \& $>$, bool($\ast$)(std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \& $>$, std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \& $>$)$>$ \mbox{\hyperlink{group__schemata_ga34fd7500c532fc3af1419927d6102bb4}{O\+Transition\+Table}}
+\begin{DoxyCompactList}\small\item\em transtition table ordered by transition\textquotesingle{}s ids \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gabd0a920032a3757e491c0f765beb9657}\label{group__schemata_gabd0a920032a3757e491c0f765beb9657}} 
+typedef long {\bfseries state\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__schemata_gacb03191d1927740d0f6f55d525eec2be}\label{group__schemata_gacb03191d1927740d0f6f55d525eec2be}} 
+typedef std\+::vector$<$ state\+\_\+t $>$\+::iterator {\bfseries Transition\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{group__schemata_gada53f8336fc15b6740d915faaa812651}\label{group__schemata_gada53f8336fc15b6740d915faaa812651}} 
+typedef std\+::vector$<$ state\+\_\+t $>$\+::const\+\_\+iterator {\bfseries Transition\+\_\+const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{group__schemata_ga881b5f6757c004ef80638824b4057ad3}\label{group__schemata_ga881b5f6757c004ef80638824b4057ad3}} 
+typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classValueState}{Value\+State}}, state\+\_\+t, \mbox{\hyperlink{structValueStateHasher}{Value\+State\+Hasher}} $>$ {\bfseries Valuemap}
+\item 
+\mbox{\Hypertarget{group__schemata_gaf9f065672b84540dc2310cee57062b5d}\label{group__schemata_gaf9f065672b84540dc2310cee57062b5d}} 
+typedef std\+::list$<$ \mbox{\hyperlink{classTransition}{Transition}} $>$\+::iterator {\bfseries Transition\+List\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{group__schemata_gac6a3bf271d488fbc785617cb246215f3}\label{group__schemata_gac6a3bf271d488fbc785617cb246215f3}} 
+typedef std\+::list$<$ \mbox{\hyperlink{classTransition}{Transition}} $>$\+::const\+\_\+iterator {\bfseries Transition\+List\+\_\+const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__schemata_gaacfb8dd676081cbdacc586bd08ef5339}\label{group__schemata_gaacfb8dd676081cbdacc586bd08ef5339}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classComboState}{Combo\+State}} \&cs)
+\item 
+\mbox{\Hypertarget{group__schemata_ga5876dc1d6e1700ecd64b79abc371f852}\label{group__schemata_ga5876dc1d6e1700ecd64b79abc371f852}} 
+bool {\bfseries trcomp} (std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$ lhs, std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$ rhs)
+\item 
+\mbox{\Hypertarget{group__schemata_gaf522606427f33e50d5ccd45945e140ac}\label{group__schemata_gaf522606427f33e50d5ccd45945e140ac}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classCountingWTA}{Counting\+W\+TA}} \&a)
+\item 
+\mbox{\Hypertarget{group__schemata_gaf8b99aabcea05e6f7f8b31da07ee3790}\label{group__schemata_gaf8b99aabcea05e6f7f8b31da07ee3790}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPreState}{Pre\+State}} \&ps)
+\item 
+\mbox{\Hypertarget{group__schemata_ga9bf0c703002e360545ebd943f933fb18}\label{group__schemata_ga9bf0c703002e360545ebd943f933fb18}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} \&a)
+\item 
+\mbox{\Hypertarget{group__schemata_gaf1cd2ec3c46754e845d9083fcca78307}\label{group__schemata_gaf1cd2ec3c46754e845d9083fcca78307}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classTransition}{Transition}} \&t)
+\item 
+\mbox{\Hypertarget{group__schemata_ga3e1e0cf974d650010f69166d22e7d0da}\label{group__schemata_ga3e1e0cf974d650010f69166d22e7d0da}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classValueState}{Value\+State}} \&vs)
+\item 
+\mbox{\Hypertarget{group__schemata_ga83eaab443b166582ff8beee576b4fd51}\label{group__schemata_ga83eaab443b166582ff8beee576b4fd51}} 
+size\+\_\+t {\bfseries gcd} (size\+\_\+t a, size\+\_\+t b)
+\item 
+\mbox{\Hypertarget{group__schemata_ga21cc98547ba237fc676751c60c220415}\label{group__schemata_ga21cc98547ba237fc676751c60c220415}} 
+size\+\_\+t {\bfseries lcm} (size\+\_\+t a, size\+\_\+t b)
+\item 
+\mbox{\Hypertarget{group__schemata_gab750ab8b8fe56baba66c96e38398b632}\label{group__schemata_gab750ab8b8fe56baba66c96e38398b632}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classWTA}{W\+TA}} \&a)
+\item 
+\mbox{\Hypertarget{group__schemata_gadb95b4bb9322c3e2aba43ef1663a035e}\label{group__schemata_gadb95b4bb9322c3e2aba43ef1663a035e}} 
+{\bfseries Combo\+State\+::\+Combo\+State} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$)
+\item 
+\mbox{\Hypertarget{group__schemata_gaffac6cd8adcfb6bbb0cd9fc601d9a2e1}\label{group__schemata_gaffac6cd8adcfb6bbb0cd9fc601d9a2e1}} 
+{\bfseries Combo\+State\+::\+Combo\+State} (state\+\_\+t, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rp=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rr=0)
+\item 
+\mbox{\hyperlink{group__schemata_gad80378e34fdc145bd7f0dac17c306e39}{Combo\+State\+::\+Combo\+State}} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rp=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rr=0)
+\item 
+\mbox{\Hypertarget{group__schemata_ga946acbddc843e4ade0b1f47bca5b0929}\label{group__schemata_ga946acbddc843e4ade0b1f47bca5b0929}} 
+bool {\bfseries Combo\+State\+::compatible} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} label) const
+\item 
+\mbox{\Hypertarget{group__schemata_ga66c814d1c1c9f1a90c5fc3a1a9d89395}\label{group__schemata_ga66c814d1c1c9f1a90c5fc3a1a9d89395}} 
+bool {\bfseries Combo\+State\+::operator==} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&s) const
+\item 
+\mbox{\Hypertarget{group__schemata_ga505e9ff93681bbfe5632a15708facb63}\label{group__schemata_ga505e9ff93681bbfe5632a15708facb63}} 
+bool \mbox{\hyperlink{group__schemata_ga505e9ff93681bbfe5632a15708facb63}{Combo\+State\+::operator$<$}} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&s) const
+\begin{DoxyCompactList}\small\item\em lexicographic comparison on hash value (array\mbox{[}5\mbox{]}) \end{DoxyCompactList}\item 
+state\+\_\+t \mbox{\hyperlink{group__schemata_ga2a6c3a5867fefdac97470fd083aaa2dd}{Combo\+W\+T\+A\+::initial}} (\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0) const
+\begin{DoxyCompactList}\small\item\em state representing the whole segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga4c589573251ec74dbe6a3c9176c39bb7}\label{group__schemata_ga4c589573251ec74dbe6a3c9176c39bb7}} 
+\mbox{\hyperlink{group__schemata_ga4c589573251ec74dbe6a3c9176c39bb7}{Combo\+W\+T\+A\+::\+Combo\+W\+TA}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, size\+\_\+t bloc, const \mbox{\hyperlink{classWTA}{W\+TA}} \&, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0)
+\begin{DoxyCompactList}\small\item\em construction from input segment and \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) with given max pre value and bloc number (in input segment, for alignement). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gad46a7f821d01aed3719a585f66130e27}\label{group__schemata_gad46a7f821d01aed3719a585f66130e27}} 
+\mbox{\hyperlink{group__schemata_gad46a7f821d01aed3719a585f66130e27}{Counting\+W\+T\+A\+::\+Counting\+W\+TA}} ()
+\begin{DoxyCompactList}\small\item\em default initializer for cython \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga590bb9036b59d5cf81bbbedb18d19093}\label{group__schemata_ga590bb9036b59d5cf81bbbedb18d19093}} 
+\mbox{\hyperlink{group__schemata_ga590bb9036b59d5cf81bbbedb18d19093}{Counting\+W\+T\+A\+::\+Counting\+W\+TA}} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&a)
+\begin{DoxyCompactList}\small\item\em copy base \mbox{\hyperlink{classWTA}{W\+TA}} reset weight values to counting weights (unit vectors) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga5c94f5191975a32e951e7d39ac606dc0}\label{group__schemata_ga5c94f5191975a32e951e7d39ac606dc0}} 
+void \mbox{\hyperlink{group__schemata_ga5c94f5191975a32e951e7d39ac606dc0}{Counting\+W\+T\+A\+::reset\+Counting}} (size\+\_\+t dim)
+\begin{DoxyCompactList}\small\item\em the weight of this \mbox{\hyperlink{classWTA}{W\+TA}} are replaced by \char`\"{}\+Counting\+Weight\char`\"{} unit vector of length dim (one unit per transition) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga2665883ffe41001dd7c2568bc9bef02f}\label{group__schemata_ga2665883ffe41001dd7c2568bc9bef02f}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_ga2665883ffe41001dd7c2568bc9bef02f}{Counting\+W\+T\+A\+::eval}} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t) const
+\begin{DoxyCompactList}\small\item\em special version of eval for \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} with feedback in case of fail \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga3a6ae649f73205b3390f82c3f996f6a3}\label{group__schemata_ga3a6ae649f73205b3390f82c3f996f6a3}} 
+\mbox{\hyperlink{classWeight}{Weight}} {\bfseries Counting\+W\+T\+A\+::eval\+Counting\+Verbose} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&, state\+\_\+t, \mbox{\hyperlink{classPosition}{Position}}) const
+\item 
+\mbox{\Hypertarget{group__schemata_gae43261a1dcc43a298836fbe62912f8a8}\label{group__schemata_gae43261a1dcc43a298836fbe62912f8a8}} 
+{\bfseries Pre\+State\+::\+Pre\+State} (state\+\_\+t, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\item 
+\mbox{\hyperlink{group__schemata_gabc0c5bcc094646426f0a90313808907b}{Pre\+State\+::\+Pre\+State}} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&)
+\item 
+\mbox{\Hypertarget{group__schemata_gad8b20db3eff6b527dbbc19bb92f2649d}\label{group__schemata_gad8b20db3eff6b527dbbc19bb92f2649d}} 
+bool {\bfseries Pre\+State\+::operator==} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&s) const
+\item 
+\mbox{\Hypertarget{group__schemata_gaa39a99008e7809c864be28f89c5ef79b}\label{group__schemata_gaa39a99008e7809c864be28f89c5ef79b}} 
+bool \mbox{\hyperlink{group__schemata_gaa39a99008e7809c864be28f89c5ef79b}{Pre\+State\+::operator$<$}} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&s) const
+\begin{DoxyCompactList}\small\item\em lexicographic comparison on hash value (array\mbox{[}5\mbox{]}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaa60c0f6f8e237bad468bd8a48c3263f4}\label{group__schemata_gaa60c0f6f8e237bad468bd8a48c3263f4}} 
+state\+\_\+t \mbox{\hyperlink{group__schemata_gaa60c0f6f8e237bad468bd8a48c3263f4}{Pre\+State\+::serialize}} ()
+\begin{DoxyCompactList}\small\item\em return a state value unically associated to this \mbox{\hyperlink{classPreState}{Pre\+State}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gab947b64699704a087db2eda3eb47575d}\label{group__schemata_gab947b64699704a087db2eda3eb47575d}} 
+bool {\bfseries Pre\+State\+::compatible} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} label) const
+\item 
+\mbox{\Hypertarget{group__schemata_gaa509247277fd021460056bfe6484a5b4}\label{group__schemata_gaa509247277fd021460056bfe6484a5b4}} 
+static bool \mbox{\hyperlink{group__schemata_gaa509247277fd021460056bfe6484a5b4}{Pre\+State\+::compatible\+\_\+post}} (state\+\_\+t, const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} $\ast$)
+\begin{DoxyCompactList}\small\item\em compatible(s, al) the serialized state value s is compatible with the content of the alignment al (sub-\/segment of initial input corr. to an interval) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga6287aa82de69987b65518b4997112ac5}\label{group__schemata_ga6287aa82de69987b65518b4997112ac5}} 
+\mbox{\hyperlink{group__schemata_ga6287aa82de69987b65518b4997112ac5}{Pre\+W\+T\+A\+::\+Pre\+W\+TA}} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\begin{DoxyCompactList}\small\item\em construction from \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}\label{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}} 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}{Pre\+W\+T\+A\+::pre}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em access to original components of new \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} states \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga2c8c24b19312ad6436eaf76e4506e02f}\label{group__schemata_ga2c8c24b19312ad6436eaf76e4506e02f}} 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} {\bfseries Pre\+W\+T\+A\+::post} (state\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__schemata_ga3e74404d5f453b8eed85254791724ffe}\label{group__schemata_ga3e74404d5f453b8eed85254791724ffe}} 
+static state\+\_\+t {\bfseries Pre\+W\+T\+A\+::state} (state\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__schemata_gaf47213e6243f48f06681089e03fa08ef}\label{group__schemata_gaf47213e6243f48f06681089e03fa08ef}} 
+virtual state\+\_\+t \mbox{\hyperlink{group__schemata_gaf47213e6243f48f06681089e03fa08ef}{Pre\+W\+T\+A\+::initial}} (\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}{pre}}=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0) const
+\begin{DoxyCompactList}\small\item\em initial(pre, port) returns state representing the whole segment, with pre points of the previous segment aligned to the left and post points of the current segment aligned to the right (i.\+e. to the left of the next segment) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaa5b5cf5f92a0c443d4c1a1e152f9292c}\label{group__schemata_gaa5b5cf5f92a0c443d4c1a1e152f9292c}} 
+bool {\bfseries State\+::is\+Meta} (state\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__schemata_ga1722ba39591c8a25ed5ee91e9e91232a}\label{group__schemata_ga1722ba39591c8a25ed5ee91e9e91232a}} 
+bool {\bfseries State\+::is\+W\+TA} (state\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__schemata_gabd744185c22c686d1c95d74523a007b3}\label{group__schemata_gabd744185c22c686d1c95d74523a007b3}} 
+bool {\bfseries State\+::is\+Label} (state\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__schemata_ga0ffeaad4a7482bc302dce44a23a85a6e}\label{group__schemata_ga0ffeaad4a7482bc302dce44a23a85a6e}} 
+state\+\_\+t \mbox{\hyperlink{group__schemata_ga0ffeaad4a7482bc302dce44a23a85a6e}{State\+::\+Meta\+State}} (size\+\_\+t barnb)
+\begin{DoxyCompactList}\small\item\em Meta state corresponding to bar nb barnb. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga99612639925cfc0a63a173ea167a6d3b}\label{group__schemata_ga99612639925cfc0a63a173ea167a6d3b}} 
+void {\bfseries ds\+\_\+transition\+::rename} (unsigned int s, unsigned int u)
+\item 
+\mbox{\Hypertarget{group__schemata_gaa6bf3664ce3ec4ceddc6fc0546e7af84}\label{group__schemata_gaa6bf3664ce3ec4ceddc6fc0546e7af84}} 
+void \mbox{\hyperlink{group__schemata_gaa6bf3664ce3ec4ceddc6fc0546e7af84}{ds\+\_\+transition\+::shift}} (unsigned int n)
+\begin{DoxyCompactList}\small\item\em increase source and target state by n \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga811afd94c0a2afda729115e1afade496}\label{group__schemata_ga811afd94c0a2afda729115e1afade496}} 
+void \mbox{\hyperlink{group__schemata_ga811afd94c0a2afda729115e1afade496}{ds\+\_\+transition\+::shift0}} (unsigned int n)
+\begin{DoxyCompactList}\small\item\em increase source and target state by n, if they are not 0 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga1762a1cf61c23100f58a69f092f94e27}\label{group__schemata_ga1762a1cf61c23100f58a69f092f94e27}} 
+\mbox{\hyperlink{group__schemata_ga1762a1cf61c23100f58a69f092f94e27}{dag\+Schema\+::dag\+Schema}} (const \mbox{\hyperlink{classANode}{A\+Node}} \&)
+\begin{DoxyCompactList}\small\item\em translation of A\+N\+D-\/\+OR alternating nested lists into dag-\/schemas \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga7f1258e692e42b123b039e9aa1c256b8}\label{group__schemata_ga7f1258e692e42b123b039e9aa1c256b8}} 
+{\bfseries dag\+Schema\+::dag\+Schema} (const \mbox{\hyperlink{classONode}{O\+Node}} \&)
+\item 
+void \mbox{\hyperlink{group__schemata_ga0dc3e9cf7edbc289976639574ca23d20}{dag\+Schema\+::add}} (const \mbox{\hyperlink{structds__transition}{ds\+\_\+transition}} \&dst)
+\item 
+\mbox{\Hypertarget{group__schemata_ga73b44b2338b11807f77b620a3e810f92}\label{group__schemata_ga73b44b2338b11807f77b620a3e810f92}} 
+\mbox{\hyperlink{group__schemata_ga73b44b2338b11807f77b620a3e810f92}{Transition\+::\+Transition}} ()
+\begin{DoxyCompactList}\small\item\em transition with unknown weight and empty body. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__schemata_ga6e08e637325ab62ee6bfbdb99c8f8a71}{Transition\+::\+Transition}} (const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(w)}} creates a transition with weight a copy of w and empty body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga09dca130387fcf6ead3f80cc523a59de}\label{group__schemata_ga09dca130387fcf6ead3f80cc523a59de}} 
+\mbox{\hyperlink{group__schemata_ga09dca130387fcf6ead3f80cc523a59de}{Transition\+::\+Transition}} (\mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(lw)}} creates a transition with weight a wrapper of the letter lw (must be non null) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__schemata_gad126f7c68acac0315b1782decaf54d3b}{Transition\+::\+Transition}} (std\+::vector$<$ state\+\_\+t $>$, const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(v, w)}} creates a transition with weight a copy of w and body a copy of the vector v. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga50836c0d84b3968b9ceb968521418e22}\label{group__schemata_ga50836c0d84b3968b9ceb968521418e22}} 
+\mbox{\hyperlink{group__schemata_ga50836c0d84b3968b9ceb968521418e22}{Transition\+::\+Transition}} (std\+::vector$<$ state\+\_\+t $>$, \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(v, lw)}} creates a transition with weight a wrapper of the letter lw (must be non null) and body a copy of the vector v. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__schemata_ga3c71fb93c73a755408cc963975d4ffa5}{Transition\+::\+Transition}} (state\+\_\+t, const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(s, w)}} creates a transition with weight a copy of w and body (of size 1) the singleton (s) (terminal symbol). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga458b953211e3b5de292c8c1535ff7281}\label{group__schemata_ga458b953211e3b5de292c8c1535ff7281}} 
+\mbox{\hyperlink{group__schemata_ga458b953211e3b5de292c8c1535ff7281}{Transition\+::\+Transition}} (state\+\_\+t, \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransition}{Transition(s, lw)}} creates a transition with weight a wrapper of the letter lw (must be non null) and body (of size 1) the singleton (s) (terminal symbol). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaeb18d5879ecb7757b5e783866c3e6084}\label{group__schemata_gaeb18d5879ecb7757b5e783866c3e6084}} 
+bool {\bfseries Transition\+::inner} () const
+\item 
+\mbox{\Hypertarget{group__schemata_ga1191490a05cc7d04a9933e5d84ca9fcd}\label{group__schemata_ga1191490a05cc7d04a9933e5d84ca9fcd}} 
+bool {\bfseries Transition\+::terminal} () const
+\item 
+\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{group__schemata_ga97dce48d13fac75a4a444a68aae07608}{Transition\+::label}} () const
+\item 
+\mbox{\Hypertarget{group__schemata_ga6d7e864cf11645e39e3999516c2438f7}\label{group__schemata_ga6d7e864cf11645e39e3999516c2438f7}} 
+void \mbox{\hyperlink{group__schemata_ga6d7e864cf11645e39e3999516c2438f7}{Transition\+::scalar}} (double)
+\begin{DoxyCompactList}\small\item\em modify weight of transition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga00585e8726be305c0a0d5b9af9c585b0}\label{group__schemata_ga00585e8726be305c0a0d5b9af9c585b0}} 
+void {\bfseries Transition\+::invert} ()
+\item 
+\mbox{\Hypertarget{group__schemata_ga743ca128dc509e129a49d66500a0f151}\label{group__schemata_ga743ca128dc509e129a49d66500a0f151}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga743ca128dc509e129a49d66500a0f151}{Transition\+::size}} () const
+\begin{DoxyCompactList}\small\item\em size of body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gad6ae5de36df4526b83bf7af59d178066}\label{group__schemata_gad6ae5de36df4526b83bf7af59d178066}} 
+size\+\_\+t {\bfseries Transition\+::arity} () const
+\item 
+state\+\_\+t \mbox{\hyperlink{group__schemata_ga9e2e243bfa147bafd947f2cffd1da3ec}{Transition\+::at}} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em at(i) returns the ith state in the body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaacc3c061a48c15ce02b2ead05f9bb2bf}\label{group__schemata_gaacc3c061a48c15ce02b2ead05f9bb2bf}} 
+void \mbox{\hyperlink{group__schemata_gaacc3c061a48c15ce02b2ead05f9bb2bf}{Transition\+::push}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em add given state at the end of the body of this transition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gab94ff39ee66515e72c1c52ba855508c8}\label{group__schemata_gab94ff39ee66515e72c1c52ba855508c8}} 
+bool \mbox{\hyperlink{group__schemata_gab94ff39ee66515e72c1c52ba855508c8}{Transition\+::member}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em whether the given state belongs to the body of this transition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga9719bf4a7c1e1ec8e0e1fceed8da0a11}\label{group__schemata_ga9719bf4a7c1e1ec8e0e1fceed8da0a11}} 
+bool \mbox{\hyperlink{group__schemata_ga9719bf4a7c1e1ec8e0e1fceed8da0a11}{Transition\+::allin}} (const std\+::set$<$ state\+\_\+t $>$ \&) const
+\begin{DoxyCompactList}\small\item\em every state of the body is in the given set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga6bb49bac8dc5d5dbfb955b9eaea29276}\label{group__schemata_ga6bb49bac8dc5d5dbfb955b9eaea29276}} 
+bool \mbox{\hyperlink{group__schemata_ga6bb49bac8dc5d5dbfb955b9eaea29276}{Transition\+::nonein}} (const std\+::set$<$ state\+\_\+t $>$ \&) const
+\begin{DoxyCompactList}\small\item\em no state of the body is in the given set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga78ce9830cde7d7875888ab5b420beecf}\label{group__schemata_ga78ce9830cde7d7875888ab5b420beecf}} 
+{\bfseries Value\+State\+::\+Value\+State} (state\+\_\+t, \mbox{\hyperlink{classDurationTree}{Duration\+Tree}} $\ast$)
+\item 
+\mbox{\Hypertarget{group__schemata_gaa64b0072478e5475befdb4b0212d8e2e}\label{group__schemata_gaa64b0072478e5475befdb4b0212d8e2e}} 
+bool {\bfseries Value\+State\+::compatible} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} label) const
+\item 
+\mbox{\Hypertarget{group__schemata_ga8e4a967143877229169d6c28842185c8}\label{group__schemata_ga8e4a967143877229169d6c28842185c8}} 
+bool {\bfseries Value\+State\+::operator==} (const \mbox{\hyperlink{classValueState}{Value\+State}} \&s) const
+\item 
+\mbox{\Hypertarget{group__schemata_gab35a1ee1d6e2b2b5d82b930b4d70340f}\label{group__schemata_gab35a1ee1d6e2b2b5d82b930b4d70340f}} 
+\mbox{\hyperlink{group__schemata_gab35a1ee1d6e2b2b5d82b930b4d70340f}{Value\+W\+T\+A\+::\+Value\+W\+TA}} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&, const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\begin{DoxyCompactList}\small\item\em construction from given initial list and \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_gaba83dbc74a223a80ad7f8776847bd6c2}{Transition\+List\+::empty}} () const
+\begin{DoxyCompactList}\small\item\em zero transition \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_gaa719dbdab17047360e889910795a07f2}{Transition\+List\+::size}} () const
+\begin{DoxyCompactList}\small\item\em number of transitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gadc77b77a90197483168626230fe4dbf4}\label{group__schemata_gadc77b77a90197483168626230fe4dbf4}} 
+void {\bfseries Transition\+List\+::add} (const \mbox{\hyperlink{classTransition}{Transition}} \&)
+\item 
+\mbox{\Hypertarget{group__schemata_ga2f4181b350f6dec7054072fcf2095834}\label{group__schemata_ga2f4181b350f6dec7054072fcf2095834}} 
+void {\bfseries Transition\+List\+::clear} ()
+\item 
+\mbox{\Hypertarget{group__schemata_gad9709d189b3748d2285f2a3592bed2da}\label{group__schemata_gad9709d189b3748d2285f2a3592bed2da}} 
+void {\bfseries Transition\+List\+::remove} (Transition\+List\+\_\+iterator)
+\item 
+\mbox{\Hypertarget{group__schemata_ga3c5b906f3ce72168effc16b06ed1ef6c}\label{group__schemata_ga3c5b906f3ce72168effc16b06ed1ef6c}} 
+void \mbox{\hyperlink{group__schemata_ga3c5b906f3ce72168effc16b06ed1ef6c}{Transition\+List\+::remove}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em remove all transitions of length $>$ 1 in the list containing the given state do not remove length 1 transitions to terminal symbols \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga5636da911ebbe8772c5444172d56800d}\label{group__schemata_ga5636da911ebbe8772c5444172d56800d}} 
+\mbox{\hyperlink{group__schemata_ga5636da911ebbe8772c5444172d56800d}{W\+T\+A\+::\+W\+TA}} ()
+\begin{DoxyCompactList}\small\item\em nullary constructor for cython \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga6eeb789b8c8aa8404f611a6fed61faca}\label{group__schemata_ga6eeb789b8c8aa8404f611a6fed61faca}} 
+\mbox{\hyperlink{group__schemata_ga6eeb789b8c8aa8404f611a6fed61faca}{W\+T\+A\+::\+W\+TA}} (\mbox{\hyperlink{classWeight}{Weight}} seed, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\begin{DoxyCompactList}\small\item\em empty automaton \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gab201fee50d73843159cbef5f453838f0}\label{group__schemata_gab201fee50d73843159cbef5f453838f0}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_gab201fee50d73843159cbef5f453838f0}{W\+T\+A\+::size}} () const
+\begin{DoxyCompactList}\small\item\em number of states \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gada977ff7270308f29852b59f38965bde}\label{group__schemata_gada977ff7270308f29852b59f38965bde}} 
+bool {\bfseries W\+T\+A\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__schemata_ga4459bd6654cbe35b39df9cade16c6d58}\label{group__schemata_ga4459bd6654cbe35b39df9cade16c6d58}} 
+bool \mbox{\hyperlink{group__schemata_ga4459bd6654cbe35b39df9cade16c6d58}{W\+T\+A\+::is\+Registered}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em the state is present in the automaton \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_ga88d07a1e47cc3ee537234861b7336dd6}{W\+T\+A\+::is\+Initial}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em the state is an initial state \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransitionList}{Transition\+List}} \& \mbox{\hyperlink{group__schemata_ga924a1c533383a7185b9d466b59c5a495}{W\+T\+A\+::add}} (state\+\_\+t, bool \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{initial}}=false)
+\begin{DoxyCompactList}\small\item\em add(s, i) register state s if s was already registered, return a reference to its transition list. otherwise, create state s with an empty transition list and returns a reference to it. moreover s is set as initial if i = true. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransitionList}{Transition\+List}} \& \mbox{\hyperlink{group__schemata_ga01de1e03d09518b38ab69a2075276ae2}{W\+T\+A\+::add}} (state\+\_\+t, const \mbox{\hyperlink{classTransition}{Transition}} \&, bool \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{initial}}=false)
+\begin{DoxyCompactList}\small\item\em add(s, t) add a transition with head s and with body/weight described in t if s was not registered, it is registered the transition t is added to the transition list of s and a reference to this transition list is returned moreover s is set as initial if i = true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga3d8d24249e26ecc8bbdaf672c6e8d3cf}\label{group__schemata_ga3d8d24249e26ecc8bbdaf672c6e8d3cf}} 
+void \mbox{\hyperlink{group__schemata_ga3d8d24249e26ecc8bbdaf672c6e8d3cf}{W\+T\+A\+::remove}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em remove the entry for given state s in the table of the table i.\+e. all transitions targeted to s, and all the transitions with s in their body. if s was in the initial set, it is also removed from this set. s must be registered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga23c3f9884c683e4bbab323208e08c672}\label{group__schemata_ga23c3f9884c683e4bbab323208e08c672}} 
+Transition\+List\+\_\+const\+\_\+iterator \mbox{\hyperlink{group__schemata_ga23c3f9884c683e4bbab323208e08c672}{W\+T\+A\+::begin}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em begin(s) returns an iterator pointing to the first transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaf5075f5a210343d6da208f4c80421cb5}\label{group__schemata_gaf5075f5a210343d6da208f4c80421cb5}} 
+Transition\+List\+\_\+const\+\_\+iterator \mbox{\hyperlink{group__schemata_gaf5075f5a210343d6da208f4c80421cb5}{W\+T\+A\+::end}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em begin(s) returns an iterator pointing to the past-\/the-\/end transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga0f6551b20a213eb88c6a7e822ebc5915}\label{group__schemata_ga0f6551b20a213eb88c6a7e822ebc5915}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga0f6551b20a213eb88c6a7e822ebc5915}{W\+T\+A\+::count\+States}} () const
+\begin{DoxyCompactList}\small\item\em number of states \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga8acbd7562a6f69e7634d6b9f9e341e4a}\label{group__schemata_ga8acbd7562a6f69e7634d6b9f9e341e4a}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga8acbd7562a6f69e7634d6b9f9e341e4a}{W\+T\+A\+::count\+Transitions}} () const
+\begin{DoxyCompactList}\small\item\em number of transition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga9370cdd31619d49bfb0b18fa6b4e13b7}\label{group__schemata_ga9370cdd31619d49bfb0b18fa6b4e13b7}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga9370cdd31619d49bfb0b18fa6b4e13b7}{W\+T\+A\+::count\+All}} () const
+\begin{DoxyCompactList}\small\item\em number of symbols (state occurences) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga28c9a7e35d4d516ef0f9967e773305f8}\label{group__schemata_ga28c9a7e35d4d516ef0f9967e773305f8}} 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga28c9a7e35d4d516ef0f9967e773305f8}{W\+T\+A\+::oftarget}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em oftarget(s) return the number of transitions of head state s. s must be registered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga625d9da502c5cd554797ebe9ee9023c4}\label{group__schemata_ga625d9da502c5cd554797ebe9ee9023c4}} 
+size\+\_\+t {\bfseries W\+T\+A\+::resolution} () const
+\item 
+\mbox{\Hypertarget{group__schemata_gae6fb2dbd82ed290528b90ee7bb4b6ccc}\label{group__schemata_gae6fb2dbd82ed290528b90ee7bb4b6ccc}} 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gae6fb2dbd82ed290528b90ee7bb4b6ccc}{W\+T\+A\+::step}} (const std\+::set$<$ state\+\_\+t $>$ \&)
+\begin{DoxyCompactList}\small\item\em step(s) returns the set of states reachable in one transition step by this \mbox{\hyperlink{classWTA}{W\+TA}} from the given state set s. all the states in the set s must be registered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gab8ea841b4a1e71ef70d3fda927f0507d}\label{group__schemata_gab8ea841b4a1e71ef70d3fda927f0507d}} 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gab8ea841b4a1e71ef70d3fda927f0507d}{W\+T\+A\+::all\+States}} () const
+\begin{DoxyCompactList}\small\item\em returns the set of all states occuring in wta (in head or body) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaea41b32c37bbe955d0359039d7731fea}\label{group__schemata_gaea41b32c37bbe955d0359039d7731fea}} 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gaea41b32c37bbe955d0359039d7731fea}{W\+T\+A\+::empty\+States}} () const
+\begin{DoxyCompactList}\small\item\em returns the set of all non-\/inhabited (zero weight) states in wta \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga9ef4193ae949ae7c9e52d30720e37202}\label{group__schemata_ga9ef4193ae949ae7c9e52d30720e37202}} 
+bool \mbox{\hyperlink{group__schemata_ga9ef4193ae949ae7c9e52d30720e37202}{W\+T\+A\+::is\+Clean}} () const
+\begin{DoxyCompactList}\small\item\em the \mbox{\hyperlink{classWTA}{W\+TA}} has no empty states \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaec169477bdc2cf883916c38dbc18e577}\label{group__schemata_gaec169477bdc2cf883916c38dbc18e577}} 
+void \mbox{\hyperlink{group__schemata_gaec169477bdc2cf883916c38dbc18e577}{W\+T\+A\+::clean}} ()
+\begin{DoxyCompactList}\small\item\em remove states not inhabited and transitions containing these states \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga91e272f4f9463149cd296f48e65a4185}{W\+T\+A\+::abstract}} (bool flag=false)
+\begin{DoxyCompactList}\small\item\em abstract the leaf label values in domain \mbox{[}0..M\+A\+X\+\_\+\+G\+R\+A\+CE\mbox{]} every value $>$ M\+A\+X\+\_\+\+G\+R\+A\+CE is casted to M\+A\+X\+\_\+\+G\+R\+A\+CE the weights are summed accordingly \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga8dfef6b591f952f0fea9dae1f5e475c7}{W\+T\+A\+::\+Countingto\+Stochastic}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga5f3a0d868bf26b504cccc53b4d55e09a}{W\+T\+A\+::\+Countingto\+Penalty}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_gaff1196a45ffd1400bc4004e27b167218}{W\+T\+A\+::\+Penaltyto\+Counting}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga0bddc6750b18023be6976bd5cd46a2f5}{W\+T\+A\+::\+Stochasticto\+Penalty}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaf3c11e99698a2cf7ef039632dc5e2b6b}\label{group__schemata_gaf3c11e99698a2cf7ef039632dc5e2b6b}} 
+bool \mbox{\hyperlink{group__schemata_gaf3c11e99698a2cf7ef039632dc5e2b6b}{W\+T\+A\+::has\+Weight\+Type}} (std\+::string code) const
+\begin{DoxyCompactList}\small\item\em return wether the weights in transition have the type of the code (code of the letter weight if there is one or \char`\"{}\+U\+N\+K\+N\+O\+W\+N\char`\"{} otherwise). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga762b5bbee46468815993417ca9b3d9c6}\label{group__schemata_ga762b5bbee46468815993417ca9b3d9c6}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_ga762b5bbee46468815993417ca9b3d9c6}{W\+T\+A\+::weight\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the 0 value in the weight domain in this \mbox{\hyperlink{classWTA}{W\+TA}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gabfe48e6398d83c03161b664dadcf8fcd}\label{group__schemata_gabfe48e6398d83c03161b664dadcf8fcd}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_gabfe48e6398d83c03161b664dadcf8fcd}{W\+T\+A\+::weight\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the 1 value in the weight domain in this \mbox{\hyperlink{classWTA}{W\+TA}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaa6598176fb91c70988bea7cf824ec157}\label{group__schemata_gaa6598176fb91c70988bea7cf824ec157}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_gaa6598176fb91c70988bea7cf824ec157}{W\+T\+A\+::eval}} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t) const
+\begin{DoxyCompactList}\small\item\em evaluate the weight of the tree t for \mbox{\hyperlink{classWTA}{W\+TA}} in initial state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gac842f196f85e3c3b079c7c0992173e46}\label{group__schemata_gac842f196f85e3c3b079c7c0992173e46}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} {\bfseries W\+T\+A\+::eval} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t, state\+\_\+t s) const
+\item 
+\mbox{\Hypertarget{group__schemata_gaeb713b8807bc81c6c6519ced5d531e06}\label{group__schemata_gaeb713b8807bc81c6c6519ced5d531e06}} 
+void \mbox{\hyperlink{group__schemata_gaeb713b8807bc81c6c6519ced5d531e06}{W\+T\+A\+::print}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em print sizes to output stream \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gaf0a0a9f458a39032b2c653a99f609935}\label{group__schemata_gaf0a0a9f458a39032b2c653a99f609935}} 
+{\bfseries Depth\+Marking\+::\+Depth\+Marking} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\item 
+\mbox{\Hypertarget{group__schemata_gaaa84e1d149651938af82e47b91888017}\label{group__schemata_gaaa84e1d149651938af82e47b91888017}} 
+int \mbox{\hyperlink{group__schemata_gaaa84e1d149651938af82e47b91888017}{Depth\+Marking\+::depth}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em return depth mark if given state marked return -\/1 otherwise \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_gad5f3fa885bb5d2be624a26e9aa50dd0b}\label{group__schemata_gad5f3fa885bb5d2be624a26e9aa50dd0b}} 
+bool \mbox{\hyperlink{group__schemata_gad5f3fa885bb5d2be624a26e9aa50dd0b}{Depth\+Marking\+::multiple}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em return true if the given state can occur at multiple depths return false otherwise or if state not marked \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__schemata_ga3486fcb9921f3c018b931e088a53df7d}\label{group__schemata_ga3486fcb9921f3c018b931e088a53df7d}} 
+int \mbox{\hyperlink{group__schemata_ga3486fcb9921f3c018b931e088a53df7d}{Depth\+Marking\+::mark}} (state\+\_\+t, int)
+\begin{DoxyCompactList}\small\item\em mark state using given depth and return new mark value can be the given depth or a greater depth with which the state had been already marked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__schemata_ga170bee814ca8089ab27a574b1f47281c}\label{group__schemata_ga170bee814ca8089ab27a574b1f47281c}} 
+static bool($\ast$ \mbox{\hyperlink{group__schemata_ga170bee814ca8089ab27a574b1f47281c}{Counting\+W\+T\+A\+::\+\_\+trcomp\+\_\+ptr}} )(std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$, std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$) = \&trcomp
+\begin{DoxyCompactList}\small\item\em pointer to comparison functionå \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\ttfamily schemata} module contains classes of weighted tree automata used for parsing. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__schemata_gad80378e34fdc145bd7f0dac17c306e39}\label{group__schemata_gad80378e34fdc145bd7f0dac17c306e39}} 
+\index{Schemata module@{Schemata module}!ComboState@{ComboState}}
+\index{ComboState@{ComboState}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{ComboState()}{ComboState()}}
+{\footnotesize\ttfamily Combo\+State\+::\+Combo\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classComboState}{Combo\+State}} \&}]{cs,  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{rp = {\ttfamily 0},  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{rr = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]T\+BR \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga2a6c3a5867fefdac97470fd083aaa2dd}\label{group__schemata_ga2a6c3a5867fefdac97470fd083aaa2dd}} 
+\index{Schemata module@{Schemata module}!initial@{initial}}
+\index{initial@{initial}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{initial()}{initial()}}
+{\footnotesize\ttfamily state\+\_\+t Combo\+W\+T\+A\+::initial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{pre = {\ttfamily 0},  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{post = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+state representing the whole segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pre} & points of the previous segment aligned to the left \\
+\hline
+{\em post} & points of the current segment aligned to the right (i.\+e. to the left of the next segment). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{W\+TA}}.
+
+\mbox{\Hypertarget{group__schemata_gabc0c5bcc094646426f0a90313808907b}\label{group__schemata_gabc0c5bcc094646426f0a90313808907b}} 
+\index{Schemata module@{Schemata module}!PreState@{PreState}}
+\index{PreState@{PreState}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{PreState()}{PreState()}}
+{\footnotesize\ttfamily Pre\+State\+::\+Pre\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPreState}{Pre\+State}} \&}]{ps }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]T\+BR \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga0dc3e9cf7edbc289976639574ca23d20}\label{group__schemata_ga0dc3e9cf7edbc289976639574ca23d20}} 
+\index{Schemata module@{Schemata module}!add@{add}}
+\index{add@{add}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void dag\+Schema\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structds__transition}{ds\+\_\+transition}} \&}]{dst }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+for testing. do not use 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga6e08e637325ab62ee6bfbdb99c8f8a71}\label{group__schemata_ga6e08e637325ab62ee6bfbdb99c8f8a71}} 
+\index{Schemata module@{Schemata module}!Transition@{Transition}}
+\index{Transition@{Transition}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{Transition()}{Transition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Transition\+::\+Transition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{w }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransition}{Transition(w)}} creates a transition with weight a copy of w and empty body. 
+
+\begin{DoxyWarning}{Warning}
+the letter weight in the envelop w is cloned 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_gad126f7c68acac0315b1782decaf54d3b}\label{group__schemata_gad126f7c68acac0315b1782decaf54d3b}} 
+\index{Schemata module@{Schemata module}!Transition@{Transition}}
+\index{Transition@{Transition}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{Transition()}{Transition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Transition\+::\+Transition (\begin{DoxyParamCaption}\item[{std\+::vector$<$ state\+\_\+t $>$}]{v,  }\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{w }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransition}{Transition(v, w)}} creates a transition with weight a copy of w and body a copy of the vector v. 
+
+\begin{DoxyWarning}{Warning}
+the letter weight in the envelop w is cloned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga3c71fb93c73a755408cc963975d4ffa5}\label{group__schemata_ga3c71fb93c73a755408cc963975d4ffa5}} 
+\index{Schemata module@{Schemata module}!Transition@{Transition}}
+\index{Transition@{Transition}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{Transition()}{Transition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Transition\+::\+Transition (\begin{DoxyParamCaption}\item[{state\+\_\+t}]{s,  }\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{w }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransition}{Transition(s, w)}} creates a transition with weight a copy of w and body (of size 1) the singleton (s) (terminal symbol). 
+
+\begin{DoxyWarning}{Warning}
+the letter weight in the envelop w is cloned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga97dce48d13fac75a4a444a68aae07608}\label{group__schemata_ga97dce48d13fac75a4a444a68aae07608}} 
+\index{Schemata module@{Schemata module}!label@{label}}
+\index{label@{label}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} Transition\+::label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyWarning}{Warning}
+this transition must be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga9e2e243bfa147bafd947f2cffd1da3ec}\label{group__schemata_ga9e2e243bfa147bafd947f2cffd1da3ec}} 
+\index{Schemata module@{Schemata module}!at@{at}}
+\index{at@{at}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily state\+\_\+t Transition\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const}
+
+
+
+at(i) returns the ith state in the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & must be an index of the body. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__schemata_gaba83dbc74a223a80ad7f8776847bd6c2}\label{group__schemata_gaba83dbc74a223a80ad7f8776847bd6c2}} 
+\index{Schemata module@{Schemata module}!empty@{empty}}
+\index{empty@{empty}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Transition\+List\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+zero transition 
+
+\begin{DoxyReturn}{Returns}
+an empty transition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__schemata_gaa719dbdab17047360e889910795a07f2}\label{group__schemata_gaa719dbdab17047360e889910795a07f2}} 
+\index{Schemata module@{Schemata module}!size@{size}}
+\index{size@{size}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Transition\+List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+number of transitions. 
+
+\begin{DoxyReturn}{Returns}
+the number of transitions in this \mbox{\hyperlink{classWTA}{W\+TA}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__schemata_ga88d07a1e47cc3ee537234861b7336dd6}\label{group__schemata_ga88d07a1e47cc3ee537234861b7336dd6}} 
+\index{Schemata module@{Schemata module}!isInitial@{isInitial}}
+\index{isInitial@{isInitial}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{isInitial()}{isInitial()}}
+{\footnotesize\ttfamily bool W\+T\+A\+::is\+Initial (\begin{DoxyParamCaption}\item[{state\+\_\+t}]{s }\end{DoxyParamCaption}) const}
+
+
+
+the state is an initial state 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]T\+BR \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga924a1c533383a7185b9d466b59c5a495}\label{group__schemata_ga924a1c533383a7185b9d466b59c5a495}} 
+\index{Schemata module@{Schemata module}!add@{add}}
+\index{add@{add}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTransitionList}{Transition\+List}} \& W\+T\+A\+::add (\begin{DoxyParamCaption}\item[{state\+\_\+t}]{s,  }\item[{bool}]{initial = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+add(s, i) register state s if s was already registered, return a reference to its transition list. otherwise, create state s with an empty transition list and returns a reference to it. moreover s is set as initial if i = true. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000018}{Todo}}]suppr. flag initial \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga01de1e03d09518b38ab69a2075276ae2}\label{group__schemata_ga01de1e03d09518b38ab69a2075276ae2}} 
+\index{Schemata module@{Schemata module}!add@{add}}
+\index{add@{add}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTransitionList}{Transition\+List}} \& W\+T\+A\+::add (\begin{DoxyParamCaption}\item[{state\+\_\+t}]{s,  }\item[{const \mbox{\hyperlink{classTransition}{Transition}} \&}]{t,  }\item[{bool}]{initial = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+add(s, t) add a transition with head s and with body/weight described in t if s was not registered, it is registered the transition t is added to the transition list of s and a reference to this transition list is returned moreover s is set as initial if i = true. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]suppr. flag initial \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga91e272f4f9463149cd296f48e65a4185}\label{group__schemata_ga91e272f4f9463149cd296f48e65a4185}} 
+\index{Schemata module@{Schemata module}!abstract@{abstract}}
+\index{abstract@{abstract}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{abstract()}{abstract()}}
+{\footnotesize\ttfamily void W\+T\+A\+::abstract (\begin{DoxyParamCaption}\item[{bool}]{flag = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+abstract the leaf label values in domain \mbox{[}0..M\+A\+X\+\_\+\+G\+R\+A\+CE\mbox{]} every value $>$ M\+A\+X\+\_\+\+G\+R\+A\+CE is casted to M\+A\+X\+\_\+\+G\+R\+A\+CE the weights are summed accordingly 
+
+leaf labels in domain of \mbox{\hyperlink{classLabel}{Label}} (not \mbox{\hyperlink{classSerialLabel}{Serial\+Label}}). \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]T\+BR unused \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__schemata_ga8dfef6b591f952f0fea9dae1f5e475c7}\label{group__schemata_ga8dfef6b591f952f0fea9dae1f5e475c7}} 
+\index{Schemata module@{Schemata module}!CountingtoStochastic@{CountingtoStochastic}}
+\index{CountingtoStochastic@{CountingtoStochastic}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{CountingtoStochastic()}{CountingtoStochastic()}}
+{\footnotesize\ttfamily void W\+T\+A\+::\+Countingto\+Stochastic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cast weights in all transitions. 
+
+\begin{DoxyWarning}{Warning}
+this \mbox{\hyperlink{classWTA}{W\+TA}} must have \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Float\+Weight\char`\"{}. this \mbox{\hyperlink{classWTA}{W\+TA}} is casted into \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Viterbi\+Weight\char`\"{} divide by sum for target state 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga5f3a0d868bf26b504cccc53b4d55e09a}\label{group__schemata_ga5f3a0d868bf26b504cccc53b4d55e09a}} 
+\index{Schemata module@{Schemata module}!CountingtoPenalty@{CountingtoPenalty}}
+\index{CountingtoPenalty@{CountingtoPenalty}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{CountingtoPenalty()}{CountingtoPenalty()}}
+{\footnotesize\ttfamily void W\+T\+A\+::\+Countingto\+Penalty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cast weights in all transitions. 
+
+\begin{DoxyWarning}{Warning}
+this \mbox{\hyperlink{classWTA}{W\+TA}} must have \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Float\+Weight\char`\"{}. this \mbox{\hyperlink{classWTA}{W\+TA}} is casted into \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Tropical\+Weight\char`\"{} composition of Countingto\+Stochastic and Stochasticto\+Penalty 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_gaff1196a45ffd1400bc4004e27b167218}\label{group__schemata_gaff1196a45ffd1400bc4004e27b167218}} 
+\index{Schemata module@{Schemata module}!PenaltytoCounting@{PenaltytoCounting}}
+\index{PenaltytoCounting@{PenaltytoCounting}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{PenaltytoCounting()}{PenaltytoCounting()}}
+{\footnotesize\ttfamily void W\+T\+A\+::\+Penaltyto\+Counting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cast weights in all transitions. 
+
+\begin{DoxyWarning}{Warning}
+this \mbox{\hyperlink{classWTA}{W\+TA}} must have \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Tropical\+Weight\char`\"{}. this \mbox{\hyperlink{classWTA}{W\+TA}} is casted into \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Float\+Weight\char`\"{} inverse 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__schemata_ga0bddc6750b18023be6976bd5cd46a2f5}\label{group__schemata_ga0bddc6750b18023be6976bd5cd46a2f5}} 
+\index{Schemata module@{Schemata module}!StochastictoPenalty@{StochastictoPenalty}}
+\index{StochastictoPenalty@{StochastictoPenalty}!Schemata module@{Schemata module}}
+\subsubsection{\texorpdfstring{StochastictoPenalty()}{StochastictoPenalty()}}
+{\footnotesize\ttfamily void W\+T\+A\+::\+Stochasticto\+Penalty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cast weights in all transitions. 
+
+\begin{DoxyWarning}{Warning}
+this \mbox{\hyperlink{classWTA}{W\+TA}} must have \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Viterbi\+Weight\char`\"{}. this \mbox{\hyperlink{classWTA}{W\+TA}} is casted into \mbox{\hyperlink{classWeight}{Weight}} Type \char`\"{}\+Tropical\+Weight\char`\"{} -\/ln 
+\end{DoxyWarning}

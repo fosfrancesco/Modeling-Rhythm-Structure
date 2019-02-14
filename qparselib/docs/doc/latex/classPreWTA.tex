@@ -1,0 +1,89 @@
+\hypertarget{classPreWTA}{}\section{Pre\+W\+TA Class Reference}
+\label{classPreWTA}\index{PreWTA@{PreWTA}}
+
+
+extension of \mbox{\hyperlink{classWTA}{W\+TA}} where states are associated pre and post values.  
+
+
+
+
+{\ttfamily \#include $<$Pre\+W\+T\+A.\+hpp$>$}
+
+Inheritance diagram for Pre\+W\+TA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPreWTA}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__schemata_ga6287aa82de69987b65518b4997112ac5}{Pre\+W\+TA}} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\begin{DoxyCompactList}\small\item\em construction from \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPreWTA_a0cb0b8f217198e19367d88674605995e}\label{classPreWTA_a0cb0b8f217198e19367d88674605995e}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\item 
+virtual state\+\_\+t \mbox{\hyperlink{group__schemata_gaf47213e6243f48f06681089e03fa08ef}{initial}} (\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}{pre}}=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0) const
+\begin{DoxyCompactList}\small\item\em initial(pre, port) returns state representing the whole segment, with pre points of the previous segment aligned to the left and post points of the current segment aligned to the right (i.\+e. to the left of the next segment) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__schemata_gaab30a1faaa381ecfabd705a8c12d179b}{pre}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em access to original components of new \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} states \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} {\bfseries post} (state\+\_\+t)
+\item 
+static state\+\_\+t {\bfseries state} (state\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPreWTA_ad81a5d6ce9870bd4efa5e970004bafd3}\label{classPreWTA_ad81a5d6ce9870bd4efa5e970004bafd3}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+extension of \mbox{\hyperlink{classWTA}{W\+TA}} where states are associated pre and post values. 
+
+
+\begin{DoxyItemize}
+\item post is a number of points
+\item pre is the post of the previous sibling
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+deprecated
+\end{DoxyWarning}
+extension of a given schema (\mbox{\hyperlink{classWTA}{W\+TA}}) with pre and post information in states\+: during a computation, the current state is associated to an input segment,
+\begin{DoxyItemize}
+\item pre value is an abstraction of the number of points in the previous segment aligned to the left of the current segment.
+\item post value is an abstraction of the number of points aligned to the right of the current segment. cf. Label\+::abstract for the abstraction domain
+\end{DoxyItemize}
+
+top-\/down construction of the transition table, principle\+:
+\begin{DoxyItemize}
+\item pre propagate from a node to its leftmost child
+\item post propagte from a node to it rightmost child
+\item for 2 states s1, s2 at successive siblings, it holds that s1.\+post = s2.\+pre
+\end{DoxyItemize}
+
+given q state of schema, k $<$= max\{ n $\vert$ q -\/$>$ q1,...,qn $\vert$ w transition of schema\} mright(q, k) = \# point d’input dans la derniere 2k partie de p
+
+we start with states $<$q0, pre0, post0$>$ in a queue q0 = initial state of the schema pre0 arbitrary (input of problem = previous tree). ctypically 0. post0 in \mbox{[}0, M\+A\+X\+\_\+\+G\+R\+A\+CE\mbox{]}
+
+for all state $<$q, pre, post$>$ taken from the queue
+
+for all final transition q -\/$>$ s $\vert$ w of the schema we add the transition $<$q, pre, post$>$ -\/$>$ $<$s, pre, post$>$ $\vert$ w such that the value of s abstracts the possible values of pre + lalign(path) for any path.
+
+for all inner transition q -\/$>$ (q1,...,qk) $\vert$ w in schema (k $>$ 1) for all post in \mbox{[}0..M\+A\+X\+\_\+\+G\+R\+A\+CE\mbox{]} we add the transitions $<$q, pre, post$>$ -\/$>$ ($<$q1, pre1, post1$>$,..., $<$qk, prek, postk$>$) $\vert$ w such that
+\begin{DoxyItemize}
+\item postk = post
+\item pre1 = pre
+\item for all 1 $<$= i $<$ k, posti = prei+1 we also add the states $<$q1, pre1, post1$>$,..., $<$qk, prek, postk$>$ in the queue 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/Pre\+W\+T\+A.\+hpp\item 
+src/schemata/Pre\+W\+T\+A.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="init_8cpp" kind="file" language="C++">
+    <compoundname>init.cpp</compoundname>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__general_1gac3b19762b16f33de03662fd4289fe5a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EVENTNB_UNKNOWN</definition>
+        <argsstring></argsstring>
+        <name>EVENTNB_UNKNOWN</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>type for MIDI event numbers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="21" column="1" bodyfile="src/general/init.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gae862a9d955eb3154601efb64980ac24b" prot="public" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational MUSTIME_UNKNOWN</definition>
+        <argsstring></argsstring>
+        <name>MUSTIME_UNKNOWN</name>
+        <initializer>= <ref refid="classRational" kindref="compound">Rational</ref>(-1)</initializer>
+        <briefdescription>
+<para>type for musical time values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="23" column="1" bodyfile="src/general/init.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gab5f3e741743d1273f9b9219e7f3c6845" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MUSPOINTREF_NULL</definition>
+        <argsstring></argsstring>
+        <name>MUSPOINTREF_NULL</name>
+        <initializer>= LONG_MIN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="25" column="1" bodyfile="src/general/init.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga5fbff41194dc7e48cea03604b5d7a060" prot="public" static="no" mutable="no">
+        <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+        <definition>WeightDom CST_WEIGHT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>CST_WEIGHT_TYPE</name>
+        <initializer>= WeightDom::UNDEF</initializer>
+        <briefdescription>
+<para>weight type. value specified in grammar file or default value WeightDom::UNDEF </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="27" column="1" bodyfile="src/general/init.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga942f8553c6b44bf0ed10f6c167794e89" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long CST_MAX_GRACE</definition>
+        <argsstring></argsstring>
+        <name>CST_MAX_GRACE</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>max number of grace notes specified in grammar used for abstraction of terminal transition labels see Label.hpp value specified in grammar file or default 0 (there is no abstraction of labels) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="29" column="1" bodyfile="src/general/init.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga4f8704310ab1a776374c4103a70ee4ca" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CST_ALPHA</definition>
+        <argsstring></argsstring>
+        <name>CST_ALPHA</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+<para>coefficient for combining weight and distance in pernalty weight model </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="31" column="1" bodyfile="src/general/init.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gae30e96a43768e59d69b30739bca4b2a0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CST_SIGMA2</definition>
+        <argsstring></argsstring>
+        <name>CST_SIGMA2</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+<para>constant for computing performance weight see PerformanceModel.hpp </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="33" column="1" bodyfile="src/general/init.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga9ba08947d7e5ebba9df19496146a1bd4" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MAX_AR</definition>
+        <argsstring></argsstring>
+        <name>MAX_AR</name>
+        <initializer>= 13</initializer>
+        <briefdescription>
+<para>symbols for labeling RT and <ref refid="classWTA" kindref="compound">WTA</ref> terminal transitions max arity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="35" column="1" bodyfile="src/general/init.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gaa0818f0d579fa65f854f7540dab4d258" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CST_PRECISION</definition>
+        <argsstring></argsstring>
+        <name>CST_PRECISION</name>
+        <initializer>= 0.0000001</initializer>
+        <briefdescription>
+<para>precision for floting point unit calculations </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="37" column="1" bodyfile="src/general/init.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gae18ed995d696579fcc6018d8e9993e65" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long HASH_SEED</definition>
+        <argsstring></argsstring>
+        <name>HASH_SEED</name>
+        <initializer>= 1009</initializer>
+        <briefdescription>
+<para>hash function parameters Bernstein hash <ulink url="http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx">http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx</ulink> see also Josh Bloch, Effective Java see <ulink url="http://stackoverflow.com/a/1646913/126995">http://stackoverflow.com/a/1646913/126995</ulink> and also <ulink url="http://stackoverflow.com/questions/17016175">http://stackoverflow.com/questions/17016175</ulink> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>see also <ulink url="https://stackoverflow.com/a/1646913/6930643">https://stackoverflow.com/a/1646913/6930643</ulink> constexpr int HASH_SEED = 17; constexpr int HASH_FACTOR = 31; see also <ulink url="https://stackoverflow.com/a/34006336/6930643">https://stackoverflow.com/a/34006336/6930643</ulink> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="39" column="1" bodyfile="src/general/init.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga38297772685de12449644c49b20213d3" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long HASH_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>HASH_FACTOR</name>
+        <initializer>= 9176</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="40" column="1" bodyfile="src/general/init.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga75258703c393347e8c7af15041e0e7d2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OPT_RUN_DUR</definition>
+        <argsstring></argsstring>
+        <name>OPT_RUN_DUR</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>optimization flag compute the duration sequences of runs. if unset, OPT_RUN_UNIT must be automatically unset value specified in ini file or default: true </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="45" column="1" bodyfile="src/general/init.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gaf2f921cdceea999adbede3b238fbd924" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OPT_RUN_STRICT</definition>
+        <argsstring></argsstring>
+        <name>OPT_RUN_STRICT</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>optimization flag compute at most one best run for a duration sequence in each record. it is the first best run added, i.e. the best with that duration sequence. OPT_RUN_DUR must be set. value specified in ini file or default: false </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="47" column="1" bodyfile="src/general/init.cpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gaf43b37abf039bc3d2e67681387760de6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OPT_RUN_UNIT</definition>
+        <argsstring></argsstring>
+        <name>OPT_RUN_UNIT</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>optimization flag do not add non-terminal runs with duration sequences of the form [0…0, 1]. they correspond to reducible runs of the form p(x, _,…, _) where x is a leaf and _ is a continuation (tie). OPT_RUN_DUR must be set. value specified in ini file or default: true </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="49" column="1" bodyfile="src/general/init.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1ga4445e6f07c267b6c601d33f1bf23ad2c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OPT_NOREST</definition>
+        <argsstring></argsstring>
+        <name>OPT_NOREST</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>option flag ignore rests in MIDI input file where a rest is the duration between a note off and the next note on msg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="51" column="1" bodyfile="src/general/init.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__general_1ga8ea30422b6f53a4d8e502ab0a1406dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double duration</definition>
+        <argsstring>(clock_t start)</argsstring>
+        <name>duration</name>
+        <param>
+          <type>clock_t</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="14" column="1" bodyfile="src/general/init.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1gaef0eb8293c9f09a03e431fa23dea831d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_config</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>read_config</name>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>read the constant and optimisation flag values in a config file INI file, see <ulink url="https://en.wikipedia.org/wiki/INI_file">https://en.wikipedia.org/wiki/INI_file</ulink> return 0 if reading the values succeded -1 in case of file open error or a number of line in case of parse error in .ini file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="53" column="1" bodyfile="src/general/init.cpp" bodystart="53" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__general_1ga7a50522782b1a61b37d5f1b3adceed4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const WeightDom &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/init.cpp" line="86" column="1" bodyfile="src/general/init.cpp" bodystart="86" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/general/init.cpp"/>
+  </compounddef>
+</doxygen>

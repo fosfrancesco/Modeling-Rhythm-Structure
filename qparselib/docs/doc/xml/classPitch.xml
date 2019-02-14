@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classPitch" kind="class" language="C++" prot="public">
+    <compoundname>Pitch</compoundname>
+    <includes local="no">Pitch.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classPitch_1ae72a31f8d047b4b6fa468714f7588a4b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PitchUnit</name>
+        <enumvalue id="classPitch_1ae72a31f8d047b4b6fa468714f7588a4ba39f3012d8362f2ad4acdc1f68c535076" prot="public">
+          <name>MIDI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPitch_1ae72a31f8d047b4b6fa468714f7588a4ba1fa65223ca31a69213d29a04c46952f2" prot="public">
+          <name>MIDICENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="30" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="group__segment_1ga8193b78df3a269acf7296393a522aafc" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pitch::UNDEF_MIDICENT</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_MIDICENT</name>
+        <initializer>= 12800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="32" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga8222a08cf48e372acab91765b3635ec5" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char Pitch::UNDEF_NOTE_NAME</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_NAME</name>
+        <initializer>= &apos;X&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="33" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1gad2dfc170c7179a5e8d1320edcbdf39ff" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Pitch::UNDEF_NOTE_OCTAVE</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_OCTAVE</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="34" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga34db231ac148899756f4a87f8d84f15f" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Pitch::UNDEF_NOTE_ALTERATION</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_ALTERATION</name>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="35" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPitch_1a7a7649ed78c05c1ff5f77c69155f1a71" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Pitch::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>note name betwen &apos;A&apos; and &apos;G&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="71" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPitch_1a6df5b9a06778d903d95924f122dc8783" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Pitch::alteration</definition>
+        <argsstring></argsstring>
+        <name>alteration</name>
+        <briefdescription>
+<para>alteration in [-2, 2] where 1.0 is half tone. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="74" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPitch_1a3ed3edd50bc2bfa0e1d5c63df4dc6c7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pitch::octave</definition>
+        <argsstring></argsstring>
+        <name>octave</name>
+        <briefdescription>
+<para>octave in -10..10. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="77" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPitch_1a29056b73c00279c6ce70933aff539ab5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::_midi</definition>
+        <argsstring></argsstring>
+        <name>_midi</name>
+        <briefdescription>
+<para>in MIDI cent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="81" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="group__segment_1ga5096d2f0d873c3825dad21b734a99e02" prot="private" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char Pitch::NAMES</definition>
+        <argsstring>[12]</argsstring>
+        <name>NAMES</name>
+        <initializer>=
+{&apos;C&apos;, &apos;C&apos;, &apos;D&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;F&apos;, &apos;G&apos;, &apos;G&apos;, &apos;A&apos;, &apos;A&apos;, &apos;B&apos;}</initializer>
+        <briefdescription>
+<para>conversion MIDI to note names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="84" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1gac19e464fedd1619012e5258348b55e3d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Pitch::SHARP</definition>
+        <argsstring>[12]</argsstring>
+        <name>SHARP</name>
+        <initializer>=
+{ 0 ,  1 ,  0 ,  1 ,  0 ,  0 ,  1 ,  0 ,  1 ,  0 ,  1 ,  0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="85" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1ga09a5f5040f1902afa6d81520cf7bd084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>()</argsstring>
+        <name>Pitch</name>
+        <briefdescription>
+<para>undef pitch value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="38" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf3f9d88915bb6688d522f09d7542f690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(char name, float alt=0.0, int oct=0)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>char</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alt</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>oct</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>construct pitch from name+alteration+octave. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see table NAMES in constant.h </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in [-2, 2] where 1.0 is half tone </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in -10..10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="44" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaace1762f4d975560a8d739d2d13fcd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(unsigned int pitch, PitchUnit u=MIDI)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>PitchUnit</type>
+          <declname>u</declname>
+          <defval>MIDI</defval>
+        </param>
+        <briefdescription>
+<para>construct note from MIDI pitch </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in 0..127 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="50" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="48" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gafb10e8f7a064ee15f75e4ba5609c682b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::Pitch</definition>
+        <argsstring>(const Pitch &amp;)</argsstring>
+        <name>Pitch</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="52" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classPitch_1a9a592ab90f8d3ab7a5edb5b3a2de2784" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Pitch::~Pitch</definition>
+        <argsstring>()</argsstring>
+        <name>~Pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="54" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga738dc72ab88cf6a09d89338e4f1d4b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+        <definition>Pitch &amp; Pitch::operator=</definition>
+        <argsstring>(const Pitch &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="56" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gab361cf1a2c8b9dca6e5abd8069e2d81d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pitch::operator==</definition>
+        <argsstring>(const Pitch &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="58" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classPitch_1a3d0bc9b824e12c9036b238c52a1ce16f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pitch::undef</definition>
+        <argsstring>() const</argsstring>
+        <name>undef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="60" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classPitch_1aa574b5a09e7eb950903e217ca843f5d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::midicent</definition>
+        <argsstring>() const</argsstring>
+        <name>midicent</name>
+        <briefdescription>
+<para>value in MIDIcent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="63" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classPitch_1adee54af3f8f7dccc618a5bd585b43dad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::midi</definition>
+        <argsstring>() const</argsstring>
+        <name>midi</name>
+        <briefdescription>
+<para>value in MIDI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="66" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classPitch_1ae9c4c4f6656355cc6d8ee538d2441a58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Pitch &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classPitch" kindref="compound">Pitch</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="68" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="142" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="group__segment_1ga507b693a51dd2d626dc3cf42e7d93d99" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Pitch::midi_to_name</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_name</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="87" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="90" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga45a060956b0a13178b4a2e987597ab95" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Pitch::midi_to_alt</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_alt</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="88" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gade0788e4c49153b64197dce1203744ae" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pitch::midi_to_oct</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>midi_to_oct</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="89" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga18ee1055465d12e1b9778a4c625cc850" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::name_to_midi</definition>
+        <argsstring>(char, float, int)</argsstring>
+        <name>name_to_midi</name>
+        <param>
+          <type>char</type>
+          <defname>n</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <defname>alt</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>oct</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="90" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="126" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaa706b7d526d2ccb75c03c202dcd54e5c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pitch::name_to_int</definition>
+        <argsstring>(char)</argsstring>
+        <name>name_to_int</name>
+        <param>
+          <type>char</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Pitch.hpp" line="91" column="1" bodyfile="src/segment/Pitch.cpp" bodystart="114" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>internal representation of a pitch value. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>can be unknown value <xrefsect id="todo_1_todo000027"><xreftitle>Todo</xreftitle><xrefdescription><para>extend conversions to MIDIcent (import OM) </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <location file="src/segment/Pitch.hpp" line="28" column="1" bodyfile="src/segment/Pitch.hpp" bodystart="27" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classPitch_1a29056b73c00279c6ce70933aff539ab5" prot="private" virt="non-virtual"><scope>Pitch</scope><name>_midi</name></member>
+      <member refid="classPitch_1a6df5b9a06778d903d95924f122dc8783" prot="public" virt="non-virtual"><scope>Pitch</scope><name>alteration</name></member>
+      <member refid="classPitch_1adee54af3f8f7dccc618a5bd585b43dad" prot="public" virt="non-virtual"><scope>Pitch</scope><name>midi</name></member>
+      <member refid="classPitch_1ae72a31f8d047b4b6fa468714f7588a4ba39f3012d8362f2ad4acdc1f68c535076" prot="public" virt="non-virtual"><scope>Pitch</scope><name>MIDI</name></member>
+      <member refid="group__segment_1ga45a060956b0a13178b4a2e987597ab95" prot="private" virt="non-virtual"><scope>Pitch</scope><name>midi_to_alt</name></member>
+      <member refid="group__segment_1ga507b693a51dd2d626dc3cf42e7d93d99" prot="private" virt="non-virtual"><scope>Pitch</scope><name>midi_to_name</name></member>
+      <member refid="group__segment_1gade0788e4c49153b64197dce1203744ae" prot="private" virt="non-virtual"><scope>Pitch</scope><name>midi_to_oct</name></member>
+      <member refid="classPitch_1aa574b5a09e7eb950903e217ca843f5d3" prot="public" virt="non-virtual"><scope>Pitch</scope><name>midicent</name></member>
+      <member refid="classPitch_1ae72a31f8d047b4b6fa468714f7588a4ba1fa65223ca31a69213d29a04c46952f2" prot="public" virt="non-virtual"><scope>Pitch</scope><name>MIDICENT</name></member>
+      <member refid="classPitch_1a7a7649ed78c05c1ff5f77c69155f1a71" prot="public" virt="non-virtual"><scope>Pitch</scope><name>name</name></member>
+      <member refid="group__segment_1gaa706b7d526d2ccb75c03c202dcd54e5c" prot="private" virt="non-virtual"><scope>Pitch</scope><name>name_to_int</name></member>
+      <member refid="group__segment_1ga18ee1055465d12e1b9778a4c625cc850" prot="private" virt="non-virtual"><scope>Pitch</scope><name>name_to_midi</name></member>
+      <member refid="group__segment_1ga5096d2f0d873c3825dad21b734a99e02" prot="private" virt="non-virtual"><scope>Pitch</scope><name>NAMES</name></member>
+      <member refid="classPitch_1a3ed3edd50bc2bfa0e1d5c63df4dc6c7a" prot="public" virt="non-virtual"><scope>Pitch</scope><name>octave</name></member>
+      <member refid="classPitch_1ae9c4c4f6656355cc6d8ee538d2441a58" prot="public" virt="non-virtual"><scope>Pitch</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga738dc72ab88cf6a09d89338e4f1d4b91" prot="public" virt="non-virtual"><scope>Pitch</scope><name>operator=</name></member>
+      <member refid="group__segment_1gab361cf1a2c8b9dca6e5abd8069e2d81d" prot="public" virt="non-virtual"><scope>Pitch</scope><name>operator==</name></member>
+      <member refid="group__segment_1ga09a5f5040f1902afa6d81520cf7bd084" prot="public" virt="non-virtual"><scope>Pitch</scope><name>Pitch</name></member>
+      <member refid="group__segment_1gaf3f9d88915bb6688d522f09d7542f690" prot="public" virt="non-virtual"><scope>Pitch</scope><name>Pitch</name></member>
+      <member refid="group__segment_1gaace1762f4d975560a8d739d2d13fcd9b" prot="public" virt="non-virtual"><scope>Pitch</scope><name>Pitch</name></member>
+      <member refid="group__segment_1gafb10e8f7a064ee15f75e4ba5609c682b" prot="public" virt="non-virtual"><scope>Pitch</scope><name>Pitch</name></member>
+      <member refid="classPitch_1ae72a31f8d047b4b6fa468714f7588a4b" prot="public" virt="non-virtual"><scope>Pitch</scope><name>PitchUnit</name></member>
+      <member refid="group__segment_1gac19e464fedd1619012e5258348b55e3d" prot="private" virt="non-virtual"><scope>Pitch</scope><name>SHARP</name></member>
+      <member refid="classPitch_1a3d0bc9b824e12c9036b238c52a1ce16f" prot="public" virt="non-virtual"><scope>Pitch</scope><name>undef</name></member>
+      <member refid="group__segment_1ga8193b78df3a269acf7296393a522aafc" prot="public" virt="non-virtual"><scope>Pitch</scope><name>UNDEF_MIDICENT</name></member>
+      <member refid="group__segment_1ga34db231ac148899756f4a87f8d84f15f" prot="public" virt="non-virtual"><scope>Pitch</scope><name>UNDEF_NOTE_ALTERATION</name></member>
+      <member refid="group__segment_1ga8222a08cf48e372acab91765b3635ec5" prot="public" virt="non-virtual"><scope>Pitch</scope><name>UNDEF_NOTE_NAME</name></member>
+      <member refid="group__segment_1gad2dfc170c7179a5e8d1320edcbdf39ff" prot="public" virt="non-virtual"><scope>Pitch</scope><name>UNDEF_NOTE_OCTAVE</name></member>
+      <member refid="classPitch_1a9a592ab90f8d3ab7a5edb5b3a2de2784" prot="public" virt="non-virtual"><scope>Pitch</scope><name>~Pitch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

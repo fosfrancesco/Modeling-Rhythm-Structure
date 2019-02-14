@@ -1,0 +1,60 @@
+\hypertarget{classComboState}{}\section{Combo\+State Class Reference}
+\label{classComboState}\index{ComboState@{ComboState}}
+
+
+tmp state structure for construction of \mbox{\hyperlink{classComboWTA}{Combo\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) and an input segment casted into state\+\_\+t after construction  
+
+
+
+
+{\ttfamily \#include $<$Combo\+W\+T\+A.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combo\+State} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$)
+\item 
+{\bfseries Combo\+State} (state\+\_\+t, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rp=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rr=0)
+\item 
+\mbox{\hyperlink{group__schemata_gad80378e34fdc145bd7f0dac17c306e39}{Combo\+State}} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rp=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} rr=0)
+\item 
+bool {\bfseries compatible} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} label) const
+\item 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&s) const
+\item 
+bool \mbox{\hyperlink{group__schemata_ga505e9ff93681bbfe5632a15708facb63}{operator$<$}} (const \mbox{\hyperlink{classComboState}{Combo\+State}} \&s) const
+\begin{DoxyCompactList}\small\item\em lexicographic comparison on hash value (array\mbox{[}5\mbox{]}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboState_a2b079a791c60d80762ac637b520fc17c}\label{classComboState_a2b079a791c60d80762ac637b520fc17c}} 
+state\+\_\+t \mbox{\hyperlink{classComboState_a2b079a791c60d80762ac637b520fc17c}{cs\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em state of base schema. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classComboState_a12b750a5d435968342c756dd5ae08777}\label{classComboState_a12b750a5d435968342c756dd5ae08777}} 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{classComboState_a12b750a5d435968342c756dd5ae08777}{cs\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em current augmented path (interval of points + alignment of input segment) share\+: in add\+Combo\+State many \mbox{\hyperlink{classComboState}{Combo\+State}} constructed with the same cs\+\_\+path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classComboState_a22b317fc2ff9848dd35a232da73df5f9}\label{classComboState_a22b317fc2ff9848dd35a232da73df5f9}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{classComboState_a22b317fc2ff9848dd35a232da73df5f9}{cs\+\_\+pre}}
+\begin{DoxyCompactList}\small\item\em guess number of points aligned to right of previous segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classComboState_adda67e672871773210ed90e6f60d6752}\label{classComboState_adda67e672871773210ed90e6f60d6752}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{classComboState_adda67e672871773210ed90e6f60d6752}{cs\+\_\+post}}
+\begin{DoxyCompactList}\small\item\em guess number of points aligned to right of current segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboState_a1fb7d424915082b80a6be103a22cb75e}\label{classComboState_a1fb7d424915082b80a6be103a22cb75e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classComboState}{Combo\+State}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+tmp state structure for construction of \mbox{\hyperlink{classComboWTA}{Combo\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) and an input segment casted into state\+\_\+t after construction 
+
+label (for leaves)\+: see \mbox{\hyperlink{classWTA}{W\+TA}} = continuation or number of note + grace notes at left of the current path
+
+states (q\+:int, p\+:Path, rp\+:int list, rr\+:int list) ou label (feuille) q\+: state of base schema p\+: current path (interval of points in input segment) rp\+: guess number of points aligned to right of previous segment rr\+: guess number of points aligned to right of current segment 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/Combo\+W\+T\+A.\+hpp\item 
+src/schemata/Combo\+W\+T\+A.\+cpp\end{DoxyCompactItemize}

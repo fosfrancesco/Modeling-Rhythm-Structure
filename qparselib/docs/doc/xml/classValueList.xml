@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classValueList" kind="class" language="C++" prot="public">
+    <compoundname>ValueList</compoundname>
+    <includes local="no">ValueList.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classValueList_1ac2b4a94933f9bce2e3d22e24f3241b5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class DurationTree</definition>
+        <argsstring></argsstring>
+        <name>DurationTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="42" column="1" bodyfile="src/output/ValueList.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classValueList_1a4fe20efc2fe57b6157614981454150ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const ValueList &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>l</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="121" column="1" bodyfile="src/output/ValueList.cpp" bodystart="236" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="friend" id="classValueList_1aef2098e53ce9107c6e32d151864b69ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const ValueList &amp;, const ValueList &amp;)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>lhs</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="123" column="1" bodyfile="src/output/ValueList.hpp" bodystart="177" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="friend" id="classValueList_1ac02c266a581148fe8a09a49d0ac6b161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const ValueList &amp;, const ValueList &amp;)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>lhs</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="124" column="1" bodyfile="src/output/ValueList.hpp" bodystart="203" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classValueList_1af66edb57f8965f572cf5a594b4fcb92e" prot="private" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::_continuation</definition>
+        <argsstring></argsstring>
+        <name>_continuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="130" column="1" bodyfile="src/output/ValueList.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueList_1a5e568390b69a6f7f392c0f20151868f5" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="classRational" kindref="compound">Rational</ref> &gt;</type>
+        <definition>std::list&lt;Rational&gt; ValueList::_main</definition>
+        <argsstring></argsstring>
+        <name>_main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="133" column="1" bodyfile="src/output/ValueList.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueList_1ab78c0a72a9ef408308afadb05cfa9033" prot="private" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::_length</definition>
+        <argsstring></argsstring>
+        <name>_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="136" column="1" bodyfile="src/output/ValueList.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueList_1aad2823e99fc3d37de40476f53f77f88e" prot="private" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::_accu</definition>
+        <argsstring></argsstring>
+        <name>_accu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="139" column="1" bodyfile="src/output/ValueList.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueList_1add8e52462bed4ebb7f4aba069e978c38" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ValueList::_nbevt</definition>
+        <argsstring></argsstring>
+        <name>_nbevt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="142" column="1" bodyfile="src/output/ValueList.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueList_1a69772d2813e7b800bdaf6077d67f1a13" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ValueList::_nbgn</definition>
+        <argsstring></argsstring>
+        <name>_nbgn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="145" column="1" bodyfile="src/output/ValueList.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1ga187d1dfe0e942d18f1e2c3150e9aa185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>len</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="47" column="1" bodyfile="src/output/ValueList.cpp" bodystart="16" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaec135d71a5c51579bec52c805c0b3ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(const DurationList &amp;)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>dl</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="49" column="1" bodyfile="src/output/ValueList.cpp" bodystart="72" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabd7a0aa8113f72c13205c0702eb269ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(const ValueList &amp;)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="51" column="1" bodyfile="src/output/ValueList.cpp" bodystart="95" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad518d3f6ddf7fb7b74275eef20205893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>std::string</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="58" column="1" bodyfile="src/output/ValueList.cpp" bodystart="29" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1ae604218dbae6c1bc0c9675960be5af5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::~ValueList</definition>
+        <argsstring>()</argsstring>
+        <name>~ValueList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="60" column="1" bodyfile="src/output/ValueList.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab09ac2a5e83e806431634ddd87f596fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+        <definition>ValueList &amp; ValueList::operator=</definition>
+        <argsstring>(const ValueList &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="62" column="1" bodyfile="src/output/ValueList.cpp" bodystart="109" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7510db734db466464100413728db233c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="64" column="1" bodyfile="src/output/ValueList.cpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1a21c3cca5483e25f27cadb7ae82d2dd96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ValueList::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="66" column="1" bodyfile="src/output/ValueList.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1a1a24053a2e70a12da2af6680b594d03b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="68" column="1" bodyfile="src/output/ValueList.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1a3d7f406dd34ed78e0f12324075ee2c8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::cont</definition>
+        <argsstring>() const</argsstring>
+        <name>cont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="70" column="1" bodyfile="src/output/ValueList.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1af5e02ab5d58c4c9196a23473d55e7ae9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; <ref refid="classRational" kindref="compound">Rational</ref> &gt;::const_iterator</type>
+        <definition>std::list&lt;Rational&gt;::const_iterator ValueList::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="72" column="1" bodyfile="src/output/ValueList.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1abd03430257070988728b597fa1467353" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; <ref refid="classRational" kindref="compound">Rational</ref> &gt;::const_iterator</type>
+        <definition>std::list&lt;Rational&gt;::const_iterator ValueList::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="73" column="1" bodyfile="src/output/ValueList.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2ebf6a43ad145e4593cc961a4016f330" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::complete</definition>
+        <argsstring>() const</argsstring>
+        <name>complete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="75" column="1" bodyfile="src/output/ValueList.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9d68ca01f81000f92f1c8911cbd414da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::single_continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>single_continuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="78" column="1" bodyfile="src/output/ValueList.cpp" bodystart="142" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga699183ea1d3babeb7c2c094e31e7070f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>single_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="81" column="1" bodyfile="src/output/ValueList.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaff6e5912f71832597303efe0093d5d00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::event</definition>
+        <argsstring>() const</argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="86" column="1" bodyfile="src/output/ValueList.cpp" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueList_1a502abe52ee55ed7616fcfadfa4f1e070" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ValueList::nbgn</definition>
+        <argsstring>() const</argsstring>
+        <name>nbgn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="90" column="1" bodyfile="src/output/ValueList.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9078b4e45f9864eec53bbfa68d7709d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::add</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="95" column="1" bodyfile="src/output/ValueList.cpp" bodystart="163" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaeb6d26ee1813f879c07148df644a5321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::addcont</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>addcont</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="100" column="1" bodyfile="src/output/ValueList.cpp" bodystart="179" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga282fe7cbc28917f2b096d2183419a30c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="104" column="1" bodyfile="src/output/ValueList.cpp" bodystart="191" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9d5ccdd934a0715c597650fd8cd8d5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="110" column="1" bodyfile="src/output/ValueList.cpp" bodystart="200" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga77bf4e64e28ee7a3bd2989ffe25f7fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::popcont</definition>
+        <argsstring>()</argsstring>
+        <name>popcont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="114" column="1" bodyfile="src/output/ValueList.cpp" bodystart="217" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7802d98c6ad4e622847be23fbaa6cbea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::popcont</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>popcont</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="118" column="1" bodyfile="src/output/ValueList.cpp" bodystart="228" bodyend="233"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>list of rational durations as components of value states. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each duration is either positive (event w or wo continuations -ties) or null (grace note).</para>
+<para>a value list is made of 2 parts:<itemizedlist>
+<listitem><para>_cont : initial duration (possibly null) tied to the previous duration list</para>
+</listitem><listitem><para>_main : main list of the other events (without ties) it is represented by _cont[_main] </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="src/output/ValueList.hpp" line="41" column="1" bodyfile="src/output/ValueList.hpp" bodystart="40" bodyend="147"/>
+    <listofallmembers>
+      <member refid="classValueList_1aad2823e99fc3d37de40476f53f77f88e" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_accu</name></member>
+      <member refid="classValueList_1af66edb57f8965f572cf5a594b4fcb92e" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_continuation</name></member>
+      <member refid="classValueList_1ab78c0a72a9ef408308afadb05cfa9033" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_length</name></member>
+      <member refid="classValueList_1a5e568390b69a6f7f392c0f20151868f5" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_main</name></member>
+      <member refid="classValueList_1add8e52462bed4ebb7f4aba069e978c38" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_nbevt</name></member>
+      <member refid="classValueList_1a69772d2813e7b800bdaf6077d67f1a13" prot="private" virt="non-virtual"><scope>ValueList</scope><name>_nbgn</name></member>
+      <member refid="group__output_1ga9078b4e45f9864eec53bbfa68d7709d0" prot="public" virt="non-virtual"><scope>ValueList</scope><name>add</name></member>
+      <member refid="group__output_1gaeb6d26ee1813f879c07148df644a5321" prot="public" virt="non-virtual"><scope>ValueList</scope><name>addcont</name></member>
+      <member refid="classValueList_1af5e02ab5d58c4c9196a23473d55e7ae9" prot="public" virt="non-virtual"><scope>ValueList</scope><name>begin</name></member>
+      <member refid="group__output_1ga2ebf6a43ad145e4593cc961a4016f330" prot="public" virt="non-virtual"><scope>ValueList</scope><name>complete</name></member>
+      <member refid="classValueList_1a3d7f406dd34ed78e0f12324075ee2c8b" prot="public" virt="non-virtual"><scope>ValueList</scope><name>cont</name></member>
+      <member refid="classValueList_1ac2b4a94933f9bce2e3d22e24f3241b5c" prot="private" virt="non-virtual"><scope>ValueList</scope><name>DurationTree</name></member>
+      <member refid="group__output_1ga7510db734db466464100413728db233c" prot="public" virt="non-virtual"><scope>ValueList</scope><name>empty</name></member>
+      <member refid="classValueList_1abd03430257070988728b597fa1467353" prot="public" virt="non-virtual"><scope>ValueList</scope><name>end</name></member>
+      <member refid="group__output_1gaff6e5912f71832597303efe0093d5d00" prot="public" virt="non-virtual"><scope>ValueList</scope><name>event</name></member>
+      <member refid="group__output_1ga282fe7cbc28917f2b096d2183419a30c" prot="public" virt="non-virtual"><scope>ValueList</scope><name>front</name></member>
+      <member refid="classValueList_1a1a24053a2e70a12da2af6680b594d03b" prot="public" virt="non-virtual"><scope>ValueList</scope><name>length</name></member>
+      <member refid="classValueList_1a502abe52ee55ed7616fcfadfa4f1e070" prot="public" virt="non-virtual"><scope>ValueList</scope><name>nbgn</name></member>
+      <member refid="classValueList_1ac02c266a581148fe8a09a49d0ac6b161" prot="public" virt="non-virtual"><scope>ValueList</scope><name>operator!=</name></member>
+      <member refid="classValueList_1a4fe20efc2fe57b6157614981454150ce" prot="public" virt="non-virtual"><scope>ValueList</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__output_1gab09ac2a5e83e806431634ddd87f596fc" prot="public" virt="non-virtual"><scope>ValueList</scope><name>operator=</name></member>
+      <member refid="classValueList_1aef2098e53ce9107c6e32d151864b69ad" prot="public" virt="non-virtual"><scope>ValueList</scope><name>operator==</name></member>
+      <member refid="group__output_1ga9d5ccdd934a0715c597650fd8cd8d5ed" prot="public" virt="non-virtual"><scope>ValueList</scope><name>pop</name></member>
+      <member refid="group__output_1ga77bf4e64e28ee7a3bd2989ffe25f7fc9" prot="public" virt="non-virtual"><scope>ValueList</scope><name>popcont</name></member>
+      <member refid="group__output_1ga7802d98c6ad4e622847be23fbaa6cbea" prot="public" virt="non-virtual"><scope>ValueList</scope><name>popcont</name></member>
+      <member refid="group__output_1ga9d68ca01f81000f92f1c8911cbd414da" prot="public" virt="non-virtual"><scope>ValueList</scope><name>single_continuation</name></member>
+      <member refid="group__output_1ga699183ea1d3babeb7c2c094e31e7070f" prot="public" virt="non-virtual"><scope>ValueList</scope><name>single_event</name></member>
+      <member refid="classValueList_1a21c3cca5483e25f27cadb7ae82d2dd96" prot="public" virt="non-virtual"><scope>ValueList</scope><name>size</name></member>
+      <member refid="group__output_1ga187d1dfe0e942d18f1e2c3150e9aa185" prot="public" virt="non-virtual"><scope>ValueList</scope><name>ValueList</name></member>
+      <member refid="group__output_1gaec135d71a5c51579bec52c805c0b3ded" prot="public" virt="non-virtual"><scope>ValueList</scope><name>ValueList</name></member>
+      <member refid="group__output_1gabd7a0aa8113f72c13205c0702eb269ff" prot="public" virt="non-virtual"><scope>ValueList</scope><name>ValueList</name></member>
+      <member refid="group__output_1gad518d3f6ddf7fb7b74275eef20205893" prot="public" virt="non-virtual"><scope>ValueList</scope><name>ValueList</name></member>
+      <member refid="classValueList_1ae604218dbae6c1bc0c9675960be5af5d" prot="public" virt="non-virtual"><scope>ValueList</scope><name>~ValueList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classInterval" kind="class" language="C++" prot="public">
+    <compoundname>Interval</compoundname>
+    <derivedcompoundref refid="classAlignedInterval" prot="public" virt="non-virtual">AlignedInterval</derivedcompoundref>
+    <includes local="no">Interval.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classInterval_1ac157527bf2349e36ef2475096d268e4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class IntervalHeap</definition>
+        <argsstring></argsstring>
+        <name>IntervalHeap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="31" column="1" bodyfile="src/segment/Interval.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classInterval_1a2a9316899a6c2145d014e08437ee72d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Interval &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="116" column="1" bodyfile="src/segment/Interval.cpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classInterval_1a6c8385bc5875cb761827f9e75f783834" prot="public" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational Interval::mbegin</definition>
+        <argsstring></argsstring>
+        <name>mbegin</name>
+        <briefdescription>
+<para>musical-time start. starting date of interval, in musical-time (number of bars) relatively (shift) to current bar start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="83" column="1" bodyfile="src/segment/Interval.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInterval_1a963b9b36f085a7db9c159c55608f8408" prot="public" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational Interval::mend</definition>
+        <argsstring></argsstring>
+        <name>mend</name>
+        <briefdescription>
+<para>musical-time end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ending date of interval, in musical-time (number of bars) relatively (shift) to current bar start.</para>
+<para>0 for meta interval (in this case begin must be 0).</para>
+<para><simplesect kind="warning"><para>must be &gt;= begin. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="93" column="1" bodyfile="src/segment/Interval.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInterval_1aa17f339b42a23f6afc188971e7003d84" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interval::rbegin</definition>
+        <argsstring></argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+<para>real-time start. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>starting date of interval, in real-time (seconds) i.e. real-time date aligned with the musical date bars + begin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="102" column="1" bodyfile="src/segment/Interval.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInterval_1a1acb3128311a318b23e68cc8ca0182e9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interval::rend</definition>
+        <argsstring></argsstring>
+        <name>rend</name>
+        <briefdescription>
+<para>real-time end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ending date of interval, in real-time (seconds) i.e. real date aligned with he musical date bars + end. must be &gt; rbegin. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="109" column="1" bodyfile="src/segment/Interval.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1gadfaf31fca3f5e5da49e37c7baa275125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const InputSegment *s, Rational mend=Rational(1))</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+<para>top interval constructed from an input segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classInterval" kindref="compound">Interval</ref> covering the whole length of the given input segment s with given musical time length (number of bars) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="41" column="1" bodyfile="src/segment/Interval.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga17cfcca410ae94fe906dfcdb726026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const Interval &amp;)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="62" column="1" bodyfile="src/segment/Interval.cpp" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga43e7da7f24dfa17fccdd0dd40a96f458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(Interval *)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type><ref refid="classInterval" kindref="compound">Interval</ref> *</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>used for copy of downcasted <ref refid="classIntervalTree" kindref="compound">IntervalTree</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="65" column="1" bodyfile="src/segment/Interval.cpp" bodystart="75" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classInterval_1a923e1717a3dedfe1ba90f81fcb26d5c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Interval::~Interval</definition>
+        <argsstring>()</argsstring>
+        <name>~Interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not deallocate the segment here. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="68" column="1" bodyfile="src/segment/Interval.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga6508f58e15c54be6146d5505d91a4b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+        <definition>Interval &amp; Interval::operator=</definition>
+        <argsstring>(const Interval &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="70" column="1" bodyfile="src/segment/Interval.cpp" bodystart="114" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga4b0896bf3843fec18d68a130fe9a49f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Interval::operator==</definition>
+        <argsstring>(const Interval &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classInterval" kindref="compound">Interval</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>for using <ref refid="classInterval" kindref="compound">Interval</ref> as key in map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="73" column="1" bodyfile="src/segment/Interval.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classInterval_1aaed8b0e404390af39c51e657636bf14d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational Interval::mduration</definition>
+        <argsstring>() const</argsstring>
+        <name>mduration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="95" column="1" bodyfile="src/segment/Interval.hpp" bodystart="95" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classInterval_1afbb05608fd0b263d905a29480e921b75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interval::rduration</definition>
+        <argsstring>() const</argsstring>
+        <name>rduration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="111" column="1" bodyfile="src/segment/Interval.hpp" bodystart="111" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga3af4cc83b5ee3d320fa5b24fa244fabb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::insideBar</definition>
+        <argsstring>() const</argsstring>
+        <name>insideBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="114" column="1" bodyfile="src/segment/Interval.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__segment_1gaefc21b7c838661c05286304f6d891690" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interval::Interval</definition>
+        <argsstring>(const InputSegment *s, Rational mbeg, Rational mend, double rbeg, double rend)</argsstring>
+        <name>Interval</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mbeg</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rbeg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rend</declname>
+        </param>
+        <briefdescription>
+<para>build an interval with musical-time bounds [mbegin, mbegin+mdur[ and real-time bounds [rbegin, rbegin+rdur[ for the input segment s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>not aligned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="126" column="1" bodyfile="src/segment/Interval.cpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__segment_1ga29a886b3ca41b923ffe9c1a291973dc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::sanity_check</definition>
+        <argsstring>(const InputSegment *)</argsstring>
+        <name>sanity_check</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="131" column="1" bodyfile="src/segment/Interval.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga04dee911c27559f22144e1ab329550df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interval::sanity_check</definition>
+        <argsstring>()</argsstring>
+        <name>sanity_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Interval.hpp" line="132" column="1" bodyfile="src/segment/Interval.cpp" bodystart="86" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>an <ref refid="classInterval" kindref="compound">Interval</ref> in an input segment with realtime bounds (seconds) and musical bounds (fraction of bars). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="133">
+        <label>Interval</label>
+        <link refid="classInterval"/>
+      </node>
+      <node id="134">
+        <label>AlignedInterval</label>
+        <link refid="classAlignedInterval"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>IntervalTree</label>
+        <link refid="classIntervalTree"/>
+        <childnode refid="134" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="136">
+        <label>Interval</label>
+        <link refid="classInterval"/>
+        <childnode refid="137" relation="usage">
+          <edgelabel>mbegin</edgelabel>
+          <edgelabel>mend</edgelabel>
+        </childnode>
+      </node>
+      <node id="137">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/Interval.hpp" line="30" column="1" bodyfile="src/segment/Interval.hpp" bodystart="29" bodyend="134"/>
+    <listofallmembers>
+      <member refid="group__segment_1ga3af4cc83b5ee3d320fa5b24fa244fabb" prot="public" virt="non-virtual"><scope>Interval</scope><name>insideBar</name></member>
+      <member refid="group__segment_1gadfaf31fca3f5e5da49e37c7baa275125" prot="public" virt="non-virtual"><scope>Interval</scope><name>Interval</name></member>
+      <member refid="group__segment_1ga17cfcca410ae94fe906dfcdb726026f5" prot="public" virt="non-virtual"><scope>Interval</scope><name>Interval</name></member>
+      <member refid="group__segment_1ga43e7da7f24dfa17fccdd0dd40a96f458" prot="public" virt="non-virtual"><scope>Interval</scope><name>Interval</name></member>
+      <member refid="group__segment_1gaefc21b7c838661c05286304f6d891690" prot="protected" virt="non-virtual"><scope>Interval</scope><name>Interval</name></member>
+      <member refid="classInterval_1ac157527bf2349e36ef2475096d268e4e" prot="private" virt="non-virtual"><scope>Interval</scope><name>IntervalHeap</name></member>
+      <member refid="classInterval_1a6c8385bc5875cb761827f9e75f783834" prot="public" virt="non-virtual"><scope>Interval</scope><name>mbegin</name></member>
+      <member refid="classInterval_1aaed8b0e404390af39c51e657636bf14d" prot="public" virt="non-virtual"><scope>Interval</scope><name>mduration</name></member>
+      <member refid="classInterval_1a963b9b36f085a7db9c159c55608f8408" prot="public" virt="non-virtual"><scope>Interval</scope><name>mend</name></member>
+      <member refid="classInterval_1a2a9316899a6c2145d014e08437ee72d7" prot="public" virt="non-virtual"><scope>Interval</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga6508f58e15c54be6146d5505d91a4b91" prot="public" virt="virtual"><scope>Interval</scope><name>operator=</name></member>
+      <member refid="group__segment_1ga4b0896bf3843fec18d68a130fe9a49f6" prot="public" virt="virtual"><scope>Interval</scope><name>operator==</name></member>
+      <member refid="classInterval_1aa17f339b42a23f6afc188971e7003d84" prot="public" virt="non-virtual"><scope>Interval</scope><name>rbegin</name></member>
+      <member refid="classInterval_1afbb05608fd0b263d905a29480e921b75" prot="public" virt="non-virtual"><scope>Interval</scope><name>rduration</name></member>
+      <member refid="classInterval_1a1acb3128311a318b23e68cc8ca0182e9" prot="public" virt="non-virtual"><scope>Interval</scope><name>rend</name></member>
+      <member refid="group__segment_1ga29a886b3ca41b923ffe9c1a291973dc9" prot="private" virt="non-virtual"><scope>Interval</scope><name>sanity_check</name></member>
+      <member refid="group__segment_1ga04dee911c27559f22144e1ab329550df" prot="private" virt="non-virtual"><scope>Interval</scope><name>sanity_check</name></member>
+      <member refid="classInterval_1a923e1717a3dedfe1ba90f81fcb26d5c5" prot="public" virt="non-virtual"><scope>Interval</scope><name>~Interval</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

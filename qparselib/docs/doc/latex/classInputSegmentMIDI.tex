@@ -1,0 +1,202 @@
+\hypertarget{classInputSegmentMIDI}{}\section{Input\+Segment\+M\+I\+DI Class Reference}
+\label{classInputSegmentMIDI}\index{InputSegmentMIDI@{InputSegmentMIDI}}
+
+
+import an \mbox{\hyperlink{classInputSegment}{Input\+Segment}} from a M\+I\+DI file.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Segment\+M\+I\+D\+I.\+hpp$>$}
+
+Inheritance diagram for Input\+Segment\+M\+I\+DI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInputSegmentMIDI}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInputSegmentMIDI_a8ae9a7a113d9b3fec0643cf8773a69df}{Input\+Segment\+M\+I\+DI}} (const std\+::string filename, int tracknb=1)
+\begin{DoxyCompactList}\small\item\em read input segment from a M\+I\+DI file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInputSegmentMIDI_ad337626161ab1a2ff80a4d845421a9f6}{Input\+Segment\+M\+I\+DI}} (Midi\+File \&midifile, int tracknb=1)
+\begin{DoxyCompactList}\small\item\em read input segment from a M\+I\+DI file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInputSegmentMIDI_a97c065fd510e9a925e12e44b6378f394}{Input\+Segment\+M\+I\+DI}} (const std\+::string filename, bool mono=true, bool norest=false, int tracknb=1)
+\begin{DoxyCompactList}\small\item\em read input segment from a M\+I\+DI file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInputSegmentMIDI_a6a5548fa47cfe652b80b0e7dcfcf9735}\label{classInputSegmentMIDI_a6a5548fa47cfe652b80b0e7dcfcf9735}} 
+{\bfseries Input\+Segment\+M\+I\+DI} (const \mbox{\hyperlink{classInputSegmentMIDI}{Input\+Segment\+M\+I\+DI}} \&)
+\item 
+\mbox{\Hypertarget{classInputSegmentMIDI_a55fbf779b44ae82b17bad1f2839c8c78}\label{classInputSegmentMIDI_a55fbf779b44ae82b17bad1f2839c8c78}} 
+std\+::string {\bfseries filename} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentMIDI_a936c91d6d4d71d1e968808064455e9d4}{export\+\_\+midifile}} (std\+::string, \mbox{\hyperlink{classRational}{Rational}})
+\begin{DoxyCompactList}\small\item\em copy input midifile into output\+\_\+midifile. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentMIDI_a647bb0ebc71484c531c13ded3a86839c}{status}} () const
+\begin{DoxyCompactList}\small\item\em exit status code for M\+I\+DI import \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentMIDI_a6c0b140ef054db3d0669ffbb11c8c29b}{export\+\_\+midifile}} (Midi\+File \&midifile, std\+::string midiout, \mbox{\hyperlink{classRational}{Rational}} beatperbar)
+\begin{DoxyCompactList}\small\item\em copy input midifile into output\+\_\+midifile. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classInputSegmentMIDI_af2ac856f11e5ebbca039e988e0df0d9d}{export\+\_\+midifile\+\_\+mono}} (Midi\+File \&midifile, std\+::string midiout, \mbox{\hyperlink{classRational}{Rational}} beatperbar)
+\begin{DoxyCompactList}\small\item\em copy input midifile into output\+\_\+midifile, monophonic case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+import an \mbox{\hyperlink{classInputSegment}{Input\+Segment}} from a M\+I\+DI file. 
+
+
+\begin{DoxyItemize}
+\item The segment contains the N\+O\+T\+E-\/\+ON and N\+O\+T\+E-\/\+O\+FF events in the M\+I\+DI file, with the realtime dates.
+\item The musical dates and duration as set to unknown.
+\item Every N\+O\+T\+E\+\_\+\+ON event is linked to the closest posteroir N\+O\+T\+E-\/\+O\+FF event with the same M\+I\+DI key. It is left unmatched (without warning) if there is no such matching N\+O\+T\+E-\/\+O\+FF.
+\item Several N\+O\+T\+E-\/\+ON with the same key may be linked to the same N\+O\+T\+E-\/\+O\+FF (a warning is displayed in this case).
+\item Unmatched N\+O\+T\+E-\/\+O\+FF are added with a warning. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInputSegmentMIDI_a8ae9a7a113d9b3fec0643cf8773a69df}\label{classInputSegmentMIDI_a8ae9a7a113d9b3fec0643cf8773a69df}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{InputSegmentMIDI()}{InputSegmentMIDI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Input\+Segment\+M\+I\+D\+I\+::\+Input\+Segment\+M\+I\+DI (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{int}]{tracknb = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+read input segment from a M\+I\+DI file. 
+
+The musical onsets and durations are all set to U\+N\+K\+N\+O\+WN. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of input M\+I\+DI file \\
+\hline
+{\em tracknb} & M\+I\+DI track read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInputSegmentMIDI_ad337626161ab1a2ff80a4d845421a9f6}\label{classInputSegmentMIDI_ad337626161ab1a2ff80a4d845421a9f6}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{InputSegmentMIDI()}{InputSegmentMIDI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Input\+Segment\+M\+I\+D\+I\+::\+Input\+Segment\+M\+I\+DI (\begin{DoxyParamCaption}\item[{Midi\+File \&}]{midifile,  }\item[{int}]{tracknb = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+read input segment from a M\+I\+DI file. 
+
+The musical onsets and durations are all set to U\+N\+K\+N\+O\+WN. 
+\begin{DoxyParams}{Parameters}
+{\em midifile} & a M\+I\+D\+Ifile object \\
+\hline
+{\em tracknb} & M\+I\+DI track read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInputSegmentMIDI_a97c065fd510e9a925e12e44b6378f394}\label{classInputSegmentMIDI_a97c065fd510e9a925e12e44b6378f394}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\index{InputSegmentMIDI@{InputSegmentMIDI}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{InputSegmentMIDI()}{InputSegmentMIDI()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Input\+Segment\+M\+I\+D\+I\+::\+Input\+Segment\+M\+I\+DI (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{bool}]{mono = {\ttfamily true},  }\item[{bool}]{norest = {\ttfamily false},  }\item[{int}]{tracknb = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+read input segment from a M\+I\+DI file. 
+
+the musical onsets and durations are all set to -\/1 for backward compatibility. 
+\begin{DoxyParams}{Parameters}
+{\em mono} & flag \+: set if we want a monophonic input segment. \\
+\hline
+{\em norest} & flag \+: if set, rests in M\+I\+DI file are ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]T\+BR \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInputSegmentMIDI_a936c91d6d4d71d1e968808064455e9d4}\label{classInputSegmentMIDI_a936c91d6d4d71d1e968808064455e9d4}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!export\_midifile@{export\_midifile}}
+\index{export\_midifile@{export\_midifile}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{export\_midifile()}{export\_midifile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Input\+Segment\+M\+I\+D\+I\+::export\+\_\+midifile (\begin{DoxyParamCaption}\item[{std\+::string}]{,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{ }\end{DoxyParamCaption})}
+
+
+
+copy input midifile into output\+\_\+midifile. 
+
+update the onsets / offsets to the quantized values in this segment. \begin{DoxyWarning}{Warning}
+this segment must have been created from a midi file. 
+
+the musical date and duration must have been set in this segment.
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]T\+BR mv export to segment/\+Input\+Segment$\ast$ classes \end{DoxyRefDesc}
+\mbox{\Hypertarget{classInputSegmentMIDI_a647bb0ebc71484c531c13ded3a86839c}\label{classInputSegmentMIDI_a647bb0ebc71484c531c13ded3a86839c}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!status@{status}}
+\index{status@{status}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily size\+\_\+t Input\+Segment\+M\+I\+D\+I\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+exit status code for M\+I\+DI import 
+
+\begin{DoxyReturn}{Returns}
+0 if import or export worked well 
+
+error code $>$ 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInputSegmentMIDI_a6c0b140ef054db3d0669ffbb11c8c29b}\label{classInputSegmentMIDI_a6c0b140ef054db3d0669ffbb11c8c29b}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!export\_midifile@{export\_midifile}}
+\index{export\_midifile@{export\_midifile}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{export\_midifile()}{export\_midifile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t Input\+Segment\+M\+I\+D\+I\+::export\+\_\+midifile (\begin{DoxyParamCaption}\item[{Midi\+File \&}]{midifile,  }\item[{std\+::string}]{midiout,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{beatperbar }\end{DoxyParamCaption})}
+
+
+
+copy input midifile into output\+\_\+midifile. 
+
+update the onsets / offsets to the quantized values in this segment. 
+\begin{DoxyParams}{Parameters}
+{\em midifile} & M\+I\+D\+Ifile struct \\
+\hline
+{\em midiout} & name of output midifile \\
+\hline
+{\em beatperbar} & number of beats per bar (for producing output midifile) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+this segment must have been created from a midi file. 
+
+the musical date and duration must have been set in this segment.
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]T\+BR mv export to segment/\+Input\+Segment$\ast$ classes \end{DoxyRefDesc}
+\mbox{\Hypertarget{classInputSegmentMIDI_af2ac856f11e5ebbca039e988e0df0d9d}\label{classInputSegmentMIDI_af2ac856f11e5ebbca039e988e0df0d9d}} 
+\index{InputSegmentMIDI@{InputSegmentMIDI}!export\_midifile\_mono@{export\_midifile\_mono}}
+\index{export\_midifile\_mono@{export\_midifile\_mono}!InputSegmentMIDI@{InputSegmentMIDI}}
+\subsubsection{\texorpdfstring{export\_midifile\_mono()}{export\_midifile\_mono()}}
+{\footnotesize\ttfamily size\+\_\+t Input\+Segment\+M\+I\+D\+I\+::export\+\_\+midifile\+\_\+mono (\begin{DoxyParamCaption}\item[{Midi\+File \&}]{midifile,  }\item[{std\+::string}]{midiout,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{beatperbar }\end{DoxyParamCaption})}
+
+
+
+copy input midifile into output\+\_\+midifile, monophonic case. 
+
+update the onsets / offsets to the quantized values in this segment. 
+\begin{DoxyParams}{Parameters}
+{\em midifile} & M\+I\+D\+Ifile struct \\
+\hline
+{\em midiout} & name of output midifile \\
+\hline
+{\em beatperbar} & number of beats per bar (for producing output midifile) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+this segment must have been created from a midi file. 
+
+the musical date and duration must have been set in this segment.
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]T\+BR mv export to segment/\+Input\+Segment$\ast$ classes \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/Input\+Segment\+M\+I\+D\+I.\+hpp\item 
+src/input/Input\+Segment\+M\+I\+D\+I.\+cpp\end{DoxyCompactItemize}

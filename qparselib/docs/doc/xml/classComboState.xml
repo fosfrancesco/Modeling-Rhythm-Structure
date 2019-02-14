@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classComboState" kind="class" language="C++" prot="public">
+    <compoundname>ComboState</compoundname>
+    <includes local="no">ComboWTA.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classComboState_1a2b079a791c60d80762ac637b520fc17c" prot="public" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t ComboState::cs_state</definition>
+        <argsstring></argsstring>
+        <name>cs_state</name>
+        <briefdescription>
+<para>state of base schema. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="63" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classComboState_1a12b750a5d435968342c756dd5ae08777" prot="public" static="no" mutable="no">
+        <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+        <definition>IntervalTree* ComboState::cs_path</definition>
+        <argsstring></argsstring>
+        <name>cs_path</name>
+        <briefdescription>
+<para>current augmented path (interval of points + alignment of input segment) share: in addComboState many <ref refid="classComboState" kindref="compound">ComboState</ref> constructed with the same cs_path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="67" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classComboState_1a22b317fc2ff9848dd35a232da73df5f9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t ComboState::cs_pre</definition>
+        <argsstring></argsstring>
+        <name>cs_pre</name>
+        <briefdescription>
+<para>guess number of points aligned to right of previous segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="70" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classComboState_1adda67e672871773210ed90e6f60d6752" prot="public" static="no" mutable="no">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t ComboState::cs_post</definition>
+        <argsstring></argsstring>
+        <name>cs_post</name>
+        <briefdescription>
+<para>guess number of points aligned to right of current segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="73" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__schemata_1gadb95b4bb9322c3e2aba43ef1663a035e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(const InputSegment *s, IntervalHeap *)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <defname>ih</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="53" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaffac6cd8adcfb6bbb0cd9fc601d9a2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(state_t, IntervalTree *, pre_t rp=0, pre_t rr=0)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rp</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rr</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="55" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad80378e34fdc145bd7f0dac17c306e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(const ComboState &amp;, pre_t rp=0, pre_t rr=0)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <defname>cs</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rp</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rr</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="58" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gac7c0709a18e5caa98554ab0deedc12a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::~ComboState</definition>
+        <argsstring>()</argsstring>
+        <name>~ComboState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="60" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga946acbddc843e4ade0b1f47bca5b0929" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::compatible</definition>
+        <argsstring>(label_t label) const</argsstring>
+        <name>compatible</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="77" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="67" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga66c814d1c1c9f1a90c5fc3a1a9d89395" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::operator==</definition>
+        <argsstring>(const ComboState &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="79" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="97" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga505e9ff93681bbfe5632a15708facb63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::operator&lt;</definition>
+        <argsstring>(const ComboState &amp;s) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>lexicographic comparison on hash value (array[5]) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="82" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="114" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classComboState_1a1fb7d424915082b80a6be103a22cb75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const ComboState &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <defname>cs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="84" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="147" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tmp state structure for construction of <ref refid="classComboWTA" kindref="compound">ComboWTA</ref> from a <ref refid="classWTA" kindref="compound">WTA</ref> (base schema) and an input segment casted into state_t after construction </para>
+    </briefdescription>
+    <detaileddescription>
+<para>label (for leaves): see <ref refid="classWTA" kindref="compound">WTA</ref> = continuation or number of note + grace notes at left of the current path</para>
+<para>states (q:int, p:Path, rp:int list, rr:int list) ou label (feuille) q: state of base schema p: current path (interval of points in input segment) rp: guess number of points aligned to right of previous segment rr: guess number of points aligned to right of current segment </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="26">
+        <label>ComboState</label>
+        <link refid="classComboState"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>cs_path</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Interval</label>
+        <link refid="classInterval"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>mbegin</edgelabel>
+          <edgelabel>mend</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>AlignedInterval</label>
+        <link refid="classAlignedInterval"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>IntervalTree</label>
+        <link refid="classIntervalTree"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>_previous_sibling</edgelabel>
+          <edgelabel>_parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/schemata/ComboWTA.hpp" line="50" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="49" bodyend="92"/>
+    <listofallmembers>
+      <member refid="group__schemata_1gadb95b4bb9322c3e2aba43ef1663a035e" prot="public" virt="non-virtual"><scope>ComboState</scope><name>ComboState</name></member>
+      <member refid="group__schemata_1gaffac6cd8adcfb6bbb0cd9fc601d9a2e1" prot="public" virt="non-virtual"><scope>ComboState</scope><name>ComboState</name></member>
+      <member refid="group__schemata_1gad80378e34fdc145bd7f0dac17c306e39" prot="public" virt="non-virtual"><scope>ComboState</scope><name>ComboState</name></member>
+      <member refid="group__schemata_1ga946acbddc843e4ade0b1f47bca5b0929" prot="public" virt="non-virtual"><scope>ComboState</scope><name>compatible</name></member>
+      <member refid="classComboState_1a12b750a5d435968342c756dd5ae08777" prot="public" virt="non-virtual"><scope>ComboState</scope><name>cs_path</name></member>
+      <member refid="classComboState_1adda67e672871773210ed90e6f60d6752" prot="public" virt="non-virtual"><scope>ComboState</scope><name>cs_post</name></member>
+      <member refid="classComboState_1a22b317fc2ff9848dd35a232da73df5f9" prot="public" virt="non-virtual"><scope>ComboState</scope><name>cs_pre</name></member>
+      <member refid="classComboState_1a2b079a791c60d80762ac637b520fc17c" prot="public" virt="non-virtual"><scope>ComboState</scope><name>cs_state</name></member>
+      <member refid="group__schemata_1ga505e9ff93681bbfe5632a15708facb63" prot="public" virt="non-virtual"><scope>ComboState</scope><name>operator&lt;</name></member>
+      <member refid="classComboState_1a1fb7d424915082b80a6be103a22cb75e" prot="public" virt="non-virtual"><scope>ComboState</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__schemata_1ga66c814d1c1c9f1a90c5fc3a1a9d89395" prot="public" virt="non-virtual"><scope>ComboState</scope><name>operator==</name></member>
+      <member refid="group__schemata_1gac7c0709a18e5caa98554ab0deedc12a6" prot="public" virt="non-virtual"><scope>ComboState</scope><name>~ComboState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

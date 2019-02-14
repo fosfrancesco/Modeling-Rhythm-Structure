@@ -1,0 +1,60 @@
+\hypertarget{classQDate}{}\section{Q\+Date Class Reference}
+\label{classQDate}\index{QDate@{QDate}}
+
+
+quantified onset values expressed in number of samples.  
+
+
+
+
+{\ttfamily \#include $<$Q\+Date.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Q\+Date} (size\+\_\+t blocs, size\+\_\+t rel)
+\item 
+{\bfseries Q\+Date} (const \mbox{\hyperlink{classQDate}{Q\+Date}} \&)
+\item 
+virtual \mbox{\hyperlink{classQDate}{Q\+Date}} \& {\bfseries operator=} (const \mbox{\hyperlink{classQDate}{Q\+Date}} \&)
+\item 
+virtual \mbox{\hyperlink{classQDate}{Q\+Date}} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classQDate_a5583b42d333739ef0432446d73400320}\label{classQDate_a5583b42d333739ef0432446d73400320}} 
+size\+\_\+t \mbox{\hyperlink{classQDate_a5583b42d333739ef0432446d73400320}{bloc}} () const
+\begin{DoxyCompactList}\small\item\em number of bloc of length R\+ES. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQDate_ad531ed61e0c9a207a1016af4b0245d46}\label{classQDate_ad531ed61e0c9a207a1016af4b0245d46}} 
+size\+\_\+t \mbox{\hyperlink{classQDate_ad531ed61e0c9a207a1016af4b0245d46}{relative}} () const
+\begin{DoxyCompactList}\small\item\em quantified date (samples) modulo R\+ES (date in last bloc). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__output_ga07a4414576afc26204002ce92dcc7ce9}{absolute}} (size\+\_\+t res) const
+\begin{DoxyCompactList}\small\item\em quantified date as rational value. \end{DoxyCompactList}\item 
+void {\bfseries print} (std\+::ostream \&) const
+\item 
+void \mbox{\hyperlink{group__output_gaf69eee7904ee41d76e3a1a61ab92cfd1}{print}} (std\+::ostream \&, size\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em fractional print using resolution value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQDate_ae3c7801be338e952050f037c7cc4c799}\label{classQDate_ae3c7801be338e952050f037c7cc4c799}} 
+size\+\_\+t \mbox{\hyperlink{classQDate_ae3c7801be338e952050f037c7cc4c799}{\+\_\+quotient}}
+\begin{DoxyCompactList}\small\item\em date in samples / R\+E\+S\+O\+L\+U\+T\+I\+ON = bloc number \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQDate_ad14e1214b142bb77fa92e7f2b80f927c}\label{classQDate_ad14e1214b142bb77fa92e7f2b80f927c}} 
+size\+\_\+t \mbox{\hyperlink{classQDate_ad14e1214b142bb77fa92e7f2b80f927c}{\+\_\+modulo}}
+\begin{DoxyCompactList}\small\item\em date in samples modulo R\+E\+S\+O\+L\+U\+T\+I\+ON \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQDate_ad9fd1ed50658c87da7aa8b5009154b47}\label{classQDate_ad9fd1ed50658c87da7aa8b5009154b47}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classQDate}{Q\+Date}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+quantified onset values expressed in number of samples. 
+
+the value of R\+E\+S\+O\+L\+U\+T\+I\+ON (total number of samples) is not stored in objects of this class. it should be the same for each date created. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/output/Q\+Date.\+hpp\item 
+src/output/Q\+Date.\+cpp\end{DoxyCompactItemize}

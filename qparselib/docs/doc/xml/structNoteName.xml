@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="structNoteName" kind="struct" language="C++" prot="public">
+    <compoundname>NoteName</compoundname>
+    <basecompoundref refid="structSpiralPoint" prot="public" virt="non-virtual">SpiralPoint</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="group__segment_1ga9e7612a2360f35684ff1228936e58a30" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int NoteName::UNDEF_NOTE_INDEX</definition>
+        <argsstring></argsstring>
+        <name>UNDEF_NOTE_INDEX</name>
+        <initializer>= 99</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="86" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga51da52124dc1108e143b2a9f73537ada" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double NoteName::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+<para>z distance between two successive points of the spiral (one fifth apart). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="89" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga814ef312c571ae51a0007c1d5a6a0b17" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double NoteName::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>= std::sqrt(7.5) * <ref refid="group__segment_1ga51da52124dc1108e143b2a9f73537ada" kindref="member">h</ref></initializer>
+        <briefdescription>
+<para>radius of the cylinder in which the spiral is embedded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="92" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__segment_1ga8e1cf6e8bac86af1c5cfdc22b36210b2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref></type>
+        <definition>const NoteName NoteName::synonyms</definition>
+        <argsstring>[12][3]</argsstring>
+        <name>synonyms</name>
+        <initializer>=
+{
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  1.0,  12), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  0.0,   0), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;, -2.0, -12) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  1.0,   7), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;, -1.0,  -5), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  2.0,  19) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  2.0,  14), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  0.0,   2), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;, -2.0, -10) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  1.0,   9), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;, -1.0,  -3), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;, -2.0, -15) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;D&apos;,  2.0,  16), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  0.0,   4), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;, -1.0,  -8) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  1.0,  11), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  0.0,  -1), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  2.0,  15) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;E&apos;,  2.0,  18), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  1.0,   6), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;, -1.0,  -6) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;F&apos;,  2.0,  13), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  0.0,   1), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;, -2.0, -11) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  1.0,   8), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;, -1.0,  -4), <ref refid="structNoteName" kindref="compound">NoteName</ref>() },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;G&apos;,  2.0,  15), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  0.0,   3), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;, -2.0,  -9) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  1.0,  10), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;, -1.0,  -2), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;,  2.0,  14) },
+    
+    { <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;A&apos;,  2.0,  17), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;B&apos;,  0.0,   5), <ref refid="structNoteName" kindref="compound">NoteName</ref>(&apos;C&apos;, -1.0,  -7) }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="140" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structNoteName_1acd97c2eed21a588fb362e3838183c2d9" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char NoteName::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>note name. &apos;A&apos; to &apos;G&apos; or Pitch::UNDEF_NOTE_NAME </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>same has in class <ref refid="classPitch" kindref="compound">Pitch</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="97" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNoteName_1a6b6ddfa2befdb91e8f2a283569efe579" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float NoteName::alteration</definition>
+        <argsstring></argsstring>
+        <name>alteration</name>
+        <briefdescription>
+<para>note alteration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>in [-2.0, 2.0] where 1.0 is half tone or Pitch::UNDEF_NOTE_ALTERATION same has in class <ref refid="classPitch" kindref="compound">Pitch</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="103" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNoteName_1adf37d714ab36d4769052e4145873fe29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NoteName::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>position in the line of fifths relative to C </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>C has index 0 and index increases in the direction of sharps:</para>
+</listitem><listitem><para>G has index 1, D has index 2, F# has index 6...</para>
+</listitem><listitem><para>F has index -1, Bb has index -2...</para>
+</listitem></itemizedlist>
+</para>
+<para>values between -15 (Fbb) and 19 (B##)</para>
+<para>TBC: it is redundant with name and alteration maybe should replace them? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="115" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structNoteName_1afc3dde13d99d7e198c46a10198a5d78a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NoteName::NoteName</definition>
+        <argsstring>()</argsstring>
+        <name>NoteName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="117" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="117" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gad81fd626f6b9bc6d70fd5e235ec5c8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteName::NoteName</definition>
+        <argsstring>(char n, float alt, int id)</argsstring>
+        <name>NoteName</name>
+        <param>
+          <type>char</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>notename object from name, alteration and index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between &apos;A&apos; and &apos;G&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between -2.0 and 2.0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be between -15 and 19 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="128" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="101" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaba2eabd0e4626b56685968ea53153b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NoteName::NoteName</definition>
+        <argsstring>(const NoteName &amp;rhs)</argsstring>
+        <name>NoteName</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="134" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="132" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga22a391f4c1fa697f1d320d1a659f130f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>NoteName &amp; NoteName::operator=</definition>
+        <argsstring>(const NoteName &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="136" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="140" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="structNoteName_1a84a6beecda767f0481a0b4aa391c676c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool NoteName::unknown</definition>
+        <argsstring>() const</argsstring>
+        <name>unknown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="138" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="138" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="group__segment_1ga055480a382a6fde05bde51abed31a56c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>const NoteName &amp; NoteName::ofkey</definition>
+        <argsstring>(int k)</argsstring>
+        <name>ofkey</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>ref to a <ref refid="structNoteName" kindref="compound">NoteName</ref> in table synonyms. */ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="143" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="240" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1gaf4a2321d9bc5a69a5b8a94cf1e146052" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+        <definition>const NoteName &amp; NoteName::closest</definition>
+        <argsstring>(unsigned int pitch, const SpiralPoint &amp;p)</argsstring>
+        <name>closest</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structSpiralPoint" kindref="compound">SpiralPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>note name (ref in table synonyms) corresponding to given midi pitch and closest to given point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point in spiral </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be in 0..128 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="149" column="1" bodyfile="src/segment/Spiral.cpp" bodystart="283" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structNoteName_1a5562caeaa220ead5487a286a7765b00f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const NoteName &amp;, const NoteName &amp;)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <defname>lhs</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="151" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="friend" id="structNoteName_1aebe4abfae4e6f512246bf067c0d122f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const NoteName &amp;, const NoteName &amp;)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <defname>lhs</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="152" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="friend" id="structNoteName_1af173a8baf0712bebb0c55fd0b1f225a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const NoteName &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structNoteName" kindref="compound">NoteName</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Spiral.hpp" line="154" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="173" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="190">
+        <label>SpiralPoint</label>
+        <link refid="structSpiralPoint"/>
+      </node>
+      <node id="189">
+        <label>NoteName</label>
+        <link refid="structNoteName"/>
+        <childnode refid="190" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="192">
+        <label>SpiralPoint</label>
+        <link refid="structSpiralPoint"/>
+      </node>
+      <node id="191">
+        <label>NoteName</label>
+        <link refid="structNoteName"/>
+        <childnode refid="192" relation="public-inheritance">
+        </childnode>
+        <childnode refid="191" relation="usage">
+          <edgelabel>synonyms</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/Spiral.hpp" line="84" column="1" bodyfile="src/segment/Spiral.hpp" bodystart="83" bodyend="156"/>
+    <listofallmembers>
+      <member refid="structNoteName_1a6b6ddfa2befdb91e8f2a283569efe579" prot="public" virt="non-virtual"><scope>NoteName</scope><name>alteration</name></member>
+      <member refid="group__segment_1gaf4a2321d9bc5a69a5b8a94cf1e146052" prot="public" virt="non-virtual"><scope>NoteName</scope><name>closest</name></member>
+      <member refid="group__segment_1ga71dccd6f3dd14b2c497e4198ea37d745" prot="public" virt="non-virtual"><scope>NoteName</scope><name>distance</name></member>
+      <member refid="group__segment_1ga51da52124dc1108e143b2a9f73537ada" prot="public" virt="non-virtual"><scope>NoteName</scope><name>h</name></member>
+      <member refid="structNoteName_1adf37d714ab36d4769052e4145873fe29" prot="public" virt="non-virtual"><scope>NoteName</scope><name>index</name></member>
+      <member refid="group__segment_1ga8d702bcd74b30d19929d1954087bd4b0" prot="public" virt="non-virtual"><scope>NoteName</scope><name>isnormal</name></member>
+      <member refid="structNoteName_1acd97c2eed21a588fb362e3838183c2d9" prot="public" virt="non-virtual"><scope>NoteName</scope><name>name</name></member>
+      <member refid="structNoteName_1afc3dde13d99d7e198c46a10198a5d78a" prot="public" virt="non-virtual"><scope>NoteName</scope><name>NoteName</name></member>
+      <member refid="group__segment_1gad81fd626f6b9bc6d70fd5e235ec5c8cb" prot="public" virt="non-virtual"><scope>NoteName</scope><name>NoteName</name></member>
+      <member refid="group__segment_1gaba2eabd0e4626b56685968ea53153b3b" prot="public" virt="non-virtual"><scope>NoteName</scope><name>NoteName</name></member>
+      <member refid="group__segment_1ga055480a382a6fde05bde51abed31a56c" prot="public" virt="non-virtual"><scope>NoteName</scope><name>ofkey</name></member>
+      <member refid="structNoteName_1aebe4abfae4e6f512246bf067c0d122f4" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator!=</name></member>
+      <member refid="group__segment_1gaf7d46ab9c2b5dd8e11ec4a940dea3d03" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator*=</name></member>
+      <member refid="group__segment_1ga50ce60a751c8ad173a53ccee629a4598" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator+=</name></member>
+      <member refid="group__segment_1ga81b9a0d474b385cf0335523d49cc9fc1" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator-=</name></member>
+      <member refid="structNoteName_1af173a8baf0712bebb0c55fd0b1f225a0" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga22a391f4c1fa697f1d320d1a659f130f" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator=</name></member>
+      <member refid="group__segment_1gab4085951f6e5264f912feadf327a8c81" prot="public" virt="non-virtual" ambiguityscope="SpiralPoint::"><scope>NoteName</scope><name>operator=</name></member>
+      <member refid="structNoteName_1a5562caeaa220ead5487a286a7765b00f" prot="public" virt="non-virtual"><scope>NoteName</scope><name>operator==</name></member>
+      <member refid="group__segment_1ga814ef312c571ae51a0007c1d5a6a0b17" prot="public" virt="non-virtual"><scope>NoteName</scope><name>r</name></member>
+      <member refid="group__segment_1ga80277d41d835c643826b4e813490849a" prot="public" virt="non-virtual"><scope>NoteName</scope><name>SpiralPoint</name></member>
+      <member refid="group__segment_1gae521f98807e13c4e0019b561565cda18" prot="public" virt="non-virtual"><scope>NoteName</scope><name>SpiralPoint</name></member>
+      <member refid="group__segment_1ga8e1cf6e8bac86af1c5cfdc22b36210b2" prot="public" virt="non-virtual"><scope>NoteName</scope><name>synonyms</name></member>
+      <member refid="group__segment_1ga9e7612a2360f35684ff1228936e58a30" prot="public" virt="non-virtual"><scope>NoteName</scope><name>UNDEF_NOTE_INDEX</name></member>
+      <member refid="structNoteName_1a84a6beecda767f0481a0b4aa391c676c" prot="public" virt="non-virtual"><scope>NoteName</scope><name>unknown</name></member>
+      <member refid="structSpiralPoint_1a68150be95db2b13f25312129c7ef96a5" prot="public" virt="non-virtual"><scope>NoteName</scope><name>x</name></member>
+      <member refid="structSpiralPoint_1aa969dcfbbeb0ce7b09d110ee93509da0" prot="public" virt="non-virtual"><scope>NoteName</scope><name>y</name></member>
+      <member refid="structSpiralPoint_1a97da96a3080f8aaaab29f35da17af415" prot="public" virt="non-virtual"><scope>NoteName</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

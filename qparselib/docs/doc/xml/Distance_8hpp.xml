@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Distance_8hpp" kind="file" language="C++">
+    <compoundname>Distance.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="AlignedInterval_8hpp" local="yes">AlignedInterval.hpp</includes>
+    <includes refid="Weight_8hpp" local="yes">Weight.hpp</includes>
+    <includes refid="TropicalWeight_8hpp" local="yes">TropicalWeight.hpp</includes>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="PtrSI_8hpp" local="yes">src/table/PtrSI.hpp</includedby>
+    <includedby refid="PtrSIP_8hpp" local="yes">src/table/PtrSIP.hpp</includedby>
+    <includedby refid="Distance_8cpp" local="yes">src/weight/Distance.cpp</includedby>
+    <incdepgraph>
+      <node id="706">
+        <label>src/weight/Distance.hpp</label>
+        <link refid="Distance_8hpp"/>
+        <childnode refid="707" relation="include">
+        </childnode>
+      </node>
+      <node id="707">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classDistance" prot="public">Distance</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/weight/Distance.hpp"/>
+  </compounddef>
+</doxygen>

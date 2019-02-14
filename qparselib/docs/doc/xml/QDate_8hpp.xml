@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="QDate_8hpp" kind="file" language="C++">
+    <compoundname>QDate.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includedby refid="QDate_8cpp" local="yes">src/output/QDate.cpp</includedby>
+    <incdepgraph>
+      <node id="152">
+        <label>assert.h</label>
+      </node>
+      <node id="150">
+        <label>src/output/QDate.hpp</label>
+        <link refid="QDate_8hpp"/>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>vector</label>
+      </node>
+      <node id="151">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classQDate" prot="public">QDate</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__output_1ga633737bbc1050067a6ae18fac4de863f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const QDate &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="81" column="1" bodyfile="src/output/QDate.hpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/QDate.hpp"/>
+  </compounddef>
+</doxygen>

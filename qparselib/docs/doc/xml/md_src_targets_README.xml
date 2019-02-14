@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_targets_README" kind="page">
+    <compoundname>md_src_targets_README</compoundname>
+    <title>/src/targets</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>definition of command line utilities.</para>
+<para>Every <computeroutput>target</computeroutput> is defined in a .cpp file with a main function. The commandline options are handled using the GNU <ulink url="https://www.gnu.org/software/libc/manual/html_node/Getopt.html">getopt</ulink> function.</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>quant</computeroutput> Transcription of an input given by a text or a MIDI file wrt a given automaton (stored in a file and called schema). Various output possible, including <ref refid="classMEI" kindref="compound">MEI</ref> score file and quantized MIDI file.</para>
+</listitem><listitem><para><computeroutput>equiv</computeroutput> Enumeration of rhythm trees in a given schema language equivalent to a given sequence of (quantized) durations (Inter-Onset-Intervals).</para>
+</listitem><listitem><para><computeroutput>schemas</computeroutput> Utilities for the construction of schema and computation of weights.</para>
+</listitem><listitem><para><computeroutput>midiutils</computeroutput> Utilities for reading MIDI files and conversion to text format. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

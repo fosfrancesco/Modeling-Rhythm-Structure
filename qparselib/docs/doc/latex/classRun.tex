@@ -1,0 +1,342 @@
+\hypertarget{classRun}{}\section{Run$<$ P $>$ Class Template Reference}
+\label{classRun}\index{Run$<$ P $>$@{Run$<$ P $>$}}
+
+
+a run is a compact representation of parse trees as a tuple of pointers to subruns.  
+
+
+
+
+{\ttfamily \#include $<$Rune.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRun_ae8145f85e985d5ff3aa118bd99901675}\label{classRun_ae8145f85e985d5ff3aa118bd99901675}} 
+\mbox{\hyperlink{classRun_ae8145f85e985d5ff3aa118bd99901675}{Run}} ()
+\begin{DoxyCompactList}\small\item\em construct a null run (special) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRun_a63172061ee2c7c601f13d4ef3f3a67bd}{Run}} (\mbox{\hyperlink{classWeight}{Weight}} w)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRun}{Run}} with empty body and given weight. the run is marked as meta. the first Partialor\+Update child is 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRun_a0a075a813930403154728bcea9062a55}{Run}} (\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$, const P \&, const \mbox{\hyperlink{classTransition}{Transition}} \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWTA}{W\+TA}} \mbox{\hyperlink{classRun}{Run}} with head the given pointer. the given pointer must be a wta ptr. the body is build according to the transition t. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a1ffdaf6f1209f5692898af9142ff0168}\label{classRun_a1ffdaf6f1209f5692898af9142ff0168}} 
+\mbox{\hyperlink{classRun_a1ffdaf6f1209f5692898af9142ff0168}{Run}} (const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRun_ae14a444c0e91801d76f5138a36da435d}{Run}} (const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&r, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em copy r and increase rank of pointer number i. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRun_aa0d15ec06ce84a5db17c26922f708d44}{Run}} (const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&r, const P \&p)
+\begin{DoxyCompactList}\small\item\em copy/update constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a89b0d51eafbc4c34a92f2eca0d8e77f8}\label{classRun_a89b0d51eafbc4c34a92f2eca0d8e77f8}} 
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&)
+\item 
+\mbox{\Hypertarget{classRun_a47f62430b7446078aa94dcbb45e86dfc}\label{classRun_a47f62430b7446078aa94dcbb45e86dfc}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&s) const
+\item 
+\mbox{\Hypertarget{classRun_a5efb56b2aaad574a21e42aeb6a7b5742}\label{classRun_a5efb56b2aaad574a21e42aeb6a7b5742}} 
+bool \mbox{\hyperlink{classRun_a5efb56b2aaad574a21e42aeb6a7b5742}{null}} () const
+\begin{DoxyCompactList}\small\item\em this run is null -\/ constructed with \mbox{\hyperlink{classRun_ae8145f85e985d5ff3aa118bd99901675}{Run()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a69d622e31bcd4e6f07c43efc0e788481}\label{classRun_a69d622e31bcd4e6f07c43efc0e788481}} 
+bool \mbox{\hyperlink{classRun_a69d622e31bcd4e6f07c43efc0e788481}{terminal}} () const
+\begin{DoxyCompactList}\small\item\em this run is terminal (leaf). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a006c247eb8839a9a5045e53917e984c6}\label{classRun_a006c247eb8839a9a5045e53917e984c6}} 
+bool \mbox{\hyperlink{classRun_a006c247eb8839a9a5045e53917e984c6}{inner}} () const
+\begin{DoxyCompactList}\small\item\em this run is inner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a3fc5bc7196b967860f4c412bf47c8d9c}\label{classRun_a3fc5bc7196b967860f4c412bf47c8d9c}} 
+bool \mbox{\hyperlink{classRun_a3fc5bc7196b967860f4c412bf47c8d9c}{meta}} () const
+\begin{DoxyCompactList}\small\item\em meta run\+: inner, binary and second child is a meta state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_abf33aa6674f2799357490fe893b7757a}\label{classRun_abf33aa6674f2799357490fe893b7757a}} 
+bool \mbox{\hyperlink{classRun_abf33aa6674f2799357490fe893b7757a}{allcomplete}} () const
+\begin{DoxyCompactList}\small\item\em all ptr in children list are complete. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a8b93caf0971738f454db7815db41501e}\label{classRun_a8b93caf0971738f454db7815db41501e}} 
+bool \mbox{\hyperlink{classRun_a8b93caf0971738f454db7815db41501e}{complete}} () const
+\begin{DoxyCompactList}\small\item\em all ptr in children list are complete and the weight of this run has been evaluated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a920c86e66e9189c7aebb8b449b2441ae}\label{classRun_a920c86e66e9189c7aebb8b449b2441ae}} 
+bool {\bfseries partial} () const
+\item 
+\mbox{\Hypertarget{classRun_ab0f5c4a978f33dd4e2df24174f6534f1}\label{classRun_ab0f5c4a978f33dd4e2df24174f6534f1}} 
+\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{classRun_ab0f5c4a978f33dd4e2df24174f6534f1}{label}} () const
+\begin{DoxyCompactList}\small\item\em this run must be terminal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_ab9eeb2e8033cf68b80099e56ddca8ff1}\label{classRun_ab9eeb2e8033cf68b80099e56ddca8ff1}} 
+size\+\_\+t \mbox{\hyperlink{classRun_ab9eeb2e8033cf68b80099e56ddca8ff1}{arity}} () const
+\begin{DoxyCompactList}\small\item\em return the number of children of this \mbox{\hyperlink{classRun}{Run}}\+: = 0 in the case of terminal run \begin{quote}
+1 for inner run \end{quote}
+= 2 for meta run \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_a1da9ef823788854753f7641bd872cf50}\label{classRun_a1da9ef823788854753f7641bd872cf50}} 
+bool {\bfseries filter} ()
+\item 
+const P \& \mbox{\hyperlink{classRun_a17781141b67e9cd2675c0dad722de2ec}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em return the ith subrun of this run. \end{DoxyCompactList}\item 
+const P \& \mbox{\hyperlink{classRun_a6b635ca66114e64fbcb91a5a9652d78d}{first}} () const
+\begin{DoxyCompactList}\small\item\em first children. \end{DoxyCompactList}\item 
+const P \& \mbox{\hyperlink{classRun_a49c0418a8ab9eb372e09d7d5c813e0aa}{last}} () const
+\begin{DoxyCompactList}\small\item\em last children. \end{DoxyCompactList}\item 
+const P \& \mbox{\hyperlink{classRun_a94a0bfa98d5891b750ba88e5f31441ad}{first\+Partialor\+Update}} () const
+\begin{DoxyCompactList}\small\item\em index of first children which is either either \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRun_ab41a4b6f0347b7b412637d505614b98f}{insert}} (const P \&)
+\begin{DoxyCompactList}\small\item\em append the given ptr at the end of body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRun_afe9adec90106c1a7433b626aca320367}{update}} (const \mbox{\hyperlink{classWeight}{Weight}} \&w, const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&dl=\mbox{\hyperlink{classDurationList}{Duration\+List}}())
+\begin{DoxyCompactList}\small\item\em update the weight and duration lists of this run with given weight and duration list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRun_a61e6a26fe0ae42b0e4d54babc8c46684}\label{classRun_a61e6a26fe0ae42b0e4d54babc8c46684}} 
+\mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classRun_a61e6a26fe0ae42b0e4d54babc8c46684}{weight}}
+\begin{DoxyCompactList}\small\item\em current weight. totally evaluated when evaluated() = true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRun_ad7eda2272d3a6be2ff0c3e2482051029}\label{classRun_ad7eda2272d3a6be2ff0c3e2482051029}} 
+\mbox{\hyperlink{classDurationList}{Duration\+List}} \mbox{\hyperlink{classRun_ad7eda2272d3a6be2ff0c3e2482051029}{duration}}
+\begin{DoxyCompactList}\small\item\em list of relative durations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRun_a03f68bada1f26f0771ac75ef3ec119cd}\label{classRun_a03f68bada1f26f0771ac75ef3ec119cd}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&r)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class P$>$\newline
+class Run$<$ P $>$}
+
+a run is a compact representation of parse trees as a tuple of pointers to subruns. 
+
+a run stores
+\begin{DoxyItemize}
+\item a list of children represented by pointers (template type) compatible with a transition
+\item a weight (to evaluate)
+\item a temporary weight value (initialy the weight of the parent transition)
+\item a list of relative durations.
+\end{DoxyItemize}
+
+a run can be of 3 kinds\+:
+\begin{DoxyItemize}
+\item null run\+:
+\begin{DoxyItemize}
+\item unknown current weight,
+\item unknown tmp weight,
+\item no children,
+\item empty duration list.
+\end{DoxyItemize}
+\item terminal (leaf) run
+\begin{DoxyItemize}
+\item created from terminal (length 1) parent transition\+:
+\item current weight unknown or current weight known (evaluated),
+\item tmp weight known,
+\item 1 child \+: fake pointer containing as state the transition label (and rank 0 if the pointer class has a rank)
+\item duration list with single continuation or single event preceeded graces notes
+\end{DoxyItemize}
+\item inner run
+\begin{DoxyItemize}
+\item created from inner (length $>$ 1) parent transition\+:
+\item current weight unknown or current weight known (evaluated)
+\item tmpt weight known
+\item nb children = length parent transition
+\item duration list == empty (unknown) or not (evaluated).
+\end{DoxyItemize}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000035}{Todo}}]suppr. null runs \end{DoxyRefDesc}
+
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRun_a63172061ee2c7c601f13d4ef3f3a67bd}\label{classRun_a63172061ee2c7c601f13d4ef3f3a67bd}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!Run@{Run}}
+\index{Run@{Run}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::\mbox{\hyperlink{classRun}{Run}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWeight}{Weight}}}]{w }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRun}{Run}} with empty body and given weight. the run is marked as meta. the first Partialor\+Update child is 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & must not be unknown weight . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+the body must be completed with \mbox{\hyperlink{classRun_ab41a4b6f0347b7b412637d505614b98f}{insert()}}. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_a0a075a813930403154728bcea9062a55}\label{classRun_a0a075a813930403154728bcea9062a55}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!Run@{Run}}
+\index{Run@{Run}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::\mbox{\hyperlink{classRun}{Run}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEnvironment}{Environment}} $\ast$}]{,  }\item[{const P \&}]{,  }\item[{const \mbox{\hyperlink{classTransition}{Transition}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWTA}{W\+TA}} \mbox{\hyperlink{classRun}{Run}} with head the given pointer. the given pointer must be a wta ptr. the body is build according to the transition t. 
+
+
+\begin{DoxyItemize}
+\item terminal run if t is terminal,
+\begin{DoxyItemize}
+\item the given ptr must be compatible with the transition\textquotesingle{}s label.
+\item singleton children list with fake ptr containing only label.
+\item the run is complete.
+\item the weight of run is set to a combination of transition\textquotesingle{}s weight and a distance returned by terminal\+Weight.
+\end{DoxyItemize}
+\item inner run if t is inner (using states in the body of t)
+\begin{DoxyItemize}
+\item children list contains pointers of type P to the 1-\/best runs for the given transition for transition (s1,...,sn), the 1-\/best is ($<$s1,1$>$,...,$<$sn,1$>$).
+\item the ptrs in body are registered.
+\item the run is partial.
+\item the weight of run is set to inner\+Weight and must be mult. by weights of subruns.
+\end{DoxyItemize}
+\item null run when it is not possible to construct one of the children. 
+\end{DoxyItemize}\mbox{\Hypertarget{classRun_ae14a444c0e91801d76f5138a36da435d}\label{classRun_ae14a444c0e91801d76f5138a36da435d}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!Run@{Run}}
+\index{Run@{Run}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::\mbox{\hyperlink{classRun}{Run}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&}]{r,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+copy r and increase rank of pointer number i. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & must be inner. \\
+\hline
+{\em i} & (child) must have rank, index i must be between 0 and arity of r -\/ 1. the run is reset (partial)\+: \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+the weight and duration list of the run must be recomputed (the weight is reset to the weight of creator transition). 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_aa0d15ec06ce84a5db17c26922f708d44}\label{classRun_aa0d15ec06ce84a5db17c26922f708d44}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!Run@{Run}}
+\index{Run@{Run}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::\mbox{\hyperlink{classRun}{Run}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ \&}]{r,  }\item[{const P \&}]{p }\end{DoxyParamCaption})}
+
+
+
+copy/update constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & must be partial. \\
+\hline
+{\em p} & must be complete. copy r and replace first partialor\+Update child by p, \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRun_a17781141b67e9cd2675c0dad722de2ec}\label{classRun_a17781141b67e9cd2675c0dad722de2ec}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+const P\& \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the ith subrun of this run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index of subrun \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+the number of children must be at least i+1 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_a6b635ca66114e64fbcb91a5a9652d78d}\label{classRun_a6b635ca66114e64fbcb91a5a9652d78d}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!first@{first}}
+\index{first@{first}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+const P\& \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+first children. 
+
+\begin{DoxyWarning}{Warning}
+this run must be inner with arity $>$ 0 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_a49c0418a8ab9eb372e09d7d5c813e0aa}\label{classRun_a49c0418a8ab9eb372e09d7d5c813e0aa}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!last@{last}}
+\index{last@{last}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{last()}{last()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+const P\& \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+last children. 
+
+\begin{DoxyWarning}{Warning}
+this run must be inner with arity $>$ 0 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_a94a0bfa98d5891b750ba88e5f31441ad}\label{classRun_a94a0bfa98d5891b750ba88e5f31441ad}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!firstPartialorUpdate@{firstPartialorUpdate}}
+\index{firstPartialorUpdate@{firstPartialorUpdate}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{firstPartialorUpdate()}{firstPartialorUpdate()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+const P\& \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::first\+Partialor\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+index of first children which is either either 
+
+
+\begin{DoxyItemize}
+\item partial, or
+\item whose weight did not contribute to run\textquotesingle{}s weight or \mbox{\hyperlink{classRun_ab9eeb2e8033cf68b80099e56ddca8ff1}{arity()}} if there is no such children.
+\end{DoxyItemize}
+
+the index of first children is 0, the index of last children is arity -\/ 1. \begin{DoxyWarning}{Warning}
+\mbox{\hyperlink{classRun_a8b93caf0971738f454db7815db41501e}{complete()}} must not hold (otherwise there is no such children). 
+
+this run must be inner with arity $>$ 0. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_ab41a4b6f0347b7b412637d505614b98f}\label{classRun_ab41a4b6f0347b7b412637d505614b98f}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!insert@{insert}}
+\index{insert@{insert}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+void \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::insert (\begin{DoxyParamCaption}\item[{const P \&}]{ }\end{DoxyParamCaption})}
+
+
+
+append the given ptr at the end of body. 
+
+\begin{DoxyWarning}{Warning}
+the run must be marked as meta. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classRun_afe9adec90106c1a7433b626aca320367}\label{classRun_afe9adec90106c1a7433b626aca320367}} 
+\index{Run$<$ P $>$@{Run$<$ P $>$}!update@{update}}
+\index{update@{update}!Run$<$ P $>$@{Run$<$ P $>$}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$class P$>$ \\
+void \mbox{\hyperlink{classRun}{Run}}$<$ P $>$\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{w,  }\item[{const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&}]{dl = {\ttfamily \mbox{\hyperlink{classDurationList}{Duration\+List}}()} }\end{DoxyParamCaption})}
+
+
+
+update the weight and duration lists of this run with given weight and duration list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & the given weight, must not be zero it must be the weight of best run for the first partialorupdate children (this cannot be checked!). \\
+\hline
+{\em dl} & must be the duration list of best run for the first partialorupdate children (this cannot be checked!). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+this run must not be complete. 
+
+the first partialorupdate children must exist and be complete.
+\end{DoxyWarning}
+the index to first partialorupdate children is incremented. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Input\+Segment.\+hpp\item 
+src/table/Rune.\+hpp\end{DoxyCompactItemize}

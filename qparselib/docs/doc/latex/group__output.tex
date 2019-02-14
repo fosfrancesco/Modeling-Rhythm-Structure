@@ -1,0 +1,746 @@
+\hypertarget{group__output}{}\section{Output module}
+\label{group__output}\index{Output module@{Output module}}
+
+
+The {\ttfamily output} module contains representations for the output of the parsing procedure and conversion into music transcription results.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceScoreModel}{Score\+Model}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDurationList}{Duration\+List}}
+\begin{DoxyCompactList}\small\item\em list of rational durations to label nodes of \mbox{\hyperlink{classWTA}{W\+TA}} Runs for Kbest enum. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01DurationList_01_4}{std\+::hash$<$ Duration\+List $>$}}
+\item 
+class \mbox{\hyperlink{classDurationTree}{Duration\+Tree}}
+\begin{DoxyCompactList}\small\item\em a tree container for duration lists. to avoid recomputation of division of duration lists. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLabel}{Label}}
+\begin{DoxyCompactList}\small\item\em labels for nodes of output Rhythm Trees. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classInnerLabel}{Inner\+Label}}
+\begin{DoxyCompactList}\small\item\em label for inner node. contains only arity (more info later?) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEventLabel}{Event\+Label}}
+\item 
+class \mbox{\hyperlink{classMEI}{M\+EI}}
+\item 
+class \mbox{\hyperlink{classOMRhythmTree}{O\+M\+Rhythm\+Tree}}
+\item 
+class \mbox{\hyperlink{classOnsets}{Onsets}}
+\begin{DoxyCompactList}\small\item\em sequence of onsets used for merge of duration lists. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPointedRhythmTree}{Pointed\+Rhythm\+Tree}}
+\item 
+class \mbox{\hyperlink{classQDate}{Q\+Date}}
+\begin{DoxyCompactList}\small\item\em quantified onset values expressed in number of samples. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPosition}{Position}}
+\begin{DoxyCompactList}\small\item\em position in a RT. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}}
+\begin{DoxyCompactList}\small\item\em Rhythm Trees. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSerialLabel}{Serial\+Label}}
+\begin{DoxyCompactList}\small\item\em static functions for serializable int encoding of input and output leaf symbols containing the following info\+: \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classValueList}{Value\+List}}
+\begin{DoxyCompactList}\small\item\em list of rational durations as components of value states. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01ValueList_01_4}{std\+::hash$<$ Value\+List $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__output_gae303eba6aa9e3b8613a5795c73e4fbea}\label{group__output_gae303eba6aa9e3b8613a5795c73e4fbea}} 
+\#define {\bfseries R\+T\+\_\+\+P\+A\+R\+\_\+\+O\+P\+EN}~\textquotesingle{}(\textquotesingle{}
+\item 
+\mbox{\Hypertarget{group__output_gae92f0807f278bf37adf40090ad2dc4be}\label{group__output_gae92f0807f278bf37adf40090ad2dc4be}} 
+\#define {\bfseries R\+T\+\_\+\+P\+A\+R\+\_\+\+C\+L\+O\+SE}~\textquotesingle{})\textquotesingle{}
+\item 
+\mbox{\Hypertarget{group__output_ga503dde6f933b959604bbeb17820933d5}\label{group__output_ga503dde6f933b959604bbeb17820933d5}} 
+\#define {\bfseries R\+T\+\_\+\+S\+EP}~\textquotesingle{},\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__output_ga22fde970e635fcf63962743b2d5c441d}\label{group__output_ga22fde970e635fcf63962743b2d5c441d}} 
+typedef size\+\_\+t \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em type for concrete and abstract labels \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__output_ga3ff5a8deeeca12e8b6fea9c51eccd987}\label{group__output_ga3ff5a8deeeca12e8b6fea9c51eccd987}} 
+enum {\bfseries Label\+Kind} \{ {\bfseries E\+V\+E\+NT}, 
+{\bfseries T\+IE}, 
+{\bfseries I\+N\+N\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__output_gaca893b02b4d6e0b4a33e08e8fedd3e00}\label{group__output_gaca893b02b4d6e0b4a33e08e8fedd3e00}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&l)
+\item 
+\mbox{\Hypertarget{group__output_gaa14d56806f18314e1c59a090964bc687}\label{group__output_gaa14d56806f18314e1c59a090964bc687}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&lhs, const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__output_ga6a883cabc768b899c9a5edcd3c3d5dd2}\label{group__output_ga6a883cabc768b899c9a5edcd3c3d5dd2}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&lhs, const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__output_ga580b3f6969d32fc7ad84b7d6fec0ecbe}\label{group__output_ga580b3f6969d32fc7ad84b7d6fec0ecbe}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classDurationTree}{Duration\+Tree}} \&t)
+\item 
+\mbox{\Hypertarget{group__output_gad0161a497bb5a9861366ec032cd79392}\label{group__output_gad0161a497bb5a9861366ec032cd79392}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classOMRhythmTree}{O\+M\+Rhythm\+Tree}} \&t)
+\item 
+\mbox{\Hypertarget{group__output_ga42a2ffdfe358dcac1df9704c4179dfeb}\label{group__output_ga42a2ffdfe358dcac1df9704c4179dfeb}} 
+const \mbox{\hyperlink{classOnsets}{Onsets}} \mbox{\hyperlink{group__output_ga42a2ffdfe358dcac1df9704c4179dfeb}{operator+}} (const \mbox{\hyperlink{classOnsets}{Onsets}} \&lhs, const \mbox{\hyperlink{classOnsets}{Onsets}} \&rhs)
+\begin{DoxyCompactList}\small\item\em ordered merge \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga633737bbc1050067a6ae18fac4de863f}\label{group__output_ga633737bbc1050067a6ae18fac4de863f}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classQDate}{Q\+Date}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__output_ga352cef0201630bbd48cc2cd14ecbe5ab}\label{group__output_ga352cef0201630bbd48cc2cd14ecbe5ab}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPosition}{Position}} \&pos)
+\item 
+\mbox{\Hypertarget{group__output_gaccc3468661637ee13e14eb176997086f}\label{group__output_gaccc3468661637ee13e14eb176997086f}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t)
+\item 
+\mbox{\Hypertarget{group__output_gaa15fcbf280e167eab1fe03f9c0f5663c}\label{group__output_gaa15fcbf280e167eab1fe03f9c0f5663c}} 
+\mbox{\hyperlink{classPosition}{Position}} {\bfseries operator+} (const \mbox{\hyperlink{classPosition}{Position}} \&p, const size\+\_\+t \&i)
+\item 
+\mbox{\Hypertarget{group__output_ga857c7d77fd72ff4aa331c2d7aa1ff9b2}\label{group__output_ga857c7d77fd72ff4aa331c2d7aa1ff9b2}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classValueList}{Value\+List}} \&l)
+\item 
+\mbox{\Hypertarget{group__output_gaca91eab87be1cd794334474670baa188}\label{group__output_gaca91eab87be1cd794334474670baa188}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&lhs, const \mbox{\hyperlink{classValueList}{Value\+List}} \&rhs)
+\item 
+\mbox{\Hypertarget{group__output_gaad126050f09b6e61d8a4bda13c17ad8a}\label{group__output_gaad126050f09b6e61d8a4bda13c17ad8a}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&lhs, const \mbox{\hyperlink{classValueList}{Value\+List}} \&rhs)
+\item 
+string \mbox{\hyperlink{group__output_ga2c194b384127267b8cfed2c41e70d338}{Rhythm\+Tree\+::\+A\+P\+T\+ED}} () const
+\begin{DoxyCompactList}\small\item\em format for Tree Edit \mbox{\hyperlink{classDistance}{Distance}} Salzburg library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga24f753a9aa9316fc7903e6f253b94944}\label{group__output_ga24f753a9aa9316fc7903e6f253b94944}} 
+\mbox{\hyperlink{group__output_ga24f753a9aa9316fc7903e6f253b94944}{Duration\+List\+::\+Duration\+List}} ()
+\begin{DoxyCompactList}\small\item\em empty duration list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga3dffe3684ea0f218d03ddcfd7ee783f8}\label{group__output_ga3dffe3684ea0f218d03ddcfd7ee783f8}} 
+{\bfseries Duration\+List\+::\+Duration\+List} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&)
+\item 
+\mbox{\Hypertarget{group__output_ga831728f737383383f8f74580161eb3fb}\label{group__output_ga831728f737383383f8f74580161eb3fb}} 
+\mbox{\hyperlink{classDurationList}{Duration\+List}} \& {\bfseries Duration\+List\+::operator=} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&)
+\item 
+\mbox{\hyperlink{group__output_ga95ba6b1b14592003fdc97b69f982677c}{Duration\+List\+::\+Duration\+List}} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&l, \mbox{\hyperlink{classRational}{Rational}} q)
+\begin{DoxyCompactList}\small\item\em copy of duration list l where all elements are multiplied by given Ratio q. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__output_gab678d41f41605596499c3f17a5f39120}{Duration\+List\+::\+Duration\+List}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em read duration list from file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga293312eb9bbd4ac03d0add796c8eb12a}\label{group__output_ga293312eb9bbd4ac03d0add796c8eb12a}} 
+bool {\bfseries Duration\+List\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__output_ga7fa2c8c9f2e3954592e4f0e264560e54}\label{group__output_ga7fa2c8c9f2e3954592e4f0e264560e54}} 
+bool {\bfseries Duration\+List\+::complete} () const
+\item 
+\mbox{\Hypertarget{group__output_ga130ef44efbc7af3c3c9a6efa23639378}\label{group__output_ga130ef44efbc7af3c3c9a6efa23639378}} 
+bool {\bfseries Duration\+List\+::unit} () const
+\item 
+\mbox{\Hypertarget{group__output_ga8b4434664a0dd2938fae9791fd34febd}\label{group__output_ga8b4434664a0dd2938fae9791fd34febd}} 
+bool \mbox{\hyperlink{group__output_ga8b4434664a0dd2938fae9791fd34febd}{Duration\+List\+::single\+\_\+continuation}} () const
+\begin{DoxyCompactList}\small\item\em one (non null) continuation and no event in the main list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gabdd5f118e0ea1566362a9eaed2ce0471}\label{group__output_gabdd5f118e0ea1566362a9eaed2ce0471}} 
+bool \mbox{\hyperlink{group__output_gabdd5f118e0ea1566362a9eaed2ce0471}{Duration\+List\+::single\+\_\+event}} () const
+\begin{DoxyCompactList}\small\item\em no continuation and only one event in the main list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gadd91aa5ec57a51c6253ea872eadb28dc}\label{group__output_gadd91aa5ec57a51c6253ea872eadb28dc}} 
+bool \mbox{\hyperlink{group__output_gadd91aa5ec57a51c6253ea872eadb28dc}{Duration\+List\+::event}} () const
+\begin{DoxyCompactList}\small\item\em no continuation and some grace notes (dur=0) + one event (dur$>$0) in the main list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga72427605bbceabff329459a610db1201}\label{group__output_ga72427605bbceabff329459a610db1201}} 
+size\+\_\+t \mbox{\hyperlink{group__output_ga72427605bbceabff329459a610db1201}{Duration\+List\+::nbgn}} () const
+\begin{DoxyCompactList}\small\item\em number of grace note must be an \mbox{\hyperlink{group__output_gadd91aa5ec57a51c6253ea872eadb28dc}{event()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga540cf8decb4f62a80e871ab1e6dd31de}\label{group__output_ga540cf8decb4f62a80e871ab1e6dd31de}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__output_ga540cf8decb4f62a80e871ab1e6dd31de}{Duration\+List\+::length}} () const
+\begin{DoxyCompactList}\small\item\em sum of the elements of the duration list (including continuation) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__output_gaddb48455388f36f48ace0f0c0b250105}{Duration\+List\+::add}} (\mbox{\hyperlink{classRational}{Rational}})
+\begin{DoxyCompactList}\small\item\em add the event at the end of the main list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__output_gab9d508060073c83c27e13f8f2472de38}{Duration\+List\+::addcont}} (\mbox{\hyperlink{classRational}{Rational}})
+\begin{DoxyCompactList}\small\item\em push a continuation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDurationList}{Duration\+List}} \& \mbox{\hyperlink{group__output_ga06ae4f865c1c27edd490f1631d76452a}{Duration\+List\+::operator+=}} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&rhs)
+\begin{DoxyCompactList}\small\item\em concatenation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga20a55c27bcb4ec4f639d4f7f79153be5}\label{group__output_ga20a55c27bcb4ec4f639d4f7f79153be5}} 
+void \mbox{\hyperlink{group__output_ga20a55c27bcb4ec4f639d4f7f79153be5}{Duration\+List\+::normalize}} ()
+\begin{DoxyCompactList}\small\item\em divide by the number of lists summed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga2c12fa35cd11a35a98e4680975e3f8b8}\label{group__output_ga2c12fa35cd11a35a98e4680975e3f8b8}} 
+{\bfseries Duration\+Tree\+::\+Duration\+Tree} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&d)
+\item 
+\mbox{\Hypertarget{group__output_ga524c96edadc8725d997f81de3663ce4d}\label{group__output_ga524c96edadc8725d997f81de3663ce4d}} 
+\mbox{\hyperlink{classDurationTree}{Duration\+Tree}} $\ast$ {\bfseries Duration\+Tree\+::sub} (size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{group__output_gaa2d2c8bb6a5bd48679122a220a9d8d00}\label{group__output_gaa2d2c8bb6a5bd48679122a220a9d8d00}} 
+{\bfseries Label\+::\+Label} (int a=0)
+\item 
+\mbox{\Hypertarget{group__output_ga189208973cef74bb65357535d43885ed}\label{group__output_ga189208973cef74bb65357535d43885ed}} 
+size\+\_\+t {\bfseries Label\+::arity} () const
+\item 
+\mbox{\Hypertarget{group__output_ga9c677c6efeee575a05c0a32511ad7cf1}\label{group__output_ga9c677c6efeee575a05c0a32511ad7cf1}} 
+static size\+\_\+t {\bfseries Label\+::nb\+Grace\+Notes} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\item 
+\mbox{\Hypertarget{group__output_ga58660df99e9a20f35ee0dab2901aa637}\label{group__output_ga58660df99e9a20f35ee0dab2901aa637}} 
+static size\+\_\+t {\bfseries Label\+::nb\+Events} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\item 
+\mbox{\Hypertarget{group__output_ga56a227805fd6d43d1f2618e871a4108c}\label{group__output_ga56a227805fd6d43d1f2618e871a4108c}} 
+static bool {\bfseries Label\+::continuation} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\item 
+\mbox{\Hypertarget{group__output_ga3724371343de270b6f488ca47d11b917}\label{group__output_ga3724371343de270b6f488ca47d11b917}} 
+static bool {\bfseries Label\+::abstract} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\item 
+\mbox{\Hypertarget{group__output_ga07b8cb2137bfde63b8f2686ed6f20db0}\label{group__output_ga07b8cb2137bfde63b8f2686ed6f20db0}} 
+static bool {\bfseries Label\+::abstract} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} a, \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} n)
+\item 
+\mbox{\Hypertarget{group__output_ga686ea0e366bdefcf68714e411cad577f}\label{group__output_ga686ea0e366bdefcf68714e411cad577f}} 
+static bool {\bfseries Label\+::leqabstract} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} a, \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} n)
+\item 
+\mbox{\Hypertarget{group__output_ga7679a09f4cdd668f395a24deb498cdc2}\label{group__output_ga7679a09f4cdd668f395a24deb498cdc2}} 
+{\bfseries Inner\+Label\+::\+Inner\+Label} (unsigned int)
+\item 
+\mbox{\Hypertarget{group__output_gad5d7a4117cae3ac10b55ea051aa92848}\label{group__output_gad5d7a4117cae3ac10b55ea051aa92848}} 
+{\bfseries Event\+Label\+::\+Event\+Label} (unsigned int n=0)
+\item 
+\mbox{\Hypertarget{group__output_gae8b849bfdbed392ff2171126354210a0}\label{group__output_gae8b849bfdbed392ff2171126354210a0}} 
+size\+\_\+t {\bfseries Event\+Label\+::nb\+Grace\+Notes} () const
+\item 
+\mbox{\Hypertarget{group__output_ga77779608bf4588f37330cecaf4cc2f1e}\label{group__output_ga77779608bf4588f37330cecaf4cc2f1e}} 
+void {\bfseries Event\+Label\+::add\+Grace\+Notes} (unsigned int)
+\item 
+\mbox{\Hypertarget{group__output_ga6a71e2488e33f2556ee9051d0bc88820}\label{group__output_ga6a71e2488e33f2556ee9051d0bc88820}} 
+void {\bfseries Event\+Label\+::push\+Event} (Event $\ast$)
+\item 
+string \mbox{\hyperlink{group__output_gafcd0d23d1cdb8cd92fbaec2fac51d259}{Rhythm\+Tree\+::lily}} (int depth, bool \mbox{\hyperlink{group__output_ga3933e83072d4e7c3bb3d19d25df90b47}{tie}}=false) const
+\begin{DoxyCompactList}\small\item\em Lily\+Pond format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga93aca0f691a35a081d51eaad06e8ce50}\label{group__output_ga93aca0f691a35a081d51eaad06e8ce50}} 
+string \mbox{\hyperlink{group__output_ga93aca0f691a35a081d51eaad06e8ce50}{Rhythm\+Tree\+::lilydot}} (int depth)
+\begin{DoxyCompactList}\small\item\em Lily\+Pond format with dots. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga89f5bf140b902f886be124d620ac8474}\label{group__output_ga89f5bf140b902f886be124d620ac8474}} 
+string \mbox{\hyperlink{group__output_ga89f5bf140b902f886be124d620ac8474}{Rhythm\+Tree\+::lilydot}} (int depth, bool \mbox{\hyperlink{group__output_ga3933e83072d4e7c3bb3d19d25df90b47}{tie}}, bool dot, bool ignore\+\_\+first, bool ignore\+\_\+second)
+\begin{DoxyCompactList}\small\item\em Lily\+Pond format with dots. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__output_ga67acb233e47d9942cb678fb24b67f799}{M\+E\+I\+::\+M\+EI}} ()
+\item 
+void \mbox{\hyperlink{group__output_ga28b9390a3699a9ae7abdba51cb3cb7d5}{M\+E\+I\+::create\+From\+Score}} (const \mbox{\hyperlink{classScoreModel_1_1Score}{Score\+Model\+::\+Score}} \&s)
+\item 
+void \mbox{\hyperlink{group__output_gaec3627352aed16ef31dfabe7d243c476}{M\+E\+I\+::create\+Score\+Def}} (const \mbox{\hyperlink{classScoreModel_1_1Score}{Score\+Model\+::\+Score}} \&s)
+\item 
+std\+::pair$<$ string, int $>$ \mbox{\hyperlink{group__output_ga707656b4b214953f8be23c95415a8ed5}{M\+E\+I\+::choose\+Clef}} (std\+::pair$<$ \mbox{\hyperlink{classPitch}{Pitch}}, \mbox{\hyperlink{classPitch}{Pitch}} $>$ range)
+\item 
+void \mbox{\hyperlink{group__output_ga7f0c47ab091313feb0a7fba4d23e09da}{M\+E\+I\+::write\+In\+File}} (const string fname)
+\item 
+\mbox{\Hypertarget{group__output_ga6c05e4fec7d79e79d9022130e8fef2ad}\label{group__output_ga6c05e4fec7d79e79d9022130e8fef2ad}} 
+static Note $\ast$ {\bfseries M\+E\+I\+::make\+Note} (const \mbox{\hyperlink{classScoreModel_1_1Note}{Score\+Model\+::\+Note}} $\ast$note\+Event)
+\item 
+\mbox{\Hypertarget{group__output_gafa5b4ccd58b7537120b30437c8072852}\label{group__output_gafa5b4ccd58b7537120b30437c8072852}} 
+static Tie $\ast$ {\bfseries M\+E\+I\+::make\+Tie} (const Score\+Model\+::\+Tie $\ast$tie)
+\item 
+\mbox{\Hypertarget{group__output_gabbdc2a86af7313ccc63b1b502d9b0aa5}\label{group__output_gabbdc2a86af7313ccc63b1b502d9b0aa5}} 
+static Tuplet\+Span $\ast$ {\bfseries M\+E\+I\+::make\+Tuplet\+Span} (const \mbox{\hyperlink{classScoreModel_1_1Tuplet}{Score\+Model\+::\+Tuplet}} $\ast$tuplet)
+\item 
+\mbox{\hyperlink{group__output_ga1e4233e0a65d642f227dba08be1fe592}{M\+E\+I\+::$\sim$\+M\+EI}} ()
+\item 
+\mbox{\Hypertarget{group__output_gac708fcabf8489ca08a9f7231eeb928d0}\label{group__output_gac708fcabf8489ca08a9f7231eeb928d0}} 
+{\bfseries O\+M\+Rhythm\+Tree\+::\+O\+M\+Rhythm\+Tree} (\mbox{\hyperlink{classRational}{Rational}} lab, bool tied=false)
+\item 
+\mbox{\Hypertarget{group__output_ga1dae8e3f43573cc3aac4859b5b618ef3}\label{group__output_ga1dae8e3f43573cc3aac4859b5b618ef3}} 
+{\bfseries O\+M\+Rhythm\+Tree\+::\+O\+M\+Rhythm\+Tree} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$, \mbox{\hyperlink{classRational}{Rational}} dur=\mbox{\hyperlink{classRational}{Rational}}(1))
+\item 
+\mbox{\Hypertarget{group__output_ga5877122dcb737ec9bdbe94241b867b4e}\label{group__output_ga5877122dcb737ec9bdbe94241b867b4e}} 
+size\+\_\+t {\bfseries O\+M\+Rhythm\+Tree\+::size} () const
+\item 
+\mbox{\Hypertarget{group__output_ga59d59642fc58d66772d51a075720a701}\label{group__output_ga59d59642fc58d66772d51a075720a701}} 
+\mbox{\hyperlink{classOMRhythmTree}{O\+M\+Rhythm\+Tree}} $\ast$ {\bfseries O\+M\+Rhythm\+Tree\+::child} (size\+\_\+t) const
+\item 
+\mbox{\Hypertarget{group__output_ga6e273a3942470268fb775857d80bc2a8}\label{group__output_ga6e273a3942470268fb775857d80bc2a8}} 
+void {\bfseries O\+M\+Rhythm\+Tree\+::add} (\mbox{\hyperlink{classOMRhythmTree}{O\+M\+Rhythm\+Tree}} $\ast$)
+\item 
+\mbox{\Hypertarget{group__output_ga14633b5c977b30f4a28085c686c3c17f}\label{group__output_ga14633b5c977b30f4a28085c686c3c17f}} 
+string {\bfseries O\+M\+Rhythm\+Tree\+::to\+\_\+string} () const
+\item 
+\mbox{\hyperlink{group__output_ga6a3bc246737b5cc48df0e07b36e9935f}{Onsets\+::\+Onsets}} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&)
+\begin{DoxyCompactList}\small\item\em the list of onsets defined by the given duration list (I\+OI\textquotesingle{}s) the first onset is 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gad3393b6422e8708954e27a52933620e1}\label{group__output_gad3393b6422e8708954e27a52933620e1}} 
+\mbox{\hyperlink{classDurationList}{Duration\+List}} \mbox{\hyperlink{group__output_gad3393b6422e8708954e27a52933620e1}{Onsets\+::ioi}} () const
+\begin{DoxyCompactList}\small\item\em the list of I\+OI associated to this list of onsets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga00153f3142fe2d750b995d95435d852e}\label{group__output_ga00153f3142fe2d750b995d95435d852e}} 
+{\bfseries Pointed\+Rhythm\+Tree\+::\+Pointed\+Rhythm\+Tree} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} lab)
+\item 
+\mbox{\Hypertarget{group__output_gad86382b8bc2a62cc5d8848c516280c52}\label{group__output_gad86382b8bc2a62cc5d8848c516280c52}} 
+{\bfseries Pointed\+Rhythm\+Tree\+::\+Pointed\+Rhythm\+Tree} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$, const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, size\+\_\+t i=0)
+\item 
+\mbox{\Hypertarget{group__output_ga1151b393ffd2c621914c8e0641fff3d3}\label{group__output_ga1151b393ffd2c621914c8e0641fff3d3}} 
+{\bfseries Q\+Date\+::\+Q\+Date} (size\+\_\+t blocs, size\+\_\+t rel)
+\item 
+\mbox{\Hypertarget{group__output_gab39d4fd438b410d8310f4bf43703904f}\label{group__output_gab39d4fd438b410d8310f4bf43703904f}} 
+{\bfseries Q\+Date\+::\+Q\+Date} (const \mbox{\hyperlink{classQDate}{Q\+Date}} \&)
+\item 
+\mbox{\Hypertarget{group__output_ga28238d09bb0f332bda66fafb92facb3b}\label{group__output_ga28238d09bb0f332bda66fafb92facb3b}} 
+virtual \mbox{\hyperlink{classQDate}{Q\+Date}} \& {\bfseries Q\+Date\+::operator=} (const \mbox{\hyperlink{classQDate}{Q\+Date}} \&)
+\item 
+\mbox{\Hypertarget{group__output_ga59599012a00e9c2ae587144f47085130}\label{group__output_ga59599012a00e9c2ae587144f47085130}} 
+virtual \mbox{\hyperlink{classQDate}{Q\+Date}} $\ast$ {\bfseries Q\+Date\+::clone} () const
+\item 
+\mbox{\Hypertarget{group__output_ga07a4414576afc26204002ce92dcc7ce9}\label{group__output_ga07a4414576afc26204002ce92dcc7ce9}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{group__output_ga07a4414576afc26204002ce92dcc7ce9}{Q\+Date\+::absolute}} (size\+\_\+t res) const
+\begin{DoxyCompactList}\small\item\em quantified date as rational value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gac8e931429f0f79f9e9f5754d3b98fe36}\label{group__output_gac8e931429f0f79f9e9f5754d3b98fe36}} 
+void {\bfseries Q\+Date\+::print} (std\+::ostream \&) const
+\item 
+\mbox{\Hypertarget{group__output_gaf69eee7904ee41d76e3a1a61ab92cfd1}\label{group__output_gaf69eee7904ee41d76e3a1a61ab92cfd1}} 
+void \mbox{\hyperlink{group__output_gaf69eee7904ee41d76e3a1a61ab92cfd1}{Q\+Date\+::print}} (std\+::ostream \&, size\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em fractional print using resolution value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga369a577425f8ba02e8750d04b6a088db}\label{group__output_ga369a577425f8ba02e8750d04b6a088db}} 
+\mbox{\hyperlink{group__output_ga369a577425f8ba02e8750d04b6a088db}{Position\+::\+Position}} ()
+\begin{DoxyCompactList}\small\item\em empty sequence = root position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga63750e368482cc5ef45180d3672b1c55}\label{group__output_ga63750e368482cc5ef45180d3672b1c55}} 
+{\bfseries Position\+::\+Position} (const \mbox{\hyperlink{classPosition}{Position}} \&)
+\item 
+\mbox{\Hypertarget{group__output_ga886868520756636e98110cdb06349326}\label{group__output_ga886868520756636e98110cdb06349326}} 
+bool {\bfseries Position\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__output_ga009f3b456aa0995413db1b8c0bd6f374}\label{group__output_ga009f3b456aa0995413db1b8c0bd6f374}} 
+size\+\_\+t {\bfseries Position\+::length} () const
+\item 
+void \mbox{\hyperlink{group__output_gab6b7dd5c2869fb23755faee32f1e6731}{Position\+::operator+=}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em concatenate given int to this position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga19d238e39cbe5a9f03929473bbd5b745}\label{group__output_ga19d238e39cbe5a9f03929473bbd5b745}} 
+void {\bfseries Position\+::print} (std\+::ostream \&o) const
+\item 
+\mbox{\hyperlink{group__output_gac7614a6239a4917c771641dfdfd597ab}{Rhythm\+Tree\+::\+Rhythm\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em empty inner tree (not terminal) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gac868521df843e116ef04bcfa52405d01}\label{group__output_gac868521df843e116ef04bcfa52405d01}} 
+\mbox{\hyperlink{group__output_gac868521df843e116ef04bcfa52405d01}{Rhythm\+Tree\+::\+Rhythm\+Tree}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} lab)
+\begin{DoxyCompactList}\small\item\em single leaf rhythm tree (terminal tree) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga058c6d59881e1be259594165d19c8588}\label{group__output_ga058c6d59881e1be259594165d19c8588}} 
+\mbox{\hyperlink{group__output_ga058c6d59881e1be259594165d19c8588}{Rhythm\+Tree\+::\+Rhythm\+Tree}} (const string \&)
+\begin{DoxyCompactList}\small\item\em extract RT from string description \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga4f875cf76d3ebc8270a471ef57e93ddd}\label{group__output_ga4f875cf76d3ebc8270a471ef57e93ddd}} 
+bool \mbox{\hyperlink{group__output_ga4f875cf76d3ebc8270a471ef57e93ddd}{Rhythm\+Tree\+::terminal}} () const
+\begin{DoxyCompactList}\small\item\em single node tree \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{group__output_ga40e2aa462ed42fa46d3beafca9dbc350}{Rhythm\+Tree\+::label}} () const
+\begin{DoxyCompactList}\small\item\em label for terminal node \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__output_ga1ca015dec36fa32ff6d66aaad10f4eb0}{Rhythm\+Tree\+::continuation}} () const
+\begin{DoxyCompactList}\small\item\em label of terminal node is a continuation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__output_gabd793b78f71fb62edb13497e0a13f48c}{Rhythm\+Tree\+::single\+\_\+event}} () const
+\begin{DoxyCompactList}\small\item\em label of terminal node is a single event (1 note / rest, no grace note). \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__output_gaaaf06fe2227a6598b109a72d89afa8d7}{Rhythm\+Tree\+::nbgn}} () const
+\begin{DoxyCompactList}\small\item\em number of grace notes in this terminal node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga813a6feea3e6aa565fa0aed29e970a4e}\label{group__output_ga813a6feea3e6aa565fa0aed29e970a4e}} 
+size\+\_\+t \mbox{\hyperlink{group__output_ga813a6feea3e6aa565fa0aed29e970a4e}{Rhythm\+Tree\+::arity}} () const
+\begin{DoxyCompactList}\small\item\em arity of root node (0 for terminal tree) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$ \mbox{\hyperlink{group__output_ga130dd34b9f3e0db4ad4f185181895dbd}{Rhythm\+Tree\+::child}} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em return the ith child of this tree \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__output_ga5749469b3ff6ec88fcab75961e7d278c}{Rhythm\+Tree\+::add}} (\mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$)
+\begin{DoxyCompactList}\small\item\em add a subtree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__output_gafdda5b1a3c16c8e64337c26bcdb368e9}{Rhythm\+Tree\+::reducible}} () const
+\begin{DoxyCompactList}\small\item\em this tree contains a subtree of the form. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__output_gaf723874e871dc01efb036ccbac07c32b}{Rhythm\+Tree\+::tail\+\_\+redex}} () const
+\begin{DoxyCompactList}\small\item\em inner and the children list is of the form. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga799761965ae00bb24e16ebb98f66995a}\label{group__output_ga799761965ae00bb24e16ebb98f66995a}} 
+bool \mbox{\hyperlink{group__output_ga799761965ae00bb24e16ebb98f66995a}{Rhythm\+Tree\+::tail\+\_\+reducible}} () const
+\begin{DoxyCompactList}\small\item\em inner and one of the children 1..a is reducible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga3933e83072d4e7c3bb3d19d25df90b47}\label{group__output_ga3933e83072d4e7c3bb3d19d25df90b47}} 
+bool \mbox{\hyperlink{group__output_ga3933e83072d4e7c3bb3d19d25df90b47}{Rhythm\+Tree\+::tie}} () const
+\begin{DoxyCompactList}\small\item\em return whether this tree is a continuation (a leaf). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gacd73e0032e3dd22320819c4cda3d60a4}\label{group__output_gacd73e0032e3dd22320819c4cda3d60a4}} 
+bool \mbox{\hyperlink{group__output_gacd73e0032e3dd22320819c4cda3d60a4}{Rhythm\+Tree\+::tied}} () const
+\begin{DoxyCompactList}\small\item\em return whether the leftmost innermost leaf is a tie (continuation). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gafb30d2c520e4c5e8600ae3a58abf9c72}\label{group__output_gafb30d2c520e4c5e8600ae3a58abf9c72}} 
+bool \mbox{\hyperlink{group__output_gafb30d2c520e4c5e8600ae3a58abf9c72}{Rhythm\+Tree\+::binary}} () const
+\begin{DoxyCompactList}\small\item\em return whether this tree is binary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga9aebdccd4ce1d1029d03f4ec38c101c4}\label{group__output_ga9aebdccd4ce1d1029d03f4ec38c101c4}} 
+bool \mbox{\hyperlink{group__output_ga9aebdccd4ce1d1029d03f4ec38c101c4}{Rhythm\+Tree\+::second\+\_\+tied}} () const
+\begin{DoxyCompactList}\small\item\em return whether this tree is binary and the second child is tied. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gac785e6d945ef6e0808132459669ab038}\label{group__output_gac785e6d945ef6e0808132459669ab038}} 
+bool \mbox{\hyperlink{group__output_gac785e6d945ef6e0808132459669ab038}{Rhythm\+Tree\+::dot\+\_\+after}} () const
+\begin{DoxyCompactList}\small\item\em return whether this tree is binary and the left son is a dot (continuation after the dotted note). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga2079bd534900d0b10e74682e404230b1}\label{group__output_ga2079bd534900d0b10e74682e404230b1}} 
+bool \mbox{\hyperlink{group__output_ga2079bd534900d0b10e74682e404230b1}{Rhythm\+Tree\+::dot\+\_\+before}} () const
+\begin{DoxyCompactList}\small\item\em return whether this tree is binary and the right son is a dot (continuation before the dotted note). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gac6764688e24fe9b942464a9c2053ee92}\label{group__output_gac6764688e24fe9b942464a9c2053ee92}} 
+string {\bfseries Rhythm\+Tree\+::to\+\_\+string} () const
+\item 
+\mbox{\Hypertarget{group__output_ga2d7e95e5b2cc887aa9c4db52fab1b0d3}\label{group__output_ga2d7e95e5b2cc887aa9c4db52fab1b0d3}} 
+static size\+\_\+t \mbox{\hyperlink{group__output_ga2d7e95e5b2cc887aa9c4db52fab1b0d3}{Serial\+Label\+::nb\+Events}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em number of note + grace notes encoded in given leaf label \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga3d92180f844d00eaf0bbd46e10f022e4}\label{group__output_ga3d92180f844d00eaf0bbd46e10f022e4}} 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__output_ga3d92180f844d00eaf0bbd46e10f022e4}{Serial\+Label\+::pre}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em return the pre value of the given leaf label \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga7c5289addb03e9bf54467e2d84c7ef79}\label{group__output_ga7c5289addb03e9bf54467e2d84c7ef79}} 
+static \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__output_ga7c5289addb03e9bf54467e2d84c7ef79}{Serial\+Label\+::post}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em return the post value of the given leaf label \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga0f5679843d6bcd3e97ecd535c4d3c6f8}\label{group__output_ga0f5679843d6bcd3e97ecd535c4d3c6f8}} 
+static size\+\_\+t \mbox{\hyperlink{group__output_ga0f5679843d6bcd3e97ecd535c4d3c6f8}{Serial\+Label\+::nb\+Grace\+Notes}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em return the number of grace node encoded in given leaf label \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_gaaf4c88a23710366cbe35081a0967b536}\label{group__output_gaaf4c88a23710366cbe35081a0967b536}} 
+static bool \mbox{\hyperlink{group__output_gaaf4c88a23710366cbe35081a0967b536}{Serial\+Label\+::continuation}} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em the given leaf label is a continuation (no event, no grace note) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} \mbox{\hyperlink{group__output_ga69973921641222cb765112c70df25318}{Serial\+Label\+::serialize}} (\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__output_ga3d92180f844d00eaf0bbd46e10f022e4}{pre}}, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{group__output_ga7c5289addb03e9bf54467e2d84c7ef79}{post}}, size\+\_\+t nb)
+\begin{DoxyCompactList}\small\item\em return the leaf label encoding the given \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__output_ga187d1dfe0e942d18f1e2c3150e9aa185}\label{group__output_ga187d1dfe0e942d18f1e2c3150e9aa185}} 
+{\bfseries Value\+List\+::\+Value\+List} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+\mbox{\Hypertarget{group__output_gad518d3f6ddf7fb7b74275eef20205893}\label{group__output_gad518d3f6ddf7fb7b74275eef20205893}} 
+{\bfseries Value\+List\+::\+Value\+List} (std\+::string)
+\item 
+\mbox{\Hypertarget{group__output_gaec135d71a5c51579bec52c805c0b3ded}\label{group__output_gaec135d71a5c51579bec52c805c0b3ded}} 
+{\bfseries Value\+List\+::\+Value\+List} (const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&)
+\item 
+\mbox{\Hypertarget{group__output_gabd7a0aa8113f72c13205c0702eb269ff}\label{group__output_gabd7a0aa8113f72c13205c0702eb269ff}} 
+{\bfseries Value\+List\+::\+Value\+List} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+\mbox{\Hypertarget{group__output_gab09ac2a5e83e806431634ddd87f596fc}\label{group__output_gab09ac2a5e83e806431634ddd87f596fc}} 
+\mbox{\hyperlink{classValueList}{Value\+List}} \& {\bfseries Value\+List\+::operator=} (const \mbox{\hyperlink{classValueList}{Value\+List}} \&)
+\item 
+\mbox{\Hypertarget{group__output_ga7510db734db466464100413728db233c}\label{group__output_ga7510db734db466464100413728db233c}} 
+bool {\bfseries Value\+List\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__output_ga2ebf6a43ad145e4593cc961a4016f330}\label{group__output_ga2ebf6a43ad145e4593cc961a4016f330}} 
+bool {\bfseries Value\+List\+::complete} () const
+\item 
+\mbox{\Hypertarget{group__output_ga9d68ca01f81000f92f1c8911cbd414da}\label{group__output_ga9d68ca01f81000f92f1c8911cbd414da}} 
+bool {\bfseries Value\+List\+::single\+\_\+continuation} () const
+\item 
+\mbox{\Hypertarget{group__output_gaff6e5912f71832597303efe0093d5d00}\label{group__output_gaff6e5912f71832597303efe0093d5d00}} 
+bool {\bfseries Value\+List\+::event} () const
+\item 
+\mbox{\Hypertarget{group__output_ga699183ea1d3babeb7c2c094e31e7070f}\label{group__output_ga699183ea1d3babeb7c2c094e31e7070f}} 
+bool {\bfseries Value\+List\+::single\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{group__output_ga9078b4e45f9864eec53bbfa68d7709d0}\label{group__output_ga9078b4e45f9864eec53bbfa68d7709d0}} 
+void {\bfseries Value\+List\+::add} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+\mbox{\Hypertarget{group__output_gaeb6d26ee1813f879c07148df644a5321}\label{group__output_gaeb6d26ee1813f879c07148df644a5321}} 
+void {\bfseries Value\+List\+::addcont} (\mbox{\hyperlink{classRational}{Rational}})
+\item 
+\mbox{\Hypertarget{group__output_ga282fe7cbc28917f2b096d2183419a30c}\label{group__output_ga282fe7cbc28917f2b096d2183419a30c}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries Value\+List\+::front} () const
+\item 
+\mbox{\Hypertarget{group__output_ga9d5ccdd934a0715c597650fd8cd8d5ed}\label{group__output_ga9d5ccdd934a0715c597650fd8cd8d5ed}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries Value\+List\+::pop} ()
+\item 
+\mbox{\Hypertarget{group__output_ga77bf4e64e28ee7a3bd2989ffe25f7fc9}\label{group__output_ga77bf4e64e28ee7a3bd2989ffe25f7fc9}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries Value\+List\+::popcont} ()
+\item 
+\mbox{\Hypertarget{group__output_ga7802d98c6ad4e622847be23fbaa6cbea}\label{group__output_ga7802d98c6ad4e622847be23fbaa6cbea}} 
+void {\bfseries Value\+List\+::popcont} (\mbox{\hyperlink{classRational}{Rational}})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__output_ga774fcd89afe324f01efa6514626dd1cb}\label{group__output_ga774fcd89afe324f01efa6514626dd1cb}} 
+static bool \mbox{\hyperlink{group__output_ga774fcd89afe324f01efa6514626dd1cb}{Rhythm\+Tree\+::dot\+\_\+flag}} = false
+\begin{DoxyCompactList}\small\item\em global variable set if a dot is added in lilydot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\ttfamily output} module contains representations for the output of the parsing procedure and conversion into music transcription results. 
+
+\mbox{\hyperlink{classMEI}{M\+EI}} interface. Can be used to output \mbox{\hyperlink{classMEI}{M\+EI}} document from a transcription result
+
+\begin{DoxyAuthor}{Author}
+Philippe Rigaux 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__output_ga2c194b384127267b8cfed2c41e70d338}\label{group__output_ga2c194b384127267b8cfed2c41e70d338}} 
+\index{Output module@{Output module}!APTED@{APTED}}
+\index{APTED@{APTED}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{APTED()}{APTED()}}
+{\footnotesize\ttfamily string Rhythm\+Tree\+::\+A\+P\+T\+ED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+format for Tree Edit \mbox{\hyperlink{classDistance}{Distance}} Salzburg library. 
+
+RT output format for Tree Edit \mbox{\hyperlink{classDistance}{Distance}} library A\+P\+T\+ED algorithm of M. Pawlik and N. Augsten \href{http://tree-edit-distance.dbresearch.uni-salzburg.at}{\texttt{ http\+://tree-\/edit-\/distance.\+dbresearch.\+uni-\/salzburg.\+at}}. \mbox{\Hypertarget{group__output_ga95ba6b1b14592003fdc97b69f982677c}\label{group__output_ga95ba6b1b14592003fdc97b69f982677c}} 
+\index{Output module@{Output module}!DurationList@{DurationList}}
+\index{DurationList@{DurationList}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{DurationList()}{DurationList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Duration\+List\+::\+Duration\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&}]{l,  }\item[{\mbox{\hyperlink{classRational}{Rational}}}]{q }\end{DoxyParamCaption})}
+
+
+
+copy of duration list l where all elements are multiplied by given Ratio q. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & suration list to copy and update \\
+\hline
+{\em q} & given ratio for update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__output_gab678d41f41605596499c3f17a5f39120}\label{group__output_gab678d41f41605596499c3f17a5f39120}} 
+\index{Output module@{Output module}!DurationList@{DurationList}}
+\index{DurationList@{DurationList}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{DurationList()}{DurationList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Duration\+List\+::\+Duration\+List (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+read duration list from file. 
+
+one ratio per line if the first line is negative ratio, it is a continuation all other line must contain positive or null ratios. \begin{DoxyWarning}{Warning}
+the file must not be empty.
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]T\+BR only for testing. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__output_gaddb48455388f36f48ace0f0c0b250105}\label{group__output_gaddb48455388f36f48ace0f0c0b250105}} 
+\index{Output module@{Output module}!add@{add}}
+\index{add@{add}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Duration\+List\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRational}{Rational}}}]{q }\end{DoxyParamCaption})}
+
+
+
+add the event at the end of the main list. 
+
+\begin{DoxyWarning}{Warning}
+fail if event cannot be added (makes sum $>$ 1). 
+
+this list must not have have been summed with others. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_gab9d508060073c83c27e13f8f2472de38}\label{group__output_gab9d508060073c83c27e13f8f2472de38}} 
+\index{Output module@{Output module}!addcont@{addcont}}
+\index{addcont@{addcont}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{addcont()}{addcont()}}
+{\footnotesize\ttfamily void Duration\+List\+::addcont (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRational}{Rational}}}]{q }\end{DoxyParamCaption})}
+
+
+
+push a continuation value. 
+
+\begin{DoxyWarning}{Warning}
+fail if cont cannot be added (makes sum $>$ 1). 
+
+this list must not have been summed with others. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_ga06ae4f865c1c27edd490f1631d76452a}\label{group__output_ga06ae4f865c1c27edd490f1631d76452a}} 
+\index{Output module@{Output module}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDurationList}{Duration\+List}} \& Duration\+List\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+concatenation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & duration list to concatenate, must not be empty, and must not be the summation of several duration lists. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__output_gafcd0d23d1cdb8cd92fbaec2fac51d259}\label{group__output_gafcd0d23d1cdb8cd92fbaec2fac51d259}} 
+\index{Output module@{Output module}!lily@{lily}}
+\index{lily@{lily}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{lily()}{lily()}}
+{\footnotesize\ttfamily string Rhythm\+Tree\+::lily (\begin{DoxyParamCaption}\item[{int}]{depth,  }\item[{bool}]{tie = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Lily\+Pond format. 
+
+Lilypond output for RT \href{http://lilypond.org}{\texttt{ http\+://lilypond.\+org}}. \mbox{\Hypertarget{group__output_ga67acb233e47d9942cb678fb24b67f799}\label{group__output_ga67acb233e47d9942cb678fb24b67f799}} 
+\index{Output module@{Output module}!MEI@{MEI}}
+\index{MEI@{MEI}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{MEI()}{MEI()}}
+{\footnotesize\ttfamily M\+E\+I\+::\+M\+EI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main constructor \mbox{\Hypertarget{group__output_ga28b9390a3699a9ae7abdba51cb3cb7d5}\label{group__output_ga28b9390a3699a9ae7abdba51cb3cb7d5}} 
+\index{Output module@{Output module}!createFromScore@{createFromScore}}
+\index{createFromScore@{createFromScore}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{createFromScore()}{createFromScore()}}
+{\footnotesize\ttfamily void M\+E\+I\+::create\+From\+Score (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classScoreModel_1_1Score}{Score\+Model\+::\+Score}} \&}]{s }\end{DoxyParamCaption})}
+
+Check with eth Spiritual example\+: case of a \mbox{\Hypertarget{group__output_gaec3627352aed16ef31dfabe7d243c476}\label{group__output_gaec3627352aed16ef31dfabe7d243c476}} 
+\index{Output module@{Output module}!createScoreDef@{createScoreDef}}
+\index{createScoreDef@{createScoreDef}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{createScoreDef()}{createScoreDef()}}
+{\footnotesize\ttfamily void M\+E\+I\+::create\+Score\+Def (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classScoreModel_1_1Score}{Score\+Model\+::\+Score}} \&}]{s }\end{DoxyParamCaption})}
+
+Create the score definition part \mbox{\Hypertarget{group__output_ga707656b4b214953f8be23c95415a8ed5}\label{group__output_ga707656b4b214953f8be23c95415a8ed5}} 
+\index{Output module@{Output module}!chooseClef@{chooseClef}}
+\index{chooseClef@{chooseClef}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{chooseClef()}{chooseClef()}}
+{\footnotesize\ttfamily std\+::pair$<$ string, int $>$ M\+E\+I\+::choose\+Clef (\begin{DoxyParamCaption}\item[{std\+::pair$<$ \mbox{\hyperlink{classPitch}{Pitch}}, \mbox{\hyperlink{classPitch}{Pitch}} $>$}]{range }\end{DoxyParamCaption})}
+
+Choose a clef based on range \mbox{\Hypertarget{group__output_ga7f0c47ab091313feb0a7fba4d23e09da}\label{group__output_ga7f0c47ab091313feb0a7fba4d23e09da}} 
+\index{Output module@{Output module}!writeInFile@{writeInFile}}
+\index{writeInFile@{writeInFile}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{writeInFile()}{writeInFile()}}
+{\footnotesize\ttfamily void M\+E\+I\+::write\+In\+File (\begin{DoxyParamCaption}\item[{const string}]{fname }\end{DoxyParamCaption})}
+
+Save in file \mbox{\Hypertarget{group__output_ga1e4233e0a65d642f227dba08be1fe592}\label{group__output_ga1e4233e0a65d642f227dba08be1fe592}} 
+\index{Output module@{Output module}!````~MEI@{$\sim$MEI}}
+\index{````~MEI@{$\sim$MEI}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{$\sim$MEI()}{~MEI()}}
+{\footnotesize\ttfamily M\+E\+I\+::$\sim$\+M\+EI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor \mbox{\Hypertarget{group__output_ga6a3bc246737b5cc48df0e07b36e9935f}\label{group__output_ga6a3bc246737b5cc48df0e07b36e9935f}} 
+\index{Output module@{Output module}!Onsets@{Onsets}}
+\index{Onsets@{Onsets}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{Onsets()}{Onsets()}}
+{\footnotesize\ttfamily Onsets\+::\+Onsets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDurationList}{Duration\+List}} \&}]{d }\end{DoxyParamCaption})}
+
+
+
+the list of onsets defined by the given duration list (I\+OI\textquotesingle{}s) the first onset is 0. 
+
+\begin{DoxyWarning}{Warning}
+a continuation in duration list will be treated like other events 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_gab6b7dd5c2869fb23755faee32f1e6731}\label{group__output_gab6b7dd5c2869fb23755faee32f1e6731}} 
+\index{Output module@{Output module}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Position\+::operator+= (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+concatenate given int to this position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & int must be positive \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__output_gac7614a6239a4917c771641dfdfd597ab}\label{group__output_gac7614a6239a4917c771641dfdfd597ab}} 
+\index{Output module@{Output module}!RhythmTree@{RhythmTree}}
+\index{RhythmTree@{RhythmTree}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{RhythmTree()}{RhythmTree()}}
+{\footnotesize\ttfamily Rhythm\+Tree\+::\+Rhythm\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+empty inner tree (not terminal) 
+
+\begin{DoxyWarning}{Warning}
+the child list must be completed with add 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_ga40e2aa462ed42fa46d3beafca9dbc350}\label{group__output_ga40e2aa462ed42fa46d3beafca9dbc350}} 
+\index{Output module@{Output module}!label@{label}}
+\index{label@{label}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} Rhythm\+Tree\+::label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+label for terminal node 
+
+\begin{DoxyWarning}{Warning}
+this tree must be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_ga1ca015dec36fa32ff6d66aaad10f4eb0}\label{group__output_ga1ca015dec36fa32ff6d66aaad10f4eb0}} 
+\index{Output module@{Output module}!continuation@{continuation}}
+\index{continuation@{continuation}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{continuation()}{continuation()}}
+{\footnotesize\ttfamily bool Rhythm\+Tree\+::continuation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+label of terminal node is a continuation 
+
+\begin{DoxyWarning}{Warning}
+this tree must be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_gabd793b78f71fb62edb13497e0a13f48c}\label{group__output_gabd793b78f71fb62edb13497e0a13f48c}} 
+\index{Output module@{Output module}!single\_event@{single\_event}}
+\index{single\_event@{single\_event}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{single\_event()}{single\_event()}}
+{\footnotesize\ttfamily bool Rhythm\+Tree\+::single\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+label of terminal node is a single event (1 note / rest, no grace note). 
+
+\begin{DoxyWarning}{Warning}
+this tree must be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_gaaaf06fe2227a6598b109a72d89afa8d7}\label{group__output_gaaaf06fe2227a6598b109a72d89afa8d7}} 
+\index{Output module@{Output module}!nbgn@{nbgn}}
+\index{nbgn@{nbgn}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{nbgn()}{nbgn()}}
+{\footnotesize\ttfamily size\+\_\+t Rhythm\+Tree\+::nbgn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+number of grace notes in this terminal node. 
+
+\begin{DoxyWarning}{Warning}
+this tree must be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_ga130dd34b9f3e0db4ad4f185181895dbd}\label{group__output_ga130dd34b9f3e0db4ad4f185181895dbd}} 
+\index{Output module@{Output module}!child@{child}}
+\index{child@{child}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$ Rhythm\+Tree\+::child (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const}
+
+
+
+return the ith child of this tree 
+
+\begin{DoxyWarning}{Warning}
+this tree must be inner (not terminal) 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_ga5749469b3ff6ec88fcab75961e7d278c}\label{group__output_ga5749469b3ff6ec88fcab75961e7d278c}} 
+\index{Output module@{Output module}!add@{add}}
+\index{add@{add}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Rhythm\+Tree\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+add a subtree. 
+
+\begin{DoxyWarning}{Warning}
+this tree must not be terminal 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__output_gafdda5b1a3c16c8e64337c26bcdb368e9}\label{group__output_gafdda5b1a3c16c8e64337c26bcdb368e9}} 
+\index{Output module@{Output module}!reducible@{reducible}}
+\index{reducible@{reducible}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{reducible()}{reducible()}}
+{\footnotesize\ttfamily bool Rhythm\+Tree\+::reducible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+this tree contains a subtree of the form. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{p(n, o,...,o) }
+\end{DoxyCode}
+ or 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{p(o,...,o) }
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__output_gaf723874e871dc01efb036ccbac07c32b}\label{group__output_gaf723874e871dc01efb036ccbac07c32b}} 
+\index{Output module@{Output module}!tail\_redex@{tail\_redex}}
+\index{tail\_redex@{tail\_redex}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{tail\_redex()}{tail\_redex()}}
+{\footnotesize\ttfamily bool Rhythm\+Tree\+::tail\+\_\+redex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+inner and the children list is of the form. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\_, o,...,o) }
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__output_ga69973921641222cb765112c70df25318}\label{group__output_ga69973921641222cb765112c70df25318}} 
+\index{Output module@{Output module}!serialize@{serialize}}
+\index{serialize@{serialize}!Output module@{Output module}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} Serial\+Label\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{pre,  }\item[{\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}}}]{post,  }\item[{size\+\_\+t}]{nb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+return the leaf label encoding the given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pre} & value in 0..M\+A\+X\+\_\+\+G\+R\+A\+CE \\
+\hline
+{\em post} & value in 0..M\+A\+X\+\_\+\+G\+R\+A\+CE \\
+\hline
+{\em nb} & number of events \\
+\hline
+\end{DoxyParams}

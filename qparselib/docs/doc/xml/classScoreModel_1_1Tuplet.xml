@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Tuplet" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Tuplet</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Tuplet_1a50ac50bbae02cc63db74adf733b8c54c" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+        <definition>Duration ScoreModel::Tuplet::_duration</definition>
+        <argsstring></argsstring>
+        <name>_duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="87" column="1" bodyfile="src/scoremodel/Tuplet.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Tuplet_1aa3acf61e979b206fd40264b7d4dc680f" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1Sequence" kindref="compound">Sequence</ref></type>
+        <definition>Sequence ScoreModel::Tuplet::_events</definition>
+        <argsstring></argsstring>
+        <name>_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="88" column="1" bodyfile="src/scoremodel/Tuplet.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Tuplet_1acb717050514d30f0fba482e8ea4a85b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ScoreModel::Tuplet::_arity</definition>
+        <argsstring></argsstring>
+        <name>_arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="89" column="1" bodyfile="src/scoremodel/Tuplet.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1a123005c7ef369e5120cea3dfad0dc0d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Tuplet::Tuplet</definition>
+        <argsstring>(Duration duration, Sequence events, int arity)</argsstring>
+        <name>Tuplet</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1Sequence" kindref="compound">Sequence</ref></type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="32" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1ac2a62e001a5238d3d31adf1c73294cbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Tuplet::~Tuplet</definition>
+        <argsstring>()</argsstring>
+        <name>~Tuplet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="37" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1afed370448df347005471cffea59fa60a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+        <definition>Duration ScoreModel::Tuplet::getDuration</definition>
+        <argsstring>() const</argsstring>
+        <name>getDuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref> of the tuplet </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="43" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1af1c41eda48b4f7ad792bd01bfbda8a58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScoreModel::Tuplet::nbEvents</definition>
+        <argsstring>() const</argsstring>
+        <name>nbEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nb events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="48" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1ad638693da54a63af98d2532163fd7d62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+        <definition>Duration ScoreModel::Tuplet::getBaseDuration</definition>
+        <argsstring>() const</argsstring>
+        <name>getBaseDuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Base duration = duration of regular tuplet events, before applying the ratoi</para>
+<para>Example: a triplet of eigthth, the base duration is the eighth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="55" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1a994676b3ff11c59784db05233d3a3134" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScoreModel::Tuplet::getArity</definition>
+        <argsstring>() const</argsstring>
+        <name>getArity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Arity = the number of duration-equal timespans the tuplet is decomposed in </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="60" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1a6a62f30eaf94ab7b329882552cf96a68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScoreModel::Tuplet::getNumBase</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Numbase = the regular number of base duration in the tuplet</para>
+<para>Example: a triplet of eigthth correspond to 2 (two) regular eigthth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="67" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1a4c0ccffd5ee162176ad7dfcef1a9cd58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> *</type>
+        <definition>Event * ScoreModel::Tuplet::getFirstEvent</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the first event of the tuplet sequence</para>
+<para>First event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="73" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1acd616d4a0464012de5e3125ed318fd30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> *</type>
+        <definition>Event * ScoreModel::Tuplet::getLastEvent</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Last event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="78" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Tuplet_1a6091b290c47f35d5d9fcc47bfb6f1a5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> * &gt;</type>
+        <definition>std::vector&lt; Event * &gt; ScoreModel::Tuplet::getEvents</definition>
+        <argsstring>() const</argsstring>
+        <name>getEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get events </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Tuplet.hpp" line="83" column="1" bodyfile="src/scoremodel/Tuplet.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Tuplet.hpp" line="26" column="1" bodyfile="src/scoremodel/Tuplet.hpp" bodystart="25" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Tuplet_1acb717050514d30f0fba482e8ea4a85b4" prot="private" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>_arity</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a50ac50bbae02cc63db74adf733b8c54c" prot="private" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>_duration</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1aa3acf61e979b206fd40264b7d4dc680f" prot="private" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>_events</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a994676b3ff11c59784db05233d3a3134" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getArity</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1ad638693da54a63af98d2532163fd7d62" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getBaseDuration</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1afed370448df347005471cffea59fa60a" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getDuration</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a6091b290c47f35d5d9fcc47bfb6f1a5c" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getEvents</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a4c0ccffd5ee162176ad7dfcef1a9cd58" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getFirstEvent</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1acd616d4a0464012de5e3125ed318fd30" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getLastEvent</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a6a62f30eaf94ab7b329882552cf96a68" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>getNumBase</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1af1c41eda48b4f7ad792bd01bfbda8a58" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>nbEvents</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1a123005c7ef369e5120cea3dfad0dc0d3" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>Tuplet</name></member>
+      <member refid="classScoreModel_1_1Tuplet_1ac2a62e001a5238d3d31adf1c73294cbe" prot="public" virt="non-virtual"><scope>ScoreModel::Tuplet</scope><name>~Tuplet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

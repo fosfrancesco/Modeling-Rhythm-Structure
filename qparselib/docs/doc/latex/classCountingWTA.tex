@@ -1,0 +1,72 @@
+\hypertarget{classCountingWTA}{}\section{Counting\+W\+TA Class Reference}
+\label{classCountingWTA}\index{CountingWTA@{CountingWTA}}
+
+
+copy of \mbox{\hyperlink{classWTA}{W\+TA}} dedicated to corpus statistics.  
+
+
+
+
+{\ttfamily \#include $<$Counting\+W\+T\+A.\+hpp$>$}
+
+Inheritance diagram for Counting\+W\+TA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCountingWTA}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__schemata_gad46a7f821d01aed3719a585f66130e27}{Counting\+W\+TA}} ()
+\begin{DoxyCompactList}\small\item\em default initializer for cython \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__schemata_ga590bb9036b59d5cf81bbbedb18d19093}{Counting\+W\+TA}} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&a)
+\begin{DoxyCompactList}\small\item\em copy base \mbox{\hyperlink{classWTA}{W\+TA}} reset weight values to counting weights (unit vectors) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCountingWTA_a4ac4c2d11483cbd40420148e688e9e7f}\label{classCountingWTA_a4ac4c2d11483cbd40420148e688e9e7f}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_ga2665883ffe41001dd7c2568bc9bef02f}{eval}} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t) const
+\begin{DoxyCompactList}\small\item\em special version of eval for \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} with feedback in case of fail \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeight}{Weight}} {\bfseries eval\+Counting\+Verbose} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&, state\+\_\+t, \mbox{\hyperlink{classPosition}{Position}}) const
+\item 
+void \mbox{\hyperlink{group__schemata_ga5c94f5191975a32e951e7d39ac606dc0}{reset\+Counting}} (size\+\_\+t dim)
+\begin{DoxyCompactList}\small\item\em the weight of this \mbox{\hyperlink{classWTA}{W\+TA}} are replaced by \char`\"{}\+Counting\+Weight\char`\"{} unit vector of length dim (one unit per transition) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCountingWTA_afb1577fedda586fb3c97df730b8d4100}\label{classCountingWTA_afb1577fedda586fb3c97df730b8d4100}} 
+\mbox{\hyperlink{group__schemata_ga34fd7500c532fc3af1419927d6102bb4}{O\+Transition\+Table}} \mbox{\hyperlink{classCountingWTA_afb1577fedda586fb3c97df730b8d4100}{\+\_\+tableids}}
+\begin{DoxyCompactList}\small\item\em copy of transition table ordered according to the transition\textquotesingle{}s ids (can be iterated). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool($\ast$ \mbox{\hyperlink{group__schemata_ga170bee814ca8089ab27a574b1f47281c}{\+\_\+trcomp\+\_\+ptr}} )(std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$, std\+::pair$<$ state\+\_\+t, \mbox{\hyperlink{classTransition}{Transition}} \&$>$) = \&trcomp
+\begin{DoxyCompactList}\small\item\em pointer to comparison functionå \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCountingWTA_a59c54deace0f2f8b53e43f1c59ac1106}\label{classCountingWTA_a59c54deace0f2f8b53e43f1c59ac1106}} 
+std\+::ostream \& \mbox{\hyperlink{classCountingWTA_a59c54deace0f2f8b53e43f1c59ac1106}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classCountingWTA}{Counting\+W\+TA}} \&)
+\begin{DoxyCompactList}\small\item\em it is important to enumerate in same order for printing and building unit weights! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+copy of \mbox{\hyperlink{classWTA}{W\+TA}} dedicated to corpus statistics. 
+
+for \mbox{\hyperlink{classWTA}{W\+TA}} weight estimation and \mbox{\hyperlink{classWTA}{W\+TA}} construction from corpus.
+
+construction of \mbox{\hyperlink{classWTA}{W\+TA}} with counting weights (unit vectors) from \mbox{\hyperlink{classWTA}{W\+TA}} and verbose tree evaluation with feedback.
+
+\begin{DoxyWarning}{Warning}
+only for target S\+C\+H\+E\+MA 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/Counting\+W\+T\+A.\+hpp\item 
+src/schemata/Counting\+W\+T\+A.\+cpp\end{DoxyCompactItemize}

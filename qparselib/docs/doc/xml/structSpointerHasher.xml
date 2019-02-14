@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="structSpointerHasher" kind="struct" language="C++" prot="public">
+    <compoundname>SpointerHasher</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structSpointerHasher_1abf1bf4b8162161d2defd1ec4d65594f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t SpointerHasher::operator()</definition>
+        <argsstring>(const Spointer &amp;p) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="classSpointer" kindref="compound">Spointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrS.hpp" line="132" column="1" bodyfile="src/table/PtrS.hpp" bodystart="132" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/PtrS.hpp" line="131" column="1" bodyfile="src/table/PtrS.hpp" bodystart="130" bodyend="138"/>
+    <listofallmembers>
+      <member refid="structSpointerHasher_1abf1bf4b8162161d2defd1ec4d65594f4" prot="public" virt="non-virtual"><scope>SpointerHasher</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

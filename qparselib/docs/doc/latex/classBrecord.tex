@@ -1,0 +1,74 @@
+\hypertarget{classBrecord}{}\section{Brecord$<$ P $>$ Class Template Reference}
+\label{classBrecord}\index{Brecord$<$ P $>$@{Brecord$<$ P $>$}}
+
+
+record associated to Ptr for one-\/best procedures.  
+
+
+
+
+{\ttfamily \#include $<$Brecord.\+hpp$>$}
+
+Inheritance diagram for Brecord$<$ P $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBrecord}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBrecord_ace582d212928967716927ff6fe20c647}\label{classBrecord_ace582d212928967716927ff6fe20c647}} 
+{\bfseries Brecord} (const P \&, Run\+Compare$<$ P $>$)
+\item 
+\mbox{\Hypertarget{classBrecord_ac7ec5cf75624a8a05fced677a477d07b}\label{classBrecord_ac7ec5cf75624a8a05fced677a477d07b}} 
+virtual void \mbox{\hyperlink{classBrecord_ac7ec5cf75624a8a05fced677a477d07b}{add}} (\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em add a run to the record. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$ \mbox{\hyperlink{classBrecord_a3e9776d16cdc2fd5c169d5599caf7c4b}{best}} (\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$parent, size\+\_\+t k=1)
+\begin{DoxyCompactList}\small\item\em returns the k-\/th best run of the record \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBrecord_ad90c15ea15523176e1db7e6e876e8ea9}\label{classBrecord_ad90c15ea15523176e1db7e6e876e8ea9}} 
+virtual bool {\bfseries empty} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBrecord_a88d1eeb254c1814f72f99a28bea5e7d6}\label{classBrecord_a88d1eeb254c1814f72f99a28bea5e7d6}} 
+\mbox{\hyperlink{classRun}{Run}}$<$ P $>$ $\ast$ \mbox{\hyperlink{classBrecord_a88d1eeb254c1814f72f99a28bea5e7d6}{\+\_\+best}}
+\begin{DoxyCompactList}\small\item\em best run for the associated state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class P$>$\newline
+class Brecord$<$ P $>$}
+
+record associated to Ptr for one-\/best procedures. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBrecord_a3e9776d16cdc2fd5c169d5599caf7c4b}\label{classBrecord_a3e9776d16cdc2fd5c169d5599caf7c4b}} 
+\index{Brecord$<$ P $>$@{Brecord$<$ P $>$}!best@{best}}
+\index{best@{best}!Brecord$<$ P $>$@{Brecord$<$ P $>$}}
+\subsubsection{\texorpdfstring{best()}{best()}}
+{\footnotesize\ttfamily template$<$class P $>$ \\
+virtual \mbox{\hyperlink{classRun}{Run}}$<$P$>$$\ast$ \mbox{\hyperlink{classBrecord}{Brecord}}$<$ P $>$\+::best (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAtable}{Atable}}$<$ P $>$ $\ast$}]{parent,  }\item[{size\+\_\+t}]{k = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the k-\/th best run of the record 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & is ignored \\
+\hline
+{\em k} & rank (as in k-\/best) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classRecord_a767aeb8c69e0866328fc82e066af7c3b}{Record$<$ P $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/table/Brecord.\+hpp\end{DoxyCompactItemize}

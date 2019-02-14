@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="CountingWeight_8hpp" kind="file" language="C++">
+    <compoundname>CountingWeight.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Weight_8hpp" local="yes">Weight.hpp</includes>
+    <includedby refid="CountingWTA_8hpp" local="yes">src/schemata/CountingWTA.hpp</includedby>
+    <includedby refid="WTA_8cpp" local="yes">src/schemata/WTA.cpp</includedby>
+    <includedby refid="WTA__BACKUP__31784_8cpp" local="yes">src/schemata/WTA_BACKUP_31784.cpp</includedby>
+    <includedby refid="WTA__BASE__31784_8cpp" local="yes">src/schemata/WTA_BASE_31784.cpp</includedby>
+    <includedby refid="WTA__LOCAL__31784_8cpp" local="yes">src/schemata/WTA_LOCAL_31784.cpp</includedby>
+    <includedby refid="WTA__REMOTE__31784_8cpp" local="yes">src/schemata/WTA_REMOTE_31784.cpp</includedby>
+    <includedby refid="schemas_8cpp" local="yes">src/targets/schema/schemas.cpp</includedby>
+    <includedby refid="CountingWeight_8cpp" local="yes">src/weight/CountingWeight.cpp</includedby>
+    <incdepgraph>
+      <node id="699">
+        <label>assert.h</label>
+      </node>
+      <node id="702">
+        <label>vector</label>
+      </node>
+      <node id="697">
+        <label>src/weight/CountingWeight.hpp</label>
+        <link refid="CountingWeight_8hpp"/>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>math.h</label>
+      </node>
+      <node id="701">
+        <label>iostream</label>
+      </node>
+      <node id="698">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classCountingWeight" prot="public">CountingWeight</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/weight/CountingWeight.hpp"/>
+  </compounddef>
+</doxygen>

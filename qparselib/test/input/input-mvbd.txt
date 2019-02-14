@@ -1,0 +1,8 @@
+% 1 beat, 3 events
+% counter example showing necessity to move bounds
+% goal is dur. seq. [7/8 1/8 1]
+0
+0.02
+1.02
+1.08
+2.0

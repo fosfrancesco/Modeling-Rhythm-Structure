@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_0ef45b72fea5c9869a86802e135ecac6" kind="dir">
+    <compoundname>src/general</compoundname>
+    <innerfile refid="constant_8cpp">constant.cpp</innerfile>
+    <innerfile refid="constant_8h">constant.h</innerfile>
+    <innerfile refid="init_8cpp">init.cpp</innerfile>
+    <innerfile refid="init_8hpp">init.hpp</innerfile>
+    <innerfile refid="QPconfig_8h">QPconfig.h</innerfile>
+    <innerfile refid="Rational_8cpp">Rational.cpp</innerfile>
+    <innerfile refid="Rational_8hpp">Rational.hpp</innerfile>
+    <innerfile refid="trace_8cpp">trace.cpp</innerfile>
+    <innerfile refid="trace_8hpp">trace.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/general/"/>
+  </compounddef>
+</doxygen>

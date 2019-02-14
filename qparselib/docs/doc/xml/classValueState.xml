@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classValueState" kind="class" language="C++" prot="public">
+    <compoundname>ValueState</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classValueState_1a9a9fe71a0675e54862769f335dac9524" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t ValueState::_state</definition>
+        <argsstring></argsstring>
+        <name>_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="65" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueState_1ac81c18beb9ed649bfd36d29f45a5f40f" prot="private" static="no" mutable="no">
+        <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+        <definition>DurationTree* ValueState::_tree</definition>
+        <argsstring></argsstring>
+        <name>_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="68" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__schemata_1ga78ce9830cde7d7875888ab5b420beecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueState::ValueState</definition>
+        <argsstring>(state_t, DurationTree *)</argsstring>
+        <name>ValueState</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="47" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6f7e57b6744c6a6c729d6b65068f52eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueState::~ValueState</definition>
+        <argsstring>()</argsstring>
+        <name>~ValueState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="49" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueState_1a5654fe3f5d536059e34ec0ab116ee958" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t ValueState::state</definition>
+        <argsstring>() const</argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="51" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueState_1af343a6391264cbc3afb17f2383e5f610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classValueList" kindref="compound">ValueList</ref></type>
+        <definition>ValueList ValueState::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="53" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueState_1aa587a09d4f9eb33956dc4b0bc68316d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+        <definition>DurationTree* ValueState::tree</definition>
+        <argsstring>() const</argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="55" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga8e4a967143877229169d6c28842185c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueState::operator==</definition>
+        <argsstring>(const ValueState &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="57" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa64b0072478e5475befdb4b0212d8e2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueState::compatible</definition>
+        <argsstring>(label_t label) const</argsstring>
+        <name>compatible</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="59" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="36" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classValueState_1ae62ac6763ab9ddb42d4c2158eacc0535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const ValueState &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <defname>vs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="61" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/schemata/ValueWTA.hpp" line="42" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="41" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classValueState_1a9a9fe71a0675e54862769f335dac9524" prot="private" virt="non-virtual"><scope>ValueState</scope><name>_state</name></member>
+      <member refid="classValueState_1ac81c18beb9ed649bfd36d29f45a5f40f" prot="private" virt="non-virtual"><scope>ValueState</scope><name>_tree</name></member>
+      <member refid="group__schemata_1gaa64b0072478e5475befdb4b0212d8e2e" prot="public" virt="non-virtual"><scope>ValueState</scope><name>compatible</name></member>
+      <member refid="classValueState_1ae62ac6763ab9ddb42d4c2158eacc0535" prot="public" virt="non-virtual"><scope>ValueState</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__schemata_1ga8e4a967143877229169d6c28842185c8" prot="public" virt="non-virtual"><scope>ValueState</scope><name>operator==</name></member>
+      <member refid="classValueState_1a5654fe3f5d536059e34ec0ab116ee958" prot="public" virt="non-virtual"><scope>ValueState</scope><name>state</name></member>
+      <member refid="classValueState_1aa587a09d4f9eb33956dc4b0bc68316d6" prot="public" virt="non-virtual"><scope>ValueState</scope><name>tree</name></member>
+      <member refid="classValueState_1af343a6391264cbc3afb17f2383e5f610" prot="public" virt="non-virtual"><scope>ValueState</scope><name>value</name></member>
+      <member refid="group__schemata_1ga78ce9830cde7d7875888ab5b420beecf" prot="public" virt="non-virtual"><scope>ValueState</scope><name>ValueState</name></member>
+      <member refid="group__schemata_1ga6f7e57b6744c6a6c729d6b65068f52eb" prot="public" virt="non-virtual"><scope>ValueState</scope><name>~ValueState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

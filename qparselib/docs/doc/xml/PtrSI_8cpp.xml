@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="PtrSI_8cpp" kind="file" language="C++">
+    <compoundname>PtrSI.cpp</compoundname>
+    <includes refid="PtrSI_8hpp" local="yes">PtrSI.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__table_1ga86a37eaf8509fee42b0cecf04740db9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const SIpointer &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSIpointer" kindref="compound">SIpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSI.cpp" line="353" column="1" bodyfile="src/table/PtrSI.cpp" bodystart="353" bodyend="376"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/PtrSI.cpp"/>
+  </compounddef>
+</doxygen>

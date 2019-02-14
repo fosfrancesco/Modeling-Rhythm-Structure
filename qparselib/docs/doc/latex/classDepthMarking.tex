@@ -1,0 +1,35 @@
+\hypertarget{classDepthMarking}{}\section{Depth\+Marking Class Reference}
+\label{classDepthMarking}\index{DepthMarking@{DepthMarking}}
+
+
+marking of states of a \mbox{\hyperlink{classWTA}{W\+TA}} with informations on the depth of their occurences initialized with a \mbox{\hyperlink{classWTA}{W\+TA}}, can be interrogated afterwards  
+
+
+
+
+{\ttfamily \#include $<$W\+T\+A.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Depth\+Marking} (const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\item 
+int \mbox{\hyperlink{group__schemata_gaaa84e1d149651938af82e47b91888017}{depth}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em return depth mark if given state marked return -\/1 otherwise \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_gad5f3fa885bb5d2be624a26e9aa50dd0b}{multiple}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em return true if the given state can occur at multiple depths return false otherwise or if state not marked \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__schemata_ga3486fcb9921f3c018b931e088a53df7d}{mark}} (state\+\_\+t, int)
+\begin{DoxyCompactList}\small\item\em mark state using given depth and return new mark value can be the given depth or a greater depth with which the state had been already marked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+marking of states of a \mbox{\hyperlink{classWTA}{W\+TA}} with informations on the depth of their occurences initialized with a \mbox{\hyperlink{classWTA}{W\+TA}}, can be interrogated afterwards 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/W\+T\+A.\+hpp\item 
+src/schemata/W\+T\+A.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+S\+E\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+L\+O\+C\+A\+L\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+31784.\+cpp\end{DoxyCompactItemize}

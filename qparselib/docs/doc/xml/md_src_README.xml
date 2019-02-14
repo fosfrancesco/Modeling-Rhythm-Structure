@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_README" kind="page">
+    <compoundname>md_src_README</compoundname>
+    <title>sources of the qparse library</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>for rhythm quantization by k-best parsing algorithms based on weighted tree automata.</para>
+<para>The sources are organized into the following sub-directories.</para>
+<para><itemizedlist>
+<listitem><para>targets : main functions for producing various command line utilities.</para>
+</listitem><listitem><para>general : initialization, tracing.</para>
+</listitem><listitem><para>weight : several possible domains for weight values for tree automata.</para>
+</listitem><listitem><para>schemata : class of weighted tree automata used for parsing.</para>
+</listitem><listitem><para>segment : classes for abstract representation of data in input processed by parsing.</para>
+</listitem><listitem><para>table : parse tables.</para>
+</listitem><listitem><para>parsers : various transcription scenarii, by parsing of a given <computeroutput>input</computeroutput>, assembling elements from the <computeroutput>table</computeroutput> directory.</para>
+</listitem><listitem><para>input : reading from and writing to files the data given in input to the quantization by parsing algorithm (schema and segment).</para>
+</listitem><listitem><para>score model : abstract model used to produce scores in various formats from parse trees.</para>
+</listitem><listitem><para>output : representation of the output of the parsing procedure and conversion into music transcription results. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

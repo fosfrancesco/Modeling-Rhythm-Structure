@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Score" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Score</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Score_1aa278e5287b674b6253c820723cdbd4e0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ScoreModel::Score::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A score has a name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="83" column="1" bodyfile="src/scoremodel/Score.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Score_1a18e37c1bc0ddd944211c3f32e112b6dd" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref></type>
+        <definition>ScoreMeter ScoreModel::Score::_meter</definition>
+        <argsstring></argsstring>
+        <name>_meter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A score has a meter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="89" column="1" bodyfile="src/scoremodel/Score.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Score_1ad4048e7f33110f5831fa025bdbf4f039" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> * &gt;</type>
+        <definition>std::vector&lt;Part*&gt; ScoreModel::Score::_parts</definition>
+        <argsstring></argsstring>
+        <name>_parts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A score is a set of Parts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="94" column="1" bodyfile="src/scoremodel/Score.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Score_1a647ebe2512e61be961d3d10148618b65" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Measure" kindref="compound">Measure</ref> * &gt;</type>
+        <definition>std::vector&lt;Measure*&gt; ScoreModel::Score::_measures</definition>
+        <argsstring></argsstring>
+        <name>_measures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A score is organized as a list of measures, common to all parts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="99" column="1" bodyfile="src/scoremodel/Score.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Score_1acb19d6040f57ce1bf4e68dd8dab852cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Score::Score</definition>
+        <argsstring>()</argsstring>
+        <name>Score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor. Builds an empty score in 4/4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="32" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1a8721726afd70c41fdf9307a97ded2039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Score::Score</definition>
+        <argsstring>(std::string name, ScoreMeter meter)</argsstring>
+        <name>Score</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref></type>
+          <declname>meter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Monody score constructor.</para>
+<para>takes the single part/name voice, and the meter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="39" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1a593a14d9b5a926a4784c75c62780092b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref></type>
+        <definition>ScoreMeter ScoreModel::Score::getMeter</definition>
+        <argsstring>() const</argsstring>
+        <name>getMeter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter/setter for meter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="44" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1acb96344d926f124d945bece85de996ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ScoreModel::Score::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="46" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1ac5c2af8ebfc77176d9f2c4306a4d04cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Voice" kindref="compound">Voice</ref> *</type>
+        <definition>Voice * ScoreModel::Score::getVoice</definition>
+        <argsstring>(std::string partName, std::string voiceName)</argsstring>
+        <name>getVoice</name>
+        <param>
+          <type>std::string</type>
+          <declname>partName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>voiceName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a voice from the part and voice name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="51" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="22" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1a1bbc42654c49e6ac2273d38cca19c5e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> * &gt;</type>
+        <definition>std::vector&lt; Part * &gt; ScoreModel::Score::getParts</definition>
+        <argsstring>() const</argsstring>
+        <name>getParts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get all parts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="56" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1a1e4114e834b8bea1198e36327472fd72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Score::addPart</definition>
+        <argsstring>(Part *p)</argsstring>
+        <name>addPart</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Part" kindref="compound">Part</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new part </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="61" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1aa528b4e1ef3181f6f90c93b49fe8fafd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Measure" kindref="compound">Measure</ref> *</type>
+        <definition>Measure * ScoreModel::Score::addMeasure</definition>
+        <argsstring>()</argsstring>
+        <name>addMeasure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new measure </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="66" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1ab57bcfbe1552fba4e8e7882a7db8b21b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classScoreModel_1_1Measure" kindref="compound">Measure</ref> * &gt;</type>
+        <definition>std::vector&lt; Measure * &gt; ScoreModel::Score::getMeasures</definition>
+        <argsstring>() const</argsstring>
+        <name>getMeasures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterator to scan measures </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="71" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Score_1a0016a76d4d96c208c6dd586ab64491db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Score::~Score</definition>
+        <argsstring>()</argsstring>
+        <name>~Score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Score.hpp" line="76" column="1" bodyfile="src/scoremodel/Score.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Score.hpp" line="26" column="1" bodyfile="src/scoremodel/Score.hpp" bodystart="26" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Score_1a647ebe2512e61be961d3d10148618b65" prot="private" virt="non-virtual"><scope>ScoreModel::Score</scope><name>_measures</name></member>
+      <member refid="classScoreModel_1_1Score_1a18e37c1bc0ddd944211c3f32e112b6dd" prot="private" virt="non-virtual"><scope>ScoreModel::Score</scope><name>_meter</name></member>
+      <member refid="classScoreModel_1_1Score_1aa278e5287b674b6253c820723cdbd4e0" prot="private" virt="non-virtual"><scope>ScoreModel::Score</scope><name>_name</name></member>
+      <member refid="classScoreModel_1_1Score_1ad4048e7f33110f5831fa025bdbf4f039" prot="private" virt="non-virtual"><scope>ScoreModel::Score</scope><name>_parts</name></member>
+      <member refid="classScoreModel_1_1Score_1aa528b4e1ef3181f6f90c93b49fe8fafd" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>addMeasure</name></member>
+      <member refid="classScoreModel_1_1Score_1a1e4114e834b8bea1198e36327472fd72" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>addPart</name></member>
+      <member refid="classScoreModel_1_1Score_1ab57bcfbe1552fba4e8e7882a7db8b21b" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>getMeasures</name></member>
+      <member refid="classScoreModel_1_1Score_1a593a14d9b5a926a4784c75c62780092b" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>getMeter</name></member>
+      <member refid="classScoreModel_1_1Score_1acb96344d926f124d945bece85de996ef" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>getName</name></member>
+      <member refid="classScoreModel_1_1Score_1a1bbc42654c49e6ac2273d38cca19c5e6" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>getParts</name></member>
+      <member refid="classScoreModel_1_1Score_1ac5c2af8ebfc77176d9f2c4306a4d04cb" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>getVoice</name></member>
+      <member refid="classScoreModel_1_1Score_1acb19d6040f57ce1bf4e68dd8dab852cc" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>Score</name></member>
+      <member refid="classScoreModel_1_1Score_1a8721726afd70c41fdf9307a97ded2039" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>Score</name></member>
+      <member refid="classScoreModel_1_1Score_1a0016a76d4d96c208c6dd586ab64491db" prot="public" virt="non-virtual"><scope>ScoreModel::Score</scope><name>~Score</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

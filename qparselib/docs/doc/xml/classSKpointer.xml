@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classSKpointer" kind="class" language="C++" prot="public">
+    <compoundname>SKpointer</compoundname>
+    <basecompoundref refid="classSpointer" prot="public" virt="non-virtual">Spointer</basecompoundref>
+    <includes local="no">PtrSK.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classSKpointer_1a532a7a3f69049503ccf94834b77f48f3" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SKpointer::_rank</definition>
+        <argsstring></argsstring>
+        <name>_rank</name>
+        <briefdescription>
+<para>k as in k-best </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="104" column="1" bodyfile="src/table/PtrSK.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__table_1gaffcc41d2b1b8a85e3ea9acd3086321f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>()</argsstring>
+        <name>SKpointer</name>
+        <briefdescription>
+<para>specific </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="45" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga876c1101716f9aea625574f9be9b3da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(label_t, size_t k=1)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>specific </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="48" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga022b6998c4273e2da8128ccd2205a7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(WTA *a, Environment *env, pre_t pre=0, pre_t post=0, Rational mlen=Rational(1), size_t k=1)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classEnvironment" kindref="compound">Environment</ref> *</type>
+          <declname>env</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mlen</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>top ptr. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be true </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000033"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR deprecated (replace by specific constructor) </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="54" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="25" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1gac3044b001a0035c0ea79ffac0a57d1d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(Environment *, const SKpointer &amp;p, size_t a, size_t i, state_t s)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type><ref refid="classEnvironment" kindref="compound">Environment</ref> *</type>
+          <defname>env</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>state_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>sub-pointer or instance as leaf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+<simplesect kind="warning"><para>no default duration for ambiguity reasons. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="63" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1gae5dd2d6c4dde18082b5e20e34ead8bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(const SKpointer &amp;)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="69" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1gaf762b88808d2e8188b74e28256d3ed09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(const SKpointer &amp;p0, const SKpointer &amp;p1)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <briefdescription>
+<para>next sibling. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+<simplesect kind="warning"><para>should not be called since p1 must be partial </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="75" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga8c3f64b049fb3809bec46ba47a124ab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SKpointer::SKpointer</definition>
+        <argsstring>(const SKpointer &amp;p, const SKpointer &amp;p0, const SKpointer &amp;p1)</argsstring>
+        <name>SKpointer</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <briefdescription>
+<para>instance as parent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+<simplesect kind="warning"><para>should not be called since p must be partial </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="80" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1gaa75ae4ae4ce8c389471867fa64f503c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+        <definition>SKpointer &amp; SKpointer::operator=</definition>
+        <argsstring>(const SKpointer &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="83" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1gab77c2fa945fcc938568ace9986c25324" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SKpointer::operator==</definition>
+        <argsstring>(const SKpointer &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="86" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga95bdb4d9654b477a82f61d4e8b1d6937" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SKpointer::instance</definition>
+        <argsstring>(const SKpointer &amp;p) const</argsstring>
+        <name>instance</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="89" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga38150ffb7a8bf25ebf5133907d568738" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SKpointer::subsume</definition>
+        <argsstring>(const SKpointer &amp;p) const</argsstring>
+        <name>subsume</name>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>description in Ptr.hpp </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="92" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classSKpointer_1afe3aef0a71afa0e6d022c52aa0f28163" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SKpointer::has_K</definition>
+        <argsstring>() const</argsstring>
+        <name>has_K</name>
+        <reimplements refid="classPointer_1a66999c2d23c4b592228f1e74a96e0315">has_K</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="94" column="1" bodyfile="src/table/PtrSK.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classSKpointer_1ae7afb64da3fbb9fc0487913f3ee594a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t SKpointer::rank</definition>
+        <argsstring>() const</argsstring>
+        <name>rank</name>
+        <reimplements refid="classPointer_1a8ded051c871b7fccfb6b2a20b8920cab">rank</reimplements>
+        <briefdescription>
+<para>return the rank of best (k) pointed. default is 1. redefine for classes for k-best parsing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="96" column="1" bodyfile="src/table/PtrSK.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__table_1ga560a9c964dcc9ad7631213d6ad061a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SKpointer::incr</definition>
+        <argsstring>()</argsstring>
+        <name>incr</name>
+        <reimplements refid="classPointer_1a02c73f5f2b21a1fe37b744383508cb64">incr</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="98" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classSKpointer_1a408ad7443ca740b3f261b7ef920bc26f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const SKpointer &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSKpointer" kindref="compound">SKpointer</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/PtrSK.hpp" line="100" column="1" bodyfile="src/table/PtrSK.cpp" bodystart="106" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>pointer to a (best) run. for k-best parsing with standard <ref refid="classWTA" kindref="compound">WTA</ref> a <ref refid="classSKpointer" kindref="compound">SKpointer</ref> contains </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>a state symbol (see <ref refid="classSpointer" kindref="compound">Spointer</ref>)</para>
+</listitem><listitem><para>a rank:<itemizedlist>
+<listitem><para>0 if the state symbol is a leaf label,</para>
+</listitem><listitem><para>&gt; 0 otherwise in the case of Viterbi algo (1-best), the rank is defaulted to 1</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>all <ref refid="classSKpointer" kindref="compound">SKpointer</ref>&apos;s are complete. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="429">
+        <label>SKpointer</label>
+        <link refid="classSKpointer"/>
+        <childnode refid="430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="431">
+        <label>Pointer</label>
+        <link refid="classPointer"/>
+      </node>
+      <node id="430">
+        <label>Spointer</label>
+        <link refid="classSpointer"/>
+        <childnode refid="431" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="432">
+        <label>SKpointer</label>
+        <link refid="classSKpointer"/>
+        <childnode refid="433" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="434">
+        <label>Pointer</label>
+        <link refid="classPointer"/>
+      </node>
+      <node id="433">
+        <label>Spointer</label>
+        <link refid="classSpointer"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/table/PtrSK.hpp" line="42" column="1" bodyfile="src/table/PtrSK.hpp" bodystart="41" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classSKpointer_1a532a7a3f69049503ccf94834b77f48f3" prot="protected" virt="non-virtual"><scope>SKpointer</scope><name>_rank</name></member>
+      <member refid="classSpointer_1a27f37ac70c70f90d9a4a576606bb52e1" prot="protected" virt="non-virtual"><scope>SKpointer</scope><name>_state</name></member>
+      <member refid="classPointer_1a7b636072b492b57efe3ead47e03a67bd" prot="public" virt="virtual"><scope>SKpointer</scope><name>compatible</name></member>
+      <member refid="group__table_1gace5bd2026fef480084f3cc5dc28086f3" prot="public" virt="virtual"><scope>SKpointer</scope><name>complete</name></member>
+      <member refid="group__table_1ga54817fbae1688dab4dfff5724e762640" prot="public" virt="virtual"><scope>SKpointer</scope><name>divisible</name></member>
+      <member refid="group__table_1ga0a994ec6827ef23556b500382fc5a1fc" prot="public" virt="virtual"><scope>SKpointer</scope><name>dummy</name></member>
+      <member refid="classPointer_1a7018d6fde0393288fbd7ed5c1ffe9e5b" prot="public" virt="virtual"><scope>SKpointer</scope><name>has_I</name></member>
+      <member refid="classSKpointer_1afe3aef0a71afa0e6d022c52aa0f28163" prot="public" virt="virtual"><scope>SKpointer</scope><name>has_K</name></member>
+      <member refid="classPointer_1a96063327a69b47d288f345b0d2f4b42b" prot="public" virt="virtual"><scope>SKpointer</scope><name>has_P</name></member>
+      <member refid="classSpointer_1aec852b63ae9427911ff290979bc0a4b4" prot="public" virt="virtual"><scope>SKpointer</scope><name>has_S</name></member>
+      <member refid="group__table_1ga560a9c964dcc9ad7631213d6ad061a2a" prot="public" virt="virtual"><scope>SKpointer</scope><name>incr</name></member>
+      <member refid="group__table_1gad709430d698804267807f12deba9952b" prot="public" virt="virtual"><scope>SKpointer</scope><name>innerWeight</name></member>
+      <member refid="group__table_1ga95bdb4d9654b477a82f61d4e8b1d6937" prot="public" virt="virtual"><scope>SKpointer</scope><name>instance</name></member>
+      <member refid="group__table_1ga718cc6f7473c3fb1b074211bf2f16d8b" prot="public" virt="virtual" ambiguityscope="Spointer::"><scope>SKpointer</scope><name>instance</name></member>
+      <member refid="group__table_1ga15067ad809b5ac25b45c0187550e0b17" prot="public" virt="virtual"><scope>SKpointer</scope><name>label</name></member>
+      <member refid="group__table_1ga797b376c9ed1b4777ea94ff8350c65c8" prot="public" virt="virtual"><scope>SKpointer</scope><name>operator&lt;</name></member>
+      <member refid="classSKpointer_1a408ad7443ca740b3f261b7ef920bc26f" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__table_1gaa75ae4ae4ce8c389471867fa64f503c1" prot="public" virt="virtual"><scope>SKpointer</scope><name>operator=</name></member>
+      <member refid="group__table_1ga88eb3c521aa1c9bc9b8891f20b9a01eb" prot="public" virt="virtual" ambiguityscope="Spointer::"><scope>SKpointer</scope><name>operator=</name></member>
+      <member refid="group__table_1gab77c2fa945fcc938568ace9986c25324" prot="public" virt="virtual"><scope>SKpointer</scope><name>operator==</name></member>
+      <member refid="group__table_1gacb9d4d8e3da8a1e082b80fd31abb9772" prot="public" virt="virtual" ambiguityscope="Spointer::"><scope>SKpointer</scope><name>operator==</name></member>
+      <member refid="classPointer_1aa682c210e4ae3ef7268db1ee5bcf9f9d" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>partial</name></member>
+      <member refid="classSKpointer_1ae7afb64da3fbb9fc0487913f3ee594a3" prot="public" virt="virtual"><scope>SKpointer</scope><name>rank</name></member>
+      <member refid="group__table_1gaffcc41d2b1b8a85e3ea9acd3086321f5" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1ga876c1101716f9aea625574f9be9b3da5" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1ga022b6998c4273e2da8128ccd2205a7f6" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1gac3044b001a0035c0ea79ffac0a57d1d9" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1gae5dd2d6c4dde18082b5e20e34ead8bf3" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1gaf762b88808d2e8188b74e28256d3ed09" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1ga8c3f64b049fb3809bec46ba47a124ab9" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>SKpointer</name></member>
+      <member refid="group__table_1ga467ee6f93cd0429edb40fc4de100c3c4" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1gaad8a647a58df31aefd8f2703b9f86dc5" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1ga49f82b7aafd3ae237243c85272597fa7" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1ga72441f0d67497c90602a123c45dc53d1" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1gaf40e1a1f0edc608d4413f096a19aae78" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1gac303715911a48c482acb6ae4188508d3" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="group__table_1gad078973f8318ccf5800db79e87584dcc" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>Spointer</name></member>
+      <member refid="classSpointer_1a8fa50c04246ceb3a48e961946a2427f7" prot="public" virt="non-virtual"><scope>SKpointer</scope><name>state</name></member>
+      <member refid="group__table_1ga38150ffb7a8bf25ebf5133907d568738" prot="public" virt="virtual"><scope>SKpointer</scope><name>subsume</name></member>
+      <member refid="group__table_1ga06fa67855bfb50d81e18bdfacce965ce" prot="public" virt="virtual" ambiguityscope="Spointer::"><scope>SKpointer</scope><name>subsume</name></member>
+      <member refid="group__table_1ga4ca596fe52abd36d550a10818678d54c" prot="public" virt="virtual"><scope>SKpointer</scope><name>terminalWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

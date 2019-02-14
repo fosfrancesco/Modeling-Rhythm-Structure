@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classMusPoint" kind="class" language="C++" prot="public">
+    <compoundname>MusPoint</compoundname>
+    <basecompoundref refid="classPoint" prot="public" virt="non-virtual">Point</basecompoundref>
+    <includes local="no">MusPoint.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classMusPoint_1a5e678087e524bfa4e1d3612016196a9c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational MusPoint::_mdate</definition>
+        <argsstring></argsstring>
+        <name>_mdate</name>
+        <briefdescription>
+<para>timestamp in musical time (number of bars). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="68" column="1" bodyfile="src/segment/MusPoint.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMusPoint_1a8d5382b9ab148a21ae7adc52b788b15f" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational MusPoint::_mduration</definition>
+        <argsstring></argsstring>
+        <name>_mduration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="70" column="1" bodyfile="src/segment/MusPoint.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__segment_1ga006e3062fd920202aab9e36f6a0e394e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(MusEvent *e, double rdate, double rdur, bool on, long link=MUSPOINTREF_NULL, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type><ref refid="classMusEvent" kindref="compound">MusEvent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rdur</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>link</declname>
+          <defval>MUSPOINTREF_NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="30" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="15" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga1bb17bef698401de18bc814c7f965999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(const Point &amp;p, Rational mdate=MUSTIME_UNKNOWN, Rational mduration=MUSTIME_UNKNOWN)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mdate</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>mduration</declname>
+          <defval><ref refid="group__general_1gae862a9d955eb3154601efb64980ac24b" kindref="member">MUSTIME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>copy of point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>extended with given onset and duration values (in fraction of bars) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="41" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga5f00500846d251b165f48a41552be18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::MusPoint</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>MusPoint</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>event (if any) is cloned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="46" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga036951554acf624dd62469abbd8142df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MusPoint::~MusPoint</definition>
+        <argsstring>()</argsstring>
+        <name>~MusPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="48" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga522126acc9eb79e737068941370bb172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+        <definition>MusPoint &amp; MusPoint::operator=</definition>
+        <argsstring>(const MusPoint &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classMusPoint" kindref="compound">MusPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>event (if any) is cloned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="51" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="57" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__segment_1ga07139fb89dcc2388b299b9e6464b3177" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MusPoint::operator==</definition>
+        <argsstring>(const Point &amp;) const</argsstring>
+        <name>operator==</name>
+        <reimplements refid="group__segment_1ga1055933b999ef990df6b48745c27a197">operator==</reimplements>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="53" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="77" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusPoint_1a88d1f2efdc00dc80985bbe76356099b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational&amp; MusPoint::mdate</definition>
+        <argsstring>()</argsstring>
+        <name>mdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>can be modified. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="56" column="1" bodyfile="src/segment/MusPoint.hpp" bodystart="56" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classMusPoint_1a2f89f6b4930b75e633d8b3cd3e461aa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref> &amp;</type>
+        <definition>Rational&amp; MusPoint::mduration</definition>
+        <argsstring>()</argsstring>
+        <name>mduration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>only for polyphonic events. </para>
+</simplesect>
+<simplesect kind="warning"><para>can be modified. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="61" column="1" bodyfile="src/segment/MusPoint.hpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classMusPoint_1ad95cc714e40b63c5df8e1dc41305178e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Point &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="64" column="1" bodyfile="src/segment/Point.hpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__segment_1gafef7a93b7ba8e96efc8d2b179c69a830" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MusPoint::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__segment_1gaf6904981d6c631a7756499cd0b42ce29">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/MusPoint.hpp" line="72" column="1" bodyfile="src/segment/MusPoint.cpp" bodystart="87" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classPoint" kindref="compound">Point</ref> extended with mutable musical time date and duration (expressed in fraction of bars). </para>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000026"><xreftitle>Todo</xreftitle><xrefdescription><para>redefine musical time duration as realtime duration, with links. </para>
+<para>replace _mduration by mduration computed from linked point&apos;s date </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>mduration is reset in <ref refid="group__segment_1ga42c65e4989c84fbce42115d8e7813f8e" kindref="member">InputSegment.quantize()</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="174">
+        <label>Point</label>
+        <link refid="classPoint"/>
+      </node>
+      <node id="173">
+        <label>MusPoint</label>
+        <link refid="classMusPoint"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="176">
+        <label>Point</label>
+        <link refid="classPoint"/>
+        <childnode refid="177" relation="usage">
+          <edgelabel>_event</edgelabel>
+        </childnode>
+      </node>
+      <node id="177">
+        <label>MusEvent</label>
+        <link refid="classMusEvent"/>
+      </node>
+      <node id="175">
+        <label>MusPoint</label>
+        <link refid="classMusPoint"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="178" relation="usage">
+          <edgelabel>_mduration</edgelabel>
+          <edgelabel>_mdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="178">
+        <label>Rational</label>
+        <link refid="classRational"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/MusPoint.hpp" line="27" column="1" bodyfile="src/segment/MusPoint.hpp" bodystart="26" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classPoint_1abd14c2ceaca50fcb7c8236b8ce0d9aa6" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_event</name></member>
+      <member refid="classMusPoint_1a5e678087e524bfa4e1d3612016196a9c" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_mdate</name></member>
+      <member refid="classMusPoint_1a8d5382b9ab148a21ae7adc52b788b15f" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_mduration</name></member>
+      <member refid="classPoint_1a5508dcf134387f3f2271e95b578f3e3a" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_onoff</name></member>
+      <member refid="classPoint_1a650144f8bb470d6d4e364d7082d77f57" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_rdate</name></member>
+      <member refid="classPoint_1a706ce56822f7e26dc66d67ce225d8a94" prot="protected" virt="non-virtual"><scope>MusPoint</scope><name>_rduration</name></member>
+      <member refid="classPoint_1acf6506d97b9e96f177e1830a546e3ea3" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>event</name></member>
+      <member refid="classPoint_1a11ca880bad16051872c032fa47b73e42" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>linked</name></member>
+      <member refid="classMusPoint_1a88d1f2efdc00dc80985bbe76356099b2" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>mdate</name></member>
+      <member refid="classMusPoint_1a2f89f6b4930b75e633d8b3cd3e461aa2" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>mduration</name></member>
+      <member refid="group__segment_1ga006e3062fd920202aab9e36f6a0e394e" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>MusPoint</name></member>
+      <member refid="group__segment_1ga1bb17bef698401de18bc814c7f965999" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>MusPoint</name></member>
+      <member refid="group__segment_1ga5f00500846d251b165f48a41552be18e" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>MusPoint</name></member>
+      <member refid="classPoint_1a951d10365297b7a1a2dd1bb51100e076" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>noteoff</name></member>
+      <member refid="classPoint_1a21d3017c2e04de4cc602306bafa40239" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>noteon</name></member>
+      <member refid="classMusPoint_1ad95cc714e40b63c5df8e1dc41305178e" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__segment_1ga522126acc9eb79e737068941370bb172" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>operator=</name></member>
+      <member refid="group__segment_1ga55eeab949e62268da63176d48570eb54" prot="public" virt="virtual" ambiguityscope="Point::"><scope>MusPoint</scope><name>operator=</name></member>
+      <member refid="group__segment_1ga07139fb89dcc2388b299b9e6464b3177" prot="public" virt="virtual"><scope>MusPoint</scope><name>operator==</name></member>
+      <member refid="group__segment_1ga6cb7f450eee39d3bd8483f017f28906d" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>Point</name></member>
+      <member refid="group__segment_1ga5b7ec0fb127734c1cd5c6f350a3990fc" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>Point</name></member>
+      <member refid="group__segment_1gafef7a93b7ba8e96efc8d2b179c69a830" prot="protected" virt="virtual"><scope>MusPoint</scope><name>print</name></member>
+      <member refid="classPoint_1ad2ff6ece321bae579ab2d4f52c71bb31" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>rdate</name></member>
+      <member refid="classPoint_1a21ee97f153dd1c435f7d2e554887294f" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>rduration</name></member>
+      <member refid="group__segment_1ga036951554acf624dd62469abbd8142df" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>~MusPoint</name></member>
+      <member refid="group__segment_1ga395fa04b4ec126b66fc053f829a30cc1" prot="public" virt="non-virtual"><scope>MusPoint</scope><name>~Point</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

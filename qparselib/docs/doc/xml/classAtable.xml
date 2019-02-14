@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classAtable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Atable</compoundname>
+    <derivedcompoundref refid="classTable" prot="public" virt="non-virtual">Table&lt; P, R, H &gt;</derivedcompoundref>
+    <includes local="no">Atable.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>P</declname>
+        <defname>P</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classAtable_1a43c761e5718010983659d7162f89d8d3" prot="public" static="no" mutable="no">
+        <type><ref refid="classParser" kindref="compound">Parser</ref>&lt; P &gt; *</type>
+        <definition>Parser&lt;P&gt;* Atable&lt; P &gt;::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+<para>parsing environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="41" column="1" bodyfile="src/table/Atable.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classAtable_1a84214b2c984a18a8cec13313152d3eaa" prot="protected" static="no" mutable="no">
+        <type>RunCompare&lt; P &gt;</type>
+        <definition>RunCompare&lt;P&gt; Atable&lt; P &gt;::_comparer</definition>
+        <argsstring></argsstring>
+        <name>_comparer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="96" column="1" bodyfile="src/table/Atable.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAtable_1ad519343a13265a31ba1d0951be0e3185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Atable&lt; P &gt;::Atable</definition>
+        <argsstring>(Parser&lt; P &gt; *env, RunCompare&lt; P &gt; comp)</argsstring>
+        <name>Atable</name>
+        <param>
+          <type><ref refid="classParser" kindref="compound">Parser</ref>&lt; P &gt; *</type>
+          <declname>env</declname>
+        </param>
+        <param>
+          <type>RunCompare&lt; P &gt;</type>
+          <declname>comp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>environment must not be null. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1a535587360990ee5a9351501739585f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Atable&lt; P &gt;::~Atable</definition>
+        <argsstring>()</argsstring>
+        <name>~Atable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1a60515b93afede66f01a0e89edb563800" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+        <definition>virtual Run&lt;P&gt;* Atable&lt; P &gt;::best</definition>
+        <argsstring>(const P &amp;p)=0</argsstring>
+        <name>best</name>
+        <reimplementedby refid="classTable_1a2e8c9b5856741684b1ec7d8fc640cc81">best</reimplementedby>
+        <reimplementedby refid="classTable_1a2e8c9b5856741684b1ec7d8fc640cc81">best</reimplementedby>
+        <reimplementedby refid="classTable_1a2e8c9b5856741684b1ec7d8fc640cc81">best</reimplementedby>
+        <reimplementedby refid="classTable_1a2e8c9b5856741684b1ec7d8fc640cc81">best</reimplementedby>
+        <reimplementedby refid="classTable_1a2e8c9b5856741684b1ec7d8fc640cc81">best</reimplementedby>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>return k-best run pointed by p or NULL if there is none. k is either included in p or the default value 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be complete. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1af3a86206727f9d28cd3e962f709b9bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>virtual RhythmTree* Atable&lt; P &gt;::bestTree</definition>
+        <argsstring>(const P &amp;p)=0</argsstring>
+        <name>bestTree</name>
+        <reimplementedby refid="classTable_1ace006d9777eee7bb4835f821bc5c9467">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1ace006d9777eee7bb4835f821bc5c9467">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1ace006d9777eee7bb4835f821bc5c9467">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1ace006d9777eee7bb4835f821bc5c9467">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1ace006d9777eee7bb4835f821bc5c9467">bestTree</reimplementedby>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>tree corresponding to the k-best run in p. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1a48dfc1adb76a6d50824f28df2f8cd692" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>virtual RhythmTree* Atable&lt; P &gt;::bestTree</definition>
+        <argsstring>(Run&lt; P &gt; *p)=0</argsstring>
+        <name>bestTree</name>
+        <reimplementedby refid="classTable_1a53788fcf01e286097b3c0d7c7573d61f">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1a53788fcf01e286097b3c0d7c7573d61f">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1a53788fcf01e286097b3c0d7c7573d61f">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1a53788fcf01e286097b3c0d7c7573d61f">bestTree</reimplementedby>
+        <reimplementedby refid="classTable_1a53788fcf01e286097b3c0d7c7573d61f">bestTree</reimplementedby>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>when the k-best run in p is already computed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR param p </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>the run must be wta. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1ab644eecedb520d67da426f9170a6213b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Atable&lt; P &gt;::add</definition>
+        <argsstring>(const P &amp;p, Run&lt; P &gt; *r, Record&lt; P &gt; *i)=0</argsstring>
+        <name>add</name>
+        <reimplementedby refid="classTable_1a9231e3b8782acfabbafe1f1dcb85a3bb">add</reimplementedby>
+        <reimplementedby refid="classTable_1a9231e3b8782acfabbafe1f1dcb85a3bb">add</reimplementedby>
+        <reimplementedby refid="classTable_1a9231e3b8782acfabbafe1f1dcb85a3bb">add</reimplementedby>
+        <reimplementedby refid="classTable_1a9231e3b8782acfabbafe1f1dcb85a3bb">add</reimplementedby>
+        <reimplementedby refid="classTable_1a9231e3b8782acfabbafe1f1dcb85a3bb">add</reimplementedby>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="classRecord" kindref="compound">Record</ref>&lt; P &gt; *</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>add possible instances of run r to the entries in table for corresp. to possible instances for p. dispatch to the four functions below according to p and r. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be complete or partial. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be complete or partial. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if p is complete, then i must be an iterator to the entry for p in table, otherwise (p partial), i is table.end(). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1a90e01b017faeec6869df32bd50ce5b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Atable&lt; P &gt;::nb_entries</definition>
+        <argsstring>()=0</argsstring>
+        <name>nb_entries</name>
+        <reimplementedby refid="classTable_1aea047b02e7a9f2d714248903f52f5722">nb_entries</reimplementedby>
+        <reimplementedby refid="classTable_1aea047b02e7a9f2d714248903f52f5722">nb_entries</reimplementedby>
+        <reimplementedby refid="classTable_1aea047b02e7a9f2d714248903f52f5722">nb_entries</reimplementedby>
+        <reimplementedby refid="classTable_1aea047b02e7a9f2d714248903f52f5722">nb_entries</reimplementedby>
+        <reimplementedby refid="classTable_1aea047b02e7a9f2d714248903f52f5722">nb_entries</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAtable_1a66029b49ab5cece68c4a0635a821b877" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Atable&lt; P &gt;::nb_runs</definition>
+        <argsstring>()=0</argsstring>
+        <name>nb_runs</name>
+        <reimplementedby refid="classTable_1a8e4b509c921bf151b3601fca7704aaee">nb_runs</reimplementedby>
+        <reimplementedby refid="classTable_1a8e4b509c921bf151b3601fca7704aaee">nb_runs</reimplementedby>
+        <reimplementedby refid="classTable_1a8e4b509c921bf151b3601fca7704aaee">nb_runs</reimplementedby>
+        <reimplementedby refid="classTable_1a8e4b509c921bf151b3601fca7704aaee">nb_runs</reimplementedby>
+        <reimplementedby refid="classTable_1a8e4b509c921bf151b3601fca7704aaee">nb_runs</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Atable.hpp" line="93" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>abstract interface to parse table </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>Table&lt; P &gt;</label>
+        <link refid="classTable"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Atable&lt; P &gt;</label>
+        <link refid="classAtable"/>
+      </node>
+    </inheritancegraph>
+    <location file="src/segment/InputSegment.hpp" line="38" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="38" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classAtable_1a84214b2c984a18a8cec13313152d3eaa" prot="protected" virt="non-virtual"><scope>Atable</scope><name>_comparer</name></member>
+      <member refid="classAtable_1ab644eecedb520d67da426f9170a6213b" prot="public" virt="pure-virtual"><scope>Atable</scope><name>add</name></member>
+      <member refid="classAtable_1ad519343a13265a31ba1d0951be0e3185" prot="public" virt="non-virtual"><scope>Atable</scope><name>Atable</name></member>
+      <member refid="classAtable_1a60515b93afede66f01a0e89edb563800" prot="public" virt="pure-virtual"><scope>Atable</scope><name>best</name></member>
+      <member refid="classAtable_1af3a86206727f9d28cd3e962f709b9bc2" prot="public" virt="pure-virtual"><scope>Atable</scope><name>bestTree</name></member>
+      <member refid="classAtable_1a48dfc1adb76a6d50824f28df2f8cd692" prot="public" virt="pure-virtual"><scope>Atable</scope><name>bestTree</name></member>
+      <member refid="classAtable_1a90e01b017faeec6869df32bd50ce5b35" prot="public" virt="pure-virtual"><scope>Atable</scope><name>nb_entries</name></member>
+      <member refid="classAtable_1a66029b49ab5cece68c4a0635a821b877" prot="public" virt="pure-virtual"><scope>Atable</scope><name>nb_runs</name></member>
+      <member refid="classAtable_1a43c761e5718010983659d7162f89d8d3" prot="public" virt="non-virtual"><scope>Atable</scope><name>parent</name></member>
+      <member refid="classAtable_1a535587360990ee5a9351501739585f13" prot="public" virt="non-virtual"><scope>Atable</scope><name>~Atable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

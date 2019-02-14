@@ -1,0 +1,133 @@
+\hypertarget{classFloatWeight}{}\section{Float\+Weight Class Reference}
+\label{classFloatWeight}\index{FloatWeight@{FloatWeight}}
+
+
+concrete \mbox{\hyperlink{classWeight}{Weight}} defined as a scalar value.  
+
+
+
+
+{\ttfamily \#include $<$Float\+Weight.\+hpp$>$}
+
+Inheritance diagram for Float\+Weight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFloatWeight}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__weight_ga7eed0253fd20af20e3fec8dc2f4652b8}{Float\+Weight}} (double d=0.\+0)
+\begin{DoxyCompactList}\small\item\em defaut = null weight -\/ not unknown \end{DoxyCompactList}\item 
+{\bfseries Float\+Weight} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \&)
+\item 
+virtual \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} $\ast$ {\bfseries clone} () const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classFloatWeight_a71464c94830161af2f0dd3df99fe6856}{make}} (double v) const
+\begin{DoxyCompactList}\small\item\em factory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloatWeight_a0e9f541164db5cf13978efd46585810b}\label{classFloatWeight_a0e9f541164db5cf13978efd46585810b}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classFloatWeight_a0e9f541164db5cf13978efd46585810b}{get\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for add (absorbing element for mult) wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloatWeight_a4952f3b312622eccc331b4d001c816a4}\label{classFloatWeight_a4952f3b312622eccc331b4d001c816a4}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classFloatWeight_a4952f3b312622eccc331b4d001c816a4}{get\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for mult wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloatWeight_a2c63d370c10678609f814907193b23ee}\label{classFloatWeight_a2c63d370c10678609f814907193b23ee}} 
+virtual double {\bfseries norm} () const
+\item 
+virtual void {\bfseries scalar} (double)
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga45533bb9d354577728ddb1e0a42c4bab}{invert}} ()
+\begin{DoxyCompactList}\small\item\em multiplicative inverse. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_gafb9e6bffef57c6462cd2eea89efbfeaf}{zero}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for add (absorbing element for mult). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_gac90a90f052aba6f1a03a5238bae96159}{one}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for mult. \end{DoxyCompactList}\item 
+bool {\bfseries equal} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&rhs) const
+\item 
+bool {\bfseries smaller} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&rhs) const
+\item 
+void {\bfseries add} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&rhs)
+\item 
+void {\bfseries mult} (const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&rhs)
+\item 
+\mbox{\Hypertarget{classFloatWeight_ab0d05685ad9a718cc9020a55d2932486}\label{classFloatWeight_ab0d05685ad9a718cc9020a55d2932486}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatWeight_abb38e7b190994886e7e76368fdd5f249}\label{classFloatWeight_abb38e7b190994886e7e76368fdd5f249}} 
+static \mbox{\hyperlink{classWeight}{Weight}} {\bfseries make\+\_\+zero} ()
+\item 
+\mbox{\Hypertarget{classFloatWeight_a3f2f798acf432ffe014a71be26b800a8}\label{classFloatWeight_a3f2f798acf432ffe014a71be26b800a8}} 
+static \mbox{\hyperlink{classWeight}{Weight}} {\bfseries make\+\_\+one} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{group__weight_gaaa895d17971bdd11c3ecddb9d701ac0a}{equal}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga89e27d308aeaadbc11621ae9a6e839b3}{smaller}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga987ee2a0704f046a9be6e2456d56df7c}{add}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga16591d6a01c98477ccd57deadf8d4738}{mult}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\item 
+virtual void {\bfseries print} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatWeight_a379227ff21946891cf58783ece9c30f3}\label{classFloatWeight_a379227ff21946891cf58783ece9c30f3}} 
+double {\bfseries \+\_\+val}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatWeight_a28da9ceeeef71d7da863914db5247228}\label{classFloatWeight_a28da9ceeeef71d7da863914db5247228}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classFloatWeight}{Float\+Weight}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+concrete \mbox{\hyperlink{classWeight}{Weight}} defined as a scalar value. 
+
+
+\begin{DoxyItemize}
+\item domain \+: double
+\item operators
+\item add is +
+\item zero is 0.\+0
+\item mult is $\ast$
+\item one is 1.\+0 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFloatWeight_a71464c94830161af2f0dd3df99fe6856}\label{classFloatWeight_a71464c94830161af2f0dd3df99fe6856}} 
+\index{FloatWeight@{FloatWeight}!make@{make}}
+\index{make@{make}!FloatWeight@{FloatWeight}}
+\subsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWeight}{Weight}} Float\+Weight\+::make (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+factory. 
+
+\begin{DoxyReturn}{Returns}
+a weight of same type as this letter, initialized with given value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLetterWeight_af1f898e0845f59299440fc50a58fd2f1}{Letter\+Weight}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Float\+Weight.\+hpp\item 
+src/weight/Float\+Weight.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Rest" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Rest</compoundname>
+    <basecompoundref refid="classScoreModel_1_1Event" prot="public" virt="non-virtual">ScoreModel::Event</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1a06c2c52454182970481d867119c2fe0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Rest::Rest</definition>
+        <argsstring>(Duration duration)</argsstring>
+        <name>Rest</name>
+        <param>
+          <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+          <declname>duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="14" column="1" bodyfile="src/scoremodel/Rest.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1abfe6e8a4210f035261ea26995825ce8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Rest::~Rest</definition>
+        <argsstring>()</argsstring>
+        <name>~Rest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="16" column="1" bodyfile="src/scoremodel/Rest.hpp" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1af29f3806881fad7eb74254697144a411" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classScoreModel_1_1Event" kindref="compound">Event</ref> *</type>
+        <definition>Event * ScoreModel::Rest::clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="18" column="1" bodyfile="src/scoremodel/Rest.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1a6ed1f8d8549c1f956ba1124ebcbc161a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ScoreModel::Rest::isRest</definition>
+        <argsstring>() const</argsstring>
+        <name>isRest</name>
+        <reimplements refid="classScoreModel_1_1Event_1ae326ab5efa2180f662548b4160360288">isRest</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="20" column="1" bodyfile="src/scoremodel/Rest.hpp" bodystart="20" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1a1adc1535dcdadaaeab92d396967f04de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ScoreModel::Rest::isNote</definition>
+        <argsstring>() const</argsstring>
+        <name>isNote</name>
+        <reimplements refid="classScoreModel_1_1Event_1ae831f2bf338cd2d68ff695541d20bb17">isNote</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="23" column="1" bodyfile="src/scoremodel/Rest.hpp" bodystart="23" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Rest_1abfe8e08af480cea8f63c99ca454ee928" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Rest::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Rest.hpp" line="26" column="1" bodyfile="src/scoremodel/Rest.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="357">
+        <label>ScoreModel::Event</label>
+        <link refid="classScoreModel_1_1Event"/>
+      </node>
+      <node id="356">
+        <label>ScoreModel::Rest</label>
+        <link refid="classScoreModel_1_1Rest"/>
+        <childnode refid="357" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="359">
+        <label>ScoreModel::Event</label>
+        <link refid="classScoreModel_1_1Event"/>
+      </node>
+      <node id="358">
+        <label>ScoreModel::Rest</label>
+        <link refid="classScoreModel_1_1Rest"/>
+        <childnode refid="359" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/scoremodel/Rest.hpp" line="12" column="1" bodyfile="src/scoremodel/Rest.hpp" bodystart="11" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Rest_1af29f3806881fad7eb74254697144a411" prot="public" virt="virtual"><scope>ScoreModel::Rest</scope><name>clone</name></member>
+      <member refid="classScoreModel_1_1Event_1af639f7bb1366a3f8790da5ac2ef795fc" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>Event</name></member>
+      <member refid="classScoreModel_1_1Event_1a6dd98760396d0900719f2637ec27371a" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getDuration</name></member>
+      <member refid="classScoreModel_1_1Event_1a1d0e5a432ad6f00807b00f5d5a17f412" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getEndBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1aba12bfff200e2712a8a81e1897fc39cc" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getId</name></member>
+      <member refid="classScoreModel_1_1Event_1a60f960de4ae5bfafd43778bbc9873ce8" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getMeasure</name></member>
+      <member refid="classScoreModel_1_1Event_1a14c20827cc116c68376cd20f66c974f4" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getStartBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1aa42a7bed6170ee53f28c89e54ce0f830" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>getVoicePtr</name></member>
+      <member refid="classScoreModel_1_1Event_1a114a671fc6a3f5ecfe4fbbde5a4758a0" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>isGraceNote</name></member>
+      <member refid="classScoreModel_1_1Rest_1a1adc1535dcdadaaeab92d396967f04de" prot="public" virt="virtual"><scope>ScoreModel::Rest</scope><name>isNote</name></member>
+      <member refid="classScoreModel_1_1Rest_1a6ed1f8d8549c1f956ba1124ebcbc161a" prot="public" virt="virtual"><scope>ScoreModel::Rest</scope><name>isRest</name></member>
+      <member refid="classScoreModel_1_1Rest_1abfe8e08af480cea8f63c99ca454ee928" prot="public" virt="virtual"><scope>ScoreModel::Rest</scope><name>print</name></member>
+      <member refid="classScoreModel_1_1Rest_1a06c2c52454182970481d867119c2fe0d" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>Rest</name></member>
+      <member refid="classScoreModel_1_1Event_1a7f42996eca1339a85a8b6151bc426088" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setDuration</name></member>
+      <member refid="classScoreModel_1_1Event_1ac90f374d347bbb44e08590b62c0ef3b0" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setEndBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1ae837a0111c2a45ecb1dead0f8018d2b5" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setGraceNote</name></member>
+      <member refid="classScoreModel_1_1Event_1a27efb946e1900cebd3ed72e073f98024" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setId</name></member>
+      <member refid="classScoreModel_1_1Event_1a842f6f7bd3140fc7fb469e5061a45d87" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setMeasure</name></member>
+      <member refid="classScoreModel_1_1Event_1a0fcaff7d9c5fdcf35fed5b67cdaca4b9" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setStartBeam</name></member>
+      <member refid="classScoreModel_1_1Event_1a50e6b3aae286c87a9db3bc00c8b332c3" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>setVoice</name></member>
+      <member refid="classScoreModel_1_1Event_1a35564de0740e9c4218f36b9deb5aeeec" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>UNDEF_VELOCITY</name></member>
+      <member refid="classScoreModel_1_1Event_1a028708f328e5508208809b788b3498e2" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>~Event</name></member>
+      <member refid="classScoreModel_1_1Rest_1abfe6e8a4210f035261ea26995825ce8a" prot="public" virt="non-virtual"><scope>ScoreModel::Rest</scope><name>~Rest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

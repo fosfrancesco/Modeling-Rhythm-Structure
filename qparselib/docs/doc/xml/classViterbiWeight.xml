@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classViterbiWeight" kind="class" language="C++" prot="public">
+    <compoundname>ViterbiWeight</compoundname>
+    <basecompoundref refid="classLetterWeight" prot="public" virt="non-virtual">LetterWeight</basecompoundref>
+    <derivedcompoundref refid="classPerfoWeight" prot="public" virt="non-virtual">PerfoWeight</derivedcompoundref>
+    <includes local="no">ViterbiWeight.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classViterbiWeight_1a0e70b1bda371ba1887ea71e5ff5f91bf" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ViterbiWeight::_val</definition>
+        <argsstring></argsstring>
+        <name>_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="90" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__weight_1gad7ca8b9082125f4ac2f9f562685517a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiWeight::ViterbiWeight</definition>
+        <argsstring>(const ViterbiWeight &amp;)</argsstring>
+        <name>ViterbiWeight</name>
+        <param>
+          <type>const <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="38" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1ad24850a46f10b4abb94dec4b675b2e69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiWeight::~ViterbiWeight</definition>
+        <argsstring>()</argsstring>
+        <name>~ViterbiWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="40" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga388bdd81eafaa3cb729934f36f603f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> &amp;</type>
+        <definition>ViterbiWeight &amp; ViterbiWeight::operator=</definition>
+        <argsstring>(const ViterbiWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="42" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga6624ad5a46c38eeae5382fc00cf4b8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> &amp;</type>
+        <definition>ViterbiWeight &amp; ViterbiWeight::operator=</definition>
+        <argsstring>(const LetterWeight &amp;rvalue)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+          <declname>rvalue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="45" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="39" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga315ec4d2ce14bcdea7b8a3d0c9d278ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+        <definition>LetterWeight * ViterbiWeight::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77">clone</reimplements>
+        <reimplementedby refid="classPerfoWeight_1a8023bda84f8e883bbad23b31c1ccdd0b">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="47" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1a8b4676e41a4edb2cc5466d1e8cb1059a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight ViterbiWeight::make</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>make</name>
+        <reimplements refid="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1">make</reimplements>
+        <reimplementedby refid="classPerfoWeight_1ad9237d9b3fccf6f0b70133e10c1103b2">make</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a weight of same type as this letter, initialized with given value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="50" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="50" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1af7655a0c00c0af95699e186ceec25a7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight ViterbiWeight::get_zero</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero</name>
+        <reimplements refid="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554">get_zero</reimplements>
+        <briefdescription>
+<para>return the neutral element for add (absorbing element for mult) wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="56" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="56" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1a5009d22fc226821a8dfd876ed9bd9e84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight ViterbiWeight::get_one</definition>
+        <argsstring>() const</argsstring>
+        <name>get_one</name>
+        <reimplements refid="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca">get_one</reimplements>
+        <briefdescription>
+<para>return the neutral element for mult wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="62" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="62" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga01383c055ca0dafc28870ecd701dbd15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ViterbiWeight::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <reimplements refid="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de">norm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="65" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga9b7f93efd61f58a88d9274a9e12ebe36" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ViterbiWeight::scalar</definition>
+        <argsstring>(double)</argsstring>
+        <name>scalar</name>
+        <reimplements refid="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58">scalar</reimplements>
+        <param>
+          <type>double</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="68" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga1fa4dd503a5f4915df2f9c5663aeeaeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ViterbiWeight::invert</definition>
+        <argsstring>()</argsstring>
+        <name>invert</name>
+        <reimplements refid="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218">invert</reimplements>
+        <briefdescription>
+<para>multiplicative inverse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight must not be zero. </para>
+</simplesect>
+<xrefsect id="todo_1_todo000039"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="73" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="70" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga35f29b2dcd594cc2cfac884322095c16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ViterbiWeight::zero</definition>
+        <argsstring>() const</argsstring>
+        <name>zero</name>
+        <reimplements refid="group__weight_1gabaad113da06b47c4b291558d05da6aa6">zero</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for add (absorbing element for mult). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="75" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga31f697ce8283cf19cd1b2f9520c83cde" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ViterbiWeight::one</definition>
+        <argsstring>() const</argsstring>
+        <name>one</name>
+        <reimplements refid="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0">one</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for mult. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="77" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1a115d43704bf01603dad9cda0d28292bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ViterbiWeight::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <reimplements refid="classLetterWeight_1a7c087b5999657545934b72660928a2ee">hasType</reimplements>
+        <reimplementedby refid="classPerfoWeight_1a170351b18fd33ea7753d8b82eb83ae9e">hasType</reimplementedby>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="79" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="79" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classViterbiWeight_1a4906fd4ccbcbf5a9617d40a73afd778b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight ViterbiWeight::make_zero</definition>
+        <argsstring>()</argsstring>
+        <name>make_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="53" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiWeight_1a175ce9e3ea9e87e8a28f34c4655544be" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight ViterbiWeight::make_one</definition>
+        <argsstring>()</argsstring>
+        <name>make_one</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="59" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="59" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classViterbiWeight_1a1eb660c8b3a3b745891ef0a04d41adad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const ViterbiWeight &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="82" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__weight_1gaf4e626612999673b8e4e0a322119402c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiWeight::ViterbiWeight</definition>
+        <argsstring>(double)</argsstring>
+        <name>ViterbiWeight</name>
+        <param>
+          <type>double</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>default is one </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="94" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga96f4c23e4845b232451e99b648bddfd6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ViterbiWeight::equal</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>equal</name>
+        <reimplements refid="group__weight_1gaf00322921db3c5212f8d5ca63081d689">equal</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>rhs must be a <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="97" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga54f4048f888a9432f02bc0d9f25257c1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ViterbiWeight::smaller</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>smaller</name>
+        <reimplements refid="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2">smaller</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>rhs must be a <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="100" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga009b0216c58308f81497e4aabe49aaed" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ViterbiWeight::add</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>add</name>
+        <reimplements refid="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8">add</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>sum is min. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref>. set this to the min of this and rhs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="105" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga842377ca8ad5fa73cc9787fa97e88635" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ViterbiWeight::mult</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>mult</name>
+        <reimplements refid="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01">mult</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>product is sum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref>. set this to the sum of this and rhs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="110" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gad54ea0c48179932f2b8e553f5e3ade51" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ViterbiWeight::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__weight_1gabef24fcc2eb0c72c420e83e6db625545">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/ViterbiWeight.hpp" line="112" column="1" bodyfile="src/weight/ViterbiWeight.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Viterbi semifield. concrete <ref refid="classWeight" kindref="compound">Weight</ref> defined as a scalar value: probability of the best derivation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>domain : positive or null rational numbers in [0, 1]</para>
+</listitem><listitem><para>operators:</para>
+</listitem><listitem><para>add is max</para>
+</listitem><listitem><para>zero is 0</para>
+</listitem><listitem><para>mult is *</para>
+</listitem><listitem><para>one is 1 </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="481">
+        <label>ViterbiWeight</label>
+        <link refid="classViterbiWeight"/>
+        <childnode refid="482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="483">
+        <label>PerfoWeight</label>
+        <link refid="classPerfoWeight"/>
+        <childnode refid="481" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="484">
+        <label>ViterbiWeight</label>
+        <link refid="classViterbiWeight"/>
+        <childnode refid="485" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/weight/ViterbiWeight.hpp" line="35" column="1" bodyfile="src/weight/ViterbiWeight.hpp" bodystart="34" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classViterbiWeight_1a0e70b1bda371ba1887ea71e5ff5f91bf" prot="protected" virt="non-virtual"><scope>ViterbiWeight</scope><name>_val</name></member>
+      <member refid="group__weight_1ga009b0216c58308f81497e4aabe49aaed" prot="protected" virt="virtual"><scope>ViterbiWeight</scope><name>add</name></member>
+      <member refid="group__weight_1ga315ec4d2ce14bcdea7b8a3d0c9d278ef" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>clone</name></member>
+      <member refid="group__weight_1ga96f4c23e4845b232451e99b648bddfd6" prot="protected" virt="virtual"><scope>ViterbiWeight</scope><name>equal</name></member>
+      <member refid="classViterbiWeight_1a5009d22fc226821a8dfd876ed9bd9e84" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>get_one</name></member>
+      <member refid="classViterbiWeight_1af7655a0c00c0af95699e186ceec25a7e" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>get_zero</name></member>
+      <member refid="classViterbiWeight_1a115d43704bf01603dad9cda0d28292bf" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>hasType</name></member>
+      <member refid="group__weight_1ga1fa4dd503a5f4915df2f9c5663aeeaeb" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>invert</name></member>
+      <member refid="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>LetterWeight</name></member>
+      <member refid="classViterbiWeight_1a8b4676e41a4edb2cc5466d1e8cb1059a" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>make</name></member>
+      <member refid="classViterbiWeight_1a175ce9e3ea9e87e8a28f34c4655544be" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>make_one</name></member>
+      <member refid="classViterbiWeight_1a4906fd4ccbcbf5a9617d40a73afd778b" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>make_zero</name></member>
+      <member refid="group__weight_1ga842377ca8ad5fa73cc9787fa97e88635" prot="protected" virt="virtual"><scope>ViterbiWeight</scope><name>mult</name></member>
+      <member refid="group__weight_1ga01383c055ca0dafc28870ecd701dbd15" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>norm</name></member>
+      <member refid="group__weight_1ga31f697ce8283cf19cd1b2f9520c83cde" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>one</name></member>
+      <member refid="classViterbiWeight_1a1eb660c8b3a3b745891ef0a04d41adad" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__weight_1ga388bdd81eafaa3cb729934f36f603f35" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1ga6624ad5a46c38eeae5382fc00cf4b8a0" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1gad54ea0c48179932f2b8e553f5e3ade51" prot="protected" virt="virtual"><scope>ViterbiWeight</scope><name>print</name></member>
+      <member refid="group__weight_1ga9b7f93efd61f58a88d9274a9e12ebe36" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>scalar</name></member>
+      <member refid="group__weight_1ga54f4048f888a9432f02bc0d9f25257c1" prot="protected" virt="virtual"><scope>ViterbiWeight</scope><name>smaller</name></member>
+      <member refid="group__weight_1gad7ca8b9082125f4ac2f9f562685517a9" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>ViterbiWeight</name></member>
+      <member refid="group__weight_1gaf4e626612999673b8e4e0a322119402c" prot="protected" virt="non-virtual"><scope>ViterbiWeight</scope><name>ViterbiWeight</name></member>
+      <member refid="group__weight_1ga35f29b2dcd594cc2cfac884322095c16" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>zero</name></member>
+      <member refid="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" virt="virtual"><scope>ViterbiWeight</scope><name>~LetterWeight</name></member>
+      <member refid="classViterbiWeight_1ad24850a46f10b4abb94dec4b675b2e69" prot="public" virt="non-virtual"><scope>ViterbiWeight</scope><name>~ViterbiWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classFloatWeight" kind="class" language="C++" prot="public">
+    <compoundname>FloatWeight</compoundname>
+    <basecompoundref refid="classLetterWeight" prot="public" virt="non-virtual">LetterWeight</basecompoundref>
+    <includes local="no">FloatWeight.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classFloatWeight_1a379227ff21946891cf58783ece9c30f3" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FloatWeight::_val</definition>
+        <argsstring></argsstring>
+        <name>_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="86" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__weight_1ga7eed0253fd20af20e3fec8dc2f4652b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FloatWeight::FloatWeight</definition>
+        <argsstring>(double d=0.0)</argsstring>
+        <name>FloatWeight</name>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>defaut = null weight - not unknown </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="33" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gac7ac9026fecc24193526ef577d819a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FloatWeight::FloatWeight</definition>
+        <argsstring>(const FloatWeight &amp;)</argsstring>
+        <name>FloatWeight</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="35" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="20" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga265949c1cd1d5dbf5888bcd2d4283d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+        <definition>FloatWeight &amp; FloatWeight::operator=</definition>
+        <argsstring>(const FloatWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="37" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="24" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gafae5ba059c08a25f4bd2ffa422b953c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+        <definition>FloatWeight &amp; FloatWeight::operator=</definition>
+        <argsstring>(const LetterWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="39" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga3ee8633406a8dc51ba579254872b21e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> *</type>
+        <definition>FloatWeight * FloatWeight::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="41" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1a71464c94830161af2f0dd3df99fe6856" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight FloatWeight::make</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>make</name>
+        <reimplements refid="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1">make</reimplements>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a weight of same type as this letter, initialized with given value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="43" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1a0e9f541164db5cf13978efd46585810b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight FloatWeight::get_zero</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero</name>
+        <reimplements refid="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554">get_zero</reimplements>
+        <briefdescription>
+<para>return the neutral element for add (absorbing element for mult) wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="49" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="49" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1a4952f3b312622eccc331b4d001c816a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>virtual Weight FloatWeight::get_one</definition>
+        <argsstring>() const</argsstring>
+        <name>get_one</name>
+        <reimplements refid="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca">get_one</reimplements>
+        <briefdescription>
+<para>return the neutral element for mult wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="55" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="55" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1a2c63d370c10678609f814907193b23ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double FloatWeight::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <reimplements refid="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de">norm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="58" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga8fe884fff3323382bfc7729500cca368" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FloatWeight::scalar</definition>
+        <argsstring>(double)</argsstring>
+        <name>scalar</name>
+        <reimplements refid="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58">scalar</reimplements>
+        <param>
+          <type>double</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="61" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga45533bb9d354577728ddb1e0a42c4bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FloatWeight::invert</definition>
+        <argsstring>()</argsstring>
+        <name>invert</name>
+        <reimplements refid="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218">invert</reimplements>
+        <briefdescription>
+<para>multiplicative inverse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight must not be zero. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="65" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gafb9e6bffef57c6462cd2eea89efbfeaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::zero</definition>
+        <argsstring>() const</argsstring>
+        <name>zero</name>
+        <reimplements refid="group__weight_1gabaad113da06b47c4b291558d05da6aa6">zero</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for add (absorbing element for mult). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="67" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gac90a90f052aba6f1a03a5238bae96159" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::one</definition>
+        <argsstring>() const</argsstring>
+        <name>one</name>
+        <reimplements refid="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0">one</reimplements>
+        <briefdescription>
+<para>this letterweight is neutral element for mult. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="69" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga11c58941eafe9e4f3a45558812786e36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::equal</definition>
+        <argsstring>(const FloatWeight &amp;rhs) const</argsstring>
+        <name>equal</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="73" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga0a34058d4d70333e0b74edc66aa8884c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::smaller</definition>
+        <argsstring>(const FloatWeight &amp;rhs) const</argsstring>
+        <name>smaller</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="75" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gaf86e96735a95a82f3ad7b11ee9d6162c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FloatWeight::add</definition>
+        <argsstring>(const FloatWeight &amp;rhs)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="77" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga05347e9d4ebd5c7f95d8f575cc396451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FloatWeight::mult</definition>
+        <argsstring>(const FloatWeight &amp;rhs)</argsstring>
+        <name>mult</name>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="79" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1ab0d05685ad9a718cc9020a55d2932486" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool FloatWeight::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <reimplements refid="classLetterWeight_1a7c087b5999657545934b72660928a2ee">hasType</reimplements>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="81" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="81" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFloatWeight_1abb38e7b190994886e7e76368fdd5f249" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight FloatWeight::make_zero</definition>
+        <argsstring>()</argsstring>
+        <name>make_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="46" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classFloatWeight_1a3f2f798acf432ffe014a71be26b800a8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>static Weight FloatWeight::make_one</definition>
+        <argsstring>()</argsstring>
+        <name>make_one</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="52" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="52" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classFloatWeight_1a28da9ceeeef71d7da863914db5247228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const FloatWeight &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="71" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__weight_1gaaa895d17971bdd11c3ecddb9d701ac0a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::equal</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>equal</name>
+        <reimplements refid="group__weight_1gaf00322921db3c5212f8d5ca63081d689">equal</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="89" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga89e27d308aeaadbc11621ae9a6e839b3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FloatWeight::smaller</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>smaller</name>
+        <reimplements refid="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2">smaller</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="92" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga987ee2a0704f046a9be6e2456d56df7c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FloatWeight::add</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>add</name>
+        <reimplements refid="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8">add</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="95" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="107" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga16591d6a01c98477ccd57deadf8d4738" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FloatWeight::mult</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>mult</name>
+        <reimplements refid="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01">mult</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classFloatWeight" kindref="compound">FloatWeight</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="98" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga535988d2b88e8f2bbb24eeeba5daf81f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FloatWeight::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__weight_1gabef24fcc2eb0c72c420e83e6db625545">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/FloatWeight.hpp" line="100" column="1" bodyfile="src/weight/FloatWeight.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>concrete <ref refid="classWeight" kindref="compound">Weight</ref> defined as a scalar value. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>domain : double</para>
+</listitem><listitem><para>operators</para>
+</listitem><listitem><para>add is +</para>
+</listitem><listitem><para>zero is 0.0</para>
+</listitem><listitem><para>mult is *</para>
+</listitem><listitem><para>one is 1.0 </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="93">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="92">
+        <label>FloatWeight</label>
+        <link refid="classFloatWeight"/>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="95">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="94">
+        <label>FloatWeight</label>
+        <link refid="classFloatWeight"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/weight/FloatWeight.hpp" line="30" column="1" bodyfile="src/weight/FloatWeight.hpp" bodystart="29" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classFloatWeight_1a379227ff21946891cf58783ece9c30f3" prot="protected" virt="non-virtual"><scope>FloatWeight</scope><name>_val</name></member>
+      <member refid="group__weight_1gaf86e96735a95a82f3ad7b11ee9d6162c" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>add</name></member>
+      <member refid="group__weight_1ga987ee2a0704f046a9be6e2456d56df7c" prot="protected" virt="virtual"><scope>FloatWeight</scope><name>add</name></member>
+      <member refid="group__weight_1ga3ee8633406a8dc51ba579254872b21e4" prot="public" virt="virtual"><scope>FloatWeight</scope><name>clone</name></member>
+      <member refid="group__weight_1ga11c58941eafe9e4f3a45558812786e36" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>equal</name></member>
+      <member refid="group__weight_1gaaa895d17971bdd11c3ecddb9d701ac0a" prot="protected" virt="virtual"><scope>FloatWeight</scope><name>equal</name></member>
+      <member refid="group__weight_1ga7eed0253fd20af20e3fec8dc2f4652b8" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>FloatWeight</name></member>
+      <member refid="group__weight_1gac7ac9026fecc24193526ef577d819a3b" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>FloatWeight</name></member>
+      <member refid="classFloatWeight_1a4952f3b312622eccc331b4d001c816a4" prot="public" virt="virtual"><scope>FloatWeight</scope><name>get_one</name></member>
+      <member refid="classFloatWeight_1a0e9f541164db5cf13978efd46585810b" prot="public" virt="virtual"><scope>FloatWeight</scope><name>get_zero</name></member>
+      <member refid="classFloatWeight_1ab0d05685ad9a718cc9020a55d2932486" prot="public" virt="virtual"><scope>FloatWeight</scope><name>hasType</name></member>
+      <member refid="group__weight_1ga45533bb9d354577728ddb1e0a42c4bab" prot="public" virt="virtual"><scope>FloatWeight</scope><name>invert</name></member>
+      <member refid="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>LetterWeight</name></member>
+      <member refid="classFloatWeight_1a71464c94830161af2f0dd3df99fe6856" prot="public" virt="virtual"><scope>FloatWeight</scope><name>make</name></member>
+      <member refid="classFloatWeight_1a3f2f798acf432ffe014a71be26b800a8" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>make_one</name></member>
+      <member refid="classFloatWeight_1abb38e7b190994886e7e76368fdd5f249" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>make_zero</name></member>
+      <member refid="group__weight_1ga05347e9d4ebd5c7f95d8f575cc396451" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>mult</name></member>
+      <member refid="group__weight_1ga16591d6a01c98477ccd57deadf8d4738" prot="protected" virt="virtual"><scope>FloatWeight</scope><name>mult</name></member>
+      <member refid="classFloatWeight_1a2c63d370c10678609f814907193b23ee" prot="public" virt="virtual"><scope>FloatWeight</scope><name>norm</name></member>
+      <member refid="group__weight_1gac90a90f052aba6f1a03a5238bae96159" prot="public" virt="virtual"><scope>FloatWeight</scope><name>one</name></member>
+      <member refid="classFloatWeight_1a28da9ceeeef71d7da863914db5247228" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__weight_1ga265949c1cd1d5dbf5888bcd2d4283d52" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1gafae5ba059c08a25f4bd2ffa422b953c1" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1ga535988d2b88e8f2bbb24eeeba5daf81f" prot="protected" virt="virtual"><scope>FloatWeight</scope><name>print</name></member>
+      <member refid="group__weight_1ga8fe884fff3323382bfc7729500cca368" prot="public" virt="virtual"><scope>FloatWeight</scope><name>scalar</name></member>
+      <member refid="group__weight_1ga0a34058d4d70333e0b74edc66aa8884c" prot="public" virt="non-virtual"><scope>FloatWeight</scope><name>smaller</name></member>
+      <member refid="group__weight_1ga89e27d308aeaadbc11621ae9a6e839b3" prot="protected" virt="virtual"><scope>FloatWeight</scope><name>smaller</name></member>
+      <member refid="group__weight_1gafb9e6bffef57c6462cd2eea89efbfeaf" prot="public" virt="virtual"><scope>FloatWeight</scope><name>zero</name></member>
+      <member refid="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" virt="virtual"><scope>FloatWeight</scope><name>~LetterWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

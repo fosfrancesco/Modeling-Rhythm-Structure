@@ -1,0 +1,11 @@
+definition of command line utilities.
+
+Every {\ttfamily target} is defined in a .cpp file with a main function. The commandline options are handled using the G\+NU \href{https://www.gnu.org/software/libc/manual/html_node/Getopt.html}{\texttt{ getopt}} function.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily quant} Transcription of an input given by a text or a M\+I\+DI file wrt a given automaton (stored in a file and called schema). Various output possible, including \mbox{\hyperlink{classMEI}{M\+EI}} score file and quantized M\+I\+DI file.
+\item {\ttfamily equiv} Enumeration of rhythm trees in a given schema language equivalent to a given sequence of (quantized) durations (Inter-\/\+Onset-\/\+Intervals).
+\item {\ttfamily schemas} Utilities for the construction of schema and computation of weights.
+\item {\ttfamily midiutils} Utilities for reading M\+I\+DI files and conversion to text format. 
+\end{DoxyItemize}

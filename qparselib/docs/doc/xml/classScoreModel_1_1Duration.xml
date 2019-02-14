@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Duration" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Duration</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Duration_1ae897ce15da38ac887ddba0cf769c5ad7" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int ScoreModel::Duration::QUARTER_DURATION</definition>
+        <argsstring></argsstring>
+        <name>QUARTER_DURATION</name>
+        <initializer>=4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Some constants </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="62" column="1" bodyfile="src/scoremodel/Duration.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Duration_1a633af0c7d5ee7fb515a90adc55fec45a" prot="private" static="no" mutable="no">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ScoreModel::Duration::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="65" column="1" bodyfile="src/scoremodel/Duration.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Duration_1aa2e8ee49de085039d079faf1351a21b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Duration::Duration</definition>
+        <argsstring>(Rational ratio)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="33" column="1" bodyfile="src/scoremodel/Duration.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Duration_1a8fce14c5c61ab8575d9fbc77025fb1cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ScoreModel::Duration::getValue</definition>
+        <argsstring>() const</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the duration value as a rational: nb beats / beat unit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="38" column="1" bodyfile="src/scoremodel/Duration.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Duration_1a43dc9acb53b931de80f75fd929d9fd4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreModel::Duration::setValue</definition>
+        <argsstring>(Rational value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the duration value as a rational: nb beats / beat unit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="43" column="1" bodyfile="src/scoremodel/Duration.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Duration_1a3c1433fd0a073dc75d529f18257c1557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScoreModel::Duration::getCMN</definition>
+        <argsstring>() const</argsstring>
+        <name>getCMN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the CMN code</para>
+<para>The CMN code is a value ranging from 1 (whole note) to 256, and is always a power of 2. In the score output, intermediate durations (eg triplets) are usually obtained by applying a tuplet ratio to the CMN code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="52" column="1" bodyfile="src/scoremodel/Duration.cpp" bodystart="13" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Duration_1a3f30d745dfae4286f5fb9dfdf0542d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Duration::~Duration</definition>
+        <argsstring>()</argsstring>
+        <name>~Duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Duration.hpp" line="57" column="1" bodyfile="src/scoremodel/Duration.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Duration.hpp" line="27" column="1" bodyfile="src/scoremodel/Duration.hpp" bodystart="26" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Duration_1a633af0c7d5ee7fb515a90adc55fec45a" prot="private" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>_value</name></member>
+      <member refid="classScoreModel_1_1Duration_1aa2e8ee49de085039d079faf1351a21b3" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>Duration</name></member>
+      <member refid="classScoreModel_1_1Duration_1a3c1433fd0a073dc75d529f18257c1557" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>getCMN</name></member>
+      <member refid="classScoreModel_1_1Duration_1a8fce14c5c61ab8575d9fbc77025fb1cd" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>getValue</name></member>
+      <member refid="classScoreModel_1_1Duration_1ae897ce15da38ac887ddba0cf769c5ad7" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>QUARTER_DURATION</name></member>
+      <member refid="classScoreModel_1_1Duration_1a43dc9acb53b931de80f75fd929d9fd4d" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>setValue</name></member>
+      <member refid="classScoreModel_1_1Duration_1a3f30d745dfae4286f5fb9dfdf0542d64" prot="public" virt="non-virtual"><scope>ScoreModel::Duration</scope><name>~Duration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

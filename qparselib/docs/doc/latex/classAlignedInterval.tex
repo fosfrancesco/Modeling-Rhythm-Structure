@@ -1,0 +1,212 @@
+\hypertarget{classAlignedInterval}{}\section{Aligned\+Interval Class Reference}
+\label{classAlignedInterval}\index{AlignedInterval@{AlignedInterval}}
+
+
+Extension of \mbox{\hyperlink{classInterval}{Interval}} with computed alignment of \mbox{\hyperlink{classInputSegment}{Input\+Segment}} points onto left-\/ and right-\/bounds.  
+
+
+
+
+{\ttfamily \#include $<$Aligned\+Interval.\+hpp$>$}
+
+Inheritance diagram for Aligned\+Interval\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAlignedInterval}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_ga7e9399ce64bb21aa2d2c3cd682ca95da}{Aligned\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1), bool f\+\_\+align=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInterval}{Interval}} covering the whole length of the given input segment with given musical time length (number of bars). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga5bf2bf3fe1a1791989ec52969aace0a5}{Aligned\+Interval}} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAlignedInterval_ae327b28af603aaffbe9bc8480c6e2109}{$\sim$\+Aligned\+Interval}} ()
+\item 
+virtual \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \& {\bfseries operator=} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&)
+\item 
+virtual bool {\bfseries operator==} (const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a260f8eead747a05642d7b5d720d02e5b}{lsize}} () const
+\begin{DoxyCompactList}\small\item\em number of elements of input segment in the first half of this interval. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a85114f9883305f0cf975dbdffff41772}{lfirst}} () const
+\begin{DoxyCompactList}\small\item\em index of the first element of input segment inside the fist half of this interval. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_abf3b5daa25e0d74999e5a2d1d04cd185}{rsize}} () const
+\begin{DoxyCompactList}\small\item\em number of elements of input segment in the second half of this interval. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_aa7c4a66d5fd0ff2dc29a4fea57f0c561}{rfirst}} () const
+\begin{DoxyCompactList}\small\item\em index of the first element of input segment inside the second half of this interval. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_aacfe86f36bfd28f6a56c7a673ed7dad7}{size}} () const
+\begin{DoxyCompactList}\small\item\em number of elements of input segment in this interval. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}{first}} () const
+\begin{DoxyCompactList}\small\item\em index of the first element of input segment after the right bound of this interval (i.\+e. inside or after this interval). \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classAlignedInterval_ac9617c302c66993c1f84c757f2c71d16}{next}} () const
+\begin{DoxyCompactList}\small\item\em index of the first element of input segment ouside this interval (= after the right bound). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAlignedInterval_adefeebb5ddd10a68e83ed7382626d380}{inhabited}} () const
+\begin{DoxyCompactList}\small\item\em this interval contains at least an element of the input segment \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga25f42094dbb3623c73df11dd85596185}{align}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, size\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em set the alignment parameters, starting from index b of input segment point and return the next index of point in input segment to be processed (first index at right of this interval) or the size of input segment (total \# points) if end of segment is reached. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga85de404c4ddf91a51bf0c29c6dbe1d77}{align}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em same as previous but uses \+\_\+seg\+\_\+first instead of argument b. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_gafad6a7eea9e5892cfae9986f6263a738}{rewind}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, size\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em compute only the value of the next point (the first element of input segment after the right bound of this interval) starting from index b of input segment point. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__segment_ga1a6a8f006c2d11e8f4af7250a6fb0b16}{rewind}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$)
+\begin{DoxyCompactList}\small\item\em same as previous but uses \+\_\+seg\+\_\+first instead of arg. b. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__segment_gaeb6593290d19ff04137c3f3c3e9e3175}{aligned}} () const
+\begin{DoxyCompactList}\small\item\em this interval has been aligned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_ga4aa5548293e2dcd94ab3845d9a8fe492}{Aligned\+Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}}, size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}{first}}, bool f\+\_\+align=false)
+\begin{DoxyCompactList}\small\item\em aligned interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlignedInterval_ac157527bf2349e36ef2475096d268e4e}\label{classAlignedInterval_ac157527bf2349e36ef2475096d268e4e}} 
+class {\bfseries Interval\+Heap}
+\item 
+\mbox{\Hypertarget{classAlignedInterval_a08c62a5a4c60368e97b1385aced32756}\label{classAlignedInterval_a08c62a5a4c60368e97b1385aced32756}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Extension of \mbox{\hyperlink{classInterval}{Interval}} with computed alignment of \mbox{\hyperlink{classInputSegment}{Input\+Segment}} points onto left-\/ and right-\/bounds. 
+
+The result of aligment can be consulted with function l/rsize, l/rfirst. alignement is computed by function align.
+
+The alignement is computed automatically for newly created intervals, the other created intervals (multiple-\/bars intervals) are not aligned. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAlignedInterval_ae327b28af603aaffbe9bc8480c6e2109}\label{classAlignedInterval_ae327b28af603aaffbe9bc8480c6e2109}} 
+\index{AlignedInterval@{AlignedInterval}!````~AlignedInterval@{$\sim$AlignedInterval}}
+\index{````~AlignedInterval@{$\sim$AlignedInterval}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{$\sim$AlignedInterval()}{~AlignedInterval()}}
+{\footnotesize\ttfamily Aligned\+Interval\+::$\sim$\+Aligned\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+do not deallocate the segment here. 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlignedInterval_a260f8eead747a05642d7b5d720d02e5b}\label{classAlignedInterval_a260f8eead747a05642d7b5d720d02e5b}} 
+\index{AlignedInterval@{AlignedInterval}!lsize@{lsize}}
+\index{lsize@{lsize}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{lsize()}{lsize()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::lsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+number of elements of input segment in the first half of this interval. 
+
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_a85114f9883305f0cf975dbdffff41772}\label{classAlignedInterval_a85114f9883305f0cf975dbdffff41772}} 
+\index{AlignedInterval@{AlignedInterval}!lfirst@{lfirst}}
+\index{lfirst@{lfirst}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{lfirst()}{lfirst()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::lfirst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+index of the first element of input segment inside the fist half of this interval. 
+
+\begin{DoxyReturn}{Returns}
+out\+\_\+of\+\_\+range (= size of segment) if l\+\_\+size() == 0. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_abf3b5daa25e0d74999e5a2d1d04cd185}\label{classAlignedInterval_abf3b5daa25e0d74999e5a2d1d04cd185}} 
+\index{AlignedInterval@{AlignedInterval}!rsize@{rsize}}
+\index{rsize@{rsize}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{rsize()}{rsize()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::rsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+number of elements of input segment in the second half of this interval. 
+
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_aa7c4a66d5fd0ff2dc29a4fea57f0c561}\label{classAlignedInterval_aa7c4a66d5fd0ff2dc29a4fea57f0c561}} 
+\index{AlignedInterval@{AlignedInterval}!rfirst@{rfirst}}
+\index{rfirst@{rfirst}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{rfirst()}{rfirst()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::rfirst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+index of the first element of input segment inside the second half of this interval. 
+
+\begin{DoxyReturn}{Returns}
+out\+\_\+of\+\_\+range (= size of segment) if r\+\_\+size() == 0. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_aacfe86f36bfd28f6a56c7a673ed7dad7}\label{classAlignedInterval_aacfe86f36bfd28f6a56c7a673ed7dad7}} 
+\index{AlignedInterval@{AlignedInterval}!size@{size}}
+\index{size@{size}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+number of elements of input segment in this interval. 
+
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}\label{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}} 
+\index{AlignedInterval@{AlignedInterval}!first@{first}}
+\index{first@{first}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+index of the first element of input segment after the right bound of this interval (i.\+e. inside or after this interval). 
+
+\begin{DoxyReturn}{Returns}
+out\+\_\+of\+\_\+range (= size of segment) if there is none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlignedInterval_ac9617c302c66993c1f84c757f2c71d16}\label{classAlignedInterval_ac9617c302c66993c1f84c757f2c71d16}} 
+\index{AlignedInterval@{AlignedInterval}!next@{next}}
+\index{next@{next}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily size\+\_\+t Aligned\+Interval\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+index of the first element of input segment ouside this interval (= after the right bound). 
+
+\begin{DoxyReturn}{Returns}
+out\+\_\+of\+\_\+range (= size of segment) if there is none. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classAlignedInterval_adefeebb5ddd10a68e83ed7382626d380}\label{classAlignedInterval_adefeebb5ddd10a68e83ed7382626d380}} 
+\index{AlignedInterval@{AlignedInterval}!inhabited@{inhabited}}
+\index{inhabited@{inhabited}!AlignedInterval@{AlignedInterval}}
+\subsubsection{\texorpdfstring{inhabited()}{inhabited()}}
+{\footnotesize\ttfamily bool Aligned\+Interval\+::inhabited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+this interval contains at least an element of the input segment 
+
+\begin{DoxyWarning}{Warning}
+the interval must have been aligned. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Aligned\+Interval.\+hpp\item 
+src/segment/Aligned\+Interval.\+cpp\end{DoxyCompactItemize}

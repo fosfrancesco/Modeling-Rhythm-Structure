@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="trace_8hpp" kind="file" language="C++">
+    <compoundname>trace.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="yes">spdlog/spdlog.h</includes>
+    <includes local="yes">spdlog/fmt/ostr.h</includes>
+    <includedby refid="init_8hpp" local="yes">src/general/init.hpp</includedby>
+    <includedby refid="Rational_8hpp" local="yes">src/general/Rational.hpp</includedby>
+    <includedby refid="trace_8cpp" local="yes">src/general/trace.cpp</includedby>
+    <includedby refid="WTAFile_8hpp" local="yes">src/input/WTAFile.hpp</includedby>
+    <includedby refid="Label_8hpp" local="yes">src/output/Label.hpp</includedby>
+    <includedby refid="DurationTree_8hpp" local="yes">src/output/DurationTree.hpp</includedby>
+    <includedby refid="MEI_8hpp" local="yes">src/output/MEI.hpp</includedby>
+    <includedby refid="QDate_8hpp" local="yes">src/output/QDate.hpp</includedby>
+    <includedby refid="SerialLabel_8hpp" local="yes">src/output/SerialLabel.hpp</includedby>
+    <includedby refid="Parser_8hpp" local="yes">src/parsers/Parser.hpp</includedby>
+    <includedby refid="Parser1bar1bestSIP_8hpp" local="yes">src/parsers/Parser1bar1bestSIP.hpp</includedby>
+    <includedby refid="Parser1barKbestSKIP_8hpp" local="yes">src/parsers/Parser1barKbestSKIP.hpp</includedby>
+    <includedby refid="ParserInputless1best_8hpp" local="yes">src/parsers/ParserInputless1best.hpp</includedby>
+    <includedby refid="ParserInputlessKbest_8hpp" local="yes">src/parsers/ParserInputlessKbest.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPflat_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPflat.hpp</includedby>
+    <includedby refid="ComboWTA_8cpp" local="yes">src/schemata/ComboWTA.cpp</includedby>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="WTA_8hpp" local="yes">src/schemata/WTA.hpp</includedby>
+    <includedby refid="State_8hpp" local="yes">src/schemata/State.hpp</includedby>
+    <includedby refid="Transition_8hpp" local="yes">src/schemata/Transition.hpp</includedby>
+    <includedby refid="CountingWTA_8hpp" local="yes">src/schemata/CountingWTA.hpp</includedby>
+    <includedby refid="ScoreMeter_8hpp" local="yes">src/scoremodel/ScoreMeter.hpp</includedby>
+    <includedby refid="MusEvent_8hpp" local="yes">src/segment/MusEvent.hpp</includedby>
+    <includedby refid="Pitch_8hpp" local="yes">src/segment/Pitch.hpp</includedby>
+    <includedby refid="Environment_8hpp" local="yes">src/segment/Environment.hpp</includedby>
+    <includedby refid="Atable_8hpp" local="yes">src/table/Atable.hpp</includedby>
+    <includedby refid="PtrSI_8hpp" local="yes">src/table/PtrSI.hpp</includedby>
+    <includedby refid="PtrSIP_8hpp" local="yes">src/table/PtrSIP.hpp</includedby>
+    <includedby refid="Table_8hpp" local="yes">src/table/Table.hpp</includedby>
+    <includedby refid="equiv_8cpp" local="yes">src/targets/equiv/equiv.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <includedby refid="midiutil_8cpp" local="yes">src/targets/midi/midiutil.cpp</includedby>
+    <includedby refid="squant_8cpp" local="yes">src/targets/quant/squant.cpp</includedby>
+    <includedby refid="schemas_8cpp" local="yes">src/targets/schema/schemas.cpp</includedby>
+    <includedby refid="CountingWeight_8hpp" local="yes">src/weight/CountingWeight.hpp</includedby>
+    <includedby refid="Distance_8hpp" local="yes">src/weight/Distance.hpp</includedby>
+    <includedby refid="FloatWeight_8hpp" local="yes">src/weight/FloatWeight.hpp</includedby>
+    <incdepgraph>
+      <node id="50">
+        <label>string</label>
+      </node>
+      <node id="54">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="53">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="52">
+        <label>sstream</label>
+      </node>
+      <node id="51">
+        <label>iostream</label>
+      </node>
+      <node id="48">
+        <label>src/general/trace.hpp</label>
+        <link refid="trace_8hpp"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacepatch">patch</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__general_1ga047013f5273eccbbfc0a08db5975f544" prot="public" static="no">
+        <name>TRACE_ON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="57" column="9" bodyfile="src/general/trace.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga911d91f7898a9a0c4e35bb71e01d39a0" prot="public" static="no">
+        <name>DEBUG_ON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="58" column="9" bodyfile="src/general/trace.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga6745ebbbc3fb31c4d8ac57a551060028" prot="public" static="no">
+        <name>_TRACE_CAND</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>addition of candidates </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="63" column="9" bodyfile="src/general/trace.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga5a81e12e5b011ad54d8ddbf6be97ef34" prot="public" static="no">
+        <name>_TRACE_BEST</name>
+        <briefdescription>
+<para>addition of best runs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="66" column="9" bodyfile="src/general/trace.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1gad8cbb5acc06d85c055ae6d66d22b6b58" prot="public" static="no">
+        <name>_TRACE_TBL</name>
+        <briefdescription>
+<para>initialization and construction of tables </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="69" column="9" bodyfile="src/general/trace.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga02ce8a968600d004ba60858425c46307" prot="public" static="no">
+        <name>ERROR</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__general_1gad61df4571453c6f7c1c829265837e500" kindref="member">console</ref>-&gt;error(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="78" column="9" bodyfile="src/general/trace.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga8f75b971030a39ef811d3526a62b36b8" prot="public" static="no">
+        <name>WARN</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__general_1gad61df4571453c6f7c1c829265837e500" kindref="member">console</ref>-&gt;warn(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="79" column="9" bodyfile="src/general/trace.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1gaedf01192151e10a6620567952711ff69" prot="public" static="no">
+        <name>INFO</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__general_1gad61df4571453c6f7c1c829265837e500" kindref="member">console</ref>-&gt;info(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="80" column="9" bodyfile="src/general/trace.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga5f6aa8edcd99914757600b5d3b259bb7" prot="public" static="no">
+        <name>TRACE</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__general_1gad61df4571453c6f7c1c829265837e500" kindref="member">console</ref>-&gt;trace(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="85" column="9" bodyfile="src/general/trace.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga96dd473db0b3d10bd43390cdacb00120" prot="public" static="no">
+        <name>DEBUG</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__general_1gad61df4571453c6f7c1c829265837e500" kindref="member">console</ref>-&gt;debug(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="91" column="9" bodyfile="src/general/trace.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1gab69defacb6a9bf736bb490f7f44e25c3" prot="public" static="no">
+        <name>TRACE_CAND</name>
+        <param><defname>...</defname></param>
+        <initializer>TRACE(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="97" column="9" bodyfile="src/general/trace.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1gaf4ce41dddbcee02dfa738a7d421e8037" prot="public" static="no">
+        <name>TRACE_BEST</name>
+        <param><defname>...</defname></param>
+        <initializer>TRACE(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="103" column="9" bodyfile="src/general/trace.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__general_1ga822ec6b7ee1991956603623096cb09b2" prot="public" static="no">
+        <name>TRACE_TBL</name>
+        <param><defname>...</defname></param>
+        <initializer>TRACE(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="109" column="9" bodyfile="src/general/trace.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__general_1gac021c39dd4209cc19d4ec5049b3a94ec" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int TRACE_LEVEL</definition>
+        <argsstring></argsstring>
+        <name>TRACE_LEVEL</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="55" column="1" bodyfile="src/general/trace.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__general_1gad61df4571453c6f7c1c829265837e500" prot="public" static="no" mutable="no">
+        <type>const std::shared_ptr&lt; spd::logger &gt;</type>
+        <definition>const std::shared_ptr&lt;spd::logger&gt; console</definition>
+        <argsstring></argsstring>
+        <name>console</name>
+        <briefdescription>
+<para>Console logger with color const std::shared_ptr&lt;spd::logger&gt; console = spd::stdout_color_mt(&quot;console&quot;);. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/general/trace.hpp" line="76" column="1" bodyfile="src/general/trace.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/general/trace.hpp"/>
+  </compounddef>
+</doxygen>

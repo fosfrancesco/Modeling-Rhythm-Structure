@@ -1,0 +1,17 @@
+for rhythm quantization by k-\/best parsing algorithms based on weighted tree automata.
+
+The sources are organized into the following sub-\/directories.
+
+
+\begin{DoxyItemize}
+\item targets \+: main functions for producing various command line utilities.
+\item general \+: initialization, tracing.
+\item weight \+: several possible domains for weight values for tree automata.
+\item schemata \+: class of weighted tree automata used for parsing.
+\item segment \+: classes for abstract representation of data in input processed by parsing.
+\item table \+: parse tables.
+\item parsers \+: various transcription scenarii, by parsing of a given {\ttfamily input}, assembling elements from the {\ttfamily table} directory.
+\item input \+: reading from and writing to files the data given in input to the quantization by parsing algorithm (schema and segment).
+\item score model \+: abstract model used to produce scores in various formats from parse trees.
+\item output \+: representation of the output of the parsing procedure and conversion into music transcription results. 
+\end{DoxyItemize}

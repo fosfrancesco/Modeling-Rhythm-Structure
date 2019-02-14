@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="schemas_8cpp" kind="file" language="C++">
+    <compoundname>schemas.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="trace_8hpp" local="yes">trace.hpp</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="FloatWeight_8hpp" local="yes">FloatWeight.hpp</includes>
+    <includes refid="TropicalWeight_8hpp" local="yes">TropicalWeight.hpp</includes>
+    <includes refid="ViterbiWeight_8hpp" local="yes">ViterbiWeight.hpp</includes>
+    <includes refid="CountingWeight_8hpp" local="yes">CountingWeight.hpp</includes>
+    <includes refid="WTA_8hpp" local="yes">WTA.hpp</includes>
+    <includes refid="WTAFile_8hpp" local="yes">WTAFile.hpp</includes>
+    <includes refid="SubdivisionSchema_8hpp" local="yes">SubdivisionSchema.hpp</includes>
+    <includes refid="CountingWTA_8hpp" local="yes">CountingWTA.hpp</includes>
+    <includes refid="DurationList_8hpp" local="yes">DurationList.hpp</includes>
+    <includes refid="RT_8hpp" local="yes">RT.hpp</includes>
+    <incdepgraph>
+      <node id="681">
+        <label>assert.h</label>
+      </node>
+      <node id="688">
+        <label>stdlib.h</label>
+      </node>
+      <node id="682">
+        <label>string</label>
+      </node>
+      <node id="685">
+        <label>fstream</label>
+      </node>
+      <node id="678">
+        <label>src/targets/schema/schemas.cpp</label>
+        <link refid="schemas_8cpp"/>
+        <childnode refid="679" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="684" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+      </node>
+      <node id="689">
+        <label>unistd.h</label>
+      </node>
+      <node id="686">
+        <label>vector</label>
+      </node>
+      <node id="684">
+        <label>sstream</label>
+      </node>
+      <node id="680">
+        <label>time.h</label>
+      </node>
+      <node id="683">
+        <label>iostream</label>
+      </node>
+      <node id="687">
+        <label>ctype.h</label>
+      </node>
+      <node id="690">
+        <label>getopt.h</label>
+      </node>
+      <node id="679">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="schemas_8cpp_1a4f59323969e09154845e5509b29f80ec" prot="public" static="no">
+        <name>check_index_is</name>
+        <param><defname>NAME</defname></param>
+        <initializer>assert(0 == strcmp(long_options[option_index].name, NAME))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="119" column="9" bodyfile="src/targets/schema/schemas.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="schemas_8cpp_1a1bdcfae3209cbd96db35a2ae356fa15e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int verbosity</definition>
+        <argsstring></argsstring>
+        <name>verbosity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="48" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a21da174138213a9bd27f2e5fede73c84" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_input</definition>
+        <argsstring></argsstring>
+        <name>f_input</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="51" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1aa83363c6f30e914efcf3aad000af3611" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _input_file</definition>
+        <argsstring></argsstring>
+        <name>_input_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="53" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a1968747d18a2c7b279494411074a7b0f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_output</definition>
+        <argsstring></argsstring>
+        <name>f_output</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="56" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a46456475197e8bbad19444941411e4e9" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _output_file</definition>
+        <argsstring></argsstring>
+        <name>_output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="58" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1aa91ad83942cf281ca8e22449adcf6173" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_tree</definition>
+        <argsstring></argsstring>
+        <name>f_tree</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="61" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1afce58e8a69e7dcae420e8e72764f3385" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string s_tree</definition>
+        <argsstring></argsstring>
+        <name>s_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="63" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a601b9e7bd7cc8ba2cc2d1a25d8f69f64" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_trees</definition>
+        <argsstring></argsstring>
+        <name>f_trees</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="65" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a4f713577b7256c55bd2d6cc63f8d6229" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string tree_file</definition>
+        <argsstring></argsstring>
+        <name>tree_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="68" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1ad046789a1b621e1bb0e960980dcc2158" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool f_config</definition>
+        <argsstring></argsstring>
+        <name>f_config</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="71" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a8d8b72b6f4705f681803f6ed7c4e84c8" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string _config_file</definition>
+        <argsstring></argsstring>
+        <name>_config_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="73" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1ab34d3892774f3b2ab66db7936257addb" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_noweight</definition>
+        <argsstring></argsstring>
+        <name>f_noweight</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="75" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1af322a4cdcebdfdd3633b10266acd557b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_clean</definition>
+        <argsstring></argsstring>
+        <name>f_clean</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="76" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1adc18adf09341013a4b31aafa81c2085c" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_penalty</definition>
+        <argsstring></argsstring>
+        <name>f_penalty</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="77" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a8ee127732069dcd8213013b29c81135d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_count</definition>
+        <argsstring></argsstring>
+        <name>f_count</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="78" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a319963be2ff6dc388435f9b3f55f9d2a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int f_proba</definition>
+        <argsstring></argsstring>
+        <name>f_proba</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="79" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1a56219c136d32780c5fcbb35c7ab28277" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__general_1gae07bdce6f4896785ead3b815ca6ab560" kindref="member">WeightDom</ref></type>
+        <definition>WeightDom weight_type</definition>
+        <argsstring></argsstring>
+        <name>weight_type</name>
+        <initializer>= WeightDom::UNDEF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="80" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schemas_8cpp_1ab5b68aa8f898c499ca2c3092ecd9e552" prot="public" static="yes" mutable="no">
+        <type>struct option</type>
+        <definition>struct option long_options[]</definition>
+        <argsstring>[]</argsstring>
+        <name>long_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="80" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="schemas_8cpp_1ac23dc7fc03d7ce8cd37cae09a0cd155c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setOptionArgs</definition>
+        <argsstring>(int option_index)</argsstring>
+        <name>setOptionArgs</name>
+        <param>
+          <type>int</type>
+          <declname>option_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="122" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="122" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a086c76a38f84ae6226164d3fb0b465d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkOptions</definition>
+        <argsstring>()</argsstring>
+        <name>checkOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="150" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="150" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a43189caf1b1b42cdaf5ff12f904bcecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight read_tree</definition>
+        <argsstring>(CountingWTA *schema, string s)</argsstring>
+        <name>read_tree</name>
+        <param>
+          <type><ref refid="classCountingWTA" kindref="compound">CountingWTA</ref> *</type>
+          <declname>schema</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="303" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="303" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1aeda690db4273cea67aa8c253e2242c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight read_trees</definition>
+        <argsstring>(WTA *schema, const string filename)</argsstring>
+        <name>read_trees</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>schema</declname>
+        </param>
+        <param>
+          <type>const string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="313" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="313" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a899afeb4848590bd8471af6657f0bc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t compute_resolution</definition>
+        <argsstring>(WTA *schema)</argsstring>
+        <name>compute_resolution</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>schema</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="344" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="344" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a919aec73f93f74658d308c05ebd53a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void max</definition>
+        <argsstring>(WTA *schema)</argsstring>
+        <name>max</name>
+        <param>
+          <type><ref refid="classWTA" kindref="compound">WTA</ref> *</type>
+          <declname>schema</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="359" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="359" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a2ef30c42cbc289d899a8be5d2d8f77d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usage</definition>
+        <argsstring>()</argsstring>
+        <name>usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="380" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="380" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1aadd58a2bd505eba3564c7483be1a6140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="432" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="432" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="schemas_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/targets/schema/schemas.cpp" line="440" column="1" bodyfile="src/targets/schema/schemas.cpp" bodystart="440" bodyend="713"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/targets/schema/schemas.cpp"/>
+  </compounddef>
+</doxygen>

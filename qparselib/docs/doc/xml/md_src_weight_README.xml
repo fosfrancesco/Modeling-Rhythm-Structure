@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md_src_weight_README" kind="page">
+    <compoundname>md_src_weight_README</compoundname>
+    <title>src/weight</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definition of several domains and operations for the weights of automata. Each of them is defined as a semiring, with</para>
+<para><itemizedlist>
+<listitem><para>a weight domain,</para>
+</listitem><listitem><para>a binary operator <computeroutput>add</computeroutput> (associative, commutative),</para>
+</listitem><listitem><para>a neutral element <computeroutput>zero</computeroutput> for <computeroutput>plus</computeroutput>,</para>
+</listitem><listitem><para>a binary operator <computeroutput>mult</computeroutput> (associative),</para>
+</listitem><listitem><para>a neutral element <computeroutput>one</computeroutput> for mult,</para>
+</listitem></itemizedlist>
+</para>
+<para>such that <computeroutput>zero</computeroutput> is an absorbing element for <computeroutput>mult</computeroutput> and <computeroutput>mult</computeroutput> distributes over <computeroutput>plus</computeroutput>.</para>
+<para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classWeight" kindref="compound">Weight</ref></computeroutput> is a structure of polymorphic weight. i.e. a wrapper (envelop) containing a pointer to a <computeroutput><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref></computeroutput>. A <computeroutput><ref refid="classWeight" kindref="compound">Weight</ref></computeroutput> with an empty pointer is called unknown.</para>
+</listitem><listitem><para>a <computeroutput><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref></computeroutput> is the definition of a semiring. We have implemented the following <computeroutput>LetterWeights</computeroutput>:</para>
+</listitem><listitem><para><computeroutput><ref refid="classFloatWeight" kindref="compound">FloatWeight</ref></computeroutput> : scalar weight values<itemizedlist>
+<listitem><para>domain : floating point numbers</para>
+</listitem><listitem><para>operator <computeroutput>add</computeroutput> is +</para>
+</listitem><listitem><para><computeroutput>zero</computeroutput> is 0.0</para>
+</listitem><listitem><para>operator <computeroutput>mult</computeroutput> is *</para>
+</listitem><listitem><para><computeroutput>one</computeroutput> is 1.0</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></computeroutput> : tropical algebra: scalar weight values are non-negative floating point numbers<itemizedlist>
+<listitem><para>domain : positive or null double + infinity</para>
+</listitem><listitem><para>operator <computeroutput>add</computeroutput> is min</para>
+</listitem><listitem><para><computeroutput>zero</computeroutput> is infinity</para>
+</listitem><listitem><para>operator <computeroutput>mult</computeroutput> is +</para>
+</listitem><listitem><para><computeroutput>one</computeroutput> is 0</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput><ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref></computeroutput> : scalar weight values are probabilities of the best derivations<itemizedlist>
+<listitem><para>domain : positive or null rational numbers in [0, 1]</para>
+</listitem><listitem><para>operator <computeroutput>add</computeroutput> is max</para>
+</listitem><listitem><para><computeroutput>zero</computeroutput> is 0</para>
+</listitem><listitem><para>operator <computeroutput>mult</computeroutput> is *</para>
+</listitem><listitem><para><computeroutput>one</computeroutput> is 1</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput><ref refid="classDistance" kindref="compound">Distance</ref></computeroutput> : a particular case of <computeroutput><ref refid="classTropicalWeight" kindref="compound">TropicalWeight</ref></computeroutput> which can be constructed from an interval of an input segment, and corresponds to the distance of alignement of the points on the left and right bounds of the interval.</para>
+</listitem><listitem><para><computeroutput>PerformanceModel</computeroutput> : a particular case of <computeroutput><ref refid="classViterbiWeight" kindref="compound">ViterbiWeight</ref></computeroutput> which can be constructed from an interval of an input segment, and defines a probability of alignment of the points on the left and right bounds of the interval, following a Gaussian distribution.</para>
+</listitem><listitem><para><computeroutput><ref refid="classCountingWeight" kindref="compound">CountingWeight</ref></computeroutput> : a algebra of weight for counting the number of applications of automata transitions rules on a given corpus. Useful for computation of Viterbi <ref refid="classWeight" kindref="compound">Weight</ref> values from corpus.<itemizedlist>
+<listitem><para>domain :<itemizedlist>
+<listitem><para>vectors of fixed dim k &gt; 0</para>
+</listitem><listitem><para>+ FAIL = stuck (0 run in state s for 1 tree)</para>
+</listitem><listitem><para>+ ERROR = ambiguity in grammar (2 runs for 1 tree)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>operator <computeroutput>add</computeroutput> : for all x, y vectors dim k<itemizedlist>
+<listitem><para>x + y = ERROR</para>
+</listitem><listitem><para>ERROR is absorbing for +</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>zero</computeroutput> = FAIL</para>
+</listitem><listitem><para>operator <computeroutput>mult</computeroutput> : for all x, y vectors dim k<itemizedlist>
+<listitem><para>x . y = component-wise sum</para>
+</listitem><listitem><para>x . FAIL = FAIL . x = FAIL</para>
+</listitem><listitem><para>FAIL . FAIL = FAIL</para>
+</listitem><listitem><para>is ERROR absorbing for .</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>one</computeroutput> = null vector of dim k </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

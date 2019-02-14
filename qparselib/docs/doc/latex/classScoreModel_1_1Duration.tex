@@ -1,0 +1,73 @@
+\hypertarget{classScoreModel_1_1Duration}{}\section{Score\+Model\+::Duration Class Reference}
+\label{classScoreModel_1_1Duration}\index{ScoreModel::Duration@{ScoreModel::Duration}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScoreModel_1_1Duration_aa2e8ee49de085039d079faf1351a21b3}{Duration}} (\mbox{\hyperlink{classRational}{Rational}} ratio)
+\item 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classScoreModel_1_1Duration_a8fce14c5c61ab8575d9fbc77025fb1cd}{get\+Value}} () const
+\item 
+void \mbox{\hyperlink{classScoreModel_1_1Duration_a43dc9acb53b931de80f75fd929d9fd4d}{set\+Value}} (\mbox{\hyperlink{classRational}{Rational}} value)
+\item 
+int \mbox{\hyperlink{classScoreModel_1_1Duration_a3c1433fd0a073dc75d529f18257c1557}{get\+C\+MN}} () const
+\item 
+\mbox{\hyperlink{classScoreModel_1_1Duration_a3f30d745dfae4286f5fb9dfdf0542d64}{$\sim$\+Duration}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classScoreModel_1_1Duration_ae897ce15da38ac887ddba0cf769c5ad7}{Q\+U\+A\+R\+T\+E\+R\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} =4
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classScoreModel_1_1Duration_aa2e8ee49de085039d079faf1351a21b3}\label{classScoreModel_1_1Duration_aa2e8ee49de085039d079faf1351a21b3}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!Duration@{Duration}}
+\index{Duration@{Duration}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{Duration()}{Duration()}}
+{\footnotesize\ttfamily Score\+Model\+::\+Duration\+::\+Duration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRational}{Rational}}}]{ratio }\end{DoxyParamCaption})}
+
+Main constructor. \mbox{\Hypertarget{classScoreModel_1_1Duration_a3f30d745dfae4286f5fb9dfdf0542d64}\label{classScoreModel_1_1Duration_a3f30d745dfae4286f5fb9dfdf0542d64}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!````~Duration@{$\sim$Duration}}
+\index{````~Duration@{$\sim$Duration}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{$\sim$Duration()}{~Duration()}}
+{\footnotesize\ttfamily Score\+Model\+::\+Duration\+::$\sim$\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classScoreModel_1_1Duration_a8fce14c5c61ab8575d9fbc77025fb1cd}\label{classScoreModel_1_1Duration_a8fce14c5c61ab8575d9fbc77025fb1cd}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!getValue@{getValue}}
+\index{getValue@{getValue}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRational}{Rational}} Score\+Model\+::\+Duration\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the duration value as a rational\+: nb beats / beat unit \mbox{\Hypertarget{classScoreModel_1_1Duration_a43dc9acb53b931de80f75fd929d9fd4d}\label{classScoreModel_1_1Duration_a43dc9acb53b931de80f75fd929d9fd4d}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!setValue@{setValue}}
+\index{setValue@{setValue}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Score\+Model\+::\+Duration\+::set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRational}{Rational}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the duration value as a rational\+: nb beats / beat unit \mbox{\Hypertarget{classScoreModel_1_1Duration_a3c1433fd0a073dc75d529f18257c1557}\label{classScoreModel_1_1Duration_a3c1433fd0a073dc75d529f18257c1557}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!getCMN@{getCMN}}
+\index{getCMN@{getCMN}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{getCMN()}{getCMN()}}
+{\footnotesize\ttfamily int Score\+Model\+::\+Duration\+::get\+C\+MN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the C\+MN code
+
+The C\+MN code is a value ranging from 1 (whole note) to 256, and is always a power of 2. In the score output, intermediate durations (eg triplets) are usually obtained by applying a tuplet ratio to the C\+MN code. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classScoreModel_1_1Duration_ae897ce15da38ac887ddba0cf769c5ad7}\label{classScoreModel_1_1Duration_ae897ce15da38ac887ddba0cf769c5ad7}} 
+\index{ScoreModel::Duration@{ScoreModel::Duration}!QUARTER\_DURATION@{QUARTER\_DURATION}}
+\index{QUARTER\_DURATION@{QUARTER\_DURATION}!ScoreModel::Duration@{ScoreModel::Duration}}
+\subsubsection{\texorpdfstring{QUARTER\_DURATION}{QUARTER\_DURATION}}
+{\footnotesize\ttfamily const int Score\+Model\+::\+Duration\+::\+Q\+U\+A\+R\+T\+E\+R\+\_\+\+D\+U\+R\+A\+T\+I\+ON =4\hspace{0.3cm}{\ttfamily [static]}}
+
+Some constants 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/scoremodel/Duration.\+hpp\item 
+src/scoremodel/Duration.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+Definition of several domains and operations for the weights of automata. Each of them is defined as a semiring, with
+
+
+\begin{DoxyItemize}
+\item a weight domain,
+\item a binary operator {\ttfamily add} (associative, commutative),
+\item a neutral element {\ttfamily zero} for {\ttfamily plus},
+\item a binary operator {\ttfamily mult} (associative),
+\item a neutral element {\ttfamily one} for mult,
+\end{DoxyItemize}
+
+such that {\ttfamily zero} is an absorbing element for {\ttfamily mult} and {\ttfamily mult} distributes over {\ttfamily plus}.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classWeight}{Weight}}} is a structure of polymorphic weight. i.\+e. a wrapper (envelop) containing a pointer to a {\ttfamily \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}}. A {\ttfamily \mbox{\hyperlink{classWeight}{Weight}}} with an empty pointer is called unknown.
+\item a {\ttfamily \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}} is the definition of a semiring. We have implemented the following {\ttfamily Letter\+Weights}\+:
+\item {\ttfamily \mbox{\hyperlink{classFloatWeight}{Float\+Weight}}} \+: scalar weight values
+\begin{DoxyItemize}
+\item domain \+: floating point numbers
+\item operator {\ttfamily add} is +
+\item {\ttfamily zero} is 0.\+0
+\item operator {\ttfamily mult} is $\ast$
+\item {\ttfamily one} is 1.\+0
+\end{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}}} \+: tropical algebra\+: scalar weight values are non-\/negative floating point numbers
+\begin{DoxyItemize}
+\item domain \+: positive or null double + infinity
+\item operator {\ttfamily add} is min
+\item {\ttfamily zero} is infinity
+\item operator {\ttfamily mult} is +
+\item {\ttfamily one} is 0
+\end{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classViterbiWeight}{Viterbi\+Weight}}} \+: scalar weight values are probabilities of the best derivations
+\begin{DoxyItemize}
+\item domain \+: positive or null rational numbers in \mbox{[}0, 1\mbox{]}
+\item operator {\ttfamily add} is max
+\item {\ttfamily zero} is 0
+\item operator {\ttfamily mult} is $\ast$
+\item {\ttfamily one} is 1
+\end{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{classDistance}{Distance}}} \+: a particular case of {\ttfamily \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}}} which can be constructed from an interval of an input segment, and corresponds to the distance of alignement of the points on the left and right bounds of the interval.
+\item {\ttfamily Performance\+Model} \+: a particular case of {\ttfamily \mbox{\hyperlink{classViterbiWeight}{Viterbi\+Weight}}} which can be constructed from an interval of an input segment, and defines a probability of alignment of the points on the left and right bounds of the interval, following a Gaussian distribution.
+\item {\ttfamily \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}}} \+: a algebra of weight for counting the number of applications of automata transitions rules on a given corpus. Useful for computation of Viterbi \mbox{\hyperlink{classWeight}{Weight}} values from corpus.
+\begin{DoxyItemize}
+\item domain \+:
+\begin{DoxyItemize}
+\item vectors of fixed dim k $>$ 0
+\item + F\+A\+IL = stuck (0 run in state s for 1 tree)
+\item + E\+R\+R\+OR = ambiguity in grammar (2 runs for 1 tree)
+\end{DoxyItemize}
+\item operator {\ttfamily add} \+: for all x, y vectors dim k
+\begin{DoxyItemize}
+\item x + y = E\+R\+R\+OR
+\item E\+R\+R\+OR is absorbing for +
+\end{DoxyItemize}
+\item {\ttfamily zero} = F\+A\+IL
+\item operator {\ttfamily mult} \+: for all x, y vectors dim k
+\begin{DoxyItemize}
+\item x . y = component-\/wise sum
+\item x . F\+A\+IL = F\+A\+IL . x = F\+A\+IL
+\item F\+A\+IL . F\+A\+IL = F\+A\+IL
+\item is E\+R\+R\+OR absorbing for .
+\end{DoxyItemize}
+\item {\ttfamily one} = null vector of dim k 
+\end{DoxyItemize}
+\end{DoxyItemize}

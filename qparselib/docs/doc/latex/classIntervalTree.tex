@@ -1,0 +1,115 @@
+\hypertarget{classIntervalTree}{}\section{Interval\+Tree Class Reference}
+\label{classIntervalTree}\index{IntervalTree@{IntervalTree}}
+
+
+extension of Aligned \mbox{\hyperlink{classInterval}{Interval}} to define a tree of nested Alignements with sharing using hash table to store all alignment constructed.  
+
+
+
+
+{\ttfamily \#include $<$Interval\+Tree.\+hpp$>$}
+
+Inheritance diagram for Interval\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classIntervalTree}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{classIntervalTree_a68c95f629571e4d24caa9dfc669a4412}{parent}} ()
+\item 
+virtual \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{classIntervalTree_a0b640dcd2f3e26d31a1d4d7b3fd305ed}{previous\+\_\+sibling}} ()
+\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_ga0c04840a0d05d3b0d4b99e654d72b81b}{top}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$h, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval (root of interval tree) covering the whole length of the given input segment s. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_gae9e8f6ca3fa4093cfcd1428e9f41d048}{split}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, double rdur, \mbox{\hyperlink{classRational}{Rational}} mdur, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a sub interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_ga5b1393db865d0dd81249033dd99ecd5c}{split\+\_\+back}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, double rdur, \mbox{\hyperlink{classRational}{Rational}} mdur, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a sub interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{group__segment_gacb8de7e3756951950c391d241adec21c}{sub}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$, \mbox{\hyperlink{classIntervalHeap}{Interval\+Heap}} $\ast$, size\+\_\+t a, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em return a the i-\/1th sub-\/interval of the division of this interval in n equal parts. the sub-\/interval returned is aligned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_gab092e4338aa4c3369c4fa4404d8706b0}{Interval\+Tree}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval (root of interval tree). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_gac16f2a8d9c584a869bbed6a263914360}{Interval\+Tree}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}}, size\+\_\+t \mbox{\hyperlink{classAlignedInterval_a1660736ae6e829e6c92616e49784a583}{first}}, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$p=N\+U\+LL, \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ps=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em build an interval tree with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIntervalTree_a88e4c8c1ec09527a477646747e482fe4}\label{classIntervalTree_a88e4c8c1ec09527a477646747e482fe4}} 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ {\bfseries \+\_\+parent}
+\item 
+\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ \mbox{\hyperlink{classIntervalTree_a36b39cfc069e75085d3471b73e7c0d8d}{\+\_\+previous\+\_\+sibling}}
+\begin{DoxyCompactList}\small\item\em previous sibling \mbox{\hyperlink{classInterval}{Interval}} in the \mbox{\hyperlink{classInterval}{Interval}} tree. \end{DoxyCompactList}\item 
+std\+::map$<$ size\+\_\+t, std\+::vector$<$ \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} $\ast$ $>$ $>$ \mbox{\hyperlink{classIntervalTree_ab33b66f644ed154e05a69c13e979f1cd}{\+\_\+children}}
+\begin{DoxyCompactList}\small\item\em direct access to subtrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIntervalTree_ac157527bf2349e36ef2475096d268e4e}\label{classIntervalTree_ac157527bf2349e36ef2475096d268e4e}} 
+class {\bfseries Interval\+Heap}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+extension of Aligned \mbox{\hyperlink{classInterval}{Interval}} to define a tree of nested Alignements with sharing using hash table to store all alignment constructed. 
+
+to construct \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}} use \mbox{\hyperlink{group__segment_gad7fd7dd4ddb8d520df0985e67d180019}{Interval\+Heap.\+make}} and the members top, split, split\+\_\+back and sub. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIntervalTree_a68c95f629571e4d24caa9dfc669a4412}\label{classIntervalTree_a68c95f629571e4d24caa9dfc669a4412}} 
+\index{IntervalTree@{IntervalTree}!parent@{parent}}
+\index{parent@{parent}!IntervalTree@{IntervalTree}}
+\subsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}$\ast$ Interval\+Tree\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the embedding \mbox{\hyperlink{classInterval}{Interval}} in the \mbox{\hyperlink{classInterval}{Interval}} tree. 
+
+N\+U\+LL if this \mbox{\hyperlink{classInterval}{Interval}} is the root of the tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIntervalTree_a0b640dcd2f3e26d31a1d4d7b3fd305ed}\label{classIntervalTree_a0b640dcd2f3e26d31a1d4d7b3fd305ed}} 
+\index{IntervalTree@{IntervalTree}!previous\_sibling@{previous\_sibling}}
+\index{previous\_sibling@{previous\_sibling}!IntervalTree@{IntervalTree}}
+\subsubsection{\texorpdfstring{previous\_sibling()}{previous\_sibling()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}$\ast$ Interval\+Tree\+::previous\+\_\+sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the previous sibling \mbox{\hyperlink{classInterval}{Interval}} in the \mbox{\hyperlink{classInterval}{Interval}} tree. 
+
+N\+U\+LL if this \mbox{\hyperlink{classInterval}{Interval}} is the leftmost sibling. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classIntervalTree_a36b39cfc069e75085d3471b73e7c0d8d}\label{classIntervalTree_a36b39cfc069e75085d3471b73e7c0d8d}} 
+\index{IntervalTree@{IntervalTree}!\_previous\_sibling@{\_previous\_sibling}}
+\index{\_previous\_sibling@{\_previous\_sibling}!IntervalTree@{IntervalTree}}
+\subsubsection{\texorpdfstring{\_previous\_sibling}{\_previous\_sibling}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}$\ast$ Interval\+Tree\+::\+\_\+previous\+\_\+sibling\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+previous sibling \mbox{\hyperlink{classInterval}{Interval}} in the \mbox{\hyperlink{classInterval}{Interval}} tree. 
+
+N\+U\+LL if this \mbox{\hyperlink{classInterval}{Interval}} is the leftmost sibling \mbox{\Hypertarget{classIntervalTree_ab33b66f644ed154e05a69c13e979f1cd}\label{classIntervalTree_ab33b66f644ed154e05a69c13e979f1cd}} 
+\index{IntervalTree@{IntervalTree}!\_children@{\_children}}
+\index{\_children@{\_children}!IntervalTree@{IntervalTree}}
+\subsubsection{\texorpdfstring{\_children}{\_children}}
+{\footnotesize\ttfamily std\+::map$<$size\+\_\+t, std\+::vector$<$\mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}$\ast$$>$ $>$ Interval\+Tree\+::\+\_\+children\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+direct access to subtrees. 
+
+every entry in this map associate to an arity a a partition t1,...,ta of the root interval. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Interval\+Tree.\+hpp\item 
+src/segment/Interval\+Tree.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\hypertarget{classTransitionList}{}\section{Transition\+List Class Reference}
+\label{classTransitionList}\index{TransitionList@{TransitionList}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__schemata_gaba83dbc74a223a80ad7f8776847bd6c2}{empty}} () const
+\begin{DoxyCompactList}\small\item\em zero transition \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_gaa719dbdab17047360e889910795a07f2}{size}} () const
+\begin{DoxyCompactList}\small\item\em number of transitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransitionList_a895b21c1601aa0227264856f534f3714}\label{classTransitionList_a895b21c1601aa0227264856f534f3714}} 
+size\+\_\+t \mbox{\hyperlink{classTransitionList_a895b21c1601aa0227264856f534f3714}{fullsize}} () const
+\begin{DoxyCompactList}\small\item\em total size of transition table (sum of transition sizes. = number of occurences of states) \end{DoxyCompactList}\item 
+void {\bfseries add} (const \mbox{\hyperlink{classTransition}{Transition}} \&)
+\item 
+void {\bfseries remove} (Transition\+List\+\_\+iterator)
+\item 
+void \mbox{\hyperlink{group__schemata_ga3c5b906f3ce72168effc16b06ed1ef6c}{remove}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em remove all transitions of length $>$ 1 in the list containing the given state do not remove length 1 transitions to terminal symbols \end{DoxyCompactList}\item 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classTransitionList_a7fcbeb316dcf76418642f1f2056a5fda}\label{classTransitionList_a7fcbeb316dcf76418642f1f2056a5fda}} 
+Transition\+List\+\_\+const\+\_\+iterator {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classTransitionList_ad823ed73ac180f6580ba03f8d1c6f11d}\label{classTransitionList_ad823ed73ac180f6580ba03f8d1c6f11d}} 
+Transition\+List\+\_\+const\+\_\+iterator {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classTransitionList_a0db8b4656919b96fc29654126a039930}\label{classTransitionList_a0db8b4656919b96fc29654126a039930}} 
+Transition\+List\+\_\+iterator \mbox{\hyperlink{classTransitionList_a0db8b4656919b96fc29654126a039930}{nc\+\_\+begin}} ()
+\begin{DoxyCompactList}\small\item\em non constant iterator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransitionList_a618b9838609de2fd39d9d0ac303798e1}\label{classTransitionList_a618b9838609de2fd39d9d0ac303798e1}} 
+Transition\+List\+\_\+iterator \mbox{\hyperlink{classTransitionList_a618b9838609de2fd39d9d0ac303798e1}{nc\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em non constant iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransitionList_a952da284347c0997c1630edc02aa30ab}\label{classTransitionList_a952da284347c0997c1630edc02aa30ab}} 
+class {\bfseries W\+TA}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/W\+T\+A.\+hpp\item 
+src/schemata/W\+T\+A.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+S\+E\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+L\+O\+C\+A\+L\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+31784.\+cpp\end{DoxyCompactItemize}

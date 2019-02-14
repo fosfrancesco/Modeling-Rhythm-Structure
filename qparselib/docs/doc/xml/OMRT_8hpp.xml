@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="OMRT_8hpp" kind="file" language="C++">
+    <compoundname>OMRT.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="Rational_8hpp" local="yes">Rational.hpp</includes>
+    <includes refid="RT_8hpp" local="yes">RT.hpp</includes>
+    <includedby refid="OMRT_8cpp" local="yes">src/output/OMRT.cpp</includedby>
+    <includedby refid="equiv_8cpp" local="yes">src/targets/equiv/equiv.cpp</includedby>
+    <incdepgraph>
+      <node id="129">
+        <label>src/output/OMRT.hpp</label>
+        <link refid="OMRT_8hpp"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classOMRhythmTree" prot="public">OMRhythmTree</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/output/OMRT.hpp"/>
+  </compounddef>
+</doxygen>

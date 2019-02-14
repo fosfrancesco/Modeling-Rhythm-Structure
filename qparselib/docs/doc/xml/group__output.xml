@@ -1,0 +1,2671 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__output" kind="group">
+    <compoundname>output</compoundname>
+    <title>Output module</title>
+    <innerclass refid="classDurationList" prot="public">DurationList</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01DurationList_01_4" prot="public">std::hash&lt; DurationList &gt;</innerclass>
+    <innerclass refid="classDurationTree" prot="public">DurationTree</innerclass>
+    <innerclass refid="classLabel" prot="public">Label</innerclass>
+    <innerclass refid="classInnerLabel" prot="public">InnerLabel</innerclass>
+    <innerclass refid="classEventLabel" prot="public">EventLabel</innerclass>
+    <innerclass refid="classMEI" prot="public">MEI</innerclass>
+    <innerclass refid="classOMRhythmTree" prot="public">OMRhythmTree</innerclass>
+    <innerclass refid="classOnsets" prot="public">Onsets</innerclass>
+    <innerclass refid="classPointedRhythmTree" prot="public">PointedRhythmTree</innerclass>
+    <innerclass refid="classQDate" prot="public">QDate</innerclass>
+    <innerclass refid="classPosition" prot="public">Position</innerclass>
+    <innerclass refid="classRhythmTree" prot="public">RhythmTree</innerclass>
+    <innerclass refid="classSerialLabel" prot="public">SerialLabel</innerclass>
+    <innerclass refid="classValueList" prot="public">ValueList</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01ValueList_01_4" prot="public">std::hash&lt; ValueList &gt;</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__output_1ga3ff5a8deeeca12e8b6fea9c51eccd987" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LabelKind</name>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987a08d627d21e6424f54671673ff1611d59" prot="public">
+          <name>EVENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987a50b3b7506fcc5435fc762f98a09a6eac" prot="public">
+          <name>TIE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__output_1gga3ff5a8deeeca12e8b6fea9c51eccd987aed30e52636db1f531e6f826fd49d6773" prot="public">
+          <name>INNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="33" column="1" bodyfile="src/output/Label.hpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__output_1ga22fde970e635fcf63962743b2d5c441d" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t label_t</definition>
+        <argsstring></argsstring>
+        <name>label_t</name>
+        <briefdescription>
+<para>type for concrete and abstract labels </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="24" column="1" bodyfile="src/output/Label.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__output_1gaca893b02b4d6e0b4a33e08e8fedd3e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const DurationList &amp;l)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.cpp" line="637" column="1" bodyfile="src/output/DurationList.cpp" bodystart="637" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa14d56806f18314e1c59a090964bc687" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const DurationList &amp;lhs, const DurationList &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="216" column="1" bodyfile="src/output/DurationList.hpp" bodystart="216" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6a883cabc768b899c9a5edcd3c3d5dd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const DurationList &amp;lhs, const DurationList &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="236" column="1" bodyfile="src/output/DurationList.hpp" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga580b3f6969d32fc7ad84b7d6fec0ecbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const DurationTree &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationTree" kindref="compound">DurationTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationTree.cpp" line="138" column="1" bodyfile="src/output/DurationTree.cpp" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad0161a497bb5a9861366ec032cd79392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const OMRhythmTree &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.cpp" line="241" column="1" bodyfile="src/output/OMRT.cpp" bodystart="241" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga42a2ffdfe358dcac1df9704c4179dfeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classOnsets" kindref="compound">Onsets</ref></type>
+        <definition>const Onsets operator+</definition>
+        <argsstring>(const Onsets &amp;lhs, const Onsets &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classOnsets" kindref="compound">Onsets</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classOnsets" kindref="compound">Onsets</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>ordered merge </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Onsets.cpp" line="50" column="1" bodyfile="src/output/Onsets.cpp" bodystart="50" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga633737bbc1050067a6ae18fac4de863f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const QDate &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="81" column="1" bodyfile="src/output/QDate.hpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga352cef0201630bbd48cc2cd14ecbe5ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Position &amp;pos)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.cpp" line="66" column="1" bodyfile="src/output/RT.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaccc3468661637ee13e14eb176997086f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const RhythmTree &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.cpp" line="436" column="1" bodyfile="src/output/RT.cpp" bodystart="436" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa15fcbf280e167eab1fe03f9c0f5663c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classPosition" kindref="compound">Position</ref></type>
+        <definition>Position operator+</definition>
+        <argsstring>(const Position &amp;p, const size_t &amp;i)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="52" column="1" bodyfile="src/output/RT.hpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga857c7d77fd72ff4aa331c2d7aa1ff9b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const ValueList &amp;l)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.cpp" line="236" column="1" bodyfile="src/output/ValueList.cpp" bodystart="236" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaca91eab87be1cd794334474670baa188" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const ValueList &amp;lhs, const ValueList &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="177" column="1" bodyfile="src/output/ValueList.hpp" bodystart="177" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaad126050f09b6e61d8a4bda13c17ad8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const ValueList &amp;lhs, const ValueList &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="203" column="1" bodyfile="src/output/ValueList.hpp" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2c194b384127267b8cfed2c41e70d338" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::APTED</definition>
+        <argsstring>() const</argsstring>
+        <name>APTED</name>
+        <briefdescription>
+<para>format for Tree Edit <ref refid="classDistance" kindref="compound">Distance</ref> Salzburg library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>RT output format for Tree Edit <ref refid="classDistance" kindref="compound">Distance</ref> library APTED algorithm of M. Pawlik and N. Augsten <ulink url="http://tree-edit-distance.dbresearch.uni-salzburg.at">http://tree-edit-distance.dbresearch.uni-salzburg.at</ulink>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="129" column="1" bodyfile="src/output/APTED.cpp" bodystart="18" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga24f753a9aa9316fc7903e6f253b94944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationList::DurationList</definition>
+        <argsstring>()</argsstring>
+        <name>DurationList</name>
+        <briefdescription>
+<para>empty duration list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="67" column="1" bodyfile="src/output/DurationList.cpp" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3dffe3684ea0f218d03ddcfd7ee783f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationList::DurationList</definition>
+        <argsstring>(const DurationList &amp;)</argsstring>
+        <name>DurationList</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>l</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="69" column="1" bodyfile="src/output/DurationList.cpp" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga831728f737383383f8f74580161eb3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+        <definition>DurationList &amp; DurationList::operator=</definition>
+        <argsstring>(const DurationList &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="89" column="1" bodyfile="src/output/DurationList.cpp" bodystart="39" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga95ba6b1b14592003fdc97b69f982677c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationList::DurationList</definition>
+        <argsstring>(const DurationList &amp;l, Rational q)</argsstring>
+        <name>DurationList</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>copy of duration list l where all elements are multiplied by given Ratio q. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suration list to copy and update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given ratio for update </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="75" column="1" bodyfile="src/output/DurationList.cpp" bodystart="55" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab678d41f41605596499c3f17a5f39120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationList::DurationList</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>DurationList</name>
+        <param>
+          <type>std::string</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+<para>read duration list from file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>one ratio per line if the first line is negative ratio, it is a continuation all other line must contain positive or null ratios. <simplesect kind="warning"><para>the file must not be empty.</para>
+</simplesect>
+<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR only for testing. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="85" column="1" bodyfile="src/output/DurationList.cpp" bodystart="72" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga293312eb9bbd4ac03d0add796c8eb12a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="91" column="1" bodyfile="src/output/DurationList.cpp" bodystart="113" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga804e83e82fca5380650865ce1feabb6d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_empty</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_empty</name>
+        <briefdescription>
+<para>for asserts (check _state correctness). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="174" column="1" bodyfile="src/output/DurationList.cpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7fa2c8c9f2e3954592e4f0e264560e54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::complete</definition>
+        <argsstring>() const</argsstring>
+        <name>complete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="105" column="1" bodyfile="src/output/DurationList.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gae04a60c20656f2fe0eb9b6df23fa5948" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_complete</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_complete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="175" column="1" bodyfile="src/output/DurationList.cpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga130ef44efbc7af3c3c9a6efa23639378" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::unit</definition>
+        <argsstring>() const</argsstring>
+        <name>unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="93" column="1" bodyfile="src/output/DurationList.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga74cb6301d04160f6fe40d27355b9c6f5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_unit</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="180" column="1" bodyfile="src/output/DurationList.cpp" bodystart="147" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga8b4434664a0dd2938fae9791fd34febd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::single_continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>single_continuation</name>
+        <briefdescription>
+<para>one (non null) continuation and no event in the main list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="108" column="1" bodyfile="src/output/DurationList.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9c011b8c82332aaeaac790470d33bbbf" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_single_continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_single_continuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="176" column="1" bodyfile="src/output/DurationList.cpp" bodystart="188" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabdd5f118e0ea1566362a9eaed2ce0471" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>single_event</name>
+        <briefdescription>
+<para>no continuation and only one event in the main list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="111" column="1" bodyfile="src/output/DurationList.cpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga22ddcbbc15b283f49cfa8cc6b98ed906" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_single_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="177" column="1" bodyfile="src/output/DurationList.cpp" bodystart="200" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gadd91aa5ec57a51c6253ea872eadb28dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::event</definition>
+        <argsstring>() const</argsstring>
+        <name>event</name>
+        <briefdescription>
+<para>no continuation and some grace notes (dur=0) + one event (dur&gt;0) in the main list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="115" column="1" bodyfile="src/output/DurationList.cpp" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2f27ece8ac0781de8497f485a7e83c71" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_event</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="178" column="1" bodyfile="src/output/DurationList.cpp" bodystart="212" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6f10e2b817fd6b2ec1e4cbea3df91c31" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_gracenotes</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_gracenotes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="179" column="1" bodyfile="src/output/DurationList.cpp" bodystart="241" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gacf08ddb1cdc1cab5abbad781d8ddd006" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DurationList::_check_state</definition>
+        <argsstring>() const</argsstring>
+        <name>_check_state</name>
+        <briefdescription>
+<para>the state value is correct. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="184" column="1" bodyfile="src/output/DurationList.cpp" bodystart="262" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga72427605bbceabff329459a610db1201" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t DurationList::nbgn</definition>
+        <argsstring>() const</argsstring>
+        <name>nbgn</name>
+        <briefdescription>
+<para>number of grace note must be an <ref refid="group__output_1gadd91aa5ec57a51c6253ea872eadb28dc" kindref="member">event()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="119" column="1" bodyfile="src/output/DurationList.cpp" bodystart="294" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3afa63ce4cfad77e1b2fb9cb4bb76847" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational DurationList::_compute_length</definition>
+        <argsstring>() const</argsstring>
+        <name>_compute_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="181" column="1" bodyfile="src/output/DurationList.cpp" bodystart="313" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga540cf8decb4f62a80e871ab1e6dd31de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational DurationList::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>sum of the elements of the duration list (including continuation) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="122" column="1" bodyfile="src/output/DurationList.cpp" bodystart="327" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaddb48455388f36f48ace0f0c0b250105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DurationList::add</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+<para>add the event at the end of the main list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>fail if event cannot be added (makes sum &gt; 1). </para>
+</simplesect>
+<simplesect kind="warning"><para>this list must not have have been summed with others. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="127" column="1" bodyfile="src/output/DurationList.cpp" bodystart="336" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab9d508060073c83c27e13f8f2472de38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DurationList::addcont</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>addcont</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+<para>push a continuation value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>fail if cont cannot be added (makes sum &gt; 1). </para>
+</simplesect>
+<simplesect kind="warning"><para>this list must not have been summed with others. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="132" column="1" bodyfile="src/output/DurationList.cpp" bodystart="406" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga06ae4f865c1c27edd490f1631d76452a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+        <definition>DurationList &amp; DurationList::operator+=</definition>
+        <argsstring>(const DurationList &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>concatenation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duration list to concatenate, must not be empty, and must not be the summation of several duration lists. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="144" column="1" bodyfile="src/output/DurationList.cpp" bodystart="469" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga20a55c27bcb4ec4f639d4f7f79153be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DurationList::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <briefdescription>
+<para>divide by the number of lists summed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationList.hpp" line="135" column="1" bodyfile="src/output/DurationList.cpp" bodystart="605" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac65ba3ab5f97b37e8f5a1ce6358422f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationTree::~DurationTree</definition>
+        <argsstring>()</argsstring>
+        <name>~DurationTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationTree.hpp" line="32" column="1" bodyfile="src/output/DurationTree.cpp" bodystart="15" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2c12fa35cd11a35a98e4680975e3f8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DurationTree::DurationTree</definition>
+        <argsstring>(const DurationList &amp;d)</argsstring>
+        <name>DurationTree</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationTree.hpp" line="30" column="1" bodyfile="src/output/DurationTree.cpp" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga524c96edadc8725d997f81de3663ce4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+        <definition>DurationTree * DurationTree::sub</definition>
+        <argsstring>(size_t, size_t)</argsstring>
+        <name>sub</name>
+        <param>
+          <type>size_t</type>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/DurationTree.hpp" line="36" column="1" bodyfile="src/output/DurationTree.cpp" bodystart="33" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa2d2c8bb6a5bd48679122a220a9d8d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Label::Label</definition>
+        <argsstring>(int a=0)</argsstring>
+        <name>Label</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="90" column="1" bodyfile="src/output/Label.cpp" bodystart="17" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga189208973cef74bb65357535d43885ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Label::arity</definition>
+        <argsstring>() const</argsstring>
+        <name>arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="92" column="1" bodyfile="src/output/Label.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9c677c6efeee575a05c0a32511ad7cf1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Label::nbGraceNotes</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>nbGraceNotes</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="101" column="1" bodyfile="src/output/Label.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga58660df99e9a20f35ee0dab2901aa637" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Label::nbEvents</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>nbEvents</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="104" column="1" bodyfile="src/output/Label.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga56a227805fd6d43d1f2618e871a4108c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Label::continuation</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>continuation</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="107" column="1" bodyfile="src/output/Label.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3724371343de270b6f488ca47d11b917" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Label::abstract</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>abstract</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="110" column="1" bodyfile="src/output/Label.cpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga07b8cb2137bfde63b8f2686ed6f20db0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Label::abstract</definition>
+        <argsstring>(label_t a, label_t n)</argsstring>
+        <name>abstract</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="113" column="1" bodyfile="src/output/Label.cpp" bodystart="64" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga686ea0e366bdefcf68714e411cad577f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Label::leqabstract</definition>
+        <argsstring>(label_t a, label_t n)</argsstring>
+        <name>leqabstract</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="116" column="1" bodyfile="src/output/Label.cpp" bodystart="85" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7679a09f4cdd668f395a24deb498cdc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InnerLabel::InnerLabel</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>InnerLabel</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="145" column="1" bodyfile="src/output/Label.cpp" bodystart="155" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4da9c2ee628ede0e5d20e9f0155884e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventLabel::EventLabel</definition>
+        <argsstring>()</argsstring>
+        <name>EventLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="155" column="1" bodyfile="src/output/Label.cpp" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad5d7a4117cae3ac10b55ea051aa92848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventLabel::EventLabel</definition>
+        <argsstring>(unsigned int n=0)</argsstring>
+        <name>EventLabel</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="160" column="1" bodyfile="src/output/Label.cpp" bodystart="168" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gae8b849bfdbed392ff2171126354210a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EventLabel::nbGraceNotes</definition>
+        <argsstring>() const</argsstring>
+        <name>nbGraceNotes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="163" column="1" bodyfile="src/output/Label.cpp" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga77779608bf4588f37330cecaf4cc2f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventLabel::addGraceNotes</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>addGraceNotes</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>g</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="167" column="1" bodyfile="src/output/Label.cpp" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6a71e2488e33f2556ee9051d0bc88820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventLabel::pushEvent</definition>
+        <argsstring>(Event *)</argsstring>
+        <name>pushEvent</name>
+        <param>
+          <type>Event *</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="169" column="1" bodyfile="src/output/Label.cpp" bodystart="190" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafcd0d23d1cdb8cd92fbaec2fac51d259" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lily</definition>
+        <argsstring>(int depth, bool tie=false) const</argsstring>
+        <name>lily</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tie</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>LilyPond format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lilypond output for RT <ulink url="http://lilypond.org">http://lilypond.org</ulink>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="120" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="17" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga93aca0f691a35a081d51eaad06e8ce50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lilydot</definition>
+        <argsstring>(int depth)</argsstring>
+        <name>lilydot</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>LilyPond format with dots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="123" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga89f5bf140b902f886be124d620ac8474" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::lilydot</definition>
+        <argsstring>(int depth, bool tie, bool dot, bool ignore_first, bool ignore_second)</argsstring>
+        <name>lilydot</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tie</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dot</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_first</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_second</declname>
+        </param>
+        <briefdescription>
+<para>LilyPond format with dots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="175" column="1" bodyfile="src/output/LilyPond.cpp" bodystart="104" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga67acb233e47d9942cb678fb24b67f799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MEI::MEI</definition>
+        <argsstring>()</argsstring>
+        <name>MEI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="53" column="1" bodyfile="src/output/MEI.cpp" bodystart="25" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga28b9390a3699a9ae7abdba51cb3cb7d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MEI::createFromScore</definition>
+        <argsstring>(const ScoreModel::Score &amp;s)</argsstring>
+        <name>createFromScore</name>
+        <param>
+          <type>const <ref refid="classScoreModel_1_1Score" kindref="compound">ScoreModel::Score</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Check with eth Spiritual example: case of a </para>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="59" column="1" bodyfile="src/output/MEI.cpp" bodystart="44" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaec3627352aed16ef31dfabe7d243c476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MEI::createScoreDef</definition>
+        <argsstring>(const ScoreModel::Score &amp;s)</argsstring>
+        <name>createScoreDef</name>
+        <param>
+          <type>const <ref refid="classScoreModel_1_1Score" kindref="compound">ScoreModel::Score</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the score definition part </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="64" column="1" bodyfile="src/output/MEI.cpp" bodystart="168" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga707656b4b214953f8be23c95415a8ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; string, int &gt;</type>
+        <definition>std::pair&lt; string, int &gt; MEI::chooseClef</definition>
+        <argsstring>(std::pair&lt; Pitch, Pitch &gt; range)</argsstring>
+        <name>chooseClef</name>
+        <param>
+          <type>std::pair&lt; <ref refid="classPitch" kindref="compound">Pitch</ref>, <ref refid="classPitch" kindref="compound">Pitch</ref> &gt;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Choose a clef based on range </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="80" column="1" bodyfile="src/output/MEI.cpp" bodystart="212" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7f0c47ab091313feb0a7fba4d23e09da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MEI::writeInFile</definition>
+        <argsstring>(const string fname)</argsstring>
+        <name>writeInFile</name>
+        <param>
+          <type>const string</type>
+          <declname>fname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save in file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="75" column="1" bodyfile="src/output/MEI.cpp" bodystart="230" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6c05e4fec7d79e79d9022130e8fef2ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Note *</type>
+        <definition>Note * MEI::makeNote</definition>
+        <argsstring>(const ScoreModel::Note *noteEvent)</argsstring>
+        <name>makeNote</name>
+        <param>
+          <type>const <ref refid="classScoreModel_1_1Note" kindref="compound">ScoreModel::Note</ref> *</type>
+          <declname>noteEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="85" column="1" bodyfile="src/output/MEI.cpp" bodystart="235" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafa5b4ccd58b7537120b30437c8072852" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Tie *</type>
+        <definition>Tie * MEI::makeTie</definition>
+        <argsstring>(const ScoreModel::Tie *tie)</argsstring>
+        <name>makeTie</name>
+        <param>
+          <type>const ScoreModel::Tie *</type>
+          <declname>tie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="87" column="1" bodyfile="src/output/MEI.cpp" bodystart="264" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabbdc2a86af7313ccc63b1b502d9b0aa5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TupletSpan *</type>
+        <definition>TupletSpan * MEI::makeTupletSpan</definition>
+        <argsstring>(const ScoreModel::Tuplet *tuplet)</argsstring>
+        <name>makeTupletSpan</name>
+        <param>
+          <type>const <ref refid="classScoreModel_1_1Tuplet" kindref="compound">ScoreModel::Tuplet</ref> *</type>
+          <declname>tuplet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="86" column="1" bodyfile="src/output/MEI.cpp" bodystart="276" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1e4233e0a65d642f227dba08be1fe592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MEI::~MEI</definition>
+        <argsstring>()</argsstring>
+        <name>~MEI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/MEI.hpp" line="92" column="1" bodyfile="src/output/MEI.cpp" bodystart="307" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafa2112e5abf005b87ad68073ac92670f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>OMRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="39" column="1" bodyfile="src/output/OMRT.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac708fcabf8489ca08a9f7231eeb928d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>(Rational lab, bool tied=false)</argsstring>
+        <name>OMRhythmTree</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tied</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="42" column="1" bodyfile="src/output/OMRT.cpp" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1dae8e3f43573cc3aac4859b5b618ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::OMRhythmTree</definition>
+        <argsstring>(const RhythmTree *, Rational dur=Rational(1))</argsstring>
+        <name>OMRhythmTree</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <declname>dur</declname>
+          <defval><ref refid="classRational" kindref="compound">Rational</ref>(1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="45" column="1" bodyfile="src/output/OMRT.cpp" bodystart="29" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaea89bed9d2782e13bf697069147331a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OMRhythmTree::~OMRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~OMRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="47" column="1" bodyfile="src/output/OMRT.cpp" bodystart="158" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga5877122dcb737ec9bdbe94241b867b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t OMRhythmTree::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="59" column="1" bodyfile="src/output/OMRT.cpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga59d59642fc58d66772d51a075720a701" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> *</type>
+        <definition>OMRhythmTree * OMRhythmTree::child</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>child</name>
+        <param>
+          <type>size_t</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="62" column="1" bodyfile="src/output/OMRT.cpp" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6e273a3942470268fb775857d80bc2a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OMRhythmTree::add</definition>
+        <argsstring>(OMRhythmTree *)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classOMRhythmTree" kindref="compound">OMRhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="65" column="1" bodyfile="src/output/OMRT.cpp" bodystart="184" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga14633b5c977b30f4a28085c686c3c17f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string OMRhythmTree::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/OMRT.hpp" line="67" column="1" bodyfile="src/output/OMRT.cpp" bodystart="193" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6a3bc246737b5cc48df0e07b36e9935f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Onsets::Onsets</definition>
+        <argsstring>(const DurationList &amp;)</argsstring>
+        <name>Onsets</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+<para>the list of onsets defined by the given duration list (IOI&apos;s) the first onset is 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>a continuation in duration list will be treated like other events </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Onsets.hpp" line="34" column="1" bodyfile="src/output/Onsets.cpp" bodystart="14" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad3393b6422e8708954e27a52933620e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classDurationList" kindref="compound">DurationList</ref></type>
+        <definition>DurationList Onsets::ioi</definition>
+        <argsstring>() const</argsstring>
+        <name>ioi</name>
+        <briefdescription>
+<para>the list of IOI associated to this list of onsets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Onsets.hpp" line="41" column="1" bodyfile="src/output/Onsets.cpp" bodystart="32" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf7f8a09842cce99950290469727cb4f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>PointedRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="42" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga00153f3142fe2d750b995d95435d852e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>(label_t lab)</argsstring>
+        <name>PointedRhythmTree</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="46" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad86382b8bc2a62cc5d8848c516280c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::PointedRhythmTree</definition>
+        <argsstring>(const RhythmTree *, const InputSegment *, size_t i=0)</argsstring>
+        <name>PointedRhythmTree</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>is</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="49" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="26" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaff594d1f9db1bc40c552aeaa7cb9fc28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PointedRhythmTree::~PointedRhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~PointedRhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/PointedRT.hpp" line="51" column="1" bodyfile="src/output/PointedRT.cpp" bodystart="67" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac553172d4c172c75bb78e9b246eaa0a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>()</argsstring>
+        <name>QDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="38" column="1" bodyfile="src/output/QDate.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1151b393ffd2c621914c8e0641fff3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>(size_t blocs, size_t rel)</argsstring>
+        <name>QDate</name>
+        <param>
+          <type>size_t</type>
+          <declname>blocs</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="40" column="1" bodyfile="src/output/QDate.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab39d4fd438b410d8310f4bf43703904f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QDate::QDate</definition>
+        <argsstring>(const QDate &amp;)</argsstring>
+        <name>QDate</name>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="42" column="1" bodyfile="src/output/QDate.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga28238d09bb0f332bda66fafb92facb3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+        <definition>QDate &amp; QDate::operator=</definition>
+        <argsstring>(const QDate &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classQDate" kindref="compound">QDate</ref> &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="46" column="1" bodyfile="src/output/QDate.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga59599012a00e9c2ae587144f47085130" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classQDate" kindref="compound">QDate</ref> *</type>
+        <definition>QDate * QDate::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="48" column="1" bodyfile="src/output/QDate.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga07a4414576afc26204002ce92dcc7ce9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational QDate::absolute</definition>
+        <argsstring>(size_t res) const</argsstring>
+        <name>absolute</name>
+        <param>
+          <type>size_t</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>quantified date as rational value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="60" column="1" bodyfile="src/output/QDate.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac8e931429f0f79f9e9f5754d3b98fe36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QDate::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="62" column="1" bodyfile="src/output/QDate.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf69eee7904ee41d76e3a1a61ab92cfd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QDate::print</definition>
+        <argsstring>(std::ostream &amp;, size_t) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <defname>res</defname>
+        </param>
+        <briefdescription>
+<para>fractional print using resolution value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/QDate.hpp" line="65" column="1" bodyfile="src/output/QDate.cpp" bodystart="55" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga369a577425f8ba02e8750d04b6a088db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Position::Position</definition>
+        <argsstring>()</argsstring>
+        <name>Position</name>
+        <briefdescription>
+<para>empty sequence = root position </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="32" column="1" bodyfile="src/output/RT.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga63750e368482cc5ef45180d3672b1c55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Position::Position</definition>
+        <argsstring>(const Position &amp;)</argsstring>
+        <name>Position</name>
+        <param>
+          <type>const <ref refid="classPosition" kindref="compound">Position</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="34" column="1" bodyfile="src/output/RT.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga886868520756636e98110cdb06349326" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="36" column="1" bodyfile="src/output/RT.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga009f3b456aa0995413db1b8c0bd6f374" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Position::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="37" column="1" bodyfile="src/output/RT.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab6b7dd5c2869fb23755faee32f1e6731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Position::operator+=</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>concatenate given int to this position </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int must be positive </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="41" column="1" bodyfile="src/output/RT.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga19d238e39cbe5a9f03929473bbd5b745" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Position::print</definition>
+        <argsstring>(std::ostream &amp;o) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="49" column="1" bodyfile="src/output/RT.cpp" bodystart="48" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac7614a6239a4917c771641dfdfd597ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>RhythmTree</name>
+        <briefdescription>
+<para>empty inner tree (not terminal) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the child list must be completed with add </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="71" column="1" bodyfile="src/output/RT.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac868521df843e116ef04bcfa52405d01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>(label_t lab)</argsstring>
+        <name>RhythmTree</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+<para>single leaf rhythm tree (terminal tree) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="75" column="1" bodyfile="src/output/RT.cpp" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga058c6d59881e1be259594165d19c8588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::RhythmTree</definition>
+        <argsstring>(const string &amp;)</argsstring>
+        <name>RhythmTree</name>
+        <param>
+          <type>const string &amp;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>extract RT from string description </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="78" column="1" bodyfile="src/output/RT.cpp" bodystart="100" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga70f6b23946fcfd1823b9fb3fde9506a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_tree</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_tree</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="186" column="1" bodyfile="src/output/RT.cpp" bodystart="116" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafd2cba61567f7096dc5050bca22cf4f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_space</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_space</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="182" column="1" bodyfile="src/output/RT.cpp" bodystart="156" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1b87a8ab06f066092cf5d9dac5a5497c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_int</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_int</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="190" column="1" bodyfile="src/output/RT.cpp" bodystart="167" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac45127942de2570f415b8e4dd0c5c20c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::read_list</definition>
+        <argsstring>(std::string::const_iterator &amp;it, const std::string::const_iterator &amp;beg, const std::string::const_iterator &amp;end)</argsstring>
+        <name>read_list</name>
+        <param>
+          <type>std::string::const_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>const std::string::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="194" column="1" bodyfile="src/output/RT.cpp" bodystart="183" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa58da0cc1e6a1848d19c7276eaeb23ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RhythmTree::~RhythmTree</definition>
+        <argsstring>()</argsstring>
+        <name>~RhythmTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="80" column="1" bodyfile="src/output/RT.cpp" bodystart="217" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4f875cf76d3ebc8270a471ef57e93ddd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::terminal</definition>
+        <argsstring>() const</argsstring>
+        <name>terminal</name>
+        <briefdescription>
+<para>single node tree </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="83" column="1" bodyfile="src/output/RT.cpp" bodystart="229" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga40e2aa462ed42fa46d3beafca9dbc350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t RhythmTree::label</definition>
+        <argsstring>() const</argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>label for terminal node </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="96" column="1" bodyfile="src/output/RT.cpp" bodystart="236" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1ca015dec36fa32ff6d66aaad10f4eb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>continuation</name>
+        <briefdescription>
+<para>label of terminal node is a continuation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="100" column="1" bodyfile="src/output/RT.cpp" bodystart="243" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabd793b78f71fb62edb13497e0a13f48c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>single_event</name>
+        <briefdescription>
+<para>label of terminal node is a single event (1 note / rest, no grace note). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="104" column="1" bodyfile="src/output/RT.cpp" bodystart="250" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaaaf06fe2227a6598b109a72d89afa8d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t RhythmTree::nbgn</definition>
+        <argsstring>() const</argsstring>
+        <name>nbgn</name>
+        <briefdescription>
+<para>number of grace notes in this terminal node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="108" column="1" bodyfile="src/output/RT.cpp" bodystart="257" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga813a6feea3e6aa565fa0aed29e970a4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t RhythmTree::arity</definition>
+        <argsstring>() const</argsstring>
+        <name>arity</name>
+        <briefdescription>
+<para>arity of root node (0 for terminal tree) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="88" column="1" bodyfile="src/output/RT.cpp" bodystart="264" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga130dd34b9f3e0db4ad4f185181895dbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+        <definition>RhythmTree * RhythmTree::child</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>child</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the ith child of this tree </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must be inner (not terminal) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="92" column="1" bodyfile="src/output/RT.cpp" bodystart="273" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga5749469b3ff6ec88fcab75961e7d278c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RhythmTree::add</definition>
+        <argsstring>(RhythmTree *)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>add a subtree. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this tree must not be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="117" column="1" bodyfile="src/output/RT.cpp" bodystart="282" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafdda5b1a3c16c8e64337c26bcdb368e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::reducible</definition>
+        <argsstring>() const</argsstring>
+        <name>reducible</name>
+        <briefdescription>
+<para>this tree contains a subtree of the form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">p(n,<sp/>o,...,o)<sp/></highlight></codeline>
+</programlisting> or <programlisting><codeline><highlight class="normal">p(o,...,o)<sp/></highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="113" column="1" bodyfile="src/output/RT.cpp" bodystart="291" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf723874e871dc01efb036ccbac07c32b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tail_redex</definition>
+        <argsstring>() const</argsstring>
+        <name>tail_redex</name>
+        <briefdescription>
+<para>inner and the children list is of the form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">(_,<sp/>o,...,o)<sp/></highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="147" column="1" bodyfile="src/output/RT.cpp" bodystart="310" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga799761965ae00bb24e16ebb98f66995a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tail_reducible</definition>
+        <argsstring>() const</argsstring>
+        <name>tail_reducible</name>
+        <briefdescription>
+<para>inner and one of the children 1..a is reducible. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="150" column="1" bodyfile="src/output/RT.cpp" bodystart="328" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3933e83072d4e7c3bb3d19d25df90b47" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tie</definition>
+        <argsstring>() const</argsstring>
+        <name>tie</name>
+        <briefdescription>
+<para>return whether this tree is a continuation (a leaf). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="155" column="1" bodyfile="src/output/RT.cpp" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gacd73e0032e3dd22320819c4cda3d60a4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::tied</definition>
+        <argsstring>() const</argsstring>
+        <name>tied</name>
+        <briefdescription>
+<para>return whether the leftmost innermost leaf is a tie (continuation). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="161" column="1" bodyfile="src/output/RT.cpp" bodystart="348" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gafb30d2c520e4c5e8600ae3a58abf9c72" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::binary</definition>
+        <argsstring>() const</argsstring>
+        <name>binary</name>
+        <briefdescription>
+<para>return whether this tree is binary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="158" column="1" bodyfile="src/output/RT.cpp" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9aebdccd4ce1d1029d03f4ec38c101c4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::second_tied</definition>
+        <argsstring>() const</argsstring>
+        <name>second_tied</name>
+        <briefdescription>
+<para>return whether this tree is binary and the second child is tied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="164" column="1" bodyfile="src/output/RT.cpp" bodystart="366" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac785e6d945ef6e0808132459669ab038" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_after</definition>
+        <argsstring>() const</argsstring>
+        <name>dot_after</name>
+        <briefdescription>
+<para>return whether this tree is binary and the left son is a dot (continuation after the dotted note). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="168" column="1" bodyfile="src/output/RT.cpp" bodystart="372" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2079bd534900d0b10e74682e404230b1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_before</definition>
+        <argsstring>() const</argsstring>
+        <name>dot_before</name>
+        <briefdescription>
+<para>return whether this tree is binary and the right son is a dot (continuation before the dotted note). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="172" column="1" bodyfile="src/output/RT.cpp" bodystart="378" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac6764688e24fe9b942464a9c2053ee92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string RhythmTree::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="131" column="1" bodyfile="src/output/RT.cpp" bodystart="384" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2d7e95e5b2cc887aa9c4db52fab1b0d3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SerialLabel::nbEvents</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>nbEvents</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>number of note + grace notes encoded in given leaf label </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="63" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3d92180f844d00eaf0bbd46e10f022e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t SerialLabel::pre</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>pre</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>return the pre value of the given leaf label </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="51" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7c5289addb03e9bf54467e2d84c7ef79" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t SerialLabel::post</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>post</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>return the post value of the given leaf label </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="54" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga0f5679843d6bcd3e97ecd535c4d3c6f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SerialLabel::nbGraceNotes</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>nbGraceNotes</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>return the number of grace node encoded in given leaf label </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="57" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaaf4c88a23710366cbe35081a0967b536" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SerialLabel::continuation</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>continuation</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>the given leaf label is a continuation (no event, no grace note) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="60" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga69973921641222cb765112c70df25318" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t SerialLabel::serialize</definition>
+        <argsstring>(pre_t pre, pre_t post, size_t nb)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nb</declname>
+        </param>
+        <briefdescription>
+<para>return the leaf label encoding the given </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value in 0..MAX_GRACE </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>post</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value in 0..MAX_GRACE </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of events </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/SerialLabel.hpp" line="48" column="1" bodyfile="src/output/SerialLabel.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga187d1dfe0e942d18f1e2c3150e9aa185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>len</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="47" column="1" bodyfile="src/output/ValueList.cpp" bodystart="16" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad518d3f6ddf7fb7b74275eef20205893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>std::string</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="58" column="1" bodyfile="src/output/ValueList.cpp" bodystart="29" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaec135d71a5c51579bec52c805c0b3ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(const DurationList &amp;)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>dl</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="49" column="1" bodyfile="src/output/ValueList.cpp" bodystart="72" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gabd7a0aa8113f72c13205c0702eb269ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueList::ValueList</definition>
+        <argsstring>(const ValueList &amp;)</argsstring>
+        <name>ValueList</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="51" column="1" bodyfile="src/output/ValueList.cpp" bodystart="95" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab09ac2a5e83e806431634ddd87f596fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+        <definition>ValueList &amp; ValueList::operator=</definition>
+        <argsstring>(const ValueList &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classValueList" kindref="compound">ValueList</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="62" column="1" bodyfile="src/output/ValueList.cpp" bodystart="109" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7510db734db466464100413728db233c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="64" column="1" bodyfile="src/output/ValueList.cpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga2ebf6a43ad145e4593cc961a4016f330" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::complete</definition>
+        <argsstring>() const</argsstring>
+        <name>complete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="75" column="1" bodyfile="src/output/ValueList.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9d68ca01f81000f92f1c8911cbd414da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::single_continuation</definition>
+        <argsstring>() const</argsstring>
+        <name>single_continuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="78" column="1" bodyfile="src/output/ValueList.cpp" bodystart="142" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaff6e5912f71832597303efe0093d5d00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::event</definition>
+        <argsstring>() const</argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="86" column="1" bodyfile="src/output/ValueList.cpp" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga699183ea1d3babeb7c2c094e31e7070f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueList::single_event</definition>
+        <argsstring>() const</argsstring>
+        <name>single_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="81" column="1" bodyfile="src/output/ValueList.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9078b4e45f9864eec53bbfa68d7709d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::add</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="95" column="1" bodyfile="src/output/ValueList.cpp" bodystart="163" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaeb6d26ee1813f879c07148df644a5321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::addcont</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>addcont</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="100" column="1" bodyfile="src/output/ValueList.cpp" bodystart="179" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga282fe7cbc28917f2b096d2183419a30c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="104" column="1" bodyfile="src/output/ValueList.cpp" bodystart="191" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga9d5ccdd934a0715c597650fd8cd8d5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="110" column="1" bodyfile="src/output/ValueList.cpp" bodystart="200" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga77bf4e64e28ee7a3bd2989ffe25f7fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+        <definition>Rational ValueList::popcont</definition>
+        <argsstring>()</argsstring>
+        <name>popcont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="114" column="1" bodyfile="src/output/ValueList.cpp" bodystart="217" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga7802d98c6ad4e622847be23fbaa6cbea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValueList::popcont</definition>
+        <argsstring>(Rational)</argsstring>
+        <name>popcont</name>
+        <param>
+          <type><ref refid="classRational" kindref="compound">Rational</ref></type>
+          <defname>q</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/ValueList.hpp" line="118" column="1" bodyfile="src/output/ValueList.cpp" bodystart="228" bodyend="233"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__output_1gae303eba6aa9e3b8613a5795c73e4fbea" prot="public" static="no">
+        <name>RT_PAR_OPEN</name>
+        <initializer>&apos;(&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.cpp" line="15" column="9" bodyfile="src/output/RT.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__output_1gae92f0807f278bf37adf40090ad2dc4be" prot="public" static="no">
+        <name>RT_PAR_CLOSE</name>
+        <initializer>&apos;)&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.cpp" line="16" column="9" bodyfile="src/output/RT.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__output_1ga503dde6f933b959604bbeb17820933d5" prot="public" static="no">
+        <name>RT_SEP</name>
+        <initializer>&apos;,&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.cpp" line="17" column="9" bodyfile="src/output/RT.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__output_1ga774fcd89afe324f01efa6514626dd1cb" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool RhythmTree::dot_flag</definition>
+        <argsstring></argsstring>
+        <name>dot_flag</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>global variable set if a dot is added in lilydot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/RT.hpp" line="126" column="1" bodyfile="src/output/RT.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <computeroutput>output</computeroutput> module contains representations for the output of the parsing procedure and conversion into music transcription results. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classMEI" kindref="compound">MEI</ref> interface. Can be used to output <ref refid="classMEI" kindref="compound">MEI</ref> document from a transcription result</para>
+<para><simplesect kind="author"><para>Philippe Rigaux </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

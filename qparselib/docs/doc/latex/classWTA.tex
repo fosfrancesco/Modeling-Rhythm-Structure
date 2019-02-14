@@ -1,0 +1,204 @@
+\hypertarget{classWTA}{}\section{W\+TA Class Reference}
+\label{classWTA}\index{WTA@{WTA}}
+
+
+class of schemas = weighted tree automata = weighted C\+FG.  
+
+
+
+
+{\ttfamily \#include $<$W\+T\+A.\+hpp$>$}
+
+Inheritance diagram for W\+TA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWTA}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__schemata_ga5636da911ebbe8772c5444172d56800d}{W\+TA}} ()
+\begin{DoxyCompactList}\small\item\em nullary constructor for cython \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__schemata_ga6eeb789b8c8aa8404f611a6fed61faca}{W\+TA}} (\mbox{\hyperlink{classWeight}{Weight}} seed, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\begin{DoxyCompactList}\small\item\em empty automaton \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_a23060c851d5cf624215c2d9dc8ad4b45}\label{classWTA_a23060c851d5cf624215c2d9dc8ad4b45}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_gab201fee50d73843159cbef5f453838f0}{size}} () const
+\begin{DoxyCompactList}\small\item\em number of states \end{DoxyCompactList}\item 
+bool {\bfseries empty} () const
+\item 
+bool \mbox{\hyperlink{group__schemata_ga4459bd6654cbe35b39df9cade16c6d58}{is\+Registered}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em the state is present in the automaton \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_ga88d07a1e47cc3ee537234861b7336dd6}{is\+Initial}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em the state is an initial state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}\label{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}} 
+virtual state\+\_\+t \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{initial}} (\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0) const
+\begin{DoxyCompactList}\small\item\em initial(pre, post) pre and post are use for quantification and ignored in this version (useless for schemas) \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries resolution} () const
+\item 
+\mbox{\hyperlink{classTransitionList}{Transition\+List}} \& \mbox{\hyperlink{group__schemata_ga924a1c533383a7185b9d466b59c5a495}{add}} (state\+\_\+t, bool \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{initial}}=false)
+\begin{DoxyCompactList}\small\item\em add(s, i) register state s if s was already registered, return a reference to its transition list. otherwise, create state s with an empty transition list and returns a reference to it. moreover s is set as initial if i = true. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransitionList}{Transition\+List}} \& \mbox{\hyperlink{group__schemata_ga01de1e03d09518b38ab69a2075276ae2}{add}} (state\+\_\+t, const \mbox{\hyperlink{classTransition}{Transition}} \&, bool \mbox{\hyperlink{classWTA_ae6b10f70925f14f36b839e5d8657bc5e}{initial}}=false)
+\begin{DoxyCompactList}\small\item\em add(s, t) add a transition with head s and with body/weight described in t if s was not registered, it is registered the transition t is added to the transition list of s and a reference to this transition list is returned moreover s is set as initial if i = true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga3d8d24249e26ecc8bbdaf672c6e8d3cf}{remove}} (state\+\_\+t)
+\begin{DoxyCompactList}\small\item\em remove the entry for given state s in the table of the table i.\+e. all transitions targeted to s, and all the transitions with s in their body. if s was in the initial set, it is also removed from this set. s must be registered. \end{DoxyCompactList}\item 
+Transition\+List\+\_\+const\+\_\+iterator \mbox{\hyperlink{group__schemata_ga23c3f9884c683e4bbab323208e08c672}{begin}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em begin(s) returns an iterator pointing to the first transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. \end{DoxyCompactList}\item 
+Transition\+List\+\_\+const\+\_\+iterator \mbox{\hyperlink{group__schemata_gaf5075f5a210343d6da208f4c80421cb5}{end}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em begin(s) returns an iterator pointing to the past-\/the-\/end transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga28c9a7e35d4d516ef0f9967e773305f8}{oftarget}} (state\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em oftarget(s) return the number of transitions of head state s. s must be registered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_ga9ef4193ae949ae7c9e52d30720e37202}{is\+Clean}} () const
+\begin{DoxyCompactList}\small\item\em the \mbox{\hyperlink{classWTA}{W\+TA}} has no empty states \end{DoxyCompactList}\item 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gaea41b32c37bbe955d0359039d7731fea}{empty\+States}} () const
+\begin{DoxyCompactList}\small\item\em returns the set of all non-\/inhabited (zero weight) states in wta \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_gaec169477bdc2cf883916c38dbc18e577}{clean}} ()
+\begin{DoxyCompactList}\small\item\em remove states not inhabited and transitions containing these states \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWTA_aa4eda8d626af33674c59fef22c8220c1}{normalize}} (unsigned int flag=0)
+\begin{DoxyCompactList}\small\item\em for all state q, for all transition tr to q (in the transition list T\+L(q) of q). recompute weights to get a probabilistic \mbox{\hyperlink{classWTA}{W\+TA}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga8dfef6b591f952f0fea9dae1f5e475c7}{Countingto\+Stochastic}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_gaff1196a45ffd1400bc4004e27b167218}{Penaltyto\+Counting}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga0bddc6750b18023be6976bd5cd46a2f5}{Stochasticto\+Penalty}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga5f3a0d868bf26b504cccc53b4d55e09a}{Countingto\+Penalty}} ()
+\begin{DoxyCompactList}\small\item\em cast weights in all transitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__schemata_ga91e272f4f9463149cd296f48e65a4185}{abstract}} (bool flag=false)
+\begin{DoxyCompactList}\small\item\em abstract the leaf label values in domain \mbox{[}0..M\+A\+X\+\_\+\+G\+R\+A\+CE\mbox{]} every value $>$ M\+A\+X\+\_\+\+G\+R\+A\+CE is casted to M\+A\+X\+\_\+\+G\+R\+A\+CE the weights are summed accordingly \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga0f6551b20a213eb88c6a7e822ebc5915}{count\+States}} () const
+\begin{DoxyCompactList}\small\item\em number of states \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga8acbd7562a6f69e7634d6b9f9e341e4a}{count\+Transitions}} () const
+\begin{DoxyCompactList}\small\item\em number of transition \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__schemata_ga9370cdd31619d49bfb0b18fa6b4e13b7}{count\+All}} () const
+\begin{DoxyCompactList}\small\item\em number of symbols (state occurences) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__schemata_gaf3c11e99698a2cf7ef039632dc5e2b6b}{has\+Weight\+Type}} (std\+::string code) const
+\begin{DoxyCompactList}\small\item\em return wether the weights in transition have the type of the code (code of the letter weight if there is one or \char`\"{}\+U\+N\+K\+N\+O\+W\+N\char`\"{} otherwise). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_ga762b5bbee46468815993417ca9b3d9c6}{weight\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the 0 value in the weight domain in this \mbox{\hyperlink{classWTA}{W\+TA}} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_gabfe48e6398d83c03161b664dadcf8fcd}{weight\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the 1 value in the weight domain in this \mbox{\hyperlink{classWTA}{W\+TA}} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__schemata_gaa6598176fb91c70988bea7cf824ec157}{eval}} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t) const
+\begin{DoxyCompactList}\small\item\em evaluate the weight of the tree t for \mbox{\hyperlink{classWTA}{W\+TA}} in initial state \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} {\bfseries eval} (const \mbox{\hyperlink{classRhythmTree}{Rhythm\+Tree}} \&t, state\+\_\+t s) const
+\item 
+\mbox{\Hypertarget{classWTA_a646bb2048b24358325f8e07c789af82c}\label{classWTA_a646bb2048b24358325f8e07c789af82c}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} {\bfseries max\+\_\+pre} () const
+\item 
+\mbox{\Hypertarget{classWTA_a1a5cead20cba42a111ff7ab5546bc54c}\label{classWTA_a1a5cead20cba42a111ff7ab5546bc54c}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} {\bfseries max\+\_\+post} () const
+\item 
+void \mbox{\hyperlink{group__schemata_gaeb713b8807bc81c6c6519ced5d531e06}{print}} (std\+::ostream \&) const
+\begin{DoxyCompactList}\small\item\em print sizes to output stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{classWTA_a5d8ace9f515a3902d889db560f08f4c5}{initials}}
+\begin{DoxyCompactList}\small\item\em set of initial states \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gae6fb2dbd82ed290528b90ee7bb4b6ccc}{step}} (const std\+::set$<$ state\+\_\+t $>$ \&)
+\begin{DoxyCompactList}\small\item\em step(s) returns the set of states reachable in one transition step by this \mbox{\hyperlink{classWTA}{W\+TA}} from the given state set s. all the states in the set s must be registered. \end{DoxyCompactList}\item 
+std\+::set$<$ state\+\_\+t $>$ \mbox{\hyperlink{group__schemata_gab8ea841b4a1e71ef70d3fda927f0507d}{all\+States}} () const
+\begin{DoxyCompactList}\small\item\em returns the set of all states occuring in wta (in head or body) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWTA_a0d3422d597fbe64d655d9ced77dd7b8f}\label{classWTA_a0d3422d597fbe64d655d9ced77dd7b8f}} 
+std\+::map$<$ state\+\_\+t, \mbox{\hyperlink{classTransitionList}{Transition\+List}} $>$ \mbox{\hyperlink{classWTA_a0d3422d597fbe64d655d9ced77dd7b8f}{\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em transition table \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_a52dd7c5ad9439670d75df10f2dd1e4df}\label{classWTA_a52dd7c5ad9439670d75df10f2dd1e4df}} 
+state\+\_\+t {\bfseries \+\_\+initial}
+\item 
+\mbox{\Hypertarget{classWTA_a76cf3c27412f9d61464a8a82aea97b89}\label{classWTA_a76cf3c27412f9d61464a8a82aea97b89}} 
+size\+\_\+t \mbox{\hyperlink{classWTA_a76cf3c27412f9d61464a8a82aea97b89}{\+\_\+cpt\+\_\+tr}}
+\begin{DoxyCompactList}\small\item\em number of transitions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_a3ed6ca11b3e520485171a0f07deffd21}\label{classWTA_a3ed6ca11b3e520485171a0f07deffd21}} 
+size\+\_\+t \mbox{\hyperlink{classWTA_a3ed6ca11b3e520485171a0f07deffd21}{\+\_\+cpt\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em full size (number of occurences of states) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_ae6d1c616caceb7819d4d23f4a635cddc}\label{classWTA_ae6d1c616caceb7819d4d23f4a635cddc}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{classWTA_ae6d1c616caceb7819d4d23f4a635cddc}{\+\_\+max\+\_\+pre}}
+\begin{DoxyCompactList}\small\item\em used only in descendant classes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWTA_acb19a9da4f88e4b3538b6889cbd49a08}\label{classWTA_acb19a9da4f88e4b3538b6889cbd49a08}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} {\bfseries \+\_\+max\+\_\+post}
+\item 
+\mbox{\Hypertarget{classWTA_ad93a124d289cf4d1e2801fccb01ca8ea}\label{classWTA_ad93a124d289cf4d1e2801fccb01ca8ea}} 
+\mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classWTA_ad93a124d289cf4d1e2801fccb01ca8ea}{\+\_\+seed}}
+\begin{DoxyCompactList}\small\item\em arbitrary (polymorphic) weight value. for generation of weights in same domain with get\+\_\+zero, get\+\_\+one \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWTA_a529e9db519ca17427d0c6076be54f2a4}\label{classWTA_a529e9db519ca17427d0c6076be54f2a4}} 
+class {\bfseries Transition\+List}
+\item 
+\mbox{\Hypertarget{classWTA_a02492d7d852ab9e6e2b47096fb5ccc54}\label{classWTA_a02492d7d852ab9e6e2b47096fb5ccc54}} 
+std\+::ostream \& \mbox{\hyperlink{classWTA_a02492d7d852ab9e6e2b47096fb5ccc54}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classWTA}{W\+TA}} \&)
+\begin{DoxyCompactList}\small\item\em write table content to output stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class of schemas = weighted tree automata = weighted C\+FG. 
+
+state (and non-\/terminals)\+: int
+
+transition table = map state -\/$>$ (transition = state list), weight state\+: head state state list\+: see Transition.\+hpp body states if length $>$ 1 label if length = 1
+
+in other terms transition rules have one of the forms \begin{quote}
+s -\/$>$ (s1,...,sk) w where k $>$ 1, s, s1, ..., sk are states and w weight s -\/$>$ (s1) w where s1 is an leaf label = int encoding \end{quote}
+
+
+leaf label (terminals)\+: number of note + grace notes at (left of) current node \begin{quote}
+0 = continuation 1 = 1 note $\vert$ rest (au + 1 note) 2 = 1 grace notes + 1 note 3 = 2 grace notes + 1 note $>$etc \end{quote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classLabel}{Label}} for the functions managing these labels transition \mbox{\hyperlink{group__table}{Table module}}\+: \begin{quote}
+head state -\/$>$ vector of (state vector, \mbox{\hyperlink{group__weight}{Weight module}}) \end{quote}
+
+\end{DoxySeeAlso}
+weights are concrete weight values embedded in a \mbox{\hyperlink{classWeight}{Weight}} envelop we consider 3 kinds of weights for \mbox{\hyperlink{classWTA}{W\+TA}} serialized in file\+:
+\begin{DoxyItemize}
+\item counting model\+: weight = \# of subresettrees in corpus parsed by rule implemented as \mbox{\hyperlink{classFloatWeight}{Float\+Weight}}
+\item penalty model\+: weight = penalities to sum implemented as \mbox{\hyperlink{classTropicalWeight}{Tropical\+Weight}} e.\+g. inverse of counting model (normalized?)
+\item probabilistic model, fulfilling stochastic condition (sum of weight of transition from a state = 1) implemented as \mbox{\hyperlink{classViterbiWeight}{Viterbi\+Weight}} e.\+g. (\# of subtrees in corpus parsed by rule) / (\# of subtrees matching lhs state) 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWTA_aa4eda8d626af33674c59fef22c8220c1}\label{classWTA_aa4eda8d626af33674c59fef22c8220c1}} 
+\index{WTA@{WTA}!normalize@{normalize}}
+\index{normalize@{normalize}!WTA@{WTA}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily void W\+T\+A\+::normalize (\begin{DoxyParamCaption}\item[{unsigned int}]{flag = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+for all state q, for all transition tr to q (in the transition list T\+L(q) of q). recompute weights to get a probabilistic \mbox{\hyperlink{classWTA}{W\+TA}}. 
+
+with arg = 0, we assume the current \mbox{\hyperlink{classWTA}{W\+TA}} is a penalty model. the probability is then obtained by dividing (\mbox{\hyperlink{group__weight_ga5d63ead0a1d21ee5628c643fca773903}{Weight.\+scalar}}) the inverse of the norm (\mbox{\hyperlink{group__weight_ga68bd9621500f31ba5f0fbe04dc5a00e4}{Weight.\+norm}}) of the weight of the tr by the sum of inverses of norms of transitions in T\+L(q).
+
+with arg = 1, we assume the current \mbox{\hyperlink{classWTA}{W\+TA}} is a counting model. the probability is then obtained by dividing (\mbox{\hyperlink{group__weight_ga5d63ead0a1d21ee5628c643fca773903}{Weight.\+scalar}}) the norm (\mbox{\hyperlink{group__weight_ga68bd9621500f31ba5f0fbe04dc5a00e4}{Weight.\+norm}}) of the weight of the tr by the sum of norms of transitions in T\+L(q). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classWTA_a5d8ace9f515a3902d889db560f08f4c5}\label{classWTA_a5d8ace9f515a3902d889db560f08f4c5}} 
+\index{WTA@{WTA}!initials@{initials}}
+\index{initials@{initials}!WTA@{WTA}}
+\subsubsection{\texorpdfstring{initials}{initials}}
+{\footnotesize\ttfamily std\+::set$<$state\+\_\+t$>$ W\+T\+A\+::initials}
+
+
+
+set of initial states 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000021}{Todo}}]S\+U\+P\+PR \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/W\+T\+A.\+hpp\item 
+src/schemata/W\+T\+A.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+B\+A\+S\+E\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+L\+O\+C\+A\+L\+\_\+31784.\+cpp\item 
+src/schemata/W\+T\+A\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+31784.\+cpp\end{DoxyCompactItemize}

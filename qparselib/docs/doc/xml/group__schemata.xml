@@ -1,0 +1,2530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__schemata" kind="group">
+    <compoundname>schemata</compoundname>
+    <title>Schemata module</title>
+    <innerclass refid="classComboState" prot="public">ComboState</innerclass>
+    <innerclass refid="structComboStateHasher" prot="public">ComboStateHasher</innerclass>
+    <innerclass refid="classComboWTA" prot="public">ComboWTA</innerclass>
+    <innerclass refid="classCountingWTA" prot="public">CountingWTA</innerclass>
+    <innerclass refid="classPreState" prot="public">PreState</innerclass>
+    <innerclass refid="classPreWTA" prot="public">PreWTA</innerclass>
+    <innerclass refid="classAONode" prot="public">AONode</innerclass>
+    <innerclass refid="classANode" prot="public">ANode</innerclass>
+    <innerclass refid="classONode" prot="public">ONode</innerclass>
+    <innerclass refid="structds__transition" prot="public">ds_transition</innerclass>
+    <innerclass refid="classdagSchema" prot="public">dagSchema</innerclass>
+    <innerclass refid="classTransition" prot="public">Transition</innerclass>
+    <innerclass refid="classValueState" prot="public">ValueState</innerclass>
+    <innerclass refid="structValueStateHasher" prot="public">ValueStateHasher</innerclass>
+    <innerclass refid="classValueWTA" prot="public">ValueWTA</innerclass>
+    <innerclass refid="classTransitionList" prot="public">TransitionList</innerclass>
+    <innerclass refid="classWTA" prot="public">WTA</innerclass>
+    <innerclass refid="classDepthMarking" prot="public">DepthMarking</innerclass>
+    <innernamespace refid="namespaceState">State</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__schemata_1ga5f54dbbcb6e551cd56a12c9d9711f82e" prot="public" static="no">
+        <type>std::unordered_map&lt; <ref refid="classComboState" kindref="compound">ComboState</ref>, state_t, <ref refid="structComboStateHasher" kindref="compound">ComboStateHasher</ref> &gt;</type>
+        <definition>typedef std::unordered_map&lt;ComboState, state_t, ComboStateHasher&gt; Combomap</definition>
+        <argsstring></argsstring>
+        <name>Combomap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="116" column="1" bodyfile="src/schemata/ComboWTA.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1ga34fd7500c532fc3af1419927d6102bb4" prot="public" static="no">
+        <type>std::set&lt; std::pair&lt; state_t, <ref refid="classTransition" kindref="compound">Transition</ref> &amp; &gt;, bool(*)(std::pair&lt; state_t, <ref refid="classTransition" kindref="compound">Transition</ref> &amp; &gt;, std::pair&lt; state_t, <ref refid="classTransition" kindref="compound">Transition</ref> &amp; &gt;)&gt;</type>
+        <definition>typedef std::set&lt;std::pair&lt;state_t, Transition&amp;&gt;, bool(*)(std::pair&lt;state_t, Transition&amp;&gt;, std::pair&lt;state_t, Transition&amp;&gt;)&gt; OTransitionTable</definition>
+        <argsstring></argsstring>
+        <name>OTransitionTable</name>
+        <briefdescription>
+<para>transtition table ordered by transition&apos;s ids </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="40" column="1" bodyfile="src/schemata/CountingWTA.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gabd0a920032a3757e491c0f765beb9657" prot="public" static="no">
+        <type>long</type>
+        <definition>typedef long state_t</definition>
+        <argsstring></argsstring>
+        <name>state_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="22" column="1" bodyfile="src/schemata/State.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gacb03191d1927740d0f6f55d525eec2be" prot="public" static="no">
+        <type>std::vector&lt; state_t &gt;::iterator</type>
+        <definition>typedef std::vector&lt;state_t&gt;::iterator Transition_iterator</definition>
+        <argsstring></argsstring>
+        <name>Transition_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="32" column="1" bodyfile="src/schemata/Transition.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gada53f8336fc15b6740d915faaa812651" prot="public" static="no">
+        <type>std::vector&lt; state_t &gt;::const_iterator</type>
+        <definition>typedef std::vector&lt;state_t&gt;::const_iterator Transition_const_iterator</definition>
+        <argsstring></argsstring>
+        <name>Transition_const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="33" column="1" bodyfile="src/schemata/Transition.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1ga881b5f6757c004ef80638824b4057ad3" prot="public" static="no">
+        <type>std::unordered_map&lt; <ref refid="classValueState" kindref="compound">ValueState</ref>, state_t, <ref refid="structValueStateHasher" kindref="compound">ValueStateHasher</ref> &gt;</type>
+        <definition>typedef std::unordered_map&lt;ValueState, state_t, ValueStateHasher&gt; Valuemap</definition>
+        <argsstring></argsstring>
+        <name>Valuemap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="98" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gaf9f065672b84540dc2310cee57062b5d" prot="public" static="no">
+        <type>std::list&lt; <ref refid="classTransition" kindref="compound">Transition</ref> &gt;::iterator</type>
+        <definition>typedef std::list&lt;Transition&gt;::iterator TransitionList_iterator</definition>
+        <argsstring></argsstring>
+        <name>TransitionList_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="45" column="1" bodyfile="src/schemata/WTA.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__schemata_1gac6a3bf271d488fbc785617cb246215f3" prot="public" static="no">
+        <type>std::list&lt; <ref refid="classTransition" kindref="compound">Transition</ref> &gt;::const_iterator</type>
+        <definition>typedef std::list&lt;Transition&gt;::const_iterator TransitionList_const_iterator</definition>
+        <argsstring></argsstring>
+        <name>TransitionList_const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="46" column="1" bodyfile="src/schemata/WTA.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__schemata_1gaacfb8dd676081cbdacc586bd08ef5339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const ComboState &amp;cs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.cpp" line="147" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="147" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5876dc1d6e1700ecd64b79abc371f852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool trcomp</definition>
+        <argsstring>(std::pair&lt; state_t, Transition &amp;&gt; lhs, std::pair&lt; state_t, Transition &amp;&gt; rhs)</argsstring>
+        <name>trcomp</name>
+        <param>
+          <type>std::pair&lt; state_t, <ref refid="classTransition" kindref="compound">Transition</ref> &amp;&gt;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; state_t, <ref refid="classTransition" kindref="compound">Transition</ref> &amp;&gt;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.cpp" line="16" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf522606427f33e50d5ccd45945e140ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const CountingWTA &amp;a)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classCountingWTA" kindref="compound">CountingWTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.cpp" line="147" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="147" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf8b99aabcea05e6f7f8b31da07ee3790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const PreState &amp;ps)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.cpp" line="70" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="70" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9bf0c703002e360545ebd943f933fb18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const PreWTA &amp;a)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPreWTA" kindref="compound">PreWTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.cpp" line="377" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="377" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf1cd2ec3c46754e845d9083fcca78307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Transition &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTransition" kindref="compound">Transition</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.cpp" line="199" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="199" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3e1e0cf974d650010f69166d22e7d0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const ValueState &amp;vs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.cpp" line="61" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga83eaab443b166582ff8beee576b4fd51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gcd</definition>
+        <argsstring>(size_t a, size_t b)</argsstring>
+        <name>gcd</name>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="273" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga21cc98547ba237fc676751c60c220415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t lcm</definition>
+        <argsstring>(size_t a, size_t b)</argsstring>
+        <name>lcm</name>
+        <param>
+          <type>size_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="281" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab750ab8b8fe56baba66c96e38398b632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const WTA &amp;a)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.cpp" line="705" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="705" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gadb95b4bb9322c3e2aba43ef1663a035e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(const InputSegment *s, IntervalHeap *)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalHeap" kindref="compound">IntervalHeap</ref> *</type>
+          <defname>ih</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="53" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaffac6cd8adcfb6bbb0cd9fc601d9a2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(state_t, IntervalTree *, pre_t rp=0, pre_t rr=0)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classIntervalTree" kindref="compound">IntervalTree</ref> *</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rp</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rr</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="55" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad80378e34fdc145bd7f0dac17c306e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::ComboState</definition>
+        <argsstring>(const ComboState &amp;, pre_t rp=0, pre_t rr=0)</argsstring>
+        <name>ComboState</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <defname>cs</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rp</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>rr</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="58" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gac7c0709a18e5caa98554ab0deedc12a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboState::~ComboState</definition>
+        <argsstring>()</argsstring>
+        <name>~ComboState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="60" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga946acbddc843e4ade0b1f47bca5b0929" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::compatible</definition>
+        <argsstring>(label_t label) const</argsstring>
+        <name>compatible</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="77" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="67" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga66c814d1c1c9f1a90c5fc3a1a9d89395" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::operator==</definition>
+        <argsstring>(const ComboState &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="79" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="97" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga505e9ff93681bbfe5632a15708facb63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ComboState::operator&lt;</definition>
+        <argsstring>(const ComboState &amp;s) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>lexicographic comparison on hash value (array[5]) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="82" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="114" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gae3bbd0756c7a72efc67e5085fc8be63b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t ComboWTA::addComboState</definition>
+        <argsstring>(const ComboState &amp;cs, bool initial=false)</argsstring>
+        <name>addComboState</name>
+        <param>
+          <type>const <ref refid="classComboState" kindref="compound">ComboState</ref> &amp;</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>initial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>returns the <ref refid="classComboWTA" kindref="compound">ComboWTA</ref> state s associated to the <ref refid="classComboState" kindref="compound">ComboState</ref> cs if there exists one. otherwise: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>a new <ref refid="classComboWTA" kindref="compound">ComboWTA</ref> state s is created,</para>
+</listitem><listitem><para>s is associated to cs,</para>
+</listitem><listitem><para>s is added to the table</para>
+</listitem><listitem><para>the <ref refid="classComboWTA" kindref="compound">ComboWTA</ref> transitions with head s are computed and added to the table</para>
+</listitem><listitem><para>s is returned <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given <ref refid="classComboState" kindref="compound">ComboState</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag: the state constructed is added to the initial state set of the <ref refid="classComboWTA" kindref="compound">ComboWTA</ref> if initial=true </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="238" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="159" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga2a6c3a5867fefdac97470fd083aaa2dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>state_t</type>
+        <definition>state_t ComboWTA::initial</definition>
+        <argsstring>(pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>initial</name>
+        <reimplements refid="classWTA_1ae6b10f70925f14f36b839e5d8657bc5e">initial</reimplements>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>state representing the whole segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points of the previous segment aligned to the left </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>post</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points of the current segment aligned to the right (i.e. to the left of the next segment). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="196" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="452" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga4c589573251ec74dbe6a3c9176c39bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComboWTA::ComboWTA</definition>
+        <argsstring>(const InputSegment *, size_t bloc, const WTA &amp;, pre_t pre=0)</argsstring>
+        <name>ComboWTA</name>
+        <param>
+          <type>const <ref refid="classInputSegment" kindref="compound">InputSegment</ref> *</type>
+          <defname>seg</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bloc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>schema</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>construction from input segment and <ref refid="classWTA" kindref="compound">WTA</ref> (base schema) with given max pre value and bloc number (in input segment, for alignement). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ComboWTA.hpp" line="185" column="1" bodyfile="src/schemata/ComboWTA.cpp" bodystart="460" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad46a7f821d01aed3719a585f66130e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountingWTA::CountingWTA</definition>
+        <argsstring>()</argsstring>
+        <name>CountingWTA</name>
+        <briefdescription>
+<para>default initializer for cython </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="54" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga590bb9036b59d5cf81bbbedb18d19093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountingWTA::CountingWTA</definition>
+        <argsstring>(const WTA &amp;a)</argsstring>
+        <name>CountingWTA</name>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>copy base <ref refid="classWTA" kindref="compound">WTA</ref> reset weight values to counting weights (unit vectors) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="57" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="27" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5c94f5191975a32e951e7d39ac606dc0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CountingWTA::resetCounting</definition>
+        <argsstring>(size_t dim)</argsstring>
+        <name>resetCounting</name>
+        <param>
+          <type>size_t</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>the weight of this <ref refid="classWTA" kindref="compound">WTA</ref> are replaced by &quot;CountingWeight&quot; unit vector of length dim (one unit per transition) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="75" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="53" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga2665883ffe41001dd7c2568bc9bef02f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWTA::eval</definition>
+        <argsstring>(const RhythmTree &amp;t) const</argsstring>
+        <name>eval</name>
+        <reimplements refid="group__schemata_1gaa6598176fb91c70988bea7cf824ec157">eval</reimplements>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>special version of eval for <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> with feedback in case of fail </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="64" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="76" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3a6ae649f73205b3390f82c3f996f6a3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWTA::evalCountingVerbose</definition>
+        <argsstring>(const RhythmTree &amp;, state_t, Position) const</argsstring>
+        <name>evalCountingVerbose</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classPosition" kindref="compound">Position</ref></type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="71" column="1" bodyfile="src/schemata/CountingWTA.cpp" bodystart="94" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad02325f302e819ab93c8a501674b4bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PreState::PreState</definition>
+        <argsstring>()</argsstring>
+        <name>PreState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="40" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gae43261a1dcc43a298836fbe62912f8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PreState::PreState</definition>
+        <argsstring>(state_t, pre_t pre=0, pre_t post=0)</argsstring>
+        <name>PreState</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="42" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gabc0c5bcc094646426f0a90313808907b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PreState::PreState</definition>
+        <argsstring>(const PreState &amp;)</argsstring>
+        <name>PreState</name>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <defname>ps</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000016"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="45" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga1ce89331499174e5de23d4d318dcb5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PreState::~PreState</definition>
+        <argsstring>()</argsstring>
+        <name>~PreState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="47" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5f379ef9372d48f4992a6c4c948b8a5b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PreState::rehash</definition>
+        <argsstring>()</argsstring>
+        <name>rehash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="81" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad8b20db3eff6b527dbbc19bb92f2649d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PreState::operator==</definition>
+        <argsstring>(const PreState &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="58" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa39a99008e7809c864be28f89c5ef79b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PreState::operator&lt;</definition>
+        <argsstring>(const PreState &amp;s) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>lexicographic comparison on hash value (array[5]) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="61" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa60c0f6f8e237bad468bd8a48c3263f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t PreState::serialize</definition>
+        <argsstring>()</argsstring>
+        <name>serialize</name>
+        <briefdescription>
+<para>return a state value unically associated to this <ref refid="classPreState" kindref="compound">PreState</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="66" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab947b64699704a087db2eda3eb47575d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PreState::compatible</definition>
+        <argsstring>(label_t label) const</argsstring>
+        <name>compatible</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="68" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa509247277fd021460056bfe6484a5b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PreState::compatible_post</definition>
+        <argsstring>(state_t, const AlignedInterval *)</argsstring>
+        <name>compatible_post</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classAlignedInterval" kindref="compound">AlignedInterval</ref> *</type>
+          <defname>al</defname>
+        </param>
+        <briefdescription>
+<para>compatible(s, al) the serialized state value s is compatible with the content of the alignment al (sub-segment of initial input corr. to an interval) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="74" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6287aa82de69987b65518b4997112ac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PreWTA::PreWTA</definition>
+        <argsstring>(const WTA &amp;)</argsstring>
+        <name>PreWTA</name>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>schema</defname>
+        </param>
+        <briefdescription>
+<para>construction from <ref refid="classWTA" kindref="compound">WTA</ref> (base schema) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="137" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="108" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaab30a1faaa381ecfabd705a8c12d179b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t PreWTA::pre</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>pre</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>access to original components of new <ref refid="classPreWTA" kindref="compound">PreWTA</ref> states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="143" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga2c8c24b19312ad6436eaf76e4506e02f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+        <definition>pre_t PreWTA::post</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>post</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="144" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3e74404d5f453b8eed85254791724ffe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t PreWTA::state</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>state</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="145" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="149" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf528dddbe05e879324558a4518738b2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t PreWTA::addPreState</definition>
+        <argsstring>(const PreState &amp;)</argsstring>
+        <name>addPreState</name>
+        <param>
+          <type>const <ref refid="classPreState" kindref="compound">PreState</ref> &amp;</type>
+          <defname>ps</defname>
+        </param>
+        <briefdescription>
+<para>addPreState(ps) returns the <ref refid="classPreWTA" kindref="compound">PreWTA</ref> state s associated to the <ref refid="classPreState" kindref="compound">PreState</ref> ps if there exists one. otherwise: a new <ref refid="classPreWTA" kindref="compound">PreWTA</ref> state s is created, s is associated to cs, s is added to the table the <ref refid="classPreWTA" kindref="compound">PreWTA</ref> transitions with head s are computed and added to the table s is returned moreover, the state is added to the initial state set of the <ref refid="classPreWTA" kindref="compound">PreWTA</ref> if the state component of ps is initial. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="179" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="159" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf47213e6243f48f06681089e03fa08ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>state_t</type>
+        <definition>state_t PreWTA::initial</definition>
+        <argsstring>(pre_t pre=0, pre_t post=0) const</argsstring>
+        <name>initial</name>
+        <reimplements refid="classWTA_1ae6b10f70925f14f36b839e5d8657bc5e">initial</reimplements>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>initial(pre, port) returns state representing the whole segment, with pre points of the previous segment aligned to the left and post points of the current segment aligned to the right (i.e. to the left of the next segment) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/PreWTA.hpp" line="151" column="1" bodyfile="src/schemata/PreWTA.cpp" bodystart="369" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa5b5cf5f92a0c443d4c1a1e152f9292c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isMeta</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isMeta</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="38" column="1" bodyfile="src/schemata/State.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga1722ba39591c8a25ed5ee91e9e91232a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isWTA</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isWTA</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="34" column="1" bodyfile="src/schemata/State.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gabd744185c22c686d1c95d74523a007b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool State::isLabel</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>isLabel</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="36" column="1" bodyfile="src/schemata/State.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga0ffeaad4a7482bc302dce44a23a85a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t State::MetaState</definition>
+        <argsstring>(size_t barnb)</argsstring>
+        <name>MetaState</name>
+        <param>
+          <type>size_t</type>
+          <declname>barnb</declname>
+        </param>
+        <briefdescription>
+<para>Meta state corresponding to bar nb barnb. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/State.hpp" line="41" column="1" bodyfile="src/schemata/State.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga99612639925cfc0a63a173ea167a6d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ds_transition::rename</definition>
+        <argsstring>(unsigned int s, unsigned int u)</argsstring>
+        <name>rename</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="116" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa6bf3664ce3ec4ceddc6fc0546e7af84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ds_transition::shift</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>shift</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>increase source and target state by n </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="119" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga811afd94c0a2afda729115e1afade496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ds_transition::shift0</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>shift0</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>increase source and target state by n, if they are not 0 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="122" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga1762a1cf61c23100f58a69f092f94e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dagSchema::dagSchema</definition>
+        <argsstring>(const ANode &amp;)</argsstring>
+        <name>dagSchema</name>
+        <param>
+          <type>const <ref refid="classANode" kindref="compound">ANode</ref> &amp;</type>
+          <defname>an</defname>
+        </param>
+        <briefdescription>
+<para>translation of AND-OR alternating nested lists into dag-schemas </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="137" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="45" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga7f1258e692e42b123b039e9aa1c256b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dagSchema::dagSchema</definition>
+        <argsstring>(const ONode &amp;)</argsstring>
+        <name>dagSchema</name>
+        <param>
+          <type>const <ref refid="classONode" kindref="compound">ONode</ref> &amp;</type>
+          <defname>on</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="138" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="74" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga0dc3e9cf7edbc289976639574ca23d20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dagSchema::add</definition>
+        <argsstring>(const ds_transition &amp;dst)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="structds__transition" kindref="compound">ds_transition</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>for testing. do not use </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="151" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5d904f7412e4bd1263f5369115f910d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dagSchema::rename</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>rename</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>rename state i into state j </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="162" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga942b88d2618ccf43acea8b95cd34d96d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dagSchema::shift</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>shift</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>rename every state s into s + n the result is not a dag-schema </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="166" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="124" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaeb6128c3a43d7b6fa5996e8830b4860a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dagSchema::shift0</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>shift0</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>rename every state s into s + n except 0 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/SubdivisionSchema.hpp" line="169" column="1" bodyfile="src/schemata/SubdivisionSchema.cpp" bodystart="133" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga73b44b2338b11807f77b620a3e810f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>()</argsstring>
+        <name>Transition</name>
+        <briefdescription>
+<para>transition with unknown weight and empty body. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="61" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6e08e637325ab62ee6bfbdb99c8f8a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(const Weight &amp;)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type>const <ref refid="classWeight" kindref="compound">Weight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(w)</ref> creates a transition with weight a copy of w and empty body. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the letter weight in the envelop w is cloned </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="70" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga09dca130387fcf6ead3f80cc523a59de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(LetterWeight *)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <defname>lw</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(lw)</ref> creates a transition with weight a wrapper of the letter lw (must be non null) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="74" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad126f7c68acac0315b1782decaf54d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(std::vector&lt; state_t &gt;, const Weight &amp;)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type>std::vector&lt; state_t &gt;</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWeight" kindref="compound">Weight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(v, w)</ref> creates a transition with weight a copy of w and body a copy of the vector v. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the letter weight in the envelop w is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="80" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga50836c0d84b3968b9ceb968521418e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(std::vector&lt; state_t &gt;, LetterWeight *)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type>std::vector&lt; state_t &gt;</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <defname>lw</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(v, lw)</ref> creates a transition with weight a wrapper of the letter lw (must be non null) and body a copy of the vector v. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="85" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="52" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3c71fb93c73a755408cc963975d4ffa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(state_t, const Weight &amp;)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWeight" kindref="compound">Weight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(s, w)</ref> creates a transition with weight a copy of w and body (of size 1) the singleton (s) (terminal symbol). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the letter weight in the envelop w is cloned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="91" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga458b953211e3b5de292c8c1535ff7281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::Transition</definition>
+        <argsstring>(state_t, LetterWeight *)</argsstring>
+        <name>Transition</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <defname>lw</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTransition" kindref="compound">Transition(s, lw)</ref> creates a transition with weight a wrapper of the letter lw (must be non null) and body (of size 1) the singleton (s) (terminal symbol). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="96" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="71" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab66e8623f23c71cd4f07c69596427bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transition::~Transition</definition>
+        <argsstring>()</argsstring>
+        <name>~Transition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="100" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaeb18d5879ecb7757b5e783866c3e6084" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Transition::inner</definition>
+        <argsstring>() const</argsstring>
+        <name>inner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="102" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga1191490a05cc7d04a9933e5d84ca9fcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Transition::terminal</definition>
+        <argsstring>() const</argsstring>
+        <name>terminal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="104" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="95" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga97dce48d13fac75a4a444a68aae07608" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t Transition::label</definition>
+        <argsstring>() const</argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this transition must be terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="109" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6d7e864cf11645e39e3999516c2438f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Transition::scalar</definition>
+        <argsstring>(double)</argsstring>
+        <name>scalar</name>
+        <param>
+          <type>double</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+<para>modify weight of transition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="115" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga00585e8726be305c0a0d5b9af9c585b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Transition::invert</definition>
+        <argsstring>()</argsstring>
+        <name>invert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="116" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga743ca128dc509e129a49d66500a0f151" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Transition::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>size of body. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="126" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad6ae5de36df4526b83bf7af59d178066" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Transition::arity</definition>
+        <argsstring>() const</argsstring>
+        <name>arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="128" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9e2e243bfa147bafd947f2cffd1da3ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t Transition::at</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>at</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>at(i) returns the ith state in the body. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an index of the body. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="120" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="136" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaacc3c061a48c15ce02b2ead05f9bb2bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Transition::push</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>push</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>add given state at the end of the body of this transition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="123" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab94ff39ee66515e72c1c52ba855508c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Transition::member</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>member</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>whether the given state belongs to the body of this transition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="137" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="150" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9719bf4a7c1e1ec8e0e1fceed8da0a11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Transition::allin</definition>
+        <argsstring>(const std::set&lt; state_t &gt; &amp;) const</argsstring>
+        <name>allin</name>
+        <param>
+          <type>const std::set&lt; state_t &gt; &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+<para>every state of the body is in the given set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="140" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="168" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6bb49bac8dc5d5dbfb955b9eaea29276" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Transition::nonein</definition>
+        <argsstring>(const std::set&lt; state_t &gt; &amp;) const</argsstring>
+        <name>nonein</name>
+        <param>
+          <type>const std::set&lt; state_t &gt; &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+<para>no state of the body is in the given set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="143" column="1" bodyfile="src/schemata/Transition.cpp" bodystart="183" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga78ce9830cde7d7875888ab5b420beecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueState::ValueState</definition>
+        <argsstring>(state_t, DurationTree *)</argsstring>
+        <name>ValueState</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="47" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6f7e57b6744c6a6c729d6b65068f52eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueState::~ValueState</definition>
+        <argsstring>()</argsstring>
+        <name>~ValueState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="49" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa64b0072478e5475befdb4b0212d8e2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueState::compatible</definition>
+        <argsstring>(label_t label) const</argsstring>
+        <name>compatible</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="59" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="36" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga8e4a967143877229169d6c28842185c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ValueState::operator==</definition>
+        <argsstring>(const ValueState &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="57" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga074f48ad3b6e8f357ca5bf5dce242b18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t ValueWTA::addValueState</definition>
+        <argsstring>(const ValueState &amp;, bool initial=false)</argsstring>
+        <name>addValueState</name>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <defname>vs</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>initial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>returns the <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> state associated to the <ref refid="classValueState" kindref="compound">ValueState</ref> vs if there exists one. otherwise: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>a new <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> state_t s is created,</para>
+</listitem><listitem><para>s is associated to vs,</para>
+</listitem><listitem><para>s is added to the transition table</para>
+</listitem><listitem><para>the <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> transitions with head s are computed and added to the table</para>
+</listitem><listitem><para>s is returned </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="149" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="68" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab35a1ee1d6e2b2b5d82b930b4d70340f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueWTA::ValueWTA</definition>
+        <argsstring>(const DurationList &amp;, const WTA &amp;)</argsstring>
+        <name>ValueWTA</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>dl</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>schema</defname>
+        </param>
+        <briefdescription>
+<para>construction from given initial list and <ref refid="classWTA" kindref="compound">WTA</ref> (base schema) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="116" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="169" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaefce3b545139b29c4391f2b5e4f97efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TransitionList::~TransitionList</definition>
+        <argsstring>()</argsstring>
+        <name>~TransitionList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="56" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaba83dbc74a223a80ad7f8776847bd6c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransitionList::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>zero transition </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>an empty transition </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="60" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa719dbdab17047360e889910795a07f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TransitionList::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>number of transitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of transitions in this <ref refid="classWTA" kindref="compound">WTA</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="64" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gadc77b77a90197483168626230fe4dbf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransitionList::add</definition>
+        <argsstring>(const Transition &amp;)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="classTransition" kindref="compound">Transition</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="71" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga2f4181b350f6dec7054072fcf2095834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransitionList::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="80" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad9709d189b3748d2285f2a3592bed2da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransitionList::remove</definition>
+        <argsstring>(TransitionList_iterator)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>TransitionList_iterator</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="73" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3c5b906f3ce72168effc16b06ed1ef6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransitionList::remove</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>remove all transitions of length &gt; 1 in the list containing the given state do not remove length 1 transitions to terminal symbols </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="78" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="65" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5636da911ebbe8772c5444172d56800d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTA::WTA</definition>
+        <argsstring>()</argsstring>
+        <name>WTA</name>
+        <briefdescription>
+<para>nullary constructor for cython </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="158" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="85" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6eeb789b8c8aa8404f611a6fed61faca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTA::WTA</definition>
+        <argsstring>(Weight seed, pre_t pre=0, pre_t post=0)</argsstring>
+        <name>WTA</name>
+        <param>
+          <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>pre</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__general_1ga092fe8b972dfa977c2a0886720a7731e" kindref="member">pre_t</ref></type>
+          <declname>post</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>empty automaton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="161" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="90" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaacdee6c2292baea7f712c84a5e205432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WTA::~WTA</definition>
+        <argsstring>()</argsstring>
+        <name>~WTA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="163" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="102" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab201fee50d73843159cbef5f453838f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>number of states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="169" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gada977ff7270308f29852b59f38965bde" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTA::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="171" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga4459bd6654cbe35b39df9cade16c6d58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTA::isRegistered</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>isRegistered</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>the state is present in the automaton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="174" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="129" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga88d07a1e47cc3ee537234861b7336dd6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTA::isInitial</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>isInitial</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>the state is an initial state </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000017"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="178" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga924a1c533383a7185b9d466b59c5a495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTransitionList" kindref="compound">TransitionList</ref> &amp;</type>
+        <definition>TransitionList &amp; WTA::add</definition>
+        <argsstring>(state_t, bool initial=false)</argsstring>
+        <name>add</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>initial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>add(s, i) register state s if s was already registered, return a reference to its transition list. otherwise, create state s with an empty transition list and returns a reference to it. moreover s is set as initial if i = true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000018"><xreftitle>Todo</xreftitle><xrefdescription><para>suppr. flag initial </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="192" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="144" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga01de1e03d09518b38ab69a2075276ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTransitionList" kindref="compound">TransitionList</ref> &amp;</type>
+        <definition>TransitionList &amp; WTA::add</definition>
+        <argsstring>(state_t, const Transition &amp;, bool initial=false)</argsstring>
+        <name>add</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classTransition" kindref="compound">Transition</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>initial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>add(s, t) add a transition with head s and with body/weight described in t if s was not registered, it is registered the transition t is added to the transition list of s and a reference to this transition list is returned moreover s is set as initial if i = true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000019"><xreftitle>Todo</xreftitle><xrefdescription><para>suppr. flag initial </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="200" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="164" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3d8d24249e26ecc8bbdaf672c6e8d3cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::remove</definition>
+        <argsstring>(state_t)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>remove the entry for given state s in the table of the table i.e. all transitions targeted to s, and all the transitions with s in their body. if s was in the initial set, it is also removed from this set. s must be registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="207" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="174" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga23c3f9884c683e4bbab323208e08c672" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TransitionList_const_iterator</type>
+        <definition>TransitionList_const_iterator WTA::begin</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>begin</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>begin(s) returns an iterator pointing to the first transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="212" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="217" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf5075f5a210343d6da208f4c80421cb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TransitionList_const_iterator</type>
+        <definition>TransitionList_const_iterator WTA::end</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>end</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>begin(s) returns an iterator pointing to the past-the-end transition with head state s. s must be registered. not for modifying transition list of s. use add(...) methods for this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="217" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="226" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga0f6551b20a213eb88c6a7e822ebc5915" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::countStates</definition>
+        <argsstring>() const</argsstring>
+        <name>countStates</name>
+        <briefdescription>
+<para>number of states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="288" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga8acbd7562a6f69e7634d6b9f9e341e4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::countTransitions</definition>
+        <argsstring>() const</argsstring>
+        <name>countTransitions</name>
+        <briefdescription>
+<para>number of transition </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="291" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9370cdd31619d49bfb0b18fa6b4e13b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::countAll</definition>
+        <argsstring>() const</argsstring>
+        <name>countAll</name>
+        <briefdescription>
+<para>number of symbols (state occurences) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="294" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga28c9a7e35d4d516ef0f9967e773305f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::oftarget</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>oftarget</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>oftarget(s) return the number of transitions of head state s. s must be registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="221" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="254" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga625d9da502c5cd554797ebe9ee9023c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t WTA::resolution</definition>
+        <argsstring>() const</argsstring>
+        <name>resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="185" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="289" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gae6fb2dbd82ed290528b90ee7bb4b6ccc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; state_t &gt;</type>
+        <definition>std::set&lt; state_t &gt; WTA::step</definition>
+        <argsstring>(const std::set&lt; state_t &gt; &amp;)</argsstring>
+        <name>step</name>
+        <param>
+          <type>const std::set&lt; state_t &gt; &amp;</type>
+          <defname>sin</defname>
+        </param>
+        <briefdescription>
+<para>step(s) returns the set of states reachable in one transition step by this <ref refid="classWTA" kindref="compound">WTA</ref> from the given state set s. all the states in the set s must be registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="351" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="333" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gab8ea841b4a1e71ef70d3fda927f0507d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; state_t &gt;</type>
+        <definition>set&lt; state_t &gt; WTA::allStates</definition>
+        <argsstring>() const</argsstring>
+        <name>allStates</name>
+        <briefdescription>
+<para>returns the set of all states occuring in wta (in head or body) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="354" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="360" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaea41b32c37bbe955d0359039d7731fea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; state_t &gt;</type>
+        <definition>set&lt; state_t &gt; WTA::emptyStates</definition>
+        <argsstring>() const</argsstring>
+        <name>emptyStates</name>
+        <briefdescription>
+<para>returns the set of all non-inhabited (zero weight) states in wta </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="227" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="387" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga9ef4193ae949ae7c9e52d30720e37202" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTA::isClean</definition>
+        <argsstring>() const</argsstring>
+        <name>isClean</name>
+        <briefdescription>
+<para>the <ref refid="classWTA" kindref="compound">WTA</ref> has no empty states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="224" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="423" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaec169477bdc2cf883916c38dbc18e577" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::clean</definition>
+        <argsstring>()</argsstring>
+        <name>clean</name>
+        <briefdescription>
+<para>remove states not inhabited and transitions containing these states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="230" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="431" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga91e272f4f9463149cd296f48e65a4185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::abstract</definition>
+        <argsstring>(bool flag=false)</argsstring>
+        <name>abstract</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>abstract the leaf label values in domain [0..MAX_GRACE] every value &gt; MAX_GRACE is casted to MAX_GRACE the weights are summed accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para>leaf labels in domain of <ref refid="classLabel" kindref="compound">Label</ref> (not <ref refid="classSerialLabel" kindref="compound">SerialLabel</ref>). <xrefsect id="todo_1_todo000020"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR unused </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="285" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="445" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga8dfef6b591f952f0fea9dae1f5e475c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::CountingtoStochastic</definition>
+        <argsstring>()</argsstring>
+        <name>CountingtoStochastic</name>
+        <briefdescription>
+<para>cast weights in all transitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this <ref refid="classWTA" kindref="compound">WTA</ref> must have <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;FloatWeight&quot;. this <ref refid="classWTA" kindref="compound">WTA</ref> is casted into <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;ViterbiWeight&quot; divide by sum for target state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="255" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="506" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga5f3a0d868bf26b504cccc53b4d55e09a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::CountingtoPenalty</definition>
+        <argsstring>()</argsstring>
+        <name>CountingtoPenalty</name>
+        <briefdescription>
+<para>cast weights in all transitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this <ref refid="classWTA" kindref="compound">WTA</ref> must have <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;FloatWeight&quot;. this <ref refid="classWTA" kindref="compound">WTA</ref> is casted into <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;TropicalWeight&quot; composition of CountingtoStochastic and StochastictoPenalty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="276" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="557" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaff1196a45ffd1400bc4004e27b167218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::PenaltytoCounting</definition>
+        <argsstring>()</argsstring>
+        <name>PenaltytoCounting</name>
+        <briefdescription>
+<para>cast weights in all transitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this <ref refid="classWTA" kindref="compound">WTA</ref> must have <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;TropicalWeight&quot;. this <ref refid="classWTA" kindref="compound">WTA</ref> is casted into <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;FloatWeight&quot; inverse </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="262" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="564" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga0bddc6750b18023be6976bd5cd46a2f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::StochastictoPenalty</definition>
+        <argsstring>()</argsstring>
+        <name>StochastictoPenalty</name>
+        <briefdescription>
+<para>cast weights in all transitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this <ref refid="classWTA" kindref="compound">WTA</ref> must have <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;ViterbiWeight&quot;. this <ref refid="classWTA" kindref="compound">WTA</ref> is casted into <ref refid="classWeight" kindref="compound">Weight</ref> Type &quot;TropicalWeight&quot; -ln </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="269" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="599" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf3c11e99698a2cf7ef039632dc5e2b6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WTA::hasWeightType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasWeightType</name>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>return wether the weights in transition have the type of the code (code of the letter weight if there is one or &quot;UNKNOWN&quot; otherwise). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="298" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="640" bodyend="643"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga762b5bbee46468815993417ca9b3d9c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight WTA::weight_zero</definition>
+        <argsstring>() const</argsstring>
+        <name>weight_zero</name>
+        <briefdescription>
+<para>return the 0 value in the weight domain in this <ref refid="classWTA" kindref="compound">WTA</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="301" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="646" bodyend="650"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gabfe48e6398d83c03161b664dadcf8fcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight WTA::weight_one</definition>
+        <argsstring>() const</argsstring>
+        <name>weight_one</name>
+        <briefdescription>
+<para>return the 1 value in the weight domain in this <ref refid="classWTA" kindref="compound">WTA</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="304" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="653" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaa6598176fb91c70988bea7cf824ec157" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight WTA::eval</definition>
+        <argsstring>(const RhythmTree &amp;t) const</argsstring>
+        <name>eval</name>
+        <reimplementedby refid="group__schemata_1ga2665883ffe41001dd7c2568bc9bef02f">eval</reimplementedby>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>evaluate the weight of the tree t for <ref refid="classWTA" kindref="compound">WTA</ref> in initial state </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="307" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="660" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gac842f196f85e3c3b079c7c0992173e46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight WTA::eval</definition>
+        <argsstring>(const RhythmTree &amp;t, state_t s) const</argsstring>
+        <name>eval</name>
+        <param>
+          <type>const <ref refid="classRhythmTree" kindref="compound">RhythmTree</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>state_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="310" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="667" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaeb713b8807bc81c6c6519ced5d531e06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WTA::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+<para>print sizes to output stream </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="324" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="722" bodyend="729"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga6b9809d53e619eb95d9ad9e668ce2b56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthMarking::mark_rec</definition>
+        <argsstring>(state_t, int, const WTA &amp;)</argsstring>
+        <name>mark_rec</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>d</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>wta</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="397" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="732" bodyend="751"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaf0a0a9f458a39032b2c653a99f609935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DepthMarking::DepthMarking</definition>
+        <argsstring>(const WTA &amp;)</argsstring>
+        <name>DepthMarking</name>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>wta</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="371" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="754" bodyend="757"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gaaa84e1d149651938af82e47b91888017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DepthMarking::depth</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>depth</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>return depth mark if given state marked return -1 otherwise </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="377" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="760" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1gad5f3fa885bb5d2be624a26e9aa50dd0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DepthMarking::multiple</definition>
+        <argsstring>(state_t) const</argsstring>
+        <name>multiple</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>return true if the given state can occur at multiple depths return false otherwise or if state not marked </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="381" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="776" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="group__schemata_1ga3486fcb9921f3c018b931e088a53df7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DepthMarking::mark</definition>
+        <argsstring>(state_t, int)</argsstring>
+        <name>mark</name>
+        <param>
+          <type>state_t</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+<para>mark state using given depth and return new mark value can be the given depth or a greater depth with which the state had been already marked. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/WTA.hpp" line="386" column="1" bodyfile="src/schemata/WTA.cpp" bodystart="791" bodyend="835"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__schemata_1ga170bee814ca8089ab27a574b1f47281c" prot="protected" static="yes" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* CountingWTA::_trcomp_ptr)(std::pair&lt; state_t, Transition &amp;&gt;, std::pair&lt; state_t, Transition &amp;&gt;)</definition>
+        <argsstring>)(std::pair&lt; state_t, Transition &amp;&gt;, std::pair&lt; state_t, Transition &amp;&gt;)</argsstring>
+        <name>_trcomp_ptr</name>
+        <initializer>= &amp;trcomp</initializer>
+        <briefdescription>
+<para>pointer to comparison functionå </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/CountingWTA.hpp" line="82" column="1" bodyfile="src/schemata/CountingWTA.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__schemata_1ga4b6105765ff8f1f55caf70521664de8f" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Transition::_cpt</definition>
+        <argsstring></argsstring>
+        <name>_cpt</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>counter for the creation of transition&apos;s ids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/Transition.hpp" line="160" column="1" bodyfile="src/schemata/Transition.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <computeroutput>schemata</computeroutput> module contains classes of weighted tree automata used for parsing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

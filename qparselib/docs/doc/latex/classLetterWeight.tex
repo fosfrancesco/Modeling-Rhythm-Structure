@@ -1,0 +1,118 @@
+\hypertarget{classLetterWeight}{}\section{Letter\+Weight Class Reference}
+\label{classLetterWeight}\index{LetterWeight@{LetterWeight}}
+
+
+abstract class for concrete weight values. Every concrete weight domain must be a derived class of \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}.  
+
+
+
+
+{\ttfamily \#include $<$Weight.\+hpp$>$}
+
+Inheritance diagram for Letter\+Weight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classLetterWeight}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLetterWeight_a2f9af55d38b8e7fd73af6cbbcb50971c}{Letter\+Weight}} ()
+\item 
+\mbox{\Hypertarget{classLetterWeight_adaab28cd9be9b7ef9164bf3b33c58815}\label{classLetterWeight_adaab28cd9be9b7ef9164bf3b33c58815}} 
+{\bfseries Letter\+Weight} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \&)
+\item 
+\mbox{\Hypertarget{classLetterWeight_a953daf9c03224b05f6e4deae78100e53}\label{classLetterWeight_a953daf9c03224b05f6e4deae78100e53}} 
+virtual \mbox{\hyperlink{classLetterWeight_a953daf9c03224b05f6e4deae78100e53}{$\sim$\+Letter\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor to ensure correct destruction of derived objects through a pointer to base \mbox{\hyperlink{classWeight}{Weight}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLetterWeight_a5f8b1c03c2f08be2728ee7638b5cee3d}\label{classLetterWeight_a5f8b1c03c2f08be2728ee7638b5cee3d}} 
+\mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \&)
+\item 
+\mbox{\Hypertarget{classLetterWeight_a23cdcf32e0f0782dbb33b2a65cf9de77}\label{classLetterWeight_a23cdcf32e0f0782dbb33b2a65cf9de77}} 
+virtual \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$ {\bfseries clone} () const =0
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classLetterWeight_af1f898e0845f59299440fc50a58fd2f1}{make}} (double v) const =0
+\begin{DoxyCompactList}\small\item\em factory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLetterWeight_a5caa3123e7b1ac3369c30e33f511a554}\label{classLetterWeight_a5caa3123e7b1ac3369c30e33f511a554}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classLetterWeight_a5caa3123e7b1ac3369c30e33f511a554}{get\+\_\+zero}} () const =0
+\begin{DoxyCompactList}\small\item\em return the neutral element for add (absorbing element for mult) wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLetterWeight_a4660750188a19b63b24569b6a584a5ca}\label{classLetterWeight_a4660750188a19b63b24569b6a584a5ca}} 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{classLetterWeight_a4660750188a19b63b24569b6a584a5ca}{get\+\_\+one}} () const =0
+\begin{DoxyCompactList}\small\item\em return the neutral element for mult wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLetterWeight_a6ec9398f9fc437e222207644056fb4de}\label{classLetterWeight_a6ec9398f9fc437e222207644056fb4de}} 
+virtual double {\bfseries norm} () const =0
+\item 
+\mbox{\Hypertarget{classLetterWeight_aef0e684851ba69336a3e86c93c5a6a58}\label{classLetterWeight_aef0e684851ba69336a3e86c93c5a6a58}} 
+virtual void {\bfseries scalar} (double)=0
+\item 
+\mbox{\Hypertarget{classLetterWeight_a76a013deb82c8c1511cb6a68e5a06218}\label{classLetterWeight_a76a013deb82c8c1511cb6a68e5a06218}} 
+virtual void \mbox{\hyperlink{classLetterWeight_a76a013deb82c8c1511cb6a68e5a06218}{invert}} ()=0
+\begin{DoxyCompactList}\small\item\em multiplicative inverse, for semifields. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_gabaad113da06b47c4b291558d05da6aa6}{zero}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for add (absorbing element for mult). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_ga53200866c20ae5e4aae7ab8acd8f3ad0}{one}} () const
+\begin{DoxyCompactList}\small\item\em this letterweight is neutral element for mult. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLetterWeight_a7c087b5999657545934b72660928a2ee}\label{classLetterWeight_a7c087b5999657545934b72660928a2ee}} 
+virtual bool {\bfseries has\+Type} (std\+::string) const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{group__weight_gaf00322921db3c5212f8d5ca63081d689}{equal}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em binary operators are defined only between descendant Letter\+Weights of same typeid. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{group__weight_ga0ef9dd9bcd765c0e3c50b384b34d88d2}{smaller}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em binary operators are defined only between descendant Letter\+Weights of same typeid. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__weight_ga49b09c8f364a2ebf1d154f606d9aaea8}{add}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$)
+\begin{DoxyCompactList}\small\item\em binary operators are defined only between descendant Letter\+Weights of same typeid. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__weight_gad1208e74e54ca8fc2f361e6fc106df01}{mult}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$)
+\begin{DoxyCompactList}\small\item\em binary operators are defined only between descendant Letter\+Weights of same typeid. \end{DoxyCompactList}\item 
+virtual void {\bfseries print} (std\+::ostream \&o) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLetterWeight_aa953d5bac280cba9bdb18a96c373d81b}\label{classLetterWeight_aa953d5bac280cba9bdb18a96c373d81b}} 
+class {\bfseries Weight}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstract class for concrete weight values. Every concrete weight domain must be a derived class of \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLetterWeight_a2f9af55d38b8e7fd73af6cbbcb50971c}\label{classLetterWeight_a2f9af55d38b8e7fd73af6cbbcb50971c}} 
+\index{LetterWeight@{LetterWeight}!LetterWeight@{LetterWeight}}
+\index{LetterWeight@{LetterWeight}!LetterWeight@{LetterWeight}}
+\subsubsection{\texorpdfstring{LetterWeight()}{LetterWeight()}}
+{\footnotesize\ttfamily Letter\+Weight\+::\+Letter\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+should not happen. 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLetterWeight_af1f898e0845f59299440fc50a58fd2f1}\label{classLetterWeight_af1f898e0845f59299440fc50a58fd2f1}} 
+\index{LetterWeight@{LetterWeight}!make@{make}}
+\index{make@{make}!LetterWeight@{LetterWeight}}
+\subsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWeight}{Weight}} Letter\+Weight\+::make (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+factory. 
+
+\begin{DoxyReturn}{Returns}
+a weight of same type as this letter, initialized with given value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPerfoWeight_ad9237d9b3fccf6f0b70133e10c1103b2}{Perfo\+Weight}}, \mbox{\hyperlink{group__weight_ga1d225aef0e74c70d8ae73164de4f56e2}{Counting\+Weight}}, \mbox{\hyperlink{classViterbiWeight_a8b4676e41a4edb2cc5466d1e8cb1059a}{Viterbi\+Weight}}, \mbox{\hyperlink{classDistance_a1fe45f762afff378c46f81d6199a14ab}{Distance}}, \mbox{\hyperlink{classTropicalWeight_abc00c8fe56beedff6b7192325833d6d3}{Tropical\+Weight}}, and \mbox{\hyperlink{classFloatWeight_a71464c94830161af2f0dd3df99fe6856}{Float\+Weight}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Weight.\+hpp\item 
+src/weight/Weight.\+cpp\end{DoxyCompactItemize}

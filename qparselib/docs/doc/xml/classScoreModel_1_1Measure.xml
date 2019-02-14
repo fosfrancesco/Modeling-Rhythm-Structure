@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classScoreModel_1_1Measure" kind="class" language="C++" prot="public">
+    <compoundname>ScoreModel::Measure</compoundname>
+    <includes local="no">Measure.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScoreModel_1_1Measure_1af4b11c1660162139609e6835b933fb6f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ScoreModel::Measure::_id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Id of the measure, should be unique for a score </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="51" column="1" bodyfile="src/scoremodel/Measure.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScoreModel_1_1Measure_1ae1ca370f30abb427498756727f6bd486" prot="private" static="no" mutable="no">
+        <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref></type>
+        <definition>ScoreMeter ScoreModel::Measure::_meter</definition>
+        <argsstring></argsstring>
+        <name>_meter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each measure knows its <ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref>, usually the global score meter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="56" column="1" bodyfile="src/scoremodel/Measure.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScoreModel_1_1Measure_1acc80eb46b9be44ee951c2bf04e20a9e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Measure::Measure</definition>
+        <argsstring>(int id, ScoreMeter meter)</argsstring>
+        <name>Measure</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref></type>
+          <declname>meter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="28" column="1" bodyfile="src/scoremodel/Measure.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Measure_1a659c3c98b641f9cef1f3e99a3a38a502" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScoreModel::Measure::getId</definition>
+        <argsstring>() const</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the measure id </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="33" column="1" bodyfile="src/scoremodel/Measure.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Measure_1abffe1faa56b382dea4a8869cde03e8ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classScoreModel_1_1Duration" kindref="compound">Duration</ref></type>
+        <definition>Duration ScoreModel::Measure::getDuration</definition>
+        <argsstring>() const</argsstring>
+        <name>getDuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the duration of a measure </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="38" column="1" bodyfile="src/scoremodel/Measure.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classScoreModel_1_1Measure_1a6b238b9003746affba14269356f14417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreModel::Measure::~Measure</definition>
+        <argsstring>()</argsstring>
+        <name>~Measure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scoremodel/Measure.hpp" line="44" column="1" bodyfile="src/scoremodel/Measure.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An measure is a container of fixed duration, defined by a <ref refid="classScoreModel_1_1ScoreMeter" kindref="compound">ScoreMeter</ref> </para>
+    </detaileddescription>
+    <location file="src/scoremodel/Measure.hpp" line="22" column="1" bodyfile="src/scoremodel/Measure.hpp" bodystart="21" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classScoreModel_1_1Measure_1af4b11c1660162139609e6835b933fb6f" prot="private" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>_id</name></member>
+      <member refid="classScoreModel_1_1Measure_1ae1ca370f30abb427498756727f6bd486" prot="private" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>_meter</name></member>
+      <member refid="classScoreModel_1_1Measure_1abffe1faa56b382dea4a8869cde03e8ba" prot="public" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>getDuration</name></member>
+      <member refid="classScoreModel_1_1Measure_1a659c3c98b641f9cef1f3e99a3a38a502" prot="public" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>getId</name></member>
+      <member refid="classScoreModel_1_1Measure_1acc80eb46b9be44ee951c2bf04e20a9e9" prot="public" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>Measure</name></member>
+      <member refid="classScoreModel_1_1Measure_1a6b238b9003746affba14269356f14417" prot="public" virt="non-virtual"><scope>ScoreModel::Measure</scope><name>~Measure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

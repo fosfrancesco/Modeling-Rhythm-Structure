@@ -1,0 +1,51 @@
+A {\ttfamily parser} class defines a running environement for transcription by parsing for a given {\ttfamily input}. It assembles elements from the {\ttfamily table} directory for the construction of a table used to compute a tree from a {\ttfamily grammar} and some {\ttfamily input}.
+
+Each {\ttfamily parser} class may contain a {\ttfamily demo} fonction to be called in a target.
+
+The following {\ttfamily parsers} have been implemented\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Inputless1best} \+: compute the 1-\/best tree of a {\ttfamily \mbox{\hyperlink{classWTA}{W\+TA}}}. no input segment.
+\item {\ttfamily Inputlesskbest} \+: compute the k best trees of a {\ttfamily \mbox{\hyperlink{classWTA}{W\+TA}}}. no input segment.
+\item {\ttfamily 1bar1best\+S\+IP} \+: computing the 1-\/best tree in a given {\ttfamily \mbox{\hyperlink{classWTA}{W\+TA}}} language for the transcription of a given input segment. If the \mbox{\hyperlink{classWTA}{W\+TA}} trees represent 1 bar, this scenario is transcription of the whole segment as a single bar.
+\item {\ttfamily 1barkbest\+S\+K\+IP} \+: computing the k best trees in a given {\ttfamily \mbox{\hyperlink{classWTA}{W\+TA}}} language for the transcription of a given input segment.
+\item {\ttfamily Multibar1best\+S\+I\+P\+BU} \+: 1-\/best parsing with {\ttfamily S\+IP} pointers. Process input as multiple bars, where a sequence of bars is represented by a binary tree (meta-\/run), constructed in a bottom-\/up fashion\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            [bars 1-n]}
+\DoxyCodeLine{                             /     \(\backslash\)}
+\DoxyCodeLine{                 [bars 1-(n-1)]   bar m}
+\DoxyCodeLine{               ...}
+\DoxyCodeLine{      [bars 1-2]   bar3}
+\DoxyCodeLine{       /      \(\backslash\)}
+\DoxyCodeLine{  [bars 1]   bar2}
+\DoxyCodeLine{  /    \(\backslash\)}
+\DoxyCodeLine{[ ]   bar1}
+\end{DoxyCode}
+
+
+Every node corresponds to a S\+IP pointer. The nodes {\ttfamily p1}, {\ttfamily p2} immediately below a node {\ttfamily p} represent a binary run {\ttfamily (p1, p2)} in the table entry for {\ttfamily p}. The pointers in {\ttfamily \mbox{[} \mbox{]}} correspond to several bars (meta pointers), they do have a non-\/\+W\+TA state. Every other pointer correspond to a single bar, with the initial \mbox{\hyperlink{classWTA}{W\+TA}} state (and contain a best run for that bar).
+
+It is assumed that the number of bars is known and the bar length is fixed (tempo does not vary from bar to bar).
+
+This parser can be used for online (bar by bar) transcription.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Multibar1best\+S\+I\+Pflat} \+: same as above but the sequence of bars is represented by a tuple (flat tree), constructed from left to right.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ [bars 1-n]}
+\DoxyCodeLine{  /      \(\backslash\)}
+\DoxyCodeLine{bar1 ... bar m}
+\end{DoxyCode}
+
+
+Every node correspond to a S\+IP pointer. The top note correspond to the whole segment (meta pointer for all bars) Every node below correspond to a single bar, with the initial \mbox{\hyperlink{classWTA}{W\+TA}} state (and contain a best run for that bar). This parser cannot be used for online transcription.
+
+This parser is very inefficient with constraint solving (in \mbox{\hyperlink{classTable}{Table}}) for pre, post values -\/ need to store an exponential number of partial runs. The BU version is more efficient -\/ with more compact representation of partial runs. 

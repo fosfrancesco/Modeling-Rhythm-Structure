@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Tuplet_8hpp" kind="file" language="C++">
+    <compoundname>Tuplet.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="Duration_8hpp" local="yes">Duration.hpp</includes>
+    <includes refid="Event_8hpp" local="yes">Event.hpp</includes>
+    <includes refid="Sequence_8hpp" local="yes">Sequence.hpp</includes>
+    <includedby refid="MEI_8hpp" local="yes">src/output/MEI.hpp</includedby>
+    <includedby refid="Voice_8hpp" local="yes">src/scoremodel/Voice.hpp</includedby>
+    <includedby refid="Tuplet_8cpp" local="yes">src/scoremodel/Tuplet.cpp</includedby>
+    <incdepgraph>
+      <node id="369">
+        <label>src/scoremodel/Tuplet.hpp</label>
+        <link refid="Tuplet_8hpp"/>
+        <childnode refid="370" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classScoreModel_1_1Tuplet" prot="public">ScoreModel::Tuplet</innerclass>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Tuplet.hpp"/>
+  </compounddef>
+</doxygen>

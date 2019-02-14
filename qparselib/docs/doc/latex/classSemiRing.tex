@@ -1,0 +1,56 @@
+\hypertarget{classSemiRing}{}\section{Semi\+Ring$<$ T $>$ Class Template Reference}
+\label{classSemiRing}\index{SemiRing$<$ T $>$@{SemiRing$<$ T $>$}}
+
+
+semiring structure.  
+
+
+
+
+{\ttfamily \#include $<$Semi\+Ring.\+hpp$>$}
+
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSemiRing_ae55aaa8ab31c31ebc41b762886835b05}\label{classSemiRing_ae55aaa8ab31c31ebc41b762886835b05}} 
+bool {\bfseries operator==} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_aa9434de986958333c8a4114e04b83f1a}\label{classSemiRing_aa9434de986958333c8a4114e04b83f1a}} 
+bool {\bfseries operator!=} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_aac11d896996722c79e5333db4d716169}\label{classSemiRing_aac11d896996722c79e5333db4d716169}} 
+bool {\bfseries operator$<$} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_a55af6cb1ca766f6fba5fe1a6ff3d7b54}\label{classSemiRing_a55af6cb1ca766f6fba5fe1a6ff3d7b54}} 
+bool {\bfseries operator$>$} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_a3c5ac45ccee4dd4a74a67e6886309072}\label{classSemiRing_a3c5ac45ccee4dd4a74a67e6886309072}} 
+bool {\bfseries operator$<$=} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_a2cde4518a54e4900eac612f536e5303e}\label{classSemiRing_a2cde4518a54e4900eac612f536e5303e}} 
+bool {\bfseries operator$>$=} (const T \&lhs, const T \&rhs)
+\item 
+\mbox{\Hypertarget{classSemiRing_a3e047b1e781f04f0ae954a6d57dd871b}\label{classSemiRing_a3e047b1e781f04f0ae954a6d57dd871b}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const T \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Semi\+Ring$<$ T $>$}
+
+semiring structure. 
+
+
+\begin{DoxyItemize}
+\item add is associative, commutative
+\item zero is neutral element for plus
+\item mult is associative
+\item one is neutral element for mult
+\item zero is absorbing element for mult
+\item mult distributes over plus 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Semi\+Ring.\+hpp\end{DoxyCompactItemize}

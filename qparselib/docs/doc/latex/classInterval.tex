@@ -1,0 +1,127 @@
+\hypertarget{classInterval}{}\section{Interval Class Reference}
+\label{classInterval}\index{Interval@{Interval}}
+
+
+an \mbox{\hyperlink{classInterval}{Interval}} in an input segment with realtime bounds (seconds) and musical bounds (fraction of bars).  
+
+
+
+
+{\ttfamily \#include $<$Interval.\+hpp$>$}
+
+Inheritance diagram for Interval\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classInterval}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_gadfaf31fca3f5e5da49e37c7baa275125}{Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}=\mbox{\hyperlink{classRational}{Rational}}(1))
+\begin{DoxyCompactList}\small\item\em top interval constructed from an input segment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga17cfcca410ae94fe906dfcdb726026f5}{Interval}} (const \mbox{\hyperlink{classInterval}{Interval}} \&)
+\begin{DoxyCompactList}\small\item\em copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga43e7da7f24dfa17fccdd0dd40a96f458}{Interval}} (\mbox{\hyperlink{classInterval}{Interval}} $\ast$)
+\begin{DoxyCompactList}\small\item\em used for copy of downcasted \mbox{\hyperlink{classIntervalTree}{Interval\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInterval_a923e1717a3dedfe1ba90f81fcb26d5c5}{$\sim$\+Interval}} ()
+\item 
+virtual \mbox{\hyperlink{classInterval}{Interval}} \& {\bfseries operator=} (const \mbox{\hyperlink{classInterval}{Interval}} \&)
+\item 
+virtual bool \mbox{\hyperlink{group__segment_ga4b0896bf3843fec18d68a130fe9a49f6}{operator==}} (const \mbox{\hyperlink{classInterval}{Interval}} \&) const
+\begin{DoxyCompactList}\small\item\em for using \mbox{\hyperlink{classInterval}{Interval}} as key in map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterval_aaed8b0e404390af39c51e657636bf14d}\label{classInterval_aaed8b0e404390af39c51e657636bf14d}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries mduration} () const
+\item 
+\mbox{\Hypertarget{classInterval_afbb05608fd0b263d905a29480e921b75}\label{classInterval_afbb05608fd0b263d905a29480e921b75}} 
+double {\bfseries rduration} () const
+\item 
+bool {\bfseries inside\+Bar} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterval_a6c8385bc5875cb761827f9e75f783834}\label{classInterval_a6c8385bc5875cb761827f9e75f783834}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a6c8385bc5875cb761827f9e75f783834}{mbegin}}
+\begin{DoxyCompactList}\small\item\em musical-\/time start. starting date of interval, in musical-\/time (number of bars) relatively (shift) to current bar start. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}
+\begin{DoxyCompactList}\small\item\em musical-\/time end. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classInterval_aa17f339b42a23f6afc188971e7003d84}{rbegin}}
+\begin{DoxyCompactList}\small\item\em real-\/time start. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}}
+\begin{DoxyCompactList}\small\item\em real-\/time end. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__segment_gaefc21b7c838661c05286304f6d891690}{Interval}} (const \mbox{\hyperlink{classInputSegment}{Input\+Segment}} $\ast$s, \mbox{\hyperlink{classRational}{Rational}} mbeg, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classInterval_a963b9b36f085a7db9c159c55608f8408}{mend}}, double rbeg, double \mbox{\hyperlink{classInterval_a1acb3128311a318b23e68cc8ca0182e9}{rend}})
+\begin{DoxyCompactList}\small\item\em build an interval with musical-\/time bounds \mbox{[}mbegin, mbegin+mdur\mbox{[} and real-\/time bounds \mbox{[}rbegin, rbegin+rdur\mbox{[} for the input segment s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterval_ac157527bf2349e36ef2475096d268e4e}\label{classInterval_ac157527bf2349e36ef2475096d268e4e}} 
+class {\bfseries Interval\+Heap}
+\item 
+\mbox{\Hypertarget{classInterval_a2a9316899a6c2145d014e08437ee72d7}\label{classInterval_a2a9316899a6c2145d014e08437ee72d7}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classInterval}{Interval}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+an \mbox{\hyperlink{classInterval}{Interval}} in an input segment with realtime bounds (seconds) and musical bounds (fraction of bars). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterval_a923e1717a3dedfe1ba90f81fcb26d5c5}\label{classInterval_a923e1717a3dedfe1ba90f81fcb26d5c5}} 
+\index{Interval@{Interval}!````~Interval@{$\sim$Interval}}
+\index{````~Interval@{$\sim$Interval}!Interval@{Interval}}
+\subsubsection{\texorpdfstring{$\sim$Interval()}{~Interval()}}
+{\footnotesize\ttfamily Interval\+::$\sim$\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+do not deallocate the segment here. 
+\end{DoxyWarning}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classInterval_a963b9b36f085a7db9c159c55608f8408}\label{classInterval_a963b9b36f085a7db9c159c55608f8408}} 
+\index{Interval@{Interval}!mend@{mend}}
+\index{mend@{mend}!Interval@{Interval}}
+\subsubsection{\texorpdfstring{mend}{mend}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRational}{Rational}} Interval\+::mend}
+
+
+
+musical-\/time end. 
+
+ending date of interval, in musical-\/time (number of bars) relatively (shift) to current bar start.
+
+0 for meta interval (in this case begin must be 0).
+
+\begin{DoxyWarning}{Warning}
+must be $>$= begin. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classInterval_aa17f339b42a23f6afc188971e7003d84}\label{classInterval_aa17f339b42a23f6afc188971e7003d84}} 
+\index{Interval@{Interval}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Interval@{Interval}}
+\subsubsection{\texorpdfstring{rbegin}{rbegin}}
+{\footnotesize\ttfamily double Interval\+::rbegin}
+
+
+
+real-\/time start. 
+
+starting date of interval, in real-\/time (seconds) i.\+e. real-\/time date aligned with the musical date bars + begin \mbox{\Hypertarget{classInterval_a1acb3128311a318b23e68cc8ca0182e9}\label{classInterval_a1acb3128311a318b23e68cc8ca0182e9}} 
+\index{Interval@{Interval}!rend@{rend}}
+\index{rend@{rend}!Interval@{Interval}}
+\subsubsection{\texorpdfstring{rend}{rend}}
+{\footnotesize\ttfamily double Interval\+::rend}
+
+
+
+real-\/time end. 
+
+ending date of interval, in real-\/time (seconds) i.\+e. real date aligned with he musical date bars + end. must be $>$ rbegin. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Interval.\+hpp\item 
+src/segment/Interval.\+cpp\end{DoxyCompactItemize}

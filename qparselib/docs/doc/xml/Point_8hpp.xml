@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Point_8hpp" kind="file" language="C++">
+    <compoundname>Point.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes refid="MusEvent_8hpp" local="yes">MusEvent.hpp</includes>
+    <includedby refid="MusPoint_8hpp" local="yes">src/segment/MusPoint.hpp</includedby>
+    <includedby refid="Point_8cpp" local="yes">src/segment/Point.cpp</includedby>
+    <incdepgraph>
+      <node id="470">
+        <label>iomanip</label>
+      </node>
+      <node id="468">
+        <label>assert.h</label>
+      </node>
+      <node id="465">
+        <label>src/segment/Point.hpp</label>
+        <link refid="Point_8hpp"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>stdlib.h</label>
+      </node>
+      <node id="472">
+        <label>fstream</label>
+      </node>
+      <node id="471">
+        <label>sstream</label>
+      </node>
+      <node id="469">
+        <label>iostream</label>
+      </node>
+      <node id="466">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classPoint" prot="public">Point</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__segment_1gad95cc714e40b63c5df8e1dc41305178e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Point &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/segment/Point.hpp" line="117" column="1" bodyfile="src/segment/Point.hpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/segment/Point.hpp"/>
+  </compounddef>
+</doxygen>

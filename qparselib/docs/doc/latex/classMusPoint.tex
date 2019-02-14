@@ -1,0 +1,96 @@
+\hypertarget{classMusPoint}{}\section{Mus\+Point Class Reference}
+\label{classMusPoint}\index{MusPoint@{MusPoint}}
+
+
+\mbox{\hyperlink{classPoint}{Point}} extended with mutable musical time date and duration (expressed in fraction of bars).  
+
+
+
+
+{\ttfamily \#include $<$Mus\+Point.\+hpp$>$}
+
+Inheritance diagram for Mus\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMusPoint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Mus\+Point} (\mbox{\hyperlink{classMusEvent}{Mus\+Event}} $\ast$e, double rdate, double rdur, bool on, long link=M\+U\+S\+P\+O\+I\+N\+T\+R\+E\+F\+\_\+\+N\+U\+LL, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\item 
+\mbox{\hyperlink{group__segment_ga1bb17bef698401de18bc814c7f965999}{Mus\+Point}} (const \mbox{\hyperlink{classPoint}{Point}} \&p, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}{mdate}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}, \mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}{mduration}}=\mbox{\hyperlink{group__general_gae862a9d955eb3154601efb64980ac24b}{M\+U\+S\+T\+I\+M\+E\+\_\+\+U\+N\+K\+N\+O\+WN}})
+\begin{DoxyCompactList}\small\item\em copy of point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__segment_ga5f00500846d251b165f48a41552be18e}{Mus\+Point}} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\begin{DoxyCompactList}\small\item\em event (if any) is cloned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMusPoint}{Mus\+Point}} \& \mbox{\hyperlink{group__segment_ga522126acc9eb79e737068941370bb172}{operator=}} (const \mbox{\hyperlink{classMusPoint}{Mus\+Point}} \&)
+\begin{DoxyCompactList}\small\item\em event (if any) is cloned. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classPoint}{Point}} \&) const
+\item 
+\mbox{\hyperlink{classRational}{Rational}} \& \mbox{\hyperlink{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}{mdate}} ()
+\item 
+\mbox{\hyperlink{classRational}{Rational}} \& \mbox{\hyperlink{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}{mduration}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries print} (std\+::ostream \&o) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusPoint_a5e678087e524bfa4e1d3612016196a9c}\label{classMusPoint_a5e678087e524bfa4e1d3612016196a9c}} 
+\mbox{\hyperlink{classRational}{Rational}} \mbox{\hyperlink{classMusPoint_a5e678087e524bfa4e1d3612016196a9c}{\+\_\+mdate}}
+\begin{DoxyCompactList}\small\item\em timestamp in musical time (number of bars). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMusPoint_a8d5382b9ab148a21ae7adc52b788b15f}\label{classMusPoint_a8d5382b9ab148a21ae7adc52b788b15f}} 
+\mbox{\hyperlink{classRational}{Rational}} {\bfseries \+\_\+mduration}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusPoint_ad95cc714e40b63c5df8e1dc41305178e}\label{classMusPoint_ad95cc714e40b63c5df8e1dc41305178e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classPoint}{Point}} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classPoint}{Point}} extended with mutable musical time date and duration (expressed in fraction of bars). 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]redefine musical time duration as realtime duration, with links. 
+
+replace \+\_\+mduration by mduration computed from linked point\textquotesingle{}s date \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+mduration is reset in \mbox{\hyperlink{group__segment_ga42c65e4989c84fbce42115d8e7813f8e}{Input\+Segment.\+quantize()}} 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}\label{classMusPoint_a88d1f2efdc00dc80985bbe76356099b2}} 
+\index{MusPoint@{MusPoint}!mdate@{mdate}}
+\index{mdate@{mdate}!MusPoint@{MusPoint}}
+\subsubsection{\texorpdfstring{mdate()}{mdate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRational}{Rational}}\& Mus\+Point\+::mdate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+can be modified. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}\label{classMusPoint_a2f89f6b4930b75e633d8b3cd3e461aa2}} 
+\index{MusPoint@{MusPoint}!mduration@{mduration}}
+\index{mduration@{mduration}!MusPoint@{MusPoint}}
+\subsubsection{\texorpdfstring{mduration()}{mduration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRational}{Rational}}\& Mus\+Point\+::mduration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+only for polyphonic events. 
+
+can be modified. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/segment/Mus\+Point.\+hpp\item 
+src/segment/Mus\+Point.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classRun" kind="class" language="C++" prot="public">
+    <compoundname>Run</compoundname>
+    <includes local="no">Rune.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>P</declname>
+        <defname>P</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classRun_1a61e6a26fe0ae42b0e4d54babc8c46684" prot="public" static="no" mutable="no">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight Run&lt; P &gt;::weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <briefdescription>
+<para>current weight. totally evaluated when evaluated() = true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="76" column="1" bodyfile="src/table/Rune.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRun_1ad7eda2272d3a6be2ff0c3e2482051029" prot="public" static="no" mutable="no">
+        <type><ref refid="classDurationList" kindref="compound">DurationList</ref></type>
+        <definition>DurationList Run&lt; P &gt;::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <briefdescription>
+<para>list of relative durations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="79" column="1" bodyfile="src/table/Rune.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRun_1a516c2250ed17af3a1bc5b2242c9a5254" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; P &gt;</type>
+        <definition>std::vector&lt;P&gt; Run&lt; P &gt;::_children</definition>
+        <argsstring></argsstring>
+        <name>_children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="274" column="1" bodyfile="src/table/Rune.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRun_1a152800b5d62b4a0fa81757b7ed5c77a8" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classTransition" kindref="compound">Transition</ref> *</type>
+        <definition>const Transition* Run&lt; P &gt;::_transition</definition>
+        <argsstring></argsstring>
+        <name>_transition</name>
+        <briefdescription>
+<para>transition used to create this run. null for meta runs. saved for resetting the computation of weight in inner <ref refid="classRun" kindref="compound">Run</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="279" column="1" bodyfile="src/table/Rune.hpp" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRun_1add9a473b8b1326d39b4dbf0d5a480432" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Run&lt; P &gt;::_first_partialortoupdate</definition>
+        <argsstring></argsstring>
+        <name>_first_partialortoupdate</name>
+        <briefdescription>
+<para>index of first pointer in children list, either </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>partial, or</para>
+</listitem><listitem><para>whose weight did not contribute to run&apos;s weight for inner run only. = <ref refid="classRun_1ab9eeb2e8033cf68b80099e56ddca8ff1" kindref="member">arity()</ref> = size_of _children when this run is complete. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="286" column="1" bodyfile="src/table/Rune.hpp" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRun_1a22c12d402cfabc0d0058ad2a4f87f6e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::_meta</definition>
+        <argsstring></argsstring>
+        <name>_meta</name>
+        <briefdescription>
+<para>meta flag. the run was build manually with <ref refid="classRun" kindref="compound">Run(w)</ref> and insert. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="290" column="1" bodyfile="src/table/Rune.hpp" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRun_1ae8145f85e985d5ff3aa118bd99901675" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+<para>construct a null run (special) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a63172061ee2c7c601f13d4ef3f3a67bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>(Weight w)</argsstring>
+        <name>Run</name>
+        <param>
+          <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classRun" kindref="compound">Run</ref> with empty body and given weight. the run is marked as meta. the first PartialorUpdate child is 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must not be unknown weight . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>the body must be completed with <ref refid="classRun_1ab41a4b6f0347b7b412637d505614b98f" kindref="member">insert()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a0a075a813930403154728bcea9062a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>(Environment *, const P &amp;, const Transition &amp;)</argsstring>
+        <name>Run</name>
+        <param>
+          <type><ref refid="classEnvironment" kindref="compound">Environment</ref> *</type>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classTransition" kindref="compound">Transition</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para><ref refid="classWTA" kindref="compound">WTA</ref> <ref refid="classRun" kindref="compound">Run</ref> with head the given pointer. the given pointer must be a wta ptr. the body is build according to the transition t. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>terminal run if t is terminal,<itemizedlist>
+<listitem><para>the given ptr must be compatible with the transition&apos;s label.</para>
+</listitem><listitem><para>singleton children list with fake ptr containing only label.</para>
+</listitem><listitem><para>the run is complete.</para>
+</listitem><listitem><para>the weight of run is set to a combination of transition&apos;s weight and a distance returned by terminalWeight.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>inner run if t is inner (using states in the body of t)<itemizedlist>
+<listitem><para>children list contains pointers of type P to the 1-best runs for the given transition for transition (s1,...,sn), the 1-best is (&lt;s1,1&gt;,...,&lt;sn,1&gt;).</para>
+</listitem><listitem><para>the ptrs in body are registered.</para>
+</listitem><listitem><para>the run is partial.</para>
+</listitem><listitem><para>the weight of run is set to innerWeight and must be mult. by weights of subruns.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>null run when it is not possible to construct one of the children. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a1ffdaf6f1209f5692898af9142ff0168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>(const Run&lt; P &gt; &amp;)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+        </param>
+        <briefdescription>
+<para>copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1ae14a444c0e91801d76f5138a36da435d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>(const Run&lt; P &gt; &amp;r, size_t i)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>copy r and increase rank of pointer number i. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be inner. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(child) must have rank, index i must be between 0 and arity of r - 1. the run is reset (partial): </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>the weight and duration list of the run must be recomputed (the weight is reset to the weight of creator transition). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1aa0d15ec06ce84a5db17c26922f708d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::Run</definition>
+        <argsstring>(const Run&lt; P &gt; &amp;r, const P &amp;p)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const P &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>copy/update constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be partial. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be complete. copy r and replace first partialorUpdate child by p, </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1ab0bf6832f238cd38bf78f2074ccdcaf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Run&lt; P &gt;::~Run</definition>
+        <argsstring>()</argsstring>
+        <name>~Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a89b0d51eafbc4c34a92f2eca0d8e77f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+        <definition>Run&lt;P&gt;&amp; Run&lt; P &gt;::operator=</definition>
+        <argsstring>(const Run&lt; P &gt; &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a47f62430b7446078aa94dcbb45e86dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::operator==</definition>
+        <argsstring>(const Run&lt; P &gt; &amp;s) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a5efb56b2aaad574a21e42aeb6a7b5742" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::null</definition>
+        <argsstring>() const</argsstring>
+        <name>null</name>
+        <briefdescription>
+<para>this run is null - constructed with <ref refid="classRun_1ae8145f85e985d5ff3aa118bd99901675" kindref="member">Run()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a69d622e31bcd4e6f07c43efc0e788481" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::terminal</definition>
+        <argsstring>() const</argsstring>
+        <name>terminal</name>
+        <briefdescription>
+<para>this run is terminal (leaf). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a006c247eb8839a9a5045e53917e984c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::inner</definition>
+        <argsstring>() const</argsstring>
+        <name>inner</name>
+        <briefdescription>
+<para>this run is inner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a3fc5bc7196b967860f4c412bf47c8d9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::meta</definition>
+        <argsstring>() const</argsstring>
+        <name>meta</name>
+        <briefdescription>
+<para>meta run: inner, binary and second child is a meta state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1abf33aa6674f2799357490fe893b7757a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::allcomplete</definition>
+        <argsstring>() const</argsstring>
+        <name>allcomplete</name>
+        <briefdescription>
+<para>all ptr in children list are complete. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a8b93caf0971738f454db7815db41501e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::complete</definition>
+        <argsstring>() const</argsstring>
+        <name>complete</name>
+        <briefdescription>
+<para>all ptr in children list are complete and the weight of this run has been evaluated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a920c86e66e9189c7aebb8b449b2441ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::partial</definition>
+        <argsstring>() const</argsstring>
+        <name>partial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="181" column="1" bodyfile="src/table/Rune.hpp" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1ab0f5c4a978f33dd4e2df24174f6534f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        <definition>label_t Run&lt; P &gt;::label</definition>
+        <argsstring>() const</argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>this run must be terminal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="187" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1ab9eeb2e8033cf68b80099e56ddca8ff1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Run&lt; P &gt;::arity</definition>
+        <argsstring>() const</argsstring>
+        <name>arity</name>
+        <briefdescription>
+<para>return the number of children of this <ref refid="classRun" kindref="compound">Run</ref>: = 0 in the case of terminal run <blockquote><para>1 for inner run </para>
+</blockquote>= 2 for meta run </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a1da9ef823788854753f7641bd872cf50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Run&lt; P &gt;::filter</definition>
+        <argsstring>()</argsstring>
+        <name>filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a17781141b67e9cd2675c0dad722de2ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const P &amp;</type>
+        <definition>const P&amp; Run&lt; P &gt;::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>return the ith subrun of this run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of subrun </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>the number of children must be at least i+1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="200" column="1" bodyfile="src/table/Rune.hpp" bodystart="200" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a6b635ca66114e64fbcb91a5a9652d78d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const P &amp;</type>
+        <definition>const P&amp; Run&lt; P &gt;::first</definition>
+        <argsstring>() const</argsstring>
+        <name>first</name>
+        <briefdescription>
+<para>first children. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this run must be inner with arity &gt; 0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a49c0418a8ab9eb372e09d7d5c813e0aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const P &amp;</type>
+        <definition>const P&amp; Run&lt; P &gt;::last</definition>
+        <argsstring>() const</argsstring>
+        <name>last</name>
+        <briefdescription>
+<para>last children. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this run must be inner with arity &gt; 0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a94a0bfa98d5891b750ba88e5f31441ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const P &amp;</type>
+        <definition>const P&amp; Run&lt; P &gt;::firstPartialorUpdate</definition>
+        <argsstring>() const</argsstring>
+        <name>firstPartialorUpdate</name>
+        <briefdescription>
+<para>index of first children which is either either </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>partial, or</para>
+</listitem><listitem><para>whose weight did not contribute to run&apos;s weight or <ref refid="classRun_1ab9eeb2e8033cf68b80099e56ddca8ff1" kindref="member">arity()</ref> if there is no such children.</para>
+</listitem></itemizedlist>
+</para>
+<para>the index of first children is 0, the index of last children is arity - 1. <simplesect kind="warning"><para><ref refid="classRun_1a8b93caf0971738f454db7815db41501e" kindref="member">complete()</ref> must not hold (otherwise there is no such children). </para>
+</simplesect>
+<simplesect kind="warning"><para>this run must be inner with arity &gt; 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1ab41a4b6f0347b7b412637d505614b98f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run&lt; P &gt;::insert</definition>
+        <argsstring>(const P &amp;)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const P &amp;</type>
+        </param>
+        <briefdescription>
+<para>append the given ptr at the end of body. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the run must be marked as meta. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1afe9adec90106c1a7433b626aca320367" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run&lt; P &gt;::update</definition>
+        <argsstring>(const Weight &amp;w, const DurationList &amp;dl=DurationList())</argsstring>
+        <name>update</name>
+        <param>
+          <type>const <ref refid="classWeight" kindref="compound">Weight</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <declname>dl</declname>
+          <defval><ref refid="classDurationList" kindref="compound">DurationList</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>update the weight and duration lists of this run with given weight and duration list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given weight, must not be zero it must be the weight of best run for the first partialorupdate children (this cannot be checked!). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be the duration list of best run for the first partialorupdate children (this cannot be checked!). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this run must not be complete. </para>
+</simplesect>
+<simplesect kind="warning"><para>the first partialorupdate children must exist and be complete.</para>
+</simplesect>
+the index to first partialorupdate children is incremented. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="238" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classRun_1a03f68bada1f26f0771ac75ef3ec119cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Run&lt; P &gt; &amp;r)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classRun" kindref="compound">Run</ref>&lt; P &gt; &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="242" column="1" bodyfile="src/table/Rune.hpp" bodystart="242" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRun_1aea7d6413865326a48a6bd56b9a3f0af6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run&lt; P &gt;::_init_duration_list</definition>
+        <argsstring>(label_t)</argsstring>
+        <name>_init_duration_list</name>
+        <param>
+          <type><ref refid="group__output_1ga22fde970e635fcf63962743b2d5c441d" kindref="member">label_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classRun_1a501441d5c6f23f26f057f71a18964c5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run&lt; P &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>reset weight to weight of creator transition, reset duration list to 0, reset firstPartialorUpdate to first child. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this run must be inner. </para>
+</simplesect>
+<simplesect kind="warning"><para>run is partial after call. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Rune.hpp" line="308" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>a run is a compact representation of parse trees as a tuple of pointers to subruns. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>a run stores<itemizedlist>
+<listitem><para>a list of children represented by pointers (template type) compatible with a transition</para>
+</listitem><listitem><para>a weight (to evaluate)</para>
+</listitem><listitem><para>a temporary weight value (initialy the weight of the parent transition)</para>
+</listitem><listitem><para>a list of relative durations.</para>
+</listitem></itemizedlist>
+</para>
+<para>a run can be of 3 kinds:<itemizedlist>
+<listitem><para>null run:<itemizedlist>
+<listitem><para>unknown current weight,</para>
+</listitem><listitem><para>unknown tmp weight,</para>
+</listitem><listitem><para>no children,</para>
+</listitem><listitem><para>empty duration list.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>terminal (leaf) run<itemizedlist>
+<listitem><para>created from terminal (length 1) parent transition:</para>
+</listitem><listitem><para>current weight unknown or current weight known (evaluated),</para>
+</listitem><listitem><para>tmp weight known,</para>
+</listitem><listitem><para>1 child : fake pointer containing as state the transition label (and rank 0 if the pointer class has a rank)</para>
+</listitem><listitem><para>duration list with single continuation or single event preceeded graces notes</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>inner run<itemizedlist>
+<listitem><para>created from inner (length &gt; 1) parent transition:</para>
+</listitem><listitem><para>current weight unknown or current weight known (evaluated)</para>
+</listitem><listitem><para>tmpt weight known</para>
+</listitem><listitem><para>nb children = length parent transition</para>
+</listitem><listitem><para>duration list == empty (unknown) or not (evaluated).</para>
+</listitem></itemizedlist>
+</para>
+<para><xrefsect id="todo_1_todo000035"><xreftitle>Todo</xreftitle><xrefdescription><para>suppr. null runs </para>
+</xrefdescription></xrefsect></para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="371">
+        <label>DurationList</label>
+        <link refid="classDurationList"/>
+      </node>
+      <node id="370">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="368">
+        <label>Run&lt; P &gt;</label>
+        <link refid="classRun"/>
+        <childnode refid="369" relation="usage">
+          <edgelabel>weight</edgelabel>
+        </childnode>
+        <childnode refid="371" relation="usage">
+          <edgelabel>duration</edgelabel>
+        </childnode>
+      </node>
+      <node id="369">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="370" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/segment/InputSegment.hpp" line="39" column="1" bodyfile="src/segment/InputSegment.hpp" bodystart="39" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classRun_1a516c2250ed17af3a1bc5b2242c9a5254" prot="private" virt="non-virtual"><scope>Run</scope><name>_children</name></member>
+      <member refid="classRun_1add9a473b8b1326d39b4dbf0d5a480432" prot="private" virt="non-virtual"><scope>Run</scope><name>_first_partialortoupdate</name></member>
+      <member refid="classRun_1aea7d6413865326a48a6bd56b9a3f0af6" prot="private" virt="non-virtual"><scope>Run</scope><name>_init_duration_list</name></member>
+      <member refid="classRun_1a22c12d402cfabc0d0058ad2a4f87f6e6" prot="private" virt="non-virtual"><scope>Run</scope><name>_meta</name></member>
+      <member refid="classRun_1a152800b5d62b4a0fa81757b7ed5c77a8" prot="private" virt="non-virtual"><scope>Run</scope><name>_transition</name></member>
+      <member refid="classRun_1abf33aa6674f2799357490fe893b7757a" prot="public" virt="non-virtual"><scope>Run</scope><name>allcomplete</name></member>
+      <member refid="classRun_1ab9eeb2e8033cf68b80099e56ddca8ff1" prot="public" virt="non-virtual"><scope>Run</scope><name>arity</name></member>
+      <member refid="classRun_1a8b93caf0971738f454db7815db41501e" prot="public" virt="non-virtual"><scope>Run</scope><name>complete</name></member>
+      <member refid="classRun_1ad7eda2272d3a6be2ff0c3e2482051029" prot="public" virt="non-virtual"><scope>Run</scope><name>duration</name></member>
+      <member refid="classRun_1a1da9ef823788854753f7641bd872cf50" prot="public" virt="non-virtual"><scope>Run</scope><name>filter</name></member>
+      <member refid="classRun_1a6b635ca66114e64fbcb91a5a9652d78d" prot="public" virt="non-virtual"><scope>Run</scope><name>first</name></member>
+      <member refid="classRun_1a94a0bfa98d5891b750ba88e5f31441ad" prot="public" virt="non-virtual"><scope>Run</scope><name>firstPartialorUpdate</name></member>
+      <member refid="classRun_1a006c247eb8839a9a5045e53917e984c6" prot="public" virt="non-virtual"><scope>Run</scope><name>inner</name></member>
+      <member refid="classRun_1ab41a4b6f0347b7b412637d505614b98f" prot="public" virt="non-virtual"><scope>Run</scope><name>insert</name></member>
+      <member refid="classRun_1ab0f5c4a978f33dd4e2df24174f6534f1" prot="public" virt="non-virtual"><scope>Run</scope><name>label</name></member>
+      <member refid="classRun_1a49c0418a8ab9eb372e09d7d5c813e0aa" prot="public" virt="non-virtual"><scope>Run</scope><name>last</name></member>
+      <member refid="classRun_1a3fc5bc7196b967860f4c412bf47c8d9c" prot="public" virt="non-virtual"><scope>Run</scope><name>meta</name></member>
+      <member refid="classRun_1a5efb56b2aaad574a21e42aeb6a7b5742" prot="public" virt="non-virtual"><scope>Run</scope><name>null</name></member>
+      <member refid="classRun_1a03f68bada1f26f0771ac75ef3ec119cd" prot="public" virt="non-virtual"><scope>Run</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classRun_1a89b0d51eafbc4c34a92f2eca0d8e77f8" prot="public" virt="non-virtual"><scope>Run</scope><name>operator=</name></member>
+      <member refid="classRun_1a47f62430b7446078aa94dcbb45e86dfc" prot="public" virt="non-virtual"><scope>Run</scope><name>operator==</name></member>
+      <member refid="classRun_1a17781141b67e9cd2675c0dad722de2ec" prot="public" virt="non-virtual"><scope>Run</scope><name>operator[]</name></member>
+      <member refid="classRun_1a920c86e66e9189c7aebb8b449b2441ae" prot="public" virt="non-virtual"><scope>Run</scope><name>partial</name></member>
+      <member refid="classRun_1a501441d5c6f23f26f057f71a18964c5c" prot="private" virt="non-virtual"><scope>Run</scope><name>reset</name></member>
+      <member refid="classRun_1ae8145f85e985d5ff3aa118bd99901675" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1a63172061ee2c7c601f13d4ef3f3a67bd" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1a0a075a813930403154728bcea9062a55" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1a1ffdaf6f1209f5692898af9142ff0168" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1ae14a444c0e91801d76f5138a36da435d" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1aa0d15ec06ce84a5db17c26922f708d44" prot="public" virt="non-virtual"><scope>Run</scope><name>Run</name></member>
+      <member refid="classRun_1a69d622e31bcd4e6f07c43efc0e788481" prot="public" virt="non-virtual"><scope>Run</scope><name>terminal</name></member>
+      <member refid="classRun_1afe9adec90106c1a7433b626aca320367" prot="public" virt="non-virtual"><scope>Run</scope><name>update</name></member>
+      <member refid="classRun_1a61e6a26fe0ae42b0e4d54babc8c46684" prot="public" virt="non-virtual"><scope>Run</scope><name>weight</name></member>
+      <member refid="classRun_1ab0bf6832f238cd38bf78f2074ccdcaf7" prot="public" virt="non-virtual"><scope>Run</scope><name>~Run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

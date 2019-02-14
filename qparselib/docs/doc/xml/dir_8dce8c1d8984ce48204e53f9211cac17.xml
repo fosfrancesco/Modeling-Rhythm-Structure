@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_8dce8c1d8984ce48204e53f9211cac17" kind="dir">
+    <compoundname>src/weight</compoundname>
+    <innerfile refid="CountingWeight_8cpp">CountingWeight.cpp</innerfile>
+    <innerfile refid="CountingWeight_8hpp">CountingWeight.hpp</innerfile>
+    <innerfile refid="Distance_8cpp">Distance.cpp</innerfile>
+    <innerfile refid="Distance_8hpp">Distance.hpp</innerfile>
+    <innerfile refid="FloatWeight_8cpp">FloatWeight.cpp</innerfile>
+    <innerfile refid="FloatWeight_8hpp">FloatWeight.hpp</innerfile>
+    <innerfile refid="PerformanceModel_8cpp">PerformanceModel.cpp</innerfile>
+    <innerfile refid="PerformanceModel_8hpp">PerformanceModel.hpp</innerfile>
+    <innerfile refid="SemiRing_8hpp">SemiRing.hpp</innerfile>
+    <innerfile refid="TropicalWeight_8cpp">TropicalWeight.cpp</innerfile>
+    <innerfile refid="TropicalWeight_8hpp">TropicalWeight.hpp</innerfile>
+    <innerfile refid="ViterbiWeight_8cpp">ViterbiWeight.cpp</innerfile>
+    <innerfile refid="ViterbiWeight_8hpp">ViterbiWeight.hpp</innerfile>
+    <innerfile refid="Weight_8cpp">Weight.cpp</innerfile>
+    <innerfile refid="Weight_8hpp">Weight.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/weight/"/>
+  </compounddef>
+</doxygen>

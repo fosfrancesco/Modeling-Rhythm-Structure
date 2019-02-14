@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classValueWTA" kind="class" language="C++" prot="public">
+    <compoundname>ValueWTA</compoundname>
+    <basecompoundref refid="classWTA" prot="public" virt="non-virtual">WTA</basecompoundref>
+    <includes local="no">ValueWTA.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classValueWTA_1ae8c9f951d6baa9809c5be40ec801a8d8" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+        <definition>const WTA&amp; ValueWTA::_schema</definition>
+        <argsstring></argsstring>
+        <name>_schema</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="124" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueWTA_1a6f94755341668d46f74363948e36195f" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t ValueWTA::_cpt</definition>
+        <argsstring></argsstring>
+        <name>_cpt</name>
+        <briefdescription>
+<para>counter for new <ref refid="classWTA" kindref="compound">WTA</ref> states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="127" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueWTA_1a9d9e27ca84b257884e4abd5549cb1509" prot="private" static="no" mutable="no">
+        <type>Valuemap</type>
+        <definition>Valuemap ValueWTA::_statemap</definition>
+        <argsstring></argsstring>
+        <name>_statemap</name>
+        <briefdescription>
+<para>map of ValueStates into their index in <ref refid="classWTA" kindref="compound">WTA</ref> tmp (only for constructor) unordered_map&lt;cs_key, state_t, container_hasher&gt; _statemap; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="132" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classValueWTA_1a7266040eff2976dedcf7ce5bdc50b0c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classDurationTree" kindref="compound">DurationTree</ref> *</type>
+        <definition>DurationTree* ValueWTA::_tree</definition>
+        <argsstring></argsstring>
+        <name>_tree</name>
+        <briefdescription>
+<para>tree of DurationLists organized hierarchically the ValueStates use the pointers stored in this tree </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="136" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__schemata_1gab35a1ee1d6e2b2b5d82b930b4d70340f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ValueWTA::ValueWTA</definition>
+        <argsstring>(const DurationList &amp;, const WTA &amp;)</argsstring>
+        <name>ValueWTA</name>
+        <param>
+          <type>const <ref refid="classDurationList" kindref="compound">DurationList</ref> &amp;</type>
+          <defname>dl</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classWTA" kindref="compound">WTA</ref> &amp;</type>
+          <defname>schema</defname>
+        </param>
+        <briefdescription>
+<para>construction from given initial list and <ref refid="classWTA" kindref="compound">WTA</ref> (base schema) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="116" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="169" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classValueWTA_1a4d5f75a4c4dd74e1b419786c30a3837a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ValueWTA::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <reimplements refid="classWTA_1a23060c851d5cf624215c2d9dc8ad4b45">hasType</reimplements>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="118" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="118" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="group__schemata_1ga074f48ad3b6e8f357ca5bf5dce242b18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>state_t</type>
+        <definition>state_t ValueWTA::addValueState</definition>
+        <argsstring>(const ValueState &amp;, bool initial=false)</argsstring>
+        <name>addValueState</name>
+        <param>
+          <type>const <ref refid="classValueState" kindref="compound">ValueState</ref> &amp;</type>
+          <defname>vs</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>initial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>returns the <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> state associated to the <ref refid="classValueState" kindref="compound">ValueState</ref> vs if there exists one. otherwise: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>a new <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> state_t s is created,</para>
+</listitem><listitem><para>s is associated to vs,</para>
+</listitem><listitem><para>s is added to the transition table</para>
+</listitem><listitem><para>the <ref refid="classValueWTA" kindref="compound">ValueWTA</ref> transitions with head s are computed and added to the table</para>
+</listitem><listitem><para>s is returned </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/schemata/ValueWTA.hpp" line="149" column="1" bodyfile="src/schemata/ValueWTA.cpp" bodystart="68" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Value <ref refid="classWTA" kindref="compound">WTA</ref> is a special kind of <ref refid="classWTA" kindref="compound">WTA</ref> associated to an initial <ref refid="classWTA" kindref="compound">WTA</ref> (schema) and a rhythmic value (<ref refid="classDurationList" kindref="compound">DurationList</ref>). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It characterizes the trees of the schema language (with weight defined by schema) having the given rhythmic value.</para>
+<para>table of transitions construction top-down, given an initial schema (<ref refid="classWTA" kindref="compound">WTA</ref>) and a <ref refid="classDurationList" kindref="compound">DurationList</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="476">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+      </node>
+      <node id="475">
+        <label>ValueWTA</label>
+        <link refid="classValueWTA"/>
+        <childnode refid="476" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="480">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="478">
+        <label>WTA</label>
+        <link refid="classWTA"/>
+        <childnode refid="479" relation="usage">
+          <edgelabel>_seed</edgelabel>
+        </childnode>
+      </node>
+      <node id="477">
+        <label>ValueWTA</label>
+        <link refid="classValueWTA"/>
+        <childnode refid="478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>Weight</label>
+        <link refid="classWeight"/>
+        <childnode refid="480" relation="usage">
+          <edgelabel>_letter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/schemata/ValueWTA.hpp" line="112" column="1" bodyfile="src/schemata/ValueWTA.hpp" bodystart="111" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classValueWTA_1a6f94755341668d46f74363948e36195f" prot="private" virt="non-virtual"><scope>ValueWTA</scope><name>_cpt</name></member>
+      <member refid="classWTA_1a3ed6ca11b3e520485171a0f07deffd21" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_cpt_size</name></member>
+      <member refid="classWTA_1a76cf3c27412f9d61464a8a82aea97b89" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_cpt_tr</name></member>
+      <member refid="classWTA_1a52dd7c5ad9439670d75df10f2dd1e4df" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_initial</name></member>
+      <member refid="classWTA_1acb19a9da4f88e4b3538b6889cbd49a08" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_max_post</name></member>
+      <member refid="classWTA_1ae6d1c616caceb7819d4d23f4a635cddc" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_max_pre</name></member>
+      <member refid="classValueWTA_1ae8c9f951d6baa9809c5be40ec801a8d8" prot="private" virt="non-virtual"><scope>ValueWTA</scope><name>_schema</name></member>
+      <member refid="classWTA_1ad93a124d289cf4d1e2801fccb01ca8ea" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_seed</name></member>
+      <member refid="classValueWTA_1a9d9e27ca84b257884e4abd5549cb1509" prot="private" virt="non-virtual"><scope>ValueWTA</scope><name>_statemap</name></member>
+      <member refid="classWTA_1a0d3422d597fbe64d655d9ced77dd7b8f" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>_table</name></member>
+      <member refid="classValueWTA_1a7266040eff2976dedcf7ce5bdc50b0c5" prot="private" virt="non-virtual"><scope>ValueWTA</scope><name>_tree</name></member>
+      <member refid="group__schemata_1ga91e272f4f9463149cd296f48e65a4185" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>abstract</name></member>
+      <member refid="group__schemata_1ga924a1c533383a7185b9d466b59c5a495" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>add</name></member>
+      <member refid="group__schemata_1ga01de1e03d09518b38ab69a2075276ae2" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>add</name></member>
+      <member refid="group__schemata_1ga074f48ad3b6e8f357ca5bf5dce242b18" prot="private" virt="non-virtual"><scope>ValueWTA</scope><name>addValueState</name></member>
+      <member refid="group__schemata_1gab8ea841b4a1e71ef70d3fda927f0507d" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>allStates</name></member>
+      <member refid="group__schemata_1ga23c3f9884c683e4bbab323208e08c672" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>begin</name></member>
+      <member refid="group__schemata_1gaec169477bdc2cf883916c38dbc18e577" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>clean</name></member>
+      <member refid="group__schemata_1ga9370cdd31619d49bfb0b18fa6b4e13b7" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>countAll</name></member>
+      <member refid="group__schemata_1ga5f3a0d868bf26b504cccc53b4d55e09a" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>CountingtoPenalty</name></member>
+      <member refid="group__schemata_1ga8dfef6b591f952f0fea9dae1f5e475c7" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>CountingtoStochastic</name></member>
+      <member refid="group__schemata_1ga0f6551b20a213eb88c6a7e822ebc5915" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>countStates</name></member>
+      <member refid="group__schemata_1ga8acbd7562a6f69e7634d6b9f9e341e4a" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>countTransitions</name></member>
+      <member refid="group__schemata_1gada977ff7270308f29852b59f38965bde" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>empty</name></member>
+      <member refid="group__schemata_1gaea41b32c37bbe955d0359039d7731fea" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>emptyStates</name></member>
+      <member refid="group__schemata_1gaf5075f5a210343d6da208f4c80421cb5" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>end</name></member>
+      <member refid="group__schemata_1gaa6598176fb91c70988bea7cf824ec157" prot="public" virt="virtual"><scope>ValueWTA</scope><name>eval</name></member>
+      <member refid="group__schemata_1gac842f196f85e3c3b079c7c0992173e46" prot="public" virt="virtual"><scope>ValueWTA</scope><name>eval</name></member>
+      <member refid="classValueWTA_1a4d5f75a4c4dd74e1b419786c30a3837a" prot="public" virt="virtual"><scope>ValueWTA</scope><name>hasType</name></member>
+      <member refid="group__schemata_1gaf3c11e99698a2cf7ef039632dc5e2b6b" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>hasWeightType</name></member>
+      <member refid="classWTA_1ae6b10f70925f14f36b839e5d8657bc5e" prot="public" virt="virtual"><scope>ValueWTA</scope><name>initial</name></member>
+      <member refid="classWTA_1a5d8ace9f515a3902d889db560f08f4c5" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>initials</name></member>
+      <member refid="group__schemata_1ga9ef4193ae949ae7c9e52d30720e37202" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>isClean</name></member>
+      <member refid="group__schemata_1ga88d07a1e47cc3ee537234861b7336dd6" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>isInitial</name></member>
+      <member refid="group__schemata_1ga4459bd6654cbe35b39df9cade16c6d58" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>isRegistered</name></member>
+      <member refid="classWTA_1a1a5cead20cba42a111ff7ab5546bc54c" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>max_post</name></member>
+      <member refid="classWTA_1a646bb2048b24358325f8e07c789af82c" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>max_pre</name></member>
+      <member refid="classWTA_1aa4eda8d626af33674c59fef22c8220c1" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>normalize</name></member>
+      <member refid="group__schemata_1ga28c9a7e35d4d516ef0f9967e773305f8" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>oftarget</name></member>
+      <member refid="group__schemata_1gaff1196a45ffd1400bc4004e27b167218" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>PenaltytoCounting</name></member>
+      <member refid="group__schemata_1gaeb713b8807bc81c6c6519ced5d531e06" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>print</name></member>
+      <member refid="group__schemata_1ga3d8d24249e26ecc8bbdaf672c6e8d3cf" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>remove</name></member>
+      <member refid="group__schemata_1ga625d9da502c5cd554797ebe9ee9023c4" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>resolution</name></member>
+      <member refid="group__schemata_1gab201fee50d73843159cbef5f453838f0" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>size</name></member>
+      <member refid="group__schemata_1gae6fb2dbd82ed290528b90ee7bb4b6ccc" prot="protected" virt="non-virtual"><scope>ValueWTA</scope><name>step</name></member>
+      <member refid="group__schemata_1ga0bddc6750b18023be6976bd5cd46a2f5" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>StochastictoPenalty</name></member>
+      <member refid="group__schemata_1gab35a1ee1d6e2b2b5d82b930b4d70340f" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>ValueWTA</name></member>
+      <member refid="group__schemata_1gabfe48e6398d83c03161b664dadcf8fcd" prot="public" virt="virtual"><scope>ValueWTA</scope><name>weight_one</name></member>
+      <member refid="group__schemata_1ga762b5bbee46468815993417ca9b3d9c6" prot="public" virt="virtual"><scope>ValueWTA</scope><name>weight_zero</name></member>
+      <member refid="group__schemata_1ga5636da911ebbe8772c5444172d56800d" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>WTA</name></member>
+      <member refid="group__schemata_1ga6eeb789b8c8aa8404f611a6fed61faca" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>WTA</name></member>
+      <member refid="group__schemata_1gaacdee6c2292baea7f712c84a5e205432" prot="public" virt="non-virtual"><scope>ValueWTA</scope><name>~WTA</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,147 @@
+\hypertarget{classCountingWeight}{}\section{Counting\+Weight Class Reference}
+\label{classCountingWeight}\index{CountingWeight@{CountingWeight}}
+
+
+domain \+: vectors of fixed dim k $>$ 0  
+
+
+
+
+{\ttfamily \#include $<$Counting\+Weight.\+hpp$>$}
+
+Inheritance diagram for Counting\+Weight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCountingWeight}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Counting\+Weight} (const \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} \&)
+\item 
+\mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} \& \mbox{\hyperlink{group__weight_gabde05f9a8f2eb526e5154c4f3480205b}{operator=}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} \&rhs)
+\item 
+\mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} $\ast$ {\bfseries clone} () const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_ga1d225aef0e74c70d8ae73164de4f56e2}{make}} (double v) const
+\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_ga76eb9cd401bbeba9450469a889dfb7eb}{get\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for add (absorbing element for mult) wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_ga0a589d8beac0f16f54f7e4f451adc843}{get\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for mult wrapped in a \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{group__weight_gabb8ca43a6821de970e8f6b23c848c804}{norm}} () const
+\item 
+virtual void \mbox{\hyperlink{group__weight_gabb65ce9f0f34112159f6689a36594470}{scalar}} (double)
+\begin{DoxyCompactList}\small\item\em add to each component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCountingWeight_ab9749abc9fbcee9ed064a9be33879829}{invert}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga62b599ef59770e981d17d565e6727ca9}{zero}} () const
+\item 
+bool \mbox{\hyperlink{classCountingWeight_a4b5b3fa15f85d10d35f062225b35323d}{fail}} () const
+\item 
+bool \mbox{\hyperlink{group__weight_ga41f35b8902b2474f1ac39878a40f5ca5}{error}} () const
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga5189380be1ac03126180846e3a8fd1cb}{one}} () const
+\item 
+\mbox{\Hypertarget{classCountingWeight_a1b0bd542683b909c2dc4d35bbbf42887}\label{classCountingWeight_a1b0bd542683b909c2dc4d35bbbf42887}} 
+virtual size\+\_\+t {\bfseries dim} () const
+\item 
+\mbox{\Hypertarget{classCountingWeight_aedc7b4e3519adc6e29bcabd4d8ba719a}\label{classCountingWeight_aedc7b4e3519adc6e29bcabd4d8ba719a}} 
+virtual bool {\bfseries has\+Type} (std\+::string code) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWeight}{Weight}} {\bfseries make\+\_\+one} (size\+\_\+t)
+\item 
+static \mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_ga12cda7b4188f3917d256808fd42c3364}{make\+\_\+unit}} (size\+\_\+t dim, size\+\_\+t i)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCountingWeight_a55bf303a40883d4a5c8be74b6d10b928}\label{classCountingWeight_a55bf303a40883d4a5c8be74b6d10b928}} 
+enum {\bfseries C\+W\+Type} \{ {\bfseries V\+E\+C\+T\+OR}, 
+{\bfseries F\+A\+IL}, 
+{\bfseries E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__weight_gaff2b14e164c777c04be1a0e3c73b71fa}{Counting\+Weight}} (C\+W\+Type t, size\+\_\+t dim)
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga33f06a811859bdbbf1c0ad2e34299df9}{equal}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual bool \mbox{\hyperlink{group__weight_ga149e9ae84c83b9235d512c68fec54d1c}{smaller}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs) const
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga01ca779f7d5378564f4419150d7ae1f5}{add}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\item 
+virtual void \mbox{\hyperlink{group__weight_ga102af16b814daad826afb91d6f6c75b3}{mult}} (const \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$rhs)
+\item 
+virtual void {\bfseries print} (std\+::ostream \&) const
+\item 
+virtual void {\bfseries rawprint} (std\+::ostream \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCountingWeight_a3b1e3ac9e87f34af7d041b8eac01bfb1}\label{classCountingWeight_a3b1e3ac9e87f34af7d041b8eac01bfb1}} 
+C\+W\+Type {\bfseries \+\_\+type}
+\item 
+\mbox{\Hypertarget{classCountingWeight_ab1f3033b8d14a5389572f158a2b8b757}\label{classCountingWeight_ab1f3033b8d14a5389572f158a2b8b757}} 
+size\+\_\+t {\bfseries \+\_\+dim}
+\item 
+\mbox{\Hypertarget{classCountingWeight_a951d677729f631cd63505f10fac4cd31}\label{classCountingWeight_a951d677729f631cd63505f10fac4cd31}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries \+\_\+counters}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCountingWeight_ab340452fea725573e28644234d68147e}\label{classCountingWeight_ab340452fea725573e28644234d68147e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{classCountingWeight}{Counting\+Weight}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+domain \+: vectors of fixed dim k $>$ 0 
+
+
+\begin{DoxyItemize}
+\item F\+A\+IL = stuck (0 run in state s for 1 tree)
+\item E\+R\+R\+OR = ambiguity in grammar (2 runs for 1 tree)
+\end{DoxyItemize}
+
+zero = F\+A\+IL add \+: for all x, y vectors dim k x + y = E\+R\+R\+OR E\+R\+R\+OR absorbing for + one = null vector of dim k mult \+: for all x, y vectors dim k x . y = component-\/wise sum x . F\+A\+IL = F\+A\+IL . x = F\+A\+IL F\+A\+IL . F\+A\+IL = F\+A\+IL E\+R\+R\+OR absorbing for . 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCountingWeight_ab9749abc9fbcee9ed064a9be33879829}\label{classCountingWeight_ab9749abc9fbcee9ed064a9be33879829}} 
+\index{CountingWeight@{CountingWeight}!invert@{invert}}
+\index{invert@{invert}!CountingWeight@{CountingWeight}}
+\subsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily virtual void Counting\+Weight\+::invert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyWarning}{Warning}
+do not use 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classLetterWeight_a76a013deb82c8c1511cb6a68e5a06218}{Letter\+Weight}}.
+
+\mbox{\Hypertarget{classCountingWeight_a4b5b3fa15f85d10d35f062225b35323d}\label{classCountingWeight_a4b5b3fa15f85d10d35f062225b35323d}} 
+\index{CountingWeight@{CountingWeight}!fail@{fail}}
+\index{fail@{fail}!CountingWeight@{CountingWeight}}
+\subsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily bool Counting\+Weight\+::fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+this weight is the error value 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Counting\+Weight.\+hpp\item 
+src/weight/Counting\+Weight.\+cpp\end{DoxyCompactItemize}

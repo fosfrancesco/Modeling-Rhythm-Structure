@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="PerformanceModel_8hpp" kind="file" language="C++">
+    <compoundname>PerformanceModel.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="init_8hpp" local="yes">init.hpp</includes>
+    <includes refid="Interval_8hpp" local="yes">Interval.hpp</includes>
+    <includes refid="AlignedInterval_8hpp" local="yes">AlignedInterval.hpp</includes>
+    <includes refid="ViterbiWeight_8hpp" local="yes">ViterbiWeight.hpp</includes>
+    <includedby refid="ComboWTA_8hpp" local="yes">src/schemata/ComboWTA.hpp</includedby>
+    <includedby refid="PtrSI_8hpp" local="yes">src/table/PtrSI.hpp</includedby>
+    <includedby refid="PtrSIP_8hpp" local="yes">src/table/PtrSIP.hpp</includedby>
+    <includedby refid="PerformanceModel_8cpp" local="yes">src/weight/PerformanceModel.cpp</includedby>
+    <incdepgraph>
+      <node id="718">
+        <label>assert.h</label>
+      </node>
+      <node id="720">
+        <label>math.h</label>
+      </node>
+      <node id="719">
+        <label>iostream</label>
+      </node>
+      <node id="716">
+        <label>src/weight/PerformanceModel.hpp</label>
+        <link refid="PerformanceModel_8hpp"/>
+        <childnode refid="717" relation="include">
+        </childnode>
+        <childnode refid="718" relation="include">
+        </childnode>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="720" relation="include">
+        </childnode>
+      </node>
+      <node id="717">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classPerfoWeight" prot="public">PerfoWeight</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/weight/PerformanceModel.hpp"/>
+  </compounddef>
+</doxygen>

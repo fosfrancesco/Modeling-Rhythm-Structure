@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCountingWeight" kind="class" language="C++" prot="public">
+    <compoundname>CountingWeight</compoundname>
+    <basecompoundref refid="classLetterWeight" prot="public" virt="non-virtual">LetterWeight</basecompoundref>
+    <includes local="no">CountingWeight.hpp</includes>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>CWType</name>
+        <enumvalue id="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928a91cea491b987312f0ea4c62382fcc192" prot="protected">
+          <name>VECTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928a9771a9b5ccd95fc7c9ce926e966653a0" prot="protected">
+          <name>FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928acfc3c0b55ae02968f3620c1910ba957e" prot="protected">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="102" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classCountingWeight_1a3b1e3ac9e87f34af7d041b8eac01bfb1" prot="protected" static="no" mutable="no">
+        <type>CWType</type>
+        <definition>CWType CountingWeight::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="105" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCountingWeight_1ab1f3033b8d14a5389572f158a2b8b757" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CountingWeight::_dim</definition>
+        <argsstring></argsstring>
+        <name>_dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="107" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCountingWeight_1a951d677729f631cd63505f10fac4cd31" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; CountingWeight::_counters</definition>
+        <argsstring></argsstring>
+        <name>_counters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="109" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__weight_1ga1c356f04569b90215755f5d1289c78aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountingWeight::CountingWeight</definition>
+        <argsstring>(const CountingWeight &amp;)</argsstring>
+        <name>CountingWeight</name>
+        <param>
+          <type>const <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> &amp;</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="44" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gaf006e414e6fee4c338bea085e0bceeba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountingWeight::~CountingWeight</definition>
+        <argsstring>()</argsstring>
+        <name>~CountingWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="46" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gaa78f8a12ada406ba6a331acc42baa052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> &amp;</type>
+        <definition>CountingWeight &amp; CountingWeight::operator=</definition>
+        <argsstring>(const CountingWeight &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="48" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabde05f9a8f2eb526e5154c4f3480205b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> &amp;</type>
+        <definition>CountingWeight &amp; CountingWeight::operator=</definition>
+        <argsstring>(const LetterWeight &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="51" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="63" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga7e6061ad27a65ee071647866da6a971f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> *</type>
+        <definition>CountingWeight * CountingWeight::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <reimplements refid="classLetterWeight_1a23cdcf32e0f0782dbb33b2a65cf9de77">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="53" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga1d225aef0e74c70d8ae73164de4f56e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWeight::make</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>make</name>
+        <reimplements refid="classLetterWeight_1af1f898e0845f59299440fc50a58fd2f1">make</reimplements>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ERROR should not be used </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="57" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga76eb9cd401bbeba9450469a889dfb7eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWeight::get_zero</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero</name>
+        <reimplements refid="classLetterWeight_1a5caa3123e7b1ac3369c30e33f511a554">get_zero</reimplements>
+        <briefdescription>
+<para>return the neutral element for add (absorbing element for mult) wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="68" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga0a589d8beac0f16f54f7e4f451adc843" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWeight::get_one</definition>
+        <argsstring>() const</argsstring>
+        <name>get_one</name>
+        <reimplements refid="classLetterWeight_1a4660750188a19b63b24569b6a584a5ca">get_one</reimplements>
+        <briefdescription>
+<para>return the neutral element for mult wrapped in a <ref refid="classWeight" kindref="compound">Weight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="70" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabb8ca43a6821de970e8f6b23c848c804" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double CountingWeight::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <reimplements refid="classLetterWeight_1a6ec9398f9fc437e222207644056fb4de">norm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not use </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="74" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="167" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1gabb65ce9f0f34112159f6689a36594470" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CountingWeight::scalar</definition>
+        <argsstring>(double)</argsstring>
+        <name>scalar</name>
+        <reimplements refid="classLetterWeight_1aef0e684851ba69336a3e86c93c5a6a58">scalar</reimplements>
+        <param>
+          <type>double</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+<para>add to each component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="77" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="191" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classCountingWeight_1ab9749abc9fbcee9ed064a9be33879829" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CountingWeight::invert</definition>
+        <argsstring>()</argsstring>
+        <name>invert</name>
+        <reimplements refid="classLetterWeight_1a76a013deb82c8c1511cb6a68e5a06218">invert</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>do not use </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="80" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga62b599ef59770e981d17d565e6727ca9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::zero</definition>
+        <argsstring>() const</argsstring>
+        <name>zero</name>
+        <reimplements refid="group__weight_1gabaad113da06b47c4b291558d05da6aa6">zero</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight is zero (FAIL) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="83" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classCountingWeight_1a4b5b3fa15f85d10d35f062225b35323d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::fail</definition>
+        <argsstring>() const</argsstring>
+        <name>fail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight is the error value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="86" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga41f35b8902b2474f1ac39878a40f5ca5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::error</definition>
+        <argsstring>() const</argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight is the error value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="89" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="139" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga5189380be1ac03126180846e3a8fd1cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::one</definition>
+        <argsstring>() const</argsstring>
+        <name>one</name>
+        <reimplements refid="group__weight_1ga53200866c20ae5e4aae7ab8acd8f3ad0">one</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this weight is one (null vector) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="92" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="145" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classCountingWeight_1a1b0bd542683b909c2dc4d35bbbf42887" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t CountingWeight::dim</definition>
+        <argsstring>() const</argsstring>
+        <name>dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="94" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classCountingWeight_1aedc7b4e3519adc6e29bcabd4d8ba719a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool CountingWeight::hasType</definition>
+        <argsstring>(std::string code) const</argsstring>
+        <name>hasType</name>
+        <reimplements refid="classLetterWeight_1a7c087b5999657545934b72660928a2ee">hasType</reimplements>
+        <param>
+          <type>std::string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="96" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="96" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="group__weight_1ga6963921223bbd482ce8454ffa6d6fda5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWeight::make_one</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>make_one</name>
+        <param>
+          <type>size_t</type>
+          <defname>dim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="61" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga12cda7b4188f3917d256808fd42c3364" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWeight" kindref="compound">Weight</ref></type>
+        <definition>Weight CountingWeight::make_unit</definition>
+        <argsstring>(size_t dim, size_t i)</argsstring>
+        <name>make_unit</name>
+        <param>
+          <type>size_t</type>
+          <declname>dim</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be &gt; 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be &gt;=0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be &lt; dim </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="66" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="107" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classCountingWeight_1ab340452fea725573e28644234d68147e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const CountingWeight &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="99" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="432" bodyend="462"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__weight_1gaff2b14e164c777c04be1a0e3c73b71fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountingWeight::CountingWeight</definition>
+        <argsstring>(CWType t, size_t dim)</argsstring>
+        <name>CountingWeight</name>
+        <param>
+          <type>CWType</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>must dim &gt; 0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="115" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="21" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga33f06a811859bdbbf1c0ad2e34299df9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::equal</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>equal</name>
+        <reimplements refid="group__weight_1gaf00322921db3c5212f8d5ca63081d689">equal</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="118" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="200" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga149e9ae84c83b9235d512c68fec54d1c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CountingWeight::smaller</definition>
+        <argsstring>(const LetterWeight *rhs) const</argsstring>
+        <name>smaller</name>
+        <reimplements refid="group__weight_1ga0ef9dd9bcd765c0e3c50b384b34d88d2">smaller</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a <ref refid="classCountingWeight" kindref="compound">CountingWeight</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>do not use </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="122" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="249" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga01ca779f7d5378564f4419150d7ae1f5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CountingWeight::add</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>add</name>
+        <reimplements refid="group__weight_1ga49b09c8f364a2ebf1d154f606d9aaea8">add</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>FAIL is neutral</para>
+</listitem><listitem><para>ERROR absorbing</para>
+</listitem><listitem><para>VECTOR + VECTOR = ERROR <simplesect kind="warning"><para>this and rhs must have same dimension </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="128" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="306" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga102af16b814daad826afb91d6f6c75b3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CountingWeight::mult</definition>
+        <argsstring>(const LetterWeight *rhs)</argsstring>
+        <name>mult</name>
+        <reimplements refid="group__weight_1gad1208e74e54ca8fc2f361e6fc106df01">mult</reimplements>
+        <param>
+          <type>const <ref refid="classLetterWeight" kindref="compound">LetterWeight</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>VECTOR . VECTOR = VECTOR with component-wise sum</para>
+</listitem><listitem><para>VECTOR . FAIL = FAIL . VECTOR = FAIL</para>
+</listitem><listitem><para>FAIL . FAIL = FAIL</para>
+</listitem><listitem><para>ERROR absorbing <simplesect kind="warning"><para>this and rhs must have same dimension </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="135" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="350" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga00d9ffa71ae947eb191e118570049b73" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CountingWeight::print</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print</name>
+        <reimplements refid="group__weight_1gabef24fcc2eb0c72c420e83e6db625545">print</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="137" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="group__weight_1ga30707b9335976941e15aef45c4db86bf" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CountingWeight::rawprint</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>rawprint</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/weight/CountingWeight.hpp" line="138" column="1" bodyfile="src/weight/CountingWeight.cpp" bodystart="407" bodyend="430"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>domain : vectors of fixed dim k &gt; 0 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>FAIL = stuck (0 run in state s for 1 tree)</para>
+</listitem><listitem><para>ERROR = ambiguity in grammar (2 runs for 1 tree)</para>
+</listitem></itemizedlist>
+</para>
+<para>zero = FAIL add : for all x, y vectors dim k x + y = ERROR ERROR absorbing for + one = null vector of dim k mult : for all x, y vectors dim k x . y = component-wise sum x . FAIL = FAIL . x = FAIL FAIL . FAIL = FAIL ERROR absorbing for . </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="40">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="39">
+        <label>CountingWeight</label>
+        <link refid="classCountingWeight"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="42">
+        <label>LetterWeight</label>
+        <link refid="classLetterWeight"/>
+      </node>
+      <node id="41">
+        <label>CountingWeight</label>
+        <link refid="classCountingWeight"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/weight/CountingWeight.hpp" line="42" column="1" bodyfile="src/weight/CountingWeight.hpp" bodystart="41" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classCountingWeight_1a951d677729f631cd63505f10fac4cd31" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>_counters</name></member>
+      <member refid="classCountingWeight_1ab1f3033b8d14a5389572f158a2b8b757" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>_dim</name></member>
+      <member refid="classCountingWeight_1a3b1e3ac9e87f34af7d041b8eac01bfb1" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>_type</name></member>
+      <member refid="group__weight_1ga01ca779f7d5378564f4419150d7ae1f5" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>add</name></member>
+      <member refid="group__weight_1ga7e6061ad27a65ee071647866da6a971f" prot="public" virt="virtual"><scope>CountingWeight</scope><name>clone</name></member>
+      <member refid="group__weight_1ga1c356f04569b90215755f5d1289c78aa" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>CountingWeight</name></member>
+      <member refid="group__weight_1gaff2b14e164c777c04be1a0e3c73b71fa" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>CountingWeight</name></member>
+      <member refid="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>CWType</name></member>
+      <member refid="classCountingWeight_1a1b0bd542683b909c2dc4d35bbbf42887" prot="public" virt="virtual"><scope>CountingWeight</scope><name>dim</name></member>
+      <member refid="group__weight_1ga33f06a811859bdbbf1c0ad2e34299df9" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>equal</name></member>
+      <member refid="group__weight_1ga41f35b8902b2474f1ac39878a40f5ca5" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>error</name></member>
+      <member refid="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928acfc3c0b55ae02968f3620c1910ba957e" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>ERROR</name></member>
+      <member refid="classCountingWeight_1a4b5b3fa15f85d10d35f062225b35323d" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>fail</name></member>
+      <member refid="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928a9771a9b5ccd95fc7c9ce926e966653a0" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>FAIL</name></member>
+      <member refid="group__weight_1ga0a589d8beac0f16f54f7e4f451adc843" prot="public" virt="virtual"><scope>CountingWeight</scope><name>get_one</name></member>
+      <member refid="group__weight_1ga76eb9cd401bbeba9450469a889dfb7eb" prot="public" virt="virtual"><scope>CountingWeight</scope><name>get_zero</name></member>
+      <member refid="classCountingWeight_1aedc7b4e3519adc6e29bcabd4d8ba719a" prot="public" virt="virtual"><scope>CountingWeight</scope><name>hasType</name></member>
+      <member refid="classCountingWeight_1ab9749abc9fbcee9ed064a9be33879829" prot="public" virt="virtual"><scope>CountingWeight</scope><name>invert</name></member>
+      <member refid="classLetterWeight_1a2f9af55d38b8e7fd73af6cbbcb50971c" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>LetterWeight</name></member>
+      <member refid="classLetterWeight_1adaab28cd9be9b7ef9164bf3b33c58815" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>LetterWeight</name></member>
+      <member refid="group__weight_1ga1d225aef0e74c70d8ae73164de4f56e2" prot="public" virt="virtual"><scope>CountingWeight</scope><name>make</name></member>
+      <member refid="group__weight_1ga6963921223bbd482ce8454ffa6d6fda5" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>make_one</name></member>
+      <member refid="group__weight_1ga12cda7b4188f3917d256808fd42c3364" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>make_unit</name></member>
+      <member refid="group__weight_1ga102af16b814daad826afb91d6f6c75b3" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>mult</name></member>
+      <member refid="group__weight_1gabb8ca43a6821de970e8f6b23c848c804" prot="public" virt="virtual"><scope>CountingWeight</scope><name>norm</name></member>
+      <member refid="group__weight_1ga5189380be1ac03126180846e3a8fd1cb" prot="public" virt="virtual"><scope>CountingWeight</scope><name>one</name></member>
+      <member refid="classCountingWeight_1ab340452fea725573e28644234d68147e" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>operator&lt;&lt;</name></member>
+      <member refid="group__weight_1gaa78f8a12ada406ba6a331acc42baa052" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1gabde05f9a8f2eb526e5154c4f3480205b" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>operator=</name></member>
+      <member refid="group__weight_1ga00d9ffa71ae947eb191e118570049b73" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>print</name></member>
+      <member refid="group__weight_1ga30707b9335976941e15aef45c4db86bf" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>rawprint</name></member>
+      <member refid="group__weight_1gabb65ce9f0f34112159f6689a36594470" prot="public" virt="virtual"><scope>CountingWeight</scope><name>scalar</name></member>
+      <member refid="group__weight_1ga149e9ae84c83b9235d512c68fec54d1c" prot="protected" virt="virtual"><scope>CountingWeight</scope><name>smaller</name></member>
+      <member refid="classCountingWeight_1a55bf303a40883d4a5c8be74b6d10b928a91cea491b987312f0ea4c62382fcc192" prot="protected" virt="non-virtual"><scope>CountingWeight</scope><name>VECTOR</name></member>
+      <member refid="group__weight_1ga62b599ef59770e981d17d565e6727ca9" prot="public" virt="virtual"><scope>CountingWeight</scope><name>zero</name></member>
+      <member refid="group__weight_1gaf006e414e6fee4c338bea085e0bceeba" prot="public" virt="non-virtual"><scope>CountingWeight</scope><name>~CountingWeight</name></member>
+      <member refid="classLetterWeight_1a953daf9c03224b05f6e4deae78100e53" prot="public" virt="virtual"><scope>CountingWeight</scope><name>~LetterWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

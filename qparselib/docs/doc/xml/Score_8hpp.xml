@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Score_8hpp" kind="file" language="C++">
+    <compoundname>Score.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="ScoreMeter_8hpp" local="yes">ScoreMeter.hpp</includes>
+    <includes refid="Part_8hpp" local="yes">Part.hpp</includes>
+    <includes refid="Measure_8hpp" local="yes">Measure.hpp</includes>
+    <includedby refid="MEI_8hpp" local="yes">src/output/MEI.hpp</includedby>
+    <includedby refid="ParserMultibar1bestSIPBU_8hpp" local="yes">src/parsers/ParserMultibar1bestSIPBU.hpp</includedby>
+    <includedby refid="Part_8cpp" local="yes">src/scoremodel/Part.cpp</includedby>
+    <includedby refid="Score_8cpp" local="yes">src/scoremodel/Score.cpp</includedby>
+    <includedby refid="Voice_8cpp" local="yes">src/scoremodel/Voice.cpp</includedby>
+    <includedby refid="meiutil-newparser_8cpp" local="yes">src/targets/mei/meiutil-newparser.cpp</includedby>
+    <includedby refid="meiutil-v0_8cpp" local="yes">src/targets/mei/meiutil-v0.cpp</includedby>
+    <includedby refid="meiutil_8cpp" local="yes">src/targets/mei/meiutil.cpp</includedby>
+    <incdepgraph>
+      <node id="347">
+        <label>src/scoremodel/Score.hpp</label>
+        <link refid="Score_8hpp"/>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+      </node>
+      <node id="349">
+        <label>vector</label>
+      </node>
+      <node id="348">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classScoreModel_1_1Score" prot="public">ScoreModel::Score</innerclass>
+    <innernamespace refid="namespaceScoreModel">ScoreModel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/scoremodel/Score.hpp"/>
+  </compounddef>
+</doxygen>

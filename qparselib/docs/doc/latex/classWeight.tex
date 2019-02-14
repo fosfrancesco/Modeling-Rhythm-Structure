@@ -1,0 +1,162 @@
+\hypertarget{classWeight}{}\section{Weight Class Reference}
+\label{classWeight}\index{Weight@{Weight}}
+
+
+A class of polymorphic weight domains for tree series.  
+
+
+
+
+{\ttfamily \#include $<$Weight.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWeight_ac33fb795eaee8c56d2e4179020a0d2eb}\label{classWeight_ac33fb795eaee8c56d2e4179020a0d2eb}} 
+\mbox{\hyperlink{classWeight_ac33fb795eaee8c56d2e4179020a0d2eb}{Weight}} (\mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$w=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em wrapper and unknown weight constructor (empty envelope, default). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__weight_ga9283a1d2c4b91605a0c60a2c7033cb2c}{Weight}} (const \mbox{\hyperlink{classWeight}{Weight}} \&w)
+\begin{DoxyCompactList}\small\item\em clone the letter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeight}{Weight}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\item 
+\mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$ \mbox{\hyperlink{classWeight_a6b38fd1721594ffc303858e6201d1b2b}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classWeight}{Weight}} $\ast$ {\bfseries clone} () const
+\item 
+bool \mbox{\hyperlink{group__weight_ga2185b6a5b1957fcab19bf6281adeed47}{unknown}} () const
+\begin{DoxyCompactList}\small\item\em unknown weight is a \mbox{\hyperlink{classWeight}{Weight}} with N\+U\+LL letter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_gaf8f62c5cee5ffa37e30ef7239a33b729}{make}} (double v) const
+\item 
+bool \mbox{\hyperlink{group__weight_gad236331c6f6ca8dd9fced5ffffd79f35}{has\+Type}} (std\+::string code) const
+\item 
+double \mbox{\hyperlink{group__weight_ga68bd9621500f31ba5f0fbe04dc5a00e4}{norm}} ()
+\item 
+void \mbox{\hyperlink{group__weight_ga5d63ead0a1d21ee5628c643fca773903}{scalar}} (double)
+\begin{DoxyCompactList}\small\item\em scalar multiplication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__weight_gad0c93ac5f963b02ca3f6c1d5d02f5d61}{zero}} () const
+\begin{DoxyCompactList}\small\item\em this weight is neutral element for + (absorbing element for $\ast$). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_gaf7214d45d290b39f6bb2555fc46adf55}{get\+\_\+zero}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for add (absorbing element for mult) for the \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}, if any otherwise return unknown \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeight_a840aea7512916a91b6baf0a0772b46db}{operator+=}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs)
+\item 
+bool \mbox{\hyperlink{group__weight_ga0fb0a47475e245e955aa6e7926f7a0f6}{one}} () const
+\begin{DoxyCompactList}\small\item\em this weight is neutral element for $\ast$ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeight}{Weight}} \mbox{\hyperlink{group__weight_ga48012227b61aa4c10064bed70936d78e}{get\+\_\+one}} () const
+\begin{DoxyCompactList}\small\item\em return the neutral element for mult for the \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}, if any otherwise return unknown \mbox{\hyperlink{classWeight}{Weight}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeight_a4968f430abd50a0eaea15d01422ef0bb}{operator$\ast$=}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs)
+\item 
+void \mbox{\hyperlink{group__weight_gabc3309e134f0fdda38ebbcb12d350a28}{invert}} ()
+\begin{DoxyCompactList}\small\item\em multiplicative inverse, for semifields \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__weight_gaace5b230ea1544aac7b049091e142bd3}{clear}} ()
+\begin{DoxyCompactList}\small\item\em delete the letter. \end{DoxyCompactList}\item 
+std\+::string {\bfseries save\+\_\+to\+\_\+string} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__weight_ga11236e38c2dc7cc66a367c2ea5921c1e}{equal}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em binary operators are defined only between descendant Weights of same typeid \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__weight_gab3a3a5fb989514e5673582b9a7107d97}{smaller}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs) const
+\item 
+void \mbox{\hyperlink{group__weight_ga261db18abff49cac38bd02b8f7af94db}{add}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs)
+\item 
+void \mbox{\hyperlink{group__weight_ga7188f571e507d7f31b76de7faebdb78f}{mult}} (const \mbox{\hyperlink{classWeight}{Weight}} \&rhs)
+\item 
+void {\bfseries print} (std\+::ostream \&o) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWeight_a01c1d2af2914d5429696a79f891318ea}\label{classWeight_a01c1d2af2914d5429696a79f891318ea}} 
+\mbox{\hyperlink{classLetterWeight}{Letter\+Weight}} $\ast$ \mbox{\hyperlink{classWeight_a01c1d2af2914d5429696a79f891318ea}{\+\_\+letter}}
+\begin{DoxyCompactList}\small\item\em letter always points to an object of one of the derived $\ast$\+Weight classes never to an object of the \mbox{\hyperlink{classWeight}{Weight}} base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classWeight_a2908b386adb4cbc893dcf9f631b8a85d}{operator==}} (const \mbox{\hyperlink{classWeight}{Weight}} \&, const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\item 
+bool \mbox{\hyperlink{classWeight_af75080233bdd2e853a5f3b2b80e262af}{operator$<$}} (const \mbox{\hyperlink{classWeight}{Weight}} \&, const \mbox{\hyperlink{classWeight}{Weight}} \&)
+\item 
+std\+::ostream \& \mbox{\hyperlink{classWeight_a5fa6fc187426e2cc6aa40f7acddf8455}{operator$<$$<$}} (std\+::ostream \&o, const \mbox{\hyperlink{classWeight}{Weight}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class of polymorphic weight domains for tree series. 
+
+Every concrete weight domain must be a derived class of \mbox{\hyperlink{classWeight}{Weight}}.
+
+the type \mbox{\hyperlink{classWeight}{Weight}} is the union of an unknown weight value and different weight domain.
+
+it is implemented as an envelope, containing either
+\begin{DoxyItemize}
+\item a null letter. in this case, we have an unknown weight value.
+\item a non-\/null letter, pointing to an object of a derived weight class (concrete weight). In this case, the envelope is a wrapper for the object of the derived class, corresponding to an actual (known) weight value. see Envelope Letter Idiom (wikibooks)
+\end{DoxyItemize}
+
+Client code only uses the \mbox{\hyperlink{classWeight}{Weight}} class (not the derived classes), except for allocation of new concrete weights values by \mbox{\hyperlink{classWeight}{Weight(new Derived\+Weight(...))}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeight_a6b38fd1721594ffc303858e6201d1b2b}\label{classWeight_a6b38fd1721594ffc303858e6201d1b2b}} 
+\index{Weight@{Weight}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLetterWeight}{Letter\+Weight}}$\ast$ Weight\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyWarning}{Warning}
+must not be unknown 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classWeight_a840aea7512916a91b6baf0a0772b46db}\label{classWeight_a840aea7512916a91b6baf0a0772b46db}} 
+\index{Weight@{Weight}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily void Weight\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__weight_ga261db18abff49cac38bd02b8f7af94db}{add}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWeight_a4968f430abd50a0eaea15d01422ef0bb}\label{classWeight_a4968f430abd50a0eaea15d01422ef0bb}} 
+\index{Weight@{Weight}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily void Weight\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__weight_ga7188f571e507d7f31b76de7faebdb78f}{mult}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classWeight_a2908b386adb4cbc893dcf9f631b8a85d}\label{classWeight_a2908b386adb4cbc893dcf9f631b8a85d}} 
+\index{Weight@{Weight}!operator==@{operator==}}
+\index{operator==@{operator==}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__weight_ga11236e38c2dc7cc66a367c2ea5921c1e}{equal}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWeight_af75080233bdd2e853a5f3b2b80e262af}\label{classWeight_af75080233bdd2e853a5f3b2b80e262af}} 
+\index{Weight@{Weight}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__weight_gab3a3a5fb989514e5673582b9a7107d97}{smaller}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWeight_a5fa6fc187426e2cc6aa40f7acddf8455}\label{classWeight_a5fa6fc187426e2cc6aa40f7acddf8455}} 
+\index{Weight@{Weight}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Weight@{Weight}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \mbox{\hyperlink{classWeight}{Weight}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxySeeAlso}{See also}
+print 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/weight/Weight.\+hpp\item 
+src/weight/Weight.\+cpp\end{DoxyCompactItemize}

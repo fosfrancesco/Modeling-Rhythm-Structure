@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classEventLabel" kind="class" language="C++" prot="public">
+    <compoundname>EventLabel</compoundname>
+    <basecompoundref refid="classLabel" prot="private" virt="non-virtual">Label</basecompoundref>
+    <includes local="no">Label.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEventLabel_1a7b230a35806de51d10366eef5d5bb013" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int EventLabel::_nbe</definition>
+        <argsstring></argsstring>
+        <name>_nbe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="175" column="1" bodyfile="src/output/Label.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEventLabel_1a2bd0abe730ee34862f16fa341d2e3d58" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Event * &gt;</type>
+        <definition>std::vector&lt;Event*&gt; EventLabel::_events</definition>
+        <argsstring></argsstring>
+        <name>_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="179" column="1" bodyfile="src/output/Label.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__output_1ga4da9c2ee628ede0e5d20e9f0155884e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventLabel::EventLabel</definition>
+        <argsstring>()</argsstring>
+        <name>EventLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="155" column="1" bodyfile="src/output/Label.cpp" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad5d7a4117cae3ac10b55ea051aa92848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventLabel::EventLabel</definition>
+        <argsstring>(unsigned int n=0)</argsstring>
+        <name>EventLabel</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="160" column="1" bodyfile="src/output/Label.cpp" bodystart="168" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gae8b849bfdbed392ff2171126354210a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EventLabel::nbGraceNotes</definition>
+        <argsstring>() const</argsstring>
+        <name>nbGraceNotes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="163" column="1" bodyfile="src/output/Label.cpp" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga77779608bf4588f37330cecaf4cc2f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventLabel::addGraceNotes</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>addGraceNotes</name>
+        <param>
+          <type>unsigned int</type>
+          <defname>g</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="167" column="1" bodyfile="src/output/Label.cpp" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga6a71e2488e33f2556ee9051d0bc88820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventLabel::pushEvent</definition>
+        <argsstring>(Event *)</argsstring>
+        <name>pushEvent</name>
+        <param>
+          <type>Event *</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/output/Label.hpp" line="169" column="1" bodyfile="src/output/Label.cpp" bodystart="190" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>TBR (NOT USED) </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="88">
+        <label>EventLabel</label>
+        <link refid="classEventLabel"/>
+        <childnode refid="89" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>Label</label>
+        <link refid="classLabel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="90">
+        <label>EventLabel</label>
+        <link refid="classEventLabel"/>
+        <childnode refid="91" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>Label</label>
+        <link refid="classLabel"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/output/Label.hpp" line="152" column="1" bodyfile="src/output/Label.hpp" bodystart="151" bodyend="181"/>
+    <listofallmembers>
+      <member refid="classLabel_1a072ec434ffc5fbe8bc4f8618e559dda6" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>_ar</name></member>
+      <member refid="classEventLabel_1a2bd0abe730ee34862f16fa341d2e3d58" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>_events</name></member>
+      <member refid="classEventLabel_1a7b230a35806de51d10366eef5d5bb013" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>_nbe</name></member>
+      <member refid="classLabel_1a6a1180995fe66be113d8433f40251715" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>_type</name></member>
+      <member refid="group__output_1ga3724371343de270b6f488ca47d11b917" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>abstract</name></member>
+      <member refid="group__output_1ga07b8cb2137bfde63b8f2686ed6f20db0" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>abstract</name></member>
+      <member refid="group__output_1ga77779608bf4588f37330cecaf4cc2f1e" prot="public" virt="non-virtual"><scope>EventLabel</scope><name>addGraceNotes</name></member>
+      <member refid="group__output_1ga189208973cef74bb65357535d43885ed" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>arity</name></member>
+      <member refid="group__output_1ga56a227805fd6d43d1f2618e871a4108c" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>continuation</name></member>
+      <member refid="group__output_1ga4da9c2ee628ede0e5d20e9f0155884e9" prot="public" virt="non-virtual"><scope>EventLabel</scope><name>EventLabel</name></member>
+      <member refid="group__output_1gad5d7a4117cae3ac10b55ea051aa92848" prot="public" virt="non-virtual"><scope>EventLabel</scope><name>EventLabel</name></member>
+      <member refid="classLabel_1ae6629ed1895cbb2a95cdf284cbd18cdd" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>isInner</name></member>
+      <member refid="classLabel_1aece2f72aeab3b5e59371d270acd66ef7" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>isLeaf</name></member>
+      <member refid="classLabel_1a46339b9942fe44345634652e245807b0" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>kind</name></member>
+      <member refid="group__output_1gaa2d2c8bb6a5bd48679122a220a9d8d00" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>Label</name></member>
+      <member refid="group__output_1ga686ea0e366bdefcf68714e411cad577f" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>leqabstract</name></member>
+      <member refid="group__output_1ga58660df99e9a20f35ee0dab2901aa637" prot="private" virt="non-virtual"><scope>EventLabel</scope><name>nbEvents</name></member>
+      <member refid="group__output_1gae8b849bfdbed392ff2171126354210a0" prot="public" virt="non-virtual"><scope>EventLabel</scope><name>nbGraceNotes</name></member>
+      <member refid="group__output_1ga9c677c6efeee575a05c0a32511ad7cf1" prot="private" virt="non-virtual" ambiguityscope="Label::"><scope>EventLabel</scope><name>nbGraceNotes</name></member>
+      <member refid="group__output_1ga6a71e2488e33f2556ee9051d0bc88820" prot="public" virt="non-virtual"><scope>EventLabel</scope><name>pushEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

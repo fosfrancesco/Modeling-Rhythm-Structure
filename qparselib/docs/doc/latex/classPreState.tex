@@ -1,0 +1,62 @@
+\hypertarget{classPreState}{}\section{Pre\+State Class Reference}
+\label{classPreState}\index{PreState@{PreState}}
+
+
+tmp state structure for construction of \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) casted aka state\+\_\+t after construction  
+
+
+
+
+{\ttfamily \#include $<$Pre\+W\+T\+A.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Pre\+State} (state\+\_\+t, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} pre=0, \mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} post=0)
+\item 
+\mbox{\hyperlink{group__schemata_gabc0c5bcc094646426f0a90313808907b}{Pre\+State}} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&)
+\item 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&s) const
+\item 
+bool \mbox{\hyperlink{group__schemata_gaa39a99008e7809c864be28f89c5ef79b}{operator$<$}} (const \mbox{\hyperlink{classPreState}{Pre\+State}} \&s) const
+\begin{DoxyCompactList}\small\item\em lexicographic comparison on hash value (array\mbox{[}5\mbox{]}) \end{DoxyCompactList}\item 
+state\+\_\+t \mbox{\hyperlink{group__schemata_gaa60c0f6f8e237bad468bd8a48c3263f4}{serialize}} ()
+\begin{DoxyCompactList}\small\item\em return a state value unically associated to this \mbox{\hyperlink{classPreState}{Pre\+State}} \end{DoxyCompactList}\item 
+bool {\bfseries compatible} (\mbox{\hyperlink{group__output_ga22fde970e635fcf63962743b2d5c441d}{label\+\_\+t}} label) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{group__schemata_gaa509247277fd021460056bfe6484a5b4}{compatible\+\_\+post}} (state\+\_\+t, const \mbox{\hyperlink{classAlignedInterval}{Aligned\+Interval}} $\ast$)
+\begin{DoxyCompactList}\small\item\em compatible(s, al) the serialized state value s is compatible with the content of the alignment al (sub-\/segment of initial input corr. to an interval) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPreState_a1d941524de94901c642c36d204a13bd9}\label{classPreState_a1d941524de94901c642c36d204a13bd9}} 
+state\+\_\+t \mbox{\hyperlink{classPreState_a1d941524de94901c642c36d204a13bd9}{ps\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em state of base schema \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPreState_a5fc7201e1b332037f39469341dacca62}\label{classPreState_a5fc7201e1b332037f39469341dacca62}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{classPreState_a5fc7201e1b332037f39469341dacca62}{ps\+\_\+pre}}
+\begin{DoxyCompactList}\small\item\em guess number of points aligned to right of previous segment \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPreState_a20af8f9950f98cdc6991292004a1e881}\label{classPreState_a20af8f9950f98cdc6991292004a1e881}} 
+\mbox{\hyperlink{group__general_ga092fe8b972dfa977c2a0886720a7731e}{pre\+\_\+t}} \mbox{\hyperlink{classPreState_a20af8f9950f98cdc6991292004a1e881}{ps\+\_\+post}}
+\begin{DoxyCompactList}\small\item\em guess number of points aligned to right of current segment \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPreState_a723cc1f6422323f84329bbb01e13781f}\label{classPreState_a723cc1f6422323f84329bbb01e13781f}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classPreState}{Pre\+State}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+tmp state structure for construction of \mbox{\hyperlink{classPreWTA}{Pre\+W\+TA}} from a \mbox{\hyperlink{classWTA}{W\+TA}} (base schema) casted aka state\+\_\+t after construction 
+
+label (for leaves)\+: see \mbox{\hyperlink{classWTA}{W\+TA}}
+
+states (q\+:int, pre\+:int, post\+:int) ou label (feuille) q\+: state of base schema pre\+: guess number of points aligned to right of previous segment post\+: guess number of points aligned to right of current segment 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/schemata/Pre\+W\+T\+A.\+hpp\item 
+src/schemata/Pre\+W\+T\+A.\+cpp\end{DoxyCompactItemize}

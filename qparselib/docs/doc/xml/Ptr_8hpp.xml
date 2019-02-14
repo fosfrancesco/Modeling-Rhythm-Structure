@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Ptr_8hpp" kind="file" language="C++">
+    <compoundname>Ptr.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="Weight_8hpp" local="yes">Weight.hpp</includes>
+    <includes refid="Transition_8hpp" local="yes">Transition.hpp</includes>
+    <includes refid="Environment_8hpp" local="yes">Environment.hpp</includes>
+    <includedby refid="Ptr_8cpp" local="yes">src/table/Ptr.cpp</includedby>
+    <includedby refid="PtrS_8hpp" local="yes">src/table/PtrS.hpp</includedby>
+    <incdepgraph>
+      <node id="498">
+        <label>assert.h</label>
+      </node>
+      <node id="496">
+        <label>src/table/Ptr.hpp</label>
+        <link refid="Ptr_8hpp"/>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+      </node>
+      <node id="497">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classPointer" prot="public">Pointer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__table_1ga87af6cf583d4ad6776fb6d5547cecdf0" prot="public" static="no">
+        <name>PTR_LPAR</name>
+        <initializer>&apos;(&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Ptr.hpp" line="15" column="9" bodyfile="src/table/Ptr.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__table_1ga872ca8d837f318949c33691219969c5b" prot="public" static="no">
+        <name>PTR_RPAR</name>
+        <initializer>&apos;)&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/Ptr.hpp" line="16" column="9" bodyfile="src/table/Ptr.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/Ptr.hpp"/>
+  </compounddef>
+</doxygen>
