@@ -1,7 +1,0 @@
-# src/output
-
-structures for the representation of the output of the parsing procedure and conversion into
-music transcription results (i.e. music notation).
-
-
-
