@@ -1,3 +1,5 @@
 # Modeling-Rhythm-Structure
 Code for the SMC 2019 conference.
-The qparselib must be compiled with cmake (see instructions inside the folder).
+
+The "qparselib" for the tree computation is available in [INRIA repository](https://gitlab.inria.fr/qparse).
+
